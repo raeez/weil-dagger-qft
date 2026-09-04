@@ -4,63 +4,210 @@
 \usepackage[margin=1.15in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{problem}[theorem]{Open Problem}
-\title{Weil--Dagger Positivity and the Recognition Problem}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\cN}{\mathcal N}
+\title{Positive Functionals and Dagger Transfer}
 \author{Raeez Lorgat}
 \date{}
 \hypersetup{
-  pdftitle={Weil--Dagger Positivity and the Recognition Problem},
+  pdftitle={Positive Functionals and Dagger Transfer},
   pdfauthor={Raeez Lorgat},
-  pdfsubject={Positivity transfer for explicit-formula functionals}
+  pdfsubject={Pullback of positive forms on possibly nonunital star algebras}
 }
 \begin{document}
 \maketitle
+
 \begin{abstract}
-The explicit formula supplies a Hermitian form, but its positivity cannot be
-deduced from a functional equation alone.  We isolate a sufficient recognition
-datum: an independently positive state and a state-preserving map from the
-test-function algebra.  The resulting positivity transfer is formal; the
-construction of such a state without presupposing zero placement is the open
-mathematical problem.
+A positive linear functional on a complex $*$-algebra pulls back along a
+$*$-homomorphism.  We record the associated sesquilinear form, null space,
+and algebraic GNS quotient, and prove that the induced map of GNS spaces is an
+isometric injection.  The result is formal: by itself it neither defines a
+Weil test algebra nor proves positivity of an explicit-formula functional.
+The additional arithmetic realization is therefore stated as a separate,
+typed open problem.
 \end{abstract}
 
-\section{The recognition datum}
+\section{Positive functionals without a unit}
 
-Let $\mathcal A$ be a complex $*$-algebra and let
-$W:\mathcal A\to\mathbb C$ be a linear functional, Hermitian in the sense that
-$W(a^*)=\overline{W(a)}$.  Write
+Throughout, a complex $*$-algebra need not be unital or normed.
+
+\begin{definition}
+A complex-linear functional $\omega:\mathcal B\to\mathbb C$ is
+\emph{positive} if
 \[
- q_W(a)=W(a^*a).
+ \omega(b^*b)\in\mathbb R_{\geq0}\qquad(b\in\mathcal B).
 \]
-Let $(\mathcal B,\omega)$ be another $*$-algebra equipped with a positive
-state, so $\omega(b^*b)\geq0$.
+Its associated sesquilinear form, linear in the first variable, is
+\[
+ \langle b,c\rangle_\omega=\omega(c^*b),
+\]
+and its null space is
+\[
+ \cN_\omega=\{b\in\mathcal B:\omega(b^*b)=0\}.
+\]
+The algebraic GNS space is the pre-Hilbert space
+$\mathcal H_\omega^0=\mathcal B/\cN_\omega$ with the induced form.  Its
+Hilbert completion, when desired, is denoted $\mathcal H_\omega$.
+\end{definition}
+
+Positivity and polarization imply that the displayed form is Hermitian and
+satisfies Cauchy--Schwarz.  In particular, $\cN_\omega$ is a linear subspace.
+It is also a left ideal: if $b\in\cN_\omega$ and $a\in\mathcal B$, then
+\[
+ \omega((ab)^*ab)=\langle a^*ab,b\rangle_\omega=0
+\]
+by Cauchy--Schwarz.  Thus left multiplication defines the algebraic GNS
+representation
+\[
+ \pi_\omega(a)[b]=[ab]
+ \quad\text{on }\mathcal H_\omega^0.
+\]
+No boundedness assertion is made without a norm and additional hypotheses.
+
+\section{Dagger transfer}
 
 \begin{theorem}[Dagger transfer]
-If $T:\mathcal A\to\mathcal B$ is a $*$-homomorphism and
-$W=\omega\circ T$, then $q_W(a)\geq0$ for every $a\in\mathcal A$.
-Moreover the null space of $q_W$ is the inverse image under $T$ of the GNS
-null space of $\omega$.
+Let $T:\mathcal A\to\mathcal B$ be a $*$-homomorphism of complex
+$*$-algebras, let $\omega:\mathcal B\to\mathbb C$ be a positive linear
+functional, and put $W=\omega\circ T$.  Then $W$ is positive and
+\[
+ \langle a,c\rangle_W
+   =\langle T(a),T(c)\rangle_\omega,
+ \qquad
+ \cN_W=T^{-1}(\cN_\omega).                                   \label{pullback}
+\]
+Consequently
+\[
+ \widetilde T:\mathcal H_W^0\longrightarrow\mathcal H_\omega^0,
+ \qquad [a]\longmapsto[T(a)],                                \label{gnsmap}
+\]
+is a well-defined isometric injection.  It intertwines the algebraic GNS
+actions in the sense that
+\[
+ \widetilde T\,\pi_W(a)=\pi_\omega(T(a))\,\widetilde T
+ \qquad(a\in\mathcal A).
+\]
 \end{theorem}
 
 \begin{proof}
-For $a\in\mathcal A$,
+For $a,c\in\mathcal A$,
 \[
- q_W(a)=\omega(T(a^*a))=\omega(T(a)^*T(a))\geq0.
+ \langle a,c\rangle_W
+ =\omega(T(c^*a))
+ =\omega(T(c)^*T(a))
+ =\langle T(a),T(c)\rangle_\omega.
 \]
-The same identity shows that $q_W(a)=0$ exactly when $T(a)$ represents zero
-in the GNS seminorm.
+Taking $c=a$ proves positivity and both equalities in
+\eqref{pullback}.  The null-space equality makes \eqref{gnsmap} well defined
+and injective, while the form identity makes it isometric.  Finally,
+\[
+ \widetilde T\bigl(\pi_W(a)[c]\bigr)
+ =[T(ac)]=[T(a)T(c)]
+ =\pi_\omega(T(a))\widetilde T[c].
+\]
 \end{proof}
 
-When $W$ is a Weil explicit-formula functional on a precisely stated test
-algebra, this theorem transfers positivity from $\omega$.  It does not produce
-$\mathcal B$, $\omega$, or $T$, and it has content only if their construction
-does not assume the desired location of the zeros.
+\begin{example}[A finite-dimensional carrier]
+Let $\mathcal B=M_n(\mathbb C)$ with its adjoint involution, let
+$\rho\in M_n(\mathbb C)$ be positive semidefinite, and define
+$\omega_\rho(b)=\operatorname{Tr}(\rho b)$.  Then
+\[
+ \omega_\rho(b^*b)
+   =\operatorname{Tr}\bigl((b\rho^{1/2})^*(b\rho^{1/2})\bigr)\geq0.
+\]
+For every $*$-homomorphism $T:\mathcal A\to M_n(\mathbb C)$, dagger transfer
+gives
+\[
+ W(a^*a)=\|T(a)\rho^{1/2}\|_{\mathrm{HS}}^2.
+\]
+This example exhibits all carriers and maps explicitly.
+\end{example}
 
-\begin{problem}
-Construct an operator-algebraic or reflection-positive field-theoretic triple
-$(\mathcal B,\omega,T)$ for the full Weil test class, prove the exact state
-identity with all archimedean and prime terms, and establish positivity without
-using an equivalent zero-placement assertion.
+\begin{proposition}[Formal realizability is equivalent to positivity]
+For a linear functional $W$ on a complex $*$-algebra $\mathcal A$, the
+following are equivalent:
+\begin{enumerate}
+\item $W$ is positive;
+\item there exist a complex $*$-algebra $\mathcal B$ and maps
+\[
+ \omega:\mathcal B\longrightarrow\mathbb C,
+ \qquad T:\mathcal A\longrightarrow\mathcal B,
+\]
+where $\omega$ is a positive linear functional, $T$ is a
+$*$-homomorphism, and $W=\omega\circ T$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The theorem proves $(2)\Rightarrow(1)$.  If $W$ is positive, take
+$\mathcal B=\mathcal A$, $\omega=W$, and $T=\operatorname{id}_{\mathcal A}$.
+\end{proof}
+
+Thus the bare existence of a dagger realization does not furnish an
+independent positivity argument; the positivity of its target functional has
+to come from additional structure.
+
+\section{The arithmetic realization is additional structure}
+
+For a fixed completed $L$-function, a \emph{normalized Weil datum} will mean
+the following explicitly declared objects:
+\begin{enumerate}
+\item a complex test-function $*$-algebra
+      $(\mathcal A_L,\star,*)$;
+\item a convergent Hermitian linear functional
+      $W_L:\mathcal A_L\to\mathbb C$ written as a specified sum of its polar,
+      archimedean, and prime-power local terms;
+\item a precisely stated zero-location assertion $\mathsf{RH}_L$ and a proof
+      of the equivalence
+      \[
+      \mathsf{RH}_L
+      \quad\Longleftrightarrow\quad
+      W_L(f^*\star f)\geq0\quad(f\in\mathcal A_L).
+      \]
+\end{enumerate}
+The test class, involution, convolution, transform convention, local
+measures, gamma factors, and any vanishing or moment conditions are part of
+the datum.  Weil's original formulations are the primary sources for such
+arithmetic positivity criteria for Hecke
+$L$-functions~\cite{Weil1952,Weil1972}.  No particular normalization is
+selected here.
+
+\begin{problem}[Independent dagger realization of a normalized Weil datum]
+Given a normalized Weil datum
+$(\mathcal A_L,\star,*,W_L,\mathsf{RH}_L)$, construct a complex $*$-algebra
+$\mathcal B$, a positive linear functional $\omega$ on $\mathcal B$, and a
+$*$-homomorphism $T:\mathcal A_L\to\mathcal B$ such that
+\[
+ W_L=\omega\circ T.
+\]
+Derive $\mathcal B$, $T$, and the positivity of $\omega$ from the local
+arithmetic or geometric input without using $\mathsf{RH}_L$, its zero set, or
+an assertion equivalent to its Weil positivity criterion.  Prove the
+displayed identity term by term with the chosen polar, archimedean, and
+prime-power normalizations.
 \end{problem}
+
+The theorem would then transfer positivity to $W_L$.  The proposition shows
+why the independence condition is essential: without it, the requested
+factorization merely restates the desired positivity.
+
+\begin{thebibliography}{9}
+
+\bibitem{Weil1952}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Commun. S\'em. Math. Univ. Lund, Tome suppl\'ementaire (1952), 252--265.
+
+\bibitem{Weil1972}
+A.~Weil,
+\emph{Sur les formules explicites de la th\'eorie des nombres},
+Math. USSR-Izv. \textbf{6} (1972), 1--17.
+\href{https://doi.org/10.1070/IM1972v006n01ABEH001866}
+{doi:10.1070/IM1972v006n01ABEH001866}.
+
+\end{thebibliography}
+
 \end{document}
