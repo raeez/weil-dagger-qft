@@ -3,196 +3,595 @@
 \usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
 \usepackage[margin=1.15in]{geometry}
 \usepackage[hidelinks]{hyperref}
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{problem}[theorem]{Open Problem}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{problem}[theorem]{Open Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+\newcommand{\cA}{\mathcal A}
 \newcommand{\cN}{\mathcal N}
-\title{Positive Functionals and Dagger Transfer}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+
+\title{The Zeta--Weil Form and Nonunital GNS Transfer}
 \author{Raeez Lorgat}
 \date{}
 \hypersetup{
-  pdftitle={Positive Functionals and Dagger Transfer},
+  pdftitle={The Zeta--Weil Form and Nonunital GNS Transfer},
   pdfauthor={Raeez Lorgat},
-  pdfsubject={Pullback of positive forms on possibly nonunital star algebras}
+  pdfsubject={The zeta explicit formula, Weil positivity, and nonunital star-algebra representations}
 }
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-A positive linear functional on a complex $*$-algebra pulls back along a
-$*$-homomorphism.  We record the associated sesquilinear form, null space,
-and algebraic GNS quotient, and prove that the induced map of GNS spaces is an
-isometric injection.  The result is formal: by itself it neither defines a
-Weil test algebra nor proves positivity of an explicit-formula functional.
-The additional arithmetic realization is therefore stated as a separate,
-typed open problem.
+The full zeta--Weil functional is written on a concrete nonunital
+convolution $*$-algebra, with its polar, archimedean, and prime-power
+terms fixed.  Weil's theorem identifies positivity on convolution squares
+with the Riemann hypothesis.  We prove the algebraic GNS theorem in the
+nonunital setting, including automatic closability and the exact bounded
+multiplier criterion, and show that dagger transfer extends isometrically
+to Hilbert completions.  Positive unitization and approximate identities
+are treated separately under $C^*$-hypotheses.  Consequently, a positive
+dagger realization of the Weil functional would prove the Riemann
+hypothesis only when its positivity is obtained independently of the
+zeros or of Weil positivity itself.  Constructing such a realization
+remains open.
 \end{abstract}
 
-\section{Positive functionals without a unit}
+\section{The exact zeta--Weil form}
 
-Throughout, a complex $*$-algebra need not be unital or normed.
+The decisive question is whether the arithmetic expression below is a
+vector norm for a reason that does not already assume the location of the
+zeros.  We first fix the expression completely.
 
-\begin{definition}
-A complex-linear functional $\omega:\mathcal B\to\mathbb C$ is
-\emph{positive} if
+All integrals on $\R$ use Lebesgue measure.  Set
 \[
- \omega(b^*b)\in\mathbb R_{\geq0}\qquad(b\in\mathcal B).
+ \cA_\zeta=
+ \left\{f\in C^\infty(\R):
+ \begin{array}{l}
+ \text{there is an }\epsilon>0\text{ such that}\\
+ e^{(1/2+\epsilon)|u|}f^{(k)}(u)\in L^1(\R,du)
+ \quad\text{for every }k\geq0
+ \end{array}
+ \right\}.
 \]
-Its associated sesquilinear form, linear in the first variable, is
-\[
- \langle b,c\rangle_\omega=\omega(c^*b),
-\]
-and its null space is
-\[
- \cN_\omega=\{b\in\mathcal B:\omega(b^*b)=0\}.
-\]
-The algebraic GNS space is the pre-Hilbert space
-$\mathcal H_\omega^0=\mathcal B/\cN_\omega$ with the induced form.  Its
-Hilbert completion, when desired, is denoted $\mathcal H_\omega$.
-\end{definition}
-
-Positivity and polarization imply that the displayed form is Hermitian and
-satisfies Cauchy--Schwarz.  In particular, $\cN_\omega$ is a linear subspace.
-It is also a left ideal: if $b\in\cN_\omega$ and $a\in\mathcal B$, then
-\[
- \omega((ab)^*ab)=\langle a^*ab,b\rangle_\omega=0
-\]
-by Cauchy--Schwarz.  Thus left multiplication defines the algebraic GNS
-representation
-\[
- \pi_\omega(a)[b]=[ab]
- \quad\text{on }\mathcal H_\omega^0.
-\]
-No boundedness assertion is made without a norm and additional hypotheses.
-
-\section{Dagger transfer}
-
-\begin{theorem}[Dagger transfer]
-Let $T:\mathcal A\to\mathcal B$ be a $*$-homomorphism of complex
-$*$-algebras, let $\omega:\mathcal B\to\mathbb C$ be a positive linear
-functional, and put $W=\omega\circ T$.  Then $W$ is positive and
-\[
- \langle a,c\rangle_W
-   =\langle T(a),T(c)\rangle_\omega,
+For $f,g\in\cA_\zeta$, define
+\begin{equation}
+ (f\star g)(u)=\int_{\R}f(v)g(u-v)\,dv,
  \qquad
- \cN_W=T^{-1}(\cN_\omega).                                   \label{pullback}
-\]
-Consequently
+ f^*(u)=\overline{f(-u)},
+ \label{eq:conv}
+\end{equation}
+and use the Fourier convention
+\begin{equation}
+ \widehat f(z)=\int_{\R}f(u)e^{izu}\,du,
+ \qquad
+ f(u)=\frac1{2\pi}\int_{\R}\widehat f(t)e^{-itu}\,dt.
+ \label{eq:fourier}
+\end{equation}
+The inverse formula in \eqref{eq:fourier} is asserted for real $u$ and
+integrates with respect to $dt$.
+
+\begin{proposition}
+The space $\cA_\zeta$ is a commutative nonunital $*$-algebra under
+\eqref{eq:conv}.  If $f$ has exponent $\epsilon$, then $\widehat f$ is
+holomorphic on $|\operatorname{Im}z|<1/2+\epsilon$.  In every common
+strip of holomorphy,
+\begin{equation}
+ \widehat{f\star g}(z)=\widehat f(z)\widehat g(z),
+ \qquad
+ \widehat{f^*}(z)=\overline{\widehat f(\overline z)}.
+ \label{eq:transform}
+\end{equation}
+In particular,
+\begin{equation}
+ \widehat{f^*\star f}(t)=|\widehat f(t)|^2
+ \qquad(t\in\R).
+ \label{eq:square-transform}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Choose $0<\delta<\min(\epsilon_f,\epsilon_g)$ and put
+$a=1/2+\delta$.  The inequality
+$e^{a|u|}\leq e^{a|v|}e^{a|u-v|}$ and the weighted $L^1$ convolution
+inequality show that
 \[
- \widetilde T:\mathcal H_W^0\longrightarrow\mathcal H_\omega^0,
- \qquad [a]\longmapsto[T(a)],                                \label{gnsmap}
+ e^{a|\cdot|}(f\star g)^{(k)}
+ =e^{a|\cdot|}(f^{(k)}\star g)\in L^1(\R)
 \]
-is a well-defined isometric injection.  It intertwines the algebraic GNS
-actions in the sense that
+for every $k$.  The same estimates justify Fubini's theorem in
+\eqref{eq:transform}; the assertion for the involution follows by
+$u\mapsto-u$.  Weighted integrability of all derivatives gives Fourier
+inversion and rapid decay of $\widehat f$ on each closed substrip.
+
+If $e\in\cA_\zeta$ were a convolution identity, convolution with a
+Gaussian and \eqref{eq:transform} would give $\widehat e(t)=1$ for every
+real $t$.  This contradicts the Riemann--Lebesgue lemma, since
+$e\in L^1(\R)$.
+\end{proof}
+
+Let
 \[
- \widetilde T\,\pi_W(a)=\pi_\omega(T(a))\,\widetilde T
- \qquad(a\in\mathcal A).
+ \Gamma_{\R}(s)=\pi^{-s/2}\Gamma(s/2),
+ \qquad \psi(s)=\frac{\Gamma'(s)}{\Gamma(s)}.
 \]
+Thus the archimedean normalization is fixed by
+\begin{equation}
+ 2\operatorname{Re}\frac{\Gamma_{\R}'}{\Gamma_{\R}}
+       \left(\frac12+it\right)
+ =\operatorname{Re}\psi\left(\frac14+\frac{it}{2}\right)-\log\pi.
+ \label{eq:gamma-normalization}
+\end{equation}
+Write $\Lambda_{\mathrm{vM}}(n)=\log p$ when $n=p^m$ with $p$ prime
+and $m\geq1$, and $\Lambda_{\mathrm{vM}}(n)=0$ otherwise.  Define the
+linear functional $L_\zeta:\cA_\zeta\to\C$ by
+\begin{equation}
+\begin{aligned}
+ L_\zeta(g)={}&\widehat g(i/2)+\widehat g(-i/2)
+                                      &&\text{(polar)}\\
+ &+\frac1{2\pi}\int_{\R}\widehat g(t)
+ \left[
+   \operatorname{Re}\psi\left(\frac14+\frac{it}{2}\right)-\log\pi
+ \right]dt                           &&\text{(archimedean)}\\
+ &-\sum_{n\geq2}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+       \bigl(g(\log n)+g(-\log n)\bigr)
+                                      &&\text{(prime powers)}.
+\end{aligned}
+\label{eq:weil-functional}
+\end{equation}
+The centered Mellin parameter in these conventions is
+\begin{equation}
+ \widehat g\bigl(-i(s-\tfrac12)\bigr)
+ =\int_0^\infty g(\log x)x^{s-1/2}\,\frac{dx}{x}.
+ \label{eq:mellin}
+\end{equation}
+Equation \eqref{eq:mellin} is the logarithmic form of Weil's Mellin
+convention \cite[p.~256]{Weil1952}; functions in $\cA_\zeta$ satisfy his
+conditions (A) and (B) on p.~259.
+
+\begin{proposition}
+Every term in \eqref{eq:weil-functional} converges, and
+\begin{equation}
+ L_\zeta(g^*)=\overline{L_\zeta(g)}.
+ \label{eq:hermitian}
+\end{equation}
+If $\rho$ runs over the nontrivial zeros of $\zeta(s)$, counted with
+multiplicity, then
+\begin{equation}
+ L_\zeta(g)=\sum_\rho
+ \widehat g\bigl(-i(\rho-\tfrac12)\bigr),
+ \label{eq:explicit}
+\end{equation}
+and the sum is absolutely convergent.
+\end{proposition}
+
+\begin{proof}
+For a suitable $\epsilon>0$, weighted $W^{1,1}$ estimates on each
+half-line give
+\[
+ |g(u)|\leq C e^{-(1/2+\epsilon)|u|}.
+\]
+The prime-power series is consequently dominated by
+$C\sum_{n\geq2}\Lambda_{\mathrm{vM}}(n)n^{-1-\epsilon}$.
+Repeated integration by parts makes $\widehat g(t)$ rapidly decreasing
+on $\R$, whereas the bracket in \eqref{eq:weil-functional} is
+$O(\log(2+|t|))$.  This proves convergence of the local terms.
+
+For real $t$, the bracket is real and even, while
+$\widehat{g^*}(t)=\overline{\widehat g(t)}$; the two polar values and
+the two prime-power values are interchanged by the involution.  This
+proves \eqref{eq:hermitian}.
+
+Formula \eqref{eq:explicit} is the $k=\mathbb Q$, trivial-character
+specialization of Weil's formula (11), not a formula printed there
+verbatim in the normalization
+\eqref{eq:fourier}--\eqref{eq:mellin}; formula (11) and the ensuing
+positivity lemma are on p.~262 of \cite{Weil1952}.  Repeated integration
+by parts is uniform for $|\operatorname{Im}z|\leq1/2$, and the standard
+zero count is $O(T\log T)$.  Hence the zero sum is absolute for the
+present test class.
+\end{proof}
+
+The calculation that controls the question is now immediate.
+
+\begin{theorem}[Weil's positivity criterion]
+With the conventions above,
+\begin{equation}
+ \mathrm{RH}
+ \quad\Longleftrightarrow\quad
+ L_\zeta(f^*\star f)\geq0
+ \quad\text{for every }f\in\cA_\zeta.
+ \label{eq:weil-criterion}
+\end{equation}
+Under RH, writing each zero as $\rho=1/2+i\gamma_\rho$, one has the
+exact norm calculation
+\begin{equation}
+ L_\zeta(f^*\star f)
+ =\sum_\rho |\widehat f(\gamma_\rho)|^2.
+ \label{eq:zero-norm}
+\end{equation}
 \end{theorem}
 
 \begin{proof}
-For $a,c\in\mathcal A$,
+If RH holds, substitute $\rho=1/2+i\gamma_\rho$ in
+\eqref{eq:explicit} and use \eqref{eq:square-transform}; this gives
+\eqref{eq:zero-norm}.  Conversely, an off-line zero is separated by
+Weil's polynomial--Gaussian construction \cite[p.~263]{Weil1952}, which
+makes the zero side of \eqref{eq:explicit} negative on a convolution
+square.  The inverse Fourier transforms used there are
+polynomial--Gaussian functions and therefore belong to $\cA_\zeta$.
+Thus positivity on the class specified here implies RH.
+\end{proof}
+
+The right side of \eqref{eq:zero-norm} explains positivity conditional
+on RH; it cannot serve as an independent construction of the norm,
+because both the real parameters $\gamma_\rho$ and their existence in
+that form use the asserted zero placement.
+
+\section{Algebraic GNS without a unit}
+
+Let $\mathfrak A$ be a complex $*$-algebra, with no norm or unit assumed,
+and let $W:\mathfrak A\to\C$ be positive:
 \[
- \langle a,c\rangle_W
- =\omega(T(c^*a))
- =\omega(T(c)^*T(a))
- =\langle T(a),T(c)\rangle_\omega.
+ W(a^*a)\geq0\qquad(a\in\mathfrak A).
 \]
-Taking $c=a$ proves positivity and both equalities in
-\eqref{pullback}.  The null-space equality makes \eqref{gnsmap} well defined
-and injective, while the form identity makes it isometric.  Finally,
+
+\begin{theorem}[Nonunital algebraic GNS]
+Put
 \[
- \widetilde T\bigl(\pi_W(a)[c]\bigr)
- =[T(ac)]=[T(a)T(c)]
- =\pi_\omega(T(a))\widetilde T[c].
+ \langle a,b\rangle_W=W(b^*a),
+ \qquad
+ \cN_W=\{a:W(a^*a)=0\}.
+\]
+Then $\cN_W$ is a left ideal and
+\begin{equation}
+ D_W=\mathfrak A/\cN_W,
+ \qquad
+ \pi_W(a)[b]=[ab],
+ \label{eq:gns-action}
+\end{equation}
+is a $*$-representation on a pre-Hilbert space.  Regard $D_W$ as a
+common invariant dense domain in its Hilbert completion $\mathcal H_W$.
+For every $a\in\mathfrak A$,
+\begin{equation}
+ \pi_W(a^*)\subseteq\pi_W(a)^*,
+ \label{eq:adjoint-inclusion}
+\end{equation}
+so $\pi_W(a)$ is closable.  It extends boundedly to $\mathcal H_W$ if
+and only if there is a constant $C_a$ such that
+\begin{equation}
+ W(b^*a^*ab)\leq C_a^2W(b^*b)
+ \qquad(b\in\mathfrak A).
+ \label{eq:multiplier-bound}
+\end{equation}
+The least such $C_a$ is the norm of the extension.
+\end{theorem}
+
+\begin{proof}
+Positivity and polarization make $\langle\ ,\ \rangle_W$ Hermitian and
+give Cauchy--Schwarz.  If $b\in\cN_W$, then
+\[
+ W((ab)^*ab)=\langle a^*ab,b\rangle_W=0,
+\]
+so $\cN_W$ is a left ideal and \eqref{eq:gns-action} is well defined.
+For classes in $D_W$,
+\[
+ \langle\pi_W(a)[b],[c]\rangle_W
+ =W(c^*ab)
+ =\langle[b],\pi_W(a^*)[c]\rangle_W.
+\]
+This proves \eqref{eq:adjoint-inclusion}.  Its right side has dense
+domain $D_W$, hence the adjoint of $\pi_W(a)$ is densely defined and
+$\pi_W(a)$ is closable.  Finally,
+\[
+ \|\pi_W(a)[b]\|^2=W(b^*a^*ab),
+\]
+so the bounded-operator criterion is exactly
+\eqref{eq:multiplier-bound}.
+\end{proof}
+
+For $a=a^*$, the operator $\pi_W(a)$ is symmetric and closable.  Neither
+essential self-adjointness nor even the existence of a self-adjoint
+extension follows.  For example,
+\[
+ P=-i\frac{d}{dx},\qquad \mathcal D(P)=C_c^\infty(0,\infty)
+ \subset L^2(0,\infty),
+\]
+is symmetric and closable, but its deficiency indices are $(1,0)$, so it
+has no self-adjoint extension.  More generally, closing the individual
+operators in \eqref{eq:gns-action} does not identify a common domain on
+which their products remain the given algebra products.  The minimal
+closed representation uses the common graph domain, as in
+\cite[Definition~2.4 and Lemma~2.6]{Powers1971}.
+
+\begin{example}[An unbounded positive GNS multiplier]
+Let $\mathfrak A=\C[x]$, let $x^*=x$, and set
+\[
+ W(p)=\frac1{\sqrt\pi}\int_{\R}p(t)e^{-t^2}\,dt.
+\]
+Then $W$ is positive, but multiplication by $x$ is unbounded, since
+\[
+ \frac{\|\pi_W(x)[x^n]\|^2}{\|[x^n]\|^2}
+ =\frac{\int_{\R}t^{2n+2}e^{-t^2}\,dt}
+        {\int_{\R}t^{2n}e^{-t^2}\,dt}
+ =n+\frac12.
+\]
+\end{example}
+
+\section{Dagger transfer and completion}
+
+\begin{theorem}[Dagger transfer]
+Let $T:\mathfrak A\to\mathfrak B$ be a $*$-homomorphism of complex
+$*$-algebras, let $\omega:\mathfrak B\to\C$ be positive, and put
+$W=\omega\circ T$.  Then
+\begin{equation}
+ \langle a,c\rangle_W
+ =\langle T(a),T(c)\rangle_\omega,
+ \qquad
+ \cN_W=T^{-1}(\cN_\omega).
+ \label{eq:pullback}
+\end{equation}
+Consequently
+\begin{equation}
+ U_0:D_W\longrightarrow D_\omega,
+ \qquad [a]\longmapsto[T(a)],
+ \label{eq:gns-map}
+\end{equation}
+is an isometric injection and extends uniquely to an isometry
+\begin{equation}
+ U:\mathcal H_W\longrightarrow\mathcal H_\omega
+ \label{eq:completion-map}
+\end{equation}
+with closed range.  On the algebraic common domain, and only there
+without further hypotheses,
+\begin{equation}
+ U_0\pi_W(a)=\pi_\omega(T(a))U_0.
+ \label{eq:algebraic-intertwining}
+\end{equation}
+
+If $\mathfrak B$ is a $C^*$-algebra, both sides of
+\eqref{eq:algebraic-intertwining} extend boundedly and
+\begin{equation}
+ \|\pi_\omega(b)\|\leq\|b\|,
+ \qquad
+ \|\pi_W(a)\|\leq\|T(a)\|,
+ \label{eq:cstar-bounds}
+\end{equation}
+while
+\begin{equation}
+ U\pi_W(a)=\pi_\omega(T(a))U
+ \quad\text{on }\mathcal H_W.
+ \label{eq:bounded-intertwining}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For $a,c\in\mathfrak A$,
+\[
+ W(c^*a)=\omega(T(c)^*T(a)),
+\]
+which proves positivity, \eqref{eq:pullback}, and the isometry
+\eqref{eq:gns-map}.  Every isometry of pre-Hilbert spaces extends
+uniquely to their completions; its range is closed because its domain is
+complete.  Multiplicativity of $T$ gives
+\eqref{eq:algebraic-intertwining}.
+
+Suppose now that $\mathfrak B$ is a $C^*$-algebra.  The $C^*$-order
+inequality gives
+\[
+ \omega(d^*b^*bd)\leq\|b\|^2\omega(d^*d),
+\]
+which proves the first estimate in \eqref{eq:cstar-bounds}.  Taking
+$b=T(a)$ and $d=T(c)$ proves the second.  Continuity then extends
+\eqref{eq:algebraic-intertwining} to
+\eqref{eq:bounded-intertwining}.  No equality between arbitrary
+unbounded closure domains is used.
+\end{proof}
+
+\section{Positive unitization for nonunital
+\texorpdfstring{$C^*$}{C-star}-algebras}
+
+The unit missing from a convolution algebra cannot be adjoined to an
+arbitrary positive functional without an additional bound.  For a
+nonunital $*$-algebra $\mathfrak A$, write
+$\mathfrak A^+=\mathfrak A\oplus\C1$ and
+\begin{equation}
+ \omega_m(a+\lambda1)=\omega(a)+m\lambda.
+ \label{eq:unit-extension}
+\end{equation}
+Direct minimization in $\lambda$ gives the algebraic criterion
+\begin{equation}
+ \omega_m\text{ is positive}
+ \quad\Longleftrightarrow\quad
+ \begin{cases}
+ m\in\R,\quad m\geq0,\\
+ \omega(a^*)=\overline{\omega(a)},\\
+ |\omega(a)|^2\leq m\,\omega(a^*a)&(a\in\mathfrak A).
+ \end{cases}
+ \label{eq:unit-criterion}
+\end{equation}
+
+\begin{theorem}[The nonunital $C^*$ case]
+Let $\mathfrak A$ be a nonunital $C^*$-algebra and let
+$\omega:\mathfrak A\to\C$ be positive.  Then $\omega$ is Hermitian and
+bounded, and the functional \eqref{eq:unit-extension} on the standard
+unitization is positive exactly when
+\begin{equation}
+ m\in\R,\qquad m\geq\|\omega\|.
+ \label{eq:minimal-mass}
+\end{equation}
+Let $(e_i)$ be any positive contractive two-sided approximate identity.
+For the minimal extension $m=\|\omega\|$, its GNS vector
+$\Omega=[1]$ satisfies
+\begin{equation}
+ [e_i]\longrightarrow\Omega,
+ \label{eq:approx-vector}
+\end{equation}
+and the restricted representation of $\mathfrak A$ is bounded,
+nondegenerate, and cyclic:
+\begin{equation}
+ \omega(a)=\langle\pi_\omega(a)\Omega,\Omega\rangle,
+ \qquad
+ \overline{\pi_\omega(\mathfrak A)\Omega}=\mathcal H_\omega.
+ \label{eq:cyclic-vector}
+\end{equation}
+For $m>\|\omega\|$, the unit vector of that larger extension is not the
+limit in \eqref{eq:approx-vector}.
+\end{theorem}
+
+\begin{proof}
+Every self-adjoint element is the difference of two positive elements,
+so positivity makes $\omega$ Hermitian.  If $\omega$ were unbounded, its
+values would be unbounded on the positive unit ball: otherwise the
+decomposition of an arbitrary element into four positive parts would
+bound it.  One could then choose $a_n\geq0$ with
+\[
+ \|a_n\|\leq2^{-n},\qquad \omega(a_n)=1.
+\]
+The norm-convergent positive sum $a=\sum_na_n$ would satisfy
+$\omega(a)\geq\sum_{n=1}^N\omega(a_n)=N$ for every $N$, a
+contradiction.  Hence $\omega$ is bounded.
+
+Positive contractive approximate identities exist.  Cauchy--Schwarz and
+$e_i a\to a$ give
+\begin{equation}
+ |\omega(a)|^2
+ =\lim_i|\omega(e_i a)|^2
+ \leq\|\omega\|\,\omega(a^*a).
+ \label{eq:hilbert-bound}
+\end{equation}
+Equations \eqref{eq:unit-criterion} and \eqref{eq:hilbert-bound} prove
+positivity for $m=\|\omega\|$; adding $(m-\|\omega\|)$ times the
+positive quotient character $a+\lambda1\mapsto\lambda$ proves
+sufficiency for every larger $m$.  Conversely, a positive functional on
+a unital $C^*$-algebra has norm equal to its value at the unit, so
+restriction of $\omega_m$ gives $\|\omega\|\leq m$.
+
+It remains to identify the unit vector.  If $\|\omega\|>0$, choose
+$\|a\|\leq1$ with $|\omega(a)|$ arbitrarily close to $\|\omega\|$.
+Using $e_i a\to a$ and Cauchy--Schwarz shows
+\[
+ \omega(e_i^2)\longrightarrow\|\omega\|.
+\]
+Since $0\leq e_i^2\leq e_i\leq1$ in the unitization, also
+$\omega(e_i)\to\|\omega\|$.  Therefore
+\[
+ \|[1]-[e_i]\|^2
+ =\|\omega\|-2\omega(e_i)+\omega(e_i^2)\longrightarrow0,
+\]
+which is \eqref{eq:approx-vector}; the zero functional is immediate.
+Moreover $\pi_\omega(a)\Omega=[a]$, proving cyclicity, and
+$\pi_\omega(e_i)[a]=[e_i a]\to[a]$, proving nondegeneracy.  The
+$C^*$-estimate in \eqref{eq:cstar-bounds} proves boundedness.  If
+$m>\|\omega\|$, the same computation instead gives
+\[
+ \lim_i\|[1]-[e_i]\|^2=m-\|\omega\|>0.
 \]
 \end{proof}
 
-\begin{example}[A finite-dimensional carrier]
-Let $\mathcal B=M_n(\mathbb C)$ with its adjoint involution, let
-$\rho\in M_n(\mathbb C)$ be positive semidefinite, and define
-$\omega_\rho(b)=\operatorname{Tr}(\rho b)$.  Then
+Segal's original formulation defines states in the possibly nonunital
+case on p.~75, states Theorem~1 and constructs an approximate identity on
+pp.~76--77, proves the quotient and multiplier bound on p.~78, and
+obtains the cyclic vector on pp.~78--79 of \cite{Segal1947}.
+
+\begin{example}[Positive unitization can fail algebraically]
+Let $\mathfrak A=c_{00}(\mathbb N)$ with pointwise multiplication and
+conjugation, and define
 \[
- \omega_\rho(b^*b)
-   =\operatorname{Tr}\bigl((b\rho^{1/2})^*(b\rho^{1/2})\bigr)\geq0.
+ \omega(a)=\sum_{n\geq1}n a_n.
 \]
-For every $*$-homomorphism $T:\mathcal A\to M_n(\mathbb C)$, dagger transfer
-gives
+This is a Hermitian positive functional.  If a positive extension
+$\omega_m$ existed, Cauchy--Schwarz in the unitization, applied to the
+$n$th point mass $e_n$, would give
 \[
- W(a^*a)=\|T(a)\rho^{1/2}\|_{\mathrm{HS}}^2.
+ n^2=|\omega_m(e_n)|^2
+ \leq\omega_m(1)\omega_m(e_n^*e_n)=mn
 \]
-This example exhibits all carriers and maps explicitly.
+for every $n$, which is impossible for finite $m$.
 \end{example}
 
-\begin{proposition}[Formal realizability is equivalent to positivity]
-For a linear functional $W$ on a complex $*$-algebra $\mathcal A$, the
+\section{Why an indefinite quotient does not give positivity}
+
+Let $V=\C^2$, $J=\operatorname{diag}(1,-1)$, and
+\[
+ [x,y]=y^*Jx.
+\]
+The vectors $e_1+e_2$ and $e_1-e_2$ are isotropic, while their sum is
+not.  Thus the isotropic cone $\{x:[x,x]=0\}$ is not a linear subspace
+and cannot be divided out.  The radical
+$\{x:[x,y]=0\ \forall y\}$ is zero here.  In general, quotienting by the
+radical produces only a nondegenerate Hermitian space; it supplies
+neither a fundamental symmetry nor a complete Hilbert majorant.  In this
+finite-dimensional example such data can be chosen, but they are extra
+data, not consequences of the radical quotient.
+
+Nor is a vector functional for an indefinite adjoint positive.  On
+$M_2(\C)$ put $A^\sharp=JA^*J$, let $\Omega=e_1$, and set
+$\omega(A)=[A\Omega,\Omega]$.  For
+\[
+ X=\begin{pmatrix}0&0\\1&0\end{pmatrix}
+\]
+one has
+\begin{equation}
+ \omega(X^\sharp X)=[X\Omega,X\Omega]=[e_2,e_2]=-1.
+ \label{eq:indefinite-negative}
+\end{equation}
+Hence an indefinite pairing does not provide the positivity required in
+\eqref{eq:weil-criterion}.
+
+\section{The independent arithmetic question}
+
+\begin{proposition}[Formal factorization]
+For a linear functional $W$ on a complex $*$-algebra $\mathfrak A$, the
 following are equivalent:
 \begin{enumerate}
 \item $W$ is positive;
-\item there exist a complex $*$-algebra $\mathcal B$ and maps
+\item there are a complex $*$-algebra $\mathfrak B$ and maps
 \[
- \omega:\mathcal B\longrightarrow\mathbb C,
- \qquad T:\mathcal A\longrightarrow\mathcal B,
+ \omega:\mathfrak B\longrightarrow\C,
+ \qquad T:\mathfrak A\longrightarrow\mathfrak B,
 \]
-where $\omega$ is a positive linear functional, $T$ is a
-$*$-homomorphism, and $W=\omega\circ T$.
+where $\omega$ is positive, $T$ is a $*$-homomorphism, and
+$W=\omega\circ T$.
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-The theorem proves $(2)\Rightarrow(1)$.  If $W$ is positive, take
-$\mathcal B=\mathcal A$, $\omega=W$, and $T=\operatorname{id}_{\mathcal A}$.
+Dagger transfer proves $(2)\Rightarrow(1)$.  For the converse take
+$\mathfrak B=\mathfrak A$, $\omega=W$, and $T$ equal to the identity.
 \end{proof}
 
-Thus the bare existence of a dagger realization does not furnish an
-independent positivity argument; the positivity of its target functional has
-to come from additional structure.
+For $W=L_\zeta$, formal factorization is therefore equivalent to the
+positivity in \eqref{eq:weil-criterion}, and hence to RH.  The identity
+factorization, or a Hilbert space whose spectral data are prescribed from
+the zeta zeros, cannot establish that positivity independently.
 
-\section{The arithmetic realization is additional structure}
-
-For a fixed completed $L$-function, a \emph{normalized Weil datum} will mean
-the following explicitly declared objects:
-\begin{enumerate}
-\item a complex test-function $*$-algebra
-      $(\mathcal A_L,\star,*)$;
-\item a convergent Hermitian linear functional
-      $W_L:\mathcal A_L\to\mathbb C$ written as a specified sum of its polar,
-      archimedean, and prime-power local terms;
-\item a precisely stated zero-location assertion $\mathsf{RH}_L$ and a proof
-      of the equivalence
-      \[
-      \mathsf{RH}_L
-      \quad\Longleftrightarrow\quad
-      W_L(f^*\star f)\geq0\quad(f\in\mathcal A_L).
-      \]
-\end{enumerate}
-The test class, involution, convolution, transform convention, local
-measures, gamma factors, and any vanishing or moment conditions are part of
-the datum.  Weil's original formulations are the primary sources for such
-arithmetic positivity criteria for Hecke
-$L$-functions~\cite{Weil1952,Weil1972}.  No particular normalization is
-selected here.
-
-\begin{problem}[Independent dagger realization of a normalized Weil datum]
-Given a normalized Weil datum
-$(\mathcal A_L,\star,*,W_L,\mathsf{RH}_L)$, construct a complex $*$-algebra
-$\mathcal B$, a positive linear functional $\omega$ on $\mathcal B$, and a
-$*$-homomorphism $T:\mathcal A_L\to\mathcal B$ such that
-\[
- W_L=\omega\circ T.
-\]
-Derive $\mathcal B$, $T$, and the positivity of $\omega$ from the local
-arithmetic or geometric input without using $\mathsf{RH}_L$, its zero set, or
-an assertion equivalent to its Weil positivity criterion.  Prove the
-displayed identity term by term with the chosen polar, archimedean, and
-prime-power normalizations.
+\begin{problem}[Independent dagger realization of $L_\zeta$]
+Construct a complex $*$-algebra $\mathfrak B$, a positive linear
+functional $\omega:\mathfrak B\to\C$, and a $*$-homomorphism
+$T:\cA_\zeta\to\mathfrak B$ such that
+\begin{equation}
+ L_\zeta=\omega\circ T.
+ \label{eq:factorization}
+\end{equation}
+Derive the carrier, the map, and the positivity of $\omega$ from the
+polar, archimedean, and prime-power structures in
+\eqref{eq:weil-functional}, without using RH, the multiset of zeta zeros,
+or an assertion equivalent to \eqref{eq:weil-criterion}.  Prove
+\eqref{eq:factorization} with all three local terms and the Fourier and
+measure conventions above.  A solution with $\mathfrak B$ a
+$C^*$-algebra would additionally give the bounded realization
+\eqref{eq:cstar-bounds}--\eqref{eq:bounded-intertwining}.
 \end{problem}
-
-The theorem would then transfer positivity to $W_L$.  The proposition shows
-why the independence condition is essential: without it, the requested
-factorization merely restates the desired positivity.
 
 \begin{thebibliography}{9}
 
@@ -201,12 +600,19 @@ A.~Weil,
 \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
 Commun. S\'em. Math. Univ. Lund, Tome suppl\'ementaire (1952), 252--265.
 
-\bibitem{Weil1972}
-A.~Weil,
-\emph{Sur les formules explicites de la th\'eorie des nombres},
-Math. USSR-Izv. \textbf{6} (1972), 1--17.
-\href{https://doi.org/10.1070/IM1972v006n01ABEH001866}
-{doi:10.1070/IM1972v006n01ABEH001866}.
+\bibitem{Segal1947}
+I.~E.~Segal,
+\emph{Irreducible representations of operator algebras},
+Bull. Amer. Math. Soc. \textbf{53} (1947), 73--88.
+\href{https://doi.org/10.1090/S0002-9904-1947-08742-5}
+{doi:10.1090/S0002-9904-1947-08742-5}.
+
+\bibitem{Powers1971}
+R.~T.~Powers,
+\emph{Self-adjoint algebras of unbounded operators},
+Commun. Math. Phys. \textbf{21} (1971), 85--124.
+\href{https://doi.org/10.1007/BF01646746}
+{doi:10.1007/BF01646746}.
 
 \end{thebibliography}
 
