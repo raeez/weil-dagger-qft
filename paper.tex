@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Open Problem}
+\title{Weil--Dagger Positivity and the Recognition Problem}
+\author{Raeez Lorgat}
+\date{}
+\hypersetup{
+  pdftitle={Weil--Dagger Positivity and the Recognition Problem},
+  pdfauthor={Raeez Lorgat},
+  pdfsubject={Positivity transfer for explicit-formula functionals}
+}
+\begin{document}
+\maketitle
+\begin{abstract}
+The explicit formula supplies a Hermitian form, but its positivity cannot be
+deduced from a functional equation alone.  We isolate a sufficient recognition
+datum: an independently positive state and a state-preserving map from the
+test-function algebra.  The resulting positivity transfer is formal; the
+construction of such a state without presupposing zero placement is the open
+mathematical problem.
+\end{abstract}
+
+\section{The recognition datum}
+
+Let $\mathcal A$ be a complex $*$-algebra and let
+$W:\mathcal A\to\mathbb C$ be a linear functional, Hermitian in the sense that
+$W(a^*)=\overline{W(a)}$.  Write
+\[
+ q_W(a)=W(a^*a).
+\]
+Let $(\mathcal B,\omega)$ be another $*$-algebra equipped with a positive
+state, so $\omega(b^*b)\geq0$.
+
+\begin{theorem}[Dagger transfer]
+If $T:\mathcal A\to\mathcal B$ is a $*$-homomorphism and
+$W=\omega\circ T$, then $q_W(a)\geq0$ for every $a\in\mathcal A$.
+Moreover the null space of $q_W$ is the inverse image under $T$ of the GNS
+null space of $\omega$.
+\end{theorem}
+
+\begin{proof}
+For $a\in\mathcal A$,
+\[
+ q_W(a)=\omega(T(a^*a))=\omega(T(a)^*T(a))\geq0.
+\]
+The same identity shows that $q_W(a)=0$ exactly when $T(a)$ represents zero
+in the GNS seminorm.
+\end{proof}
+
+When $W$ is a Weil explicit-formula functional on a precisely stated test
+algebra, this theorem transfers positivity from $\omega$.  It does not produce
+$\mathcal B$, $\omega$, or $T$, and it has content only if their construction
+does not assume the desired location of the zeros.
+
+\begin{problem}
+Construct an operator-algebraic or reflection-positive field-theoretic triple
+$(\mathcal B,\omega,T)$ for the full Weil test class, prove the exact state
+identity with all archimedean and prime terms, and establish positivity without
+using an equivalent zero-placement assertion.
+\end{problem}
+\end{document}
