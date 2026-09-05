@@ -1,8 +1,6 @@
 # Repository Instructions
 
-## Golden rule: no project management at any scale whatsoever in the manuscript
+Read and follow [AGENTS.md](AGENTS.md), the canonical local contract.
+It includes inherited safety rules, manuscript boundaries, and research standards.
 
-Follow `AGENTS.md`. No project management belongs in a manuscript at any
-scale. A functional equation is not positivity, a character is not an
-operator, and a spectrum chosen to contain zeta zeros is not an independent
-Hilbert--Pólya construction.
+For Claude model controls or loading behavior, consult `~/ecosystem/CLAUDE-HARNESS.md` when that guidance affects the task.
