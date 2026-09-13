@@ -1,0 +1,712 @@
+           The Zeta–Weil Form and Nonunital GNS Transfer
+                                                   Raeez Lorgat
+
+
+                                                      Abstract
+          The arithmetic terms of the zeta explicit formula define a Hermitian pairing on a
+      nonunital convolution algebra. Weil’s theorem identifies its positivity with the Riemann
+      hypothesis. A local Gaussian calculation proves a further restriction: the full Weil functional
+      admits no positive unitization of finite mass and no realization by a finite-norm vector on an
+      invariant ∗-representation domain. The same calculation gives positive Gaussian subspaces
+      of every finite dimension at sufficiently small scales. We construct the common graph
+      completion of nonunital GNS multipliers and prove its exact domain and transfer properties.
+      Closed quadratic forms for individual multipliers need not have invariant domains. Their
+      common domain over the whole algebra does. An independent positive arithmetic functional
+      remains open, with its possible representation constrained by the Gaussian divergence.
+
+
+1    The exact zeta–Weil form
+The decisive question is whether the arithmetic expression below is a squared norm for a
+reason independent of the location of the zeros. Such a norm could construct a Hilbert space
+from test functions. It need not come from a distinguished vector representing the functional.
+The Gaussian calculation in Section 6 will exclude that stronger realization. We first fix the
+arithmetic expression completely.
+    All integrals on R use Lebesgue measure. Set
+                   (                                                                                  )
+                             ∞     there is an ϵ > 0 such that
+            Aζ =       f ∈ C (R) : (1/2+ϵ)|u| (k)                                                         .
+                                   e         f (u) ∈ L1 (R, du)                     for every k ≥ 0
+
+For f, g ∈ Aζ , define
+                                           Z
+                         (f ⋆ g)(u) =           f (v)g(u − v) dv,        f ∗ (u) = f (−u),                    (1.1)
+                                            R
+
+and use the Fourier convention
+                                                                         1
+                                   Z                                         Z
+                         fb(z) =        f (u)eizu du,         f (u) =            fb(t)e−itu dt.               (1.2)
+                                    R                                   2π   R
+
+The inverse formula in (1.2) is asserted for real u and integrates with respect to dt.
+Proposition 1.1. The space Aζ is a commutative nonunital ∗-algebra under (1.1). If f has
+exponent ϵ, then fb is holomorphic on | Im z| < 1/2 + ϵ. In every common strip of holomorphy,
+
+                                   f[
+                                    ⋆ g(z) = fb(z)gb(z),            fc∗ (z) = fb(z).                          (1.3)
+In particular,
+                                         f∗
+                                         \  ⋆ f (t) = |fb(t)|2       (t ∈ R).                                 (1.4)
+
+                                                          1
+Proof. Choose 0 < δ < min(ϵf , ϵg ) and put a = 1/2 + δ. The inequality ea|u| ≤ ea|v| ea|u−v| and
+the weighted L1 convolution inequality show that
+
+                             ea|·| (f ⋆ g)(k) = ea|·| (f (k) ⋆ g) ∈ L1 (R)
+
+for every k. The same estimates justify Fubini’s theorem in (1.3); the assertion for the involution
+follows by u 7→ −u. Weighted integrability of all derivatives gives Fourier inversion and rapid
+decay of fb on each closed substrip.
+     If e ∈ Aζ were a convolution identity, convolution with a Gaussian and (1.3) would give
+eb(t) = 1 for every real t. This contradicts the Riemann–Lebesgue lemma, since e ∈ L1 (R).
+
+   Let
+                                                                             Γ′ (s)
+                            ΓR (s) = π −s/2 Γ(s/2),                 ψ(s) =          .
+                                                                             Γ(s)
+Thus the archimedean normalization is fixed by
+
+                              Γ′       1             1 it
+                                                                      
+                          2 Re R         + it = Re ψ   +                     − log π.         (1.5)
+                              ΓR       2             4   2
+
+Write ΛvM (n) = log p when n = pm with p prime and m ≥ 1, and ΛvM (n) = 0 otherwise. Define
+the linear functional Lζ : Aζ → C by
+
+              Lζ (g) = gb(i/2) + gb(−i/2)                          (polar)
+                            1                  1 it
+                               Z                            
+                        +         gb(t) Re ψ     +      − log π dt (archimedean)
+                           2π R                4    2                                         (1.6)
+                           X ΛvM (n)                          
+                        −        √       g(log n) + g(− log n)     (prime powers).
+                           n≥2
+                                     n
+
+The centered Mellin parameter in these conventions is
+                                                  Z ∞
+                                                                               dx
+                             gb −i(s − 12 ) =                 g(log x)xs−1/2
+                                          
+                                                                                  .           (1.7)
+                                                      0                        x
+Equation (1.7) is the logarithmic form of Weil’s Mellin convention [2, p. 256]; functions in Aζ
+satisfy his conditions (A) and (B) on p. 259.
+
+Proposition 1.2. Every term in (1.6) converges, and
+
+                                          Lζ (g ∗ ) = Lζ (g).                                 (1.8)
+
+If ρ runs over the nontrivial zeros of ζ(s), counted with multiplicity, then
+                                                  X
+                                                          gb −i(ρ − 12 ) ,
+                                                                        
+                                    Lζ (g) =                                                  (1.9)
+                                                  ρ
+
+and the sum is absolutely convergent.
+
+Proof. For a suitable ϵ > 0, weighted W 1,1 estimates on each half-line give
+
+                                       |g(u)| ≤ Ce−(1/2+ϵ)|u| .
+
+
+                                                          2
+The prime-power series is consequently dominated by C n≥2 ΛvM (n)n−1−ϵ . Repeated integra-
+                                                                 P
+
+tion by parts makes gb(t) rapidly decreasing on R, whereas the bracket in (1.6) is O(log(2 + |t|)).
+This proves convergence of the local terms.
+    For real t, the bracket is real and even, while gc∗ (t) = gb(t); the two polar values and the two
+prime-power values are interchanged by the involution. This proves (1.8).
+    Formula (1.9) is the k = Q, trivial-character specialization of Weil’s formula (11), not a
+formula printed there verbatim in the normalization (1.2)–(1.7); formula (11) and the ensuing
+positivity lemma are on p. 262 of [2]. Repeated integration by parts is uniform for | Im z| ≤ 1/2,
+and the standard zero count is O(T log T ). Hence the zero sum is absolute for the present test
+class.
+
+    The calculation that controls the question is now immediate.
+
+Theorem 1.3 (Weil’s positivity criterion). With the conventions above,
+
+                        RH     ⇐⇒      Lζ (f ∗ ⋆ f ) ≥ 0      for every f ∈ Aζ .              (1.10)
+
+Under RH, writing each zero as ρ = 1/2 + iγρ , one has the exact norm calculation
+
+                                    Lζ (f ∗ ⋆ f ) =
+                                                      X
+                                                           |fb(γρ )|2 .                       (1.11)
+                                                      ρ
+
+Proof. If RH holds, substitute ρ = 1/2 + iγρ in (1.9) and use (1.4); this gives (1.11). Conversely,
+an off-line zero is separated by Weil’s polynomial–Gaussian construction [2, p. 263], which
+makes the zero side of (1.9) negative on a convolution square. The inverse Fourier transforms
+used there are polynomial–Gaussian functions and therefore belong to Aζ . Thus positivity on
+the class specified here implies RH.
+
+    The right side of (1.11) explains positivity conditional on RH; it cannot serve as an
+independent construction of the norm, because both the real parameters γρ and their existence
+in that form use the asserted zero placement.
+
+
+2    Algebraic GNS without a unit
+Let A be a complex ∗-algebra, with no norm or unit assumed, and let W : A → C be positive:
+
+                                     W (a∗ a) ≥ 0          (a ∈ A).
+
+Theorem 2.1 (Nonunital algebraic GNS). Put
+
+                        ⟨a, b⟩W = W (b∗ a),       NW = {a : W (a∗ a) = 0}.
+
+Then NW is a left ideal and
+
+                               DW = A/NW ,            πW (a)[b] = [ab],                        (2.1)
+
+is a ∗-representation on a pre-Hilbert space. Regard DW as a common invariant dense domain
+in its Hilbert completion HW . For every a ∈ A,
+
+                                        πW (a∗ ) ⊆ πW (a)∗ ,                                   (2.2)
+
+                                                  3
+so πW (a) is closable. It extends boundedly to HW if and only if there is a constant Ca such that
+
+                               W (b∗ a∗ ab) ≤ Ca2 W (b∗ b)                   (b ∈ A).           (2.3)
+
+The least such Ca is the norm of the extension.
+
+Proof. Positivity and polarization make ⟨ , ⟩W Hermitian and give Cauchy–Schwarz. If b ∈ NW ,
+then
+                                 W ((ab)∗ ab) = ⟨a∗ ab, b⟩W = 0,
+so NW is a left ideal and (2.1) is well defined. For classes in DW ,
+
+                        ⟨πW (a)[b], [c]⟩W = W (c∗ ab) = ⟨[b], πW (a∗ )[c]⟩W .
+
+This proves (2.2). The adjoint domain contains the dense subspace DW , so πW (a) is closable.
+Finally,
+                                 ∥πW (a)[b]∥2 = W (b∗ a∗ ab),
+so the bounded-operator criterion is exactly (2.3).
+
+   For a = a∗ , the operator πW (a) is symmetric and closable. Neither essential self-adjointness
+nor even the existence of a self-adjoint extension follows. For example,
+                                   d
+                         P = −i      ,       D(P ) = Cc∞ (0, ∞) ⊂ L2 (0, ∞),
+                                  dx
+is symmetric and closable, but its deficiency indices are (1, 0), so it has no self-adjoint extension.
+Indeed, the adjoint equations P ∗ u = iu and P ∗ u = −iu give u = ce−x and u = cex , respectively.
+Only the first solution belongs to L2 (0, ∞). Products of closures require a separate common-
+domain construction. We give that construction in Section 3.
+
+Example 2.2 (An unbounded positive GNS multiplier). Let A = C[x], let x∗ = x, and set
+                                              1
+                                                        Z
+                                                                         2
+                                     W (p) = √                  p(t)e−t dt.
+                                               π            R
+
+Then W is positive, but multiplication by x is unbounded, since
+                                                                     2
+                            ∥πW (x)[xn ]∥2     t2n+2 e−t dt
+                                                  R
+                                             R                 1
+                                           =           2    =n+ .
+                              ∥[xn ]∥2              −t
+                                             R
+                                                 2n            2
+                                              Rt e       dt
+
+3    Closed forms and the common invariant domain
+A finite value of one quadratic form permits one operator application. Repeated products
+require control of every algebra element. The distinction already occurs for a diagonal operator.
+
+Example 3.1 (A maximal form domain need not be invariant). On ℓ2 (N), let N en = nen ,
+initially on c00 (N). Its closure and the closed form q(v) = ∥N v∥2 have domain
+                                                                             
+                                                 X                           
+                                   V =       v:         n2 |vn |2 < ∞ .
+                                                                             
+                                                  n≥1
+
+
+                                                        4
+Coordinate convergence proves that the maximal diagonal operator is closed. Finite coordinate
+truncations approximate every vector in its graph norm, so they prove the asserted closure.
+The vector vn = n−2 belongs to V , but N v ∈
+                                                        P 4
+                                            / V , since  n |vn |2 = ∞. For the polynomial
+algebra generated by N , the common domain is instead
+                                                                          
+                                        \             X                   
+                                 V∞ =             v:         n2k |vn |2 < ∞ .                   (3.1)
+                                                                          
+                                        k≥0            n≥1
+
+Multiplication by each polynomial preserves V∞ . Truncations converge in every displayed
+seminorm.
+   Return to Theorem 2.1. Write D = DW , H = HW , and Aa = πW (a) for a ∈ A. The graph
+topology on D is generated by ∥ξ∥ and ∥πW (a)ξ∥, for all a ∈ A. It is a locally convex topology.
+Completion can require nets when A has no countable family of controlling seminorms.
+Theorem 3.2 (The exact common graph domain). The completion of D in its graph topology
+identifies with                      \
+                                cl
+                              DW   =   D(Aa ) ⊂ H.                               (3.2)
+                                                  a∈A
+                          cl (a) = A |
+On this domain, the maps πW                        form an invariant ∗-representation. In particular,
+                                    a Dcl
+                                       W
+
+                    cl
+                   πW      cl
+                       (a)πW          cl
+                              (b)ξ = πW  (ab)ξ,                cl
+                                                             ⟨πW                  cl
+                                                                  (a)ξ, η⟩ = ⟨ξ, πW  (a∗ )η⟩.   (3.3)
+Each action is continuous in the graph topology. For each a, the nonnegative form
+                                 qa ([b]) = W (b∗ a∗ ab) = ∥πW (a)[b]∥2
+is closable on H. Its closure is q a (ξ) = ∥Aa ξ∥2 on D(Aa ). Thus (3.2) is exactly the intersection
+of these closed form domains. Each πW     cl (a) has closure A .
+                                                              a
+
+Proof. A graph Cauchy net (ξi ) has a Hilbert limit ξ and limits ηa = limi πW (a)ξi . Closedness
+of Aa gives ξ ∈ D(Aa ) and Aa ξ = ηa . If ξ = 0, closability gives ηa = 0 for every a. Hence the
+graph completion injects into the right side of (3.2).
+   To prove the reverse inclusion, fix ξ in that intersection and a finite set F ⊂ A. Set
+c = a∈F a∗ a. For u ∈ D, the adjoint identity gives the estimate
+    P
+
+                         X
+                               ∥πW (a)u∥2 = ⟨πW (c)u, u⟩ ≤ ∥πW (c)u∥ ∥u∥.                       (3.4)
+                         a∈F
+
+Since ξ ∈ D(Ac ), choose uj ∈ D with uj → ξ and πW (c)uj → Ac ξ. Apply (3.4) to uj −uk . Every
+πW (a)uj , a ∈ F , is Cauchy. Closedness identifies its limit with Aa ξ. Thus D approximates ξ in
+any prescribed finite collection of graph seminorms. Directing these approximations by finite
+sets and positive tolerances produces one net converging in all graph seminorms.
+    Let this net be (ξi ) and fix b ∈ A. Then πW (b)ξi → Ab ξ and πW (a)πW (b)ξi = πW (ab)ξi →
+                                            cl and A A ξ = A ξ. Linearity follows by the same
+Aab ξ for every a. Closedness gives Ab ξ ∈ DW          a b       ab
+approximation. Approximating both vectors in the algebraic adjoint identity proves the second
+equality in (3.3). Continuity follows from ∥Aa Ab ξ∥ = ∥Aab ξ∥ and ∥Ab ξ∥ itself.
+    The form norm for qa is (∥ξ∥2 + ∥πW (a)ξ∥2 )1/2 . Its completion is the graph of Aa , which
+proves the form assertion. Finally πW (a) ⊆ πW    cl (a) ⊆ A , so taking closures proves the last
+                                                              a
+statement. Any closed ∗-representation extending πW contains the limits of these graph Cauchy
+nets and agrees with their multiplier limits. Thus it extends πW  cl , which proves minimality.
+
+
+
+                                                        5
+   This is the minimal closed representation in the sense of [4, Definition 2.4 and Lemma 2.6].
+The word “closed” refers to completeness in the common graph topology. It does not assert
+                          cl is a closed operator or is self-adjoint. Example 3.1 separates the
+that each restriction to DW
+common domain from the maximal domain of one multiplier.
+
+
+4       Dagger transfer and completion
+Theorem 4.1 (Dagger transfer). Let T : A → B be a ∗-homomorphism of complex ∗-algebras,
+let ω : B → C be positive, and put W = ω ◦ T . Then
+
+                         ⟨a, c⟩W = ⟨T (a), T (c)⟩ω ,     NW = T −1 (Nω ).                 (4.1)
+
+Consequently
+                              U0 : DW −→ Dω ,          [a] 7−→ [T (a)],                   (4.2)
+is an isometric injection and extends uniquely to an isometry
+
+                                         U : HW −→ Hω                                     (4.3)
+
+with closed range. On the algebraic common domain,
+
+                                     U0 πW (a) = πω (T (a))U0 .                           (4.4)
+
+    If B is a C ∗ -algebra, both sides of (4.4) extend boundedly and
+
+                            ∥πω (b)∥ ≤ ∥b∥,       ∥πW (a)∥ ≤ ∥T (a)∥,                     (4.5)
+
+while
+                                U πW (a) = πω (T (a))U     on HW .                        (4.6)
+Proof. For a, c ∈ A,
+                                    W (c∗ a) = ω(T (c)∗ T (a)),
+which proves positivity, (4.1), and the isometry (4.2). Every isometry of pre-Hilbert spaces
+extends uniquely to their completions; its range is closed because its domain is complete.
+Multiplicativity of T gives (4.4).
+   Suppose now that B is a C ∗ -algebra. The C ∗ -order inequality gives
+
+                                     ω(d∗ b∗ bd) ≤ ∥b∥2 ω(d∗ d),
+
+which proves the first estimate in (4.5). Taking b = T (a) and d = T (c) proves the second.
+Continuity then extends (4.4) to (4.6). No equality between arbitrary unbounded closure
+domains is used.
+
+Proposition 4.2 (Transfer of closed graph domains). Use the data of Theorem 4.1, and set
+K = U HW ⊂ Hω and E = U0 DW . On the dense subspace E ⊂ K, define
+
+                                       ρ(a) = πω (T (a))|E .
+
+Then ρ is a ∗-representation, and
+                               cl
+                            U DW  = Dρcl ,         cl
+                                                U πW  (a)ξ = ρcl (a)U ξ.                  (4.7)
+
+                                                  6
+Here every closure defining Dρcl is taken in K. For the ambient closures on Hω one has
+
+                  U D(πW (a)) ⊆ D(πω (T (a))),                   πω (T (a))U ξ = U πW (a)ξ.   (4.8)
+                                        cl = D cl . Without surjectivity this last domain equality
+If T is surjective, U is unitary and U DW     ω
+need not hold, even when U is unitary.
+Proof. The algebraic intertwining identifies ρ(a) with U πW (a)U −1 on E. As a map onto K, U
+is unitary. It identifies the individual graph closures and all graph seminorms. Theorem 3.2
+therefore gives (4.7). If ξj ∈ DW approaches ξ in the graph norm of πW (a), its images approach
+U ξ and have multiplier images approaching U πW (a)ξ. This proves (4.8). For surjective T , one
+has U0 DW = Dω and T (A) = B. Hence the Hilbert spaces and their full graph topologies
+agree.
+
+Example 4.3 (A Hilbert isometry can miss the full target domain). Let A = c00 (N) and
+B = C[n]+c00 (N), with pointwise multiplication and conjugation. Here C[n] denotes polynomial
+sequences on the positive integers. Let T be inclusion and set
+
+                                                      e−n bn ,
+                                                X
+                                 ω(b) =                            W = ω|A .
+                                                n≥1
+
+All sums converge, and both functionals are positive and faithful. Both GNS completions
+identify with H = ℓ2 (N, e−n ), because they contain the finite sequences. Thus U is the identity
+on H. Every A-multiplier is bounded, so DW   cl = H. The element n ∈ B acts by an unbounded
+
+multiplier. Finite truncations give cores for every polynomial multiplier. Therefore
+                                                                                 
+                                                                                 
+                                                e−n n2k |vn |2 < ∞ for all k ≥ 0 .
+                                          X
+                        Dωcl =       v:
+                                                                                 
+                                          n≥1
+
+The vector vn = en/2 /n belongs to H, but fails the condition for k = 1. Thus U DW
+                                                                                 cl ⊈ D cl .
+                                                                                       ω
+Only the restricted algebra T (A) appears in (4.7).
+    For a field interpretation, algebra products represent repeated operations on a common
+domain. Theorem 3.2 supplies this domain after positivity has supplied the Hilbert norm.
+Proposition 4.2 preserves it for the represented algebra. A vacuum vector, self-adjoint generators,
+locality, and a positive energy condition require their own constructions.
+
+
+5    Positive unitization for nonunital C ∗ -algebras
+The unit missing from a convolution algebra cannot be adjoined to an arbitrary positive
+functional without an additional bound. For a nonunital ∗-algebra A, write A+ = A ⊕ C1 and
+
+                                          ωm (a + λ1) = ω(a) + mλ.                            (5.1)
+
+Direct minimization in λ gives the algebraic criterion
+                                                       
+                                                       m ∈ R,      m ≥ 0,
+                                                       
+                                                       
+                    ωm is positive         ⇐⇒            ω(a∗ ) = ω(a),                       (5.2)
+                                                       
+                                                       |ω(a)|2 ≤ m ω(a∗ a)
+                                                       
+                                                                                (a ∈ A).
+
+                                                           7
+Theorem 5.1 (The nonunital C ∗ case). Let A be a nonunital C ∗ -algebra and let ω : A → C be
+positive. Then ω is Hermitian and bounded, and the functional (5.1) on the standard unitization
+is positive exactly when
+                                    m ∈ R,      m ≥ ∥ω∥.                                  (5.3)
+Let (ei ) be any positive contractive two-sided approximate identity. For the minimal extension
+m = ∥ω∥, its GNS vector Ω = [1] satisfies
+
+                                                 [ei ] −→ Ω,                                  (5.4)
+
+and the restricted representation of A is bounded, nondegenerate, and cyclic:
+
+                            ω(a) = ⟨πω (a)Ω, Ω⟩,               πω (A)Ω = Hω .                 (5.5)
+
+For m > ∥ω∥, the vector [1] of that larger extension is not the limit in (5.4).
+
+Proof. Every self-adjoint element is the difference of two positive elements, so positivity makes
+ω Hermitian. If ω were unbounded, its values would be unbounded on the positive unit ball:
+otherwise the decomposition of an arbitrary element into four positive parts would bound it.
+One could then choose an ≥ 0 with
+
+                                      ∥an ∥ ≤ 2−n ,       ω(an ) = 1.
+
+The norm-convergent positive sum a = n an would satisfy ω(a) ≥ N
+                                            P                                   P
+                                                                     n=1 ω(an ) = N for every
+N , a contradiction. Hence ω is bounded.
+    Positive contractive approximate identities exist. Cauchy–Schwarz and ei a → a give
+
+                              |ω(a)|2 = lim |ω(ei a)|2 ≤ ∥ω∥ ω(a∗ a).                         (5.6)
+                                             i
+
+Equations (5.2) and (5.6) prove positivity for m = ∥ω∥; adding (m − ∥ω∥) times the positive
+quotient character a + λ1 7→ λ proves sufficiency for every larger m. Conversely, a positive
+functional on a unital C ∗ -algebra has norm equal to its value at the unit, so restriction of ωm
+gives ∥ω∥ ≤ m.
+    It remains to identify the vector [1]. If ∥ω∥ > 0, choose ∥a∥ ≤ 1 with |ω(a)| arbitrarily close
+to ∥ω∥. Using ei a → a and Cauchy–Schwarz shows
+
+                                            ω(e2i ) −→ ∥ω∥.
+
+Since 0 ≤ e2i ≤ ei ≤ 1 in the unitization, also ω(ei ) → ∥ω∥. Therefore
+
+                           ∥[1] − [ei ]∥2 = ∥ω∥ − 2ω(ei ) + ω(e2i ) −→ 0,
+
+which is (5.4); the zero functional is immediate. Moreover πω (a)Ω = [a], proving cyclicity, and
+πω (ei )[a] = [ei a] → [a], proving nondegeneracy. The C ∗ -estimate in (4.5) proves boundedness.
+If m > ∥ω∥, the same computation instead gives
+
+                                lim ∥[1] − [ei ]∥2 = m − ∥ω∥ > 0.
+                                  i
+
+
+
+
+                                                      8
+   Segal’s original formulation defines states in the possibly nonunital case on p. 75, states
+Theorem 1 and constructs an approximate identity on pp. 76–77, proves the quotient and
+multiplier bound on p. 78, and obtains the cyclic vector on pp. 78–79 of [3].
+
+Example 5.2 (Positive unitization can fail algebraically). Let A = c00 (N) with pointwise
+multiplication and conjugation, and define
+                                                      X
+                                             ω(a) =         nan .
+                                                      n≥1
+
+This is a Hermitian positive functional. If a positive extension ωm existed, Cauchy–Schwarz in
+the unitization, applied to the nth point mass en , would give
+
+                             n2 = |ωm (en )|2 ≤ ωm (1)ωm (e∗n en ) = mn
+
+for every n, which is impossible for finite m.
+
+
+6    The Gaussian obstruction to finite mass
+For the full Weil functional, failure of positive unitization follows from its arithmetic local
+terms. It does not require a hypothesis about the zeros. The relevant functions approach the
+convolution identity while remaining inside Aζ :
+                             2
+                        e−u /(4a)                           2
+                ga (u) = √        ,      gba (t) = e−at ,           ga∗ ⋆ ga = g2a ,   a > 0.   (6.1)
+                           4πa
+Theorem 6.1 (No finite positive unitization of the Weil functional). As a ↓ 0, the functional
+in (1.6) satisfies
+                                    a−1/2 log(1/a)
+                         Lζ (ga ) =        √       + O(a−1/2 ).                          (6.2)
+                                          4 π
+In particular Lζ (g2a ) > 0 for all sufficiently small a, and
+                                              √
+                              |Lζ (ga )|2       2
+                                  ∗
+                                           ∼ √ a−1/2 log(1/a) −→ ∞.                             (6.3)
+                             Lζ (ga ⋆ ga )   4 π
+
+There is no positive extension of Lζ to A+
+                                         ζ with a finite value at the adjoined unit.
+
+Proof. Every derivative of ga is a polynomial times a Gaussian. Thus ga ∈ Aζ . Completing
+the square proves (6.1), with the Fourier normalization (1.2). The polar contribution is
+2ea/4 = O(1).
+    For 0 < a ≤ 1, split the Gaussian exponent into two equal parts. Since ΛvM (n) ≤ log n, the
+absolute prime contribution is bounded by
+                                         2
+                                 e−(log 2) /(8a) X log n −(log n)2 /8
+                                     √               √ e              .                         (6.4)
+                                        πa       n≥2
+                                                      n
+
+The series is finite: its terms are at most n−2 for all sufficiently large n. Hence this contribution
+is exponentially small relative to a−1/2 .
+
+                                                      9
+    Put k∞ (t) = Re ψ(1/4 + it/2) − log π. The digamma expansion on a closed sector away
+from the negative real axis gives ψ(z) = log z − (2z)−1 + O(|z|−2 ) [1, Eq. 5.11.2]. Consequently
+k∞ (t) − log |t| is bounded for |t| ≥ 1. It is integrable on [−1, 1], since k∞ is smooth there.
+Therefore                     Z
+                                       2
+                                  e−at k∞ (t) − log |t| dt = O(a−1/2 ).
+                                                       
+                               R
+                    √
+Substitution s = a t gives
+                                                 √                                !
+                  1                       a−1/2    π
+                    Z                                           Z
+                        −at2                                        −s2
+                       e     log |t| dt =             log(1/a) + e      log |s| ds .
+                 2π R                      2π     2              R
+
+The remaining integral is finite. Adding all three local terms proves (6.2). Applying that formula
+at a and 2a proves (6.3). A positive unitization of mass m would require |Lζ (ga )|2 ≤ mLζ (g2a )
+by (5.2), which contradicts the divergence.
+
+Theorem 6.2 (Positive finite Gaussian subspaces). Fix distinct positive real numbers λ1 , . . . , λr .
+There exists a0 > 0 such that the Weil form is positive definite on
+
+                          Ea = spanC {gaλ1 , . . . , gaλr }      (0 < a < a0 ).
+
+The dimension of Ea is r. This assertion is unconditional. The threshold a0 may depend on
+the entire finite family.
+Proof. The Gram matrix of the displayed functions is the real symmetric matrix
+
+                                       G(a)jk = Lζ (ga(λj +λk ) ).
+
+Apply (6.2) at each of the finitely many scales a(λj + λk ). In matrix norm,
+                           √ √
+                         4 π a                                  1
+                                   G(a) −→ M,       Mjk = p           .                         (6.5)
+                         log(1/a)                             λj + λk
+For c ∈ Cr ,
+                                                                       2
+                                                      r
+                                         1
+                                                 Z
+                                  ∗                           −λj t2
+                                                      X
+                                 c Mc = √                 cj e             dt.                  (6.6)
+                                          π       R j=1
+
+If this integral vanishes, continuity makes its integrand zero everywhere. Order the λj increas-
+                                              2
+ingly, divide the resulting identity by e−λ1 t , and let t → +∞. This gives c1 = 0. Repeating
+proves c = 0. Thus M is positive definite. Let µ > 0 be its smallest eigenvalue. Matrix
+convergence makes the left matrix in (6.5) differ from M by less than µ/2 for all sufficiently
+small a. Hence G(a) is positive definite. The same linear-independence argument applied to
+                                2
+the Fourier transforms e−aλj t proves dim Ea = r.
+
+    For λ1 = 1 and λ2 = 4, the limiting matrix is
+                                  √      √ !
+                                1/√2 1/√5                                   1
+                        M=                    ,               det M =          > 0.
+                                1/ 5 1/ 8                                   20
+
+This gives a positive two-dimensional family directly from the local terms. The quantifiers in
+Theorem 6.2 fix the finite family before choosing its scale. They do not imply positivity on all
+of Aζ at once.
+
+                                                     10
+Corollary 6.3 (Excluded positive carriers). There is no representation
+
+                                         Lζ (g) = ⟨π(g)Ω, Ω⟩
+
+on a positive Hilbert space with Ω of finite norm in a common invariant ∗-representation domain.
+There is also no ∗-homomorphism T : Aζ → B to a C ∗ -algebra with a positive linear functional
+ω : B → C such that Lζ = ω ◦ T .
+Proof. In the vector case, the adjoint identity on the invariant domain gives
+
+                           |Lζ (g)|2 ≤ ∥Ω∥2 ∥π(g)Ω∥2 = ∥Ω∥2 Lζ (g ∗ ⋆ g).
+
+This contradicts (6.3). In the C ∗ case, positivity implies boundedness and |ω(b)|2 ≤ ∥ω∥ω(b∗ b)
+by Theorem 5.1, or its unital Cauchy–Schwarz proof. Substitute b = T (g) and use the same
+divergence.
+
+  This obstruction concerns the functional’s representing vector. It does not prevent bounded
+GNS multipliers. Indeed, under RH, (1.11) and |fb(t)| ≤ ∥f ∥L1 give
+
+                              Lζ ((f ⋆ b)∗ ⋆ (f ⋆ b)) ≤ ∥f ∥2L1 Lζ (b∗ ⋆ b).
+
+Thus every convolution multiplier is bounded under that hypothesis, and DL          cl = H . The
+                                                                                      ζ      Lζ
+functional itself has no finite representing vector. A positive functional on a proper test algebra,
+or a positive weight finite on a specified test ideal, remains compatible with this restriction. The
+latter requires its domain and all products to be defined before a GNS or field interpretation
+can be asserted.
+
+
+7    Why an indefinite quotient does not give positivity
+The Hermitian part of the construction exists without positivity. For a complex ∗-algebra A
+and a Hermitian functional W , put
+
+              BW (f, g) = W (g ∗ f ),      RW = {f : BW (f, g) = 0 for every g ∈ A}.
+
+Then RW is a left ideal, since
+
+                     BW (af, g) = W (g ∗ af ) = BW (f, a∗ g) = 0        (f ∈ RW ).
+
+The quotient A/RW consequently has a nondegenerate Hermitian pairing and an algebraic
+left action satisfying BW (af, g) = BW (f, a∗ g). This applies unconditionally to (Aζ , Lζ ) by
+(1.8). It supplies neither a positive norm nor a class of the missing unit. Under positivity,
+Cauchy–Schwarz identifies RW with NW , and Theorem 2.1 applies.
+    Let V = C2 , J = diag(1, −1), and
+
+                                             [x, y] = y ∗ Jx.
+
+The vectors e1 + e2 and e1 − e2 are isotropic, while their sum is not. Thus the isotropic cone
+{x : [x, x] = 0} is not a linear subspace and cannot be divided out. The radical {x : [x, y] = 0 ∀y}
+is zero here. In general, quotienting by the radical produces only a nondegenerate Hermitian
+space; it supplies neither a fundamental symmetry nor a complete Hilbert majorant. In this
+
+                                                   11
+finite-dimensional example such data can be chosen, but they are extra data, not consequences
+of the radical quotient.
+    Nor is a vector functional for an indefinite adjoint positive. On M2 (C) put A♯ = JA∗ J, let
+Ω = e1 , and set ω(A) = [AΩ, Ω]. For
+                                                        !
+                                                  0 0
+                                          X=
+                                                  1 0
+
+one has
+                             ω(X ♯ X) = [XΩ, XΩ] = [e2 , e2 ] = −1.                          (7.1)
+Hence an indefinite pairing does not provide the positivity required in (1.10).
+
+
+8     The independent arithmetic question
+Proposition 8.1 (Formal factorization). For a linear functional W on a complex ∗-algebra A,
+the following are equivalent:
+    1. W is positive;
+
+    2. there are a complex ∗-algebra B and maps
+
+                                    ω : B −→ C,         T : A −→ B,
+
+      where ω is positive, T is a ∗-homomorphism, and W = ω ◦ T .
+Proof. Dagger transfer proves (2) ⇒ (1). For the converse take B = A, ω = W , and T equal to
+the identity.
+
+   For W = Lζ , formal factorization is therefore equivalent to the positivity in (1.10), and
+hence to RH. The identity factorization, or a Hilbert space whose spectral data are prescribed
+from the zeta zeros, cannot establish that positivity independently.
+Open Problem 8.2 (Independent dagger realization of Lζ ). Construct a complex ∗-algebra
+B, a positive linear functional ω : B → C, and a ∗-homomorphism T : Aζ → B such that
+
+                                           Lζ = ω ◦ T.                                       (8.1)
+
+Derive the carrier, the map, and the positivity of ω from the polar, archimedean, and prime-
+power structures in (1.6), without using RH, the multiset of zeta zeros, or an assertion equivalent
+to (1.10). Prove (8.1) with all three local terms and the Fourier and measure conventions above.
+Corollary 6.3 excludes a positive functional on a C ∗ -algebra as the target. Any admissible
+positive functional ω must fail the finite-mass unitization bound on the image of T . Theorem 3.2
+and Proposition 4.2 then specify the common invariant domain supplied by this factorization.
+    The resulting representation would still need an additional comparison to a spectral de-
+terminant. Equality of functionals does not preserve trace multiplicities. For example, on C
+the positive functional W (z) = mz, with integer m ≥ 2, has a one-dimensional GNS space. A
+scalar λ consequently has determinant s − λ there. The trace realization z 7→ zIm on Cm has
+the same functional and determinant (s − λ)m . Thus a determinant realization must identify
+the operator, its domain, and spectral multiplicities separately.
+
+                                                12
+References
+[1] F. W. J. Olver et al., eds., NIST Digital Library of Mathematical Functions, §5.11(i),
+    equation 5.11.2. dlmf.nist.gov/5.11.E2.
+
+[2] A. Weil, Sur les “formules explicites” de la théorie des nombres premiers, Commun. Sém.
+    Math. Univ. Lund, Tome supplémentaire (1952), 252–265.
+
+[3] I. E. Segal, Irreducible representations of operator algebras, Bull. Amer. Math. Soc. 53
+    (1947), 73–88. doi:10.1090/S0002-9904-1947-08742-5.
+
+[4] R. T. Powers, Self-adjoint algebras of unbounded operators, Commun. Math. Phys. 21 (1971),
+    85–124. doi:10.1007/BF01646746.
+
+
+
+
+                                             13
+

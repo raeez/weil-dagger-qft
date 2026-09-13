@@ -1,0 +1,519 @@
+{
+  "schema": 1,
+  "scope": "Bounded Weil/GNS source implementation, with every recovered relevant argument and known residual preserved. This is not whole-corpus acceptance.",
+  "base_commit": "cce2bc383bcf2fd930e917a5abb773e0469465cc",
+  "requested_controls": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "ultra",
+    "observed_runtime_metadata": "unverified"
+  },
+  "source_policy": "Archives and returns are discovery material; exact proofs and primary sources establish the candidate mathematics.",
+  "sources": {
+    "base-paper": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-mine-weil-20260913/reports/research/MINING-2026-09-13/baseline/paper.tex",
+      "sha256": "1902189145183342a560527ba18e54cdbb443054523bff29b1945f1490abb799",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/base-paper.tex",
+      "anchors": [
+        {
+          "lines": [
+            1,
+            617
+          ],
+          "bytes": [
+            0,
+            21034
+          ],
+          "sha256": "dd1fac15592c8ce892b7e50202fec82a81fdc2783a210bc5ed7cd2dbfaf7f56d"
+        }
+      ]
+    },
+    "return-sw002-g02-p03": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/sw002_g02--p03-final-01.md",
+      "sha256": "3fa3d029572c75b8087e3ce7ec5cc880f25f1a0547923e261edd0ee325b4f36a",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/return-sw002-g02-p03.md",
+      "anchors": [
+        {
+          "lines": [
+            7,
+            91
+          ],
+          "bytes": [
+            666,
+            4690
+          ],
+          "sha256": "54aedc2a7b30874caa0494a2e65087abc7cfe254b328a8aea10ca72c48e71ef3"
+        },
+        {
+          "lines": [
+            95,
+            124
+          ],
+          "bytes": [
+            4905,
+            7116
+          ],
+          "sha256": "1250c07c709d2186de066cd3489e0c3348361ade401f7f6ab1a3e67442762339"
+        },
+        {
+          "lines": [
+            132,
+            140
+          ],
+          "bytes": [
+            7345,
+            9563
+          ],
+          "sha256": "8ee1045da81c46607e37acfefab45886e322af05fe2537cc1b2ad82a7014b672"
+        },
+        {
+          "lines": [
+            205,
+            208
+          ],
+          "bytes": [
+            13655,
+            14481
+          ],
+          "sha256": "fffd20440702ffd355f789999fcd1ddfed2d6df2b99b759becfa162c9196f166"
+        }
+      ]
+    },
+    "return-cr-g08-p004": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/critique_groups_02_08--g08--p004-final-01.md",
+      "sha256": "e20ab2ce342293a475acf8cfd9f8920069e631c92541d7c2755e429d7384d3a9",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/return-cr-g08-p004.md",
+      "anchors": [
+        {
+          "lines": [
+            118,
+            191
+          ],
+          "bytes": [
+            9772,
+            18344
+          ],
+          "sha256": "cb99e150d23186dfa25b42cc1a953ffbe1aa389e6ca7e7fc4a46b6c5cdbc9df8"
+        },
+        {
+          "lines": [
+            270,
+            322
+          ],
+          "bytes": [
+            29907,
+            35633
+          ],
+          "sha256": "a1bf6822e7221cf5b40382704e8f87f9e76fe8e675e1024b5c329ea7bada019d"
+        }
+      ]
+    },
+    "return-cr-g05-s001": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/critique_groups_02_08--g05--s001-final-01.md",
+      "sha256": "ea46407fe21123c138fc6db2b1fbfe50f6268cd471ca7292d01110c0bd6b0651",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/return-cr-g05-s001.md",
+      "anchors": [
+        {
+          "lines": [
+            170,
+            200
+          ],
+          "bytes": [
+            13823,
+            25463
+          ],
+          "sha256": "b292868e8c36d334a4526423711b2ba93a58ebf905b82f53fbd27e90366f86b9"
+        }
+      ]
+    },
+    "synthesis-arithmetic": {
+      "path": "/Users/raeez/mathematics/worktrees/full-synthesis-integration-20260909/reports/research/FULL-SYNTHESIS-2026-09-09/source/modules/arithmetic.tex",
+      "sha256": "126c38996953cc4fd7f09f9aca9be329bdcbe44d20609121fedb3c09f244a023",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/synthesis-arithmetic.tex",
+      "anchors": [
+        {
+          "lines": [
+            1535,
+            1658
+          ],
+          "bytes": [
+            68854,
+            75189
+          ],
+          "sha256": "166529dfa85c22ae5f8d2cb73669c47f5b058aa0b07e1931504222f5b68cd099"
+        },
+        {
+          "lines": [
+            1659,
+            1723
+          ],
+          "bytes": [
+            75189,
+            77887
+          ],
+          "sha256": "6fd640908a98325a4a22a35fcb585fbd702d15cf33ceb0d264c667e7fcd8febf"
+        }
+      ]
+    },
+    "historical-platonic": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/tmp/archive2/complete_session_handoff_2026-08-31/generated/platonic_reconstruction_2026/platonic_reconstruction.tex",
+      "sha256": "bc9bea5959381262b0d664ba161b95da323b405293553c3b09ccaf5e042446be",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/historical-platonic.tex",
+      "anchors": [
+        {
+          "lines": [
+            526,
+            704
+          ],
+          "bytes": [
+            22499,
+            28693
+          ],
+          "sha256": "0b2f487d50438786a99bb0796274847a68f530f236ae5d7e3e249c1730a47fba"
+        }
+      ]
+    },
+    "historical-recap": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/tmp/archive2/complete_session_handoff_2026-08-31/working_state/SAFE_REASONING_RECAP.md",
+      "sha256": "81bd9faaac3bfb146ee481f0e924a7f4d193737d7d5d79d79a59a45fad7f726c",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/historical-recap.md",
+      "anchors": [
+        {
+          "lines": [
+            114,
+            136
+          ],
+          "bytes": [
+            5994,
+            7093
+          ],
+          "sha256": "e363af29e722e38c7b21a73cb0c49808c9e951557c5de673e7a710ddd0af1d30"
+        }
+      ]
+    },
+    "historical-weil-seed": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/tmp/archive2/complete_session_handoff_2026-08-31/projects/weil_dagger_qft/README.md",
+      "sha256": "298768f86e8c43f303c63a766ddfd4d930a465f7b1fea8adbb5f36b21a69a806",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/historical-weil-seed.md",
+      "anchors": [
+        {
+          "lines": [
+            1,
+            38
+          ],
+          "bytes": [
+            0,
+            1621
+          ],
+          "sha256": "9e105b99e921e53bd80bed14275a32fda71230ffcdc50a8d87a14096e91d4279"
+        }
+      ]
+    },
+    "archived-kms": {
+      "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/processed/2026-09-13-arithmetic-deliveries/nested/Archive_2(5)-42d9ecccb31d/v4-accepted-20260904/chapters/arithmetic/46_KMS_GNS_full_sector.tex",
+      "sha256": "a704b37a946dca47ad1497085cd484bb20f34e171194078d1cc1ea74afef64f0",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/archived-kms.tex",
+      "anchors": [
+        {
+          "lines": [
+            237,
+            440
+          ],
+          "bytes": [
+            12328,
+            21887
+          ],
+          "sha256": "12a31de188ce5c09e2f33b8b2aebcbae38994e547c1fb0c08efe66fdf21d8fc4"
+        }
+      ]
+    },
+    "archived-gaussians": {
+      "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/processed/2026-09-13-arithmetic-deliveries/nested/Archive_2(5)-42d9ecccb31d/v4-accepted-20260904/chapters/arithmetic/59_R_analytic_weil_gaussians_formal.tex",
+      "sha256": "5120bfcfbc251446d363cdb7196b89b3cf024e814863bc32c92ffedc4956eb4b",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/archived-gaussians.tex",
+      "anchors": [
+        {
+          "lines": [
+            301,
+            617
+          ],
+          "bytes": [
+            12993,
+            26654
+          ],
+          "sha256": "45be231f70283998b19219acb7a5ce01a0f43a7854a7cadef1c6b6831f213b4f"
+        }
+      ]
+    },
+    "archived-copoisson": {
+      "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/processed/2026-09-13-arithmetic-deliveries/nested/Archive_2(5)-42d9ecccb31d/v4-accepted-20260904/chapters/arithmetic/79_ATP_Guinand_Weil.tex",
+      "sha256": "7706234b140a21fb772d9f031aa3e4970383513e2d9660c9655af376417336dd",
+      "snapshot": "reports/research/MINING-2026-09-13/sources/archived-copoisson.tex",
+      "anchors": [
+        {
+          "lines": [
+            396,
+            578
+          ],
+          "bytes": [
+            19021,
+            27477
+          ],
+          "sha256": "8dbc4b633682a685340995b9525ee2450c249a34e0db0f7a880d171b3199c3a5"
+        }
+      ]
+    }
+  },
+  "public_threads": [
+    {
+      "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T09-32-00-01a0989b-764e-7880-a6c5-423599c47f25.jsonl",
+      "source_sha256": "0b12ab85e49f96657b377b353db2b99dd448c100a8a5ff72b00b86b0c3bff0e2",
+      "snapshot": "sources/root--sw002_g02--p03-public.json",
+      "record_count": 6,
+      "limit": "Only public assistant messages retained. Supplemental non-Weil turns are preserved, not mathematically certified."
+    },
+    {
+      "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T19-24-42-01a09aba-170b-72a3-bab8-83d5d4e2096c.jsonl",
+      "source_sha256": "4a5a0ed94ad8ad4d9754ee441cbfd396ef8770edd5fd89e4e05da00c6cc6f3db",
+      "snapshot": "sources/root--critique_groups_02_08--g08--p004-public.json",
+      "record_count": 12,
+      "limit": "Only public assistant messages retained. Supplemental non-Weil turns are preserved, not mathematically certified."
+    },
+    {
+      "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T19-40-22-01a09ac8-7121-75a3-9613-e8e7c5e01b10.jsonl",
+      "source_sha256": "73b29de23e2a3db594f08c7dfe1a330b9a1cb92ef58ccf1ad25c89b6650723f5",
+      "snapshot": "sources/root--critique_groups_02_08--g05--s001-public.json",
+      "record_count": 9,
+      "limit": "Only public assistant messages retained. Supplemental non-Weil turns are preserved, not mathematically certified."
+    }
+  ],
+  "dispositions": [
+    {
+      "id": "W01",
+      "claim": "Nonunital square positivity gives GNS left ideal, closability and exact boundedness condition.",
+      "source_keys": [
+        "base-paper",
+        "synthesis-arithmetic",
+        "return-sw002-g02-p03",
+        "return-cr-g08-p004"
+      ],
+      "status": "retained-and-reproved",
+      "destination": "paper.tex thm:gns",
+      "evidence": "Cauchy-Schwarz applied to b and a*ab; dense adjoint domain.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W02",
+      "claim": "A common invariant closed representation is available after algebraic GNS.",
+      "source_keys": [
+        "base-paper"
+      ],
+      "status": "implemented-with-complete-proof",
+      "destination": "paper.tex thm:graph-domain",
+      "evidence": "For every finite F, c=sum a*a controls the graph seminorms. This proves simultaneous approximation, intersection equality, invariance, exact products and minimality. Powers Definition 2.4 and Lemma 2.6 independently checked in the retained primary preprint.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W03",
+      "claim": "The maximal domain of one closed multiplier form is invariant.",
+      "source_keys": [
+        "base-paper",
+        "return-sw002-g02-p03"
+      ],
+      "status": "contradicted-with-deciding-example",
+      "destination": "paper.tex ex:maximal-domain",
+      "evidence": "N on l2: v_n=n^-2 has sum n\u00b2|v_n|\u00b2 finite but sum n\u2074|v_n|\u00b2 infinite. All-moment domain is invariant.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W04",
+      "claim": "Dagger isometry extends to closed common domains.",
+      "source_keys": [
+        "synthesis-arithmetic",
+        "return-sw002-g02-p03"
+      ],
+      "status": "implemented-with-exact-carrier",
+      "destination": "paper.tex prop:graph-transfer; ex:transfer-domain",
+      "evidence": "Unitarily transport each graph in the closed Hilbert range; ambient closures give inclusion. The c00 subset C[n]+c00 weighted example disproves full-target domain equality.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W05",
+      "claim": "Full Weil functional admits no finite positive unitization.",
+      "source_keys": [
+        "return-sw002-g02-p03"
+      ],
+      "status": "integrated-and-strengthened",
+      "destination": "paper.tex thm:weil-mass; cor:weil-carriers",
+      "evidence": "Local Gaussian asymptotic with explicit leading coefficient, prime exponential bound, DLMF digamma estimate, divergent representability ratio. No RH used.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W06",
+      "claim": "Nontrivial positive Gaussian test subspaces can be constructed.",
+      "source_keys": [
+        "historical-weil-seed",
+        "archived-gaussians"
+      ],
+      "status": "implemented-with-new-finite-family-proof",
+      "destination": "paper.tex thm:gaussian-subspaces",
+      "evidence": "Normalized Gram matrices converge to the positive Gram matrix ((lambda_j+lambda_k)^(-1/2)); for scales 1,4 the determinant is 1/20.",
+      "residual_obligation": "No uniform threshold over all finite families; no positivity on the whole algebra; no independent state realizing the full functional."
+    },
+    {
+      "id": "W07",
+      "claim": "The unconditional Hermitian radical quotient carries left convolution.",
+      "source_keys": [
+        "historical-platonic",
+        "historical-recap"
+      ],
+      "status": "integrated-in-correct-carrier",
+      "destination": "paper.tex Section 7",
+      "evidence": "B(af,g)=B(f,a*g) proves left-ideal invariance. Hermiticity makes the quotient nondegenerate. A Hilbert or Krein topology is not produced.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W08",
+      "claim": "Adjoining a positive unit and its cyclic vector follows from RH.",
+      "source_keys": [
+        "historical-platonic",
+        "historical-recap"
+      ],
+      "status": "contradicted-and-repaired",
+      "destination": "paper.tex thm:weil-mass; thm:gns",
+      "evidence": "A finite positive unit would obey the impossible Gaussian unitization bound. The nonunital GNS quotient survives under Weil positivity.",
+      "residual_obligation": "Arithmetic positivity remains open. No repair can retain a finite vector representing the full functional on this algebra."
+    },
+    {
+      "id": "W09",
+      "claim": "A square-positive functional can have zero GNS space despite being nonzero.",
+      "source_keys": [
+        "synthesis-arithmetic",
+        "return-sw002-g02-p03"
+      ],
+      "status": "retained-developer-example",
+      "destination": "reports/research/MINING-2026-09-13/REPORT.md",
+      "evidence": "A=Cx, x*=x, x\u00b2=0, L(x)=1. All square values vanish; L is nonzero. The stronger actual-Weil obstruction is in the paper.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W10",
+      "claim": "Sharp C*-unitization and approximate-identity theorem.",
+      "source_keys": [
+        "base-paper",
+        "synthesis-arithmetic",
+        "return-sw002-g02-p03"
+      ],
+      "status": "retained",
+      "destination": "paper.tex thm:cstar-unitization",
+      "evidence": "Quadratic minimization and C*-positive-functional boundedness supply m>=norm(omega); approximate identities give the minimal vector.",
+      "residual_obligation": "No new primary Segal scan obtained in this phase; inherited locator requires source lane verification on the exact candidate."
+    },
+    {
+      "id": "W11",
+      "claim": "Symmetric closable operators need not admit self-adjoint extensions.",
+      "source_keys": [
+        "base-paper",
+        "synthesis-arithmetic",
+        "return-sw002-g02-p03"
+      ],
+      "status": "retained-and-expanded",
+      "destination": "paper.tex Section 2",
+      "evidence": "Half-line momentum deficiency equations give e^-x and e^x, hence indices (1,0).",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W12",
+      "claim": "Indefinite adjoints and isotropic quotients imply positivity.",
+      "source_keys": [
+        "base-paper",
+        "historical-platonic"
+      ],
+      "status": "contradicted-with-retained-examples",
+      "destination": "paper.tex Section 7",
+      "evidence": "J=diag(1,-1), X=e21 gives -1. Isotropic vectors e1+e2 and e1-e2 sum to a non-isotropic vector.",
+      "residual_obligation": "None for the stated result; independent candidate review remains required."
+    },
+    {
+      "id": "W13",
+      "claim": "Positive functional identity fixes spectral multiplicity.",
+      "source_keys": [
+        "return-sw002-g02-p03"
+      ],
+      "status": "contradicted-and-integrated",
+      "destination": "paper.tex final paragraph",
+      "evidence": "W(z)=mz has one-dimensional GNS space; scalar trace realization in dimension m has determinant multiplicity m.",
+      "residual_obligation": "A spectral determinant needs an independent carrier/domain/multiplicity theorem."
+    },
+    {
+      "id": "W14",
+      "claim": "Full-domain Deninger identity and exact determinant comparison imply RH.",
+      "source_keys": [
+        "historical-platonic",
+        "synthesis-arithmetic",
+        "return-sw002-g02-p03"
+      ],
+      "status": "retained-conditional-cross-repository-obligation",
+      "destination": "reports/research/MINING-2026-09-13/REPORT.md",
+      "evidence": "Theta*=I-Theta with equality of domains makes -i(Theta-1/2) self-adjoint. No such arithmetic Theta is constructed.",
+      "residual_obligation": "Arithmetic cohomology and determinant construction are outside this paper phase; parent owns cross-repository propagation."
+    },
+    {
+      "id": "W15",
+      "claim": "Archived Bost-Connes state gives a positive Weil comparison.",
+      "source_keys": [
+        "archived-kms",
+        "return-cr-g08-p004"
+      ],
+      "status": "contradicted-at-first-defining-relation",
+      "destination": "reports/research/MINING-2026-09-13/REPORT.md",
+      "evidence": "At gamma=0, m=n>1, the stated relation mu_m*mu_m=1 conflicts with phi(mu_m*mu_m)=1/m and phi(1)=1. The proposed state is not a functional.",
+      "residual_obligation": "A consistent KMS state and modular domains must be constructed by the Volume IV owner. Even a correct C*-state cannot pull back to the full Weil functional, by cor:weil-carriers."
+    },
+    {
+      "id": "W16",
+      "claim": "Balanced Gaussian explicit formula proves positivity.",
+      "source_keys": [
+        "archived-gaussians"
+      ],
+      "status": "carrier-distinction-preserved-and-positive-subclass-constructed",
+      "destination": "paper.tex eq:weil-functional; thm:gaussian-subspaces",
+      "evidence": "The archived W subtracts the zero sum and is claimed identically zero. It differs from the full arithmetic L_zeta here. Its Gaussian convolution identity is valid after normalization; a zero balanced identity is no positivity proof.",
+      "residual_obligation": "The archived Fourier/prime/gamma normalization has not been certified. No finite-part gamma identity is imported. The retained paper uses an absolutely convergent real-frequency gamma integral."
+    },
+    {
+      "id": "W17",
+      "claim": "Co-Poisson conditions CP1-CP3 define a possible nonempty subclass.",
+      "source_keys": [
+        "archived-copoisson"
+      ],
+      "status": "ordinary-integral-domain-refuted",
+      "destination": "reports/research/MINING-2026-09-13/REPORT.md",
+      "evidence": "For nonzero f in L2, its autocorrelation phi is continuous and phi(0)=norm(f)^2>0. Thus integral_0^delta Re(phi(y)) dy/y diverges, contrary to CP1. CP3 itself restates the intended inequality.",
+      "residual_obligation": "A subtracted or regularized Mellin mean is a different construction. Its exact formula, cutoff dependence, comparison and positivity remain unresolved; no nonemptiness claim is imported."
+    },
+    {
+      "id": "W18",
+      "claim": "All finite-rank operators lie in the range a rho^(1/2).",
+      "source_keys": [
+        "return-cr-g08-p004"
+      ],
+      "status": "retained-counterexample-and-correct-density-route",
+      "destination": "reports/research/MINING-2026-09-13/REPORT.md",
+      "evidence": "rho_n=const n^-beta; v_n=n^(-(beta+1)/2) gives a rank-one map outside the range because rho^(-1/2)v is not l2. Finite matrix units remain in the range and are HS dense.",
+      "residual_obligation": "Volume IV owns implementation; no Hilbert-Schmidt range equality is used here."
+    },
+    {
+      "id": "W19",
+      "claim": "Public unfinished and intermediate Weil/GNS claims from the relevant retained sessions.",
+      "source_keys": [
+        "return-sw002-g02-p03",
+        "return-cr-g08-p004",
+        "return-cr-g05-s001"
+      ],
+      "status": "preserved-and-classified",
+      "destination": "sources/*-public.json",
+      "evidence": "Public commentary includes the earlier RH-conditional finite-mass claim. The later local-term proof is stronger and is integrated. Other visible messages introduce no additional completed domain theorem.",
+      "residual_obligation": "No missing private or unsaved reasoning reconstructed. Whole-corpus mining and unrelated supplemental turns are not certified by this bounded phase."
+    }
+  ]
+}

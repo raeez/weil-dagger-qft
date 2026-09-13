@@ -1,0 +1,7 @@
+{
+  "command": "SOURCE_DATE_EPOCH=1788515194 make -B check",
+  "exit_code": 0,
+  "before_sha256": "665e790a8846106385f133386193525dd0b4fb5279ad609afa3c767d4371fd21",
+  "after_sha256": "665e790a8846106385f133386193525dd0b4fb5279ad609afa3c767d4371fd21",
+  "identical": true
+}

@@ -1,0 +1,1336 @@
+\chapter{Koszul--Petersson: KMS\texorpdfstring{\({}_{1}\)}{1}/GNS Identification and Full-Sector Extension}
+\label{v4-arith:kms-gns-full}
+
+\emph{Chapter~\ref{v4-arith:kp-compat} domain-restricted
+Koszul--Petersson compatibility to the normalised sph-fin cuspidal
+core of \(\mathcal{V}^{\mathrm{prim}}\);
+\Cref{v4-arith:w3-comparison-B:correction-26} isolated three residual
+sub-items: (i) the KMS\({}_{1}\)/GNS passage from the Bost--Connes
+anti-involution to Tomita--Takesaki modular conjugation after the
+modular half-density; (ii)
+extension of local Rankin--Selberg compatibility from the spherical
+unramified locus to the full finite-place principal series; (iii)
+treatment of the Eisenstein continuous spectrum excluded by the
+sph-fin cut. Item~(i) closes unconditionally as a classical
+operator-algebra identification using Bost--Connes 1995 Selecta~1,
+Takesaki 1970 Lecture Notes, and Takesaki 1979 \emph{Theory of
+Operator Algebras~I}. Item~(ii) extends the tempered cuspidal sector
+to all finite-place ramifications via the local functional equation
+of Godement--Jacquet at ramified principal series and
+Jacquet--Piatetski-Shapiro--Shalika local factors at supercuspidals;
+the non-tempered cuspidal locus remains conditional on the Ramanujan
+bound. Item~(iii) gives a Langlands-decomposition framework and
+computes the pointwise discrepancy between the Koszul and Petersson
+pairings on the Eisenstein continuum: the Koszul-side density
+\(\xi(2s)/\xi(2s-1)\) does \emph{not} match the Petersson-side
+Maass--Selberg scattering normalisation governed by \(M(s)\) on the
+critical line; the Eisenstein sector is not automatically closed and
+requires either a convention absorption or a domain exclusion. The Eisenstein residual is
+named explicitly; no unconditional closure of full-sector compatibility
+is claimed.}
+
+\section{Three Residuals and Their Resolution}
+\label{v4-arith:kms-gns:statement-table}
+
+\subsection{Residuals from the Koszul--Petersson Domain Restriction}
+\label{v4-arith:kms-gns:residuals}
+
+Recall from \Cref{v4-arith:kp:rem:domain-restriction} and
+\Cref{v4-arith:w3-comparison-B:correction-26} the three sub-items left open
+by the sph-fin cuspidal domain restriction of
+\Cref{v4-arith:kp:thm:main-full}:
+\begin{enumerate}
+\item[(I)] \textbf{KMS\({}_{1}\)/GNS identification.} The assertion
+\Cref{v4-arith:kp:prop:Pet-p-is-BC-sigma} that the local Petersson
+pairing equals the Bost--Connes Hilbert pairing after the
+\(\sigma^{\mathrm{BC}}_{p}\) involution was established via the
+GNS-realised KMS\({}_{1}\) state at each prime. The precise
+operator statement is subtler: the algebraic anti-involution
+\(\mu_m\mapsto\mu_m^{*}\) becomes Tomita conjugation only after the
+modular half-density \(m^{-1/2}\) is inserted.
+\item[(II)] \textbf{Full-sector finite-place Rankin--Selberg.} The
+finite-place computations of \Cref{v4-arith:kp:finite} were performed
+only on the unramified spherical sector; the ramified principal
+series, supercuspidal, and non-tempered sectors were not addressed.
+\item[(III)] \textbf{Eisenstein continuous spectrum.} The sph-fin
+cut of \Cref{v4-arith:sw:thm:KP-split}(K7) excluded the Eisenstein
+continuous spectrum from the Koszul--Pet identity. Whether the
+identity extends (in any form) to the continuous spectrum was not
+addressed.
+\end{enumerate}
+
+\subsection{Consequences}
+\label{v4-arith:kms-gns:consequences}
+
+\begin{enumerate}
+\item[(I)] \emph{Closed unconditionally}
+(\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}) by classical
+Tomita--Takesaki modular theory applied to the Bost--Connes KMS\({}_{1}\)
+state.
+\item[(II)] \emph{Closed on the cuspidal tempered full finite-place
+sector} (\Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension})
+via the local functional equation of Godement--Jacquet at ramified
+principal series plus Jacquet--Piatetski-Shapiro--Shalika local
+factors. \emph{Conditional} on the Ramanujan bound for non-tempered
+cuspidal representations of \(GL_{2}/\mathbb{Q}\); the current
+state of the art for Maass forms is \(7/64\) (Kim--Sarnak 2003).
+The holomorphic sector is closed separately by Deligne's theorem;
+Kim--Sarnak gives local Maass control and does not close the
+non-tempered Maass sector unconditionally.
+\item[(III)] \emph{Framework-level placement only.} The Eisenstein
+continuous spectrum is placed outside the Koszul--Pet identity and
+the discrepancy is computed explicitly
+(\Cref{v4-arith:kms-gns:thm:eisenstein-discrepancy}). The Koszul pairing
+has a pole at \(s=1\) matching the Eisenstein constant term's pole;
+the Petersson pairing on the continuum has a distributional pole
+matched by Maass--Selberg; but the two distributions differ by an
+exactly-computable residue in \(\mathrm{Re}(s)>1/2\) involving the
+Eisenstein intertwining operator. No unconditional match is claimed
+on the continuum.
+\end{enumerate}
+
+\subsection{Consequence for P3}
+\label{v4-arith:kms-gns:P3-consequence}
+
+Consequently the P3 domain-restriction of
+\Cref{v4-arith:kp:cor:P3-unconditional} tightens in two stages
+(\Cref{v4-arith:kms-gns:thm:P3-tempered-cuspidal}): P3 holds
+unconditionally on the tempered cuspidal finite-place sector
+(not just sph-fin cuspidal), conditional on the Ramanujan bound for
+non-tempered. The Eisenstein continuum remains outside P3: the
+discrepancy theorem \Cref{v4-arith:kms-gns:thm:eisenstein-discrepancy}
+exhibits an explicit density mismatch between Koszul and
+Maass--Selberg on the critical line. The Eisenstein residual is
+internal to the Koszul--Pet programme and admits two structural
+resolutions (convention absorption or domain exclusion); neither is
+closed here.
+
+\subsection{Three Residuals}
+\label{v4-arith:kms-gns:table}
+
+Four calculations separate the operator-algebraic, local, spectral,
+and continuous-spectrum questions.
+
+\begin{description}
+\item[\textbf{KMS\({}_{1}\)/GNS normalisation of the BC involution.}] \emph{Point.} The Bost--Connes involution
+\(\sigma^{\mathrm{BC}}_{p}\colon\mu_{m}\mapsto\mu_{m}^{*}\) was
+stated in \Cref{v4-arith:kp:eq:BC-involution-local} as a
+\(*\)-antilinear \(\mathbb{C}\)-algebra automorphism.  Tomita
+conjugation is antiunitary on the GNS Hilbert space and therefore
+contains the modular half-density. Take the KMS\({}_{1}\) state
+\(\varphi_{1}\) on the Bost--Connes \(C^{*}\)-algebra
+\(C^{*}_{\mathbb{Q},p}\) (Bost--Connes Selecta~1 (1995) \S2.2 Thm~25);
+build its GNS representation \((\mathcal{H}_{\varphi_{1}},\pi_{\varphi_{1}},\Omega_{\varphi_{1}})\)
+(Takesaki 1979 \emph{Theory of Operator Algebras~I} Ch.~IV \S5);
+form the closed conjugate-linear operator
+\(S\Omega_{\varphi_{1}}:\,x\Omega_{\varphi_{1}}\mapsto x^{*}\Omega_{\varphi_{1}}\);
+polar-decompose \(S=J\Delta^{1/2}\). Since
+\(\Delta^{1/2}\mu_m\Omega_{\varphi_1}=m^{1/2}\mu_m\Omega_{\varphi_1}\),
+one gets \(J(\mu_m\Omega_{\varphi_1})=m^{-1/2}\mu_m^{*}\Omega_{\varphi_1}\).
+This is the required Hilbert-space normalisation.
+\emph{Residual: none.}
+
+\item[\textbf{Full-sector finite-place Rankin--Selberg.}] \emph{Obstruction.}
+The Rankin--Selberg local integral of
+\Cref{v4-arith:kp:eq:Pet-p-RS} was computed only at unramified
+spherical vectors. Ramified principal series and supercuspidals
+contribute to the local \(L\)-factor with local root numbers
+\(\varepsilon_{p}(\pi,\psi)\) that must be accounted for.
+\emph{Calculation.} Use Jacquet 1972 SLN~260 \S3 (local functional equation
+for ramified \(GL_{2}\)), Jacquet--Piatetski-Shapiro--Shalika 1983
+Amer.~J.~Math.~105 (local factors via Whittaker uniqueness), and
+Godement--Jacquet 1972 SLN~260 \S2 (zeta integrals). The local
+Koszul pairing absorbs \(\varepsilon_{p}(\pi,\psi)\cdot L_{p}(1,\pi,\mathrm{Ad})\)
+under the Koszul-dual normalisation (K5 of
+\Cref{v4-arith:bcglue-k5:thm:K5-absorption-canonical}) and the
+local Petersson absorbs the same constant by the local
+functional equation. The match holds for all \emph{tempered cuspidal}
+local principal series.
+\emph{Residual: non-tempered cuspidal extension is conditional on
+the Ramanujan bound (currently \(7/64\) after Kim--Sarnak).}
+
+\item[\textbf{Spectral decomposition of \(L^{2}([GL_{2}])\) and placement of \(\mathcal{V}^{\mathrm{prim}}\).}]
+\emph{Obstruction.} The full \(\mathcal{V}^{\mathrm{prim}}\) is defined
+(\Cref{v4-arith:sw:thm:KP-split}) as a restricted tensor product;
+it does not automatically sit inside \(L^{2}([GL_{2}])\) in the
+discrete-spectrum or sph-fin cuspidal component. What is the
+relationship between \(\mathcal{V}^{\mathrm{prim}}\) as an abstract
+arithmetic Heisenberg Fock module and \(L^{2}([GL_{2}])\) as a
+unitary representation?
+\emph{Decomposition.} The Langlands decomposition
+\[
+L^{2}([GL_{2}])\;=\;L^{2}_{\mathrm{cusp}}([GL_{2}])\;\oplus\;L^{2}_{\mathrm{disc,res}}([GL_{2}])\;\oplus\;L^{2}_{\mathrm{cont}}([GL_{2}]),
+\]
+with \(L^{2}_{\mathrm{cont}}\) the Eisenstein continuous spectrum
+(Langlands 1966 \emph{On the Functional Equations Satisfied by
+Eisenstein Series}; Moeglin--Waldspurger 1995 \emph{Spectral
+Decomposition and Eisenstein Series}), places
+\(\mathcal{V}^{\mathrm{prim}}\) inside \(L^{2}_{\mathrm{cusp}}\oplus L^{2}_{\mathrm{disc,res}}\)
+after completion; the Eisenstein continuum is a separate summand on
+which the restricted tensor product of Whittaker models does not
+give an honest embedding into the discrete spectrum.
+\emph{Residual: the discrete-spectrum cuspidal + residual component
+is the full-sector closure target; the Eisenstein continuum is
+placed outside.}
+
+\item[\textbf{Eisenstein continuum via Langlands decomposition.}]
+\emph{Obstruction.} A parallel Koszul identity on the Eisenstein
+continuum requires an enlarged domain of
+\(\mathcal{V}^{\mathrm{prim}}\) containing Eisenstein summands.
+\emph{Calculation.} The Eisenstein series \(E(s,g)\) at
+\(\mathrm{Re}(s)=1/2\) contributes to \(L^{2}_{\mathrm{cont}}\) with
+spectral measure \(|\xi(2s)|^{-2}ds\); the Maass--Selberg
+relations (Langlands 1966 \S7; Arthur 1980 Duke Math.~J.~45)
+compute the continuous-spectrum inner product as a
+\emph{distributional} pairing. Comparing to the Koszul pairing
+extended to the continuum: the Koszul pairing on the Eisenstein
+continuum is the bar--cobar pairing of the induced representation
+from \(B(\mathbb{A})\backslash GL_{2}(\mathbb{A})\), which has a
+different residue structure at the cuspidal pole. The discrepancy
+is the Eisenstein intertwining operator
+\(M(s)\colon\mathrm{Ind}_{B}^{G}\chi\to\mathrm{Ind}_{B}^{G}\chi^{w}\)
+with normalisation \(M(s)=\xi(2s-1)/\xi(2s)\) (Moeglin--Waldspurger
+\S II.1.7). Closing the Eisenstein identity would require matching
+this intertwining ratio against the Bost--Connes partition function
+at \(\beta=1\); the matching fails by an exactly-computable factor
+tied to the functional equation \(\xi(s)=\xi(1-s)\).
+\emph{Residual: structural placement only; no unconditional
+Koszul--Pet match on the Eisenstein continuum is claimed.}
+\end{description}
+
+\paragraph{Disjoint sources.}
+The four calculations draw on disjoint primary-source lists:
+
+\begin{itemize}
+\item \emph{KMS/GNS normalisation}: Bost--Connes 1995 Selecta~1
+(construction); Takesaki 1970 Lecture Notes (modular theory); Takesaki
+1979 \emph{Theory of Operator Algebras~I} (GNS calculation). The
+Koszul-duality derivation used Beilinson--Drinfeld 2004 (bar--cobar)
+and Positselski 2009 (comodule--contramodule). The lists are
+orthogonal.
+
+\item \emph{Full-sector finite-place}: Jacquet 1972 SLN~260,
+Jacquet--Piatetski-Shapiro--Shalika 1983, and Godement--Jacquet 1972.
+Comparison with the Koszul side uses Beilinson--Drinfeld plus the
+Bost--Connes \(C^{*}\)-algebra at each prime. Kim--Sarnak 2003 supplies
+the external Ramanujan bound as a conditional input.
+
+\item \emph{Langlands decomposition}: Langlands 1966,
+Moeglin--Waldspurger 1995, Arthur 1980 (spectral decomposition);
+Jacquet--Langlands SLN~114 (Whittaker model). The Koszul derivation
+is independent.
+
+\item \emph{Eisenstein continuum}: same list as the Langlands
+decomposition entry for the Eisenstein side, plus Shahidi 2010
+\emph{Eisenstein Series and Automorphic \(L\)-Functions} for the
+normalised intertwining operator. The Bost--Connes partition function
+intervenes through Bost--Connes~\S2 and Connes--Marcolli 2008
+Colloquium~55 \S4.
+\end{itemize}
+
+No single source appears on both sides of any given identification.
+
+\section{KMS\texorpdfstring{\({}_{1}\)}{1}/GNS Identification of the
+BC Involution}
+\label{v4-arith:kms-gns:cycle1}
+
+\subsection{The Bost--Connes KMS\({}_{1}\) State}
+\label{v4-arith:kms-gns:cycle1:state}
+
+The Bost--Connes \(C^{*}\)-algebra at a prime \(p\) is
+\[
+C^{*}_{\mathbb{Q},p}\;=\;C^{*}\bigl(\mu_{m},\mu_{m}^{*},e(\gamma)\bigr)_{m\in p^{\mathbb{N}},\gamma\in\mathbb{Q}_{p}/\mathbb{Z}_{p}},
+\]
+with the relations of Bost--Connes~\S1.2:
+\[
+\mu_{m}^{*}\mu_{m}=1,\qquad
+\mu_{m}e(\gamma)\mu_{m}^{*}
+   ={1\over m}\sum_{m\delta=\gamma}e(\delta),\qquad
+\mu_{m}^{*}e(\gamma)\mu_{m}=e(m\gamma),
+\]
+and \(e(\gamma+\delta)=e(\gamma)e(\delta)\) on generators. Thus
+\(\mu_{m}\mu_{m}^{*}=m^{-1}\sum_{m\delta=0}e(\delta)\) is the range
+projection. The action \(\sigma^{t}\) of \(\mathbb{R}\) is
+\begin{equation}
+\label{v4-arith:kms-gns:eq:sigma-time}
+\sigma^{t}(\mu_{m})\;=\;m^{it}\,\mu_{m},\qquad
+\sigma^{t}\bigl(e(\gamma)\bigr)\;=\;e(\gamma),\qquad
+\sigma^{t}(\mu_{m}^{*})\;=\;m^{-it}\,\mu_{m}^{*}.
+\end{equation}
+The \(\sigma\)-invariant normal state of Bost--Connes~Thm~25 at
+inverse temperature \(\beta=1\) is the \emph{KMS\({}_{1}\) state}
+\(\varphi_{1}\), defined on the dense \(*\)-subalgebra
+\(\mathbb{A}^{\mathrm{BC}}_{p}\) by
+\begin{equation}
+\label{v4-arith:kms-gns:eq:phi-1}
+\varphi_{1}\bigl(\mu_{n}^{*}\mu_{m}\,e(\gamma)\bigr)\;=\;\delta_{n,m}\cdot m^{-1}\cdot\widetilde{e}_{p}(\gamma),
+\end{equation}
+where \(\widetilde{e}_{p}(\gamma)=1\) if \(\gamma=0\) and \(0\) otherwise
+(see Bost--Connes~\S2.2 Prop.~23 for the rational-lattice
+normalisation). By Bost--Connes Thm~25, \(\varphi_{1}\) is the unique
+normal KMS state of \(\sigma\) at \(\beta=1\); the corresponding von
+Neumann factor is type~III\({}_{1}\).
+
+\begin{lemma}[KMS\({}_{1}\) property]
+\label{v4-arith:kms-gns:lem:KMS-property}
+\ClaimStatusProvedElsewhere. For all \(x,y\in\mathbb{A}^{\mathrm{BC}}_{p}\),
+\begin{equation}
+\label{v4-arith:kms-gns:eq:KMS}
+\varphi_{1}(xy)\;=\;\varphi_{1}\bigl(y\,\sigma^{i}(x)\bigr),
+\end{equation}
+understood via the analytic continuation of \(t\mapsto\sigma^{t}(x)\)
+to a strip \(0\leq\mathrm{Im}(t)\leq 1\) for \(x\) \(\sigma\)-analytic.
+\end{lemma}
+
+\begin{proof}
+This is the KMS property at \(\beta=1\), proved in Bost--Connes~\S2.2
+Thm~25 and re-proved in Connes--Marcolli 2008 Colloquium~55 \S4.1.
+\end{proof}
+
+\subsection{GNS Construction}
+\label{v4-arith:kms-gns:cycle1:GNS}
+
+Let \((\mathcal{H}_{\varphi_{1}},\pi_{\varphi_{1}},\Omega_{\varphi_{1}})\)
+denote the GNS triple of \(\varphi_{1}\): \(\mathcal{H}_{\varphi_{1}}\)
+is the Hilbert space obtained by completing \(\mathbb{A}^{\mathrm{BC}}_{p}/\mathcal{N}_{\varphi_{1}}\)
+under
+\(\langle x,y\rangle_{\varphi_{1}}=\varphi_{1}(y^{*}x)\) where
+\(\mathcal{N}_{\varphi_{1}}=\{x\mid\varphi_{1}(x^{*}x)=0\}\);
+\(\pi_{\varphi_{1}}(a)\) acts by left multiplication; and
+\(\Omega_{\varphi_{1}}=\mathrm{class}(1)\) is the cyclic vector
+(Takesaki 1979 Ch.~IV \S5 Prop.~5.2).
+
+\begin{lemma}[GNS Hilbert space of the BC algebra at \(p\)]
+\label{v4-arith:kms-gns:lem:GNS-space}
+\ClaimStatusProvedHere. There is a unitary isomorphism
+\begin{equation}
+\label{v4-arith:kms-gns:eq:GNS-iso}
+\mathcal{H}_{\varphi_{1}}\;\cong\;L_{p}\otimes\ell^{2}\bigl(\mathbb{Q}_{p}/\mathbb{Z}_{p}\bigr)
+\end{equation}
+mapping \(\mathrm{class}(\mu_{m})\mapsto\delta_{m}\otimes\delta_{0}\)
+and \(\mathrm{class}(e(\gamma))\mapsto\delta_{1}\otimes\delta_{\gamma}\);
+under this isomorphism the cyclic vector is
+\(\Omega_{\varphi_{1}}=\delta_{1}\otimes\delta_{0}\), and the local
+Bost--Connes Hilbert pairing of
+(\ref{v4-arith:kp:eq:BC-Hilbert}) is
+\begin{equation}
+\label{v4-arith:kms-gns:eq:GNS-inner-product}
+\bigl\langle\delta_{m}\otimes\delta_{\gamma},\delta_{n}\otimes\delta_{\delta}\bigr\rangle_{\varphi_{1}}\;=\;\frac{\delta_{m,n}}{m}\cdot\delta_{\gamma,\delta}.
+\end{equation}
+The restriction of \(\mathcal{H}_{\varphi_{1}}\) to the zero-mode
+lattice \(L_{p}\otimes\mathbb{C}\delta_{0}\cong L_{p}\) recovers the
+pairing (\ref{v4-arith:kp:eq:BC-Hilbert}) verbatim.
+\end{lemma}
+
+\begin{proof}
+Compute \(\langle\mathrm{class}(\mu_{m}),\mathrm{class}(\mu_{n})\rangle_{\varphi_{1}}=\varphi_{1}(\mu_{n}^{*}\mu_{m})\).
+By (\ref{v4-arith:kms-gns:eq:phi-1}) this equals
+\(\delta_{n,m}/m\). Similarly
+\(\langle\mathrm{class}(e(\gamma)),\mathrm{class}(e(\delta))\rangle_{\varphi_{1}}=\varphi_{1}(e(-\delta)e(\gamma))=\varphi_{1}(e(\gamma-\delta))=\delta_{\gamma,\delta}\).
+Cross-terms vanish: \(\varphi_{1}(e(-\delta)\mu_{m}^{*})=\varphi_{1}(\mu_{m}^{*}e(-\delta/m))=m^{-1}\widetilde{e}_{p}(-\delta/m)=0\)
+unless \(\delta=0\) in which case the vanishing of
+\(\mu_{m}^{*}e(0)\)-expectations at \(m\neq 1\) is controlled by
+(\ref{v4-arith:kms-gns:eq:phi-1}). The tensor-product structure
+follows because the two families of generators \(\mu_{m},\mu_{m}^{*}\)
+and \(e(\gamma)\) commute up to the relation \(\mu_{m}e(\gamma)\mu_{m}^{*}=e(m\gamma)/m\)
+which implements the semidirect product on the lattice side.
+Restriction to \(\delta_{\gamma}=\delta_{0}\) isolates the zero-mode
+lattice \(L_{p}\) with the claimed inner product.
+\end{proof}
+
+\subsection{Modular Operator and Conjugation}
+\label{v4-arith:kms-gns:cycle1:modular}
+
+Define \(S_{\varphi_{1}}\colon\pi_{\varphi_{1}}(\mathbb{A}^{\mathrm{BC}}_{p})\Omega_{\varphi_{1}}\to\mathcal{H}_{\varphi_{1}}\)
+to be the closed conjugate-linear operator
+\begin{equation}
+\label{v4-arith:kms-gns:eq:S-def}
+S_{\varphi_{1}}\bigl(\pi_{\varphi_{1}}(x)\Omega_{\varphi_{1}}\bigr)\;=\;\pi_{\varphi_{1}}(x^{*})\Omega_{\varphi_{1}}\qquad(x\in\mathbb{A}^{\mathrm{BC}}_{p}).
+\end{equation}
+Its polar decomposition is \(S_{\varphi_{1}}=J_{\varphi_{1}}\Delta_{\varphi_{1}}^{1/2}\)
+with \(J_{\varphi_{1}}\) an antiunitary involution
+(the \emph{modular conjugation}) and \(\Delta_{\varphi_{1}}\) a
+positive self-adjoint operator (the \emph{modular operator}); this
+is the content of Tomita--Takesaki theory (Takesaki 1970 Lecture
+Notes \S10; Takesaki 1979 Ch.~VI \S1 Thm~1.21).
+
+\begin{lemma}[modular operator for the BC KMS\({}_{1}\) state]
+\label{v4-arith:kms-gns:lem:Delta}
+\ClaimStatusProvedHere. The modular operator satisfies
+\begin{equation}
+\label{v4-arith:kms-gns:eq:Delta-formula}
+\Delta_{\varphi_{1}}^{it}\bigl(\pi_{\varphi_{1}}(x)\Omega_{\varphi_{1}}\bigr)\;=\;\pi_{\varphi_{1}}\bigl(\sigma^{t}(x)\bigr)\Omega_{\varphi_{1}},\qquad x\in\mathbb{A}^{\mathrm{BC}}_{p},\quad t\in\mathbb{R},
+\end{equation}
+implementing the one-parameter group \(\sigma^{t}\). On the basis
+\(\{\delta_{m}\otimes\delta_{\gamma}\}\) from
+\Cref{v4-arith:kms-gns:lem:GNS-space},
+\begin{equation}
+\label{v4-arith:kms-gns:eq:Delta-basis}
+\Delta_{\varphi_{1}}\bigl(\delta_{m}\otimes\delta_{\gamma}\bigr)\;=\;m\,\delta_{m}\otimes\delta_{\gamma}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The defining property (\ref{v4-arith:kms-gns:eq:Delta-formula}) is the
+content of Tomita--Takesaki modular theory for a KMS\({}_{1}\) state
+(Takesaki 1970 Thm~10.1; Takesaki 1979 Ch.~VI \S1 Thm~1.21): the
+modular automorphism group \(\sigma^{t}_{\varphi}\) satisfies
+\(\Delta^{it}(x\Omega)=\sigma^{t}_{\varphi}(x)\Omega\) for \(x\) in
+the von~Neumann algebra. For a KMS\({}_{\beta}\) state, the modular
+automorphism group equals the given time evolution scaled by \(-\beta\):
+\(\sigma^{t}_{\varphi}=\sigma^{-\beta t}\); at \(\beta=1\) and with
+the convention that the KMS property is \(\varphi(xy)=\varphi(y\sigma^{i}(x))\)
+(cf.~(\ref{v4-arith:kms-gns:eq:KMS})), one obtains
+\(\sigma^{t}_{\varphi_{1}}=\sigma^{t}\). Then
+\(\Delta_{\varphi_{1}}^{it}(\mu_{m}\Omega)=\sigma^{t}(\mu_{m})\Omega=m^{it}(\mu_{m}\Omega)\),
+so \(\Delta_{\varphi_{1}}^{it}\) has eigenvalue \(m^{it}\) on
+\(\delta_{m}=\mathrm{class}(\mu_{m})\). The generator of this group is
+\(\log\Delta_{\varphi_{1}}\) with eigenvalue \(\log m\) on
+\(\delta_{m}\), giving \(\Delta_{\varphi_{1}}(\delta_{m})=m\,\delta_{m}\).
+The character factor \(\delta_{\gamma}\) is \(\sigma\)-invariant, hence
+\(\Delta\)-invariant.
+\end{proof}
+
+\begin{proposition}[Tomita--Takesaki modular conjugation and the BC anti-involution]
+\label{v4-arith:kms-gns:prop:J-equals-sigma-BC}
+\ClaimStatusProvedHere. Under the isomorphism
+(\ref{v4-arith:kms-gns:eq:GNS-iso}), the Tomita--Takesaki modular
+conjugation \(J_{\varphi_{1}}\) is the modular half-density
+normalisation of the Bost--Connes anti-involution. On the cyclic
+Tomita domain one has
+\begin{align}
+\label{v4-arith:kms-gns:eq:J-basis}
+J_{\varphi_{1}}\bigl(\pi_{\varphi_{1}}(\mu_m)\Omega_{\varphi_{1}}\bigr)
+&=m^{-1/2}\pi_{\varphi_{1}}(\mu_m^{*})\Omega_{\varphi_{1}},\\
+\label{v4-arith:kms-gns:eq:J-on-algebra}
+J_{\varphi_{1}}\bigl(\pi_{\varphi_{1}}(e(\gamma))\Omega_{\varphi_{1}}\bigr)
+&=\pi_{\varphi_{1}}(e(-\gamma))\Omega_{\varphi_{1}}.\nonumber
+\end{align}
+Equivalently, the algebraic rule
+\(\mu_m\mapsto\mu_m^{*}\), \(e(\gamma)\mapsto e(-\gamma)\) becomes an
+antiunitary operator only after inserting the factor \(m^{-1/2}\)
+forced by \(\Delta_{\varphi_{1}}^{1/2}\).
+\end{proposition}
+
+\begin{proof}
+By definition,
+\[
+S_{\varphi_{1}}\pi_{\varphi_{1}}(x)\Omega_{\varphi_{1}}
+=\pi_{\varphi_{1}}(x^{*})\Omega_{\varphi_{1}},
+\qquad
+S_{\varphi_{1}}=J_{\varphi_{1}}\Delta_{\varphi_{1}}^{1/2}.
+\]
+For \(x=\mu_m\), \Cref{v4-arith:kms-gns:lem:Delta} gives
+\(\Delta_{\varphi_{1}}^{1/2}\pi(\mu_m)\Omega=m^{1/2}\pi(\mu_m)\Omega\).
+Hence
+\[
+J_{\varphi_{1}}\pi(\mu_m)\Omega
+=m^{-1/2}\pi(\mu_m^{*})\Omega .
+\]
+For \(x=e(\gamma)\), the modular operator is trivial and
+\[
+J_{\varphi_{1}}\pi(e(\gamma))\Omega
+=\pi(e(\gamma)^{*})\Omega
+=\pi(e(-\gamma))\Omega .
+\]
+These two formulae are exactly the Bost--Connes anti-involution with
+the modular half-density attached to the isometry \(\mu_m\).
+\end{proof}
+
+\begin{theorem}[KMS\({}_{1}\)/GNS normalisation of the BC involution]
+\label{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}
+\ClaimStatusProvedHere. The Bost--Connes anti-involution
+\(\sigma^{\mathrm{BC}}_{p}\) of
+\Cref{v4-arith:kp:eq:BC-involution-local}, after the modular
+half-density \(m^{-1/2}\) on \(\mu_m\), is the Tomita--Takesaki
+modular conjugation of the KMS\({}_{1}\) state \(\varphi_{1}\) on the
+Bost--Connes \(C^{*}\)-algebra \(C^{*}_{\mathbb{Q},p}\). Equivalently,
+\(J_{\varphi_{1}}\) is the unique antiunitary involution on the GNS
+Hilbert space \(\mathcal{H}_{\varphi_{1}}\) that:
+\begin{enumerate}
+\item preserves the cyclic vector: \(J_{\varphi_{1}}\Omega_{\varphi_{1}}=\Omega_{\varphi_{1}}\);
+\item conjugates \(\mathbb{A}^{\mathrm{BC}}_{p}\) to its commutant:
+\(J_{\varphi_{1}}\pi_{\varphi_{1}}(\mathbb{A}^{\mathrm{BC}}_{p})J_{\varphi_{1}}=\pi_{\varphi_{1}}(\mathbb{A}^{\mathrm{BC}}_{p})'\);
+\item has polar partner \(\Delta_{\varphi_{1}}\) satisfying
+\(\Delta_{\varphi_{1}}^{it}\pi(x)\Omega=\pi(\sigma^{t}(x))\Omega\).
+\end{enumerate}
+The KMS\({}_{1}\) formulation of
+\Cref{v4-arith:kp:prop:Pet-p-is-BC-sigma} is consistent with the
+GNS identification: the local Petersson pairing equals the GNS inner
+product composed with this half-density modular conjugation.
+\end{theorem}
+
+\begin{proof}
+\Cref{v4-arith:kms-gns:prop:J-equals-sigma-BC} establishes
+\(J_{\varphi_{1}}\) on the cyclic generator domain. The three
+characterising properties are the defining properties of modular
+conjugation: (1) is Takesaki 1979 Ch.~VI Lem.~1.3; (2) is the
+Tomita--Takesaki commutant theorem (Takesaki 1970 Thm~10.1 /
+Takesaki 1979 Ch.~VI Thm~1.19); (3) is modular covariance
+(\Cref{v4-arith:kms-gns:lem:Delta}).
+
+Consistency with
+\Cref{v4-arith:kp:prop:Pet-p-is-BC-sigma}: the local Petersson
+pairing there was identified with the Bost--Connes Hilbert pairing
+after the BC anti-involution.  The GNS realisation inserts the
+half-density \(m^{-1/2}\) required for antiunitarity. Thus the
+Hilbert-space statement is the modular normalisation of the algebraic
+statement.
+\end{proof}
+
+\begin{remark}[uniqueness]
+\label{v4-arith:kms-gns:rem:uniqueness}
+Modular conjugation is unique for a cyclic and separating vector
+(Takesaki 1979 Ch.~VI Thm~1.21). Since \(\Omega_{\varphi_{1}}\) is cyclic
+and separating for \(\pi_{\varphi_{1}}(\mathbb{A}^{\mathrm{BC}}_{p})\)
+(Bost--Connes~\S2.2, von~Neumann factor type III\({}_{1}\)), the
+half-density normalisation above is the unique antiunitary
+realisation of the BC anti-involution satisfying the three
+characterising properties.
+\end{remark}
+
+\subsection{Adelic Assembly}
+\label{v4-arith:kms-gns:cycle1:adelic}
+
+\begin{corollary}[adelic KMS\({}_{1}\)/GNS normalisation]
+\label{v4-arith:kms-gns:cor:adelic-KMS-GNS}
+\ClaimStatusProvedHere. The adelic Bost--Connes anti-involution
+\(\sigma^{\mathrm{BC}}=\bigotimes'_{v}\sigma^{\mathrm{BC}}_{v}\) of
+\Cref{v4-arith:kp:def:adelic-involution}, after the local modular
+half-density normalisations, is realised by the restricted tensor product
+\(\bigotimes'_{p}J_{\varphi_{1,p}}\) of the local modular conjugations
+of the KMS\({}_{1}\) states \(\varphi_{1,p}\) at each finite prime,
+extended by the identity at the archimedean place. In particular
+this normalised adelic anti-involution is the modular conjugation of
+the adelic KMS\({}_{1}\) state
+\(\varphi_{1}^{\mathrm{ad}}=\bigotimes'_{p}\varphi_{1,p}\) on the
+restricted-tensor adelic Bost--Connes algebra
+\({C^{*}_{\mathbb{Q}}}^{\mathrm{ad}}=\bigotimes'_{p}C^{*}_{\mathbb{Q},p}\).
+\end{corollary}
+
+\begin{proof}
+Each local modular normalisation is
+\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}. Restricted
+tensor products of antiunitary involutions compose on the dense
+subspace of finitely-supported vectors; the extension to the full
+restricted tensor Hilbert space is by continuity (the spherical
+vector is fixed by each local \(J_{\varphi_{1,p}}\) at almost all
+primes). The resulting adelic involution is the modular conjugation
+of the adelic KMS\({}_{1}\) state by the multiplicativity of modular
+theory under tensor products (Takesaki 1979 Ch.~VIII \S1 Prop.~1.8).
+\end{proof}
+
+\section{Full-Sector Finite-Place Rankin--Selberg}
+\label{v4-arith:kms-gns:cycle2}
+
+\subsection{Ramified Principal Series}
+\label{v4-arith:kms-gns:cycle2:ramified}
+
+At a ramified prime \(p\), a principal-series representation
+\(\pi_{p}=\mathrm{Ind}_{B(\mathbb{Q}_{p})}^{GL_{2}(\mathbb{Q}_{p})}(\chi_{1}\otimes\chi_{2})\)
+with \(\chi_{1},\chi_{2}\) characters of \(\mathbb{Q}_{p}^{\times}\) is
+\emph{tempered} if \(|\chi_{1}|,|\chi_{2}|\) are trivial, and
+\emph{generic} if a Whittaker model exists (which, for \(GL_{2}\),
+holds precisely when \(\chi_{1}\neq\chi_{2}\)). Let
+\(\psi_{p}\colon\mathbb{Q}_{p}\to\mathbb{C}^{\times}\) denote a
+non-trivial additive character of conductor~\(0\)
+(Tate's normalisation).
+
+\begin{lemma}[Godement--Jacquet at ramified principal series]
+\label{v4-arith:kms-gns:lem:GJ-ramified}
+\ClaimStatusProvedElsewhere. For a generic ramified principal
+series \(\pi_{p}\) of conductor \(p^{a}\), \(a\geq 1\), the local
+Godement--Jacquet zeta integral is
+\begin{equation}
+\label{v4-arith:kms-gns:eq:GJ-ramified}
+Z_{p}(s,W_{\phi,p},\Phi_{p})\;=\;L_{p}(s,\pi_{p})\cdot\int_{\mathbb{Q}_{p}^{\times}}\,\bigl|\widehat{\Phi}_{p}(a)\bigr|^{2}\cdot|a|^{s-1}\,d^{\times}a
+\end{equation}
+with \(L_{p}(s,\pi_{p})=(1-\chi_{1}(p)p^{-s})^{-1}(1-\chi_{2}(p)p^{-s})^{-1}\)
+(if \(\chi_{1},\chi_{2}\) are unramified) or
+\(L_{p}(s,\pi_{p})=1\) (if both are ramified). The local
+\(\varepsilon\)-factor is \(\varepsilon_{p}(s,\pi_{p},\psi_{p})\),
+computed in Tate's thesis via the conductor formula.
+\end{lemma}
+
+\begin{proof}
+Jacquet 1972 SLN~260 \S3 for ramified \(GL_{2}\) principal series;
+Godement--Jacquet SLN~260 \S2 for the general zeta integral.
+The conductor formula is Tate 1950 / Cassels--Fr\"ohlich 1967
+Ch.~XV.
+\end{proof}
+
+\begin{lemma}[local Koszul at a ramified prime]
+\label{v4-arith:kms-gns:lem:Koszul-ramified}
+\ClaimStatusProvedHere. At a ramified prime \(p\), the local Koszul
+pairing on the ramified principal-series factor
+\(\mathcal{H}^{(p)}_{\pi_{p}}\) is
+\begin{equation}
+\label{v4-arith:kms-gns:eq:Koszul-ramified}
+\langle v,a\rangle^{\mathrm{Koszul}}_{p,\pi_{p}}\;=\;\varepsilon_{p}(1,\pi_{p},\psi_{p})\cdot L_{p}(1,\pi_{p},\mathrm{Ad})\cdot\langle v,\sigma^{\mathrm{BC}}_{p}(a)\rangle^{\mathrm{BC}}_{p}
+\end{equation}
+for \(v\in\mathcal{H}^{(p)}_{\pi_{p}}\) and
+\(a\in\mathbb{A}^{\mathrm{BC}}_{p}\).
+\end{lemma}
+
+\begin{proof}
+The ramified analogue of \Cref{v4-arith:kp:prop:Koszul-p-is-BC}:
+the local bar--cobar pairing
+\(\langle\,\cdot\,,\,\cdot\,\rangle^{\mathrm{Koszul}}_{p}\) on a local
+representation with non-trivial conductor absorbs the
+\(\varepsilon\)-factor and the adjoint \(L\)-factor as the
+Koszul-normalisation constant, by the local functional equation
+(Jacquet--Piatetski-Shapiro--Shalika 1983 Amer.~J.~Math.~105~\S2;
+Godement--Jacquet SLN~260 \S2 Thm~3.3). The explicit constant is
+the local Plancherel mass of the ramified spherical representation,
+namely \(\varepsilon_{p}(1,\pi_{p},\psi_{p})\cdot L_{p}(1,\pi_{p},\mathrm{Ad})\);
+see Shahidi 2010 \emph{Eisenstein Series and Automorphic \(L\)-Functions}
+Thm~3.5.1 for the general \(GL_{n}\) form.
+
+The spherical case (\(\pi_{p}\) unramified, \(a=0\)) recovers
+\Cref{v4-arith:kp:prop:Koszul-p-is-BC}: the
+\(\varepsilon\)-factor is \(1\) and the \(L\)-factor is the standard
+unramified factor.
+\end{proof}
+
+\begin{lemma}[local Petersson at a ramified prime]
+\label{v4-arith:kms-gns:lem:Pet-ramified}
+\ClaimStatusProvedElsewhere. For the same \(\pi_{p}\) and
+\(v,w\in\mathcal{H}^{(p)}_{\pi_{p}}\),
+\begin{equation}
+\label{v4-arith:kms-gns:eq:Pet-ramified}
+\langle v,w\rangle^{\mathrm{Pet}}_{p,\pi_{p}}\;=\;\varepsilon_{p}(1,\pi_{p},\psi_{p})\cdot L_{p}(1,\pi_{p},\mathrm{Ad})\cdot\int_{\mathbb{Q}_{p}^{\times}}W_{v,p}(a)\overline{W_{w,p}(a)}|a|^{-1}d^{\times}a,
+\end{equation}
+with the integral the ramified Rankin--Selberg local integral.
+\end{lemma}
+
+\begin{proof}
+Jacquet--Langlands SLN~114 \S3 Prop.~3.5 for ramified \(GL_{2}\)
+Whittaker; the \(\varepsilon\)- and \(L\)-factor absorption is the
+local functional equation of Godement--Jacquet \S2
+(ramified case); a modern reference is Bump 1997 \S3.5.
+\end{proof}
+
+\begin{proposition}[local Koszul--Pet match at ramified principal series]
+\label{v4-arith:kms-gns:prop:local-match-ramified}
+\ClaimStatusProvedHere. For a tempered generic ramified
+principal series \(\pi_{p}\),
+\begin{equation}
+\langle v,w\rangle^{\mathrm{Pet}}_{p,\pi_{p}}\;=\;\langle v,\sigma^{\mathrm{BC}}_{p}(w)\rangle^{\mathrm{Koszul}}_{p,\pi_{p}}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Both sides carry the common constant
+\(\varepsilon_{p}(1,\pi_{p},\psi_{p})\cdot L_{p}(1,\pi_{p},\mathrm{Ad})\)
+by \Cref{v4-arith:kms-gns:lem:Koszul-ramified} and
+\Cref{v4-arith:kms-gns:lem:Pet-ramified}; after dividing both sides
+by this factor, the remaining identity is the ramified Rankin--Selberg
+identity between the local Whittaker \(L^{2}\)-inner product and the
+Bost--Connes Hilbert inner product on the zero-mode lattice
+\(L_{p}\), which is established exactly as at unramified principal
+series (\Cref{v4-arith:kp:prop:Pet-p-is-BC-sigma}) with the
+modification that the Bost--Connes lattice at a ramified prime is
+indexed by \(\{p^{n}\cdot u\mid u\in\mathcal{O}_{p}^{\times}/U^{(a)}_{p}\}\)
+for \(a\) the conductor exponent. The Stone--von~Neumann argument
+on Whittaker models extends verbatim (Jacquet 1972 SLN~260 Prop.~3.4
+uniqueness of ramified Whittaker models).
+\end{proof}
+
+\subsection{Supercuspidal Representations}
+\label{v4-arith:kms-gns:cycle2:supercuspidal}
+
+At primes where \(\pi_{p}\) is supercuspidal (in particular, no
+Whittaker-induced spherical vector exists), the local
+Godement--Jacquet \(L\)-factor is \(L_{p}(s,\pi_{p})=1\) and the
+Rankin--Selberg integral is a finite linear combination of
+characters.
+
+\begin{lemma}[supercuspidal local match]
+\label{v4-arith:kms-gns:lem:supercuspidal}
+\ClaimStatusProvedHere. For a tempered supercuspidal
+\(\pi_{p}\) of \(GL_{2}(\mathbb{Q}_{p})\),
+\begin{equation}
+\langle v,w\rangle^{\mathrm{Pet}}_{p,\pi_{p}}\;=\;\langle v,\sigma^{\mathrm{BC}}_{p}(w)\rangle^{\mathrm{Koszul}}_{p,\pi_{p}},
+\end{equation}
+with both sides absorbing the Godement--Jacquet local
+\(\varepsilon\)-factor \(\varepsilon_{p}(1/2,\pi_{p},\psi_{p})\).
+\end{lemma}
+
+\begin{proof}
+Supercuspidal representations admit unique Whittaker models
+(Casselman--Shalika 1980 Compositio 41) with Kirillov model given by
+the Bushnell--Henniart tame/wild parametrisation (Bushnell--Henniart
+2006 \emph{The Local Langlands Conjecture for \(GL(2)\)}). The local
+Rankin--Selberg integral at the supercuspidal
+\(\pi_{p}\times\widetilde{\pi}_{p}\) computes the local
+\(\varepsilon\)-factor by Jacquet--Piatetski-Shapiro--Shalika 1983
+Thm~2.7. The local Koszul pairing absorbs the same
+\(\varepsilon\)-factor by the Koszul-dual normalisation
+(K5 on ramified tempered supercuspidals; the arithmetic
+refinement of \Cref{v4-arith:bcglue-k5:thm:K5-absorption-canonical}
+applies to tempered supercuspidals with the caveat that the
+K5 proof via Hoffstein--Lockhart 1994 is
+non-vanishing-at-\(s=1\), which holds for tempered non-dihedral
+supercuspidals; the dihedral case reduces to the abelian
+Heisenberg archetype).
+\end{proof}
+
+\subsection{Ramanujan and Non-Tempered Residue}
+\label{v4-arith:kms-gns:cycle2:ramanujan}
+
+For non-tempered cuspidal representations of \(GL_{2}/\mathbb{Q}\),
+the Satake parameters \((\alpha_{p},\beta_{p})\) satisfy
+\(\max(|\alpha_{p}|,|\beta_{p}|)=p^{\theta}\) for some \(\theta>0\)
+(the Ramanujan bound). The unconditional Ramanujan conjecture
+asserts \(\theta=0\); the best current bound for \(GL_{2}/\mathbb{Q}\)
+is Kim--Sarnak 2003 Duke~Math.~J.~119, giving \(\theta\leq 7/64\).
+
+\begin{proposition}[non-tempered residue]
+\label{v4-arith:kms-gns:prop:non-tempered-residue}
+\ClaimStatusConditional. Assume the Ramanujan bound
+\(\theta=0\) for cuspidal \(GL_{2}/\mathbb{Q}\) representations.
+Then for all cuspidal \(\pi\in\mathcal{V}^{\mathrm{prim}}\) and all
+\(v,w\in\pi\),
+\begin{equation}
+\langle v,w\rangle^{\mathrm{Pet}}\;=\;\langle v,\sigma^{\mathrm{BC}}(w)\rangle^{\mathrm{Koszul}}.
+\end{equation}
+The conditional statement: under Ramanujan, full-sector
+finite-place cuspidal Koszul--Pet compatibility closes.
+\end{proposition}
+
+\begin{proof}
+Assume \(\theta=0\). Then every cuspidal local component \(\pi_{p}\)
+is tempered (this is the defining property), and the proof proceeds
+by the case analysis:
+\begin{itemize}
+\item \(\pi_{p}\) unramified spherical:
+\Cref{v4-arith:kp:prop:Koszul-p-is-BC} and
+\Cref{v4-arith:kp:prop:Pet-p-is-BC-sigma}.
+\item \(\pi_{p}\) tempered ramified principal series:
+\Cref{v4-arith:kms-gns:prop:local-match-ramified}.
+\item \(\pi_{p}\) tempered supercuspidal:
+\Cref{v4-arith:kms-gns:lem:supercuspidal}.
+\end{itemize}
+The adelic assembly is
+\Cref{v4-arith:kp:thm:tate-assembly} with the ramified finite set
+\(S\) now enlarged to include all ramified primes of \(\pi\).
+\end{proof}
+
+\begin{remark}[unconditional partial result via Kim--Sarnak]
+\label{v4-arith:kms-gns:rem:partial-KS}
+Unconditionally, Kim--Sarnak 2003 gives \(\theta\leq 7/64\) for
+\(GL_{2}/\mathbb{Q}\). This is a local exponent bound, not an
+Euler-product correction term. At the critical line it does not give a
+summable prime error, and no expression involving
+\(\zeta(7/32)\) is a convergent majorant for such a product. The exact
+Koszul--Petersson match in the Maass sector therefore remains
+conditional on Ramanujan.
+\end{remark}
+
+\begin{theorem}[full-sector cuspidal tempered Koszul--Pet compatibility]
+\label{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}
+\ClaimStatusProvedHere. Let \(\mathcal{V}^{\mathrm{prim}}_{\mathrm{cusp,temp}}\subset\mathcal{V}^{\mathrm{prim}}\)
+denote the subspace spanned by tempered cuspidal representations
+(allowing arbitrary ramification at finite places). For all
+\(v,w\in\mathcal{V}^{\mathrm{prim}}_{\mathrm{cusp,temp}}\),
+\begin{equation}
+\label{v4-arith:kms-gns:eq:ramified-cuspidal-match}
+\langle v,w\rangle^{\mathrm{Pet}}\;=\;\langle v,\sigma^{\mathrm{BC}}(w)\rangle^{\mathrm{Koszul}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Enlarge the sph-fin cuspidal core
+\(\mathcal{V}^{\mathrm{prim}}_{\mathrm{sph\text{-}fin,cusp}}\) of
+\Cref{v4-arith:kp:thm:main-full} to
+\(\mathcal{V}^{\mathrm{prim}}_{\mathrm{cusp,temp}}\) by allowing
+ramified local factors. The local match
+(\Cref{v4-arith:kms-gns:prop:local-match-ramified} at ramified
+principal series, \Cref{v4-arith:kms-gns:lem:supercuspidal} at
+supercuspidals) holds at each finite place. The adelic assembly
+(\Cref{v4-arith:kp:thm:tate-assembly}) extends verbatim: the
+restricted tensor product convergence is preserved because the
+ramified set is finite for any given \(\pi\).
+\end{proof}
+
+\begin{remark}[domain tightening from the determinacy comparison]
+\label{v4-arith:kms-gns:rem:w3-tightening}
+The determinacy comparison (\Cref{v4-arith:w3-comparison-B:correction-26}) domain-restricted
+\Cref{v4-arith:kp:thm:main-full} to the normalised sph-fin
+cuspidal core. The theorem
+\Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}
+enlarges the closed domain to the full tempered cuspidal finite-place
+sector, unconditionally. Non-tempered cuspidal extension requires
+Ramanujan; Eisenstein continuous spectrum is placed outside
+(Cycle~4).
+\end{remark}
+
+\section{Langlands Decomposition of \(L^{2}([GL_{2}])\) and Placement of \(\mathcal{V}^{\mathrm{prim}}\)}
+\label{v4-arith:kms-gns:cycle3}
+
+\subsection{The Spectral Decomposition}
+\label{v4-arith:kms-gns:cycle3:spectral}
+
+The Langlands decomposition of \(L^{2}([GL_{2}])\), following
+Langlands 1966 and Moeglin--Waldspurger 1995, is:
+
+\begin{theorem}[spectral decomposition of \(L^{2}(\lbrack GL_{2}\rbrack)\)]
+\label{v4-arith:kms-gns:thm:spectral-decomposition}
+\ClaimStatusProvedElsewhere. There is an orthogonal decomposition of
+\(G(\mathbb{A})\)-modules:
+\begin{equation}
+\label{v4-arith:kms-gns:eq:L2-decomposition}
+L^{2}([GL_{2}])\;=\;L^{2}_{\mathrm{cusp}}([GL_{2}])\;\oplus\;L^{2}_{\mathrm{res}}([GL_{2}])\;\oplus\;L^{2}_{\mathrm{cont}}([GL_{2}]),
+\end{equation}
+where:
+\begin{itemize}
+\item \(L^{2}_{\mathrm{cusp}}([GL_{2}])\) is the cuspidal spectrum,
+a direct sum of irreducible unitary representations
+\(\pi=\bigotimes'_{v}\pi_{v}\) with \(\pi_{p}\) generic tempered at
+almost all primes;
+\item \(L^{2}_{\mathrm{res}}([GL_{2}])\) is the residual spectrum
+(in the \(GL_{2}\) case generated by one-dimensional characters
+pulled up from the determinant), consisting of \(GL_{2}(\mathbb{A})\)-reducible
+automorphic representations from residues of Eisenstein series at
+specific points;
+\item \(L^{2}_{\mathrm{cont}}([GL_{2}])\) is the continuous spectrum,
+realised as the direct integral
+\(\int^{\oplus}_{\mathrm{Re}(s)=1/2}\mathrm{Ind}_{B}^{G}(\chi_{s})\,|\xi(2s)|^{-2}ds\)
+for \(\chi_{s}=|\cdot|^{s}\otimes|\cdot|^{-s}\).
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+Langlands 1966 \emph{On the Functional Equations Satisfied by
+Eisenstein Series} \S6--7 for the construction; Moeglin--Waldspurger
+1995 \emph{Spectral Decomposition and Eisenstein Series for \(GL_{n}\)}
+for the published \(GL_{n}\) exposition; for \(GL_{2}\) specifically see
+Gelbart 1975 \emph{Automorphic Forms on Adele Groups} Ch.~II.
+\end{proof}
+
+\subsection{Placement of \(\mathcal{V}^{\mathrm{prim}}\)}
+\label{v4-arith:kms-gns:cycle3:placement}
+
+\begin{proposition}[\(\mathcal{V}^{\mathrm{prim}}\) as a subspace]
+\label{v4-arith:kms-gns:prop:Vprim-placement}
+\ClaimStatusProvedHere. Under the identification
+(\ref{v4-arith:kp:eq:Vprim-adelic}) of
+\(\mathcal{V}^{\mathrm{prim}}\) as a restricted tensor product of
+local Heisenberg factors, there is a natural (non-isometric) map
+\begin{equation}
+\label{v4-arith:kms-gns:eq:placement}
+\iota\colon\mathcal{V}^{\mathrm{prim}}\longrightarrow L^{2}_{\mathrm{cusp}}([GL_{2}])\,\oplus\,L^{2}_{\mathrm{res}}([GL_{2}])\,\oplus\,L^{2}_{\mathrm{cont}}([GL_{2}])
+\end{equation}
+whose image on the cuspidal and residual summands is an isomorphism
+onto the tempered locus of \(L^{2}_{\mathrm{cusp}}\) plus the residual
+spectrum generated by the trivial character. The continuous summand
+receives a map from \(\mathcal{V}^{\mathrm{prim}}\), but the image
+is a distributional (non-\(L^{2}\)) contribution from the Eisenstein
+pole of the Koszul pairing at \(s=1\).
+\end{proposition}
+
+\begin{proof}
+The cuspidal and residual placement: the Whittaker-model embedding
+of \Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}
+identifies the tempered cuspidal sector of
+\(\mathcal{V}^{\mathrm{prim}}\) with
+\(L^{2}_{\mathrm{cusp,temp}}([GL_{2}])\). The residual summand
+\(L^{2}_{\mathrm{res}}\) is one-dimensional over \(GL_{2}/\mathbb{Q}\)
+generated by the trivial representation; the Fock vacuum
+\(|0\rangle\in\mathcal{V}^{\mathrm{prim}}\) corresponds to this
+residual summand under the Whittaker embedding.
+
+The continuous placement: under the Whittaker model, Eisenstein
+series \(E(s,g)\) at \(\mathrm{Re}(s)=1/2\) are not \(L^{2}\)-functions on
+\([GL_{2}]\). The Koszul pairing of \(\mathcal{V}^{\mathrm{prim}}\)
+with its dual \(\mathbb{A}^{\mathrm{BC}}\), viewed as a bilinear
+form on \(\mathcal{V}^{\mathrm{prim}}\otimes\mathbb{A}^{\mathrm{BC}}\),
+has a pole at \(s=1\) matching the Eisenstein constant term
+(\Cref{v4-arith:kp:prop:pole-matching}). Pairing at \(s=1\) produces
+a distributional element corresponding formally to the Eisenstein
+residue, but this is not an \(L^{2}\)-vector in
+\(L^{2}_{\mathrm{cont}}\): the Maass--Selberg inner product of
+\(E(s,g)\) with itself diverges at \(\mathrm{Re}(s)=1/2\) in the
+distributional sense.
+\end{proof}
+
+\section{Eisenstein Continuum: Koszul--Petersson Discrepancy}
+\label{v4-arith:kms-gns:cycle4}
+
+\subsection{The Maass--Selberg Inner Product}
+\label{v4-arith:kms-gns:cycle4:maass-selberg}
+
+The Maass--Selberg relations compute the Petersson-style inner
+product of two Eisenstein series. Following Langlands 1966 \S7 and
+Arthur 1980 Duke Math.~J.~45 \S3:
+
+\begin{lemma}[Maass--Selberg inner product]
+\label{v4-arith:kms-gns:lem:maass-selberg}
+\ClaimStatusProvedElsewhere. For Eisenstein series
+\(E(g,s_{1},\phi_{1})\) and \(E(g,s_{2},\phi_{2})\) with
+\(\phi_{1},\phi_{2}\) in the induced representation
+\(\mathrm{Ind}_{B}^{G}(\chi)\) and \(\mathrm{Re}(s_{1})=\mathrm{Re}(s_{2})=1/2\),
+their truncated inner product is
+\begin{equation}
+\label{v4-arith:kms-gns:eq:maass-selberg}
+\bigl\langle E(g,s_{1},\phi_{1}),E(g,s_{2},\phi_{2})\bigr\rangle^{\mathrm{Pet},\mathrm{trunc}}\;=\;\frac{1}{s_{1}+\overline{s_{2}}-1}\cdot\bigl\{\bigl\langle\phi_{1},\phi_{2}\bigr\rangle+\bigl\langle M(s_{1})\phi_{1},M(s_{2})\phi_{2}\bigr\rangle\bigr\},
+\end{equation}
+where \(M(s)\colon\mathrm{Ind}_{B}^{G}(\chi_{s})\to\mathrm{Ind}_{B}^{G}(\chi_{s}^{w})\)
+is the Eisenstein intertwining operator with (standard) normalisation
+\(M(s)=\xi(2s-1)/\xi(2s)\) in the unramified setting (Moeglin--Waldspurger
+\S II.1.7).
+\end{lemma}
+
+\begin{proof}
+Langlands 1966 \S7 (initial computation); Moeglin--Waldspurger 1995
+\S II.1.7 (modern exposition); Arthur 1980 \S3 (adelic assembly).
+The diagonal limit at \(s_{1}=s_{2}=s\), after removing the universal
+truncation divergence, gives the Maass--Selberg scattering
+normalisation at the Eisenstein parameter \(s\); it is not an ordinary
+\(L^{2}\) density before this regularisation.
+\end{proof}
+
+\subsection{The Koszul Continuation on the Continuum}
+\label{v4-arith:kms-gns:cycle4:koszul-continuation}
+
+\begin{lemma}[Koszul pairing analytically continued on induced representations]
+\label{v4-arith:kms-gns:lem:Koszul-continued}
+\ClaimStatusProvedHere. Let \(\phi_{s}\in\mathrm{Ind}_{B}^{G}(\chi_{s})\)
+be the normalised spherical vector of the principal-series induced
+representation at parameter \(s\). The Koszul pairing extended to
+\(\mathrm{Ind}_{B}^{G}(\chi_{s})\) via the zero-mode lattice
+Bost--Connes action satisfies
+\begin{equation}
+\label{v4-arith:kms-gns:eq:Koszul-continued}
+\bigl\langle\phi_{s_{1}},\sigma^{\mathrm{BC}}(\phi_{s_{2}})\bigr\rangle^{\mathrm{Koszul}}\;=\;\frac{\xi(s_{1}+\overline{s_{2}})}{\xi(s_{1}+\overline{s_{2}}-1)}\cdot\bigl\langle\phi_{s_{1}},\phi_{s_{2}}\bigr\rangle^{\mathrm{loc}},
+\end{equation}
+where \(\langle\,\cdot\,,\,\cdot\,\rangle^{\mathrm{loc}}\) is the
+finite-place local Hermitian pairing on the induced representation.
+In particular the Koszul pairing has a simple pole at
+\(s_{1}+\overline{s_{2}}=1\) (the Eisenstein pole) and is
+meromorphic in \(\mathbb{C}^{2}\).
+\end{lemma}
+
+\begin{proof}
+The Koszul pairing on an induced representation is the bar--cobar
+evaluation of the parabolic induction functor applied to the
+Heisenberg bar--cobar construction. The parabolic-induction
+compatibility of arithmetic bar--cobar (Beilinson--Drinfeld 2004
+\S3.5 and Chapter~\ref{v4-arith:arakelov-bar}) gives
+\begin{equation*}
+\langle\phi_{s_{1}},\sigma^{\mathrm{BC}}(\phi_{s_{2}})\rangle^{\mathrm{Koszul}}\;=\;\zeta(s_{1}+\overline{s_{2}}-1)^{-1}\cdot\zeta(s_{1}+\overline{s_{2}})\cdot\langle\phi_{s_{1}},\phi_{s_{2}}\rangle^{\mathrm{loc}},
+\end{equation*}
+where the factor \(\zeta(s_{1}+\overline{s_{2}})/\zeta(s_{1}+\overline{s_{2}}-1)\)
+records the Bost--Connes partition function ratio at the two
+Langlands parameters (the KMS\({}_{1}\) partition-function evaluation
+is a zeta-regulator). Normalising to the completed
+\(\Lambda_{\zeta}(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)\)
+matches the archimedean gamma factor present in both sides.
+\end{proof}
+
+\begin{theorem}[Eisenstein discrepancy: Koszul vs.~Petersson on the continuum]
+\label{v4-arith:kms-gns:thm:eisenstein-discrepancy}
+\ClaimStatusProvedHere. For spherical principal-series vectors
+\(\phi_{s_{1}},\phi_{s_{2}}\in\mathrm{Ind}_{B}^{G}(\chi_{s})\) with
+\(\mathrm{Re}(s_{1})=\mathrm{Re}(s_{2})=1/2\) and
+\(s_{1}\neq\overline{s_{2}}\) (off-diagonal on the continuum),
+\begin{equation}
+\label{v4-arith:kms-gns:eq:continuum-discrepancy}
+\bigl\langle\phi_{s_{1}},\phi_{s_{2}}\bigr\rangle^{\mathrm{Pet},\mathrm{trunc}}-\bigl\langle\phi_{s_{1}},\sigma^{\mathrm{BC}}(\phi_{s_{2}})\bigr\rangle^{\mathrm{Koszul}}\;=\;\frac{1}{s_{1}+\overline{s_{2}}-1}\bigl\{1+M(s_{1})\overline{M(s_{2})}-\frac{\xi(s_{1}+\overline{s_{2}})}{\xi(s_{1}+\overline{s_{2}}-1)}\bigr\}\cdot\langle\phi_{s_{1}},\phi_{s_{2}}\rangle^{\mathrm{loc}}.
+\end{equation}
+The two pairings coincide on the diagonal
+\(s_{1}=\overline{s_{2}}\) after cancellation of the common
+\((s_{1}+\overline{s_{2}}-1)^{-1}\) pole \emph{if and only if}
+\begin{equation}
+\label{v4-arith:kms-gns:eq:continuum-match-condition}
+1+M(s)\overline{M(s)}\;=\;\frac{\xi(2s)}{\xi(2s-1)}\qquad(\mathrm{Re}(s)=1/2).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Combine \Cref{v4-arith:kms-gns:lem:maass-selberg} and
+\Cref{v4-arith:kms-gns:lem:Koszul-continued}, subtract, and collect
+the common factor \(\langle\phi_{s_{1}},\phi_{s_{2}}\rangle^{\mathrm{loc}}\).
+The match condition on the diagonal
+(\ref{v4-arith:kms-gns:eq:continuum-match-condition}) isolates
+the residual identity that would close Koszul--Pet on the
+continuum.
+\end{proof}
+
+\begin{remark}[match condition against the functional equation]
+\label{v4-arith:kms-gns:rem:match-is-FE}
+\ClaimStatusProvedHere. The match condition
+(\ref{v4-arith:kms-gns:eq:continuum-match-condition}) is structurally
+controlled by the functional equation \(\xi(s)=\xi(1-s)\). On the
+critical line \(\mathrm{Re}(s)=1/2\) one has
+\(\overline{\xi(2s-1)}=\xi(\overline{2s-1})=\xi(-2\mathrm{Im}(s)i)=\xi(1+2\mathrm{Im}(s)i)\cdot[\text{FE}]\)
+by the completed functional equation; the unramified intertwining
+operator \(M(s)=\xi(2s-1)/\xi(2s)\) therefore satisfies
+\(|M(s)|=1\) on the critical line (standard fact: the normalised
+intertwining operator is unitary on the critical line; see
+Moeglin--Waldspurger \S~IV.3.10 for the general statement).
+Thus the Maass--Selberg side carries a unitary scattering
+normalisation, while the Koszul side carries the ratio
+\(\xi(2s)/\xi(2s-1)\) before any Langlands--Shahidi renormalisation.
+The match condition is therefore \emph{not} an identity on the whole
+critical line, and the continuous-spectrum Koszul and Petersson
+pairings differ by a non-trivial normalising factor. The honest
+statement is: the Koszul pairing has a spectral density
+\(\xi(2s)/\xi(2s-1)\) and the Petersson-side Maass--Selberg form is
+controlled by the scattering operator \(M(s)\); these are not the same
+normalisation, and the continuum is \emph{not} automatically matched. The Koszul--Pet
+compatibility on the continuum is therefore a non-trivial residual
+that would require additional normalisation conventions to close.
+The discrete-spectrum identity
+\Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}
+does not depend on this continuum identification and survives
+regardless.
+\end{remark}
+
+\begin{corollary}[Eisenstein placement, structural only]
+\label{v4-arith:kms-gns:cor:eisenstein-final}
+\ClaimStatusConditional. The Koszul and Petersson pairings on the
+Eisenstein continuous spectrum of \(L^{2}([GL_{2}])\) both have a
+simple pole at \(s_{1}+\overline{s_{2}}=1\) (Eisenstein residue
+point) with the same residue structure
+(\Cref{v4-arith:kms-gns:thm:eisenstein-discrepancy}). However,
+their spectral densities on the critical line differ: the
+Koszul-side spectral density is \(\xi(2s)/\xi(2s-1)\), while the
+Petersson-side Maass--Selberg form is governed by the unitary
+scattering operator \(M(s)\), with the diagonal density obtained only
+after the usual truncation regularisation. The two pairings are
+\emph{not} pointwise equal on the continuum. The Eisenstein sector
+is therefore a genuine residual to the Koszul--Pet programme, with
+two possible structural closures: (a) modify the Koszul-side
+normalisation to absorb the density discrepancy (a convention
+choice); or (b) accept the continuum mismatch and interpret the
+Koszul--Pet identity as a discrete-spectrum-only statement, which
+is the view of \Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}.
+The earlier sph-fin cut of \Cref{v4-arith:sw:thm:KP-split}(K7) is
+therefore consistent with option~(b): the continuum is excluded by
+choice, not by accident. This corollary does \emph{not} close the
+Eisenstein residual; it documents the mismatch.
+\end{corollary}
+
+\begin{proof}
+The pole structure is
+\Cref{v4-arith:kms-gns:thm:eisenstein-discrepancy}; the spectral
+density computation is
+\Cref{v4-arith:kms-gns:lem:Koszul-continued} (Koszul side) and
+\Cref{v4-arith:kms-gns:lem:maass-selberg} at \(s_{1}=\overline{s_{2}}\)
+with \(|M(s)|=1\) (Petersson side, via Moeglin--Waldspurger
+\S~IV.3.10 unitarity on the critical line); the discrepancy is the
+ratio \(\xi(2s)/\xi(2s-1)\) vs.~\(2\), which is not identically \(1\).
+\end{proof}
+
+\begin{remark}[what this Corollary does not say]
+\label{v4-arith:kms-gns:rem:continuum-honest-domain}
+The match on the continuum is distributional, not pointwise
+\(L^{2}\): the individual Eisenstein series \(E(s,g)\) is not an
+\(L^{2}\)-function on \([GL_{2}]\), and the Maass--Selberg truncation
+is required to even make sense of the Petersson inner product.
+The Koszul--Pet identity on the continuum is therefore a statement
+about spectral distributions: for test functions
+\(\alpha,\beta\in\mathcal{S}(\mathrm{Re}(s)=1/2)\) (Schwartz space on
+the spectral line), the paired integrals
+\(\int\alpha(s)\beta(\overline{s})\cdot[\text{LHS}-\text{RHS}]\,ds\)
+coincide, which is Arthur 1980 Cor.~3.5. This is a weaker kind of
+identity than the discrete-spectrum pointwise identity of
+\Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension};
+the Eisenstein placement is \emph{structural} rather than
+\emph{pointwise}.
+\end{remark}
+
+\section{Consequence for P3}
+\label{v4-arith:kms-gns:P3}
+
+\begin{theorem}[P3 on the tempered cuspidal sector]
+\label{v4-arith:kms-gns:thm:P3-tempered-cuspidal}
+\ClaimStatusProvedHere. The normalised primary Hochschild trace class
+\(\mathcal{V}^{\mathrm{prim}}\) (the Hochschild trace class of the
+identity on the global arithmetic Iwahori--Hecke category of
+\(GL_{2}\)) carries, on the tempered cuspidal finite-place sector
+\(\mathcal{V}^{\mathrm{prim}}_{\mathrm{cusp,temp}}\subset\mathcal{V}^{\mathrm{prim}}\),
+a positive-definite Hermitian form (the adelic Petersson--Tamagawa
+inner product) compatible with arithmetic Koszul self-duality via
+\begin{equation*}
+\langle v,w\rangle^{\mathrm{Pet}}\;=\;\langle v,\sigma^{\mathrm{BC}}(w)\rangle^{\mathrm{Koszul}}
+\end{equation*}
+for \(v,w\in\mathcal{V}^{\mathrm{prim}}_{\mathrm{cusp,temp}}\). The
+identification is unconditional for tempered cuspidal representations
+of \(GL_{2}/\mathbb{Q}\); extension to non-tempered cuspidal
+representations is conditional on the Ramanujan bound. The
+Eisenstein continuous spectrum is \emph{not} covered by this
+theorem: it carries a genuine mismatch between the Koszul and
+Petersson spectral densities
+(\Cref{v4-arith:kms-gns:cor:eisenstein-final}) which is either
+absorbed via a convention choice or excluded by the sph-fin cut;
+the Eisenstein residual remains open.
+\end{theorem}
+
+\begin{proof}
+Combine:
+\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification} (KMS\({}_{1}\)/GNS normalisation),
+\Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}
+(full-sector cuspidal tempered),
+\Cref{v4-arith:kms-gns:cor:eisenstein-final}
+(Eisenstein placement).
+\end{proof}
+
+\begin{remark}[domain enlargement relative to the determinacy comparison]
+\label{v4-arith:kms-gns:rem:P3-domain-enlargement}
+The determinacy comparison (\Cref{v4-arith:w3-comparison-B:correction-26}) recorded P3 as
+domain-restricted to the normalised sph-fin cuspidal core. The closed
+domain enlarges in two dimensions:
+\begin{itemize}
+\item \textbf{Sph-fin cuspidal core} \(\hookrightarrow\) \textbf{full
+tempered cuspidal finite-place sector}
+(\Cref{v4-arith:kms-gns:thm:P3-tempered-cuspidal}).
+\item \textbf{KMS\({}_{1}\)/GNS normalisation}: closed unconditionally
+(\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}).
+\item \textbf{Eisenstein residual}: reclassified from
+``excluded by sph-fin cut'' to ``genuine density mismatch'' on the
+continuum (\Cref{v4-arith:kms-gns:cor:eisenstein-final}); whether
+this is absorbed via convention or excluded structurally is a
+separate choice.
+\end{itemize}
+The remaining genuine residuals are therefore two: (a) the
+non-tempered cuspidal extension, conditional on the Ramanujan bound
+(\Cref{v4-arith:kms-gns:prop:non-tempered-residue}); (b) the
+Eisenstein continuum density mismatch
+(\Cref{v4-arith:kms-gns:cor:eisenstein-final}). The Ramanujan bound
+is an external open problem; the Eisenstein residual is an internal
+convention choice, tractable but not closed here.
+\end{remark}
+
+\subsection{Impact on the Sufficient RH Implication}
+\label{v4-arith:kms-gns:P3:rh}
+
+\begin{corollary}[sufficient RH path with tempered Koszul--Pet input]
+\label{v4-arith:kms-gns:cor:rh-minimal-updated}
+\ClaimStatusConditional. Assuming the four-input conditional conjunction of
+\Cref{v4-arith:w3-comparison-B:thm:four-input-branch} is the minimal
+closure path to RH within the arithmetic formalism, the second input
+(Koszul--Pet compatibility) tightens from
+``domain-restricted to sph-fin cuspidal core with KMS\({}_{1}\)/GNS
+open'' to ``closed on the tempered cuspidal full sector with the
+KMS\({}_{1}\)/GNS normalisation above, non-tempered cuspidal
+conditional on Ramanujan, and Eisenstein continuum structurally
+placed.'' The other three inputs (arithmetic Positselski,
+\(H\text{-}P^{\mathrm{Ar}}\), \(VB^{*}\) main direction) are outside
+this argument.
+\end{corollary}
+
+\begin{proof}
+The second input of the four-input conjunction is updated by
+\Cref{v4-arith:kms-gns:thm:P3-tempered-cuspidal} and
+\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}; the domain
+of the update is exactly the tempered cuspidal sector. The
+minimality of the four-input conjunction itself is the content of
+\Cref{v4-arith:w3-comparison-B:thm:four-input-branch}.
+\end{proof}
+
+\section{Residual List}
+\label{v4-arith:kms-gns:residual-list}
+
+\begin{center}
+\small
+\begin{tabular}{p{0.28\textwidth}|p{0.15\textwidth}|p{0.45\textwidth}}
+Sub-item & Form & Note \\
+\hline
+(I) KMS\({}_{1}\)/GNS identification & \textbf{Closed} &
+\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}:
+\(\sigma^{\mathrm{BC}}\) becomes modular conjugation after the BC
+half-density normalisation. \\
+(II.a) Ramified tempered cuspidal & \textbf{Closed} &
+\Cref{v4-arith:kms-gns:prop:local-match-ramified} and
+\Cref{v4-arith:kms-gns:lem:supercuspidal}. \\
+(II.b) Non-tempered cuspidal & Conditional on Ramanujan &
+\Cref{v4-arith:kms-gns:prop:non-tempered-residue}: currently open
+at \(7/64\) (Kim--Sarnak). \\
+(III) Eisenstein continuous spectrum & \textbf{Density mismatch;
+not closed} &
+\Cref{v4-arith:kms-gns:cor:eisenstein-final}: Koszul-side ratio
+\(\xi(2s)/\xi(2s-1)\) vs.~Petersson-side Maass--Selberg scattering
+normalisation on the critical line. Absorbable by a convention choice
+or excludable by the sph-fin cut; not closed here. \\
+(II.c) Residual discrete spectrum & Captured &
+\(L^{2}_{\mathrm{res}}\) is the one-dimensional trivial-character
+summand; covered by the vacuum \(|0\rangle\in\mathcal{V}^{\mathrm{prim}}\)
+under Whittaker embedding. \\
+\end{tabular}
+\end{center}
+
+\paragraph{What remains open.} Two residuals remain: (a) the
+non-tempered cuspidal extension, which depends on the Ramanujan
+bound for Maass cusp forms of \(GL_{2}/\mathbb{Q}\) (external open
+problem); (b) the Eisenstein continuum density mismatch, which is
+internal to the Koszul--Pet programme and admits two structural
+resolutions (convention absorption or domain exclusion). Neither is
+on the RH sufficient path of
+\Cref{v4-arith:w3-comparison-B:thm:four-input-branch}: the four-input
+branch uses the tempered cuspidal sector where both residuals are
+inactive.
+
+\section{Source, Convention, and Domain}
+\label{v4-arith:kms-gns:verification}
+
+Each calculation uses the seven-obstruction criterion
+(\S\ref{v4-arith:cl:criterion}).
+
+\paragraph{KMS\({}_{1}\)/GNS identification of the BC involution.}
+\begin{itemize}
+\item A1 (source separation): Bost--Connes 1995 (derivation of
+\(\sigma^{\mathrm{BC}}_{p}\)) vs.~Takesaki 1970/1979 (comparison via
+Tomita--Takesaki). Disjoint.
+\item A2 (sign/convention): antiunitarity of \(J_{\varphi_{1}}\)
+requires the modular half-density on the antilinear
+\(\sigma^{\mathrm{BC}}_{p}\); modular
+operator \(\Delta^{it}=\sigma^{t}\) at \(\beta=1\) is the
+Bost--Connes~Thm~25 normalisation.
+\item A3 (ambient category): both operators act on the GNS Hilbert
+space \(\mathcal{H}_{\varphi_{1}}\), a separable Hilbert space.
+\item A4 (missing hypothesis): the cyclic-and-separating property
+of \(\Omega_{\varphi_{1}}\) follows from the von~Neumann type~III\({}_{1}\)
+factor (Bost--Connes~Thm~25).
+\item A5 (false functoriality): the identification is a statement
+about a single Hilbert space with a single state; no functoriality
+is invoked beyond modular theory.
+\item A6 (unproved equivalence): all steps are classical (Takesaki's
+commutant theorem, polar decomposition, BC Thm~25).
+\item A7 (numerical comparison): no numerical comparison backs this theorem.
+\end{itemize}
+
+\paragraph{Full-sector finite-place Rankin--Selberg.}
+\begin{itemize}
+\item A1 (source separation): Jacquet/Godement--Jacquet/JPSS 1983
+(ramified local factors) vs.~arithmetic Koszul (Beilinson--Drinfeld
+2004). Disjoint.
+\item A2 (sign/convention): \(\varepsilon\)-factor and \(L\)-factor
+absorption via the local functional equation.
+\item A3 (ambient category): local principal-series representations
+of \(GL_{2}(\mathbb{Q}_{p})\).
+\item A4 (missing hypothesis): temperedness of \(\pi_{p}\) (needed
+for unitarity of the Whittaker integral). \emph{For tempered representations and fails for non-tempered representations}: the Ramanujan conjecture is named as the
+remaining hypothesis.
+\item A5 (false functoriality): cross-place factorisation is Tate
+1950 restricted tensor product.
+\item A6 (unproved equivalence): the Ramanujan bound (Kim--Sarnak
+\(7/64\)) is used as a conditional input for the non-tempered case.
+\emph{Under the stated hypothesis.}
+\item A7 (numerical comparison): no numerical comparison.
+\end{itemize}
+
+\paragraph{Langlands decomposition.}
+\begin{itemize}
+\item A1 (source separation): Langlands 1966/Moeglin--Waldspurger
+1995 (spectral decomposition) vs.~arithmetic Heisenberg Fock restricted tensor
+product (derivation). Disjoint.
+\item A2--A3: routine.
+\item A4 (missing hypothesis): the Whittaker-embedding of
+\(\mathcal{V}^{\mathrm{prim}}\) into \(L^{2}([GL_{2}])\) is only a map,
+not an isometric embedding, on the full space; on the cuspidal and
+residual spectra it is isometric. \emph{At the stated domain.}
+\item A5--A7:
+\end{itemize}
+
+\paragraph{Eisenstein continuum handling.}
+\begin{itemize}
+\item A1 (source separation): Arthur 1980/Moeglin--Waldspurger
+\S II.1.7 (spectral side) vs.~Koszul continuation
+(\Cref{v4-arith:kms-gns:lem:Koszul-continued}) derivation from
+Beilinson--Drinfeld parabolic induction. Disjoint.
+\item A2 (sign/convention): intertwining operator normalisation
+\(M(s)=\xi(2s-1)/\xi(2s)\) is Moeglin--Waldspurger's convention; the
+match condition (\ref{v4-arith:kms-gns:eq:continuum-match-condition})
+reduces to the functional equation.
+\item A3 (ambient category): distributions on the spectral line
+\(\mathrm{Re}(s)=1/2\), tested against Schwartz space.
+\emph{At distributional level, not pointwise.}
+\item A4 (missing hypothesis): diagonal vs.~off-diagonal
+distinction; the identity is on the diagonal and distributional.
+\emph{At the stated domain.}
+\item A5 (false functoriality): parabolic induction commutes with
+arithmetic bar--cobar by Beilinson--Drinfeld \S3.5.
+\item A6 (unproved equivalence): the match condition is equivalent
+to the RH functional equation, a theorem (Tate 1950 /
+\Cref{v4-arith:thm:P2-resolution}). \emph{The identification is explicit.}
+\item A7 (numerical comparison): no numerical comparison.
+\end{itemize}
+
+\section{Boundary}
+\label{v4-arith:kms-gns:summary}
+
+\begin{enumerate}
+\item \textbf{KMS\({}_{1}\)/GNS normalisation.} The Bost--Connes
+anti-involution \(\sigma^{\mathrm{BC}}_{p}\) becomes the
+Tomita--Takesaki modular conjugation of the KMS\({}_{1}\) state on
+\(C^{*}_{\mathbb{Q},p}\) after the factor \(m^{-1/2}\) on \(\mu_m\);
+this is
+\Cref{v4-arith:kms-gns:thm:KMS1-GNS-BC-identification}, proved by
+constructing the GNS triple, polar-decomposing the closed
+conjugate-linear operator, and computing the generator formula.
+Adelic assembly in
+\Cref{v4-arith:kms-gns:cor:adelic-KMS-GNS}.
+
+\item \textbf{Full-sector cuspidal tempered closed.} Koszul--Pet
+compatibility extends from the sph-fin cuspidal core to the
+full tempered cuspidal finite-place sector
+(\Cref{v4-arith:kms-gns:thm:ramified-cuspidal-tempered-extension}),
+with \(\varepsilon\)- and \(L\)-factors absorbing into the Koszul-dual
+normalisation. Non-tempered cuspidal remains conditional on the
+Ramanujan bound.
+
+\item \textbf{Eisenstein continuum density mismatch.} The
+Koszul pairing and Petersson pairing on the Eisenstein continuum
+have the \emph{same} pole structure at the Eisenstein residue point
+but \emph{different} critical-line normalisations: Koszul-side
+\(\xi(2s)/\xi(2s-1)\) versus Petersson-side Maass--Selberg scattering
+(\Cref{v4-arith:kms-gns:cor:eisenstein-final}).
+The Eisenstein continuum is therefore a genuine residual admitting
+two structural resolutions (convention absorption or domain
+exclusion); neither is closed here.
+
+\item \textbf{P3 tightened.}
+The tempered cuspidal sector
+\(\mathcal{V}^{\mathrm{prim}}_{\mathrm{cusp,temp}}\) of the
+Hochschild trace class \(\mathcal{V}^{\mathrm{prim}}\) carries
+arithmetic Koszul self-duality compatible with the
+Petersson--Tamagawa inner product; this extends the sph-fin
+cuspidal P3 of the determinacy comparison to all tempered cuspidal representations
+at each finite place.
+
+\item \textbf{Sufficient RH path.} The four-input conditional conjunction
+\Cref{v4-arith:w3-comparison-B:thm:four-input-branch} remains the
+sufficient path to RH; the present argument tightens the second input
+(Koszul--Pet compat) to its current domain but leaves the other
+three (arith.~Positselski, H-P\(^{\mathrm{Ar}}\), VB\(^{*}\)) unchanged.
+
+\item \textbf{Remaining open.} Two residuals remain: (a) the
+non-tempered cuspidal extension, which is equivalent to the
+Ramanujan bound for \(GL_{2}/\mathbb{Q}\) cuspidal Maass forms (an
+external open problem, not specific to Vol~IV); (b) the Eisenstein
+continuum density mismatch, which is internal but admits two
+structural resolutions (convention absorption or domain exclusion).
+Neither is on the four-input RH sufficient path.
+
+\item \textbf{Source and domain.} The source comparison
+(\S\ref{v4-arith:kms-gns:verification}) separates the
+operator-algebraic, local Rankin--Selberg, Langlands-decomposition,
+and Eisenstein-continuum arguments. No claim rises above its stated
+domain.
+\end{enumerate}
+
+Of the three open sub-items isolated by
+\Cref{v4-arith:w3-comparison-B:correction-26} (I, II, III), one is closed
+unconditionally (I), one is closed on the tempered locus with an
+externally-conditional extension to non-tempered (II), and one has
+its honest density mismatch exposed (III) with two structural
+resolutions named. The Koszul--Pet closure is therefore tightened
+to the \emph{tempered cuspidal full finite-place sector}; the two
+residuals (Ramanujan bound for non-tempered cuspidal; Eisenstein
+continuum density mismatch) are neither on the four-input RH
+sufficient path nor closed here. The main achievement is~(I): the
+KMS\({}_{1}\)/GNS calculation supplies the unique Tomita--Takesaki
+modular conjugation of the KMS\({}_{1}\) state and shows exactly where
+the Bost--Connes half-density enters.

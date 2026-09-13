@@ -1,0 +1,1327 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\Tot}{Tot}
+\DeclareMathOperator{\MC}{MC}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Prim}{Prim}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\DHL}{DHL}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cD}{\mathscr D}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cG}{\mathfrak g}
+\newcommand{\cS}{\mathfrak S}
+
+\title{Arithmetic Locality, Positive Correlation Operators, and Dagger-Enhanced Chiral Obstruction Theory\\
+\large A rigorous reconstruction program for prime gaps, the Riemann hypothesis, holomorphic--topological QFT, and the complex six-sphere}
+\author{Session reconstruction for Raeez Lorgat}
+\date{31 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper performs an adversarial reconstruction of a multi-volume program connecting chiral bar--cobar duality, holomorphic--topological field theory, Calabi--Yau Hall structures, arithmetic cohomology, the Riemann hypothesis, bounded prime gaps, the Igusa cusp form, and the recently constructed complex structures on the six-sphere.  The first principle is separation: collision locality, coprime/Chinese-remainder locality, additive correlation locality, and real positivity are inequivalent structures and no one of them may be substituted for another.  After deleting such substitutions, we construct several rigorous objects.
+
+First, for an admissible tuple of shifts we construct a finite arithmetic factorization model whose renormalized partition function is the truncated singular series; its connected free energy converges absolutely on the admissible locus.  Second, we construct an exact finite-dimensional Maynard--Selberg transfer operator: the denominator and prime-counting quadratic forms are $T^*T$ and $T^*MT$, and the optimal weighted prime count is the top generalized eigenvalue.  Its continuum limit is a positive self-adjoint operator on the Maynard simplex whose norm is exactly the classical variational quantity $M_k$.  Third, we place this beside the Weil form: the Riemann hypothesis is universal positivity of an a priori indefinite convolution form, whereas bounded gaps require existence of one vector with a sufficiently large Rayleigh quotient in an a priori positive correlation theory.  This quantifier reversal is the correct spectral relationship between the two problems.
+
+Fourth, we prove a state-preserving dagger-transfer theorem, a conjugation-equivariant Maurer--Cartan extension theorem, and a totalized local-to-global obstruction theorem.  These identify the additional data needed before a complex chiral comparison can carry unitarity or reflection positivity.  Fifth, we prove scalar-shadow no-go results and a finite-height recognition theorem for Borcherds--Kac--Moody targets.  Finally, for Engel's complex six-sphere we prove the lattice identity $\iota_\delta\xi=-6\psi$, construct its level-six finite Heisenberg representation, and generalize the shared fundamental-group/Leray coefficient to an arbitrary two-multiple-fiber affine transgression determinant.
+
+No proof of the Riemann hypothesis or of the twin-prime conjecture is claimed.  The output is instead a theorem-level foundation on which such claims could be tested without circularity.
+\end{abstract}
+
+\tableofcontents
+
+\section{Status, scope, and the Beilinson cut}
+
+As of 31 August 2026, the Riemann hypothesis remains open, while the strongest published unconditional constant for infinitely recurring gaps between consecutive primes remains $246$ through the Maynard--Tao--Polymath sieve architecture \cite{Maynard2015,Polymath2014}.  The purpose of this paper is not to rename either missing proof.  It is to isolate what the supplied constructions genuinely provide, prove several new structural theorems, and specify the exact missing maps.
+
+\begin{definition}[The Beilinson cut]
+A proposed equality $X\simeq Y$ passes the \emph{Beilinson cut} only after the following have been fixed independently:
+\begin{enumerate}[label=(B\arabic*)]
+\item source and target objects, including their ambient categories and topologies;
+\item an explicit map $f:X\to Y$;
+\item a proof that the invariant used to recognize $f$ was not inserted into either object as defining data;
+\item a proof of the relevant quasi-isomorphism, equivalence, positivity, or determinant statement;
+\item a boundary statement recording what survives if any one input is removed.
+\end{enumerate}
+\end{definition}
+
+The supplied Volume~I already articulates a disciplined core: the configuration identity, the ordinary bar--cobar theorem, and the separation of the bar, cobar, Verdier dual, and derived centre.  The supplied Volume~II correctly says that a physical theory requires extra BV/HT realization data.  Volume~III correctly records many compact Hall and Drinfeld-double inputs as conditional.  Volume~IV eventually identifies its remaining positivity and spectral-flow statements as RH-equivalent.  The mixed-HT paper is especially explicit that its theorem is only a formal-local stable trace-sector theorem.  The Igusa manuscript separates its classical automorphic/BKM/theta triangle from retained-data and conjectural readings.  Engel's paper gives a genuine theorem producing complex structures on $S^6$.  Our reconstruction makes these local caveats control the global theorem architecture rather than appear only after the headline claims.
+
+\begin{warning}[No metaphysical inference]
+Words such as ``Platonic'', ``divine'', ``holographic'', or ``gravity'' carry no mathematical force.  In this paper ``Platonic realization'' means only a construction satisfying the Beilinson cut, with all obstruction, topology, real-structure, and positivity data explicit.
+\end{warning}
+
+\section{Four localities that must not be collapsed}
+
+\subsection{The four structures}
+
+\begin{definition}[Geometric collision locality]
+Let $X$ be a manifold, complex curve, or suitable derived geometric object.  A geometric prefactorization algebra assigns an object $\mathcal F(U)$ to each open $U\subset X$ and multiplication maps
+\[
+\mathcal F(U_1)\otimes\cdots\otimes\mathcal F(U_r)\longrightarrow \mathcal F(V)
+\]
+for pairwise disjoint $U_i\subset V$, coherently under refinements.  A factorization algebra additionally satisfies Weiss descent.  Chiral locality contains controlled singular behavior as points collide.
+\end{definition}
+
+\begin{definition}[Coprime or CRT locality]
+Let $\mathsf{Sqf}$ be the symmetric monoidal groupoid of squarefree positive integers, with tensor product $q\otimes r=qr$ defined for $(q,r)=1$.  A CRT-local object is a symmetric monoidal functor
+\[
+F_{\mathrm{CRT}}:\mathsf{Sqf}\longrightarrow \mathsf{Vect}_{\CC}
+\]
+with specified isomorphisms $F(qr)\cong F(q)\otimes F(r)$ for coprime $q,r$.
+\end{definition}
+
+\begin{definition}[Additive correlation locality]
+An additive correlation system consists of translation-covariant observables on finite additive groups $\ZZ/q\ZZ$, or equivalently a family of functions depending on finite shift sets $\cH=\{h_1,\ldots,h_k\}\subset\ZZ$.  Its local data distinguish the relative residues $h_i-h_j\pmod p$ and therefore contain information not present in a one-particle Euler factor.
+\end{definition}
+
+\begin{definition}[Dagger positivity]
+A dagger-positive system is a $*$-algebra $A$ together with a state $\omega:A\to\CC$ satisfying
+\[
+\omega(a^*a)\geq0\qquad(a\in A).
+\]
+For a Euclidean field theory this role is played by reflection, a real structure, and Osterwalder--Schrader positivity; for an operator algebra it is a positive state and GNS completion.
+\end{definition}
+
+\begin{proposition}[Separation by non-unique enhancement]
+None of the following data determines the next one without extra choices:
+\[
+\text{complex algebraic locality}\quad\rightsquigarrow\quad
+\text{dagger positivity},
+\]
+\[
+\text{one-particle Euler factors}\quad\rightsquigarrow\quad
+\text{$k$-point additive correlations},
+\]
+\[
+\text{graded character}\quad\rightsquigarrow\quad
+\text{bracket or operator product}.
+\]
+\end{proposition}
+
+\begin{proof}
+For the first statement, fix any complex vector space $V\neq0$ and any complex algebraic operations on it.  If $h$ is a nondegenerate Hermitian form, then $-h$ has the same complex-linear operations but opposite positivity.  Thus the complex object does not determine the sign of its real form.
+
+For the second, compare the two shift pairs $\cH_1=\{0,2\}$ and $\cH_2=\{0,6\}$.  At $p=3$, the number of forbidden residues is
+\[
+\nu_{\cH_1}(3)=2,\qquad \nu_{\cH_2}(3)=1.
+\]
+The one-particle zeta factor $(1-3^{-s})^{-1}$ is identical in the two situations, while their pair-correlation local factors differ.  Hence the one-particle factor does not determine the additive tuple datum.
+
+For the third, let $L_0$ and $L_1$ have homogeneous basis $x,y$ in degree $1$ and $z$ in degree $2$.  Put every bracket equal to zero in $L_0$, and put $[x,y]=z$ in $L_1$.  Both have Hilbert series $2t+t^2$, but $[L_0,L_0]=0$ and $[L_1,L_1]=\CC z$, so they are not isomorphic as Lie algebras.
+\end{proof}
+
+\begin{corollary}[The locality firewall]
+Any theorem moving from a chiral or factorization object to an arithmetic positivity statement must name at least three additional arrows:
+\[
+\text{geometric locality}\longrightarrow\text{arithmetic test algebra},
+\]
+\[
+\text{complex comparison}\longrightarrow\text{$*$-preserving comparison},
+\]
+\[
+\text{trace functional}\longrightarrow\text{positive state}.
+\]
+No complex bar--cobar, derived-centre, or character identity supplies these arrows automatically.
+\end{corollary}
+
+\section{A finite arithmetic factorization model for prime tuples}
+
+\subsection{Configuration projectors}
+
+Let
+\[
+\cH=\{h_1,\ldots,h_k\}\subset\ZZ
+\]
+be a finite set of distinct shifts and put
+\[
+P_{\cH}(n)=\prod_{i=1}^k(n+h_i).
+\]
+For a prime $p$, define
+\[
+\nu_{\cH}(p)=\#\{-h_1,\ldots,-h_k\}\pmod p.
+\]
+For a finite set $S$ of primes, set
+\[
+X_S=\prod_{p\in S}\ZZ/p\ZZ,
+\qquad
+\HH_S=\ell^2(X_S,\mu_S),
+\]
+where $\mu_S$ is normalized counting measure.
+
+\begin{definition}[Local and global admissibility projectors]
+For $a\in\ZZ/p\ZZ$, define
+\[
+Q_{\cH,p}(a)=\prod_{i=1}^k\left(1-\1_{a\equiv-h_i\, (p)}\right).
+\]
+It is the indicator that none of $a+h_i$ vanishes modulo $p$.  On $X_S$ define
+\[
+Q_{\cH,S}=\bigotimes_{p\in S}Q_{\cH,p},
+\]
+acting by pointwise multiplication on $\HH_S$.
+\end{definition}
+
+\begin{theorem}[Finite arithmetic factorization]
+For disjoint finite sets of primes $S,T$ there are canonical unitary identifications
+\[
+\HH_{S\sqcup T}\cong\HH_S\widehat\otimes\HH_T,
+\qquad
+Q_{\cH,S\sqcup T}=Q_{\cH,S}\otimes Q_{\cH,T}.
+\]
+Moreover, with vacuum state
+\[
+\omega_S(A)=\langle 1,A1\rangle_{\HH_S},
+\]
+one has
+\[
+Z_S(\cH):=\omega_S(Q_{\cH,S})
+=
+\prod_{p\in S}\left(1-\frac{\nu_{\cH}(p)}p\right).
+\]
+The state is positive: $\omega_S(A^*A)\geq0$.
+\end{theorem}
+
+\begin{proof}
+The first assertion is Fubini's theorem for finite product probability spaces.  Each $Q_{\cH,p}$ is a diagonal orthogonal projection.  Exactly $p-\nu_{\cH}(p)$ residues survive, hence
+\[
+\omega_{\{p\}}(Q_{\cH,p})=\frac{p-\nu_{\cH}(p)}p.
+\]
+Tensor multiplicativity gives the product formula.  Finally,
+\[
+\omega_S(A^*A)=\|A1\|^2\geq0.
+\]
+\end{proof}
+
+\begin{remark}
+This is a genuine finite positive local model, but it is not a Beilinson--Drinfeld chiral algebra.  Its locality is CRT tensor factorization, not an infinitesimal collision OPE.  It may be regarded as a zero-dimensional Euclidean field theory at each modulus, with the set of primes playing the tensor-factor index.
+\end{remark}
+
+\subsection{The singular series as connected free energy}
+
+Define the normalized local factor
+\[
+\sigma_p(\cH)
+=
+\frac{1-\nu_{\cH}(p)/p}{(1-1/p)^k},
+\]
+and the truncated singular series
+\[
+\cS_S(\cH)=\prod_{p\in S}\sigma_p(\cH).
+\]
+
+\begin{theorem}[Convergence and positivity of the singular series]
+Let
+\[
+\Delta_{\cH}=\prod_{1\leq i<j\leq k}(h_i-h_j).
+\]
+Then:
+\begin{enumerate}[label=(\roman*)]
+\item for every $p\nmid\Delta_{\cH}$ one has $\nu_{\cH}(p)=k$;
+\item $\log\sigma_p(\cH)=O_k(p^{-2})$ for all $p\nmid\Delta_{\cH}$;
+\item if $\cH$ is admissible, the product
+\[
+\cS(\cH)=\prod_p\sigma_p(\cH)
+\]
+converges with an absolutely convergent logarithm; if $\cH$ is not admissible, at least one local factor vanishes and we set $\cS(\cH)=0$;
+\item $\cS(\cH)>0$ if and only if $\cH$ is admissible, meaning $\nu_{\cH}(p)<p$ for every prime $p$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If $p\nmid\Delta_{\cH}$, the shifts are pairwise distinct modulo $p$, proving (i).  For such $p$,
+\[
+\log\sigma_p(\cH)
+=
+\log(1-k/p)-k\log(1-1/p).
+\]
+The coefficients of $p^{-1}$ cancel, so Taylor expansion gives
+\[
+\log\sigma_p(\cH)
+=-\frac{k(k-1)}{2p^2}+O_k(p^{-3}),
+\]
+proving the logarithmic convergence in the admissible case, since $\sum_pp^{-2}<\infty$.  If $\nu_{\cH}(p)=p$, the corresponding factor is zero and the tuple is not admissible.  Conversely, under admissibility every factor is positive and the absolutely convergent logarithmic sum is finite, proving the remaining assertions.
+\end{proof}
+
+\begin{definition}[Connected arithmetic vacuum energy]
+For an admissible tuple, the renormalized connected free energy is
+\[
+\mathcal F_{\cH}
+=
+\log\cS(\cH)
+=
+\sum_p\left[
+\log\omega_{\{p\}}(Q_{\cH,p})
+-k\log\omega_{\{p\}}(Q_{\{0\},p})
+\right].
+\]
+\end{definition}
+
+\begin{proposition}[One-particle data do not determine the connected tuple energy]
+The local zeta factor $(1-p^{-s})^{-1}$ and the tuple size $k$ do not determine $\sigma_p(\cH)$.
+\end{proposition}
+
+\begin{proof}
+At $p=3$, the pairs $\{0,2\}$ and $\{0,6\}$ have $\nu=2$ and $\nu=1$, respectively.  Thus their local normalized factors are
+\[
+\frac{1-2/3}{(1-1/3)^2}=\frac34,
+\qquad
+\frac{1-1/3}{(1-1/3)^2}=\frac32.
+\]
+The one-particle zeta factor is unchanged.
+\end{proof}
+
+\section{The exact Maynard--Selberg transfer operator}
+
+\subsection{Finite incidence theory}
+
+Let $I\subset\ZZ$ be finite, let $\cH=\{h_1,\ldots,h_k\}$, and let $\cD$ be a finite set of divisibility patterns.  A pattern may be a $k$-tuple $\mathbf d=(d_1,\ldots,d_k)$, and we set
+\[
+\Phi_{\mathbf d}(n)=\prod_{i=1}^k\1_{d_i\mid n+h_i}.
+\]
+Define the incidence operator
+\[
+T:\CC^{\cD}\longrightarrow\ell^2(I),
+\qquad
+(T\lambda)(n)=\sum_{\mathbf d\in\cD}\lambda_{\mathbf d}\Phi_{\mathbf d}(n).
+\]
+Let the prime-count multiplier be
+\[
+(M_{\cH}f)(n)=R_{\cH}(n)f(n),
+\qquad
+R_{\cH}(n)=\sum_{i=1}^k\1_{\mathbb P}(n+h_i).
+\]
+
+\begin{definition}[Selberg denominator and numerator operators]
+Set
+\[
+A=T^*T,
+\qquad
+B=T^*M_{\cH}T.
+\]
+For $\lambda\in\CC^{\cD}$ define
+\[
+S_1(\lambda)=\langle\lambda,A\lambda\rangle,
+\qquad
+S_2(\lambda)=\langle\lambda,B\lambda\rangle.
+\]
+Equivalently,
+\[
+S_1(\lambda)=\sum_{n\in I}|T\lambda(n)|^2,
+\qquad
+S_2(\lambda)=\sum_{n\in I}R_{\cH}(n)|T\lambda(n)|^2.
+\]
+\end{definition}
+
+\begin{theorem}[Finite Maynard--Selberg transfer operator]
+Both $A$ and $B$ are positive semidefinite.  On
+\[
+V=(\ker A)^\perp=(\ker T)^\perp
+\]
+the operator $A$ is positive definite, and
+\[
+K_{I,\cH,\cD}=A^{-1/2}BA^{-1/2}:V\to V
+\]
+is positive self-adjoint.  Moreover,
+\[
+\lambda_{\max}(K_{I,\cH,\cD})
+=
+\sup_{\lambda\notin\ker T}\frac{S_2(\lambda)}{S_1(\lambda)}.
+\]
+If this eigenvalue is strictly larger than an integer $m$, then some $n\in I$ has at least $m+1$ primes among $n+h_1,\ldots,n+h_k$.
+\end{theorem}
+
+\begin{proof}
+The factorizations $A=T^*T$ and $B=T^*M_{\cH}T$, with $M_{\cH}\geq0$, prove positivity.  On $V$, $A^{1/2}$ is invertible.  For $u=A^{1/2}\lambda$,
+\[
+\frac{S_2(\lambda)}{S_1(\lambda)}
+=
+\frac{\langle u,K_{I,\cH,\cD}u\rangle}{\langle u,u\rangle}.
+\]
+The finite-dimensional Rayleigh--Ritz theorem gives the supremum as the largest eigenvalue.
+
+If every $n\in I$ had $R_{\cH}(n)\leq m$, then termwise
+\[
+S_2(\lambda)\leq mS_1(\lambda)
+\]
+for every $\lambda$, contradicting a Rayleigh quotient larger than $m$.
+\end{proof}
+
+\begin{corollary}[Exact spectral certificate for a bounded interval]
+A tuple $\cH$ has a translate inside $I$ containing at least $m+1$ primes whenever the explicitly computable generalized eigenvalue problem
+\[
+Bv=\lambda Av
+\]
+has an eigenvalue $\lambda>m$ on $V$.  This is a rigorous finite certificate; no zeta zero is used.
+\end{corollary}
+
+\begin{remark}[What analytic number theory adds]
+The theorem is exact but finite.  Maynard's sieve supplies families of incidence vectors for growing intervals and asymptotic evaluations of $A$ and $B$ using distribution of primes in arithmetic progressions.  The arithmetic difficulty is to prove that the limiting top eigenvalue exceeds the desired threshold uniformly often.
+\end{remark}
+
+\subsection{The continuum Maynard operator}
+
+Let
+\[
+\Delta_k=\left\{(t_1,\ldots,t_k)\in\RR_{\geq0}^k:\sum_{i=1}^kt_i\leq1\right\}
+\]
+and $\HH_k=L^2(\Delta_k)$.  For each $i$, let $\Delta_{k-1}^{(i)}$ denote the simplex in the remaining variables and define
+\[
+(T_iF)(t_{\widehat i})
+=
+\int_0^{1-\sum_{j\neq i}t_j}
+F(t_1,\ldots,t_{i-1},u,t_{i+1},\ldots,t_k)\dd u.
+\]
+
+\begin{lemma}
+Each $T_i:\HH_k\to L^2(\Delta_{k-1}^{(i)})$ is bounded with $\|T_i\|\leq1$, and
+\[
+(T_i^*g)(t_1,\ldots,t_k)=g(t_{\widehat i}).
+\]
+\end{lemma}
+
+\begin{proof}
+Writing $L(t_{\widehat i})=1-\sum_{j\neq i}t_j\leq1$, Cauchy--Schwarz gives
+\[
+|T_iF(t_{\widehat i})|^2
+\leq L(t_{\widehat i})
+\int_0^{L(t_{\widehat i})}|F|^2\dd u
+\leq
+\int_0^{L(t_{\widehat i})}|F|^2\dd u.
+\]
+Integrating over $\Delta_{k-1}^{(i)}$ proves the norm bound.  Fubini's theorem gives the adjoint formula.
+\end{proof}
+
+\begin{definition}[Maynard correlation operator]
+Define
+\[
+K_k=\sum_{i=1}^kT_i^*T_i
+\]
+on $\HH_k$.  For $F\neq0$, put
+\[
+I_k(F)=\int_{\Delta_k}|F|^2,
+\qquad
+J_k^{(i)}(F)=\int_{\Delta_{k-1}^{(i)}}|T_iF|^2.
+\]
+\end{definition}
+
+\begin{theorem}[Operator realization of the Maynard variational constant]
+The operator $K_k$ is bounded, positive, and self-adjoint, with $\|K_k\|\leq k$.  The Maynard variational constant is exactly
+\[
+M_k
+:=
+\sup_{F\neq0}
+\frac{\sum_{i=1}^kJ_k^{(i)}(F)}{I_k(F)}
+=
+\|K_k\|.
+\]
+\end{theorem}
+
+\begin{proof}
+Each $T_i^*T_i$ is positive self-adjoint and has norm at most one.  Hence so is their sum, with norm at most $k$.  Furthermore,
+\[
+\langle F,K_kF\rangle
+=
+\sum_i\|T_iF\|^2
+=
+\sum_iJ_k^{(i)}(F).
+\]
+The spectral characterization of the norm of a positive self-adjoint operator gives the result.  The smooth compactly supported functions used in the classical Maynard definition are dense in $L^2(\Delta_k)$, and the quadratic form is continuous because the $T_i$ are bounded; hence the same supremum is obtained on the classical test class.
+\end{proof}
+
+\begin{theorem}[Imported Maynard criterion]
+Assume the primes have level of distribution $\vartheta>0$ in the form required by the Maynard sieve.  If
+\[
+M_k>\frac{2m}{\vartheta},
+\]
+then there are infinitely many translates of some admissible $k$-tuple containing at least $m+1$ primes.  In particular, Bombieri--Vinogradov gives $\vartheta=1/2$, so the sufficient spectral condition is $M_k>4m$.
+\end{theorem}
+
+\begin{proof}
+This is the analytic sieve theorem of Maynard \cite{Maynard2015}, written using the preceding identity $M_k=\|K_k\|$.  The new content here is the exact operator realization, not a replacement proof of the distribution estimates.
+\end{proof}
+
+\section{The positivity--correlation bifurcation}
+
+The previous section produces a positive operator whose \emph{top} eigenvalue must be large.  The Riemann hypothesis has the opposite form: an arithmetic Hermitian form not known to be positive must have nonnegative \emph{bottom} spectrum.
+
+\begin{theorem}[Quantifier reversal]
+Let $Q_\xi$ denote the Weil quadratic form in a convention where RH is equivalent to $Q_\xi(f)\geq0$ for every admissible test vector $f$.  Let $K_k$ be the positive Maynard correlation operator.  Then the two problems take the forms
+\[
+\mathrm{RH}
+\quad\Longleftrightarrow\quad
+\inf_{f\neq0}\frac{Q_\xi(f)}{\|f\|^2}\geq0,
+\tag{5.1}
+\]
+whereas the sieve criterion for $m+1$ primes is
+\[
+\sup_{F\neq0}\frac{\langle F,K_kF\rangle}{\|F\|^2}
+>
+\frac{2m}{\vartheta}.
+\tag{5.2}
+\]
+Thus RH is a universal sign assertion for an a priori indefinite form, while bounded gaps arise from an existential large-correlation vector for an a priori positive operator.
+\end{theorem}
+
+\begin{proof}
+Equation (5.1) is precisely the spectral reformulation of universal nonnegativity.  Equation (5.2) is the operator-norm form of the imported Maynard criterion.  The quantifiers and spectral edges are therefore opposite.
+\end{proof}
+
+\begin{corollary}[No single undifferentiated Hilbert--P\'olya mechanism]
+A putative common theory cannot identify the two quadratic problems merely because both use Hilbert spaces.  It must contain at least two sectors:
+\begin{enumerate}[label=(\roman*)]
+\item a one-particle/explicit-formula sector whose unresolved datum is positivity of the full Weil form;
+\item a multipoint/additive-correlation sector whose unresolved datum is a sufficiently large top Rayleigh quotient after distribution estimates.
+\end{enumerate}
+A valid unification is a coupling of these sectors, not their equality.
+\end{corollary}
+
+\section{The Weil form, GNS, and the exact RH positivity target}
+
+\subsection{The arithmetic pre-Krein space}
+
+Let $\cA_{\mathrm W}$ be a unital admissible convolution $*$-algebra of Weil test functions (or the unitization of the chosen test algebra), with
+\[
+f^*(x)=\overline{f(-x)}.
+\]
+Let $\WW_\xi:\cA_{\mathrm W}\to\CC$ denote the explicit-formula distribution, normalized so that Weil's criterion reads
+\[
+\WW_\xi(f^**f)\geq0\quad\text{for all }f
+\quad\Longleftrightarrow\quad\mathrm{RH}.
+\tag{6.1}
+\]
+
+\begin{construction}[Weil pre-Krein representation]
+Define
+\[
+[f,g]_{\mathrm W}=\WW_\xi(g^**f)
+\]
+and
+\[
+\mathcal N_{\mathrm W}
+=
+\{f\in\cA_{\mathrm W}:[g,f]_{\mathrm W}=0\text{ for every }g\}.
+\]
+Set
+\[
+\cK_{\mathrm W}^{\mathrm{alg}}
+=
+\cA_{\mathrm W}/\mathcal N_{\mathrm W}.
+\]
+Left convolution acts by
+\[
+\pi(a)[f]=[a*f].
+\]
+Write $\Omega=[1]$ for the class of the unit.
+\end{construction}
+
+\begin{lemma}
+The left convolution action is well defined on $\cK_{\mathrm W}^{\mathrm{alg}}$.
+\end{lemma}
+
+\begin{proof}
+If $f\in\mathcal N_{\mathrm W}$, then for every $g$,
+\[
+[g,a*f]_{\mathrm W}
+=
+\WW_\xi(g^**a*f)
+=
+\WW_\xi((a^**g)^**f)=0.
+\]
+Thus $a*f\in\mathcal N_{\mathrm W}$.
+\end{proof}
+
+\begin{theorem}[Weil--GNS criterion]
+The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item the Riemann hypothesis;
+\item $[\cdot,\cdot]_{\mathrm W}$ is positive semidefinite;
+\item $\cK_{\mathrm W}^{\mathrm{alg}}$ admits a GNS Hilbert completion with cyclic vector $\Omega$ satisfying
+\[
+\WW_\xi(a)=\langle\pi(a)\Omega,\Omega\rangle.
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The equivalence of (i) and (ii) is Weil's positivity criterion \cite{Weil1952,Bombieri2000}.  If (ii) holds, quotienting by the null space and completing gives the ordinary GNS representation, proving (iii).  Conversely, every vector state on a Hilbert space is positive, so
+\[
+\WW_\xi(f^**f)=\|\pi(f)\Omega\|^2\geq0,
+\]
+which gives (ii).
+\end{proof}
+
+\begin{corollary}[Exact QFT target]
+Suppose an independently constructed reflection-positive Euclidean or holomorphic--topological theory carries observables $\mathcal O(f)$ with
+\[
+\big\langle \Theta_{\mathrm{OS}}\mathcal O(f)\,\mathcal O(f)\big\rangle
+=
+\WW_\xi(f^**f)
+\]
+for every Weil test function $f$.  Then RH follows.
+\end{corollary}
+
+\begin{proof}
+Osterwalder--Schrader positivity makes the left side nonnegative, and the Weil--GNS criterion applies.
+\end{proof}
+
+\subsection{The spectral tautology detector}
+
+\begin{theorem}[Zero-placement tautology]
+Let $Z$ be a countable multiset of complex numbers.  On the finite-support vector space with basis $e_\rho$, define $\Theta e_\rho=\rho e_\rho$.  The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item $\operatorname{Re}\rho=1/2$ for every $\rho\in Z$;
+\item there exists a positive Hilbert completion for which
+\[
+H=\frac{\Theta-\tfrac12 I}{i}
+\]
+is self-adjoint and the vectors $e_\rho$ remain eigenvectors.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If $H$ is self-adjoint, every eigenvalue $(\rho-1/2)/i$ is real, so $\operatorname{Re}\rho=1/2$.  Conversely, if $\rho=1/2+i\gamma_\rho$ with $\gamma_\rho\in\RR$, declare the $e_\rho$ orthonormal in $\ell^2(Z)$ and define the diagonal self-adjoint operator
+\[
+He_\rho=\gamma_\rho e_\rho
+\]
+on its maximal square-summability domain.
+\end{proof}
+
+\begin{warning}
+A construction that begins with the zeta zeros and then asks for an inner product making the resulting diagonal operator self-adjoint has restated RH.  A non-circular construction must define the Hilbert space, operator, domain, and self-adjointness before identifying its determinant divisor.
+\end{warning}
+
+\subsection{The prime-gas no-go theorem}
+
+\begin{theorem}[Euler spectrum is not zero spectrum]
+Let $\HH_{\mathrm{prime}}=\ell^2(\mathbb N)$, with basis $e_n$, and define
+\[
+H_{\mathrm{prime}}e_n=(\log n)e_n.
+\]
+Then for $\operatorname{Re}s>1$,
+\[
+\Tr(e^{-sH_{\mathrm{prime}}})=\zeta(s),
+\]
+but
+\[
+\Spec H_{\mathrm{prime}}=\{\log n:n\geq1\}^{\mathrm{cl}},
+\]
+not the ordinates of the nontrivial zeros.
+\end{theorem}
+
+\begin{proof}
+The trace is $\sum_nn^{-s}$.  The spectrum of a diagonal self-adjoint operator is the closure of its diagonal entries.
+\end{proof}
+
+\begin{remark}
+Via unique factorization, this is the bosonic Fock space with one-particle energies $\log p$.  It realizes the Euler product, not a Hilbert--P\'olya operator.  Analytic continuation of a partition function is not a spectral identification.
+\end{remark}
+
+\subsection{The Deninger--Hodge sufficiency theorem}
+
+\begin{theorem}[Deninger--Hodge sufficiency]
+Suppose there is a Hilbert space $H^1_{\mathrm{Ar}}$ and a closed densely defined operator $\Theta$ such that the operator identity below holds with equality of domains, and:
+\begin{enumerate}[label=(D\arabic*)]
+\item $\Theta$ has discrete spectrum of finite multiplicity in bounded vertical strips;
+\item
+\[
+\Theta^*=I-\Theta;
+\tag{6.2}
+\]
+\item there is a regularized determinant identity
+\[
+\xi(s)=e^{g(s)}\det_{\infty}(sI-\Theta),
+\tag{6.3}
+\]
+where $e^{g(s)}$ is entire and nowhere zero and the determinant has no extraneous zero divisor.
+\end{enumerate}
+Then the Riemann hypothesis holds.
+\end{theorem}
+
+\begin{proof}
+Put $A=\Theta-\tfrac12I$.  Equation (6.2) gives $A^*=-A$, so $H=-iA$ is self-adjoint.  Hence every spectral value of $\Theta$ has the form $1/2+i\gamma$ with $\gamma\in\RR$.  Equation (6.3) identifies the nontrivial zero divisor of $\xi$ with this spectrum.
+\end{proof}
+
+\begin{remark}
+Deninger's program specifies the shape of such a theory but does not currently construct this middle cohomology and positive Hodge form \cite{Deninger1998}.  The theorem identifies the exact missing datum: not another functional equation, but the positive adjoint relation $\Theta^*=1-\Theta$ together with an independent determinant theorem.
+\end{remark}
+
+\section{Dagger-preserving comparison and real Maurer--Cartan theory}
+
+\subsection{Why an ordinary quasi-isomorphism cannot carry positivity}
+
+\begin{theorem}[State-preserving dagger transfer]
+Let $A$ and $B$ be dg $*$-algebras, and let $\phi:A\to B$ be a dg $*$-morphism inducing a $*$-isomorphism
+\[
+H^0(\phi):H^0(A)\xrightarrow{\sim}H^0(B).
+\]
+Let $\omega_B$ be a positive functional on $H^0(B)$ and define
+\[
+\omega_A=\omega_B\circ H^0(\phi).
+\]
+Then $\omega_A$ is positive, and $H^0(\phi)$ induces a unitary isomorphism between the two GNS Hilbert spaces.
+\end{theorem}
+
+\begin{proof}
+For $a\in H^0(A)$,
+\[
+\omega_A(a^*a)
+=
+\omega_B(H^0(\phi)(a)^*H^0(\phi)(a))\geq0.
+\]
+The map preserves the GNS semi-inner products and, being an isomorphism on $H^0$, has dense surjective image after quotienting null spaces.  It therefore extends to a unitary.
+\end{proof}
+
+\begin{proposition}[Complex comparison no-go]
+A complex-linear quasi-isomorphism without a specified involution and state does not transfer positivity.
+\end{proposition}
+
+\begin{proof}
+Take the same one-dimensional complex cochain complex twice, with the identity quasi-isomorphism.  Equip one copy with Hermitian form $h(z,w)=z\bar w$ and the other with $-h$.  The complex objects and differentials are identical, while positivity is opposite.
+\end{proof}
+
+\begin{corollary}
+An equivalence
+\[
+Z^{\mathrm{der}}_{\mathrm{ch}}(A)\simeq\operatorname{Obs}_{\mathrm{bulk}}(\mathcal T)
+\]
+of complex factorization algebras cannot imply RH positivity unless it is enhanced to a reflection-compatible dagger equivalence preserving the explicit-formula state.
+\end{corollary}
+
+\subsection{Real extension of filtered Maurer--Cartan data}
+
+Let $\cG$ be a complete filtered dg Lie algebra
+\[
+\cG=F^1\cG\supset F^2\cG\supset\cdots,
+\qquad
+[F^p\cG,F^q\cG]\subset F^{p+q}\cG.
+\]
+Assume a conjugate-linear involution $\sigma$ satisfying
+\[
+\sigma^2=1,
+\qquad
+\sigma d=d\sigma,
+\qquad
+\sigma[x,y]=[\sigma x,\sigma y].
+\]
+
+\begin{theorem}[Filtered Maurer--Cartan obstruction]
+Suppose $\alpha_n\in\cG^1$ solves
+\[
+d\alpha_n+\frac12[\alpha_n,\alpha_n]\equiv0\pmod{F^{n+1}\cG}.
+\]
+Its curvature determines a class
+\[
+o_{n+1}(\alpha_n)
+\in
+H^2\left(F^{n+1}\cG/F^{n+2}\cG,d_{\alpha_n}\right).
+\]
+The class vanishes if and only if $\alpha_n$ extends to a solution modulo $F^{n+2}$.  Extension classes modulo gauge form a torsor for the corresponding $H^1$.
+\end{theorem}
+
+\begin{proof}
+The Bianchi identity gives
+\[
+d_{\alpha_n}\operatorname{Curv}(\alpha_n)=0.
+\]
+For a correction $\beta\in F^{n+1}\cG^1$,
+\[
+\operatorname{Curv}(\alpha_n+\beta)
+\equiv
+\operatorname{Curv}(\alpha_n)+d_{\alpha_n}\beta
+\pmod{F^{n+2}\cG},
+\]
+since $[\beta,\beta]\in F^{2n+2}\subseteq F^{n+2}$.  The statements follow.
+\end{proof}
+
+\begin{theorem}[Real Maurer--Cartan extension]
+Assume in addition that $\sigma(\alpha_n)=\alpha_n$.  If the obstruction class vanishes over $\CC$, then there is a $\sigma$-fixed correction $\beta$ and hence a $\sigma$-fixed extension modulo $F^{n+2}$.
+\end{theorem}
+
+\begin{proof}
+The curvature is $\sigma$-fixed.  Choose any $\beta$ with
+\[
+d_{\alpha_n}\beta=-\operatorname{Curv}(\alpha_n)
+\]
+in the associated graded quotient.  Then
+\[
+\beta_{\RR}=\frac12(\beta+\sigma\beta)
+\]
+is fixed by $\sigma$ and satisfies the same equation.
+\end{proof}
+
+\begin{warning}
+A real or dagger-compatible Maurer--Cartan element supplies a real structure, not positivity.  Positivity requires a state and an inequality; averaging a primitive cannot manufacture a positive metric.
+\end{warning}
+
+\subsection{Totalized local-to-global obstruction theory}
+
+\begin{construction}[Common deformation complex]
+Let $\cG^\bullet$ be a cosimplicial complete filtered dg Lie algebra encoding local operation spaces, overlaps, higher intersections, scale transitions, and completion windows.  Let
+\[
+\cG_{\mathrm{glob}}=\Tot_{\mathrm{TW}}(\cG^\bullet)
+\]
+be its Thom--Whitney totalization.  A Maurer--Cartan element of $\cG_{\mathrm{glob}}$ simultaneously contains local operations, descent homotopies, and all higher coherence data.
+\end{construction}
+
+\begin{theorem}[Totalized obstruction tower]
+For a partial global Maurer--Cartan element $\alpha_n$ modulo $F^{n+1}$, the unique primary global obstruction is
+\[
+o^{\mathrm{glob}}_{n+1}(\alpha_n)
+\in
+H^2\left(
+F^{n+1}\cG_{\mathrm{glob}}/F^{n+2}\cG_{\mathrm{glob}},
+ d_{\alpha_n}
+\right).
+\]
+Every row-specific obstruction obtained by restricting to local operations, centre lifts, Darboux transport, descent, QME, anomaly, or comparison cones is the image of this class under the corresponding projection of totalized complexes.  Vanishing of all projected classes is insufficient unless the projections are jointly conservative or a primitive is constructed in the common totalization.
+\end{theorem}
+
+\begin{proof}
+Apply the filtered Maurer--Cartan obstruction theorem to the single complete dg Lie algebra $\cG_{\mathrm{glob}}$.  Functoriality of curvature sends its class to every quotient or projection complex.  Conversely, vanishing after projection does not imply vanishing before projection unless the induced map on $H^2$ is injective or compatible primitives assemble in the source.
+\end{proof}
+
+\begin{corollary}[Repair of a typed obstruction ledger]
+A list of ten obstruction rows becomes a proof only after:
+\begin{enumerate}[label=(\roman*)]
+\item all rows are embedded in one explicit $\cG_{\mathrm{glob}}$;
+\item a global curvature class is written;
+\item row primitives are shown to be faces of one primitive in $\cG_{\mathrm{glob}}$;
+\item the filtered inverse limit is proved convergent, including every $\varprojlim^1$ term.
+\end{enumerate}
+\end{corollary}
+
+\section{Scalar-shadow firewalls and recognition theorems}
+
+\subsection{Characters and determinants are not objects}
+
+\begin{proposition}[Character non-faithfulness]
+The graded-dimension functor from graded Lie algebras to formal power series is neither faithful nor conservative.
+\end{proposition}
+
+\begin{proof}
+The two Lie algebras $L_0,L_1$ in the proof of Proposition~2.5 have the same graded dimensions but are not isomorphic.  Thus equality of characters does not imply equality of brackets, and a morphism inducing a character equality need not be an isomorphism.
+\end{proof}
+
+\begin{proposition}[Determinant non-faithfulness]
+The regularized or finite-dimensional determinant of $sI-T$ does not by itself determine the operator $T$.
+\end{proposition}
+
+\begin{proof}
+In dimension two, the zero matrix and the nonzero nilpotent Jordan block
+\[
+N=\begin{pmatrix}0&1\\0&0\end{pmatrix}
+\]
+have the same characteristic determinant $\det(sI-T)=s^2$, but are not similar: one has rank zero and the other rank one.
+\end{proof}
+
+\begin{corollary}[Scalar-shadow firewall]
+None of the following follows from a scalar partition-function or denominator identity alone:
+\begin{enumerate}[label=(\roman*)]
+\item a Lie bracket or no-extra-relations theorem;
+\item a Hopf coproduct or nondegenerate pairing;
+\item a Drinfeld double;
+\item a line-operator category;
+\item a QFT path integral or reflection-positive Hilbert space.
+\end{enumerate}
+Each requires a separately constructed lift.
+\end{corollary}
+
+\subsection{Finite-height recognition}
+
+Let $Q_+$ be a positive root monoid with a height function $\operatorname{ht}:Q_+\to\ZZ_{\geq0}$.  Suppose
+\[
+\cG=\bigoplus_{\alpha\in Q_+}\cG_\alpha,
+\qquad
+L=\bigoplus_{\alpha\in Q_+}L_\alpha
+\]
+are graded Lie superalgebras with finite-dimensional root spaces.
+
+\begin{theorem}[Finite-height Lie recognition]
+Let $\Phi:\cG\twoheadrightarrow L$ be a graded surjective Lie-superalgebra morphism.  If
+\[
+\dim \cG_\alpha=\dim L_\alpha
+\]
+for every root of height at most $N$, then $\Phi$ is an isomorphism on the height-$\leq N$ truncation.  If the equality holds for every root, then $\Phi$ is an isomorphism.
+\end{theorem}
+
+\begin{proof}
+For each $\alpha$, exactness gives
+\[
+0\to(\ker\Phi)_\alpha\to\cG_\alpha\to L_\alpha\to0.
+\]
+The dimension equality forces $(\ker\Phi)_\alpha=0$ in the claimed range.
+\end{proof}
+
+\begin{theorem}[Complete-window recognition]
+Suppose $\cG$ and $L$ are separated and complete for the height filtration, and compatible morphisms
+\[
+\Phi_N:\cG/F^{N+1}\cG\xrightarrow{\sim}L/F^{N+1}L
+\]
+are isomorphisms for every $N$.  Then the induced continuous map
+\[
+\widehat\Phi:\cG\xrightarrow{\sim}L
+\]
+is an isomorphism.
+\end{theorem}
+
+\begin{proof}
+Completeness identifies each object with the inverse limit of its truncations.  The compatible inverse limit of isomorphisms is an isomorphism.  If the systems are represented by chain complexes rather than degreewise finite vector spaces, the same conclusion requires the derived inverse limit and the vanishing or explicit control of $\varprojlim^1$.
+\end{proof}
+
+\begin{remark}[Application to $\mathfrak g_{\Delta_5}$]
+A compact Hall source can be recognized as the BKM algebra $\mathfrak g_{\Delta_5}$ only after one has constructed source generators, verified Cartan/Chevalley/Serre/Borcherds relations and parity, obtained a graded surjection, computed the radical quotient, and matched every finite-height root multiplicity.  The Borcherds product supplies target multiplicities; it does not supply the source representatives or the surjection.
+\end{remark}
+
+\section{The level-six lattice on the complex six-sphere}
+
+We now use the integral lattice calculated in Engel's construction \cite{Engel2026}.  In a basis $e_1,\ldots,e_4$ of the smooth torus fibre lattice $\Lambda$, let $e_1^*,\ldots,e_4^*$ be the dual basis.  The invariant alternating form is
+\[
+\xi
+=
+3e_1^*\wedge e_2^*
++e_1^*\wedge e_3^*
+-2e_2^*\wedge e_3^*
+-2e_3^*\wedge e_4^*,
+\]
+the principal $\CC^*$-circle class is
+\[
+\delta=-2e_1-e_2+3e_3,
+\]
+and the invariant covector is
+\[
+\psi=e_4^*.
+\]
+
+\begin{theorem}[Exact contraction identity]
+One has
+\[
+\iota_\delta\xi=-6\psi.
+\tag{9.1}
+\]
+Consequently,
+\[
+\ker\psi=\delta^{\perp_\xi}.
+\]
+\end{theorem}
+
+\begin{proof}
+The skew matrix of $\xi$ is
+\[
+[\xi]=
+\begin{pmatrix}
+0&3&1&0\\
+-3&0&-2&0\\
+-1&2&0&-2\\
+0&0&2&0
+\end{pmatrix}.
+\]
+Multiplication by the row vector $(-2,-1,3,0)$ gives
+\[
+(-2,-1,3,0)[\xi]=(0,0,0,-6),
+\]
+which is (9.1).  The orthogonal-complement assertion follows immediately.
+\end{proof}
+
+\begin{corollary}[Unimodular symplectic reduction]
+The quotient lattice
+\[
+\Lambda_{\mathrm{red}}=\ker\psi/\ZZ\delta
+\]
+has rank two and carries a unimodular alternating form induced by $\xi$.
+\end{corollary}
+
+\begin{proof}
+Since
+\[
+\ker\psi=\langle e_1,e_2,e_3\rangle
+\]
+and the relation $\delta=0$ gives $e_2=-2e_1+3e_3$, the classes of $e_1,e_3$ form a basis of the quotient.  Their pairing is
+\[
+\xi(e_1,e_3)=1.
+\]
+\end{proof}
+
+\begin{theorem}[Discriminant group and level-six Heisenberg sector]
+The map $\xi^\flat:\Lambda\to\Lambda^*$ has Smith invariants
+\[
+1,1,6,6.
+\]
+Hence
+\[
+D_\xi:=\coker(\xi^\flat)\cong(\ZZ/6\ZZ)^2.
+\]
+The associated finite Heisenberg group with primitive central character has an explicit irreducible representation of dimension six.
+\end{theorem}
+
+\begin{proof}
+Engel's calculation gives elementary divisors $(1,6)$, which for an alternating rank-four lattice means the normal form $J\oplus6J$ and therefore Smith invariants $1,1,6,6$.  For the representation, let $V=\CC^6$ with basis $|r\rangle$, $r\in\ZZ/6\ZZ$, and put
+\[
+X|r\rangle=|r+1\rangle,
+\qquad
+Z|r\rangle=\zeta_6^r|r\rangle.
+\]
+Then
+\[
+ZX=\zeta_6XZ,
+\qquad X^6=Z^6=1.
+\]
+This gives the Schr\"odinger representation of the finite Heisenberg extension.  It is irreducible because $Z$ separates the basis lines and $X$ acts transitively on them.
+\end{proof}
+
+\begin{warning}
+This six-dimensional representation is a genuine algebraic quantum sector.  It is not, without further construction, a vertex algebra, a modular functor, an $E_6$ theory, or a Hilbert space of a six-dimensional QFT.
+\end{warning}
+
+\section{A general two-fibre affine transgression determinant}
+
+The integer $p=4m+3n$ in Engel's construction simultaneously controls the fundamental group and three Leray differentials.  This is the specialization of a general two-fibre calculation.
+
+\begin{definition}[Two-fibre affine presentation]
+For integers $r,s\geq1$ and $m,n\in\ZZ$, define
+\[
+G(r,s;m,n)
+=
+\left\langle c,x_0,x_1\ \middle|\
+ c\text{ central},\ x_0x_1=1,\ x_0^r=c^m,\ x_1^s=c^n
+\right\rangle.
+\]
+Put
+\[
+D(r,s;m,n)=rn+sm.
+\]
+\end{definition}
+
+\begin{theorem}[Smith normal form of the affine filling]
+If $D(r,s;m,n)\neq0$, then $G(r,s;m,n)$ is finite abelian with invariant factors
+\[
+G(r,s;m,n)
+\cong
+\ZZ/d_1\ZZ\oplus\ZZ/d_2\ZZ,
+\]
+where
+\[
+d_1=\gcd(r,s,m,n),
+\qquad
+d_1d_2=|D(r,s;m,n)|.
+\]
+In particular, if $d_1=1$, the group is cyclic of order $|D|$; if $|D|=1$, it is trivial.
+\end{theorem}
+
+\begin{proof}
+Eliminate $x_1=x_0^{-1}$ and write the abelian generators additively as $(x,c)$.  The relations are
+\[
+rx-mc=0,
+\qquad
+sx+nc=0.
+\]
+Thus $G$ is the cokernel of
+\[
+R=
+\begin{pmatrix}
+r&-m\\
+s&n
+\end{pmatrix},
+\qquad
+\det R=rn+sm=D.
+\]
+For a full-rank $2\times2$ integer matrix, the first Smith invariant is the gcd of all entries and the product of the two invariants is the absolute determinant.
+\end{proof}
+
+\begin{theorem}[Integral affine transgression]
+Consider an oriented Seifert circle quotient over $S^2$ with two multiple fibres carrying local invariants $(r,m)$ and $(s,n)$, using the orientation convention in which the two local fibre rotations add.  Let $\psi$ be the primitive fibre character and let $\omega$ generate $H^2(S^2;\ZZ)$.  Then the $rs$-multiple of the character has integral transgression
+\[
+d_2(rs\psi)=D(r,s;m,n)\,\omega.
+\tag{10.1}
+\]
+Equivalently, the rational Euler number is
+\[
+e=\frac mr+\frac ns=\frac{D}{rs}.
+\]
+\end{theorem}
+
+\begin{proof}
+Choose disks around the two orbifold points and an annular overlap.  On the $r$-fold local cover at the first point, one turn closes only after a fibre rotation of $m/r$; at the second point the rotation is $n/s$.  The $rs$-th tensor power of the fibre character has integral transition winding
+\[
+rs\left(\frac mr+\frac ns\right)=sm+rn=D.
+\]
+The first Chern class of this transition line is $D\omega$.  The Serre transgression of the fibre character is this Euler class.
+\end{proof}
+
+\begin{corollary}[Engel's unit condition]
+In Engel's case $(r,s)=(3,4)$, with
+\[
+m=3\psi(a_0),
+\qquad
+n=4\psi(a_1),
+\]
+one obtains
+\[
+D=3n+4m=12\psi(a_0+a_1)=p.
+\]
+Thus $|p|=1$ simultaneously makes the fundamental group trivial and makes
+\[
+d_2(12\psi)=p\omega
+\]
+an isomorphism.  Engel's multiplicative Leray calculation then gives the same coefficient $p$ on the invariant classes $2\xi$ and $2\phi$.
+\end{corollary}
+
+\begin{proof}
+The group statement is the preceding Smith-normal-form theorem.  The first differential is the transgression theorem.  The remaining two are Engel's explicit use of multiplicativity and the derivation law for $d_2$.
+\end{proof}
+
+\begin{remark}[A genuine organizing principle]
+The equality of the surgery determinant and the Leray transgression coefficient is not a numerical coincidence.  Both evaluate the same rational Seifert Euler class after clearing the local denominators.
+\end{remark}
+
+\section{The Platonic realization package}
+
+\begin{definition}[Platonic arithmetic--chiral realization]
+A Platonic realization consists of the following independently constructed data:
+\begin{enumerate}[label=(P\arabic*)]
+\item a geometric factorization or chiral object $\mathcal F_{\mathrm{geo}}$ with an explicit all-arity Maurer--Cartan element;
+\item a CRT-local arithmetic object $\mathcal F_{\mathrm{CRT}}$;
+\item an additive correlation object containing the projectors $Q_{\cH,p}$ and a Maynard incidence representation;
+\item a $*$-structure, reflection, and positive state $\omega$;
+\item a state-preserving dagger comparison from an explicit-formula test algebra to observables;
+\item a separate comparison from additive tuple observables to the sieve transfer operator;
+\item convergence and derived-limit theorems for every completion;
+\item independent finite-window certificates and source/target non-circularity checks.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Coupled sufficiency]
+A Platonic realization with
+\[
+\omega(\mathcal O(f)^*\mathcal O(f))=\WW_\xi(f^**f)
+\quad\text{for all }f
+\]
+proves RH.  If, in addition, its additive sector produces infinitely many intervals for which the associated Maynard--Selberg transfer operator has top eigenvalue greater than $m$, then it proves infinitely many translates containing at least $m+1$ primes.  The two conclusions use different sectors and different quantifiers.
+\end{theorem}
+
+\begin{proof}
+The first assertion is the Weil--GNS criterion.  The second is the finite transfer-operator theorem applied on infinitely many intervals.
+\end{proof}
+
+\section{What has actually been established}
+
+The theorem-level output of this reconstruction is:
+\begin{enumerate}[label=(R\arabic*)]
+\item a finite positive CRT-factorization model for admissible prime tuples;
+\item an absolutely convergent connected free energy equal to the logarithm of the singular series;
+\item an exact finite-dimensional Maynard--Selberg generalized-eigenvalue operator;
+\item a positive self-adjoint continuum Maynard operator with norm $M_k$;
+\item the positivity--correlation quantifier reversal between RH and bounded gaps;
+\item the Weil pre-Krein/GNS realization and exact QFT sufficiency condition;
+\item the spectral tautology detector and the prime-gas no-go theorem;
+\item the Deninger--Hodge sufficiency theorem;
+\item the state-preserving dagger-transfer theorem;
+\item the real and totalized Maurer--Cartan obstruction theorems;
+\item scalar-shadow no-go theorems and finite-height BKM recognition;
+\item the exact level-six lattice contraction and finite Heisenberg representation on the complex $S^6$ family;
+\item the general affine transgression determinant controlling both fundamental group and Leray differential.
+\end{enumerate}
+
+The following remain open and are not hidden by the notation:
+\begin{enumerate}[label=(O\arabic*)]
+\item positivity of the full Weil form;
+\item construction of an independent Hilbert--P\'olya/Deninger operator;
+\item a state-preserving dagger comparison from a chiral/QFT model to the Weil test algebra;
+\item analytic sieve estimates improving the known bounded-gap constant or overcoming the parity barrier;
+\item all-arity, descent, QME, anomaly, and cone data for the global mixed-HT comparison;
+\item compact Hall--Drinfeld--Borcherds source recognition on $K3\times E$;
+\item operator-level Pfaffian and primitive lifts of the scalar $\Delta_5$ identities;
+\item a QFT or vertex-algebra realization of the level-six $S^6$ lattice sector;
+\item the homotopy class of Engel's quotient map $S^6\to S^3$ and the conjectural $u=0$ degeneration.
+\end{enumerate}
+
+\section{Proof-assistant and computational certificate plan}
+
+Each theorem above admits a finite verification layer.
+\begin{enumerate}[label=(C\arabic*)]
+\item \textbf{CRT model:} enumerate residues and verify $Z_S(\cH)$ and $\cS_S(\cH)$ for finite $S$.
+\item \textbf{Transfer operator:} construct $T,A,B,K$ exactly over $\QQ$ for finite intervals and certify eigenvalue bounds using interval arithmetic.
+\item \textbf{Maynard operator:} approximate $K_k$ in a polynomial basis and certify lower bounds for $\|K_k\|$ by rational Rayleigh vectors.
+\item \textbf{Maurer--Cartan tower:} represent each filtered quotient as a finite complex, compute curvature matrices, primitive matrices, and transition compatibility.
+\item \textbf{BKM recognition:} maintain relation-closed root windows with source representatives, bracket matrices, PBW dimensions, radical matrices, and transition maps.
+\item \textbf{$S^6$ lattice:} verify monodromy invariance, Smith normal form, contraction identity, and affine relation matrices over $\ZZ$.
+\end{enumerate}
+A script is evidence only for its finite claim.  It may not be cited as a proof of an unbounded inverse-limit, positivity, or global descent statement without a theorem connecting the finite certificates to the limit.
+
+\section{Conclusion}
+
+The deepest repair is not a new metaphor but a change in architecture.  Prime gaps, RH, and chiral locality meet only after four distinctions are kept visible:
+\[
+\boxed{
+\text{collision locality}\neq
+\text{CRT locality}\neq
+\text{additive correlation}\neq
+\text{dagger positivity}.
+}
+\]
+The arithmetic model of prime tuples is already positive; its problem is to make a top correlation eigenvalue large.  The Weil model already contains the complete prime/zero trace functional; its problem is to prove universal positivity.  Chiral and holomorphic--topological theories can organize operations and comparisons, but they affect either problem only after a state-preserving real enhancement is constructed.  The complex six-sphere supplies a separate exact lesson: one integral affine class can govern both fundamental-group surgery and spectral-sequence transgression because both are evaluations of the same Euler class.
+
+That is the rigorous common pattern:
+\begin{center}
+\fbox{\parbox{0.88\textwidth}{\centering
+local data $\longrightarrow$ one total obstruction or correlation operator\\
+$\longrightarrow$ global object $\longrightarrow$ a separately proved sign, norm, or unit condition.}}
+\end{center}
+
+\begin{thebibliography}{99}
+
+\bibitem{BeilinsonDrinfeld}
+A.~Beilinson and V.~Drinfeld,
+\emph{Chiral Algebras},
+American Mathematical Society, 2004.
+
+\bibitem{Bombieri2000}
+E.~Bombieri,
+\emph{Remarks on Weil's quadratic functional in the theory of prime numbers I},
+Rendiconti di Matematica, 2000.
+
+\bibitem{BombieriLagarias1999}
+E.~Bombieri and J.~Lagarias,
+\emph{Complements to Li's criterion for the Riemann hypothesis},
+Journal of Number Theory 77 (1999), 274--287.
+
+\bibitem{Borcherds1995}
+R.~Borcherds,
+\emph{Automorphic forms on $O_{s+2,2}(\mathbb R)$ and infinite products},
+Inventiones Mathematicae 120 (1995), 161--213.
+
+\bibitem{CostelloGwilliam}
+K.~Costello and O.~Gwilliam,
+\emph{Factorization Algebras in Quantum Field Theory},
+Cambridge University Press.
+
+\bibitem{Deninger1998}
+C.~Deninger,
+\emph{Some analogies between number theory and dynamical systems on foliated spaces},
+Documenta Mathematica, Extra Volume ICM 1998.
+
+\bibitem{Engel2026}
+P.~Engel,
+\emph{Complex Structures on $S^6$},
+2026 manuscript.
+
+\bibitem{GritsenkoNikulin1998}
+V.~Gritsenko and V.~Nikulin,
+\emph{Automorphic forms and Lorentzian Kac--Moody algebras},
+Parts I--II, 1998.
+
+\bibitem{LodayVallette}
+J.-L.~Loday and B.~Vallette,
+\emph{Algebraic Operads},
+Springer, 2012.
+
+\bibitem{Maynard2015}
+J.~Maynard,
+\emph{Small gaps between primes},
+Annals of Mathematics 181 (2015), 383--413.
+
+\bibitem{Polymath2014}
+D.~H.~J.~Polymath,
+\emph{Variants of the Selberg sieve, and bounded intervals containing many primes},
+Research in the Mathematical Sciences 1 (2014), Article 12.
+
+\bibitem{Positselski}
+L.~Positselski,
+\emph{Two kinds of derived categories, Koszul duality, and comodule--contramodule correspondence},
+Memoirs of the American Mathematical Society, 2011.
+
+\bibitem{PTVV}
+T.~Pantev, B.~To\"en, M.~Vaqui\'e, and G.~Vezzosi,
+\emph{Shifted symplectic structures},
+Publications Math\'ematiques de l'IH\'ES 117 (2013), 271--328.
+
+\bibitem{Weil1952}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+1952.
+
+\bibitem{Zhang2014}
+Y.~Zhang,
+\emph{Bounded gaps between primes},
+Annals of Mathematics 179 (2014), 1121--1174.
+
+\bibitem{LorgatV1}
+R.~Lorgat,
+\emph{Modular Koszul Duality, Volume I: $E_1$ Chiral Algebras and the Bar--Cobar Adjunction on Algebraic Curves},
+work in progress, 2026.
+
+\bibitem{LorgatV2}
+R.~Lorgat,
+\emph{Modular Homotopy Theory, Volume II: Holomorphic--Topological QFT, $A_\infty$ Chiral Algebras and Three-Dimensional Quantum Gravity},
+work in progress, 2026.
+
+\bibitem{LorgatV3}
+R.~Lorgat,
+\emph{Calabi--Yau Quantum Groups: Chiral Algebras from Calabi--Yau Categories via $E_1/E_2$ Factorization},
+work in progress, 2026.
+
+\bibitem{LorgatV4}
+R.~Lorgat,
+\emph{Modular Koszul Duality, Volume IV: Realization},
+work in progress, 2026.
+
+\bibitem{LorgatMixedHT}
+R.~Lorgat,
+\emph{Formal-Darboux Trace-Sector Stalk for the Hamiltonian BF Truncation at $N$ Dirac Branes},
+work in progress, 2026.
+
+\bibitem{LorgatIgusa}
+R.~Lorgat,
+\emph{The Igusa Square Root: The Borcherds Determinant of $\phi_{0,1}$, Its Denominator Algebra, and the $K3\times E$ Realization Problem},
+work in progress, 2026.
+
+\end{thebibliography}
+
+\end{document}

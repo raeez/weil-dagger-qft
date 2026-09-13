@@ -1,0 +1,2134 @@
+\section{Arithmetic factors, operators, and positive realizations}
+\label{syn-arith:section}
+
+An Euler factor can arise from an integral or from an operator trace.
+All Hilbert inner products below are conjugate-linear in the first variable.
+For a prime $p$, the elementary equality is
+\begin{equation}
+ \int_{\mathbb Q_p^\times}\mathbf1_{\mathbb Z_p}(x)|x|_p^s\,d^\times x
+ =\operatorname{Tr}_{\ell^2(\mathbb N_0)}e^{-sN_p}
+ =\frac1{1-p^{-s}},\qquad \operatorname{Re}s>0.
+ \label{syn-arith:spine-local}
+\end{equation}
+The measure has $\operatorname{vol}(\mathbb Z_p^\times)=1$ and
+$N_pe_r=r\log p\,e_r$.  The integral and trace therefore agree after
+their normalizations and domains have been fixed.
+An arithmetic cohomology theory would require substantially more data.
+In particular, the same energy space supports algebras with different bar homology.
+
+There are two further exact bridges.  Chinese remainders turn finite
+congruence conditions into tensor products and positive sieve operators.
+Weil's explicit formula turns the Riemann hypothesis into positivity of
+one specified convolution functional.  The sieve operators are positive
+before any prime-distribution estimate.  The positivity of the Weil
+functional is itself the unresolved arithmetic assertion.
+
+\subsection{Local Mellin integrals and the completed zeta function}
+\label{syn-arith:tate}
+
+Write $\mathbb A=\mathbb A_{\mathbb Q}$ and $|p|_p=p^{-1}$.
+Fix the additive character
+\[
+ \psi(x)=\exp\left(2\pi i\left(x_\infty-
+                  \sum_p\{x_p\}_p\right)\right)
+ \quad\text{on }\mathbb A/\mathbb Q.
+\]
+Here $\{x_p\}_p$ is the $p$-primary fractional part.
+Self-dual additive measures satisfy $\operatorname{vol}(\mathbb Z_p)=1$
+and give Lebesgue measure at infinity.  Set
+\[
+ d^\times x_p=(1-p^{-1})^{-1}\frac{dx_p}{|x_p|_p},\qquad
+ d^\times x_\infty=\frac{dx}{|x|},\qquad
+ \Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2).
+\]
+For a Schwartz--Bruhat function $\phi_v$ on $\mathbb Q_v$, put
+$Z_v(\phi_v,s)=\int\phi_v(x)|x|_v^s\,d^\times x$ wherever this is absolutely convergent.
+
+\begin{proposition}[Local Tate factors]
+\label{syn-arith:local-tate}
+For $\operatorname{Re}s>0$,
+\[
+ Z_p(\mathbf1_{\mathbb Z_p},s)=(1-p^{-s})^{-1},\qquad
+ Z_\infty(e^{-\pi x^2},s)=\Gamma_{\mathbb R}(s).
+\]
+With additive measure the finite integral is
+\[
+ \int_{\mathbb Z_p}|x|_p^{s-1}\,dx_p
+ =\frac{1-p^{-1}}{1-p^{-s}}.
+\]
+\end{proposition}
+\begin{proof}
+The annulus $p^r\mathbb Z_p^\times$ has multiplicative volume one.
+Only $r\geq0$ contributes, giving $\sum_{r\geq0}p^{-rs}$.
+Its additive volume is $(1-p^{-1})p^{-r}$, which gives the second normalization.
+At infinity, splitting into two half-lines and substituting $u=\pi x^2$ gives
+\[
+ 2\int_0^\infty e^{-\pi x^2}x^{s-1}\,dx
+ =\pi^{-s/2}\int_0^\infty e^{-u}u^{s/2-1}\,du.
+\]
+The endpoint at zero requires exactly $\operatorname{Re}s>0$.
+\end{proof}
+
+For $\phi=e^{-\pi x_\infty^2}\otimes\bigotimes_p\mathbf1_{\mathbb Z_p}$,
+Tate's adelic integral is
+\[
+ Z(\phi,s)=\int_{\mathbb A^\times}\phi(x)|x|_{\mathbb A}^s\,d^\times x,
+ \qquad |x|_{\mathbb A}=|x_\infty|\prod_p|x_p|_p.
+\]
+Absolute convergence holds for $\operatorname{Re}s>1$.  Restricted-product
+integration and Proposition~\ref{syn-arith:local-tate} give
+\[
+ Z(\phi,s)=\Gamma_{\mathbb R}(s)\prod_p(1-p^{-s})^{-1}
+          =\Gamma_{\mathbb R}(s)\zeta(s)=:\Lambda(s).
+\]
+These conventions agree with Tate's local and global calculation
+\cite[\S\S2.2--2.5, pp.~316--321; \S4.4, Main Theorem~4.4.1, p.~339]{syn-arith:Tate}.
+
+\begin{theorem}[Continuation from the theta integral]
+\label{syn-arith:theta}
+The function $\Lambda$ extends meromorphically to $\mathbb C$,
+with residues $-1$ at $0$ and $1$ at $1$.  It satisfies
+$\Lambda(s)=\Lambda(1-s)$.  Consequently
+\[
+ \xi(s)=\tfrac12s(s-1)\Lambda(s)
+\]
+is entire and satisfies $\xi(s)=\xi(1-s)$.
+\end{theorem}
+\begin{proof}
+Let $\theta(t)=\sum_{n\in\mathbb Z}e^{-\pi n^2t}$ for $t>0$.
+Poisson summation for the Gaussian gives
+$\theta(t)=t^{-1/2}\theta(t^{-1})$.  Termwise integration in
+$\operatorname{Re}s>1$ gives
+\[
+ \Lambda(s)=\frac12\int_0^\infty(\theta(t)-1)t^{s/2-1}\,dt.
+\]
+Split at $1$, use the theta identity on $(0,1)$, and substitute $t=u^{-1}$.
+The result is
+\begin{equation}
+ \Lambda(s)=\frac1{s-1}-\frac1s+
+ \frac12\int_1^\infty(\theta(t)-1)
+       \left(t^{s/2-1}+t^{(1-s)/2-1}\right)dt.
+ \label{syn-arith:theta-continuation}
+\end{equation}
+The integral is entire because $\theta(t)-1$ decays exponentially.
+Both the rational terms and the integral are invariant under $s\mapsto1-s$.
+The residues and the assertion about $\xi$ follow.
+\end{proof}
+
+For a primitive Dirichlet character $\chi$ of conductor $q$, let
+$a\in\{0,1\}$ satisfy $\chi(-1)=(-1)^a$.  The corresponding scalar completion is
+\[
+ \Lambda(s,\chi)=(q/\pi)^{(s+a)/2}\Gamma((s+a)/2)L(s,\chi).
+\]
+Tate's functional equation gives
+$\Lambda(s,\chi)=\varepsilon(\chi)\Lambda(1-s,\overline\chi)$,
+where $\varepsilon(\chi)=i^{-a}q^{-1/2}\sum_{r\bmod q}\chi(r)e^{2\pi ir/q}$.
+Replacing a single Euler factor leaves the conductor and infinity factor unspecified.
+
+For a number field $K$ of signature $(r_1,r_2)$, discriminant $d_K$, class
+number $h_K$, regulator $R_K$, and number $w_K$ of roots of unity, the
+analytic class-number formula is
+\[
+ \operatorname*{Res}_{s=1}\zeta_K(s)
+ =\frac{2^{r_1}(2\pi)^{r_2}h_KR_K}{w_K\sqrt{|d_K|}}.
+\]
+It is the general residue calculation of Tate's global zeta integral
+\cite[\S4.4, pp.~338--339]{syn-arith:Tate}; the regulator of a rank-zero unit group
+is one.  The Minkowski lattice $\mathcal O_K\subset\mathbb R^{r_1}\times
+\mathbb C^{r_2}$ has covolume $2^{-r_2}\sqrt{|d_K|}$ for ordinary Lebesgue
+measure on each real and complex coordinate, and $\sqrt{|d_K|}$ when each
+complex measure is multiplied by two.  This follows by comparing the real
+embedding matrix determinant with the square root of the discriminant.
+Neither the logarithm of this covolume nor the zeta residue is a vector-space
+dimension.  Over $\mathbb Q$ the residue is one; the number two obtained
+by multiplying it by two is not a calculation of a conformal central charge.
+
+\subsection{Prime equilibrium states and the global trace threshold}
+\label{syn-arith:operators}
+
+On $\mathscr H_p=\ell^2(\mathbb N_0)$, let $S_pe_r=e_{r+1}$ and
+$\mathcal T_p=C^*(S_p)$.  Give $N_p$ its maximal domain
+\[
+ \mathcal D(N_p)=\left\{(a_r):\sum_{r\geq0}r^2(\log p)^2|a_r|^2<\infty\right\}.
+\]
+The diagonal operator is positive and self-adjoint.  Finite-support vectors form a core.
+The time evolution is $\alpha_{p,t}(a)=e^{itN_p}ae^{-itN_p}$.
+In particular, $\alpha_{p,t}(S_p)=p^{it}S_p$.
+For inverse temperature $\beta>0$, the Kubo--Martin--Schwinger (KMS)
+convention is $\varphi(ab)=\varphi(b\alpha_{i\beta}(a))$ on analytic elements.
+
+\begin{proposition}[Prime Gibbs state]
+\label{syn-arith:prime-kms}
+The operator $e^{-sN_p}$ is trace class exactly for $\operatorname{Re}s>0$.
+For every $\beta>0$, the unique KMS$_\beta$ state on $\mathcal T_p$ is
+\[
+ \varphi_{\beta,p}(a)=(1-p^{-\beta})\operatorname{Tr}(e^{-\beta N_p}a),
+ \qquad
+ \varphi_{\beta,p}(S_p^mS_p^{*n})=\delta_{mn}p^{-\beta m}.
+\]
+\end{proposition}
+\begin{proof}
+For $\operatorname{Re}s\geq0$, the singular values are $p^{-r\operatorname{Re}s}$.
+They are summable exactly in the stated half-plane.
+For $\operatorname{Re}s<0$ the diagonal exponential is unbounded.
+Writing $q=p^{-\beta}$, the density $(1-q)e^{-\beta N_p}$ has trace one.
+The monomials $S_p^mS_p^{*n}$ span a norm-dense algebra of entire analytic elements.
+The identity
+$e^{-\beta N_p}a=\alpha_{p,i\beta}(a)e^{-\beta N_p}$
+and trace cyclicity prove KMS on this algebra, hence on $\mathcal T_p$.
+Invariance annihilates every monomial with $m\ne n$.
+For the others, KMS gives
+\[
+ \varphi(S_p^mS_p^{*m})=p^{-\beta m}\varphi(S_p^{*m}S_p^m)=p^{-\beta m}.
+\]
+This determines a state uniquely by density.
+\end{proof}
+
+For finite prime sets $F$, take minimal $C^*$ tensor products
+$\mathcal T_F=\bigotimes_{p\in F}^{\min}\mathcal T_p$ with unit-insertion maps.
+Their norm inductive limit is $\mathcal T_{\mathrm{fin}}$.
+The Hilbert tensor product relative to $e_{p,0}$ identifies with
+$\ell^2(\mathbb N^\times)$ by
+\[
+ \bigotimes_pe_{p,r_p}\longmapsto e_{\prod_pp^{r_p}}.
+\]
+Every elementary tensor has finite support in $p$.
+On this space put
+\[
+ He_n=(\log n)e_n,\qquad
+ \mathcal D(H)=\left\{(a_n):\sum_{n\geq1}(\log n)^2|a_n|^2<\infty\right\}.
+\]
+
+\begin{theorem}[Global prime tensor system]
+\label{syn-arith:global-kms}
+For every $\beta>0$, the product state
+$\Phi_\beta=\bigotimes_p\varphi_{\beta,p}$ is the unique KMS$_\beta$ state
+on $\mathcal T_{\mathrm{fin}}$.  On the vacuum tensor representation,
+\begin{equation}
+ e^{-sH}\text{ is trace class}\quad\Longleftrightarrow\quad
+ \operatorname{Re}s>1,
+ \qquad \operatorname{Tr}e^{-sH}=\zeta(s).
+ \label{syn-arith:trace-threshold}
+\end{equation}
+For $\beta>1$, its Gibbs density is $\zeta(\beta)^{-1}e^{-\beta H}$.
+For $0<\beta\leq1$, the product state exists but has no normal extension
+to $\mathcal B(\ell^2(\mathbb N^\times))$.
+\end{theorem}
+\begin{proof}
+The local product states are compatible under unit insertion.
+On a finite tensor product, a monomial has frequency
+$\sum_p(m_p-n_p)\log p$.  Unique factorization makes this zero only when
+$m_p=n_p$ for every $p$.  KMS then forces its expectation to be
+$\prod_pp^{-\beta m_p}$.  This proves uniqueness at finite stages and at the limit.
+The singular-value sum for the global exponential is
+$\sum_{n\geq1}n^{-\operatorname{Re}s}$, proving
+\eqref{syn-arith:trace-threshold} and the Gibbs formula.
+
+For the last assertion, let
+$P_F=\prod_{p\in F}(1-S_pS_p^*)$ in the vacuum representation.
+It projects onto integers divisible by none of the primes in $F$.
+As $F$ increases, $P_F$ decreases strongly to the rank-one vacuum projection $P_1$.
+Its expectation is $\prod_{p\in F}(1-p^{-\beta})$, which tends to zero
+for $\beta\leq1$.  A normal extension would therefore give $\Phi_\beta(P_1)=0$.
+For $S_n=\prod_pS_p^{v_p(n)}$, normality also gives
+\[
+ \Phi_\beta(S_nP_1S_n^*)
+ =\lim_F n^{-\beta}\Phi_\beta(P_F)=0.
+\]
+These rank-one projections sum strongly to the identity.
+Countable additivity would give $\Phi_\beta(1)=0$, a contradiction.
+\end{proof}
+
+The full Bost--Connes algebra additionally contains commuting unitaries
+$e(r)$ for $r\in\mathbb Q/\mathbb Z$.  Its defining relations include
+\[
+\begin{gathered}
+ \mu_m\mu_n=\mu_{mn},\quad \mu_n^*\mu_n=1,\quad
+ \mu_m\mu_n^*=\mu_n^*\mu_m\quad((m,n)=1),\\
+ e(r)e(t)=e(r+t),\quad e(r)^*=e(-r),\quad e(0)=1,\\
+ e(r)\mu_n=\mu_ne(nr),\qquad
+ \mu_ne(r)\mu_n^*=\frac1n\sum_{n\delta=r}e(\delta).
+\end{gathered}
+\]
+The dynamics fixes $e(r)$ and sends $\mu_n$ to $n^{it}\mu_n$.
+Bost and Connes prove uniqueness of KMS$_\beta$ for $0<\beta\leq1$.
+Its von Neumann factor is of type $\mathrm{III}_1$; this statement concerns
+the full global system, not the prime Gibbs factor.
+For $\beta>1$, extreme states are indexed by
+$\gamma\in\operatorname{Gal}(\mathbb Q^{\mathrm{cycl}}/\mathbb Q)$
+\cite[Propositions~18, 21, 23--24, Theorem~25, and \S7]{syn-arith:BC}.
+They are the normalized Gibbs states in
+\[
+ \pi_\gamma(\mu_m)e_n=e_{mn},\qquad
+ \pi_\gamma(e(r))e_n=\gamma(e^{2\pi inr})e_n.
+\]
+All restrict to $\Phi_\beta$.  The additional phase observables distinguish them.
+
+\begin{proposition}[Modular normalization]
+\label{syn-arith:modular}
+In the GNS representation of the prime Gibbs state, or a full
+Bost--Connes Gibbs state with $\beta>1$, let $\Omega$ be the cyclic vector.
+On the analytic cyclic domain the modular operator and conjugation satisfy
+\[
+ \Delta^{it}(a\Omega)=\alpha_{-\beta t}(a)\Omega,
+ \qquad
+ \Delta(\mu_m\Omega)=m^{-\beta}\mu_m\Omega,
+ \qquad
+ J(\mu_m\Omega)=m^{\beta/2}\mu_m^*\Omega.
+\]
+For a prime system, $\mu_m$ means $S_p^r$ with $m=p^r$.
+\end{proposition}
+\begin{proof}
+For a faithful Gibbs density $D$, identify the GNS space with Hilbert--Schmidt
+operators, with $\Omega=D^{1/2}$ and left multiplication as representation.
+Then $\Delta(X)=DXD^{-1}$ on its maximal domain and $J(X)=X^*$.
+Since $D\mu_m=m^{-\beta}\mu_mD$, these formulas give the assertions.
+The von Neumann closures of the stated Gibbs representations are full operator algebras.
+Moreover
+\[
+ \|\mu_m\Omega\|^2=1,\qquad
+ \|\mu_m^*\Omega\|^2=m^{-\beta}.
+\]
+Thus the factor $m^{\beta/2}$ is forced by antiunitarity.
+The map $a\Omega\mapsto a^*\Omega$ is the Tomita operator
+$J\Delta^{1/2}$, before polar decomposition.
+\end{proof}
+
+\begin{remark}[The real Mellin transform has no heat-trace implication]
+\label{syn-arith:no-gaussian-operator}
+On $L^2(\mathbb R_+,dx/x)$, logarithmic coordinates identify dilation
+with translation on $L^2(\mathbb R,du)$.  Its self-adjoint generator is
+$P=-i\,d/du$ on $H^1(\mathbb R)$ and has spectrum $\mathbb R$.
+For real $\beta>0$, $e^{-\beta P}$ is unbounded, since its Fourier multiplier
+$e^{-\beta t}$ is unbounded as $t\to-\infty$.
+The Gaussian Mellin identity in Proposition~\ref{syn-arith:local-tate}
+therefore supplies neither this heat operator nor a trace-class gamma factor.
+The meromorphic continuation of $\Lambda$ leaves
+\eqref{syn-arith:trace-threshold} unchanged.
+\end{remark}
+
+\subsection{Valuation, prime support, and modified local vectors}
+\label{syn-arith:two-source}
+
+Let $\tau\geq0$ be real and set $a=p^{-\tau}$ and
+\[
+ \phi_{p,\tau}=\mathbf1_{\mathbb Z_p^\times}+a\mathbf1_{p\mathbb Z_p}
+              =e_0+(a-1)e_1,
+ \qquad e_j=\mathbf1_{p^j\mathbb Z_p}.
+\]
+The local Mellin and Fourier formulas are
+\begin{equation}
+ Z_p(\phi_{p,\tau},s)=1+\frac{ap^{-s}}{1-p^{-s}},\qquad
+ \widehat\phi_{p,\tau}=e_0+(a-1)p^{-1}e_{-1}.
+ \label{syn-arith:modified-tate}
+\end{equation}
+The first formula holds for $\operatorname{Re}s>0$.
+The second follows from $\widehat e_j=p^{-j}e_{-j}$.
+For $0<\operatorname{Re}s<1$ both integrals in
+\[
+ Z_p(\widehat\phi_{p,\tau},1-s)
+ =\frac{1-p^{-s}}{1-p^{s-1}}Z_p(\phi_{p,\tau},s)
+\]
+converge, and the identity extends meromorphically.
+Thus the local functional-equation factor is independent of $\tau$.
+The vector is Fourier invariant exactly when $\tau=0$.
+Its first-order defect is
+$\widehat\phi_{p,\tau}-\phi_{p,\tau}
+=\tau(\log p)(e_1-p^{-1}e_{-1})+O(\tau^2)$ in their finite-dimensional span.
+
+The unitary dilation on additive $L^2(\mathbb Q_p,dx_p)$ is
+$Uf(x)=p^{-1/2}f(px)$.  Indeed $dx=p\,d(px)$.
+For $u_j=p^{j/2}e_j$, one has $Uu_j=u_{j-1}$,
+$\mathcal Fu_j=u_{-j}$, and $\mathcal F U\mathcal F=U^{-1}$ on the even radial span of the $u_j$.
+This span is invariant under these operations. On the full additive $L^2$ space, the identity is $\mathcal F U\mathcal F^{-1}=U^{-1}$, since $\mathcal F^2f(x)=f(-x)$.
+It is generated by $\phi_{p,\tau}$ under $U,U^{-1},\mathcal F$:
+write $\phi=u_0+bu_1$, where $b=(a-1)p^{-1/2}$.
+Then $\phi-bU^{-1}\mathcal F\phi=(1-b^2)u_0$, and $|b|<1$.
+For $\tau>0$, the family $(\phi_{p,\tau})_p$ changes the basic vector at every prime.
+It is consequently not an elementary tensor in the algebraic restricted product
+defined by the vectors $e_0$.
+
+\begin{proposition}[Two commuting arithmetic energies]
+\label{syn-arith:two-energies}
+On $\ell^2(\mathbb N^\times)$ define the commuting diagonal self-adjoint operators
+\[
+ H_{\mathrm{val}}e_n=\log n\,e_n,\qquad
+ H_{\mathrm{supp}}e_n=\log\operatorname{rad}(n)\,e_n
+\]
+on their respective maximal square-summability domains.
+Here $\operatorname{rad}(n)=\prod_{p\mid n}p$ and $\operatorname{rad}(1)=1$.
+For complex $s,\tau$, the diagonal operator
+$e^{-sH_{\mathrm{val}}-\tau H_{\mathrm{supp}}}$ is trace class exactly when
+\[
+ \operatorname{Re}s>0,\qquad \operatorname{Re}(s+\tau)>1.
+\]
+In that domain its trace is
+\[
+ Z(s,\tau)=\sum_{n\geq1}n^{-s}\operatorname{rad}(n)^{-\tau}
+ =\prod_p\left(1+\frac{p^{-s-\tau}}{1-p^{-s}}\right).
+\]
+For a finite nonempty set of primes, only $\operatorname{Re}s>0$ is required.
+\end{proposition}
+\begin{proof}
+The absolute diagonal sum factors by unique factorization and Tonelli's theorem.
+At any fixed prime, repeated powers require $\operatorname{Re}s>0$.
+Under that condition the $p$th factor minus one is asymptotic to
+$p^{-\operatorname{Re}(s+\tau)}$.  The positive Euler product is finite exactly
+when the sum of these quantities over primes converges, namely when
+$\operatorname{Re}(s+\tau)>1$.
+The factorization of the complex series follows from absolute convergence.
+\end{proof}
+
+At one prime, put $q=p^{-s}$ for real $s>0$ and $a=p^{-\tau}>0$.
+The normalized valuation law has partition function
+$z_p=(1-q+aq)/(1-q)$.
+For $R=v_p(n)$ and $B=\mathbf1_{R>0}$,
+\[
+ \mathbb E(R)=\frac{aq}{(1-q)(1-q+aq)},\qquad
+ \mathbb E(B)=\frac{aq}{1-q+aq}.
+\]
+Differentiating $\log z_p$ multiplies these expectations by $\log p$.
+At $\tau=0$ the law is geometric and
+\[
+ \mathbb E(R)=\frac q{1-q},\quad \mathbb E(B)=q,\quad
+ \operatorname{Var}(R)=\frac q{(1-q)^2},\quad
+ \operatorname{Var}(B)=q(1-q),\quad \operatorname{Cov}(R,B)=q.
+\]
+Hence $-\partial_s\log Z(s,0)=-\zeta'(s)/\zeta(s)$ for real $s>1$,
+whereas $-\partial_\tau\log Z(s,0)=\sum_p(\log p)p^{-s}$.
+The latter counts prime support once and omits higher prime powers.
+The difference energy $H_{\mathrm{val}}-H_{\mathrm{supp}}$ is nonnegative.
+At $\tau=0$ its expectation is
+$\sum_p\sum_{r\geq2}(\log p)p^{-rs}$ for real $s>1$.
+Thus the prime-power current in the explicit formula is a valuation
+current, not a support current.
+
+\begin{proposition}[Finite residue laws]
+\label{syn-arith:residue-laws}
+Normalize $|x|_p^{s-1}\phi_{p,\tau}(x)dx_p$ on $\mathbb Z_p$, with
+real $s>0$ and $\tau\geq0$.  At $\tau=0$, its image in $\mathbb F_p$
+is uniform exactly when $s=1$.  At $s=1$, write this law as $\pi$.
+Then
+\[
+ \pi(0)=\frac a{p-1+a},\qquad
+ \pi(r)=\frac1{p-1+a}\quad(r\ne0).
+\]
+The function $\mu(r)=1-(p-1)\pi(r)$ is another probability law.
+On $L^2(\mathbb F_p)$, convolution by these laws satisfies
+\[
+ C_\mu+(p-1)C_\pi=pP_0,
+\]
+where $P_0$ projects onto constants.
+On every nontrivial additive character, the respective eigenvalues are
+\[
+ r_p(\tau)=\frac{a-1}{p-1+a},\qquad
+ d_p(\tau)=\frac{(p-1)(1-a)}{p-1+a}.
+\]
+Thus $C_\mu$ is positive semidefinite, while $C_\pi$ has negative eigenvalues
+when $\tau>0$.
+\end{proposition}
+\begin{proof}
+At $\tau=0$, the zero residue has mass $p^{-s}$.
+Each nonzero residue has mass $(1-p^{-s})/(p-1)$.
+These are equal precisely at $s=1$.
+At $s=1$, each residue has additive measure $1/p$, giving the displayed law.
+For $0\leq a\leq1$, all values of $\mu$ are nonnegative and their sum is one.
+For a nontrivial character $\chi$, $\sum_{r\ne0}\chi(r)=-1$.
+This gives both eigenvalues and proves the operator identity on a character basis.
+\end{proof}
+
+Writing the survival profile $q(r)=(p-1)\pi(r)$ as $\beta$ at zero and $B$
+elsewhere gives
+\[
+ B=\frac{p-1}{p-1+a}=Z_p(\phi_{p,\tau},1)^{-1},\qquad
+ \beta=aB,
+\]
+so its uniform mean is $(p-1)/p$ and its exceptional-to-background ratio is
+$a$.  These two requirements determine $B,\beta$ uniquely.
+The complementary law $1-q$ is the probability law $\mu$ above.
+
+Residue and valuation information fit into an elementary fibre product.
+Map $\mathbb F_p\to\{0,1\}$ by $r\mapsto\mathbf1_{r=0}$ and
+$\mathbb N_0\to\{0,1\}$ by $m\mapsto\mathbf1_{m>0}$.
+Then
+\[
+ \mathcal I_p=\mathbb F_p\times_{\{0,1\}}\mathbb N_0
+ = (\mathbb F_p^\times\times\{0\})\sqcup(\{0\}\times\mathbb N_{\geq1})
+\]
+receives the compatible pair $(n\bmod p,v_p(n))$ for every positive integer
+$n$, with the usual universal property of a fibre product of sets.
+For $r\geq1$ define
+\[
+ \mathcal J_{p,r}=\{(a,m):a\in\mathbb Z/p^r\mathbb Z,\quad
+                  m=\min(v_p(a),r)\}.
+\]
+Truncated valuation is well defined on the residue class, with value $r$
+at the zero class.  The projection to $a$ is a bijection and the transition
+maps are reduction together with $m\mapsto\min(m,r)$.
+Consequently $\varprojlim_r\mathcal J_{p,r}=\mathbb Z_p$; at $a=0$ the
+compatible valuations tend to $+\infty$.
+
+For finite prime sets $S$, the algebra generated by the independent local
+operators $C_{\pi_{p,\tau}}$ is
+$\bigotimes_{p\in S}(\mathbb CP_{0,p}\oplus\mathbb C(1-P_{0,p}))$.
+Its dimension is $2^{|S|}$.
+On a product character with support $J\subseteq S$, the tensor operator has eigenvalue
+\[
+ \prod_{p\in J}r_p(\tau)
+ =(-\tau)^{|J|}\prod_{p\in J}\frac{\log p}{p}
+   +O_J(\tau^{|J|+1}).
+\]
+
+\begin{proposition}[Overlap of normalized local vectors]
+\label{syn-arith:fidelity}
+For real $\tau\geq0$, normalize $\phi_{p,\tau}$ in additive $L^2(\mathbb Z_p)$.
+Its overlap with $\mathbf1_{\mathbb Z_p}$ is
+\[
+ c_p(\tau)=\frac{p-1+p^{-\tau}}
+                 {\sqrt{p(p-1+p^{-2\tau})}}.
+\]
+For fixed $\tau>0$ there is $C_\tau>0$ such that
+$\prod_{p\leq x}c_p(\tau)=C_\tau(\log x)^{-1/2}(1+o(1))$.
+For fixed $t\geq0$,
+\[
+ \lim_{x\to\infty}\prod_{p\leq x}c_p(t/\log x)
+ =\exp\left(-\frac12\int_0^1\frac{(1-e^{-tu})^2}{u}\,du\right).
+\]
+\end{proposition}
+\begin{proof}
+Integrating the vector and its square gives the formula for $c_p$.
+For $a\in[0,1]$, expansion of the two logarithms gives, uniformly in $a$,
+\[
+ -\log\frac{p-1+a}{\sqrt{p(p-1+a^2)}}
+ =\frac{(1-a)^2}{2p}+O\left(\frac{(1-a)^2}{p^2}\right).
+\]
+For fixed $\tau>0$, replacing $(1-p^{-\tau})^2$ by $1$ changes the prime sum
+by a convergent series.  Mertens' theorem
+$\sum_{p\leq x}p^{-1}=\log\log x+B+o(1)$ proves the first asymptotic
+\cite{syn-arith:Mertens}.
+
+For $a=e^{-t\log p/\log x}$, the error sum tends to zero by dominated convergence.
+Partial summation of Mertens' theorem on $[x^\delta,x]$ gives
+\[
+ \sum_{x^\delta<p\leq x}\frac{f(\log p/\log x)}p
+ \longrightarrow\int_\delta^1\frac{f(u)}u\,du.
+\]
+Here $f(u)=(1-e^{-tu})^2=O_t(u^2)$.
+The bound $\sum_{p\leq y}(\log p)^2/p=O((\log y)^2)$ makes the omitted range
+$p\leq x^\delta$ contribute $O_t(\delta^2)$.
+Letting $\delta\downarrow0$ proves the asserted limit.
+\end{proof}
+
+The integral in Proposition~\ref{syn-arith:fidelity}, denoted $I(t)$, satisfies
+\[
+ I(t)=\frac{t^2}{2}-\frac{t^3}{3}+\frac{7t^4}{48}+O(t^5).
+\]
+For $t>0$, differentiation or integration of $(1-e^{-v})/v$ gives
+\[
+ I(t)=\gamma+\log t-\log2+2E_1(t)-E_1(2t),
+ \qquad E_1(t)=\int_t^\infty e^{-v}\frac{dv}{v}.
+\]
+In particular the limiting overlap is $1-t^2/4+O(t^3)$ near zero
+and is asymptotic to $e^{-(\gamma-\log2)/2}t^{-1/2}$ at infinity.
+
+\subsection{Finite arithmetic configurations and sieve quotients}
+\label{syn-arith:configurations}
+
+Fix distinct integers $\mathcal H=\{h_1,\ldots,h_k\}$ with $k\geq1$.
+For a positive integer $q$, define
+\[
+ G_q(\mathcal H)=\{a\in\mathbb Z/q\mathbb Z:
+                         a+h_i\in(\mathbb Z/q\mathbb Z)^\times\text{ for all }i\}.
+\]
+The Chinese-remainder map restricts, for $(q,r)=1$, to
+\[
+ G_{qr}(\mathcal H)\xrightarrow{\sim}G_q(\mathcal H)\times G_r(\mathcal H),
+ \qquad [a]\longmapsto([a]_q,[a]_r).
+\]
+Its two iterates for three coprime moduli agree because both record the three residues.
+For primes, put $\nu_p=|\{-h_i\bmod p\}|$.
+For squarefree $q$, this gives $|G_q(\mathcal H)|=\prod_{p\mid q}(p-\nu_p)$.
+
+On $\mathscr K_S=L^2(\prod_{p\in S}\mathbb F_p)$ use uniform probability measure.
+Multiplication by
+$Q_{\mathcal H,p}(a)=\prod_i(1-\mathbf1_{a=-h_i})$
+is an orthogonal projection.
+The unit vector $1$ defines the positive functional
+$\omega_S(A)=\langle1,A1\rangle$ and
+\[
+ \omega_S\left(\bigotimes_{p\in S}Q_{\mathcal H,p}\right)
+ =\prod_{p\in S}(1-\nu_p/p).
+\]
+This is a factorization of finite congruence conditions, with a specified positive measure.
+
+\begin{theorem}[Singular product and explicit tail]
+\label{syn-arith:singular-series}
+The set $\mathcal H$ is called admissible when $\nu_p<p$ for every prime.
+For an admissible set,
+\[
+ \mathfrak S(\mathcal H)=\prod_p\sigma_p(\mathcal H),\qquad
+ \sigma_p(\mathcal H)=\frac{1-\nu_p/p}{(1-1/p)^k}
+\]
+converges to a finite positive number.
+Let $\Delta=\prod_{i<j}|h_i-h_j|$, with empty product $1$.
+For every integer $P>2k$ exceeding all prime divisors of $\Delta$,
+\[
+ e^{-k^2/P}\prod_{p\leq P}\sigma_p
+ \leq\mathfrak S(\mathcal H)\leq\prod_{p\leq P}\sigma_p.
+\]
+\end{theorem}
+\begin{proof}
+For $p\nmid\Delta$ the residues are distinct, so $\nu_p=k$.
+For $p>k$, the convergent logarithmic expansion gives
+\[
+ \log\sigma_p=-\sum_{m\geq2}\frac{k^m-k}{mp^m}
+             =-\frac{k(k-1)}{2p^2}+O_k(p^{-3}).
+\]
+Thus $\sum_p|\log\sigma_p|$ converges after the finitely many exceptional terms.
+Admissibility makes those terms positive as well.
+For $p>2k$, the absolute logarithm is at most
+\[
+ \frac12\sum_{m\geq2}(k/p)^m
+ =\frac{k^2}{2p^2(1-k/p)}\leq\frac{k^2}{p^2}.
+\]
+Finally $\sum_{p>P}p^{-2}\leq\sum_{n>P}n^{-2}\leq P^{-1}$.
+Exponentiation proves the tail inequalities.
+\end{proof}
+
+For $\mathcal H=\{0,2\}$, the factor at $2$ is $2$, and the other factors give
+\[
+ \mathfrak S(\{0,2\})=2\prod_{p>2}\left(1-\frac1{(p-1)^2}\right)>0.
+\]
+At $p=3$, the pair $\{0,6\}$ instead has $\nu_3=1$.
+Thus the same one-prime Euler factor and the same number of shifts do not determine
+the configuration correlation.
+Positivity of either singular product is a local statement and does not prove
+infinitely many prime pairs.
+
+Choose squarefree $W$ divisible by every prime factor of $\Delta$.
+Admissibility permits $v_0\in G_W(\mathcal H)$.
+Let
+\[
+ I_N=\{n\in\mathbb Z:N\leq n<2N,\ n\equiv v_0\pmod W\}
+\]
+be nonempty, with $n+h_i\geq2$ for all relevant $n,i$.
+Choose a finite set $\mathcal D\subset\mathbb N^k$ containing $(1,\ldots,1)$,
+such that $d_1\cdots d_k$ is squarefree and coprime to $W$ for every $\boldsymbol d$.
+Define the linear map and the prime-count multiplier
+\[
+ (T\lambda)(n)=\sum_{d_i\mid n+h_i\,\forall i}\lambda_{\boldsymbol d},\qquad
+ R(n)=\sum_i\mathbf1_{\mathbb P}(n+h_i),\qquad
+ (M_Rf)(n)=R(n)f(n).
+\]
+Here $T:\mathbb C^{\mathcal D}\to\mathbb C^{I_N}$ uses standard Euclidean inner products.
+Set $A=T^*T$, $B=T^*M_RT$, and $V=(\ker T)^\perp$.
+
+\begin{proposition}[Finite divisor-sum Rayleigh principle]
+\label{syn-arith:finite-rayleigh}
+The restrictions $A_V,B_V$ preserve $V$, and $A_V$ is positive definite.
+Moreover
+\begin{equation}
+ \max_{T\lambda\ne0}\frac{\langle\lambda,B\lambda\rangle}
+                           {\langle\lambda,A\lambda\rangle}
+ =\lambda_{\max}(A_V^{-1/2}B_VA_V^{-1/2})
+ \leq\max_{n\in I_N}R(n)\leq k.
+ \label{syn-arith:rayleigh}
+\end{equation}
+If this quotient exceeds an integer $m\geq0$, some $n\in I_N$ has at least
+$m+1$ prime translates.
+For $q_i=\operatorname{lcm}(d_i,e_i)$, the entry $A_{\boldsymbol d,\boldsymbol e}$
+is zero unless the $q_i$ are pairwise coprime.
+In the remaining case,
+\[
+ \left|A_{\boldsymbol d,\boldsymbol e}-\frac{N}{W\prod_iq_i}\right|\leq1.
+\]
+\end{proposition}
+\begin{proof}
+If $p\mid q_i,q_j$ and the two congruences are satisfied, then $p\mid h_i-h_j$.
+This forces $p\mid W$, contrary to the hypotheses on $\mathcal D$.
+Otherwise Chinese remainders give one class modulo $W\prod_iq_i$.
+Counting its intersection with $N$ consecutive integers gives the stated error.
+
+Both $A$ and $B$ annihilate $\ker T$ and preserve its orthogonal complement.
+For nonzero $v\in V$, $\langle v,Av\rangle=\|Tv\|^2>0$.
+The substitution $y=A_V^{1/2}v$ proves the maximum formula by Rayleigh--Ritz.
+The quotient is also
+\[
+ \frac{\sum_{n\in I_N}R(n)|(T\lambda)(n)|^2}
+      {\sum_{n\in I_N}|(T\lambda)(n)|^2},
+\]
+a weighted average of integer prime counts.
+This proves both bounds and the strict-threshold consequence.
+\end{proof}
+
+\begin{example}[An exact finite quotient]
+Take $\mathcal H=\{0,2\}$, $W=6$, $v_0=5$, $N=20$, and
+$\mathcal D=\{(1,1),(5,1),(1,5)\}$.
+The interval carrier is $I_N=\{23,29,35\}$, with prime counts $(1,2,1)$.
+In the indicated orders,
+\[
+ T=\begin{pmatrix}1&0&1\\1&0&0\\1&1&0\end{pmatrix},\quad
+ A=\begin{pmatrix}3&1&1\\1&1&0\\1&0&1\end{pmatrix},\quad
+ B=\begin{pmatrix}4&1&1\\1&1&0\\1&0&1\end{pmatrix}.
+\]
+For $\lambda=(1,-1,-1)$, $T\lambda=(0,1,0)$ and the quotient is $2$.
+The generalized eigenvalues are $1,1,2$.
+This calculation detects the pair $29,31$ inside the chosen finite carrier.
+\end{example}
+
+\subsection{The continuum sieve operator and its two-variable eigenfunction}
+\label{syn-arith:continuum-sieve}
+
+Let $\Delta_k=\{t_i\geq0:\sum_it_i\leq1\}$ with Lebesgue measure.
+For $t_{\widehat i}\in\Delta_{k-1}$ put
+$\ell_i(t_{\widehat i})=1-\sum_{j\ne i}t_j$ and define
+\[
+ T_i:L^2(\Delta_k)\longrightarrow L^2(\Delta_{k-1}),\qquad
+ T_iF(t_{\widehat i})=\int_0^{\ell_i(t_{\widehat i})}F(t)\,dt_i.
+\]
+Cauchy--Schwarz gives $\|T_i\|\leq1$, and
+$T_i^*g(t)=g(t_{\widehat i})$.
+Hence $K_k=\sum_iT_i^*T_i$ is bounded, positive, and self-adjoint, with
+\[
+ M_k:=\sup_{F\ne0}\frac{\sum_i\|T_iF\|^2}{\|F\|^2}
+     =\|K_k\|\leq k.
+\]
+For $k\geq2$ it is not compact.
+Indeed, the subspace of functions constant in $t_i$ identifies with
+$L^2(\Delta_{k-1},\ell_i\,dt_{\widehat i})$.
+There $T_i^*T_i$ acts by multiplication by $\ell_i$ and is not compact.
+Choose an orthonormal sequence supported where $\ell_i\geq1/2$.
+Its $K_k$ quadratic values are at least $1/2$, contradicting compactness.
+
+\begin{theorem}[The two-variable maximum]
+\label{syn-arith:M2}
+There is a unique $\lambda>1$ satisfying
+\[
+ \log\frac\lambda{\lambda-1}=2-\frac1\lambda.
+\]
+It equals $M_2$.  More explicitly, if $W_0$ is the positive real inverse of
+$w\mapsto we^w$, then
+\[
+ M_2=\frac1{1-W_0(e^{-1})}=1.385933275998\ldots.
+\]
+The maximum is attained at $F(x,y)=f(x)+f(y)$, where
+\[
+ f(x)=\frac1{\lambda-1+x}
+       +\frac1{2\lambda-1}\log\frac{\lambda-x}{\lambda-1+x},
+       \qquad 0\leq x\leq1.
+\]
+\end{theorem}
+\begin{proof}
+The difference between the two sides of the scalar equation decreases
+strictly from $+\infty$ to $-2$ as $\lambda$ increases from $1$ to infinity.
+Its derivative is $-1/(\lambda(\lambda-1))-1/\lambda^2$.
+The equation is equivalent to $we^w=e^{-1}$ with $w=1-1/\lambda$.
+It also gives
+\[
+ \int_0^{1-x}f(y)\,dy=(\lambda-1+x)f(x).
+\]
+This identity follows by integrating the logarithm explicitly.
+The function $f$ is positive on $[0,1/2]$ directly from its formula.
+For $1/2<x<1$, the displayed integral identity makes $f(x)>0$ because $0<1-x<1/2$. The scalar equation gives $f(1)=0$. Thus $F(x,y)=f(x)+f(y)$ is strictly positive on $\Delta_2$: at least one of $x,y$ is less than one.
+It follows that
+\[
+ K_2F(x,y)=\int_0^{1-y}F(u,y)\,du+
+          \int_0^{1-x}F(x,v)\,dv=\lambda F(x,y).
+\]
+To prove maximality, write $h=Fu$.  Expanding the square on every coordinate fibre gives
+\[
+ \lambda\|h\|^2-\langle h,K_2h\rangle
+ =\frac12\sum_{i=1}^2\int_{\Delta_1}
+   \int_0^{\ell_i}\int_0^{\ell_i}
+   F(t_{\widehat i},r)F(t_{\widehat i},s)
+   |u(t_{\widehat i},r)-u(t_{\widehat i},s)|^2\,dr\,ds\,dt_{\widehat i}.
+\]
+The continuous positive function $F$ is bounded away from zero on the compact simplex.
+The identity first holds for bounded $h$ and extends to $L^2$ by approximation.
+Its right side is nonnegative, while $h=F$ gives equality.
+This proves the maximum, agreeing with
+\cite[Corollaries~6.2--6.3]{syn-arith:Polymath}.
+\end{proof}
+
+Maynard's sieve uses a separate distribution estimate to pass from $M_k$ to primes
+\cite[Proposition~4.2]{syn-arith:Maynard}.
+For $0<\vartheta<1$, suppose that for every $A_0>0$,
+\[
+ \sum_{q\leq x^\vartheta}\max_{(a,q)=1}
+ \left|\sum_{\substack{x\leq n<2x\\n\equiv a\ (q)}}\Lambda_{\mathrm{vM}}(n)
+ -\frac1{\varphi(q)}\sum_{\substack{x\leq n<2x\\(n,q)=1}}
+            \Lambda_{\mathrm{vM}}(n)\right|
+ \ll_{A_0,\vartheta}x(\log x)^{-A_0}.
+\]
+Here $\Lambda_{\mathrm{vM}}(p^r)=\log p$, and it vanishes otherwise.
+If $M_k>2m/\vartheta$, every admissible $k$-tuple has infinitely many translates
+containing at least $m+1$ primes
+\cite[Theorem~3.8]{syn-arith:Polymath}.
+The theorem about this asymptotic transfer does not follow from finite Rayleigh--Ritz alone.
+
+The coordinate integrations are not commuting observables.  For $k=2$ write
+$K^{(i)}=T_i^*T_i$, with $K^{(1)}$ integrating the first coordinate.
+Direct integration gives
+\[
+ [K^{(1)},K^{(2)}]1=\frac{x^2-y^2}{2},\qquad
+ \|[K^{(1)},K^{(2)}]1\|^2=\frac1{72},\qquad \|1\|^2=\frac12.
+\]
+Thus $\|[K^{(1)},K^{(2)}]\|\geq1/6$.
+The norm calculation uses
+$\int_{\Delta_2}x^ay^b\,dx\,dy=a!b!/(a+b+2)!$.
+A finite-dimensional compression provides a lower bound, but an upper bound
+requires control of its orthogonal complement.  Indeed, for a bounded
+self-adjoint block operator
+\[
+ K=\begin{pmatrix}A&B\\B^*&C\end{pmatrix},\quad C\leq cI,\quad L>c,
+\]
+completion of the square proves
+\[
+ K\leq LI\quad\Longleftrightarrow\quad
+ LI-A-B(LI-C)^{-1}B^*\geq0.
+\]
+Since $(LI-C)^{-1}\leq(L-c)^{-1}I$, the stronger inequality
+$LI-A-BB^*/(L-c)\geq0$ suffices.  This statement separates the finite
+matrix calculation from the required bound on $C$.
+
+\subsection{Hecke characters, oscillator traces, and integral lattices}
+\label{syn-arith:hecke}
+Let $G=\mathrm{GL}_2(\mathbb Q_p)$, $K=\mathrm{GL}_2(\mathbb Z_p)$,
+and give $G$ Haar measure with $\operatorname{vol}(K)=1$.
+The spherical Hecke algebra $\mathcal H_p=C_c(K\backslash G/K,\mathbb C)$
+uses convolution with this measure.  Write
+$T=\mathbf1_{K\operatorname{diag}(p,1)K}$ and
+$D=\mathbf1_{K\operatorname{diag}(p,p)K}$.
+The normalized Satake isomorphism is
+\[
+ \mathcal H_p\simeq\mathbb C[z_1^{\pm1},z_2^{\pm1}]^{S_2},\qquad
+ T\longmapsto p^{1/2}(z_1+z_2),\qquad D\longmapsto z_1z_2.
+\]
+The normalization is that of the modulus-half-power Satake transform
+\cite[\S3, especially Proposition~3.6 and formula~(3.13)]{syn-arith:Gross}.
+Working over $\mathbb C$ makes the chosen positive square root of $p$ explicit;
+it is not an integral isomorphism with these formulas over $\mathbb Z$.
+
+Define $H_r\in\mathcal H_p$ by $H_0=1$, $H_1=T$ and
+$H_r=TH_{r-1}-pDH_{r-2}$ for $r\geq2$.
+Then, as formal series,
+\[
+ \sum_{r\geq0}H_rX^r=(1-TX+pDX^2)^{-1}.
+\]
+At a Satake character $(z_1,z_2)$, put
+$\alpha=p^{1/2}z_1$, $\beta=p^{1/2}z_2$.  The coefficient is
+\[
+ h_r(\alpha,\beta)=\sum_{j=0}^r\alpha^{r-j}\beta^j,
+ \qquad \sum_{r\geq0}h_rX^r=\frac1{(1-\alpha X)(1-\beta X)}.
+\]
+These identities follow by multiplying two geometric series.
+The recursively normalized $H_r$ need not be a single double-coset indicator:
+$T*T=\mathbf1_{K\operatorname{diag}(p^2,1)K}+(p+1)D$, so that
+$H_2=\mathbf1_{K\operatorname{diag}(p^2,1)K}+D$.
+The coefficient $p+1$ counts index-$p$ sublattices in a rank-two lattice.
+
+The normalized Satake parameters of a unitary representation are the $z_i$,
+not the $\alpha,\beta$.  Temperedness means $|z_1|=|z_2|=1$.
+For a normalized primitive holomorphic cuspidal eigenform of integer weight $w\geq2$, level $N$, and Dirichlet character $\chi$, the arithmetic normalization instead has $\alpha\beta=p^{w-1}\chi(p)$. At a prime $p\nmid N$, Deligne's bound is
+$|\alpha|=|\beta|=p^{(w-1)/2}$ \cite[Theorem~8.2, p.~302]{syn-arith:Deligne}.
+These normalizations cannot be interchanged with weight-zero Maass parameters.
+
+The spherical probability measure with trivial central character can be
+computed without an averaging assertion.  Let $A$ be the adjacency operator
+of the $(p+1)$-regular tree and let $o$ be a vertex.
+Removing its incoming edge gives a rooted branch with $p$ forward branches.
+Schur complementation of $z-A$, for $\operatorname{Im}z>0$, gives the branch
+and root resolvents
+\[
+ g(z)=\frac1{z-pg(z)}
+     =\frac{z-\sqrt{z^2-4p}}{2p},\qquad
+ G(z)=\langle\delta_o,(z-A)^{-1}\delta_o\rangle
+     =\frac1{z-(p+1)g(z)}.
+\]
+The square root is the branch asymptotic to $z$ at infinity.
+Taking $-\pi^{-1}\operatorname{Im}G(x+i0)$ gives the spectral density
+\[
+ \frac{(p+1)\sqrt{4p-x^2}}{2\pi((p+1)^2-x^2)}\,dx,
+ \qquad |x|<2\sqrt p.
+\]
+In the variable $x=2\sqrt p\cos\theta$, it is
+\[
+ d\nu_p(\theta)=\frac2\pi
+ \frac{p(p+1)\sin^2\theta}{p^2+1-2p\cos2\theta}\,d\theta,
+ \qquad 0<\theta<\pi.
+\]
+The tree of homothety classes of rank-two $\mathbb Z_p$-lattices realizes
+the spherical operator $T$ with trivial central character as $A$, so this
+is its vacuum Plancherel measure.
+It is a positive probability measure because it is a spectral measure of
+the unit vector $\delta_o$, not because integration of arbitrary unitaries
+against it is a projection.
+
+\begin{proposition}[The one-mode character and the full Fock character]
+\label{syn-arith:fock}
+Let $\mathcal F_p$ be the rank-two bosonic Fock space with orthonormal occupation
+basis indexed by nonnegative integers $n_{r,+},n_{r,-}$ of finite support,
+$r\geq1$.  On their maximal diagonal domains define
+\[
+ E_p=(\log p)\sum_{r\geq1}r(n_{r,+}+n_{r,-}),\qquad
+ Q_p=\sum_{r\geq1}(n_{r,+}-n_{r,-}).
+\]
+For $\theta\in\mathbb R$ and $\operatorname{Re}s>0$,
+\[
+ \operatorname{Tr}_{\mathcal F_p}(e^{-sE_p}e^{i\theta Q_p})
+ =\prod_{r\geq1}\frac1{(1-e^{i\theta}p^{-rs})(1-e^{-i\theta}p^{-rs})}.
+\]
+On the subspace with $n_{r,\pm}=0$ for $r>1$, the trace is just its $r=1$ factor.
+\end{proposition}
+\begin{proof}
+The absolute trace is bounded by
+$\prod_{r\geq1}(1-p^{-r\operatorname{Re}s})^{-2}$, which converges since
+$\sum_rp^{-r\operatorname{Re}s}<\infty$.  Summation over the independent
+occupation numbers gives the product.  Restricting the allowed modes deletes
+the corresponding factors, not their multiplicities by a regularization.
+\end{proof}
+
+For rank one, taking the restricted vacuum tensor product over primes gives
+the full character $\prod_{r\geq1}\zeta(rs)$ on $\operatorname{Re}s>1$.
+Its coefficient at $n=\prod_pp^{a_p}$ is
+$\prod_p\mathfrak p(a_p)$, where $\mathfrak p(a)$ is the number of partitions
+of $a$.  The one-mode subspace instead has coefficient one and character
+$\zeta(s)$.  Hence the partition function of the prime Toeplitz system is a
+one-mode character, not the character of the full Heisenberg vacuum module.
+Two Heisenberg currents have Sugawara central charge two, but this fact does
+not identify that central charge with any residue or pole order of $\zeta$.
+
+There are corresponding operator obstructions.  If $L_m$ are Virasoro modes,
+replacing all of them by $aL_m$ multiplies the linear term in their commutator
+by $a^2$, whereas the required Virasoro relation multiplies it by $a$.
+For $a\ne0,1$ this is not a conformal rescaling.
+On the algebraic restricted tensor product over primes, $\sum_pL_m^{(p)}$
+acts on finite-support states for $m\geq-1$, since those modes annihilate each
+vacuum.  For $m\leq-2$ its value on the vacuum has infinitely many orthogonal
+nonzero components of fixed positive norm.  It belongs neither to that
+algebraic tensor product nor to its vacuum Hilbert completion.
+An arithmetic energy weighted by $\log p$ is therefore not itself a global
+Virasoro action.
+
+Nor is a value at zero supplied by the prime zeta function
+$P(s)=\sum_pp^{-s}$, initially defined for $\operatorname{Re}s>1$.
+M\"obius inversion of $\log\zeta(s)=\sum_{r\geq1}P(rs)/r$ gives
+\[
+ P(s)=\sum_{r\geq1}\frac{\mu(r)}r\log\zeta(rs).
+\]
+The tail is locally normally convergent in $\operatorname{Re}s>0$ once
+finitely many terms have been removed.  For each prime $q$, the term $r=q$
+has a logarithmic singularity at $s=1/q$ with nonzero coefficient, and
+all the other terms are locally holomorphic there after choosing logarithm
+branches.  These singularities accumulate at zero, so this continuation
+has no holomorphic germ there.  The value $\zeta(0)=-1/2$ belongs to a
+different Dirichlet series and cannot sum a central charge indexed by primes.
+
+\begin{example}[Adams operations and Hecke operations are different]
+On $\mathbb Z[x_1,x_2,\ldots]$ define $\psi_n(x_r)=x_{nr}$ multiplicatively.
+Then $\psi_m\psi_n=\psi_{mn}$, whence
+$\psi_{p^2}-\psi_p^2+p\,\mathrm{id}=p\,\mathrm{id}\ne0$.
+The $\mathrm{GL}_2$ recurrence with trivial diamond operator is not satisfied.
+Moreover $\psi_2(x_1)-x_1^2=x_2-x_1^2$ is nonzero modulo two.
+Thus these commuting endomorphisms are not Frobenius lifts on this integral
+lattice.  In a torsion-free $\lambda$-ring its Adams operations must satisfy
+$\psi_p(a)\equiv a^p\pmod p$ \cite{syn-arith:Wilkerson}.
+
+This does not obstruct $\lambda$-rings from encoding Satake data.
+On $\mathbb Z[z_1^{\pm1},z_2^{\pm1}]^{S_2}$ use the standard $\lambda$-ring
+of virtual representations of a rank-two torus, so
+$\psi_n(z_i)=z_i^n$.  Its complete symmetric functions are precisely $h_r$.
+In particular, for $x=z_1+z_2$,
+$\psi_2(x)=z_1^2+z_2^2$, whereas $h_2=z_1^2+z_1z_2+z_2^2$.
+The distinction is between Adams and complete symmetric operations, not
+between $\lambda$-rings and Hecke theory.
+\end{example}
+
+For the full rational one-prime Fock algebra $\mathbb Q[x_1,x_2,\ldots]$,
+the symmetric-function lattice gives an integral form adapted to these
+Adams operations.  Define $h_j$ by
+\[
+ \sum_{j\geq0}h_jt^j=\exp\left(\sum_{r\geq1}\frac{x_rt^r}{r}\right).
+\]
+Then $\mathbb Z[h_1,h_2,\ldots]$ is the ring of symmetric functions,
+embedded in the rational Fock algebra, and $x_r$ represents the $r$th
+power sum.  Evaluating in finitely many variables identifies
+$\psi_n$ with raising each variable to its $n$th power; the congruence
+$\psi_p(f)\equiv f^p\pmod p$ follows in characteristic $p$ and passes to
+the stable symmetric-function ring.  Thus the integral-lattice obstruction
+above is specific to $\mathbb Z[x_1,x_2,\ldots]$.  This alternative lattice
+still constructs neither an arithmetic residue coupling nor a global
+categorical realization.
+
+There is a genuine one-particle Hecke action different from the Adams action.
+For finite-support coefficient sequences $c(m)$, $m\geq1$, and fixed weight
+$w\in\mathbb Z$, set
+\[
+ (\mathsf T_nc)(m)=\sum_{d\mid(n,m)}d^{w-1}c(nm/d^2).
+\]
+These operators preserve finite support.  On the basis $q^m$,
+$\mathsf T_p=U_p+p^{w-1}V_p$, where $U_pq^m=q^{m/p}$ if $p\mid m$ and
+zero otherwise, and $V_pq^m=q^{pm}$.
+The identities $U_pV_p=1$ and
+$V_pU_p=\mathbf1_{p\mid m}$ give
+$\mathsf T_p^2=\mathsf T_{p^2}+p^{w-1}$; operators for distinct primes
+commute and the divisor formula gives
+$\mathsf T_m\mathsf T_n=\mathsf T_{mn}$ when $(m,n)=1$.
+This defines a Hecke module, not a vertex-algebra endomorphism of the full
+Fock algebra.  It mixes conformal degrees and specifies no products of
+multi-particle states.
+
+An average of unitaries is another operation that requires care.
+For a probability measure $\nu$ on $[0,\pi]$ and a diagonal integer charge $Q$,
+$A=\int e^{i\theta Q}\,d\nu(\theta)$ is a contraction.
+On a charge-$m$ vector it acts by $\widehat\nu(m)=\int e^{im\theta}d\nu$.
+It is a projection exactly when all these eigenvalues on the chosen charges
+are zero or one.  A probability density positive on an interval generally
+does not have this property.  In particular its charge-one eigenvalue has
+positive imaginary part if it is positive on $(0,\pi)$.
+Integration against a spherical Plancherel density is not automatically a
+spectral projection.
+
+\begin{example}[Finite charges and binary digits]
+Retaining only exponents zero and one at each prime gives
+\[
+ \prod_p(1+p^{-s})=\frac{\zeta(s)}{\zeta(2s)},\qquad \operatorname{Re}s>1.
+\]
+Alternatively every nonnegative exponent has a unique binary expansion, giving
+\[
+ (1-q)^{-1}=\prod_{j\geq0}(1+q^{2^j}),\qquad |q|<1.
+\]
+The finite product is $(1-q^{2^{J+1}})/(1-q)$, which proves the limit.
+This yields a graded vector-space identification between $\mathbb C[u]$
+and a finite-support tensor product of two-dimensional spaces of weights $2^j$.
+It is not an algebra identification with a tensor product of dual-number
+algebras: the element in the lowest positive weight squares to zero there,
+whereas $u^2\ne0$ in $\mathbb C[u]$.
+\end{example}
+
+For a finite prime set $S$, the Koszul complex on the regular sequence
+$(x_p^2)_{p\in S}$ in $\mathbb C[x_p:p\in S]$ resolves the squarefree
+quotient $\mathbb C[x_p:p\in S]/(x_p^2)$.
+Assigning each $x_p$ bidegree $(\log p,\log p)$ gives its character
+$\prod_{p\in S}(1+p^{-s-\tau})$.
+At $\tau=0$, its negative logarithmic derivative has coefficients
+$(-1)^{r-1}\log p$ at $p^{-rs}$; even prime-power contributions change sign.
+For a smooth projective curve $X/\mathbb F_q$, the same distinction between
+multiplicity and support gives the formal divisor series
+\[
+ \sum_{D\geq0}T^{\deg D}u^{\deg D_{\mathrm{red}}}
+ =\prod_{x\in|X|}\left(1+\frac{(uT)^{\deg x}}{1-T^{\deg x}}\right).
+\]
+Each nonzero multiplicity at $x$ contributes one support weight and any
+positive power of $T^{\deg x}$, proving the identity coefficientwise.
+
+More generally, for a nowhere-zero scalar weight $w$ on $\mathbb N^\times$
+with $w(1)=1$, the product
+$e_m\star e_n=c(m,n)e_{mn}$ with $c(m,n)=w(m)w(n)/w(mn)$ is associative:
+both bracketings have coefficient $w(m)w(n)w(r)/w(mnr)$.
+The map $e_n\mapsto w(n)e_n$ is an algebra isomorphism to the ordinary
+monoid algebra.  For $w(n)=\operatorname{rad}(n)^{-\tau}$ one has
+$c(m,n)=\operatorname{rad}(\gcd(m,n))^{-\tau}$.
+Such a scalar coboundary may change a chosen weighted basis or norm, but it
+does not produce a new algebraic deformation class.
+
+No finite-dimensional space with a fixed endomorphism $H$ can have
+$\operatorname{Tr}(e^{-sH})=\zeta(s)$ throughout $\operatorname{Re}s>1$.
+Its trace is a finite sum of exponentials and extends to an entire function;
+the identity would contradict the pole of $\zeta$ at one.
+This obstruction concerns an exact trace identity, not finite approximations.
+
+\subsection{The product that a heat trace leaves undetermined}
+\label{syn-arith:bar}
+Use cohomological grading, so a differential has degree $+1$ and
+$(V[1])^j=V^{j+1}$.  Let $A$ be an augmented dg algebra over a field $k$,
+with augmentation ideal $\overline A$.  Its reduced bar coalgebra is
+\[
+ B(A)=\bigoplus_{n\geq0}(\overline A[1])^{\otimes n}.
+\]
+Write $[a]$ for the shifted element, of degree $|a|-1$.
+The differential is the coderivation determined by
+\[
+ b_1[a]=-[da],\qquad b_2[a|b]=(-1)^{|a|}[ab].
+\]
+Extending these maps through a tensor word contributes the sign obtained by
+moving their degree-one operator past all preceding shifted elements.
+Thus the internal term on $a_i$ has sign
+$-(-1)^{\sum_{j<i}(|a_j|-1)}$, and the product term on $a_i,a_{i+1}$ has sign
+$(-1)^{\sum_{j<i}(|a_j|-1)+|a_i|}$.
+For an ordinary augmented algebra in degree zero this reads
+\[
+ b[a]=0,\qquad b[a|b]=[ab],\qquad
+ b[a|b|c]=[ab|c]-[a|bc].
+\]
+In general $b^2=0$: on length one this is $d^2=0$; on length two it is the
+graded Leibniz identity; on length three it is associativity; disjoint
+insertions cancel with opposite Koszul signs.  The deconcatenation coproduct
+is compatible with $b$, since $b$ was defined as a coderivation.
+
+\begin{proposition}[An Euler factor does not determine bar homology]
+\label{syn-arith:two-bars}
+Give $V=\bigoplus_{r\geq0}\mathbb Ce_r$ the energy $Ne_r=r\log p\,e_r$.
+There are augmented algebras on $V$ with this energy as a derivation and the
+same heat trace, but with inequivalent reduced bar complexes.
+\end{proposition}
+\begin{proof}
+First take $A=\mathbb C[u]$, with $e_r=u^r$.  The free resolution
+$0\to A\xrightarrow{u}A\to\mathbb C\to0$ gives
+$\operatorname{Tor}^A_*(\mathbb C,\mathbb C)=\mathbb C\oplus\mathbb C\eta$
+with $\eta$ in homological degree one.
+Second take $A'=\mathbb C\oplus I$, where
+$I=\bigoplus_{r\geq1}\mathbb Ce_r$ and $I^2=0$.
+All reduced bar product terms vanish, so
+$\operatorname{Tor}^{A'}_n(\mathbb C,\mathbb C)=I^{\otimes n}$ for every $n$.
+Both products respect the energy grading and both heat traces are
+$\sum_{r\geq0}p^{-rs}=(1-p^{-s})^{-1}$.
+\end{proof}
+
+For three polynomial prime factors the Koszul resolution gives the exterior
+algebra on three degree-one classes, including a nonzero degree-three class.
+There is no general concentration in degrees zero, one, and two even for this
+simplest product model.  Nor does the Toeplitz algebra supply the missing
+augmentation: a unital $*$-character cannot kill $S$ because $S^*S=1$.
+Its characters send $S$ to a scalar of modulus one, and none is invariant
+under $S\mapsto p^{it}S$.
+Using a Toeplitz carrier in a bar construction therefore requires an explicit
+choice of boundary modules or a different augmented algebra.
+
+\subsection{Tame symbols and the missing coupling differential}
+\label{syn-arith:gersten}
+For a field $F$, $K_2^M(F)$ is the quotient of
+$F^\times\otimes_{\mathbb Z}F^\times$ by $a\otimes(1-a)$ for $a\ne0,1$.
+We write its group law additively and its generators as $\{a,b\}$.
+For a discrete valuation $v$ with residue field $k_v$, the tame symbol is
+\[
+ \partial_v\{a,b\}
+ =(-1)^{v(a)v(b)}\overline{a^{v(b)}b^{-v(a)}}\in k_v^\times.
+\]
+The expression under the bar is a unit.  It is bimultiplicative and kills
+the Steinberg relation: the cases $v(a)>0$, $v(a)=0$, and $v(a)<0$ respectively
+give reduction of $1-a$ to one, reduction of $a$ to one when necessary,
+and cancellation of the common negative valuation and its sign.
+
+For $F=\mathbb Q$, Tate's calculation gives the exact sequence
+\[
+ 0\longrightarrow\mathbb Z/2\{\{-1,-1\}\}
+ \longrightarrow K_2^M(\mathbb Q)
+ \xrightarrow{(\partial_p)_p}\bigoplus_p\mathbb F_p^\times
+ \longrightarrow0
+\]
+\cite[\S11]{syn-arith:MilnorK}.
+In particular the two-term Gersten complex in cohomological degrees zero and
+one has $H^0=\mathbb Z/2$ and $H^1=0$, and every term is torsion.
+The real Hilbert symbol detects its kernel.
+These facts do not assert an additive residue sum into a single common
+residue field: the groups $\mathbb F_p^\times$ are different groups.
+Nor is $H^1(\mathcal K_2)$ a $\mathrm{CH}^2$ formula; the usual codimension-two
+Bloch formula has cohomological degree two.
+
+\begin{example}[The diagonal symbol at an odd prime]
+The Steinberg relation implies $\{a,-a\}=0$, and hence
+$\{a,a\}=\{a,-1\}$, which is two-torsion.  At an odd prime,
+\[
+ \partial_p\{p,p\}=-1\in\mathbb F_p^\times\ne1.
+\]
+Consequently $\{p,p\}\ne0$ for every odd $p$.
+At $p=2$, every tame symbol of $\{2,-1\}$ is trivial, and its real Hilbert
+symbol is $+1$ because two is positive.  Tate's calculation therefore gives
+$\{2,2\}=0$.
+The relation $\{p,1-p\}=0$ cannot be substituted for $\{p,p\}=0$ in a
+mixed differential calculation.
+\end{example}
+
+For contrast, reciprocity on a curve does have a common target.
+For a perfect field $k$ and $f,g\in k(t)^\times$ on $\mathbb P^1_k$,
+\[
+ \prod_{x\in|\mathbb P^1_k|}
+       N_{k(x)/k}\partial_x\{f,g\}=1.
+\]
+Here is an elementary proof when $k$ is algebraically closed.
+By bimultiplicativity, constants and the functions $t-a$ suffice.
+A constant $c$ paired with $t-a$ contributes $c$ at $a$ and $c^{-1}$ at
+infinity.  For $a\ne b$, the pair $(t-a,t-b)$ contributes
+$(a-b)^{-1}$ at $a$, $b-a$ at $b$, and $-1$ at infinity; their product is one.
+For $a=b$, the two contributions are both $-1$.
+Factoring over an algebraic closure with multiplicities and grouping
+Galois orbits gives the displayed norm formula over the perfect field $k$.
+This multiplicative identity is not itself a differential on a tensor
+product of local oscillator spaces.
+
+If $B$ is any complex of $\mathbb C$-vector spaces and $G$ is the two-term
+torsion Gersten complex just displayed, then
+$B\otimes_{\mathbb Z}G=0$ term by term.  A torsion element is killed by an
+integer that is invertible on $B$.
+Moreover the same vanishing holds for the derived tensor product, since
+$\mathbb C$ is flat over $\mathbb Z$ and kills $G$.
+Thus simply tensoring complex-linear local bars with $G$ loses all this
+integral information, before any nontrivial coupling is considered.
+
+\begin{proposition}[The equation required for a coupling]
+\label{syn-arith:twisting}
+Let $C$ be a coaugmented conilpotent dg coalgebra over a field $k$ and let $M$
+be a cochain complex.  Give $\operatorname{End}(M)$ differential
+$d(f)=d_Mf-(-1)^{|f|}fd_M$ and product composition.
+For homogeneous $f,g:C\to\operatorname{End}(M)$ put
+\[
+ (f\star g)(c)=\sum_{(c)}(-1)^{|g||c_{(1)}|}
+                     f(c_{(1)})g(c_{(2)}),
+ \quad d_{\mathrm{Hom}}f=d_{\operatorname{End}}f-(-1)^{|f|}fd_C.
+\]
+A degree-one map $\tau$ with $\tau\eta=0$ satisfying
+$d_{\mathrm{Hom}}\tau+\tau\star\tau=0$ defines a square-zero differential
+on $C\otimes M$ by
+\[
+ D(c\otimes m)=d_Cc\otimes m+(-1)^{|c|}c\otimes d_Mm
+       +\sum_{(c)}(-1)^{|c_{(1)}|}c_{(1)}\otimes\tau(c_{(2)})m.
+\]
+\end{proposition}
+\begin{proof}
+Let $D_0$ denote the first two terms and $D_\tau$ the last.
+The tensor sign gives $D_0^2=0$.  The coalgebra chain identity gives
+\[
+ (D_0D_\tau+D_\tau D_0)(c\otimes m)
+ =\sum c_{(1)}\otimes(d_{\mathrm{Hom}}\tau)(c_{(2)})m.
+\]
+Coassociativity and the two degree-one insertions give
+$D_\tau^2(c\otimes m)=\sum c_{(1)}\otimes(\tau\star\tau)(c_{(2)})m$.
+Their sum vanishes by the displayed Maurer--Cartan equation.
+All sums are finite on each conilpotent element; a completed version requires
+a filtration for which these maps and sums are continuous and convergent.
+\end{proof}
+
+An arithmetic realization by this mechanism would have to specify the
+coalgebra on the residue data, integral local algebras or boundary modules,
+the action entering $\tau$, and compatible transition maps as the set of
+places grows.  An ordinary complex has no preferred coalgebra structure.
+The separate identities $d_C^2=d_M^2=0$ give the uncoupled tensor
+differential only; they do not give the mixed Maurer--Cartan equation.
+Likewise, a diagonal energy operator with a nonzero eigenvalue cannot be a
+differential, because its square has the square of that eigenvalue.
+
+\subsection{Restricted tensor products require units and a specified base}
+\label{syn-arith:categorical}
+Fix a field $k$ and the symmetric monoidal category
+$\mathrm{Pr}_{k,\mathrm{st}}^L$ of stable presentable $k$-linear categories,
+with colimit-preserving functors and its relative tensor product over
+$\operatorname{Mod}_k$.  Suppose each $\mathcal C_v$ is a presentably
+symmetric monoidal category whose tensor product preserves colimits separately.
+Its unit determines a colimit-preserving symmetric monoidal functor
+$\operatorname{Mod}_k\to\mathcal C_v$, $V\mapsto V\otimes\mathbf1_v$.
+Consequently insertion of these unit functors defines a filtered diagram of
+symmetric monoidal categories indexed by finite sets of places:
+\[
+ \mathcal C_S=\bigotimes_{v\in S,k}\mathcal C_v,
+ \qquad
+ \mathcal C_S\longrightarrow\mathcal C_T,\quad
+ X\longmapsto X\boxtimes\bigboxtimes_{v\in T\setminus S}\mathbf1_v.
+\]
+Its colimit in commutative algebra objects has the underlying filtered
+colimit in $\mathrm{Pr}_{k,\mathrm{st}}^L$; tensor products preserve the
+relevant colimits \cite[Proposition~3.2.3.1]{syn-arith:HA}.
+This defines $\bigotimes'_v(\mathcal C_v,\mathbf1_v)$ with its compatible
+symmetric monoidal structure.  The same assertion for another operad requires
+that its finite tensor products and inserted unit functors form a diagram
+of algebras over that operad, and that its forgetful functor creates the
+filtered colimit.  This formulation includes the coherence hypotheses,
+not just an identity between products of objects.
+
+An idempotent commutative algebra $u$ with $u\otimes u\simeq u$ is not generally
+the unit of $\mathcal C$.  A functor sending the source unit to $u$ cannot be
+strong unital monoidal into $\mathcal C$ unless $u\simeq\mathbf1$.
+One can instead use the monoidal localization of $u$-local objects, when it
+exists, whose unit is $u$.  For example, $k\times0$ in
+$\operatorname{Mod}_{k\times k}$ is idempotent but is not its unit $k\times k$.
+This distinction is necessary before using spherical idempotents as
+transition data.
+
+For commutative $k$-algebras $R_v$, put
+$R_S=\bigotimes_{v\in S,k}R_v$ and $R=\varinjlim_SR_S$.
+There is an equivalence
+\[
+ \bigotimes'_v(\operatorname{Mod}_{R_v},R_v)
+       \simeq\operatorname{Mod}_{R}.
+\]
+At a finite stage, the tensor product of module categories is the category
+of modules over the tensor product of the algebras
+\cite[Theorem~4.8.5.16]{syn-arith:HA}.
+To see the filtered assertion, a colimit-preserving $k$-linear functor from
+$\operatorname{Mod}_R$ to a stable presentable category $\mathcal D$ is
+specified by an object of $\mathcal D$ with an $R$-action.
+An $R$-action is exactly a compatible family of $R_S$-actions: all algebra
+operations have finite arity.  This identifies its functor category with
+the limit of the corresponding finite-stage functor categories, which is
+the defining universal property of the colimit.
+For the commutative spherical Hecke algebras, this constructs the global
+spherical Hecke algebra and its module category.  It does not replace it
+by the full, generally noncommutative, adelic Hecke algebra.
+
+Tensor and product constructions differ even before categories enter.
+The ring $\mathbb Z_2\otimes_{\mathbb Z}\mathbb Z_3$ is nonzero and is a
+$\mathbb Q$-algebra: two is invertible in the second factor, three in the
+first, and every other prime in both.  It identifies with
+$\mathbb Q_2\otimes_{\mathbb Q}\mathbb Q_3$.
+By contrast, $\mathbb Z_2\times\mathbb Z_3$ has neither two nor three invertible.
+In fact the filtered tensor product over all primes inverts every prime,
+whereas $\widehat{\mathbb Z}=\prod_p\mathbb Z_p$ does not.
+
+There is a further obstruction to replacing an infinite product ring by a
+product of module categories.  Let $R=\prod_{j\geq1}k$ and
+$M=R/\bigoplus_{j\geq1}k$.  Then $M\ne0$, but the $j$th coordinate idempotent
+$e_j$ kills $M$ for every $j$.  Thus the coordinate functor
+$\operatorname{Mod}_R\to\prod_j\operatorname{Mod}_k$ kills a nonzero object.
+It is not an equivalence.  The usual equivalence for finite products does
+not extend to infinite products without extra conditions on modules.
+
+An Iwahori convolution category brings a different restriction.
+An $E_2$-monoidal category has a braiding, so its Grothendieck ring is
+commutative.  Any proposed enhancement preserving a convolution product
+whose Grothendieck ring is a noncommutative affine Hecke algebra is therefore
+impossible.  The ordinary $E_1$ convolution, an $E_2$ structure on a suitable
+centre, and a geometric factorization structure are distinct objects.
+The category must be specified before any enhancement or global tensor
+product can be claimed.
+
+Finally, there are several notions of arithmetic configuration.
+Finite subsets of the set of primes form a combinatorial indexing category;
+giving that set the discrete topology is a choice, not its Zariski topology.
+The closed points of $\operatorname{Spec}\mathbb Z$ inherit a cofinite Zariski
+topology.  On the other hand, the relative product
+$(\operatorname{Spec}\mathbb Z)^n_{/\operatorname{Spec}\mathbb Z}$ is
+$\operatorname{Spec}\mathbb Z$, and its distinct-point locus is empty for
+$n\geq2$.  This rules out that particular relative configuration scheme.
+It proves no general nonexistence theorem for arithmetic configuration
+objects over another base or in another category.
+A locally constant sheaf on a totally disconnected space does not acquire
+an $E_0$ factorization classification without a specified local model.
+
+Nor does the lack of a chosen spectral coordinate on that configuration
+prove a nonexistence theorem for Yang--Baxter algebras over arithmetic
+rings.  On $V=\mathbb Q^2$, the flip $P$ defines the ordinary rational
+matrix $R(u)=1-P/u$ over $\mathbb Q(u)$.
+Expanding the two sides with the permutation relations proves
+\[
+ R_{12}(u-v)R_{13}(u-w)R_{23}(v-w)
+ =R_{23}(v-w)R_{13}(u-w)R_{12}(u-v).
+\]
+This is an algebraic identity over a rational function field.
+Connecting its formal parameters to finite-place collision geometry,
+Frobenius operations, or a meromorphic one-form is a further construction.
+
+For an actual small category $I$ and a covariant functor $F:I\to\mathrm{Ch}(k)$,
+the simplicial replacement has $n$th term
+$\bigoplus_{i_0\to\cdots\to i_n}F(i_0)$.
+Its normalized total complex, with the internal differential and alternating
+face maps, computes the derived colimit.  This is a well-defined incidence
+bar once $I$ and $F$ are supplied.  It does not by itself construct the
+collision maps of chiral homology or an arithmetic realization functor.
+
+\subsection{The full Weil functional}
+\label{syn-arith:weil}
+For $a>1/2$, let $\mathcal A_a$ consist of smooth complex functions on
+$\mathbb R$ for which
+\[
+ p_{a,j}(f)=\sup_{u\in\mathbb R}e^{a|u|}|f^{(j)}(u)|<\infty
+ \quad\hbox{for every }j\geq0.
+\]
+Set $\mathcal A_\zeta=\bigcup_{a>1/2}\mathcal A_a$.
+Use convolution, involution $f^*(u)=\overline{f(-u)}$, and Fourier transform
+$\widehat f(z)=\int_{\mathbb R}f(u)e^{izu}\,du$.
+Convolution and involution make $\mathcal A_\zeta$ a commutative nonunital
+$*$-algebra: convolution of two functions with rate $a$ has any smaller
+rate $a'>1/2$, by the triangle inequality and an integrable exponential
+majorant.  Each transform is holomorphic for $|\operatorname{Im}z|<a$
+and rapidly decreasing on closed smaller horizontal strips.
+
+Write $\psi=\Gamma'/\Gamma$, and put
+\[
+ k_\infty(t)=\operatorname{Re}\psi\left(\frac14+\frac{it}{2}\right)-\log\pi.
+\]
+For $g\in\mathcal A_\zeta$, define
+\begin{align}
+ W(g)={}&\widehat g(i/2)+\widehat g(-i/2)
+ +\frac1{2\pi}\int_{\mathbb R}\widehat g(t)k_\infty(t)\,dt \notag\\
+ &-\sum_{n\geq2}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                    \bigl(g(\log n)+g(-\log n)\bigr).
+ \label{syn-arith:weil-formula}
+\end{align}
+All terms converge absolutely.  For example, with $a=1/2+\varepsilon$ the
+prime sum is bounded by a constant times
+$\sum_{n\geq2}(\log n)n^{-1-\varepsilon}$, and
+$k_\infty(t)=O(\log(2+|t|))$ while $\widehat g$ decreases rapidly.
+
+\begin{theorem}[Weil's formula and its positivity criterion]
+\label{syn-arith:weil-theorem}
+Let $\rho$ run over the nontrivial zeros of $\zeta$, with multiplicity, and
+put $z_\rho=-i(\rho-1/2)$.  Then
+\[
+ W(g)=\sum_\rho\widehat g(z_\rho),\qquad g\in\mathcal A_\zeta.
+\]
+The series is absolutely convergent.  Moreover the Riemann hypothesis is
+equivalent to $W(f^**f)\geq0$ for every $f\in\mathcal A_\zeta$.
+\end{theorem}
+\begin{proof}
+The formula is Weil's explicit formula
+\cite[formula~(11), p.~262]{syn-arith:Weil}, with the following normalization.
+Put $F(s)=\widehat g(-i(s-1/2))$ and take $1<c<1+\varepsilon$.
+A contour shift for $\Lambda'/\Lambda$ from $\operatorname{Re}s=c$ to
+$1-c$, using $\Lambda(s)=\Lambda(1-s)$, gives
+\[
+ \sum_\rho F(\rho)=F(0)+F(1)
+ +\frac1{2\pi i}\int_{\operatorname{Re}s=c}
+       \frac{\Lambda'}{\Lambda}(s)\bigl(F(s)+F(1-s)\bigr)\,ds.
+\]
+The poles at zero and one have residue $-1$ in $\Lambda'/\Lambda$ and
+therefore contribute the displayed positive polar terms.
+Heights avoiding the zeros may be chosen so that the horizontal integrals
+vanish; the rapid decrease of $F$ and the standard zero count
+$N(T)=O(T\log T)$ suffice for this shift.
+Insert $\zeta'/\zeta=-\sum_n\Lambda_{\mathrm{vM}}(n)n^{-s}$ on the right
+line.  Fourier inversion gives the prime sum with its minus sign and
+$n^{-1/2}$ weight.  The remaining logarithmic derivative is
+\[
+ \frac{\Gamma_{\mathbb R}'}{\Gamma_{\mathbb R}}(s)
+ =-\frac12\log\pi+\frac12\psi(s/2).
+\]
+Moving its two terms to $\operatorname{Re}s=1/2$ gives precisely
+$k_\infty$, not the expression with $+\log\pi$.
+Rapid decay of $\widehat g$ on $|\operatorname{Im}z|\leq1/2$ and the zero
+count prove absolute convergence of the zero sum.
+
+For $g=f^**f$, analytic continuation of the Fourier product gives
+\[
+ \widehat g(z)=\widehat f(z)\overline{\widehat f(\overline z)}.
+\]
+Under RH every $z_\rho$ is real, so every summand is
+$|\widehat f(z_\rho)|^2\geq0$.
+For the converse, suppose that there is a nonreal $z_0=\gamma_0+ib$,
+$b\ne0$.  Its conjugate is also a zero parameter with the same multiplicity.
+The zero parameters lie in $|\operatorname{Im}z|<1/2$.
+There are only finitely many distinct centered parameters
+$w=z_\rho-\gamma_0$ with $|\operatorname{Re}w|\leq2$.
+Choose a real polynomial $Q$ vanishing at all of them except $ib,-ib$ and
+not vanishing at those two points; conjugation symmetry permits real
+coefficients.  Set $P(w)=wQ(w)Q(-w)$, a real odd polynomial, and choose $f_A$
+whose Fourier transform is
+\[
+ \widehat f_A(z)=P(z-\gamma_0)e^{-A(z-\gamma_0)^2},\qquad A>0.
+\]
+Its inverse transform is a polynomial times a Gaussian times a unitary
+modulation, so $f_A\in\mathcal A_\zeta$.
+The two selected zeros, of multiplicity $m$, contribute
+\[
+ -2m b^2|Q(ib)|^4e^{2Ab^2}
+\]
+to $W(f_A^**f_A)$, and all other zeros in the finite strip contribute zero.
+On its complement, writing $w=x+iy$, one has
+$x^2-y^2\geq15/4$.  For $A\geq1$, the absolute value of the remaining sum
+is at most
+\[
+ e^{-15A/4}\sum_{|\operatorname{Re}w|>2}|P(w)|^2e^{-(x^2-1/4)}.
+\]
+The final sum is finite by the zero count.  The total is negative for large
+$A$, contradicting positivity.  This is the separating Gaussian-polynomial
+argument in Weil's lemma following formula~(11)
+\cite[pp.~262--263]{syn-arith:Weil}.
+\end{proof}
+
+\begin{proposition}[The isolated archimedean term is not positive]
+\label{syn-arith:gamma-negative}
+The function $k_\infty$ is even, continuous, strictly increasing for $t>0$,
+negative at zero, and tends to $+\infty$ as $t\to+\infty$.
+Consequently it has a unique positive zero, but
+$\frac1{2\pi}\int|\widehat f(t)|^2k_\infty(t)\,dt$ is negative for some
+$f\in C_c^\infty(\mathbb R)$.
+\end{proposition}
+\begin{proof}
+For $x>0$ the digamma series gives
+\[
+ \operatorname{Re}\psi(x+iy)=-\gamma+
+ \sum_{n\geq0}\left(\frac1{n+1}-\frac{n+x}{(n+x)^2+y^2}\right).
+\]
+Each nonconstant summand is strictly increasing in $y>0$.
+The reflection and duplication formulas for $\Gamma$ give
+\[
+ k_\infty(0)=-\gamma-\frac\pi2-3\log2-\log\pi<0.
+\]
+Stirling's formula gives
+$k_\infty(t)=\log(|t|/(2\pi))+o(1)$ at infinity.
+For a nonzero $\varphi\in C_c^\infty$ put
+$f_R(u)=R^{-1/2}\varphi(u/R)$.  Changing variable $v=Rt$ shows that its
+archimedean quadratic value tends to
+\[
+ \frac{k_\infty(0)}{2\pi}\int_{\mathbb R}|\widehat\varphi(v)|^2\,dv<0.
+\]
+Dominated convergence applies because $k_\infty(v/R)$ is bounded by a
+constant times $1+\log(2+|v|)$ for $R\geq1$.
+\end{proof}
+
+For a function whose Fourier transform is supported where $k_\infty\geq0$,
+the isolated integral is nonnegative.  This sufficient condition must be
+interpreted in its own function space: a nonzero function in
+$\mathcal A_\zeta$ cannot have its analytic Fourier transform vanish on an
+open real interval.  Frequency cutoffs therefore change the test class.
+They supply no positivity theorem for the complete Weil functional.
+
+\begin{proposition}[A countable family of finite positivity tests]
+\label{syn-arith:gram-tests}
+Enumerate the Gaussians $g_{m,q}(u)=e^{-m(u-q)^2}$ with positive integers $m$
+and rational $q$.  Form each finite Hermitian matrix
+$G_{ij}=W(g_i^**g_j)$.  Then RH is equivalent to positive semidefiniteness
+of every such finite matrix.
+\end{proposition}
+\begin{proof}
+The forward implication is Theorem~\ref{syn-arith:weil-theorem}.
+For the converse the span of these Gaussians is dense in the following
+sense: if $f\in\mathcal A_a$ and $1/2<a'<a$, one can approximate $f$ and
+any prescribed finite number of derivatives in the seminorms $p_{a',j}$.
+Convolution with increasingly narrow normalized Gaussians approximates $f$
+in those norms, by the strict margin $a-a'$ and uniform continuity on
+compact intervals.  Truncating the convolution integral and replacing it
+by Riemann sums gives finite linear combinations of Gaussian translates.
+Moving the finitely many centers to rational numbers preserves the
+approximation.  This proves the stated density.
+The polar and prime terms of $W$ are continuous in $p_{a',0}$, and two
+integrations by parts bound the archimedean term by a constant times
+$p_{a',0}+p_{a',2}$.  Convolution is continuous after reducing the exponential
+rate once more while keeping it greater than $1/2$.
+Thus positivity on all finite Gaussian spans passes to every $f\in
+\mathcal A_\zeta$, and Weil's criterion applies.
+\end{proof}
+
+Each matrix is finite, but the requirement ranges over all matrices.
+There is no inference from positivity of an initial finite collection to
+positivity of the full functional.  The exponential weight is also
+substantive: polynomial decay in $u=\log n$ alone does not ensure convergence
+of $\sum_n\Lambda_{\mathrm{vM}}(n)n^{-1/2}g(\log n)$.
+For instance a smooth nonnegative function that vanishes for $u\leq1$
+and equals $e^{-\sqrt u}$ for $u\geq2$ is a Schwartz function, but gives
+a divergent prime sum by the prime number theorem.
+
+For the normalized heat Gaussian $g_a(u)=(4\pi a)^{-1/2}e^{-u^2/(4a)}$,
+put $h_{a,x}=g_{a/2}(\,\cdot-x)$ and $K_a(x)=W(g_a(\,\cdot-x))$.
+The convolution identity $g_{a/2}*g_{a/2}=g_a$ gives the explicit kernel
+matrix
+\[
+ W\left(\left(\sum_ic_ih_{a,x_i}\right)^**
+             \left(\sum_jc_jh_{a,x_j}\right)\right)
+ =\sum_{i,j}\overline c_ic_jK_a(x_j-x_i).
+\]
+Positivity of all these matrices for all $a>0$ and finite point sets is
+also equivalent to Weil positivity, by the same Gaussian approximation.
+The quantifier differs from the sieve criterion: Weil requires a
+nonnegative value on every convolution square, whereas the sieve seeks
+one vector with Rayleigh quotient above a threshold for an already
+positive operator.  A common Hilbert-space notation does not identify
+these universal and existential assertions.
+
+\subsection{GNS construction and what an independent positive model must prove}
+\label{syn-arith:gns}
+Let $A$ be a possibly nonunital complex $*$-algebra and let $L:A\to\mathbb C$
+be Hermitian and positive, meaning
+$L(a^*)=\overline{L(a)}$ and $L(a^*a)\geq0$.
+Use inner products conjugate-linear in the first variable.
+The quadratic polynomial $L((a+zb)^*(a+zb))$ gives Cauchy--Schwarz,
+\[
+ |L(a^*b)|^2\leq L(a^*a)L(b^*b).
+\]
+Hence $N=\{a:L(a^*a)=0\}$ is a linear subspace, and
+$\langle[a],[b]\rangle=L(a^*b)$ is a positive-definite inner product on $A/N$.
+
+\begin{proposition}[The nonunital GNS representation]
+\label{syn-arith:nonunital-gns}
+The subspace $N$ is a left ideal.  Left multiplication gives a densely
+defined $*$-representation $\pi$ on the Hilbert completion $\mathcal H_L$
+with common invariant domain $A/N$.  Every $\pi(a)$ is closable.
+It extends boundedly precisely when there is a finite $C_a$ such that
+\[
+ L(b^*a^*ab)\leq C_a^2L(b^*b)\quad\hbox{for all }b\in A.
+\]
+No cyclic vector representing $L$ is supplied by this construction in general.
+\end{proposition}
+\begin{proof}
+If $b\in N$, Cauchy--Schwarz applied to $b$ and $a^*ab$ gives
+$L(b^*a^*ab)=0$.  Thus $ab\in N$, proving the left-ideal assertion.
+The identity
+$\langle\pi(a)[b],[c]\rangle=\langle[b],\pi(a^*)[c]\rangle$
+places the dense domain $A/N$ inside the adjoint domain of $\pi(a)$.
+Therefore $\pi(a)$ is closable.  The displayed inequality is exactly the
+boundedness condition on this dense domain.
+If $A$ had a unit, $[1]$ would provide a cyclic vector; there is no such class
+for a general nonunital algebra.
+For example, let $A$ have basis $x$ with $x^*=x$ and zero multiplication,
+and set $L(x)=1$.  Then $L(a^*a)=0$ for every $a$, so $\mathcal H_L=0$
+although $L\ne0$.  Positivity on squares alone does not imply the additional
+representability condition required for a vector state.
+\end{proof}
+
+When $A$ is a nonunital $C^*$-algebra and $L$ is a bounded positive functional,
+there is a sharp unitization statement.  Set $M=\|L\|$.
+The extension $\widetilde L(a+\lambda1)=L(a)+m\lambda$ on the unitization
+is positive if and only if $m\geq M$.
+Indeed $|L(a)|^2\leq M L(a^*a)$, proved using a positive contractive
+approximate identity, makes
+\[
+ L(a^*a)+2\operatorname{Re}(\overline\lambda L(a))+m|\lambda|^2\geq0
+\]
+when $m\geq M$.  Conversely, for a positive contractive approximate identity
+$e_i$, positivity at $1-e_i$ gives
+$m-2L(e_i)+L(e_i^2)\geq0$; both limits of $L(e_i)$ and $L(e_i^2)$ equal
+$M$, so $m\geq M$.
+This argument uses a $C^*$-norm and boundedness, not just an algebraic
+involution.
+
+Applying the construction to $(\mathcal A_\zeta,W)$ is consequently
+conditional on RH.  The Hermitian identity for $W$ follows directly from
+\eqref{syn-arith:weil-formula}, but its positivity is exactly the assertion
+of Theorem~\ref{syn-arith:weil-theorem}.  A Hilbert-space construction that
+starts by assuming this positivity cannot independently establish it.
+
+\begin{proposition}[Transfer from an independent positive realization]
+\label{syn-arith:positive-transfer}
+Suppose $B$ is a $*$-algebra, $\omega:B\to\mathbb C$ a Hermitian positive
+functional, and $\iota:\mathcal A_\zeta\to B$ a $*$-homomorphism such that
+$\omega(\iota(g))=W(g)$ for every $g\in\mathcal A_\zeta$.
+Then RH holds.
+The same conclusion holds for a dg $*$-algebra if these data are defined
+on its degree-zero cohomology with the induced product and involution.
+\end{proposition}
+\begin{proof}
+For each $f$,
+$W(f^**f)=\omega(\iota(f)^*\iota(f))\geq0$.
+Apply Theorem~\ref{syn-arith:weil-theorem}.
+In the dg case the assertion is the same proof on $H^0$; compatibility of
+the involution with the differential and vanishing of the functional on
+boundaries must be part of the input making $H^0$ well defined.
+\end{proof}
+
+An involution is not positivity data.  On $\mathbb C^2$, for example,
+the Hermitian form $|z_1|^2-|z_2|^2$ is invariant under ordinary conjugation
+but has negative vectors.  An algebraic pairing or duality gives no positive
+cone unless that cone and the functional's behavior on it are specified.
+A chain comparison must also preserve the product and involution; an
+isomorphism of graded vector spaces or equality of partition functions
+does not imply the hypothesis of Proposition~\ref{syn-arith:positive-transfer}.
+
+There is also a precise comparison of the resulting Hilbert spaces.
+For a $*$-homomorphism $T:A\to B$ and $L=\omega\circ T$, the map
+$[a]\mapsto[T(a)]$ preserves inner products and has kernel zero on the GNS
+quotient.  It extends to an isometry $U:\mathcal H_L\to\mathcal H_\omega$
+with closed range, and it intertwines left multiplication on the common
+algebraic domain.  If $B$ is a $C^*$-algebra, the order inequality
+\[
+ \omega(d^*b^*bd)\leq\|b\|^2\omega(d^*d)
+\]
+gives $\|\pi_L(a)\|\leq\|T(a)\|$, so the intertwining extends to the
+completed spaces.  Without that boundedness, an algebraic intertwining
+identity is not an equality of arbitrary unbounded-operator domains.
+
+Positivity need not give bounded multipliers.  For $A=\mathbb C[x]$ and
+$L(p)=\pi^{-1/2}\int p(t)e^{-t^2}dt$, multiplication by $x$ is unbounded,
+because its squared norm ratio on $x^n$ is $n+1/2$.
+Nor does symmetry give a self-adjoint closure: on $L^2(0,\infty)$,
+$-i\,d/dx$ with domain $C_c^\infty(0,\infty)$ has deficiency indices
+$(1,0)$.  Solving $-if'=if$ and $-if'=-if$ gives respectively $e^{-x}$
+and $e^x$, only the first square-integrable.
+It therefore has no self-adjoint extension.
+
+For an arbitrary nonunital algebra, positive extension by a unit of mass
+$m$ exists exactly when $m\geq0$, $L$ is Hermitian, and
+$|L(a)|^2\leq mL(a^*a)$ for every $a$; this is the same quadratic
+minimization in the unit's scalar coefficient.
+For $A=c_{00}(\mathbb N)$ and $L(a)=\sum_nna_n$, positivity holds but this
+bound would require $n^2\leq mn$ for every point mass, which is impossible.
+In the $C^*$ case the minimal mass $m=\|L\|$ has the additional property
+$[e_i]\to[1]$ and gives a nondegenerate cyclic representation, since
+$\|[1]-[e_i]\|^2=m-2L(e_i)+L(e_i^2)\to0$.
+For larger mass the same limit is $m-\|L\|>0$
+\cite[pp.~75--79]{syn-arith:Segal}.
+
+Finally, the isotropic vectors of an indefinite Hermitian form cannot be
+removed as a null subspace.  For $J=\operatorname{diag}(1,-1)$, both
+$e_1+e_2$ and $e_1-e_2$ are isotropic, but their sum is not.
+The radical is zero, so quotienting by it does not remove the negative
+direction.  The indefinite adjoint $X^\sharp=JX^*J$ on $M_2(\mathbb C)$
+and vector functional $\omega(X)=e_1^*JXe_1$ give, for $X=e_{21}$,
+$\omega(X^\sharp X)=-1$.  Thus this adjoint cannot supply Weil positivity.
+
+\subsection{Regularized determinants and the spectral implication}
+\label{syn-arith:deninger}
+For an operator $T$ with discrete nonzero eigenvalues $\lambda$, counted
+with finite algebraic multiplicity $m_\lambda$, choose a logarithm for each
+eigenvalue by a specified common spectral cut.  Suppose
+\[
+ \zeta_T(z)=\sum_\lambda m_\lambda e^{-z\log\lambda}
+\]
+converges in a right half-plane, continues meromorphically to a neighborhood
+of zero, and is holomorphic there.  Define
+$\det_\infty T=\exp(-\zeta_T'(0))$.
+For a pencil with zero eigenvalues its determinant must be extended with
+the specified zero divisor; this extension is an additional analytic
+requirement, not a consequence of the definition at invertible parameters.
+For positive real $c$ and compatible logarithms,
+\[
+ \det_\infty(cT)=c^{\zeta_T(0)}\det_\infty(T),
+\]
+because $\zeta_{cT}(z)=c^{-z}\zeta_T(z)$.
+A scale inside a regularized determinant cannot be deleted without this
+factor.
+
+The finite-dimensional cohomological identity is unconditional.
+If $C^\bullet$ is a bounded complex of finite-dimensional vector spaces and
+$F$ a chain endomorphism, then, as rational functions of $T$,
+\[
+ \prod_j\det(1-TF\mid C^j)^{(-1)^{j+1}}
+ =\prod_j\det(1-TF\mid H^j(C))^{(-1)^{j+1}}.
+\]
+The exact sequences through cycles and boundaries make their determinant
+factors cancel.  Equivalently the logarithm is
+$\sum_{r\geq1}T^r\sum_j(-1)^j\operatorname{Tr}(F^r\mid H^j(C))/r$.
+This finite identity does not choose a complex from its scalar.
+An acyclic summand $V\xrightarrow{1}V$ contributes one to the determinant
+ratio for every endomorphism acting equally in its two degrees.
+Even a single characteristic polynomial does not determine the operator:
+the zero $2\times2$ matrix and a nonzero nilpotent Jordan block both have
+characteristic polynomial $s^2$.
+
+\begin{proposition}[Conditional determinant normalization]
+\label{syn-arith:determinant-transfer}
+Suppose complex spaces $H^0,H^1,H^2$ have endomorphisms $\Theta_i$ and
+regularized determinant pencils
+\[
+ D_i(s)=\det_\infty\left(\frac{s-\Theta_i}{2\pi}\,\middle|\,H^i\right)
+\]
+that continue to single-valued meromorphic functions.
+Assume $(H^0,\Theta_0)=(\mathbb C,0)$, $(H^2,\Theta_2)=(\mathbb C,1)$,
+and the identity in Deninger's normalization
+\[
+ 2^{-1/2}\Lambda(s)=\frac{D_1(s)}{D_0(s)D_2(s)}.
+\]
+Then
+\[
+ D_0(s)=\frac{s}{2\pi},\qquad D_2(s)=\frac{s-1}{2\pi},\qquad
+ \xi(s)=2\sqrt2\,\pi^2D_1(s).
+\]
+Suppose additionally that $H^1$ has a positive Hilbert completion on which
+$\Theta_1$ is densely defined, closed, and has compact resolvent, and that
+its entire spectrum equals the nontrivial zero multiset of $\zeta$, with
+algebraic multiplicities.  If
+\[
+ \mathcal D(\Theta_1^*)=\mathcal D(\Theta_1),\qquad
+ \Theta_1^*=1-\Theta_1,
+\]
+then RH holds.
+\end{proposition}
+\begin{proof}
+The ordinary one-dimensional determinants give $D_0,D_2$.
+Multiplication by $\tfrac12s(s-1)$ proves the formula for $\xi$.
+On the common adjoint domain,
+$H=-i(\Theta_1-1/2)$ satisfies
+$H^*=i(\Theta_1^*-1/2)=H$, with equality of domains.
+Thus $H$ is self-adjoint and $\operatorname{Spec}\Theta_1\subset1/2+i\mathbb R$.
+The assumed spectral equality gives RH.
+\end{proof}
+
+This is the determinant formulation of Deninger's proposed cohomological
+picture \cite[\S3, equation~(3)]{syn-arith:Deninger}.
+Neither a formal determinant nor a trace identity on an unspecified domain
+supplies its hypotheses.  An adjoint relation on a core gives at most
+skew-symmetry until essential skew-adjointness is proved.
+The prime energy $He_n=(\log n)e_n$ has the logarithms of positive integers
+as eigenvalues, not the zeta zero parameters; tensoring it with an infinite
+degeneracy space also destroys its trace-class heat operator.
+The Fock energy, this prime energy, a hypothetical self-adjoint zero-height
+operator, and $\Theta_1=1/2+iH$ are four different operators.
+
+The functional equation alone does not constrain zeros to its symmetry
+line.  For $0<a<1/2$, the real polynomial
+$P(s)=(s-1/2)^2-a^2$ satisfies $P(1-s)=P(s)$ but has zeros off that line.
+Likewise a duality pairing need only exchange $\rho$ with $1-\overline\rho$.
+Positive-definiteness and the complete adjoint-domain identity are the
+additional ingredients in Proposition~\ref{syn-arith:determinant-transfer}.
+
+Li's coefficients give another exact formulation.  With the logarithm of
+$\xi$ defined near one,
+\[
+ \lambda_n=\left.\frac1{(n-1)!}\frac{d^n}{ds^n}
+                  \bigl(s^{n-1}\log\xi(s)\bigr)\right|_{s=1}
+ =\lim_{T\to\infty}\sum_{|\operatorname{Im}\rho|\leq T}
+       \left[1-\left(1-\frac1\rho\right)^n\right].
+\]
+Li's criterion states that RH holds if and only if every $\lambda_n\geq0$
+\cite{syn-arith:Li}.
+Expansion of $\Gamma$ and $\zeta$ at one gives
+$\lambda_1=1+\gamma/2-\tfrac12\log(4\pi)$.
+To write these numbers as traces of
+$1-(1-\Theta_1^{-1})^n$ requires, in addition to a spectral realization,
+a regularized trace compatible with precisely the displayed symmetric
+summation.  Holomorphic functional calculus alone does not define such a
+trace.  Evaluating $L_0^n-(L_0-1)^n$ on a Fock space is a different
+operation on a different spectrum.
+
+\subsection{A finite-field model with an actual positive spectral form}
+\label{syn-arith:finite-field}
+Consider $E/\mathbb F_5$ given by $y^2=x^3-x$ and its automorphism
+$I(x,y)=(-x,2y)$, with $I^2=[-1]$.
+Counting the fibres above $x=0,1,2,3,4$ gives respectively
+$1,1,2,2,1$ affine points and hence $\#E(\mathbb F_5)=8$.
+Its Frobenius has trace $5+1-8=-2$ and characteristic polynomial
+$X^2+2X+5$ on the prime-to-five Tate module.
+More precisely the Frobenius endomorphism is $\pi=[-1]-[2]I$.
+Indeed this endomorphism has degree five since its dual is $[-1]+[2]I$.
+It acts by zero on the invariant differential $dx/y$, because
+$I^*(dx/y)=2dx/y$ in characteristic five.
+It is therefore a purely inseparable degree-five isogeny, hence an
+automorphism followed by Frobenius.
+At $P=(2,1)$, one has $I(P)=(3,2)$ and $[2]I(P)=(0,0)$, and the group law
+shows $([-1]-[2]I)(P)=P$.
+Among the four automorphisms $1,-1,I,-I$, only one fixes $P$, proving the
+claim.
+
+Writing $t_r=\pi^r+\overline\pi^{\,r}$, one obtains
+\[
+ t_0=2,\quad t_1=-2,\quad t_r=-2t_{r-1}-5t_{r-2},\qquad
+ N_r:=\#E(\mathbb F_{5^r})=1+5^r-t_r.
+\]
+Thus $N_1,\ldots,N_6$ are
+$8,32,104,640,3208,15392$.
+Every closed point of degree $d\mid r$ gives $d$ rational points over
+$\mathbb F_{5^r}$, so M\"obius inversion gives
+$b_r=r^{-1}\sum_{d\mid r}\mu(r/d)N_d$ closed points of degree $r$.
+Their first six counts are $8,12,32,152,640,2544$.
+The formal exponential of the point counts is
+\[
+ Z_E(T)=\exp\left(\sum_{r\geq1}\frac{N_rT^r}{r}\right)
+       =\frac{1+2T+5T^2}{(1-T)(1-5T)}.
+\]
+The Euler product over closed points counts effective divisors; comparison
+of coefficients yields $\#\operatorname{Div}^{n,+}(E)(\mathbb F_5)
+=2(5^n-1)$ for $n\geq1$.
+These are consequences of the actual finite-field Frobenius, rather than
+of prescribing a desired zero divisor.
+
+In the basis $1,I$ of $\mathbb Z[I]$, multiplication by $\pi$ is
+\[
+ F=\begin{pmatrix}-1&2\\-2&-1\end{pmatrix},\qquad F^TF=5I_2.
+\]
+Therefore $U=F/\sqrt5$ is unitary and has eigenvalues $e^{\pm i\theta}$
+with $\cos\theta=-1/\sqrt5$ and $0<\theta<\pi$.
+The functional on $\mathbb C[z,z^{-1}]$ given by
+$\omega(z^n)=\operatorname{Tr}(U^n)=5^{-n/2}t_n$ is positive:
+$\omega(q^*q)=|q(e^{i\theta})|^2+|q(e^{-i\theta})|^2$,
+where $z^*=z^{-1}$.  Its moment matrices have rank two once the polynomial
+space contains two independent evaluations; its null ideal is generated
+by $z^2+(2/\sqrt5)z+1$.
+The mass is $\omega(1)=2$; division by two gives a state.
+
+The local polynomial
+\[
+ P_E(s)=\det(1-5^{-s}F)=1+2\cdot5^{-s}+5^{1-2s}
+\]
+has zeros $1/2+i(\pm\theta+2\pi n)/\log5$, $n\in\mathbb Z$.
+This can be realized by a genuine self-adjoint diagonal operator:
+$He_n=(\theta+2\pi n)e_n$ on its maximal domain in $\ell^2(\mathbb Z)$,
+$K=H\oplus(-H)$, and $\Theta=1/2+iK/\log5$.
+Then $\Theta^*=1-\Theta$ on the common domain, with exactly that spectrum.
+Since $H^{-2}$ is trace class, its ordinary Fredholm determinant satisfies
+\[
+ \det(1+a^2H^{-2})
+ =\prod_{n\in\mathbb Z}\left(1+\frac{a^2}{(\theta+2\pi n)^2}\right)
+ =\frac{\cosh a-\cos\theta}{1-\cos\theta}.
+\]
+The product converges locally uniformly in $a\in\mathbb C$; the final
+identity follows from the sine product applied at $(\theta\pm ia)/2$.
+This constructs a positive spectral model of one known Euler polynomial.
+It supplies no operator for the complete Riemann zeta function.
+
+\subsection{Rankin--Selberg unfolding on its convergence half-plane}
+\label{syn-arith:rankin-selberg}
+Let $\Gamma=\mathrm{SL}_2(\mathbb Z)$, let
+$\Gamma_\infty=\{\pm\left(\begin{smallmatrix}1&n\\0&1\end{smallmatrix}\right):
+n\in\mathbb Z\}$, and use $d\mu=dx\,dy/y^2$ on the upper half-plane.
+For $\operatorname{Re}s>1$ define
+$E(z,s)=\sum_{\gamma\in\Gamma_\infty\backslash\Gamma}
+\operatorname{Im}(\gamma z)^s$.
+Take a weight-zero Maass cusp form with real spectral parameter $r$ and
+Fourier expansion
+\[
+ \phi(x+iy)=\sum_{n\ne0}\rho(n)\sqrt y\,
+               K_{ir}(2\pi|n|y)e^{2\pi inx}.
+\]
+The hypothesis $r\in\mathbb R$ is explicit here; exceptional spectral
+parameters require the corresponding convergence restrictions in the
+Bessel integral.
+
+\begin{theorem}[Unfolding and the Bessel Mellin integral]
+\label{syn-arith:RS}
+For $\operatorname{Re}s>1$,
+\[
+ \int_{\Gamma\backslash\mathbb H}|\phi(z)|^2E(z,s)\,d\mu
+ =(2\pi)^{-s}G_r(s)\sum_{n\ne0}|\rho(n)|^2|n|^{-s},
+\]
+where, already for $\operatorname{Re}s>0$,
+\[
+ G_r(s)=\int_0^\infty K_{ir}(y)^2y^{s-1}dy
+ =\frac{2^{s-3}\Gamma(s/2)^2\Gamma(s/2+ir)\Gamma(s/2-ir)}{\Gamma(s)}.
+\]
+\end{theorem}
+\begin{proof}
+Absolute convergence of $E$ and cusp decay justify unfolding to the strip
+$0\leq x<1$, $y>0$, giving
+$\int_0^\infty\int_0^1|\phi(x+iy)|^2y^{s-2}dx\,dy$.
+Parseval in $x$ removes the cross terms.  Changing variable
+$u=2\pi|n|y$ gives the stated Dirichlet series and $G_r$.
+For real $s>1$ all terms are nonnegative, so Tonelli also justifies the
+termwise integration and proves convergence; holomorphy gives the complex
+half-plane statement.
+
+For the integral use $\nu=ir$, $K_{-\nu}=K_\nu$, and
+\[
+ K_\nu(y)=\frac12(y/2)^\nu
+       \int_0^\infty t^{-\nu-1}e^{-t-y^2/(4t)}dt.
+\]
+Multiplying the representations with $\nu$ and $-\nu$ and integrating $y$
+first gives
+\[
+ 2^{s-3}\Gamma(s/2)
+ \int_0^\infty\int_0^\infty
+ t^{s/2-\nu-1}u^{s/2+\nu-1}(t+u)^{-s/2}e^{-t-u}\,dt\,du.
+\]
+Set $t=av$, $u=a(1-v)$; the $a$-integral is $\Gamma(s/2)$ and the
+$v$-integral is $B(s/2-\nu,s/2+\nu)$.
+Absolute convergence holds for $\operatorname{Re}s>0$ because $\nu$ is
+purely imaginary.  This proves the gamma expression.
+\end{proof}
+
+This is the classical Rankin--Selberg mechanism
+\cite[p.~415, formula~(3)]{syn-arith:Zagier}.
+For a Hecke eigenform with unitary central character, normalize the positive
+Fourier coefficients by $\rho(n)=\rho(1)\lambda(n)$.
+If $\alpha_p,\beta_p$ now denote the unitary-normalized parameters, then
+$\lambda(p^r)=h_r(\alpha_p,\beta_p)$ and $|\alpha_p\beta_p|=1$.
+At each unramified prime the formal identity
+\[
+ \sum_{r\geq0}|h_r(\alpha,\beta)|^2X^r
+ =\frac{1-X^2}
+ {(1-\alpha\overline\alpha X)(1-\alpha\overline\beta X)
+  (1-\beta\overline\alpha X)(1-\beta\overline\beta X)}
+\]
+follows by substituting
+$h_r=(\alpha^{r+1}-\beta^{r+1})/(\alpha-\beta)$ and summing four geometric
+series; coincident parameters follow by a limit.
+Consequently
+$\sum_{n\geq1}|\lambda(n)|^2n^{-s}
+=L(s,\phi\times\overline\phi)/\zeta(2s)$ in $\operatorname{Re}s>1$.
+For real $s>1$ the unfolded integral is nonnegative.
+At $s=1/2+it$ the continued gamma and Dirichlet factors are generally
+complex, so that equality is not a positivity identity there.
+
+Arbitrary multipliers of Fourier coefficients also do not preserve
+automorphy.  For a nonzero coefficient $\rho(n_0)$ one can choose a smooth
+function of $\log|n|$ supported so narrowly that only $|n|=|n_0|$ remains.
+The resulting finite Fourier sum is periodic in $x$ and has the original
+Laplace eigenvalue, but is not in general $\Gamma$-invariant.
+An individual nonzero Bessel Fourier mode has power or logarithmic
+behavior as $y\to0$, whereas invariance under $z\mapsto-1/z$ would force
+the exponential cusp decay after inversion.
+For a sine combination vanishing on the imaginary axis, approach zero
+instead along $z=y(c+i)$ with $c\ne0$.  The finite Bessel expansion has a
+nonzero power or logarithmic leading term for some such $c$, while inversion
+has imaginary part $1/(y(1+c^2))$ and requires exponential decay.
+Thus its norm on a strip is defined, but a Petersson norm on the quotient
+and the unfolding above require a separate automorphy proof.
+
+For Maass cusp forms over $\mathbb Q$, the bound
+$|\alpha_p|,|\beta_p|\leq p^{7/64}$ is the Kim--Sarnak theorem
+\cite[Appendix~2]{syn-arith:KimSarnak}; no assertion that it is optimal is
+needed here.
+If, additionally, the ninth symmetric power of a fixed unitary cuspidal
+$\mathrm{GL}_2$ representation is cuspidal automorphic on
+$\mathrm{GL}_{10}$, the Luo--Rudnick--Sarnak exponent gives
+\[
+ 9\theta_p\leq\frac12-\frac1{101},\qquad
+ \theta_p\leq\frac{11}{202}.
+\]
+This follows by applying the $\mathrm{GL}_{10}$ bound to the Satake
+parameter $\alpha_p^9$ \cite{syn-arith:LRS}.
+It is conditional on that lift for the given Maass representation.
+Results about symmetric powers of holomorphic forms do not construct a
+holomorphic companion with the same finite Satake parameters for an
+arbitrary Maass form.
+
+\subsection{Classical arithmetic Chern--Simons invariants and real places}
+\label{syn-arith:acs}
+Let $F$ be a number field, $X=\operatorname{Spec}\mathcal O_F$, and $n\geq2$.
+First suppose $F$ is totally imaginary and contains all $n$th roots of
+unity.  Artin--Verdier duality identifies
+$H^3_{\mathrm{et}}(X,\mathbb Z/n)$ with the Pontryagin dual
+$\mu_n(F)^D=\operatorname{Hom}(\mu_n(F),\mathbb Q/\mathbb Z)$.
+A chosen primitive $n$th root identifies this target with
+$\tfrac1n\mathbb Z/\mathbb Z$ by evaluation.
+For a finite group $A$, a class $c\in H^3(A,\mathbb Z/n)$, and a continuous
+$\rho:\pi_1^{\mathrm{et}}(X)\to A$, Kim's classical invariant is
+\[
+ \operatorname{CS}_c([\rho])=\operatorname{inv}(j^3(\rho^*c)),
+\]
+where $j^3$ is the natural comparison from continuous group cohomology to
+\'etale cohomology \cite[\S1]{syn-arith:KimCS}.
+Inner automorphisms act trivially on cohomology with these trivial
+coefficients, so the invariant depends only on the conjugacy class of $\rho$.
+This definition does not use a differential three-form on $X$.
+
+At a real place, $G_v=\operatorname{Gal}(\mathbb C/\mathbb R)=C_2$ has
+$H^q(G_v,\mathbb Z/2)=\mathbb Z/2$ for every $q\geq0$.
+The standard periodic resolution has alternating maps $1-\sigma$ and
+$1+\sigma$, both zero after applying trivial $\mathbb Z/2$ coefficients.
+Thus a blanket finite two-cohomological-dimension statement cannot include
+real decomposition groups.  Odd-order coefficients kill their positive
+cohomology by averaging, but do not address the two-primary invariant.
+
+There is nevertheless an actual real-place extension of the classical
+construction \cite[\S\S2.2--2.3]{syn-arith:LeePark}.
+Let $F_{\mathrm{un}}^f$ be the maximal extension unramified at finite places
+and $F_{\mathrm{un}}$ its maximal subextension unramified also at infinity,
+meaning that real places split completely.  Put
+\[
+ \pi=\operatorname{Gal}(F_{\mathrm{un}}^f/F),\qquad
+ \pi^{\mathrm{un}}=\operatorname{Gal}(F_{\mathrm{un}}/F),\qquad
+ \kappa:\pi\twoheadrightarrow\pi^{\mathrm{un}}.
+\]
+The compact-support cochain complex, in positive degrees relevant here, is
+the mapping fibre of restriction to the real places:
+\[
+ C_c^r(X,M)=C^r(X,M)\oplus\prod_{v\mid\infty,\ v\text{ real}}C^{r-1}(G_v,M),
+ \quad d(a,(b_v))=(da,(r_va-db_v)).
+\]
+Use the corresponding group-cochain mapping fibre for $\pi$.
+The low-degree convention is fixed by compact-support \`etale cohomology;
+the displayed ordinary cochains agree with the required local complexes in
+the positive degrees used for a degree-three cocycle.
+Artin--Verdier duality gives
+\[
+ H_c^3(X,\mathbb Z/n)\simeq\mu_n(F)^D
+ \quad\text{\cite[Proposition~2.4]{syn-arith:LeePark}}.
+\]
+This records the target without assuming $\mu_n\subset F$.
+
+\begin{proposition}[The compact-support lift of an everywhere unramified class]
+\label{syn-arith:real-cs}
+A normalized group three-cocycle $w$ on $\pi^{\mathrm{un}}$ determines
+$[(\kappa^*w,(0)_v)]\in H_c^3(\pi,\mathbb Z/n)$ and hence a class in
+$H_c^3(X,\mathbb Z/n)$.  For $c\in H^3(A,\mathbb Z/n)$ and
+$\rho:\pi^{\mathrm{un}}\to A$, evaluation of this class defines a
+conjugacy-invariant function
+\[
+ \operatorname{CS}_c:\operatorname{Hom}_{\mathrm{cont}}(\pi^{\mathrm{un}},A)/A
+          \longrightarrow\mu_n(F)^D.
+\]
+\end{proposition}
+\begin{proof}
+Every real decomposition group maps trivially to $\pi^{\mathrm{un}}$.
+A normalized cocycle vanishes when an argument is the identity; therefore
+all local restrictions of $\kappa^*w$ vanish, and the pair with zero local
+cochains is closed for the displayed mapping-fibre differential.
+Changing $w$ by the coboundary of a normalized two-cochain changes the pair
+by a mapping-fibre coboundary, for the same reason.
+The group-to-\'etale comparison commutes with local restriction and therefore
+induces a map of mapping fibres.
+The duality invariant then gives the stated function, and conjugation
+invariance follows as in Kim's construction.
+This is the map $j^3_{\mathrm{un}}$ in
+\cite[\S2.3, equation~(2)]{syn-arith:LeePark}.
+\end{proof}
+
+When real places exist, a primitive root of order $n>2$ cannot lie in $F$.
+Thus the full $\tfrac1n\mathbb Z/\mathbb Z$ normalization with all roots
+included is compatible with real places only for $n=2$.
+The target $\mu_n(F)^D$ remains meaningful without that extra hypothesis.
+This extension fixes a particular compact-support and real-splitting
+convention; changing the infinite-place data changes the question.
+
+For any finite groupoid $\mathcal G$ with an isomorphism-invariant action
+$S:\pi_0\mathcal G\to\mathbb Q/\mathbb Z$, the scalar
+\[
+ Z(\mathcal G,S)=\sum_{[x]\in\pi_0\mathcal G}
+             \frac{e^{2\pi iS(x)}}{|\operatorname{Aut}(x)|}
+\]
+is well defined and invariant under equivalence of finite groupoids.
+Finiteness of the chosen arithmetic field groupoid and existence of its
+action must be proved before applying this formula.
+For everywhere unramified representations into a fixed finite group,
+Hermite--Minkowski finiteness provides finitely many possible finite
+extensions of the bounded degree in question, and the automorphism groups
+are finite.  This yields finite classical sums in that setting.
+It does not supply state spaces, a bordism category, or gluing laws for a
+quantum theory.  Also $Z$ can vanish: two objects of trivial automorphism
+group with action zero and one-half already give zero.
+
+To define a Wilson trace at an unramified prime $\mathfrak p$, specify a
+field $\sigma:\pi_1\to A$ and a complex representation $V$ of $A$.
+Then $\operatorname{Tr}_V\sigma(\operatorname{Frob}_{\mathfrak p})$ is
+conjugacy-invariant.  Its expectation is the weighted sum of these values
+divided by $Z$, only when $Z\ne0$; evaluation at one field is not that
+expectation even when the action vanishes.
+For a fixed Frobenius convention and matrix $F_V$,
+\[
+ \det(1-TF_V)^{-1}
+ =\exp\left(\sum_{r\geq1}\frac{\operatorname{Tr}(F_V^r)}rT^r\right),
+ \qquad |T|\,\rho(F_V)<1.
+\]
+Diagonalization, or differentiation of the determinant followed by the
+geometric resolvent series, proves the formula, including nonsemisimple
+matrices.  It needs all power traces, not the single trace of $F_V$.
+Geometric and arithmetic Frobenius are inverses; the representation and
+the $L$-factor normalization must use the same choice.
+A surface observable requires an additional higher holonomy construction;
+an ordinary finite-group representation defines only the loop data above.
+
+\subsection{The remaining arithmetic realization problem}
+\label{syn-arith:realization-problem}
+The constructions established here leave two independent tasks.
+The algebraic task is to choose local augmented or boundary algebras and
+their completions, construct the residue coupling of
+Proposition~\ref{syn-arith:twisting}, and prove compatibility with changes
+of the finite set of places.  A realization from a chiral algebra at the
+archimedean place must be a specified functor into this common category;
+a Gaussian Mellin transform is not such a functor.
+The analytic task is to construct a positive realization of the full Weil
+functional, or a determinant pencil and adjoint-domain identity with the
+properties of Proposition~\ref{syn-arith:determinant-transfer}.
+Neither task follows from the prime partition function.
+
+An arithmetic Koszul-duality claim would further require an actual
+augmented dg algebra $\mathcal V$, a continuous completed bar dual
+$\operatorname{Hom}_{\mathrm{cont}}(B\mathcal V,k)$, and a comparison with
+a specified smooth or dg Bost--Connes algebra that preserves multiplication,
+differential, topology, and boundary data.  Equality of energy weights does
+not give that comparison.  Iwasawa coefficients introduce derived
+completion and base-change questions; vanishing of an Iwasawa $\mu$-invariant
+alone gives no continuous-duality or derived-equivalence theorem.
+Likewise, Hochschild homology and Hochschild cohomology are distinct
+invariants, and neither their values nor a concentration range can be
+read off from an Euler product.
+
+Categorical Langlands comparisons need separately defined source and
+target categories.  For example, a derived global Galois deformation
+problem requires a residual representation, coefficient ring, determinant,
+ramification set, and local deformation conditions.  One must construct
+the resulting derived stack and its singular-support condition before
+asking for an equivalence with an automorphic category.
+A trace formula involving $\operatorname{Map}(B\widehat{\mathbb Z},-)$
+only tests procyclic monodromy; it does not encode arbitrary inertia or
+local $(\varphi,\Gamma)$-module data without extra maps and conditions.
+The genuine local and global theorems in geometric settings do not
+establish these mixed-characteristic, real-place, and integral comparisons
+merely by a matching notation.
+
+Finally, a profinite or continuous arithmetic Chern--Simons theory would
+have to construct its limiting field spaces, measure or renormalized sum,
+boundary state spaces, gluing maps, and anomaly data.  An identification
+of its partition function with $\xi(s)$ must in addition construct the
+parameter $s$ and prove the equality with all archimedean and polar
+normalizations.  The finite classical actions of
+Section~\ref{syn-arith:acs} do not contain these structures.
+The scalar functional equation remains unconditional; the positive
+arithmetic realization remains open.

@@ -1,0 +1,22 @@
+{
+  "python": "3.14.6",
+  "sympy": "1.14.0",
+  "gaussian_convolution": "g_a * g_a = g_(2a)",
+  "gaussian_leading_coefficient": "1/(4*sqrt(pi))",
+  "unitization_ratio_coefficient": "sqrt(2)/(4*sqrt(pi))",
+  "two_scale_gaussian_gram_determinant": "1/20",
+  "maximal_domain_terms": [
+    "n^(-2)",
+    "1"
+  ],
+  "target_domain_terms": [
+    "n^(-2)",
+    "1"
+  ],
+  "indefinite_square": "-1",
+  "multiplicity_example": [
+    "s-lambda",
+    "(s-lambda)^2"
+  ],
+  "scope": "Exact symbolic identities only; no numerical or general theorem acceptance."
+}

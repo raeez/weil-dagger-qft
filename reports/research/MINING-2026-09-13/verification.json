@@ -1,0 +1,41 @@
+{
+  "final_log_clean": true,
+  "firewall_clean": true,
+  "visual_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "last_wording_changed_pages": [
+    4,
+    8
+  ],
+  "pdf_sha256": "665e790a8846106385f133386193525dd0b4fb5279ad609afa3c767d4371fd21",
+  "source_sha256": "42149bcf9059eef4da0549d0035aedd9154d849566cbcbeaf59e8a618a2df838",
+  "readme_sha256": "c9e20b6d665efcf5fe1bdfe3f64441f5f32c253dc825e696bf67b0047150d021",
+  "page_count": 13,
+  "primary_sources": [
+    {
+      "url": "https://www.osti.gov/servlets/purl/4101201",
+      "file": "sources/powers-preprint.pdf",
+      "sha256": "07640f69f486114fe82953154cc6fd0031e9e73ddc3ab09f96c687bfc567c1cf",
+      "locators": "Definition 2.4 and Lemmas 2.5\u20132.6; preprint printed pp. 7\u20139, physical pp. 9\u201311; physical pp. 9\u201310 visually inspected"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.11.E2",
+      "file": "sources/dlmf-5.11.E2.tex",
+      "sha256": "047977abf52ef55a672f3824ce10932cb767ee686b877798b5a85dc40171199e",
+      "locators": "5.11(i), equation 5.11.2; sector |arg z| <= pi-delta"
+    }
+  ]
+}

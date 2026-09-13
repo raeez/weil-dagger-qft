@@ -1,0 +1,3014 @@
+                                                                                    NYO-2171-325
+
+
+                                                                                       MUSTER
+
+
+
+
+                                                     SBCEiVEP BY DTiE NOV 1 2 VJO
+
+              Self-Adjoint Algebras of Unbounded Operators^
+
+
+
+
+                           Robert T. Powers
+          University of Pennsylvania, Philadelphia, Pennsylvania
+
+
+
+
+                        -------------------- LEGAL   NOTICE----------------------
+                        This report was prepared as an account of work
+                        sponsored by the United States Government. Neither
+                        the United States nor the United States Atomic Energy
+                        Commission, nor any of their employees, nor any of
+                        their contractors, subcontractors, or their employees,
+                        makes any warranty, express or implied, or assumes any
+                        legal liability or responsibility for the accuracy, com­
+                        pleteness or usefulness of any information, apparatus,
+                        product or process disclosed, or represents that its use
+                        would not infringe privately owned rights.
+
+
+
+
+'Work supported in part by U. S. Atomic Energy Commission under Contract
+ AT(30-1)-2171 and by the National Science Foundation.
+Alfred P. Sloan Foundation Fellow.
+
+
+
+
+                                                           DISTRIBUTION OF THIS DOCUMENT IS UNLIMITED
+                             DISCLAIMER
+
+This report was prepared as an account of work sponsored by an
+agency of the United States Government. Neither the United States
+Government nor any agency thereof, nor any of their employees,
+makes any warranty, express or implied, or assumes any legal liability
+or responsibility for the accuracy, completeness, or usefulness of any
+information, apparatus, product, or process disclosed, or represents
+that its use would not infringe privately owned rights. Reference
+herein to any specific commercial product, process, or service by
+trade name, trademark, manufacturer, or otherwise does not
+necessarily constitute or imply its endorsement, recommendation, or
+favoring by the United States Government or any agency thereof. The
+views and opinions of authors expressed herein do not necessarily
+state or reflect those of the United States Government or any agency
+thereof.
+
+
+
+
+                          DISCLAIMER
+
+Portions of this document may be illegible in electronic image
+products. Images are produced from the best available
+original document.
+                                                  t
+
+
+
+                                          INTRODUCTION
+                                                                                             •Cv l
+             In this paper we study unbounded ^-representations of ^-algebras.        The
+
+     basic definitions, notation and motivation are drawn from the Wightman formu­
+
+     lation of quantum field theory and the theory of Lie algebras.    The general plan
+
+     of the paper is to examine some of the pathologies associated with *-algebras
+
+     of unbounded operators and, then, to find natural definitions which rule out
+                                                                                  V
+
+*    these pathologies.    Two such definitions are those of self-adjointness for rep­
+
+
+4    resentations (section IV) and strong positivity (sections VII and VIII).
+
+             The results of each section are summarized at the beginning of each sec­
+
+     tion.   We claim little or no originality for the contents of sections I, II, V and
+                                                                                        Ox
+
+     VI which consist largely of background material, definitions modified from C -
+
+     algebra theory and quantum field theory and known examples illustrating features
+
+     of unbounded representations.
+
+             The author would like to thank Professois'J. Kazden and S. Sakai for ac­
+
+     quainting him with Hilbert's work on polynomials which are the sums of squares
+ *
+     of real polynomials and Sherman's work on positive functionals on ;';-algebras of
+
+ft   unbounded operators.     The author would like to thank Professor O. Nielson for
+
+     helpful discussions during the research for this paper.
+
+
+
+
+                                                                             <t
+■I,   Review of Known Results on Unbounded Operators
+
+
+
+We review some of the well known results on unbounded operators and
+
+refer to       [3   ,   Chap XII],    [I1/] and [~16] as references for the results
+
+stated in this section.               In this paper we will work exclusevely with
+                         OVet'
+Hilbert spaces 'o : the complex numbers.                      We use the physicists’           inner
+
+product       (f,g) which is linear in g and conjugate linear in f.
+
+        A bounded or unbounded operator A on a Hilbert space                             ,    defined
+
+on a linear manifold JD (A)(called the domain of A)                           is a   linear mapping
+
+of «£> (A)     into '3^.     Unless otherwise stated we assume <P(A)                   is dense
+
+in            If A and B are operators on                    with domains JI?(A)      and J^iB)
+
+we say A is an extension of B,              A         B,    if J0> (A)   ^ <£?(B) and Af = Bf for
+
+all f € oP(B) .           We denote by G        the graph of the operator A,                 the
+                                           A
+linear manifold in               He# of all pairs, G              =   {{f,   Af}; f € JD{A)} .
+
+Clearly A           B if and only if G => Gb .             An operator A is said to be closed
+
+if its graph G,           is closed,   i.e, A is closed if and only if f -* f and
+
+Af "* g as n -• ® implies f € J? (A)              and Af = g.            We say A is closable
+
+if A has a closed extension                If A is closable we denote by A the
+
+smallest closed extension of A,                 L e        if A is closable then G- = G .
+                                                                                  A    A
+
+where    'S     denotes the closure of a set S in a Hilbert space.
+
+        If A is an operator with dense domain J? (A) c ~}4. we denote by A*
+
+the hermitian adjoint of A               The graph of A* is given by
+
+
+
+              Ga =      {{f,g}              (f ,Ah) ;= : (g, h):for all h Gj^fA)}
+
+
+
+The domain of A* consists of all those vectors satisfying the relation,
+                                         3
+
+
+
+
+         J9(A*) = {f €7^*     |(f,Ah)| ^ K||h|| for some constant K s 0
+
+                                                   and all h € J^> (A) } .
+
+
+
+A* is always a closed operator.       However,     the domain «P(A*) may not
+
+be dense in          In fact A is closable if and only if ^(A*)                  is dense
+
+in 7^ and               is dense in X then A = A**.
+
+     An operator A is said to be hermitian if A*                  A,    An operator A
+
+is hermitian if and only if      (f,Ag) =    (Af, g)   for all f, g €         P(A),
+
+Every hermitian operator is closable since             JD (A*)   =3 cP(A)   and hence
+
+J0(A*)   is dense in        An operator A is self-adjoint if A = A*.                   An
+
+hermitian operator A is self-adjoint if and only if oP(A)                   =   JD{A*) ,
+
+Since A* is closed it follows that every self-adjoint operator is closed.
+
+An operator A is said to be essentially self-adjoint if its closure A
+
+is self-adjoint
+
+     If A is an hermitian operator we denote by £2+ and                  JD     the
+
+deficiency spaces of A defined by the relations,
+
+
+         £>+ =   {Range (A + il))i' = {f €     (A*) ; A*f = if}
+
+
+         JD_ =   {Range (A - il)}x = {f € JO (A*) 7 A*f = -if},
+
+
+where {S}-1" denotes the orthogonal complement of S                A useful result of
+
+
+von Neumann states that an hermitian operator A is essentially self-
+
+adjoint if and only if                = {d}      Furthermore,          A has a self-
+
+adjoint extension if and only if the dimension of                      equals the
+
+dimension of £>
+       If A is a self-adjoint operator then A has a unique spectral!
+
+resolution {E(^)?         -<» < X <; +“}       such that E(\)E(u)* = E (min{ X, u)),
+
+E(X.) -• E(u)     (strongly)      as A, -* y. from above,         E(A.) -* I        (strongly)       as
+
+A -* +00,   E(A) -* 0   (strongly)        as A -* -<=°,
+
+
+                   (f,Ag)    = jAd(f,E(A)g)               for all f €            and g             (A)
+and
+
+                  J)(A) = {£ eX? J (a2+ 1) d (f, E ( A) f)                 <
+
+
+
+       If A is an hermitian operator and C is a bounded operator we say
+
+C commutes with A if
+
+
+
+                               (f, CAg)    =     (Af, Cg)     for all f, g 6             (A) .
+
+
+If A is essentially self-adjoint then C commutes Wiih A if and only if
+
+C commutes with the spectral projections of A                         (see       [ £ ,   Chap       VIII,
+
+sec.   120] or [ |£ ,     Chap.    IV,    &17,      sec. 4,    Thm. VII,       p.   251]),
+
+       Finally,    we state some results concerning normal operators                                 (see,
+
+e.g.   [3 ,   Chap.XII,      problems 9,           10,   11 and 12,   p.       1258-1259]).          If A
+
+is a closed operator then A*A is self-adjoint where oP(A*A)                                      = {f € <P (A)
+
+Af 6   cP(A*)<     AA* is also sel-adjoint.                   A closed operator A is said to
+
+be normal if A*A = AA*.                A closed operator A is normal if and only if
+
+JD(A) = jD(A*)      and     ||Af|| =    ||A*f|| for all f € cP(A) .              If A is normal
+
+then A^ =     (1/2)(A + A*)        and         =    (l/2i)(A - A*)     are essentially self-
+
+adjoint on      £)(A) and the spectral resolutions of A^ and A^ commute..
+II. Closed *-Representations of *-Alqebras.
+
+
+
+        In this section we define ^representations of *-algebras.                     For
+
+need of an adjective we will call *-representations hermitian represen­
+
+tations.      In analogy with the notion of a closed operator we define the
+         cu
+notion of^closed representation.             We show that just as every hermitian
+
+operator has a minimal closed extension,            every hermitian representation
+
+of a *-algebra has a minimal closed extension.
+
+        A *-algebra       DL is an algebra over the complex numbers with a
+
+♦-operation satisfying;
+
+
+
+                    (i)     A** = A
+
+                   (ii)     (aA + B)* = aA* + B*
+
+                  (iii)     (AB)* = B*A*
+
+
+
+for all A, B € (31 an(3 complex numbers a-          In general CX will not be
+
+normed since we are interested in the study of unbounded ♦-represen­
+
+tations .
+
+        All algebras in this paper will have a unit denoted by I.
+
+
+
+        Definition 2.1.          A representation rr of an algebra OL on a Hilbert
+
+space         is a mapping of (X. into linear operators all defined on a
+
+common dense domain <0(1?) which is dense in              and rr satisfies the
+
+conditions,      rr(I)    = I,   the unit operator on
+
+
+
+        (i)   n(aA + B)f = arr (A) f + rr(B)f,   for all A, B €   CL,   f   €   (n)
+
+              and all complex numbers a.
+                                                         6
+
+
+
+
+        (ii)    tt(A)£>(tt)    e ^(tt)        for all A € Ql^and n(A)rr(B)f = n(AB)f for all
+
+                all A, B 6 OC and f € ^ (rr) .
+
+
+
+        Definition 2.2.           A representation            tt   of a *-algebra QC on a Hilbert
+
+space          is said to be hermitian or a *-representation if
+
+
+        (iii)      (f,rr(A)g)     =    (rr (A*) f, g)   for all f,g ^/^(rr) and A                     v
+
+                  i.e.   tt(A)*       => n(A*)   for all A € QL-.
+
+
+
+      We remark that a representation rr is hermitian if and only if for
+
+every hermitian A € £X- (i.e..A = A*)                    tt (A)    is hermitian,
+
+       This definition of a *-representation is well known to workers in
+
+the theory of representations of Lie algebras and axiomatic quantum
+
+field theory        (see e.g.         [15])•     In the Wightman formulation of quantum
+
+field theory one assumes that the                       "smeared fields )2f(f)" generate a
+
+*-algebra and a field theory is a cyclic *-representation of this
+
+algebra satisfying additional assumptions imposed by Lorentz invariance
+
+and local commutativity.
+
+
+
+       Definition 2.3.          If     tt^   and rr^ are representations of an algebra
+
+(Xon a Hilbert space                    we say rr^ is an extension of              tt   ,   denoted
+
+1713 TT2’   if <P         3 oP(tt2) and TT1(A) 3 tt2                   for a11 A £
+
+
+        If n is a representation of an algebra CL on a Hilbert space Tf
+
+with domain ^(tt),            there is a natural induced topology on JD (tt) .
+
+
+This topology is defined as follows.                         Suppose S is a finite set of
+
+elements of          »   We define the semi-norm                        on JD(h)    as
+                                                               7
+
+
+
+                                     f       = z      ||tt (A) f
+                                                'A 6S
+
+
+where ||f|| is the Hilbert space norm of f. Note S => S '                                    implies    ||f||         ^
+                                                                                                                iD
+ ||f||       , for all f € _£) (tt) ,           We define the induced topology on ,,2) (tt)                          as
+         O
+
+the topology generated by the neighborhoods,
+
+
+                        ri (f; S, 0) = {g 6 JD(n) ;                f -   g|ls< e)
+
+
+Note n(A)               is a continuous mapping of ^D(n)                    into CX)(TT)     in        induced
+
+topology for all A €                     .
+
+             Just as there is a notion of a Closed operator there is an analogous
+
+notion of a closed representation.
+
+
+
+             Definition 2,4/          We say n is a closed representation of (PL if
+
+jC?(Tr)        is complete in the induced topology.
+
+
+
+             We show that every hermitian representation of a *--algebra can
+
+be extended to a closed hermitian representation,                                       The following lemma
+
+will be useful.
+
+
+
+             Lemma 2.5»          Suppose n is a *-representation of a *-algebra
+
+and S c d_ is a finite set of elements of                                           Then,   there is an hermitian
+
+element C € (X- such that                     ||n(C)f|| ^ ||f||          for all f £ jD (tt) .
+                                                                    O
+
+
+             Proof:          Let S = fA,,A„."/,‘ ,A 1 be a finite subset of (%.*                         Let
+             -------------               1     2           n
+D =          (n/2)     En nA*A.    and C = D + I,.             We have
+               '         i=l i i
+
+                                                                            2
+                                              + 2 (f, TT (D) f )    +
+                                                           *
+
+
+                                                                            A
+            = nE"=1||n(Ai)f ||2 ^            (E"==1||n(Ai)f||)?   ^   ||f||s,       for all f 6 D (tt)
+
+
+
+This completes the proof of the lemma.
+
+
+
+          Lemma 2.6.         Suppose n is a *-representation of a *-algebra                           OL
+
+on a Hilbert space                      Then,    there is a unique minimal closed extension
+
+■LLof rr.       Furthermore,         the domain of ^ is given by
+
+
+
+
+and n,(A)f = n(A)f for all A € (7Z and all £ €                              (jj,)
+
+
+
+        Proof:      Suppose n is a *-representation of a *-algebra ^ on a
+
+Hilbert space                    Since n is hermitian we have n(A)* => n(A*)                       for each
+
+A € CJ •        Hence,    n(A)     is closable for each A € <^.                     Let    (jj) be defined.
+
+
+                                  £> (s> = nhiaPi'^)
+
+
+
+and let ,JT(A) =         tt(A)   |<£?(tt)    for all A € (JL.      We show jt, is a closed
+
+♦-representation of                         Clearly,   n is linear,         We show ^(A)^ (tt)        c    J) (tt)
+
+for all A € CL and jr(AB)f = n;(A)/TT(B)f for all f                             £     (tt) and A, B € Ot.
+
+        Suppose A, B 6 (X »            From lemma 2.5 it follows that there is a
+
+C   €   OL such that
+
+
+                    ||tt (C) f || ^ ||n (AB) f || + ||tt (B) f || + ||f||
+
+
+for all f €          (n) .          Suppose f       € jP (tt) .   We have f €             (n(c))     Hencey
+
+
+there is a sequence {fn€                      (TT) * n =                such that n(c)fn-* n(c)f
+
+as n        “     It follows from the above inequality that
+        (a)                    f     - 0
+                      n
+
+        (b)         ||n(B) (fn - fm) || - 0
+
+        (c)         ||TT(A)7(i7(fn - fm)||                   TT (AB) (f                     0
+                                                                          n
+
+
+as n, m -• ».         From         (a)    and     (b)    it follows that f € «0 (^(B)) and
+
+
+
+        (d)         ||tt(B) (fn - f) || - 0
+
+
+as n -» ®.          From     (c)     and        (d)    it follows that n(B)f €jD(n(A)).                       From
+
+(a) and       (c)    it follows that f €jD(n(AB)) and n(AB)f = n(A)Ti(B)f
+
+Since A €       (X- is arbitrary it follows that
+
+         n(B)f =          tt (B) f   € nA6aoD(rr(A)) = £> {&)
+
+
+
+Hence, ^(B) <£)(£)            c          (t;)    for all B € (JL.      and jr(AB)f = jQ.(A)jj(B)-f for
+
+all A, B 6            and all f € JP (tt)
+
+        We show ^tt is hermitian.                        Suppose A €            and f, g € pD Qj)             Since
+
+f €0P(tt(A*))          and g Co(^(tt(A))                  there are sequences (f ,                g_€     (n) ; n = 1. 2,**
+                                                                                n                  n                 ' '
+
+such that f^-* f,             g^-* g,           n(A*)fn-* n(A*)f and nfAjg^- n(A)g as n -* ®.
+
+Using these sequences we obtain the relation.
+
+
+
+                     (f,^(A)g) = limn_00(fn,n(A)gn)
+
+                                         = limr^c0<TT<A*Jfn»gn) =               ^A*)f’9)
+
+
+for all A 6 (X- and all f,g € Jl? (tt) .                        Hence, jn is hermitian.
+
+        We show tt is closed.                         Suppose ff ; a          €l }    is a Cauchy net in
+                't/'                                            a               o
+pDCE)    in the induced topology on                           (jr,).    Then,        { tt (A) f ? a   € I0)   is a
+
+Cauchy net in             ^ for each A 6 (X-                  Since ^(A)         is a closable operator
+                                                                10
+
+
+for each A 6                 there is an f 6 .O (ir.(A)) =X^(Tr(A))                      such that lim f = f
+                                                                                                      da
+and lim rrfAjf              = n(A)f.          Hence,        f € oC? ( tt)   and lim ||n(A) (f  - f) || = 0
+           a        a                                                              a ~       a
+for all A €             »         Hence,                  is complete in the induced topology and
+
+rr is closed.
+
+         Finally,       we show           tt, is   the minimal closed extension of rr.                       Suppose
+
+rr^ is a closed extension of                        tt/    We show rr^ 3 ^            Suppose fQ€ J^(n)
+
+We show f €        cPCtt. )         and rr. (A)f          = n(A)f       for all A € (JL*
+
+         Suppose S is a finite subset of                             (X- and e > 0.     From lemma 2.5 it
+
+follows that there is a C €                                such that
+
+
+                   ||n(c)f|| * 2A€s||n(A)f ||                   for all f (EcP (n) ,
+
+
+
+Since fQ€ <P (%,) c: <^Q(n(c))                     there is a vector f                  (n)    such that
+
+||n(C)f        - n(c)f|| < e.              Hence,         for each finite subset S of                (X- and e > 0
+
+the set
+
+
+                   Q(S, e)          = ff €dD(n)y                                              < e5
+
+
+
+is not empty.               Let I         be the set of all pairs fS,e) partially ordered
+
+by the relation a = (S, e) -C {S ', e ' ) =«'                               if and only if S'           S and
+
+e'   e         By the axiom of choice there is a net ff €Q(a)rct                                             }
+                                                                                  a                      o
+Clearly,        this net is a Cauchy net in the induced topology on J? (t\)
+
+and since rr^               rr this net is a Cauchy net in the induced topology on
+
+J9(n ) ,        Since lim rr (A)f = n(A)f  = rr(A)f for all A €                                        and n         is
+^   1                    ala              o*^o                                                                   1
+closed it follows that f € X)(n.)                             and n     (A)f    = rr(A)f       for all A €
+
+Hence,     we have          tt^      n.     This completes the proof of the theorem.
+                                             11
+
+
+
+     Hereafter,    we denote by tj the minimal closed extension of the
+
+♦-representation    tt.
+
+
+     We remark that if (X is a Banach *-algebra                (i.e.., a complete
+
+normed *-algebra)     then a *-representation tt of X           on a Hilbert space
+
+   is closed if and only if     ^p(n)    =          We also note that if n is a
+
+♦-representation of a *-algebra (X- and           oDCtt)   =    then   tt(<X)   is a
+
+♦-algebra of bounded operators          This follows from the closed graph
+
+theorem.
+                                                      a
+
+
+III.      The Commutant n(<3L) 1
+
+
+
+         We define the commutant            n(<X) '   of a *-algebra             tt(£L)    of unbounded
+
+operators»         Our definition corresponds to the definition used in the
+
+Wightman formulation of quantum field theory                         (see [/5-        equation 3-8.
+
+p.   101]).      The commutant                 is a weakly closed symmetric linear
+
+subset of ($ (^) (all bounded operators on                                The commutant need
+
+not be an algebra as shown in lemma 3.2.
+
+
+
+         Definition 3.1.          Suppose n is a *-representation of a *-algebra
+
+CL. on a Hilbert space ~^C,            The commutant of           tt(££.),       denoted rr(£t)
+
+consists of all bounded operators C on                          such that
+
+
+
+                                     (f,CTi(A)g) =        (n(A*)f,Cg)
+
+
+for all f, g € ^(rr) and A € CX.*
+
+
+
+         If TT(0t)      is a *-algebra of bounded operators tt(^X) 1                       is simply
+
+the commutant of tt((%)            defined in the usual manner.                    The above definition
+
+of the commutant is essentially the weakest definition,                                   i.e..   this
+
+definition gives the biggest commutant.                     ,
+
+         One can easily check that the commutant rr(CO 1                          of a *-representation
+
+tt has    the following properties.
+
+
+
+         (i)   niCL) ' is a complex linear manifold
+
+       (ii)    tt(£X)   '   is symmetric,   i.e ,     C 6   tt(^X)   '   => c*    € n(<X) '
+
+     (iii)     u(Cl)’ is closed in the weak operator topology
+
+       (iv)    If tt is the closure of rr then tt(^jL) ' = tt (Ct) '
+                                                                             \3
+
+
+
+       In general                    '    is not an algebra as the next lemma shows
+
+
+
+       Lemma 3.2.          Let              be the free commutative algebra on one hermitian
+
+generator Aq         (i.e., OL consists of all polynomials P = ct0I +                                                       +
+
++ anA^ with complex coefficients with multiplication and the *-operation
+
+
+defined in the obvious manner).                                          Let n be a *-representation of OL on
+
+a Hilbert space                    Then,             tt(0£_)         1    is an algebra if and only if Tr(Ao)
+
+is essentially self-adjoint*
+
+
+
+       Proof:        Let (X       and        tt   be as described in the lemma. We begin by
+
+showing that         tt(££)   1 consists of those bounded operators which commute
+
+with   tt (Aq) ,   i.e„,      those operators C such that
+
+
+
+       (a)     (f,CTr(Ao)g) =                (n(Ao)f,Cg)                       for all f, g € ^(n).
+
+
+
+Clearly,     if C € n(£X)' then C satisfies relation                                                    (a).   Conversely,
+
+if C satisfies:relation                      (a)        then
+
+
+         (f,Cn(A^)g) =            (f,Cn(Ao)n(A^“1)g) =                               (tt (Ao) f, Cn (Aq) rr (A^-2) g) =
+
+
+                              =   ................................       =    (n (Aq) f > Cg)
+
+
+for all n = 1,2,                  and all f, g € <P (n) .                             Since each element of 0£ is
+
+a polynomial in Aq it follows that C 6 tt(CL.) ’
+
+       Now suppose that rr(Ao)                          is essentially self-adjoint.                                Let ;{E(\) ;
+
+-® < X < +«>} be the spectral resolution of                                            tt(A       ) .    By the remarks in
+                                                                                              o
+section I a bounded operator C commutes with rr(Ao)                                                       (i.e*,.   C satisfies
+
+relation      (a))    if and only if CE(A.) = E(A.)c for all -c® < X < +«>.                                                 Hence!
+Tr(cXr) 1 = {E(\) y -00 < A. < +00} ' and n(<3L) '                      is a von Neumann algebra.
+
+      Next suppose        tt(£3I)      ' is an algebra,.                We begin by showing that
+
+the Cayley transform of                 tt(Ao)   is in         tt(£X)         Let U be the partial
+
+isometry from Range(n(Ao + ii))                    onto Range(n(Ao - ii))                    defined by
+
+
+
+         Uf = 17(A0 “ il)g                   where            f =   tt(Ao    + il)g»
+
+
+Note Uf = 0 for f € Range(n(AQ + il))’^*.                                Note U* is a partial isometry
+
+
+from Range (rr (Aq - ii))              to Range (rr(Ao + il))                defined by
+
+
+
+         U*f =   tt(Ao    + il)g            where f = ^(A^^ - il)g«
+
+
+
+We have that U*U = E               and UU* = E                where E        and E       are the hermitian
+                             +                                           +           -
+
+projections onto Range(Tr(Ao + ii) )                          and Range(n(AQ - ii)),               respectively.
+
+      We show u €        tt(CJC)          From the definition of U it follows that
+
+
+
+            (f, Un (Aq) g) =            (f,UTT(Ao + ii) g)              - i(f,Ug)
+
+                                   =    (f,TT(Ao - il)g)             - i (f, Ug)
+and
+
+            (TT(Ao)f,Ug) =              (U*n(Ao)f, g)
+
+                                   =    (U*n(AQ - il)f, g)               - i (U*f, g)
+
+                                   =    (n(AQ + ii) f, g)           - i(f,Ug)
+
+                                   =    (f, n(AQ - il)g)            - i (f, Ug),            all
+
+
+Hence,   U € n(OL) ' and since              tt(<>£)   '       is symmetric U* € TT(£fc)                Since
+
+      ' is an algebra we have I - E                           = I - U*U and I - E                 = I - UU*
+                                                          +                                  —
+
+are contained in                          it follows that
+                                              *5
+
+
+
+            (f, (I - E ) g) =    (f, (I - E )g)       + i (f, (I - E ) TT (A   + il)g)
+                      +                    T                        +        O
+
+                              = i(f, (I “ E+)n(Ao)g)
+
+                              = i(n(Ao)f, (I - E+)g)
+
+                              = i ( (I - E+)n(Ao + i I) f, g)          -   (f, (I - E+)g).
+
+                              = “(f, (I “ E+)g)
+
+
+
+for all f, g € <P(tt) .   Since               is dense in            we have E    = Ii
+
+A similar calculation shows E          = I.        Hence,   TT(Ao)    has deficiency spaces
+
+09+ = oP_ = (0).     Hence,     if n(«^L) '    is an algebra 17(Ao)         is   essentially
+
+self-adjoint.    This completes the proof of the lemma.
+IV.       Self-Adjoint Representations of ^-Algebras
+
+            To each ^-representation             tt   of a ^-algebra CC-there is a naturally as­
+
+sociated adjoint representation it* of CL-                          The domain and action of it* are
+
+given by
+
+
+                                      S> ("*>
+and
+                                 Tr>:<(A)f = Tr(A*)*f               for all f e jD (tt*)
+
+
+Just as the hermitian adjoint of a hermitian operator may fail to be hermitian,
+
+the hermitian adjoint representation                       tt*   may fail to be hermitian.          In analogy
+
+with the definition of a self-adjoint operator we define self-adjoint representa­
+
+tions as those hermitian representations which are equal to their adjoints (i.e.
+
+tt   =   tt*).    A ^'-representation      tt    is self-adjoint if and only if $            (tt)   = JD (tt*).    We
+
+show that just as every hermitian extension A^                          of an hermitian operator A                 is
+
+an hermitian restriction of A*, so is every hermitian extension tt^                                  of an her­
+
+mitian representation            it    an hermitian restriction of              it*.
+
+
+
+            It is easily seen that for ^'-representations                 tt   each operator        C e tt(££,)'
+
+maps         jD (tt)   into X* (tt*).    It will follow that the commutant of a self-adjoint
+
+representation is necessarily a von Neumann algebra.
+
+            We next examine the problem of reducing subspaces for ^'-representations.
+
+If it is a ^representation of a C*-algebra CL on a Hilbert space V- and m c#
+
+is a linear manifold which reduces                    tt    (i.e.   tt(A) rf) C M      for all A e ££ ) then
+
+the hermitian projection                        onto the closure of             is in the commutant,
+
+                 This is not true in general for unbounded ^'-representations as will be
+
+shown by a simple example.                 However, we will show that if                tt   is a self-adjoint
+representation of a ^-algebra                        on a Hilbert space Tt and               (it) is a re­
+
+ducing subspace for              tt   such that it restricted to Tf\ is self-adjoint then the her­
+
+mitian projection                     onto the closure of /X) is in the commutant ’niCLY -         Con­
+
+versely, if E e                       is a hermitian projection then       IfYl = £^^(11) is a reducing
+
+subspace for    tt         such that ir restricted to yyi is self-adjoint.            Hence, for self-
+
+adjoint representations there is a one-to-one correspondence between reducing
+
+self-adjoint subspaces and hermitian projections                      E e •n^CC,)'.
+
+      Finally we introduce the notiation of when one algebra dominates another
+
+algebra and show that a ^-representation it is self-adjoint if tt(CI)                        contains a
+
+dominating subalgebra which is self-adjoint.
+
+      Lemma 4.1.             Suppose tt is a ^-representation of ^-algebra               (X- on a Hil­
+
+bert space   Tt.           Let
+
+                                         P ("*) = nA „ «D U(A)*)
+                                                   A ecL
+and let
+                                        tt*(A)   =            (tt*)     for all A e {X .
+
+Then, tt* is a closed representation of O' (it* might not be a                         representation)
+
+which extends        tt.     We call      tt*    the hermitian adjoint of tt.
+
+      Proof:     Let tt* be defined as in the lemma.                     We show that tt*(B)    P (tt*) C
+JQ(tt*) and iT*(AB)f = tt*(A)tt*(B)f for all A, B e                       and f e jQ(tt*).    Suppose
+
+f e JD(tt*) and g e £> (tt).              We have
+
+               (TT(A*)g, TT*(B)f) = (TT(A*)g, Tt( B * ) *f)
+
+                                            = (TT(B*)TT(A*)g, f)
+
+                                            = (TT((AB)*)g, f)
+
+                                            = (g, u((AB)*)*f)
+
+                                            = (g, TT*(AB)f)
+Since | (t1*(A*)g, tt*(B)£)| < K || g ||     for all g e ^ (tt) with K = || Tt*(AB)f ||             it fol­
+
+lows that Tr*(B)f e         (it(A*)*).     Since this is true for all A e                 we have
+
+TT*(B)f e              Hence, n*(B) j£>(n*) C £?(■**) for all Be#. and we have
+
+                          (g, TT*(AB)f) = (TT(A>:<)g, TT*(B)f)
+
+                                           = (g, TT*(A)ir*(B)f)
+
+for all     g e jQ(Tr) and f e JD (tt*).      Since          (it)   is dense in       we have     iT*(AB)f =
+
+ir*(A)ir*(B)f for all A, B e # and f e cP (it*).                    Hence, tt* is a representation
+
+of#.
+
+       It is clear that it* is an extension of tt                   since tt(A*)* 3 tt(A) for all A e #.
+
+        Finally, we show tt* is closed.             If {f :         n e l}   is a Cauchy set in the in-
+                                                         a
+duced topology on <P( tt*).        Then, it follows from the fact that tt(A*)* is a closed
+
+operatd|fi that if lim f = f then f e 0(tt(A*)*) and lim Tr*(A)f = Tr(A*)*f. Hence,
+                      a a                               ot      a
+f e J[)(tt(A*)*) for all A e£L.            Hence, f e <P(tt*)          and J& {tt*)       is complete and,
+
+therefore, tt* is closed.         This completes the proof of the lemma.
+
+       Lemma 4. 2.        Every hermitian extension of a *-representation it is an her­
+
+mitian restriction of tt*.        (In fact, if tt, tt^ are hermitian and tt^ 3 tt then tt* 3
+
+TTj* 3 TT^ 3 TT. )
+
+       Proof:        Suppose tt is a ^--representation of a *-algebra # on a Hilbert
+
+space X and tt^ is an hermitian extension of tt.                       Since    tt^(A*)   3tt(A*) for all
+
+A e Ct- we have tt(A*)* 3 tt^(A*)*.            Since   tt^      is a *-representation we have
+
+tt (A*)* 3tt (A)      for all A e # .        Hence, we have
+
+                             tt(A*)* 3 tt^(A *)* 3 tt^(A)           3tt(A)
+
+for all A e             Hence, tt* 3 tt^* 3 tt^ 3 tt.          Hence tt^ is an hermitian restric­
+
+tion of it* and the proof is complete.
+             Definition 4. 3.               We say a ^-representation                      it   of a *-algebra OL is maxi­
+
+mal if every hermitian extension of                                tt   coincides with           tt.
+
+
+
+             Definition 4. 4.               We say a representation                  tt    of a ^-algebra is self-adjoint
+
+if     tt    is hermitian and                tt   =   it*.    We say    tt    is essentially self-adjoint if the closure
+
+of     it    is self-adjoint.
+
+             It follows from lemma 4.1 that a hermitian representation it is self-adjoint
+
+if and only if ^ (tt) =                                       A self-adjoint representation is maximal by lemma
+
+4. 2 and, therefore closed.
+
+             We note that if               tt*    is hermitian then            tt*   is self-adjoint.             This may be seen
+
+as follows.           Since          tt*    is hermitian we have                tt**      Z) tt* and since         tt*   is an her­
+
+mitian extension of                   tt    it follows from lemma 4.2 that                        tt**   C tt*.    Hence, we have
+
+tt *   =    tt**   and   it*     is self-adjoint.
+
+             We leave open the problem of the general analysis of                                         tt**.    We remark that
+
+we have found a simple example of a closed ^--representation such that                                                     tt   is not
+
+self-adjoint but               tt*    is self-adjoint and hence                  tt**       is a proper extension of              tt.
+
+
+
+In general we do not know whether                                tt**   is hermitian.
+
+             The next lemma shows that operators in the commutant of a *-representa-
+
+tion map           o£?(tt)     into        oD(tt*).
+
+
+
+
+             Lemma 4. 5.             Suppose             tt   is a *-representation of a *-algebra QL 017 a
+
+Hilbert space            u. Suppose C e tt(£C.) '.                           Then C ^(tt) C JP(ir*) and Cir(A)f =
+
+tt*(A)         £ for all A e                      and f e jD (tt).
+
+             Proof:      Suppose             tt    is a *-representation of                 OL and C e tt^E.)'.           Then, for
+
+all A e a and fjg e JD (tt) we have
+
+                                                  (f, CTT(A)g) = (TT(A*)f, Cg)
+                                                             20
+
+
+
+
+Since | (irCA^f, Cg) | <K||f||            for all f e.               (with K = || CTr(A)g || )    it follows
+
+that Cg e JD(tt(A*)*) and
+
+                                         (f, CTr(A)g) = (f, u(A*)>:<Cg)
+
+Since    JD (ir)   is dense in           we have      CTr(A)g = Tr(A*)*Cg.         Since   Cg e J") (tWA*)*)
+
+for all A e OL we have             Cg e                Hence,        C^(tt)C               and Cir(A)f =
+
+Tr*(A)C f for all A e Q, and f e J3(ir).                     This completes the proof of the lemma.
+
+        Lemma 4. 6.          Suppose rr is a self-adjoint representation of a ^-algebra
+
+Then the commutant             tt (d)'   is a von Neumann algebra.               Furthermore for each
+
+C e Tr(^)1     we have        C ^(tt) C ©CMit)      and CTr(A)f = tt(A)C^ f for all A e £L and
+
+f e JD (it).
+
+        Proof:      Suppose tt is a self-adjoint representation of ££-•                      Since                 =
+
+J) (tt*) it follows that for each C e irUX)' we have C                              C cP(Tr) and Cir(A)f =
+tt(A)C f    for all A e OL and f e x> (•it).              We show tt(OL)1         is a von Neumann alge­
+
+bra.     Since     Tf(CL)'    is a symmetric weakly closed linear manifold in                      6          it
+
+suffices to show that          C , C^ e tt(^)'        implies the product C^C^ e Tr(^C.)'.             But,
+
+if C^, C^ e Tr(CO'           we have that
+
+                             C1C2Tr(A)f = C2Tr(A)C1f = tt(A)C C2f
+
+
+for all A e a and f e jTX/n).               Hence, C C            e tt(OL)'-   This completes the proof of
+                                                         X   Ld
+
+the lemma.
+
+        We turn next to the problem of reducing subspaces.                         If it is a representa­
+
+tion of anaigebra              on a Hilbert space                 and $7 is a linear manifold contained
+
+in <yD(Tr) we say rr\ reduces              tt   if it(A ) fT\     C m for all A e d •            We denote by
+
+it      the representation it restricted to Tf\ .                    If it is a ^-representation of a
+
+^-algebra d- and               is a reducing subspace then the restriction it W\                    is a *-
+representation.
+
+         For a bounded ^-representation of a ^-algebra ^7 for each reducing sub­
+
+space m the hermitian projection E                      onto the closure of /T\ is in the commutant
+
+TT (CO'-   This is not true in general for unbounded ^'-representation.                       This may be
+
+seen as follows.
+
+         Let OL be the free commutative algebra on one hermitian generator A •
+                                                                 2
+OL consists of all polynomials in A^.                   Let X = L (R) and let                (it) = {f e   ;
+
+f is a     C   -function and d f/dx          e /-f for all n = 1, 2, . . .j .      We define a *-repre-
+
+s entation of         on       defining
+
+                                          (tt(A )f)(x) = - i ^ (x)
+                                              o                  dx
+for all f e      /") (it).   It is easily shown that        tt   is a *-representation (in fact rr is
+
+self-adjoint).
+
+         Let   rr\ be the linear manifold of all C oo -functions which vanish outside the
+closed interval [0,1].          Clearly, Wl is a reducing subspace for               it.   The hermitian
+
+projection E         onto the closure of ft) is given by
+
+                                        (Ef)(x) = f(x)                x e [0,1]
+
+                                                  = 0                 x (£ [0,1]
+
+for all f e ^*1 .        However, E       is not in tt(0L )1      since for   f, g e J? (tt) we have
+
+                       (Ef, TT(Ao)g) - (u(Ao*)f, Eg) =
+
+
+                                  - i   J (f(x)         g(x) - (^)(x)g(x))dx
+
+
+                                  = i (f (l)g(l) - f (o)g(o))
+
+Since this expression does not vanish for all f, g e X5(tt^E *£ irC^)'.
+
+         We say that a reducing subspace ff) is self-adjoint if tt///)                     is a self-
+
+adjoint representation.           The next theorem shows that for self-adjoint represen­
+tations there is a one-to-one correspondence between self-adjoint reducing sub­
+
+spaces and hermitian projections in the commutant.
+
+          Theorem 4. 7.      Suppose       tt   is a self-adjoint representation of a *-algebra
+
+on a Hilbert space              Suppose E e •n-(^L)1                 is an hermitian projection.              Let ff] =
+
+E JO(tt).      Then ff] reduces       tt   and the restriction tt l/n                 is self-adjoint.
+
+          Conversely suppose )W C JP (tt)               is a reducing subspace for                    rr and -rr \m
+
+is self-adjoint.      Then, the hermitian projection E^                          onto the closure of JT7 is in
+
+the commutant tt w-
+
+          Hence, for self-adjoint representations there is a one-to-one correspondence
+
+between hermitian projections in                        )'     and self-adjoint reducing subspaces.
+
+          Proof:    Suppose tt is a self-adjoint representation of a ^-algebra a.
+
+Suppose E e tt(^)1        is an hermitian projection.                     Let fT) - E{7£}(tt).         From lemma
+
+4. 6 it follows that E «£? (tt) C «P(tt) and tt(A )Ef = Ett(A )Ef for all A e (£, and all
+
+f e £)( tt).    Hence,    me          (tt) and               r educes     it.
+
+
+          We show             is self-adjoint.           Suppose £ e ft)             and f e <P((Tr/m )*).        Then
+
+f e ^D((Tr(A)/m )*)       for all A e ££ .          Hence, for each A eCL                        there is a constant
+
+K        depending only on A         and f such that                | (f, Tr(A)g)|          || g ||   for all g e ft) .
+    A                                                                                   A
+Since Ef = f we have for all               g e JD (tt)
+
+                          |(f,TT(A)g)| = |(Ef,TT(A)g)| = |(f,ETT(A)g)|
+
+                                            = |(f,Tr(A)Eg)| <KA||Eg|| <KA||g||                         .
+
+Hence, f e jD(tt(A)*) for all A e                   .        Hence, f(p'^(Tr*) = ^D(tt).              Since   Ef = f
+
+we have f e E «iQ(tt) =       ft).    Hence, f e             P(( TT /ft) )*) implies f e fY) and, therefore,
+TT /•m    is self-adjoint.
+
+          Conversely, suppose ft) reduces                     tt   and n/ft]     is self-adjoint.          Let E be
+the hermitian projection onto the closure*^ KT\ .                     Clearly, we have E JD (tt) ovn.
+
+We show that yY) Z) E JO(tt).            Suppose f e E^D(tt).           Then f = Ef^ with           e JDOt).
+
+We have for all g e m
+
+                                         (f,TT(A)g) = (Ef^ Tr(A)g)
+
+                                                       = (f^ ETr(A)g)
+
+                                                       - (f^irtAJg)
+
+Since      e   jOW C                we have that               e JD (tt(A)*) for all A e (X- -       Hence,
+
+for each A zOL         there is a constant K                  depending only on A       and f e JD (rr(A)*)
+                                                        J\.                                  1
+(Ka = || ^(A)*^ || )   such that     |^l5TT(A)g)| < KA||g||           for all g e )Tl C <£> (it).    Then,
+
+from the above equation it follows that
+
+                        |(f,TT(A)g)| = |(f1,TT(A)g)| < KA||g||
+
+for all g e YY\ .      Hence, f e cO((tt(A ) |/y) )*) for all A e QC and, therefore,
+
+i a JD ((Tr\jr) )*).   Since irlm         is self-adjoint we have £ e ff) .             Hence,   E JD (tt) C ff)
+
+and, therefore, E jd (tt) = m.
+
+        Since E JD(tt) = IT)    C           (tt)    it follows that for f, g e <P (tt) we have
+
+                             Or(A*)f,Eg) = (f, Tr(A)Eg) = (f, ETr(A)Eg)
+and
+                              (f,E7T(A)g) = (Ef,TT(A)g) = (TT(A*)Ef,g)
+
+                                                   = (Etr(A'i;)Ef, g) = (ir(A*)Ef,Eg)
+
+                                                   = (Ef, Tr(A)Eg) = (f, Ett(A)Eg)
+
+Hence, (Tr(A*)f, Eg) = (f,Eir(A)g) for all A e QL and                    f, g e JD(tt).     Hence,
+
+E e            This completes the proof of the theorem.
+
+        Remarks.       We note that in the proof of the second part of the above theorem
+
+we did not use the fact that        tt    was self-adjoint.         Hence, we have the slightly
+
+stronger statement for the second part of Theorem 4. 7.                      If   tt   is a *-represen-
+tation of a *-algebra a- on a Hilbert space H and                                    jd (tt)     is a reducing
+
+subspace for tt such that Tr|jn                 is essentially self-adjoint then                      e
+
+where               is the hermitian projection onto the closure of                     TYl .
+
+          Using some of the ideas of Nelson [7] we define the notion of domination as
+
+follows.
+
+          Definition 4. 8.       Suppose it is a ^-representation of a *-algebra <x on a
+
+Hilbert space            X ■ Suppose S C dX is a symmetric linear subset of                                  .    We
+
+say tt(S)        dominates       tt(££)   if for every A eCL there is a               B e S      such that
+
+|| tt(B)f || > || Tr(A)f ||    for all f e      (tt).    We say S       dominates              ^ tt(S)      dominates
+
+TT (Oi) for every '^-representation tt of                      .
+
+          A very simple example of an algebra and a dominating subalgebra is the fol­
+
+lowing.      Let a be the free commutative algebra on two hermitian generators A
+
+and B.         oc consists of all polynomials in the commuting elements                             A and B.           Let
+                                                                                                     2       2
+<3-1 be the *-subalgebra of CX- consisting of all polynomials in H = A                                    + B .   It
+
+is simple matter to show that Tr(fX^)                   dominates      tt(££J   for every *-representation
+
+tt   of   @i .
+
+          Lemma 4. 9.          Suppose tt is a *-representation of a ^-algebra                             and sup­
+
+pose         ^   is a *-subalgebra such that             tt(££|)    dominates     TT(dL) .      Let tt^ be *-
+
+representation of                  defined by tt^(A) = tt(A) for all A e                        and JD (tt ) =
+
+X) (it) (i. e.     TT^ = TT IdX,) then, if tt^     is self-adjoint then tt is self-adjoint.
+
+          Proof:         Let tt and TTj.     be ^'-representations of dX and                 <*ct   as described
+
+in the lemma.            Since tt^, = tt^* we have        ^(TTj*) =              =    JO (tt).      Since
+
+           D                  we have               oID(tt).       Since X) (tt*) Z) JO (v) we have
+
+JOM=              tt*)    and it = tt*.    This completes the proof of the lemma.
+                                                 2.5
+
+
+
+      We remark that the converse of this lemma is false.          In example 3 of the
+
+next section we describe a self-adjoint representation of the free commutative
+
+algebra on two hermitian generators A and B            such that the   subalgebra genera-
+              2      2
+ted by it(A       + B )   is not self-adjoint.
+ V.     Some Examples of Unbounded Self-Adjoint Representations.
+
+             In this section we examine three examples of self-adjoint representations of
+
+ *-algebras.      The first two examples are well known.              The first example is a representation
+
+of a commutative ^-algebra by an algebra of functions on a measure space.                   The second
+
+ example is the "Schrodinger" representation of the commutation relations.                 The third
+
+ example is a modification of an example constructed by Nelson in [ 7 ]•                Nelson con­
+
+ structed an example of two essentially self-adjoint operators A and B defined on a
+
+common dense invariant domain £, such that ABf=BAf for all f 6$, but the spectral
+
+projections of A fail to commute with the spectral projections of B.                By modifying
+
+Nelson's example we construct an irreducible self-adjoint representation of the free
+
+commutative algebra or on two hermitian generators on an infinite dimensional
+
+Hilbert space.
+
+             Example 1. For the first example we consider the free commutative algebra                 CL
+
+      •,onn-hermitian generators A^, . . . . , A^.          consists of all polynomials
+
+             p= W°[ml) A^m^ where A^ ■ ssr ' ■                           A2m2. . . . A^n
+                                                                                       n and
+                                                                                         and the
+                                                                                             the
+
+o'([m]) are complex numbers with o;([m]) f 0 for only a finite number of [m].                Let
+
+i£be a regular Borel measure on Rn and let VL= l2 (ftn, ^ 1 be the Hilbert space
+
+of;    all p -measurable square integrable functions on Rn.              We define a *-repre­
+
+sentation rt oh           by the relations,
+
+             (Tt (F)f)(x r ... X n)=P(X r • • -X n)f(x r • ■ • X n)
+
+for all P=P(A^,r. . • An)e CL-        We take the domain of Tt to be
+
+
+
+
+Clearly, TT is a *-representation of 01.
+                                                     0.1
+
+
+
+             We will show that tr is a self-adjoint representation of CL.       First we will
+
+show rr (P*)* = tr (P) for all Pe         To prove this it is enough to show TT (P)D TT (P*)*
+
+since tt (P*)*j> tt (P)~for all Pc QC.      Suppose c ' r'::)    fe & (TT (P*)*) and TT (P*)*sg.
+
+since
+        J (P (X)          (X             (K) = o
+
+
+for all he ^ (tt) and in particular for all square integrable functions h of compact
+
+support it follows that g()() = P()( )f(y.) p. -almost everywhere.        Let
+
+             fn(X) = f(X) ^ | X |Sn
+
+                   = 0    for j X |5,1
+
+Then, we have
+
+
+
+
+as n-*<B by the Lebesque dominated convergence theorem.               Hence, f&£ (tt (P) ) and
+
+tt (P)f=g.    Hence, we have tt (P*)* = rr (P) for all Pe CL and, therefore,
+
+             .£("*)= nPe0L^ (n (?)*) =0pe<x ^            (p*);= ^ (tt).
+
+Hence, rf is self-adjoint.
+
+             Example 2.     For the second example we take the Schrodinger representation
+
+of the canonical commutation relations for a finite number of cjegrees of freedom:                 Let
+
+(X be the free non-commutative algebra of all polynomials in the hermitian generators
+
+                               modulo the two-sided        ideal generated by the relations 1
+                                                        J.%
+
+
+
+
+for i, j = 1,. . ., s.
+                                                                  2 g
+            We define a ^-representation tt of              ){ = L (R ) by defining
+
+            ("(q,)*)!*) = %if(x).
+
+            ("(PjfMX)'                 ^(x).
+
+
+We define Jb (tt) to be Schwartz's space Jj,(RS) of all complex infinitely differentiable
+
+functions which together with their derivatives decrease faster than any polynomial
+
+in                       •
+
+            Clearly tt is a ^-representation of tX,             It follows from [ 5 , Part II] fit'
+                                                        g
+[ 13] that the induced topology on ^ (rt)                   ) is equivalent to the Schwartz space
+               s                           s       2    2
+topology on ^(R ).           Let H = § S        j^. +q^. and let OL^ be the *-subalgebra of £X
+
+consisting of all polynomials in H.            It is well known that rr (Hn) = (^({| Mf)2- A))n/4(RS)
+
+
+is essentially self-adjoint for all n=l,2,. . . .             It is shown in [ g , Part II] or [|3] that
+
+a function f* M = L2(RS) is in^. (RS) if and only if fe ^ (TT (Hn) ) for all n = 1,2,.. .
+
+and furthermore the topology on ^.(RS) defined by the semi-norms// f // i = || TT (Hn)f//
+                                                                   g
+is equivalent to the Schwartz space topology on^,(R ).
+
+            It follows from this remark that IT (£^) dominates TT (OL) (in fact one can
+
+easily check that^I^, dominates (X).            Since       (RS) is complete it follows that
+
+tt   and tt j -       are closed ft-representations of dfand                    Since
+
+TT^(Hn)=TT (Hn) is self-adjoint for all n=l, 2,. . .          it follows that
+
+                    =A“=1^(h1(Hn)*)                ”=1^(rt1(Hn))-^(TT1)
+
+
+Hence, tt^ is self-adjoint and from lemma 4. 9 it follows that Tt is self-adjoint.                    •
+
+            We show tt is irreducible.         It is well known that tt (q^) = X .)             and
+
+tt (P.) =   -i(d /5 X j)| ^ (^S) are essentially self-adjoint for i =11,. . . , ,5.        If
+                                                     -24
+
+
+Ctf7r(0O', C must commute with tt (q,) and 7r(P.) for i=l......... , S.         Since these operator's
+                                    il         1                                                  <»
+are self-adjoint C must commute with their spectral projections and therefore, C must
+                                                                                   S
+commute with the unitary operators.           U(k) and V(g) for all k, y£R , where
+
+         (U(k)f)(x)=(exp (iTr^f^k.q.) )f)(x)=elkf Xf(x)
+
+
+           (V(y)f)(x)=^xp(i7r(il j^y.p') )f) (x)=f(x+y)
+
+
+It is well known that these operators (defining the Weyl-Schrodinger representation of
+
+the commutation relations) are irreducible (see e. g. [17]).                Hence, C              implies
+
+C=V I.     Hence, tt is irreducible.
+
+         We note that although tt is irreducible not every vector f£\$ (tt) is cyclic.                    If
+
+f ££ (tt) has compact support then every g 6-7r(£t)f            has support in the same compact
+
+set and, therefore, f is certainly not cyclic for tt.
+
+         Example 3. By; modifying an example of Nelson [ 7 ] we construct an irreducible
+
+representation on an infinite dimensional Hilbert space of the free commutative algebra
+
+on two hermitian generators.          Let (X be the free commutative algebra on two hermitian
+
+generators A and B. £Lis *-isomorphic to the *-algebra of all complex polynomials
+                                      2
+in two real variables.        Let H =L (V) be the Hilbert space of all Lebesque measurable
+
+square integrable functions in the square V= fey);| x| <7r, | y |                      .   Let .ft (tt)
+           GO
+be all C        -functions '(infinitely differentiable) on V satisfying the boundary conditions.
+
+
+
+                                                           for all | y | < tt
+
+
+
+
+                                            (x.tt)    for all | x| ^tt
+
+
+for all n=0, 1, 2, .11. .     We define
+                                                         3°
+
+
+          (tt (A)f)(X ,y) =                 (X ,y)
+
+
+          (Tt(B)f)(x ,y) =                  (x ,y)
+
+for all       (rr).       Clearly tt (A)^ (rr)C& (tt), tt (B)^ (Tt )C^ (tt ) and it (A)rr (B)f =
+
+rr (B)TT (A)f for all fe ^ (it).       We define n (P) for all P = P(A, B)^^ polynomials in A
+
+and B by the relation tt (P)f = P(tt (A), rr (B))f for all fc ^ (tt).            Clearly rr is a
+
+*-representation of Of.
+
+          Lemma 5.1.              rr (An) and Tt (Bn) are essentially self-adjoint in ^ (TT) for
+
+all n = 1, 2,.. . .
+
+          Proof:          Consider the function f(\ ,y) of the form
+
+                                                              (a)
+
+                                                 00
+where m is an integer and h(y) is a C                 -function with support strictly inside the
+
+interval (-TT, n) (i. e. , there is a 6 >0 depending on h such that h(y) = 0 for
+
+I y^TT-fi ).      one can easily verify that fe 21 (tt).            We claim that f is an analytic
+
+vector for rr (An).         In fact, we have
+
+
+          (TT(A)fHx >y) = 1rt1-y/2rr)f(x ,y)
+                      \
+
+                  n Tr                        T\lc
+          (tt(A ) fftc .y) = (w-y/arp)               f(x.y)
+
+          i/n(A,I)kf;|$//m/4/”k/|f«.
+
+
+Hence, we have
+
+       5T "       i|TT(An)kfl> Sk^ Ylfll^ jlfllH? 1^
+            k=°             k'i                  k=°          k'!
+
+
+                                        = II f)/ exp (s( IW)*
+                                                   31
+
+
+
+
+Hence, f is an analytic vector of .rr (An).
+
+     Since the linear span of functions f of the form (a) is dense in tt it follows that
+
+^ (Tr) contains a dense set of analytic vectors for tt (An).        Hence by a theorem of
+
+Nelson [ y , Lemma 5.1], tt (An) is essentially self-adjoint.
+
+     Next consider the function g(x,y) of the form
+
+     g(x,y) = k(x)eimy                                  Ck>)
+                                           00
+where m is an integer and k(x) is a C           -function which support strictly inside the
+
+interval (-Tr, TT).   We claim g is an analytic vector for tt (Bn).      In fact, we have
+
+     (TT (B)g)(x,y) = m g(x,y)
+
+     (TT(Bn)g)(x,y) = mng(x,y).
+
+Hence, g is an analytic vector for tt (Bn).         Since the linear span of vectors g of the
+
+form (fc) is dense in H it follows that ^ (tt ) contains a dense set of analytic vectors
+
+for TT(Bn).     Hence, tt (6°) is essentially self-adjoint.
+
+     Lemma 5.2.        TT * is hermitian and therefore rr * is self-adjoint.
+
+     Proof:
+
+     Suppose tt * is the hermitian adjoint of tt and f, gc ^ (tt *).      We show that
+
+(f, TT*(AnBm)g) = (Tr *(AnBm)f, g) for all n,m=0,l,2, ....           Since rr (An) and
+
+TT (Bm) are self-adjoint by lemma 5.1 we have tt *(An)f = rr (An) f and
+
+tt *(Bm)f = TT (Bm)f for all fc ^ (tt*).    By lemma 4.1 we have that rr * is a
+
+representation of Q- and rr *(P)^ (tt *)C.£ (tt *) for all Pe CL.     Hence we have for
+
+f.gs & (rr *)
+                                                      32-
+
+
+
+
+        (f, Tt *(AnBm)g) = (f, TT *(An)ir *(Bm)g)
+
+
+                             = (f, TT (An) Tf (B^g)
+
+                             = (TT*(An)f, TT(Bm)g)
+
+
+                             = (TT*(Bm)TT*(An)f,g)
+
+
+                             = (TT*(BmAn)f,g) = (TT*(AnBm)f,g)
+
+
+        It follows that for Pc EL with P =                  m)AnBm and f, gc ^ (it *) we have
+
+
+                          rnama(n>m)
+                              m
+                                     (f,Tt*(AB )g)
+
+                      =                   (TT*(AnBm)f,g)
+                             nm
+
+                      = (TT *(P*)f, g).
+
+Hence, rr * is hermitian.           By the remark after definition 4. 4 it follows that TT * is
+
+self-adjoint.
+
+        We remark that a closer analysis shows that n itself is already self-adjoint.
+
+        Lemmh.g..3.       Let U(o;) = exp (iatr (A) ) and V(B) = exp (i/3TT (B) ) for all real
+
+a./S.     ThenTT(0£) =-£u(G!), V()3), -<* < oi,p<           .
+
+        Proof:    Suppose C is bounded operator on^H which commutes with (U(o:) and
+
+V($ for all real a and (3.          Then for f, ge ^ (tt ) we have
+
+
+        (f, CTT (A)g) - lim                C(U(a)-I)g)
+                         O'—* 0
+
+                   = lirt) ( (-io;) 1(U(-Q')-I)f, Cg)
+                     or* 0
+
+
+                  =(^T(A)i, Cg)
+                                                     33
+
+
+
+
+since by Stone's Theorem (io;) 1(U(o!)-I3£*tt (A)f as a-t)0 for f e              (tt)C^ (tt (A) ).
+
+
+Similarly one finds (f, Ctt (B)g) = (tt (B)f, Cg) for all f, gs ^ (rr).         By induction
+
+we have (f, Ctt (AnBm)g) = (tt (AnBm)f, C, g) for all f, ge ^ (tt ) and n, m = 0,1,2, 111. .
+
+Hence, (f, Ctt (P)g) = (tt (P*)f, C, g) for all P« ££ and f, g« ^ (rr). Therefore Ce tt (^Z./.
+                                  r
+     Conversely suppose Ce tt ((X) .               Then we have (f, Ctt (A)g) = (tt (A)f, Cg) for
+
+all f, ge ^ (tt ).   Since rr (A) is essentially self-adjoint it follows that C commutes
+
+with the spectral projections of tt (A) (see section I) and hence C commutes with
+
+     U(Qf) ■J e^ dE(X ) with rr (A) =J'X dE(X )
+
+
+and similarly C commutes with V(^) for all (3.                  This completes the proof of the
+
+lemma.
+                                         ij.
+     Lemma 5. 4.       tt
+
+     Proof:     Let R be the von Neumann algebra generated by {u(q;), VJ03);
+
+              •v                              '   '
+-® < a, I3< +«J. By lemma 5.4 we have TT (fig) = R .
+
+     One can easily check with the aid of Stone's Theorem that for 0< q;$2tt and
+                                     2
+0:$/?<2tt , we have for all fe If = L (V)
+
+
+     (U(Q!)f)(x,y) = f(x+Q!,y)          -tt^x<tt-q;
+
+                           “IV
+                     ^ e         f(x+a:-2Tr ,y)   TT-a^xrg-TT
+
+
+     (U(-Q;)f)(x,y) = f(x-a;,y)           Q!-TT<:x^rr
+
+                           e^f (x-a+2TT ,y) -tt$x<g!-tt
+
+for all -rr $ y^ tt , and
+     (V(fi)f) (x,y) = f(x,y+^)               “TT ^y< tt -(3
+
+                        = f(x,y+/3-2rr)      rr-/3<y<TT
+
+     (V(-i3)f)(x,y-i3) = f(x,y-/3)           ^-TT<:y<TT
+
+                             =f(x,y-jS+2rT) -TT<:x</3-rr
+
+for all -Tt    x^ Tf.        Let E(\ )(-TT      TT) be the projection defined by
+
+     (E(X )f)(x,y) = ((I-V(TT)U(TT -X )V(-TT)U(X -TT) )f)(x,y)
+
+                     ~ f(x,y)            -TT<:x<X
+
+                     = 0                 XSxSTT
+
+We have E(X )e R for all / X)           ^ TT, since "         /(8) for all a and /?.   Let
+     S1 -J elX X E(X )
+
+
+We have        e R and for all f e tt
+                        ix
+     (Sif)(x,y) = e          f (x,y).
+
+Let S =       U(-2rr)e R.       We have for all fe
+     £
+     (S2f)(x,y) = eiyf(x,y)
+
+Let R be the von Neumann algebra generated by S and S R is a commutative
+     1                                         1^1
+von Neumann algebra and the vector f (x,y) = 1 e tt is cyclic for R since the
+                                      ^                            1
+               ^            / inx imx        „ ,
+linear span of the functions^ e  e    ;n,m = 0±l,±2  • 11 •} 1
+                                                             is dense in'' tt . Since
+
+R^ is commutative and has a cyclic vector R^ is a maximal commutative von
+                                                               I
+Neumann algebra (see [ io , le/nml.l]) i. e.                       •   Since R^CR we have
+ I   f                                      I
+R CR^ = R^.       Hence, every operator Ce R CRj is of the form
+
+     (Cf)(x,y) = C(x,y)f(x, y)
+                                                3S
+
+
+
+
+for all fe W , with C(x,y) a measurable essentially bounded function.
+                      t                                           f
+     Now suppose Ce It .       We show C = \ I.        Since Ce It CR^, we have
+
+     (Cf)(x,y) =C(x,y)f(x,y)
+
+for all fie H .   A straight-forward computation shows that
+
+     (U(a)CU(-a)f)(x,y)       = C([x+a],y)f(x,y)
+
+     (V 0)CV (-/3)f) (x, y)   = C(x,[y+m(x,y)
+
+for all fe H and all a and /3, where [x+o;] = x+a modulo 2rr.             Since U(a)CU(-Q!) = C
+
+and V(/3)CW(-/3) = C for all oi and (3 it follows that c2(x,y) is constant almost every-
+                                      t
+where.     Hence C = X I and rr (R)
+
+     Theorem 5. 5. rr * is an irreducible self-adjoint representation of CL on an
+
+infinite dimensional Hilbert space.
+                                                                          !
+     Proof:    By lemma 5.1 rr * is aelf-adjoint and by lemma 5. 4 tt (£1) = -{X l}.II
+                                     II                            I
+Since tt      rr, it follows tt *((^) Ctt (&) .     Hence, tt *(0L) = ^X 5-
+
+VI. Strongly Cyclic ^-Representations and States of *-Algebras.
+
+     Just as in the Gelfand-Segal construction for C*-algebras, there is for each
+
+state uu of a *-algebra d a strongly cyclic *-representationiT of Cton a Hilbert
+
+space M with a cyclic vector              "W such that cm (A) = (f , tt (Ajf.^for all KtCX-.
+
+The representation tt is determined by CM up to unitary equivalence.              The proof of
+
+this statement follows from the proof of the Wightman reconstruction theorem in
+
+quantum field theory [ #5» Theorem 3-7, p. 117-126],               Furthermore, as in the
+
+theory of C*-algebra, the induced representation tt is irreducible if and only
+
+if the state cm is pure (see       ] for proof for C*-algebras).
+                                              36
+
+
+
+
+        Even strongly cyclic ^-representations of commutative *-algebras may
+
+have unexpected properties.       Hilbert [    ] proved the existence of a polynomial
+
+P(x,y) in two real variables such that
+
+            (i) P(x,y) is of sixth order
+                                               2
+           (ii) Pj(x,y)5>o for all (x,y)eR
+
+          (iii) P is not a finite sum of squares of real polynomials.
+
+        Using Hilbert's construction, Gelfand and Vilenkin [ Y , Chap. II. sec. 7.2,
+
+p. 232-236] arguer: that there exists a state uu         on the free commutative algebra
+
+on two hermitian generators A and B such that tr (P(A, B) ) < 0 with P a poly­
+
+nomial satisfying conditions (i) (ii) and (iii) above.       Hence in the representation
+                      ,                                   2
+induced by u) , tt (P)*.0 while P(x, y)^0 for all (x,y)e R .        To avoid this type
+
+of pathology we define the notion of strongly positive states on commutative
+
+♦-algebras, those states which are non-negative on non-negative real poly­
+
+nomials of hermitian elements.
+
+        Definition 6.1.    Suppose rr is a *-representation of a *-algebrafl.on a
+
+Hilbert space ft .    A vector fe ^ (tt) is said to be cyclic if               is
+
+dense in ft and f is said to be strongly cyclic if           wj is dense in           (tt)
+
+
+in the induced topology on ,5 (tt).   A *-representation tt is said to be cyclic
+
+if it has a cyclic vector and strongly cyclic if it has a strongly cyclic vector
+
+        Suppose rr is a *-representation of a *-algebra CL on a Hilbert space
+ft andfe^(TT).       LetTTr£Tr| ^T(fiQf^.          Then it is easily seen that f is
+                                                  37
+
+
+
+strongly cyclic if and only if the closure of rr              is an extension of rr
+                                                          1
+(i.e.
+
+        Definition 6.2.         A state of a *-algebra (X with unit I is a functional on
+
+satisfying the requirements.
+
+             (i) M3 (aA+B) = aw (A)+w (B)
+
+            (ii) w (A*A) > 0
+
+           (iii) at) (I) = 1
+
+for all A, B&{X- and complex numbers a.                A state tu ispeure if it can not
+
+be written in the form to =X uu         + (1-X )to     with uu 4 ^ 9 states of (X and
+
+0< X <1.
+
+        Theorem 6.3.           For each state to of a *-algebra ^Z-with unit I there
+
+is a closed strongly cyclic *-representation rr of (3Lon a Hilbert space Ji with
+
+strongly cyclic vector fQ^^ (rr) such that to (A) =$o> tr (A)fQ) for all A^               .
+
+The representation tt is determined by to up to unitary equivalence.                  Further­
+
+more,   the induced representation rr is irreducible if and only if U) is pure.
+                                              Wr
+        Proof: Since the proof of this theorem zvtually a word for word repro­
+
+duction of the corresponding theorem for C*-algebras we give only an outline
+
+of the proof and refer To             [ 6 ],   [ ^ ] and [ (5 , theorem 3r7 p. 117]).
+        Let J =                ; uu (A*A) = 0^.   One shows        is a left ideal and
+
+ * = ^AC (X ■,A*£J^ is a right ideal.                Let Q =          be the complex linear
+
+space of all equivalence classes [A] = [b6(X ; A-BCJ?} of ^.modulo J .
+                                                           3%
+
+
+
+    One shows ([A], [B]) = a5(A*B) is a well defined inner product on Q.                  Let H be the
+
+^    Hilbert space obtain upon completion of Q relative to its inner product.                 We consider
+
+    Q as a dense subset of H .
+
+               We define a representation        of CLon Q by the relation 7r^(A)[B]=[AB] for all
+
+    A.Bd'flt.     One shows tt^ is a well defined ^-representation of ££on w with domain
+
+    & (tt )=Q.    Let tt be the closure of tt, with domain & (tt).          Let f =[I]^QC5 (tt).   We
+         1                                   1                                   o
+    have       is strongly cyclic since                   «= Q is   strongly dense in 3 (tt) and go (A) =
+
+    (f tt (A) f ) for all ASCZ.
+      o        o
+               If tt and tt' are strongly cyclic closed ^-representations of d on Hilbert
+
+    spaces H and        ' with strongly cyclic vectors fQ and f ' such that (f^, ^(Ajf^) =
+
+    (fo',7r'(^)fo') for all At^JLthen tt and tt' are unitarily equivalent.            To see this, one
+
+    defines an isometry U of                 onto     6r'             yy the relation U7r(A)fo=7r,(A)fo'
+
+    for all A£{%.      One checks that U is well defined, linear and isometric.                Hence, U
+
+    can be extended to an isometry of ¥ onto H '.              The extension is also denoted by U.
+
+    One checks that for a net           €^(00^        ; o^fiL^ lim^f^=f6^ (tt) in the induced
+
+    topology on ^ (tt) if and only if lim^Uf^Uffi^ (tt1) in the induced topology on ^ (tt').
+
+    Since f^ and f^' are strongly cyclic                  )fQ} is dense in ^ (tt) and-^r'^Jt)^'} is dense
+
+    in ^ (tt') in the induced topologies.     It follows from these remarks and the fact that
+
+    tt   and tt' are both closed that     (7r)=^ (tt').     Furthermore, we have
+
+    U7r(A)f=y(A)Uf for all fe^and A £■<£.             Therefore, tt andvr' are unitarily equivalent.
+
+    Hence, the representation induced by a state go is determined up to unitary
+
+    equivalence.
+                                                34
+
+
+           Finally, we show that the induced representation tt is irreducible if and
+
+ only if a; is pure.        Suppose tt is a closed strongly cyclic representation of
+
+ With strongly cyclic vector foC-& (tt ) such that uu (A) s (f^, rr (A)fo) for all A«C3C-.
+
+           First suppose uu is not pure.        Then tu = t! ir +(l-\ )uu       with uu 4 ^
+
+ states of CL and o< X < 1.         Consider the bilinear form on {tt (ct)f^ x f tt
+
+ defined by
+
+          <TT(A)f , TT(B)f> = XuujA+B)
+                 o      o        1
+ Using the fact that uu (A*A)> X uu^(A*A)>0 for all Ae@C one shows that the above
+
+bilinear form uniquely defines a positive operator 0< C< X I such that
+
+            {TT(A)fo, TT(B))f^= (TT(A)fo, CTT(B)fo)
+
+ and
+
+              (TT (B1)fo,    cn (A)tt (B2)fQ) = (TT (A*)Tr (Bj)^, Ctt (B2)fo)
+
+
+for all A, B, 1^,             CL-   Since rr (A) and tt (A*) are continuous in the induced
+
+topology and {rr                 dense in ^ (tt ) in the induced topology, the above
+
+relation may be extended to all of & (tt).             Hence, we have (f^Crr (Aj g) s:CVL40)’f/
+  fair                                             ,
+Tjge Jfr (TT ) and Ae CL ■      Hence Ce rr (CL) and c{ X I since uu ^4 U) .
+                                                                                          t
+           Conversely, if rr is not irreducible there is an operator C^e rr(^c) with
+         I;X e Cj .
+                Then for Q!=l or Q;=i, C =(q;C +qP.*)^^X I;X e C^ and C e TT<^'.
+                                        «     1                        ^
+Let C=(2||j C2|/!)'"1(||: C2i|X«*C2). We have 04 C4 I, C^gi. I;X e Cj , Ce rr tt)'*.
+
+
+Note (f^, Cfo)>0 since (f^, cfo)=0 implies (rr (A)f^, Crr (A)fo) = (tt (A*A)f ,C-^) = 0
+
+for all Ae CL which implies C = 0.           We have
+
+           (f , TT (A*A)Cf ) = (TT (A)f , Ctt (A)f )>0
+             0            o            o          o
+           (f , TT (A*A))(I-C)f ) = (TT (A)f , (I-C)TT (A)f )>0
+             o                 o            o              o
+for all Ae     .   Hence, ti) (A)        , Cf ) ^(f , rr (A)Cf.) and uu (A) -
+                               1       o     o     o
+(f , (I-C)f ) ^(f , tt (A)(I-C5f ) for all Ae^l-are states oiCL and uo=X uu +(1-X )uu „
+  o        o     o            'o                                              12
+with X=(fo,Cfy- Since C^-faljae             we have uu^4 oUg.   Hence uu is not pure.
+
+This completes the outline of the proof of the theorem.
+
+        In the next section we will study strongly cyclic self-adjoint representations
+
+of commutative *-algebras. As pointed out in the beginning of this section Gelfand and
+
+Vilenkin have shown the existence of a state uu of the free commutative algebra on two
+
+hermitian generators A and B and a sixth order polynomial P(A,i0)e0£ such that
+                             2
+P(x,y)>0 for all (x,y)e R        and uu (P(A, B) )<0.   In order to distinguish against such
+
+states we introduce the following definition.
+
+        Definition 6.4.     Suppose uu is a state of a commutative *-algebra         .    We
+
+say uu is strongly positive if for every finite set of hermitian elements A^, A^, . . . , A
+
+and every real positive polynomial P(x^, . .x^j^O for all (x^,. .          )e Rn we have
+
+uu (P(Aj,. .. , A^ )^s0.   A *-representation of Oi- is said to be strongly positive if
+
+each vector state of rr is strongly positive (equivalently, if tt (P(A^, 11.1, A ))^0
+
+for all positive polynomials of hermitian elements).
+
+        We remark that the cyclic representation induced by a strongly positive
+
+state of a commutative       algebra is strongly positive.      In the next section we shall
+
+need the following lemma which gives a well known necessary and sufficient con­
+
+dition for the moment problem to have a solution.
+       Lemma 6. 5,       Suppose Ct-is the free commutative *-algebra on n hermitian
+
+generators    A^, • • • > ^   and suppose uu is a state of CL.   Then, a necessary and
+
+sufficient condition that there exists a regular Borel measure /j. (not necessarily
+
+unique) on Rn such that
+
+        tu (P(Ai,. . . , An)) = Jp^. . . xn) dXL(x1. . . xn)
+
+
+for all Pe OL is that uq be strongly positive.
+
+        Proof:   For the proof we refer to [ fi2 ]..
+VII.   Standard Representations of Commutative *-Algebras.
+
+          In this section we         define standard representations of commutative ^-algebras.
+
+Intuitively, we mean by a standard representation of a commutative algebra a self-
+
+adjoint representation of the algebra by an algebra of functions on a measure space.
+
+Example 1 of section V is an example of a standard representation of a commutative
+
+^-algebra.    To construct faithful standard representations of commutative ^-algebras
+
+with an uncountable number of generators one has to deal with rather large measure
+
+spaces.     We avoid such measure theoretic problems by defining standard represen­
+
+tations in terms which can be stated as easily for finitely generated algebras as for
+
+infinitely generated algebras.            We show that for a self-adjoint representation    tt   of
+
+a commutative *-algebra                   , the following statements are equivalent:
+
+                 (i)     tt(A)* = tt(A)    for all hermitian A e CL
+
+                 (ii)    tt(A) * = tt(A*)   for all P\€OL
+
+                 (iii)    tt(   OL) 11 is commutative
+
+where tt( a )n ^ the commutant of tt (£%)'•                 We define a standard representation
+
+of     OL   as a self-adjoint representation satisfying any one          and, therefore, all of
+
+these statements.        The reader may verify that a standard representation of a finitely
+
+generated commutative ^-algebra is unitarily equivalent to a self-adjoint representa­
+
+tion by an algebra of functions on a measure space.
+
+          We show in Theorem 7. 3 that self-adjoint representations induced by strongly
+
+positive states are standard.           Finally, we show that if   O'-   is a commutative
+
+*-algebra which is dominated by a countably generated *-subalgebra.               Then every
+
+standard representation of            a is a direct sum of strongly cyclic self-adjoint
+representations of               •    The proof is based on Nelson's Theory of analytic vectors
+[7] and techniques developed by M. Reed in [8] •
+
+           Theorem. 7. 1.             Suppose tt is a self-adjoint representation of a commutative
+
+^-algebra       cx..           Then, the following statements are equivalent.
+
+                       (i)     tt(A) * = tt(A)   for all hermitian A e £X-
+
+                       (ii)    tt(A) * = tt(A*)   for all A e CC
+
+                       (iii)    tt(   £X) " is commutative.
+
+Proof:     We prove (i) => (ii) =>                (iii) =>   (i)
+
+           Suppose       it    is a self-adjoint representation of a commutative ^-algebra
+
+and statement (i) is true.                 To prove statement (ii) is valid it suffices to show
+
+  ^^(•^(A*)) =                JC?WA) *) for all A e                 since ir(A) * D tt(A*) for all A e         .
+
+It is well known from the theory of the polar decomposition of a closed operator
+
+(see e. g. [3, Chap. XII, sec. 7, p. 1245-1250] ) that if C is a closed operator
+
+on a Hilbert space              X       then H = C*C is self-adjoint and            £> (H*-) =      JC> (C)
+
+where          is the positive square root of H.                    Suppose A e CXL       and let     =
+
+•n^A*) *tt(A*) and               = tt(A) 7t(A) *. It follows that            (tt(A^)) =   JO (H^ ) and
+
+         (ir(A) *) =          /j) (H^) .     We show         = H^.     Clearly, we have      =
+
+
+tt(A*) * tt(A*)   Dtt(AA>:<) and H2 = tt(A) tt(A) * Dtt(AA>:<) .              Since AA*     is hermitian
+
+we have ir(AA*)          is self-adjoint.         Since self-adjoint operators are maximal (i. e. ,
+
+they have no proper hermitian extensions) it follows that H = ^(AA*) = H . Hence,
+                                                            X             £*
+  JT) (tt(A) *) =     (H^) =                      (^(A*)) and hence tt(A) * =
+
+
+tt(A*)    for all A          e dX. .     Hence, we have (i) => (ii) .
+
+           Next suppose statement (ii) is true.                    Then, if A = A* e        , tt(A) is self-
+
+adjoint.     Let {E          (X) ; - 00 < X < +00 } be the spectral resolution of tt(A) and let
+
+R = {E     (X) ; all A = A* e <£ , -00 < X < +00 }" be the von/Neumann algebra
+generated by all the spectral projections of all the self-adjoint tt(A) , A = A^e CSC^                                   •
+
+We claim R = tt (               CL )        Clearly, we have C e tt(                     ) ' if and only if C    com­
+
+mutes with each hermitian tt(A) e tt ( & )■                           Since these operators are essentially
+
+self-adjoint we have by the remark of section I that C e tt (££ )' if and only if
+
+C E^(\) = E^(X.) C for all A = A* e dX-                          and -°° < X < +°° .             Hence, we have
+
+tt(     <2L ) ' = R' and tt(                ) " = R " = R.
+
+               We show tt (OL)" = R is commutative by showing the projections which
+
+generate R are commutative.                       Suppose A, B e                        are hermitian and let
+
+C = A + iB.            Let       = ^(C) * tt(C)        and       = tt(C)    tt(C) *.          We have      and     are
+
+self-adjoint and                 = tt(C)* tt(C) Dtt(C*C) and                     = Tr(C) Tr(C)* Dtt(CC*) =
+
+tt(C*C) .         Since    C*C is hermitian we have tt(C*C) is self-adjoint from statement
+
+(ii) .       By the maximality of self-adjoint operators we have                                  = tt(C*C) =     Hence,
+
+tt(C) * tt(C)         = tt(C)   tt(C) *   and tt(C) is normal.           Let
+
+                          Aj = £ (tt(C) + tt(C) *)
+
+
+                          A, =    (tt(C) - tt(C)^)
+                           2 " **
+
+By the remark of section I we have A^ and A^ are self-adjoint operators with
+
+mutually commuting spectral projections.                              Clearly, we have A^ Z) tt(A) and
+
+A^ DTr(B) .            By the maximality of self-adjoint operators we have A^ = tt(A) and
+
+A       =   tt(B) .   Hence, it follows that E           (X) E        (/a) = E       (>») E    (X) for all hermitian
+    £                                                            JD              O
+A^ B e         CZ.    and -<» < X,          < + 00 •    Hence, R = tt( CL )" is commutative and
+
+(ii) => (iii) .
+
+               Finally, suppose statement (iii) is true.                    Suppose A e (CC-            is hermitian
+
+and let UH = (tt(A + ii) be the unique polar decomposition of tt(A + ii) where H > O
+
+is self-adjoint and U is a partial isometry from Range tt(A + ii) * to Range tt(A + ii) .
+                                                      HS
+
+
+
+           We claim U e tt(                    Suppose     V e ir(         ) 1 is unitary.     Since    it   is
+
+self-adjoint we have         V oO MC              (tt) and V*tt(A + ii) Vf = tt(A + ii) f for all
+
+f e                Hence V>KTr(A + ii) V = tt(A + ii) and V* tt(A + ii) V = (V*UV) (V*HV) =
+
+UH.     By the uniqueness of the polar decomposition we have V^UV = U and V*HV = H.
+
+Since it is self-adjoint tt( #-)' is a non Neumann algebra.                        Hence, tt(          ) 1 is
+
+generated by its unitary elements and, therefore, U e (v(                            ')' =*( CZ)"-
+
+          Since tt( OL ) " is commutative we have UU* = U*U and, hence, Range it(A + ii) =
+
+Range tt(A +£"!)*.       We have f orthogonal to Range tt(A + ii) if and only if f e J? MA) *)
+
+and tt(A) *f ~ if and we have          g orthogonal to Range tt(A + ii) *           if and only if
+
+g e £> Ma) ) and tt(A) g = - ig.               Since these ranges are equal we have f e £> ("(A) *)
+
+and tt(A) *f = if if and only if f e           JO (tt(A) ) and tt(A) f =‘lT'(A)*f = -if.           Hence,
+
+Range tt(A + iX) = -H .             Repeating this argument for ■tt(A - ii) one finds Range tt(A - ii) =
+
+ 3-4. .    Hence, the deficiency spaces              ^ + anc^        eX^      ^or Tr(-^-)    are                    =
+
+{0} .     Hence, tt(A)    is self-adjoint.        Since A is an arbitrary hermitian element we have
+
+(iii) => (i) .     This completes the proof of the -theorem.
+
+          Definition 7, 2.    Suppose it is a *-representation of a commutative *-algebra                          (X .
+tr is said to be standard if tr is a self-adjoint representation satisfying conditions (i)
+
+(ii) and (iii) of Theorem 7. 1.
+
+          Theorem 7, 3.       Suppose     it   is a strongly cyclic self-adjoint *-representation of
+
+a commutative *-algebra              (X    on a Hilbert space        74 •       Suppose fp is a strongly
+
+cyclic vector with [ [ f^ f ( =1 and w (A) = (f^, tt(A) f^) for all A e                (X-    is the state de­
+
+termined by fg.        Then    tt   is standard if and only if to          is strongly positive.
+
+          Proof.     First suppose it is standard and {A£ e                (%■ ; i = 1, . . . , n}           are
+
+hermitian elements of           (X .      Since it is standard Tr(Aj) is self-adjoint and the
+spectral projections E.(\) of Tr(A.)                                  commute with the spectral projections E.(\) of
+                      11                                                                                     J.
+Tr(A.) for i, j = 1, . . . , n.                        Let E(X.       ... X- ) = E (\ ) E0(\_) ... E (X. ) be the joint
+    ^                                                             I         n     11     ZZ         nn
+spectral resolution for tt(A ) . . . Tr(A ) .                               The functional calculus for self-adjoint
+                            1            n
+operators then shows that for f^ e                                    J3 (tt) and                                  : P = P(A1, . . . , A ) a
+                                                                                                               ■            1           n
+polynomial in {A^ . . . A ) we have
+
+           (f0. ir(P)f0) = f                                            d(f0. EfXj ..Xjy
+
+Hence, if P(X1 ... X ) >0 for all real X. . . . , X we have cj(P) = (frt, tt(P) frt) > 0.
+             In—                        1          n                  0          0 —
+Hence,         co is strongly positive.
+
+           Conversely, suppose to                              is strongly positive.                    We show "'’'(Aq) is self-
+
+adjoint for all hermitian A^e                                    . Suppose A^ = A^* e                                 .    Let S =
+
+{A_, . . . , A }         be a finite set of elements of                               /%             and let                     the commutative
+  In                                                                                                                         s
+*-subalgebra of               ct             consisting of all polynomials in A^ and A^e S; i = 1, . . . , n.
+
+           Let        /TO         = { "tt(                   ) f _} and let tr '                be the restriction of                     it    to         <3
+                              s                          s       0            s                                                                                 s
+and {tt(             s)£q}    > i- e- '^'s, (A) f = tt(A) f                       for all A e                             and
+
+f e-fTr(             )f } .        Let        tt       be the closure of              tt       1 .    Clearly tt           is a closed strongly
+                 s     0                           s                                       s                          s
+cyclic *-representation of                              & „       induced by the state co                          — co f '(rD        .        In fact, we
+                                                                                                           s                      s
+have <o (A) = (f ,                tt       (A) f ) for all A e              ^ .
+           S             v             S           U                              S
+
+           Since co          is strongly positive co                       = co       <B s            is strongly positive.                      Hence, by
+
+lemma 6. 5 there is a regular Borel measure At (possibly not unique) on Rn+'*’ such
+
+
+that
+
+        w o (P(An’ A , . . . , A ) ) = f P(x , x , . . . , x ) du. (x , x , ... , x )
+          sOl                    n     ool                  n        Ol            n
+for all polynomials P(A , A , ... , A ) e       ($ . Let        'L/ = L^(Rn+\^L) be the
+                          ()   1                   Q            ” G
+                                                                                                                                n+1
+Hilbert space of all ju-measurable square integrable functions on R                                                                   and let        cf)        be
+
+the standard representation of                                 6 on                            defined the the relations
+                                                                                             H7
+
+
+
+
+          Us (P(A0, Aj,                                             , AJ) F)(x0,             Xj.............. xn)            =
+
+                                 P(x ,         X ,          ... ,         X    ) F(x ,   X ,      ...    ,   X       )
+                                    U            I                         n        U        1                   n
+for all F e J3 Cfy) =                                       e                    P(xo’ Xl’ ‘            ’ Xn^ F^X0’                               ‘        ' xn) 6        ^ s fo]
+
+all polynomials P} .                            As shown in example 1 of section V, <j> (P*) = <j> (P) * for all
+                                                                                  ^ s             s
+P e      (8           ■       Hence,            A           is standard.              Let        e. e                        be the function
+                  s                                 s                                             O                      s
+e.(x„, x . . . . , x ) = 1 and let                                             JO    = {<t> (      (ft )e«} and let E                                      be the hermitian
+ 0 0    1           n                                                          ' ' s       s       ^ s 0              s
+projection onto                          JTJ            Let           r       be the closure of the restriction of cjj                                           to
+
+{4> (    <6           )®e} •              Note co (A) = (e                           r (A) e ) for all A e                                    ^       •    Since e        is
+   s              s     u                        s         0                          s   . 0                                                     s                   0
+strongly cyclic for r ,                                     r         is a closed            representation induced by co .
+                     s                                          s                                                        s
+          Since                tt        and r                      are closed ^'-representations induced by co                                                  there is an
+                                     s                  s                                                                                                    s
+IS ometry U of                           m c            onto              ft      such that U (P (ttJ =                                   -C?(t )AU*T (A) Uf =
+
+it (A) f for all A e ^ . and f e                                                oO (tt ) and, finally, U f                                    = e         (see theorem 6. 3) .
+ s                                                      s                                s                                                U         U
+          Since                c()       is standard and A^ =                                     we have                c^Aq) is self-adjoint and
+
+                      1                         _ . _    ____ -rr:--------— -1
+s^0 + ii)                 exists.              Let Cg = U*Eg <^A0 + ii) ’ EgU.                                               Cs       is defined on
+
+     m s c 3-t . We extend C s to all of                        by defining C f = 0 for
+                                                                             s
+fe                i.          A straight forward computation shows that
+              s
+
+                                 cs                  +                £o = fo                                                                                                  (a)
+
+          (x(A»)x(B1) £0, Csw(B2) f0) =
+                                                                                                                                                                          <t)
+                                          MBl) f0> Cg tt(A) tt(B2) fQ)
+
+for all A, B^,                           e     ^                .
+
+          Hence, for each finite set S                                              of hermitian elements of                                               there exists an
+
+operator          C           on         X      such that f [ C | | < 1 and                             C            satisfies relations (a) and (b)
+                          s                                    s                                             s
+above.    Hence, by the axiom of choice there is a set S                                                                          C           of such operators where
+                                                                                                                                      s
+the sets S are ordered by inclusion.                                                  Since the unit ball of                                  6 < X ) is compact
+in the weak operator topology [l, Ch. IV, §                                2, Th. 1, Cor 3] the set {C } has at least
+                                                                                                      s
+one cluster point in the weak topology.                            Let     C be a cluster point of (C } .             We claim
+                                                                                                     s
+C e tt ( 0L)' and C tt (Aq + ii) fQ = fQ.
+
+           Since    C       ^(A       + ii) f       = f       for all S it follows that C tt(A       + ii) f       = f .       We
+                        s         0             U         0                                      0             0      0
+
+show C e it (<%)'■                     Suppose A, B , B e
+                                                   ■L  &
+                                                                           (X and e > 0. Since C is a weak
+cluster point of the set {C } there is a finite set S                              such that A, B , B          e     & .        and
+                                            S                                                        ±    Ct               S
+
+           f (tt(A*) tt(B1) f0, (Cs - C) tt(B2) f0) [ < e/2
+
+           | (tt^) fo, (Cs - C) tt(A) tt(B2) f0) f < e/2
+
+Combining these inequalities with 'e^y&tion (b) we obtain
+
+           [ (tt(A*) tt (B^ f0, C tt(B2) f0) - (tt^) f0, C tt(A) tt(B2) fQ) | < e
+
+Since e is arbitrary we have
+
+           (tt(A*) tt (Bj) f0, C ^(B2)f0) = (ttCB^ f0, C tt(A) tt (B2) fQ)
+
+for all A, B^, B2 e               Oi •          Since f^ is strongly cyclic there are for each f, g e oD (tt)
+
+sequences {B            } and {B_ }              such that irfB, ) frt “* f, irfA*) tt (B. ) f^ — Tr(A*)f,
+                    m           2n                             In   0                    In 0
+1T(B2n) f0       g and ^A) 1T(B2n) f0 "" ^A) g as n ■* oo .                          Hence, we have
+
+           (tt(A*) f,Cjg) = lim                     (tt(A*) tt(B     ) f .^^(B^) f )
+
+                              =             „    W V f0’ ° "{A)                       £0)
+
+                              = (f, CiKa) g)
+
+Hence, C e tt( (X )' •                 Since tt is self-adjoint we have from lemma 4. 6 that
+
+C          (it) C   oO(tt)            and
+
+           C TT (A0 + ii) f0 = ir(A0 + ii)                    c f0 = fQ.                       =                    Tr^)c
+                                                                                   X*,
+Hence, f      e Range                  + ii) and tt(A) f^ = tt(A) ’"'(Ag + ii) C f^ e Range ^(Aq + ii) for
+
+all A e         •   Since f             is cyclic it follows that the range of "^(Aq + ii) is dense in
+
+    >C .     Repeating this argument for ^(Ag - ii) we have that the Range Tr(Ag - ii) is
+                                                                    Wf
+
+
+dense in             V- .    Hence, tt(Aq) had deficiency spacesJj>_ = %D =and tt(Aq) is es­
+
+sentially self-adjoint.                Since ^(Aq) is self-adjoint for arbitrary hermitian A^ we have
+
+that it is standard.                 This completes the proof of the Theorem.
+
+              Next we will show that every standard representation of a commutative *-algebra
+
+     CL       which is dominated by a countably generated *-subalgebra                                        CZ.    is the direct
+
+sum of strongly cyclic standard representations.                                         The main part of the proof is in the
+
+following lemma.
+
+              Lemma 7. 4,            Suppose CL            is a commutative ^-algebra which is dominated
+
+by a countably generated *-subalgebra                                (X. r          Suppose tt is a standard representation
+
+of     CK-      on a Hilbert space                   K .       Then it is strongly cyclic if and only if •it(                     ) 11
+
+is cyclic.
+
+              Proof:      Suppose             OL ,     CR-and tt are as stated in the lemma.
+
+              First suppose tt is cyclic with cyclic vector f^ e                                  JD (it) .    Suppose g e
+
+and e > 0.           Since f^ is cyclic there are hermitian elements A, B e (^TT                                      such that
+
+| | tt(A + iB) fQ - g | | < e/2.                     Let
+                   n                                                                    n
+              A = | \dEA(\)                                                    B     = f \dE_(\)
+               n  Jn   Av                                                          n   Jn   Bv
+where E            (X.) and E        (A) are the spectral resolutions of tt(A)                        and tt(B) .   Since
+               A                JD
+f^ e      JC (tt(A) ) O ^ZD(tt(B)) there is an integer                               r    such that
+
+              [ [ (Ar - ir(A)) fQ [ f < e/4                                    f f (Br -Tr(B)) fQ | | < e/4
+
+By the argument of theorem 7.1, E                              (X.) , E       (X.) e ^ ( CD" f°r aH real X..           Hence,
+                                                           A              B          %
+C = A         + iB       e tt( a      ) ,’-     Now, we have
+          r          r
+                                                  S'*
+
+
+
+
+         II C.f0-g|| = || Arf0 + iBrf0-g||
+
+                           - I I Ar f0 ' 77      f0   I I + I I Br f0 "     f0   I I
+                           + | | tt(A + iB) fQ - g | |
+
+                           < e/4 + e/4 + e/2 = e.
+
+Hence, g e    X      may be approximated arbitrarily well by vectors               C f   with
+
+C e tt {<x    ) "•   Hence,    tt(   && ) " is cyclic with a cyclic vector f .
+
+         Next suppose tt(            ) 11 is cyclic with cyclic vector f    and | |f f f = 1.    Since
+
+    CLl C OC is countably generated             CL       has a countable algebraic basis
+
+{A ; A = A *,           = 1, 2, . . . } i. e. each A e fX-     is a finite linear combination of
+  n:' n   n
+A .    In fact, the Amay be chosen to be monomials in the generators of          /V ,. Let
+ n                 n                      _                     &                   1
+        T (S) = exp (-S tt(A^) ) = f e      ^ ^A
+          n                 n      J             n         _____
+for S > 0 and where      (X) is the spectral resolution of TT(-A-n) • Since T (S) converges
+                       n
+strongly to I as S    0 from above, there are positive numbers {S ; n = 1, 2, . . . } such
+                                                                         n
+that
+
+         11 T„<s„> fo ■ fo 11 - 2_(n+1)
+
+
+Let
+
+         Q»=T1(S1> T2(S2) •••■ Tn(S„>
+
+Since the        form a decreasing sequence of positive operators it follows (see e. q.
+
+[2, Appendix II, p. 331] ) Q converges strongly to an operator               Q is n "*■     .   Let g
+                            n
+=       Note gg ^ 0 since
+                                                                         £1
+
+
+
+
+                  ’011      ^             0 11           fn - b0
+                                                     1 1 ‘o   Sn   I I
+                                            00
+                            > 1 - s„=o                 Q„+lfO-QnfoH
+                                  n=
+                                  oo
+                            >1-2,                     Q„ <Tn+l<S„+l’ - « fol
+                                n= 0 1
+                                            00
+                            2 1            Ln=0        Tn+l(S„+l’ f0 - £0 I I
+                            > i - S"                2-(n+1) = i
+
+
+We will show                     e    *0 (tt) and              is strongly cyclic for tt.
+
+          Clearly, gQ e                             (Q^) = JD (exp(Tr(                            ) for        n = 1, 2, . . . .      In
+
+fact, Q       1g       = lim   T    (S   ) . . . T (S ) f .                           Hence, g            e jC> (tt(A )) for all
+          n        0     m— oo   n+1 n+1          m m.   0                                           0               n
+n = 1, 2, ... .             Since the A                span              it follows that g^ e             JD> (tt(B) ) for all
+
+B e                    Since                       dominates       QC     for each A e                    there is a B e CK(              >
+
+such that | | tt (B) f | | > | | tt (A) f | [ for all f e JO ( it) .                                It follows that
+
+       tt(B) ) C                             ) .    Hence, g^ e               (tt(A) ) for all A e OC.             and since    it   is
+
+closed gg e JP w-
+
+          Let          f\        = {tt( £X- ) Sq) and let tt^ be the closure of the restriction of tt to
+
+   fl , i. e. tt1=                                   We will show tt^ = tt.           We first show tt^ is self-adjoint.
+
+          Suppose A = A* e                          CX- 1 and B e          (X ■       We show tt(B) g^ is an analytic
+
+vector for tt^(A) .               Since                ^ dominate CX           there is a B^ e                CL    such that
+
+   1Ti(Bn) f I I ^ I I                           f I I for all f e       JD (iTj) .       Since A, BQ e            CX ^ we can
+     r O'
+express A and Brt in the form A = S.m a. A. and B. =                                        ..m                We have
+                             0                                 i=lii                  0      i=l     i    x
+          ^Co I I                           "i (B) Sq I I Sn/n'
+
+              = Sn=0 II ^1^^ ui(An) g0 | | Sn/n'.
+
+                   oo                                                 n
+              <2;                    -l(B0)                   gQ I I S'Vn’.
+              - n= 0
+                  00                 TT    (B An) Q Q _1 gA | | Sn/n'.
+              = S;„=o
+                                             0     m m    0
+              <          Q’m                       2n=0 I I                 Qm I I Sn/n'
+                                     g0
+                                                  sx
+
+
+
+
+We estimate
+
+               ^(Eq^) Qm| f < sup (| 2“ (3.x. | I S^a.x.l exp^-S^ S.x. )
+
+                                < f fP f f I I ^ f |n SUP f xn+1e"qX f
+                                               xeR
+                                <|[|3| II S|[n(i_LLjn+1
+
+                                             m [ a. [ 2) 2 and | fp| [ = (S^ | p .| 2) 2.
+where q = min (S1> . . . , S^) and [faff = (S^
+
+
+Hence, we have
+           oo
+          Sn=0 ^             -i(B) Sq 1 I Sn/n'
+
+                                                            n+1
+                 — I l^m"1 g0l I I IP 11 Co gnll.*lln ('a±l)!r
+                                                    n'         \    2q /
+                 < oo for all
+
+Hence,              is an analytic vector for       (A) for all B e                .    Since        is cyclic
+
+for      it follows that for each hermitian A €          <X        (A) has a dense set of analytic
+
+vectors.     It follows from a theorem of E.         Nelson [7, Z£./►,/«a          S’. /            ] that
+
+tt^(A)   is essentially self-adjoint for all hermitian A e           ££    .
+
+          Let it2(A) = tt^(A) for all A e     ££ ^ and let         tO    (tt2) =       JD (n^) .   Since     cr   x
+dominates           for every A e (X       there is a B e               ^ such that          <P (ir1(B))C
+  £> (tt^A)).      Hence,
+
+         n Be            ^    <’'2<B’)CnAeCt        ^ WA> > =             & W’ '           ^ ^
+
+Hence
+
+          -0        =nB e CC ^
+
+and        is closed.    We have shown that ir^ (A) = tt^A) is self-adjoint for all hermitian
+
+Ae CX .        Hence, we have
+
+                                          ^=nA.
+
+                                                              =nAl
+
+
+                     =   <£> (^2*) •
+                                                                 S3
+
+
+
+Hence,        tt       is self-adjoint.     It then follows immediately from lemma 4. 9 that tt
+                   4                                                                                                       1
+is a self-adjoint representation of C%- on                            y*’] .   Hence,    tt^ is   a self-adjoint re­
+
+striction of it and by theorem 4. 7                       ft = E            and    Ipfrj)    = E       „D( tt)      where
+
+E e tt ( <2             )'   is an hermitian projection.
+
+          We show E = I and, hence,                    tt^   = tt.   We first show f^ e       ft       .    Suppose
+
+e > 0.        We have
+
+                         = lim
+                       Qn £
+                          S0 - f 0  T ,(S J ... T (S )frt - frt
+                           m—oo         n+r n+1'          mv m7 0       0
+                              oo
+                         < S        I I              - fl fo 11
+                         — m=n+l
+                         < S oo    Z (m+1) = z
+                         — m^n+1
+Hence, there is an integer r» such that l[Q ^ g„ - f„            < 2 _(r+1) < e/2. Let
+                                           1 ' n      0    0
+E(X) be the spectral resolution of Q ^ and let
+                                    n
+              cr
+       S = f \ d E (\)
+         (T J
+                 -1                                          -1
+Since g e /Q (Q ) there a cr such that I [S g0 - Q              gn\\ < e/Z. We have
+       0 cr-'    n                            1 1 cr 0     n     0
+S   e tt ( £jL ) 11 and
+
+          I I S<rg0 ' f0               illS,*0-Qngoll +                                           °n g0 - f0
+
+                                       < e/2 + e/2 = e
+
+Hence,        f         can be approximated uniformly be vectors S gn with S e tt (                              CL )".
+                   U                                              cr 0      cr
+Since gQ &              ft   = E ^       with E 6 tt (               ) *   it follows that         e       ft   .   Since
+
+1q is cyclic for tt(             ££     ) 11 and     ft        is invariant under tt (       CX             it follows
+
+that     ft            = 7<      and E = I.        Hence, tt^ = tt and g^ is strongly cyclic for                     it.
+
+
+This completes the proof of the theorem.
+
+          We define the direct sum of representations of ^-algebra in the obvious
+
+manner.            Suppose       {tt   ; a e 1^}    is a collection of closed ^-representations of a
+
+* -algebra             ££     on Hilbert spaces                        We denote the direct sum of these
+representations by n = ®                             T tt and define                                it     as follows.               Let           ‘1^0= ©          T         s*-c
+                                                 a e Iq a                                                                                                       a e I.               a
+be the direct sum of the Hilbert spaces                                                                   and let
+                                                                                                    a
+                  />(.) = {F ~ {F ; a eT}                                         e       ^ ; F                 e                  (ir ) for all a e I and
+                  v              a      U                                                                  a             *            a               o
+                                                                                      2
+                                                              TT    (A) F*                <°o for all A e                                }
+                                       a el.
+We define tt(A) F = tt(A) {F                                  ; a e I } =                 {tt (A) F ; ae In} for all Fe                                     «£? (tt) and
+                                                         a           0                         a               a              u
+Ae        ^ .          It is easily seen that                          tt       is a closed                     representation of                              on     7*.         Fur
+
+thermore,              tt   is self-adjoint if and only if                                     tt        is self-adjoint for all a e Ig.                              If    CX-     is
+
+a commutative *-algebra then tt = ©                                               _       tt        is standard if and only if u                                is standard
+                                                                            ae I 0 a                                                                       a
+for all a e I q.
+
+             Theorem 7, 5,               Suppose                     (XC        is a commutative *-algebra which is dominated
+
+by a countably generated *-subalgebra                                                 <Xx                Suppose              tt   is a self-adjoint represen­
+
+tation of                           Then,          it    is standard if and only if                                      tt   is the direct sum of strongly
+
+cyclic strongly positive self-adjoint representations of                                                                      oc .
+
+             Proof:          From theorem 7. 3 it follows that if                                                   tt   is the direct sum of strongly
+
+positive strongly cyclic self-adjoint representations of                                                                      ot-     then          tt    is the direct sum
+
+of standard representations of                                        ££ .        Hence,                  tt    is standard.
+
+             Conversely, suppose                               tt    is standard.                   Since every *-representation of a
+
+C*-algebra can be expressed as a direct sum of cyclic representations, there are
+
+vectors {f             e             : I I ^            I f =          a e            )    such that with                          (Y\           - {iri             ) "f } ,
+                   a                           a                                  0                                                      a                              a
+                 is orthogonal rfo-                      (Y\ a for a ^ (3 and "yt ~ ®     )(T\ (i. e.                                                           tt(        /y ) " ,
+'a                                                           p                        aelg’a
+can be expressed as a direct sum of cyclic representations of tt (                                                                               (XL ) ") •
+
+             Let E            be the hermitian projection of                                                        onto                            Clearly,
+                        a                                                                                                                    a
+E       e tt (              ) * •    By theorem 4. 4                             If)   = E                     JO ( ) is a self-adjoint reducing
+                                                                                                                         it
+    a                                                                            ' » a     a
+subspace for tt.                Let tt       =     it     I                 .    It is easily verified that tt = ©    T TlI/
+    ^                                    a               1          1 v a                   y                      a el "** .                                               Since
+it   is standard we have that     it       is standard in all a e I .   Since {tt(         ) "f ) =
+                                       a                           o                           a
+     yy\   , £      is cyclic for it ( /V )         Hence, by lemma 7. 4      tt       is a strongly
+     • ' a     a                    a                                              a
+cyclic standard representation of                    Then, it follows from theorem 4. 7 that
+
+tt        is a strongly cyclic strongly positive self-adjoint representation of                    Hence,
+     a     ■
+tt       is a direct sum of strongly cyclic, strongly positive, self-adjoint representations
+
+of                 This completes the proof of the theorem.
+VIII.     Standard Representations of the Canonical Commutation Relations.
+
+           Let      CL    be the ^-algebra constructed in example 2 of section V, i. e.                                OL{
+consists of all polynomials in {p^, q^; i» j = 1 . . . , g} where the q's and p's satisfy
+
+the relations,
+
+                     q.*                                       Pi* = p.
+                      1 = q.1
+                 [q.» P-] - q.p. - p.q. = i 6 . . I
+
+                     [q- qj] = [p- Pj] = 0
+
+for all i, j = 1, . . . , S-     A representation it of            ^Cq      called standard if tt is a direct
+
+sum of Schrodinger representations, i. e. , it = ©                     _   tt        where    tt       is unitarily
+                                                                   a e I        a                  a
+                                                      o
+equivalent to the Schrodinger representation (discussed in example 2 of section V) .
+
+It follows that standard representations of                  cx0 are self-adjoint.
+           Definition 8. 1.      Suppose      go   is a state of     CL0 and iTg is the Schrodinger
+
+representation of          &L q discussed in example 2 of section V.                     We say         go   is strongly
+
+positive if ^(A) >_ 0 implies u>(A) > 0 for all A e                                  If tt is a         representation
+
+of       CL q we say it is strongly positive if "^(A) > 0 implies tt(A) > 0 for all
+
+A*        ot0-
+           Using a result of T. Sherman [ll] we show that every strongly positive strongly
+
+cyclic self-adjoint representation of                0Lo is standard.      We will need the following lemma.
+
+           Lemma 8. 2.         Suppose   tt    is a standard representation of                         q on a Hilbert   space
+
+     X     and tt     is a self-adjoint subrepresentation of tt.                    Then tt    is standard.
+
+           Proof:    Suppose tt is a standard representation of                      £X q on a Hilbert space
+
+and tt^ is a self-adjoint subrepresentation of tt.                 By theorem 4. 7 we have
+
+         (tt^) = E otC? (tt)    and tt^(A) f = tt (A) f for all A e         CJL ^ and all f e                  (tt^)
+
+
+where E e tt (           )' is an hermitian projection.
+                       Since        tt   is standard we have tt = ©                             T 'IT         and         X = ©                 _                       where
+                                                                                            a e I0 a                                        a e Iq                  a
+it        =   tt       and                                           r, for all a e I , where tt-                is the Schrodinger represen-
+     a             U                          a             ^        U               0          0
+tation of                                on            -H o = L <R ) •
+                                                                                       \%     ,
+                       The vector fgCx) = 11                                 e                    s strongly cyclic in the Schrodinger re­
+
+presentation.                        This follows from the fact that the functions p(x) f^ (x) , where p(x) is
+
+a polynomial, are dense in Schwartz's space                                                         J? (RS) in the Schwartz space topology.
+
+Hence, {VqC                     a q) fp) is dense in                                               in the induced topology.                                 Hence,      f^ is
+
+strongly cyclic for tt .                                        Furthermore,              Tr,.(i p + q.) f_ = 0 for i = 1, . . . , S and if
+                      U                                                                    0      i   i   0
+ge            JO (tTq) and if tt^ (i p^ + q^) ^ = 0 for i = 1, . . . , $ then ^ = a f^ has some
+
+complex number a .
+
+                   Since tt               and tt^ are unitarily equivalent there is a strongly cyclic vector
+
+f        e eyO (tt )C                                   corresponding to the cyclic vector f                                   e            (tt ) C                 n> i. e. ,
+    OL                    CL                      CL                                                                      LJ                         v/
+
+[ [f          f f = 1, tt (i p. + q.) f                              = 0 for i = 1,                       Note that (f , tt (A) f ) =
+         CL                    CL         X             1       CL                                                                 vJ       v/              Ly
+
+(f , it (A) f ) for all A e                                            & and a e I .              Let     /7~)      be the closed span of
+  a    a     a                                                         °          0                       '0
+{f^ ; a e Ig*)’.                    We claim                    ff) ^£1 JO (tt) and f e                 YY\   if and only if f e                                 (tt) and
+
+tt(i p.        + q.) f = 0 for i = 1,
+
+                   Suppose f e                                           ^           ^>e f^16 hermitian projection of                                        onto
+
+Since f e Yf) n there is a sequence {f ; n = 1, 2, . . . }                                                       such that f                              is a finite
+              0                       n                                                                                     n
+linear combination of f                                     for each n and f ■* f as n —oo .                                   Note that if f =
+                                                            an                                                                               ,n
+2       _ C (a) f we have
+     a elg n     a
+                       ||E TT(A)(f -f )                                          I        Ea(fn - £J
+                       1 1 a      n  m
+                                                                                 °n<“) ' Cm(a) I2 I                                              I2
+                                                                                                                 TT       (A) f
+                                                                                                                      a                 a
+                                                                             I V£n-£m> 'I' I                                                     2
+                                                                                                                 ,ro(A) fo
+
+
+Hence, we have
+                    «<A> fn - ^ fml I 2 = 2 a .I0 I I Ea ^ % Z U !j2
+
+                                                                  = II VA> foll\eI0i(E (£n-fm
+
+                                                                  = |l VA> fol|2H £n-fml|2-°
+
+as n, m             oo .     Since A e Cia                        arbitrary we have {f ; n = 1, 2, . . . } is a Cauchy
+    4                                                                                 n
+sequence in the induced topology on                                     -O(tt) .         Since f                   f as n      °o and tt is closed
+                                                                        °                       n
+we have f e                JO (tt) .       Since 7r(i p. + q.) f = 0 for i = 1, . . . , $ and n = 1, 2, ...                                       we
+                                                       i    i   n
+have TT(i p. + q.) f = 0 for i = 1, . . . , S-
+           i    i
+             Conversely, suppose f e o& (it) and 7r(i p. + q.) f = 0 for i = 1,                                                                   Then,
+
+since E         e tt(        a ) 1 we have
+            a
+            E       TT (i p + q ) f = ir(i p + q ) E f = 0
+                a          ii               i   i   a
+for i = 1,                        Hence, we have E f = <S(a) f where cKal. is a complex number.
+                                                  a           a
+Hence, f e             fi) 0-
+
+            We recall that                     •PKj) = E p (tt) where Eeir (                                              ) 1 is an hermitian
+
+projection.            Let                 = E       m       q.    We show             n       c m . Suppose f e YY\ - Then                q
+                                                                   •foir <1 '1 b "'y
+Tr(i Pi + ^ E f = E Tr(i p^^ +                                f = 0A     Hence, E f e                         fY\ Q and     A C   YY) Q-
+
+            Let (gpJp e                              an orthonomal basis for                                     and let     Y] ^ =
+
+{A CLo)?,^} ■                 we claim (g^ , tt(A) g^ , ) = 6^, (f0, tt0(A) fQ) for all A e                                                    &- Q and
+
+p , p’ el.             Since g             , g           e              we have            g            = 2     C (a) f and g              =
+         1                             P         P                  0                          P          a eI0       a      P
+E           C1 (a)f .            Then, we have
+    a eIq          a
+
+
+
+                                               = s
+                                                     a € £0^Ea *^(3 ' ,,(A) Eaqp' '
+                                               = S             C(a) C1 (a) (f ,                     tt       (A) f )
+                                                     a eip                   a                           a        a
+                                                 (gp >gp^)(fo,              W0(A) fo^ = 6pp' ^f0’fo^
+
+
+Hence, we have                    n«-!               n       t for p # p1.             Let         tt        be the closure of the restriction
+                                           P             P                                              P
+                                                                                         si
+
+
+
+
+of tt to          f)         , i. e.       tt       = (tt|                 .    tt       is unitarily equivalent to tt         since f        and
+                       H                        H               ^ H                  H                                   \j              \j
+gp are strongly cyclic for tt0 and tt^ and (f0> tt0(A) fQ) = (f , tt^ (A) f^) for all A e CX 0 ■
+
+                Let tt- =                  _ tt .            Since tt_ is the direct sum of representation which are
+                                    p e        p                     i.
+unitarily equivalent to tt^, tt^ is standard.                                               We complete the proof of this lemma by
+
+showing tt^ = tt^.
+                                                *
+
+               Since tt        is a self-adjoint subrepresentation of tt it follows from theorem 4. 7
+
+that          JO(Tr2^ =                             with F e tt(                         ) 1 an hermitian projection.         We show tt^ =
+
+tt        by showing E = F.                    Since                               <p> (tt ) for all (3 el, we have tt Dtt, and,
+     Ct                                                          ' Ij                     1               L               L»
+therefore, E > F.                    We show F > E.                            Suppose f e {E               and e > 0.        Since
+
+        J?         is dense in {E ~y(_ } there is a g e                                        <£> (tt^) with | |f - g [ | < e/2.     Since
+
+f         is cyclic for tt           and tt = 0                       IT       it follows that the linear span of {tt( £X0)f                  ;a   el }
+                                a                          a elg           a                                                              a
+is dense in                          Hence, there is a vector h of the form h = Sm tt(A )f                                                    with
+                                                                                 n= 1  n a
+                                                                                                                                         n
+A„ e OC            o and            h - g [ | < e/2.                       Let
+     n
+               Fc = Smi it(A ) E f                             = Eh.
+                     n=l    n      a
+                                                       n
+Since g e jC> (tt^C {E                                } we have [ [ g - k [ | = |[ Eg-Eh|[<||g-h||< e/2.
+
+Hence, we have
+
+               | | f - k [ [ < | | f - g | f + [ | g - k [ f < e/2 + e/2 = e.
+
+               We claim k e {F                         } .      We show Ef e{F JC } f°r all a e 1^.                           Since
+
+f         e   fX)r.> E f e           /^l .          We have g                  e         rp> (tt )d {F P'1?} for all (3 e I .     Since, the
+    a             U     a                                                  p                    Z         ^                1
+{go )         span     if)      we have E f                     e ^ C {F &C } .                     Hence, E f e {F p-f } for all
+  p                                                      a                                                    a
+a e Iq.         Hence, k e {F ^ } , since
+
+               Fk =                 F tt(A ) Ef
+                             n-1          n     a
+                                      n
+                   = Sm a tt(A ) FE f
+                      n= 1    n       a
+                      Tn
+                   = S              tt(A       ) E f           = k.
+                             n= 1          n           a
+                                                           n
+                                                                60
+
+
+
+Hence, each f e {E                      can be approximated arbitrarily well by a k e {F                           } .
+
+Hence, F > E.             Therefore, E = F and                         Hence,          is standard and the proof
+
+is complete.                                                                                                                    . ,
+
+           T. Sherman [ll] has proved the following useful result.                             Suppose         is a A
+
+^-algebra and              is a closed              representation of       a    on a Hilbert space                      such
+
+that there is an             e a        with the property that tt^A^) is the restriction to                        P (tt )
+of the inverse of a compact operator.                        Then, if co      is a state of (X- with the property
+
+that co (A) > 0 for all A e                       with tt^(A) > 0, then co      is of the form
+                     oo
+          co (A) = 2.   (f., tt (A) f.) for all A e CX                     with f. e   fiO (tt ) for i = 1, 2, . . . .
+                    1=1 ill                                                      i            1
+From Sherman's theorem we derive the following result.
+
+          Theorem 8. 3.          Suppose            tt   is a strongly cyclic self-adjoint representation of
+
+  (X       on a Hilbert space           7*          with a strongly cyclic vector f            e   cP ( tt) with
+
+| [ f0 [ [ = 1.   Let co (A) = (f ,          tt   (A) f^) for A € QC. q          the state determined by f .
+
+Then,     tt   is standard if and only if co                 is strongly positive.
+
+          Proof:      Suppose      tt   is standard.           Then   tt   is a direct sum of Schrodinger repre­
+
+sentations and, therefore,              tt    is strongly positive.         Hence,      co   is strongly positive.
+
+          Conversely, suppose co                     is strongly positive.       In the Schrodinger representation
+    ----------        s    2   2
+TL* Tr_(H) with H = 2. . p. + q.                    is well known to have point spectrum with finite
+ 00                  i=l i     i
+multiplicities (in fact, cr(TrQ(H)) - {S + 2n; n = 0, 1, 2, ...}).                           Hence, "^(H) ^ is com­
+
+
+pact.    Since co         is strongly positive (positive relative to the Schrodinger representation)
+
+it'-follows from a theorem of T. Sherman [ll] that co                           is of the form
+
+          co (A) =               TTo(A)f.)
+
+for all A e       a o’ with f. e yO (tt ) for i = 1, 2, ... .
+                           00
+          Let     tt^ =   ®n_i     be the direct sum of tt^ countably infinitely many times.
+                                                   61
+
+
+
+
+          a      QO
+Let           = ®n-i            t^ie rePresentati°n space of                 Let f ~ {f^,         . . . } be the
+
+vector in         ^ with components f.e aO (tTq) *          Since f.e                       i — 1>            • 3>nd
+ oo                  2
+^i-l f I -0(A) ^i I I = co(-^-*-^-) < 00 ^or aL A e        0 > it follows that f e J2) (nj) .            Note
+
+co (A) = (fj tt^(A) f) for all A. e CX0-
+
+        Let    JO = {tt^( ££ p) f} and let              be the closure of the restriction of                  to
+
+ f]   , i. e. , ir^, = (tt^ in )•   tt^ is unitarily equivalent to      tt   since f and f^ are
+
+strongly cyclic for ir^ and tt and
+
+        (fl *2^ ^ =             = (fo’ tt(A^ fo^
+
+for all A e    (X q.   Since tt is self-adjoint tt^ is self-adjoint.             Hence,     tt^     is a self-
+
+adjoint restriction of ir^.     Since tt^ is standard it follows from lemma 8. 2 that                    tt^ is
+
+
+standard.     Since tt and tt^ are unitarily equivalent we have tt is standard.                        This
+
+completes the proof of the theorem.
+                                           £3-
+
+
+
+
+                                       References
+
+1.    N, Bourbaki, Elements de mathematiques Livre V, Espaces vectoriels topologiques
+
+      Herman, Paris (1955)
+
+2.    J. Dixmier, Les C^-algdbras et leurs representations, Gauthier-Villars, Paris
+
+      (1964)
+
+3.    N. Dunford and J. T. Schwartz, Linear Operators Part II, Interscience Pub. ,
+
+      New York (1963)
+
+4.    M. Gelfand and N. Ya. Vilenkin, Generalized Functions, Vol. IV, Academic Press,
+
+      New York (1964)
+                                                 4
+5.    A. M. Jaffe, Dynamics of a Cut-off \ <j>       Field Theory, Thesis Princeton
+
+      University (1965)
+
+6.    M. A. Naimark, Normed Rings, P. Noordholf N. V. - Groninger, The Netherlands
+
+      (1964)
+
+7.    E. Nelson, Analytic Vectors, Ann. of Math. , 70 (1959) 572 (615.
+
+8.    M. Reed, A Carding Domain for Quantum Fields, Comm. Math. Phys. 14 (1969)
+
+      336 - 346.
+
+9.    I. E- Segal, Irreducible representations of operator algebras, Bull. Amer. Math.
+
+      Soc. , 53 (1947) , 73 - 88.
+
+10.   I. E. Segal, Decomposition of operator algebras. II, Memoirs of the American
+
+      Mathematical Society, No. 9, New York (1951)
+
+11.   T. Sherman, Positive linear functionals on *-algebras of unbounded operators,
+
+      J. Math. Anal. Appl. , 22 (1968) 285 - 318.
+
+12.   J. A. Shohat and J. D. Tamarkin, The Problem of Moments, Surveys, No. 1, Amer
+
+      Math. Soc. New York (1943)
+                                         63
+
+
+13.   B. Simon, Distributions and their Hermite Expansions, preprint.
+
+14.   M. H. Stone, Linear Transformation in Hilbert Space and their Applications to
+
+      Analysis, Amer. Math. Soc. Colloquium Pub. , vol. 15, New York (1932)
+
+15.   R. F. Streater and A. S. Wightman, P. C. T. , Spin and Statistics and all that,
+
+      Benjamin, New York (1964)
+
+16.   F. Riesz and B. Sz.~ Nagy, Functional Analysis, Fredrich Ungar Pub. , New
+
+      York (1955) .
+
+17.   J. von Neumann, Die Eindentigkeit der SchrQdingerschen Operatoren, Mathe-
+
+      matische Annalen, 104 (1931) 570 - 578.
+

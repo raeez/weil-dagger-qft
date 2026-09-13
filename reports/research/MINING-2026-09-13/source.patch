@@ -1,0 +1,646 @@
+diff --git a/README.md b/README.md
+index 36ae714..bb16de9 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # The Zeta–Weil Form and Nonunital GNS Transfer
+ 
+-This eight-page paper fixes the Fourier, involution, measure, polar,
++This paper fixes the Fourier, involution, measure, polar,
+ archimedean, and prime-power conventions for the full zeta--Weil functional
+ on a concrete nonunital convolution $*$-algebra.  Its arithmetic statement is
+ Weil's exact criterion
+@@ -11,15 +11,34 @@ Weil's exact criterion
+ Thus Weil positivity is equivalent to the Riemann hypothesis; it is not an
+ independent proof of it.
+ 
+-The paper also proves the nonunital algebraic GNS construction, automatic
+-closability of its common-domain multipliers, and the exact condition for a
+-multiplier to extend boundedly.  A $*$-homomorphism pulling back a positive
+-functional induces an isometric map of algebraic GNS spaces and a unique
+-isometry of their Hilbert completions, with bounded intertwining under
+-$C^*$-hypotheses.  For nonunital $C^*$-algebras it gives the sharp positive
+-unitization criterion and identifies the cyclic vector as the limit of every
+-positive contractive two-sided approximate identity for the minimal
+-unitization.
++The paper proves the nonunital algebraic GNS construction, automatic
++closability of its multipliers, and the exact boundedness criterion.
++The common graph completion is the intersection of all multiplier closure
++domains.  A sum-of-squares estimate proves simultaneous approximation and
++invariance under every algebra product.  Positive-functional pullback
++identifies the closed representation of the image algebra.  An explicit
++example shows why it need not identify the full target algebra's domain.
++
++A Gaussian calculation using the arithmetic local terms proves
++\[
++ L_\zeta(g_a)=\frac{a^{-1/2}\log(1/a)}{4\sqrt\pi}+O(a^{-1/2}),
++ \qquad \widehat g_a(t)=e^{-at^2}.
++\]
++It follows that the full Weil functional has no finite-mass positive
++unitization.  This excludes both a finite-norm representing vector on an
++invariant representation domain and a pullback from a positive functional
++on a $C^*$-algebra.  The obstruction is unconditional.  Under RH the GNS
++convolution multipliers are nevertheless bounded.
++
++The same asymptotic constructs positive Gaussian subspaces of every fixed
++finite dimension.  For distinct positive scales $\lambda_j$, the normalized
++Gram matrix tends to $((\lambda_j+\lambda_k)^{-1/2})$, a positive-definite
++Gaussian integral matrix.  The required small-scale threshold depends on
++the finite family; this does not prove positivity on the whole test algebra.
++
++For general nonunital $C^*$-algebras, the paper gives the sharp positive
++unitization criterion and the approximate-identity construction of the
++minimal cyclic vector.
+ 
+ Explicit examples delimit these conclusions: a symmetric closable operator
+ need not have a self-adjoint extension, algebraic positive unitization can
+@@ -27,8 +46,9 @@ fail, the isotropic cone of an indefinite form is not a quotient subspace,
+ and a radical quotient alone does not produce a Krein space or positivity.
+ Accordingly, no theorem passing from bare pre-Krein data to a positive GNS
+ representation is asserted.
+-The paper ends with the open problem of constructing an independent positive
+-dagger realization of $L_\zeta$ from its arithmetic local terms, without
+-using RH, the zeta zeros, or the equivalent Weil positivity.
++The remaining arithmetic problem is an independent positive functional
++on a suitable test algebra, without using RH, the zeta zeros, or equivalent
++Weil positivity.  Its finite-mass unitization must fail.  A determinant
++interpretation also needs a separate comparison of spectral multiplicities.
+ 
+ Build with `make check`.
+diff --git a/paper.tex b/paper.tex
+index 1c3bd76..920b3a3 100644
+--- a/paper.tex
++++ b/paper.tex
+@@ -32,25 +32,29 @@
+ \maketitle
+ 
+ \begin{abstract}
+-The full zeta--Weil functional is written on a concrete nonunital
+-convolution $*$-algebra, with its polar, archimedean, and prime-power
+-terms fixed.  Weil's theorem identifies positivity on convolution squares
+-with the Riemann hypothesis.  We prove the algebraic GNS theorem in the
+-nonunital setting, including automatic closability and the exact bounded
+-multiplier criterion, and show that dagger transfer extends isometrically
+-to Hilbert completions.  Positive unitization and approximate identities
+-are treated separately under $C^*$-hypotheses.  Consequently, a positive
+-dagger realization of the Weil functional would prove the Riemann
+-hypothesis only when its positivity is obtained independently of the
+-zeros or of Weil positivity itself.  Constructing such a realization
+-remains open.
++The arithmetic terms of the zeta explicit formula define a Hermitian
++pairing on a nonunital convolution algebra.  Weil's theorem identifies
++its positivity with the Riemann hypothesis.  A local Gaussian calculation proves a further
++restriction: the full Weil functional admits no positive unitization of
++finite mass and no realization by a finite-norm vector on an invariant
++$*$-representation domain.  The same calculation gives positive Gaussian
++subspaces of every finite dimension at sufficiently small scales.
++We construct the common graph completion of
++nonunital GNS multipliers and prove its exact domain and transfer
++properties.  Closed quadratic forms for individual multipliers need not
++have invariant domains.  Their common domain over the whole algebra does.
++An independent positive arithmetic functional remains open, with its
++possible representation constrained by the Gaussian divergence.
+ \end{abstract}
+ 
+ \section{The exact zeta--Weil form}
+ 
+ The decisive question is whether the arithmetic expression below is a
+-vector norm for a reason that does not already assume the location of the
+-zeros.  We first fix the expression completely.
++squared norm for a reason independent of the location of the zeros.
++Such a norm could construct a Hilbert space from test functions.
++It need not come from a distinguished vector representing the functional.
++The Gaussian calculation in Section~\ref{sec:weil-mass} will exclude that
++stronger realization.  We first fix the arithmetic expression completely.
+ 
+ All integrals on $\R$ use Lebesgue measure.  Set
+ \[
+@@ -246,6 +250,7 @@ and let $W:\mathfrak A\to\C$ be positive:
+ \]
+ 
+ \begin{theorem}[Nonunital algebraic GNS]
++\label{thm:gns}
+ Put
+ \[
+  \langle a,b\rangle_W=W(b^*a),
+@@ -289,9 +294,8 @@ For classes in $D_W$,
+  =W(c^*ab)
+  =\langle[b],\pi_W(a^*)[c]\rangle_W.
+ \]
+-This proves \eqref{eq:adjoint-inclusion}.  Its right side has dense
+-domain $D_W$, hence the adjoint of $\pi_W(a)$ is densely defined and
+-$\pi_W(a)$ is closable.  Finally,
++This proves \eqref{eq:adjoint-inclusion}.  The adjoint domain contains
++the dense subspace $D_W$, so $\pi_W(a)$ is closable.  Finally,
+ \[
+  \|\pi_W(a)[b]\|^2=W(b^*a^*ab),
+ \]
+@@ -307,11 +311,11 @@ extension follows.  For example,
+  \subset L^2(0,\infty),
+ \]
+ is symmetric and closable, but its deficiency indices are $(1,0)$, so it
+-has no self-adjoint extension.  More generally, closing the individual
+-operators in \eqref{eq:gns-action} does not identify a common domain on
+-which their products remain the given algebra products.  The minimal
+-closed representation uses the common graph domain, as in
+-\cite[Definition~2.4 and Lemma~2.6]{Powers1971}.
++has no self-adjoint extension.  Indeed, the adjoint equations $P^*u=iu$
++and $P^*u=-iu$ give $u=ce^{-x}$ and $u=ce^x$, respectively.
++Only the first solution belongs to $L^2(0,\infty)$.
++Products of closures require a separate common-domain construction.
++We give that construction in Section~\ref{sec:graph-domain}.
+ 
+ \begin{example}[An unbounded positive GNS multiplier]
+ Let $\mathfrak A=\C[x]$, let $x^*=x$, and set
+@@ -327,9 +331,129 @@ Then $W$ is positive, but multiplication by $x$ is unbounded, since
+ \]
+ \end{example}
+ 
++\section{Closed forms and the common invariant domain}
++\label{sec:graph-domain}
++
++A finite value of one quadratic form permits one operator application.
++Repeated products require control of every algebra element.  The distinction
++already occurs for a diagonal operator.
++
++\begin{example}[A maximal form domain need not be invariant]
++\label{ex:maximal-domain}
++On $\ell^2(\mathbb N)$, let $Ne_n=ne_n$, initially on $c_{00}(\mathbb N)$.
++Its closure and the closed form $q(v)=\|Nv\|^2$ have domain
++\[
++ V=\left\{v:\sum_{n\geq1}n^2|v_n|^2<\infty\right\}.
++\]
++Coordinate convergence proves that the maximal diagonal operator is closed.
++Finite coordinate truncations approximate every vector in its graph norm,
++so they prove the asserted closure.  The vector $v_n=n^{-2}$ belongs to $V$,
++but $Nv\notin V$, since $\sum n^4|v_n|^2=\infty$.
++For the polynomial algebra generated by $N$, the common domain is instead
++\begin{equation}
++ V_\infty=\bigcap_{k\geq0}
++ \left\{v:\sum_{n\geq1}n^{2k}|v_n|^2<\infty\right\}.
++ \label{eq:all-moments}
++\end{equation}
++Multiplication by each polynomial preserves $V_\infty$.
++Truncations converge in every displayed seminorm.
++\end{example}
++
++Return to Theorem~\ref{thm:gns}.  Write $D=D_W$, $H=\mathcal H_W$,
++and $A_a=\overline{\pi_W(a)}$ for $a\in\mathfrak A$.
++The graph topology on $D$ is generated by $\|\xi\|$ and
++$\|\pi_W(a)\xi\|$, for all $a\in\mathfrak A$.
++It is a locally convex topology.  Completion can require nets when
++$\mathfrak A$ has no countable family of controlling seminorms.
++
++\begin{theorem}[The exact common graph domain]
++\label{thm:graph-domain}
++The completion of $D$ in its graph topology identifies with
++\begin{equation}
++ D_W^{\mathrm{cl}}=\bigcap_{a\in\mathfrak A}\mathcal D(A_a)
++ \subset H.
++ \label{eq:common-domain}
++\end{equation}
++On this domain, the maps $\pi_W^{\mathrm{cl}}(a)=A_a|_{D_W^{\mathrm{cl}}}$
++form an invariant $*$-representation.  In particular,
++\begin{equation}
++ \pi_W^{\mathrm{cl}}(a)\pi_W^{\mathrm{cl}}(b)\xi
++ =\pi_W^{\mathrm{cl}}(ab)\xi,
++ \qquad
++ \langle\pi_W^{\mathrm{cl}}(a)\xi,\eta\rangle
++ =\langle\xi,\pi_W^{\mathrm{cl}}(a^*)\eta\rangle.
++ \label{eq:closed-products}
++\end{equation}
++Each action is continuous in the graph topology.
++For each $a$, the nonnegative form
++\[
++ q_a([b])=W(b^*a^*ab)=\|\pi_W(a)[b]\|^2
++\]
++is closable on $H$.  Its closure is $\overline q_a(\xi)=\|A_a\xi\|^2$
++on $\mathcal D(A_a)$.  Thus \eqref{eq:common-domain} is exactly the
++intersection of these closed form domains.
++Each $\pi_W^{\mathrm{cl}}(a)$ has closure $A_a$.
++\end{theorem}
++
++\begin{proof}
++A graph Cauchy net $(\xi_i)$ has a Hilbert limit $\xi$ and limits
++$\eta_a=\lim_i\pi_W(a)\xi_i$.  Closedness of $A_a$ gives
++$\xi\in\mathcal D(A_a)$ and $A_a\xi=\eta_a$.
++If $\xi=0$, closability gives $\eta_a=0$ for every $a$.
++Hence the graph completion injects into the right side of
++\eqref{eq:common-domain}.
++
++To prove the reverse inclusion, fix $\xi$ in that intersection and a finite
++set $F\subset\mathfrak A$.  Set $c=\sum_{a\in F}a^*a$.
++For $u\in D$, the adjoint identity gives the estimate
++\begin{equation}
++ \sum_{a\in F}\|\pi_W(a)u\|^2
++ =\langle\pi_W(c)u,u\rangle
++ \leq\|\pi_W(c)u\|\,\|u\|.
++ \label{eq:graph-control}
++\end{equation}
++Since $\xi\in\mathcal D(A_c)$, choose $u_j\in D$ with
++$u_j\to\xi$ and $\pi_W(c)u_j\to A_c\xi$.
++Apply \eqref{eq:graph-control} to $u_j-u_k$.
++Every $\pi_W(a)u_j$, $a\in F$, is Cauchy.  Closedness identifies its
++limit with $A_a\xi$.  Thus $D$ approximates $\xi$ in any prescribed
++finite collection of graph seminorms.
++Directing these approximations by finite sets and positive tolerances
++produces one net converging in all graph seminorms.
++
++Let this net be $(\xi_i)$ and fix $b\in\mathfrak A$.
++Then $\pi_W(b)\xi_i\to A_b\xi$ and
++$\pi_W(a)\pi_W(b)\xi_i=\pi_W(ab)\xi_i\to A_{ab}\xi$ for every $a$.
++Closedness gives $A_b\xi\in D_W^{\mathrm{cl}}$ and
++$A_aA_b\xi=A_{ab}\xi$.
++Linearity follows by the same approximation.
++Approximating both vectors in the algebraic adjoint identity proves
++the second equality in \eqref{eq:closed-products}.
++Continuity follows from
++$\|A_aA_b\xi\|=\|A_{ab}\xi\|$ and $\|A_b\xi\|$ itself.
++
++The form norm for $q_a$ is
++$(\|\xi\|^2+\|\pi_W(a)\xi\|^2)^{1/2}$.
++Its completion is the graph of $A_a$, which proves the form assertion.
++Finally $\pi_W(a)\subseteq\pi_W^{\mathrm{cl}}(a)\subseteq A_a$,
++so taking closures proves the last statement.
++Any closed $*$-representation extending $\pi_W$ contains the limits of
++these graph Cauchy nets and agrees with their multiplier limits.
++Thus it extends $\pi_W^{\mathrm{cl}}$, which proves minimality.
++\end{proof}
++
++This is the minimal closed representation in the sense of
++\cite[Definition~2.4 and Lemma~2.6]{Powers1971}.
++The word ``closed'' refers to completeness in the common graph topology.
++It does not assert that each restriction to
++$D_W^{\mathrm{cl}}$ is a closed operator or is self-adjoint.
++Example~\ref{ex:maximal-domain} separates the common domain from the
++maximal domain of one multiplier.
++
+ \section{Dagger transfer and completion}
+ 
+ \begin{theorem}[Dagger transfer]
++\label{thm:dagger}
+ Let $T:\mathfrak A\to\mathfrak B$ be a $*$-homomorphism of complex
+ $*$-algebras, let $\omega:\mathfrak B\to\C$ be positive, and put
+ $W=\omega\circ T$.  Then
+@@ -351,8 +475,7 @@ is an isometric injection and extends uniquely to an isometry
+  U:\mathcal H_W\longrightarrow\mathcal H_\omega
+  \label{eq:completion-map}
+ \end{equation}
+-with closed range.  On the algebraic common domain, and only there
+-without further hypotheses,
++with closed range.  On the algebraic common domain,
+ \begin{equation}
+  U_0\pi_W(a)=\pi_\omega(T(a))U_0.
+  \label{eq:algebraic-intertwining}
+@@ -397,6 +520,85 @@ $b=T(a)$ and $d=T(c)$ proves the second.  Continuity then extends
+ unbounded closure domains is used.
+ \end{proof}
+ 
++\begin{proposition}[Transfer of closed graph domains]
++\label{prop:graph-transfer}
++Use the data of Theorem~\ref{thm:dagger}, and set
++$K=U\mathcal H_W\subset\mathcal H_\omega$ and $E=U_0D_W$.
++On the dense subspace $E\subset K$, define
++\[
++ \rho(a)=\pi_\omega(T(a))|_E.
++\]
++Then $\rho$ is a $*$-representation, and
++\begin{equation}
++ U D_W^{\mathrm{cl}}=D_\rho^{\mathrm{cl}},
++ \qquad
++ U\pi_W^{\mathrm{cl}}(a)\xi=\rho^{\mathrm{cl}}(a)U\xi.
++ \label{eq:graph-transfer}
++\end{equation}
++Here every closure defining $D_\rho^{\mathrm{cl}}$ is taken in $K$.
++For the ambient closures on $\mathcal H_\omega$ one has
++\begin{equation}
++ U\mathcal D(\overline{\pi_W(a)})
++ \subseteq\mathcal D(\overline{\pi_\omega(T(a))}),
++ \qquad
++ \overline{\pi_\omega(T(a))}U\xi
++ =U\overline{\pi_W(a)}\xi.
++ \label{eq:ambient-transfer}
++\end{equation}
++If $T$ is surjective, $U$ is unitary and
++$U D_W^{\mathrm{cl}}=D_\omega^{\mathrm{cl}}$.
++Without surjectivity this last domain equality need not hold,
++even when $U$ is unitary.
++\end{proposition}
++
++\begin{proof}
++The algebraic intertwining identifies $\rho(a)$ with
++$U\pi_W(a)U^{-1}$ on $E$.  As a map onto $K$, $U$ is unitary.
++It identifies the individual graph closures and all graph seminorms.
++Theorem~\ref{thm:graph-domain} therefore gives \eqref{eq:graph-transfer}.
++If $\xi_j\in D_W$ approaches $\xi$ in the graph norm of
++$\pi_W(a)$, its images approach $U\xi$ and have multiplier images
++approaching $U\overline{\pi_W(a)}\xi$.
++This proves \eqref{eq:ambient-transfer}.
++For surjective $T$, one has $U_0D_W=D_\omega$ and $T(\mathfrak A)=\mathfrak B$.
++Hence the Hilbert spaces and their full graph topologies agree.
++\end{proof}
++
++\begin{example}[A Hilbert isometry can miss the full target domain]
++\label{ex:transfer-domain}
++Let $\mathfrak A=c_{00}(\mathbb N)$ and
++$\mathfrak B=\C[n]+c_{00}(\mathbb N)$, with pointwise multiplication
++and conjugation.  Here $\C[n]$ denotes polynomial sequences on the
++positive integers.  Let $T$ be inclusion and set
++\[
++ \omega(b)=\sum_{n\geq1}e^{-n}b_n,
++ \qquad W=\omega|_{\mathfrak A}.
++\]
++All sums converge, and both functionals are positive and faithful.
++Both GNS completions identify with
++$H=\ell^2(\mathbb N,e^{-n})$, because they contain the finite sequences.
++Thus $U$ is the identity on $H$.
++Every $\mathfrak A$-multiplier is bounded, so $D_W^{\mathrm{cl}}=H$.
++The element $n\in\mathfrak B$ acts by an unbounded multiplier.
++Finite truncations give cores for every polynomial multiplier.  Therefore
++\[
++ D_\omega^{\mathrm{cl}}
++ =\left\{v:\sum_{n\geq1}e^{-n}n^{2k}|v_n|^2<\infty
++               \text{ for all }k\geq0\right\}.
++\]
++The vector $v_n=e^{n/2}/n$ belongs to $H$, but fails the condition for
++$k=1$.  Thus $U D_W^{\mathrm{cl}}\nsubseteq D_\omega^{\mathrm{cl}}$.
++Only the restricted algebra $T(\mathfrak A)$ appears in
++\eqref{eq:graph-transfer}.
++\end{example}
++
++For a field interpretation, algebra products represent repeated operations
++on a common domain.  Theorem~\ref{thm:graph-domain} supplies this domain
++after positivity has supplied the Hilbert norm.
++Proposition~\ref{prop:graph-transfer} preserves it for the represented
++algebra.  A vacuum vector, self-adjoint generators, locality, and a positive
++energy condition require their own constructions.
++
+ \section{Positive unitization for nonunital
+ \texorpdfstring{$C^*$}{C-star}-algebras}
+ 
+@@ -421,6 +623,7 @@ Direct minimization in $\lambda$ gives the algebraic criterion
+ \end{equation}
+ 
+ \begin{theorem}[The nonunital $C^*$ case]
++\label{thm:cstar-unitization}
+ Let $\mathfrak A$ be a nonunital $C^*$-algebra and let
+ $\omega:\mathfrak A\to\C$ be positive.  Then $\omega$ is Hermitian and
+ bounded, and the functional \eqref{eq:unit-extension} on the standard
+@@ -444,7 +647,7 @@ nondegenerate, and cyclic:
+  \overline{\pi_\omega(\mathfrak A)\Omega}=\mathcal H_\omega.
+  \label{eq:cyclic-vector}
+ \end{equation}
+-For $m>\|\omega\|$, the unit vector of that larger extension is not the
++For $m>\|\omega\|$, the vector $[1]$ of that larger extension is not the
+ limit in \eqref{eq:approx-vector}.
+ \end{theorem}
+ 
+@@ -476,7 +679,7 @@ sufficiency for every larger $m$.  Conversely, a positive functional on
+ a unital $C^*$-algebra has norm equal to its value at the unit, so
+ restriction of $\omega_m$ gives $\|\omega\|\leq m$.
+ 
+-It remains to identify the unit vector.  If $\|\omega\|>0$, choose
++It remains to identify the vector $[1]$.  If $\|\omega\|>0$, choose
+ $\|a\|\leq1$ with $|\omega(a)|$ arbitrarily close to $\|\omega\|$.
+ Using $e_i a\to a$ and Cauchy--Schwarz shows
+ \[
+@@ -519,8 +722,203 @@ $n$th point mass $e_n$, would give
+ for every $n$, which is impossible for finite $m$.
+ \end{example}
+ 
++\section{The Gaussian obstruction to finite mass}
++\label{sec:weil-mass}
++
++For the full Weil functional, failure of positive unitization follows
++from its arithmetic local terms.  It does not require a hypothesis about
++the zeros.  The relevant functions approach the convolution identity
++while remaining inside $\cA_\zeta$:
++\begin{equation}
++ g_a(u)=\frac{e^{-u^2/(4a)}}{\sqrt{4\pi a}},
++ \qquad \widehat g_a(t)=e^{-at^2},
++ \qquad g_a^*\star g_a=g_{2a},\quad a>0.
++ \label{eq:gaussian-semigroup}
++\end{equation}
++
++\begin{theorem}[No finite positive unitization of the Weil functional]
++\label{thm:weil-mass}
++As $a\downarrow0$, the functional in \eqref{eq:weil-functional} satisfies
++\begin{equation}
++ L_\zeta(g_a)
++ =\frac{a^{-1/2}\log(1/a)}{4\sqrt\pi}+O(a^{-1/2}).
++ \label{eq:weil-gaussian-asymptotic}
++\end{equation}
++In particular $L_\zeta(g_{2a})>0$ for all sufficiently small $a$, and
++\begin{equation}
++ \frac{|L_\zeta(g_a)|^2}{L_\zeta(g_a^*\star g_a)}
++ \sim\frac{\sqrt2}{4\sqrt\pi}\,a^{-1/2}\log(1/a)
++ \longrightarrow\infty.
++ \label{eq:weil-unitization-divergence}
++\end{equation}
++There is no positive extension of $L_\zeta$ to $\cA_\zeta^+$ with a
++finite value at the adjoined unit.
++\end{theorem}
++
++\begin{proof}
++Every derivative of $g_a$ is a polynomial times a Gaussian.
++Thus $g_a\in\cA_\zeta$.  Completing the square proves
++\eqref{eq:gaussian-semigroup}, with the Fourier normalization
++\eqref{eq:fourier}.
++The polar contribution is $2e^{a/4}=O(1)$.
++
++For $0<a\leq1$, split the Gaussian exponent into two equal parts.
++Since $\Lambda_{\mathrm{vM}}(n)\leq\log n$, the absolute prime contribution
++is bounded by
++\begin{equation}
++ \frac{e^{-(\log2)^2/(8a)}}{\sqrt{\pi a}}
++ \sum_{n\geq2}\frac{\log n}{\sqrt n}
++                       e^{-(\log n)^2/8}.
++ \label{eq:prime-gaussian-bound}
++\end{equation}
++The series is finite: its terms are at most $n^{-2}$ for all sufficiently
++large $n$.  Hence this contribution is exponentially small relative to
++$a^{-1/2}$.
++
++Put $k_\infty(t)=\operatorname{Re}\psi(1/4+it/2)-\log\pi$.
++The digamma expansion on a closed sector away from the negative real axis
++gives $\psi(z)=\log z-(2z)^{-1}+O(|z|^{-2})$
++\cite[Eq.~5.11.2]{DLMF}.
++Consequently $k_\infty(t)-\log|t|$ is bounded for $|t|\geq1$.
++It is integrable on $[-1,1]$, since $k_\infty$ is smooth there.
++Therefore
++\[
++ \int_{\R}e^{-at^2}\bigl(k_\infty(t)-\log|t|\bigr)\,dt
++ =O(a^{-1/2}).
++\]
++Substitution $s=\sqrt a\,t$ gives
++\[
++ \frac1{2\pi}\int_{\R}e^{-at^2}\log|t|\,dt
++ =\frac{a^{-1/2}}{2\pi}
++ \left(\frac{\sqrt\pi}{2}\log(1/a)
++          +\int_{\R}e^{-s^2}\log|s|\,ds\right).
++\]
++The remaining integral is finite.  Adding all three local terms proves
++\eqref{eq:weil-gaussian-asymptotic}.
++Applying that formula at $a$ and $2a$ proves
++\eqref{eq:weil-unitization-divergence}.
++A positive unitization of mass $m$ would require
++$|L_\zeta(g_a)|^2\leq mL_\zeta(g_{2a})$ by
++\eqref{eq:unit-criterion}, which contradicts the divergence.
++\end{proof}
++
++\begin{theorem}[Positive finite Gaussian subspaces]
++\label{thm:gaussian-subspaces}
++Fix distinct positive real numbers $\lambda_1,\ldots,\lambda_r$.
++There exists $a_0>0$ such that the Weil form is positive definite on
++\[
++ E_a=\operatorname{span}_{\C}\{g_{a\lambda_1},\ldots,g_{a\lambda_r}\}
++ \qquad(0<a<a_0).
++\]
++The dimension of $E_a$ is $r$.  This assertion is unconditional.
++The threshold $a_0$ may depend on the entire finite family.
++\end{theorem}
++
++\begin{proof}
++The Gram matrix of the displayed functions is the real symmetric matrix
++\[
++ G(a)_{jk}=L_\zeta(g_{a(\lambda_j+\lambda_k)}).
++\]
++Apply \eqref{eq:weil-gaussian-asymptotic} at each of the finitely many
++scales $a(\lambda_j+\lambda_k)$.  In matrix norm,
++\begin{equation}
++ \frac{4\sqrt\pi\,\sqrt a}{\log(1/a)}G(a)
++ \longrightarrow M,
++ \qquad M_{jk}=\frac1{\sqrt{\lambda_j+\lambda_k}}.
++ \label{eq:gaussian-gram-limit}
++\end{equation}
++For $c\in\C^r$,
++\begin{equation}
++ c^*Mc=\frac1{\sqrt\pi}\int_{\R}
++       \left|\sum_{j=1}^r c_j e^{-\lambda_j t^2}\right|^2dt.
++ \label{eq:limiting-gaussian-gram}
++\end{equation}
++If this integral vanishes, continuity makes its integrand zero everywhere.
++Order the $\lambda_j$ increasingly, divide the resulting identity by
++$e^{-\lambda_1t^2}$, and let $t\to+\infty$.
++This gives $c_1=0$.  Repeating proves $c=0$.
++Thus $M$ is positive definite.
++Let $\mu>0$ be its smallest eigenvalue.  Matrix convergence makes the
++left matrix in \eqref{eq:gaussian-gram-limit} differ from $M$ by less
++than $\mu/2$ for all sufficiently small $a$.
++Hence $G(a)$ is positive definite.
++The same linear-independence argument applied to the Fourier transforms
++$e^{-a\lambda_jt^2}$ proves $\dim E_a=r$.
++\end{proof}
++
++For $\lambda_1=1$ and $\lambda_2=4$, the limiting matrix is
++\[
++ M=\begin{pmatrix}1/\sqrt2&1/\sqrt5\\1/\sqrt5&1/\sqrt8\end{pmatrix},
++ \qquad\det M=\frac1{20}>0.
++\]
++This gives a positive two-dimensional family directly from the local terms.
++The quantifiers in Theorem~\ref{thm:gaussian-subspaces} fix the finite family
++before choosing its scale.  They do not imply positivity on all of
++$\cA_\zeta$ at once.
++
++\begin{corollary}[Excluded positive carriers]
++\label{cor:weil-carriers}
++There is no representation
++\[
++ L_\zeta(g)=\langle\pi(g)\Omega,\Omega\rangle
++\]
++on a positive Hilbert space with $\Omega$ of finite norm in a common
++invariant $*$-representation domain.
++There is also no $*$-homomorphism $T:\cA_\zeta\to\mathfrak B$ to a
++$C^*$-algebra with a positive linear functional
++$\omega:\mathfrak B\to\C$ such that $L_\zeta=\omega\circ T$.
++\end{corollary}
++
++\begin{proof}
++In the vector case, the adjoint identity on the invariant domain gives
++\[
++ |L_\zeta(g)|^2
++ \leq\|\Omega\|^2\|\pi(g)\Omega\|^2
++ =\|\Omega\|^2L_\zeta(g^*\star g).
++\]
++This contradicts \eqref{eq:weil-unitization-divergence}.
++In the $C^*$ case, positivity implies boundedness and
++$|\omega(b)|^2\leq\|\omega\|\omega(b^*b)$ by
++Theorem~\ref{thm:cstar-unitization}, or its unital Cauchy--Schwarz proof.
++Substitute $b=T(g)$ and use the same divergence.
++\end{proof}
++
++This obstruction concerns the functional's representing vector.
++It does not prevent bounded GNS multipliers.  Indeed, under RH,
++\eqref{eq:zero-norm} and $|\widehat f(t)|\leq\|f\|_{L^1}$ give
++\[
++ L_\zeta((f\star b)^*\star(f\star b))
++ \leq\|f\|_{L^1}^2 L_\zeta(b^*\star b).
++\]
++Thus every convolution multiplier is bounded under that hypothesis,
++and $D_{L_\zeta}^{\mathrm{cl}}=\mathcal H_{L_\zeta}$.
++The functional itself has no finite representing vector.
++A positive functional on a proper test algebra, or a positive weight
++finite on a specified test ideal, remains compatible with this restriction.
++The latter requires its domain and all products to be defined before a
++GNS or field interpretation can be asserted.
++
+ \section{Why an indefinite quotient does not give positivity}
+ 
++The Hermitian part of the construction exists without positivity.
++For a complex $*$-algebra $\mathfrak A$ and a Hermitian functional $W$,
++put
++\[
++ B_W(f,g)=W(g^*f),\qquad
++ R_W=\{f:B_W(f,g)=0\text{ for every }g\in\mathfrak A\}.
++\]
++Then $R_W$ is a left ideal, since
++\[
++ B_W(af,g)=W(g^*af)=B_W(f,a^*g)=0\quad(f\in R_W).
++\]
++The quotient $\mathfrak A/R_W$ consequently has a nondegenerate Hermitian
++pairing and an algebraic left action satisfying
++$B_W(af,g)=B_W(f,a^*g)$.
++This applies unconditionally to $(\cA_\zeta,L_\zeta)$ by
++\eqref{eq:hermitian}.  It supplies neither a positive norm nor a class of
++the missing unit.  Under positivity, Cauchy--Schwarz identifies $R_W$
++with $\cN_W$, and Theorem~\ref{thm:gns} applies.
++
+ Let $V=\C^2$, $J=\operatorname{diag}(1,-1)$, and
+ \[
+  [x,y]=y^*Jx.
+@@ -588,13 +986,32 @@ polar, archimedean, and prime-power structures in
+ \eqref{eq:weil-functional}, without using RH, the multiset of zeta zeros,
+ or an assertion equivalent to \eqref{eq:weil-criterion}.  Prove
+ \eqref{eq:factorization} with all three local terms and the Fourier and
+-measure conventions above.  A solution with $\mathfrak B$ a
+-$C^*$-algebra would additionally give the bounded realization
+-\eqref{eq:cstar-bounds}--\eqref{eq:bounded-intertwining}.
++measure conventions above.  Corollary~\ref{cor:weil-carriers} excludes
++a positive functional on a $C^*$-algebra as the target.
++Any admissible positive functional $\omega$ must fail the finite-mass
++unitization bound on the image of $T$.
++Theorem~\ref{thm:graph-domain} and
++Proposition~\ref{prop:graph-transfer} then specify the common invariant
++domain supplied by this factorization.
+ \end{problem}
+ 
++The resulting representation would still need an additional comparison
++to a spectral determinant.  Equality of functionals does not preserve
++trace multiplicities.  For example, on $\C$ the positive functional
++$W(z)=mz$, with integer $m\geq2$, has a one-dimensional GNS space.
++A scalar $\lambda$ consequently has determinant $s-\lambda$ there.
++The trace realization $z\mapsto zI_m$ on $\C^m$ has the same functional
++and determinant $(s-\lambda)^m$.  Thus a determinant realization must
++identify the operator, its domain, and spectral multiplicities separately.
++
+ \begin{thebibliography}{9}
+ 
++\bibitem{DLMF}
++F.~W.~J.~Olver et al., eds.,
++\emph{NIST Digital Library of Mathematical Functions},
++\S5.11(i), equation~5.11.2.
++\href{https://dlmf.nist.gov/5.11.E2}{dlmf.nist.gov/5.11.E2}.
++
+ \bibitem{Weil1952}
+ A.~Weil,
+ \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},

@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "status": "frozen-candidate-requires-independent-review",
+  "base_commit": "cce2bc383bcf2fd930e917a5abb773e0469465cc",
+  "branch": "repair/frontier-mine-weil-20260913",
+  "worktree": "/Users/raeez/mathematics/worktrees/frontier-mine-weil-20260913",
+  "changed_manuscript_paths": [
+    "paper.tex",
+    "README.md"
+  ],
+  "additional_owned_tree": "reports/research/MINING-2026-09-13",
+  "source_diff_sha256": "770f9d9c023f01c37dc8f8bc575e6446e9b823d59e359f3356c5d26331255299",
+  "aggregate_files_sha256": "b36d9f98b81762818b70a2b3a2503c723d01f00106e92caf081f287c06799ff1",
+  "files": [
+    {
+      "path": "paper.tex",
+      "sha256": "42149bcf9059eef4da0549d0035aedd9154d849566cbcbeaf59e8a618a2df838",
+      "bytes": 37808
+    },
+    {
+      "path": "README.md",
+      "sha256": "c9e20b6d665efcf5fe1bdfe3f64441f5f32c253dc825e696bf67b0047150d021",
+      "bytes": 2785
+    },
+    {
+      "path": "Makefile",
+      "sha256": "e8695738c4785e57137a5c5daa20429ab393a5363f179d06ebbe92abcb8f9faf",
+      "bytes": 497
+    },
+    {
+      "path": "out/paper.pdf",
+      "sha256": "665e790a8846106385f133386193525dd0b4fb5279ad609afa3c767d4371fd21",
+      "bytes": 337310
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/REPORT.md",
+      "sha256": "67f2b0b42f91612086c05d584887c9a3bc5a914216b60367f93ae1c589c6e146",
+      "bytes": 8991
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/baseline/README.md",
+      "sha256": "bc4b8511958e332b6437c2a7641630ea70f8e502b3ef88a1141ac253372890df",
+      "bytes": 1764
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/baseline/paper.log",
+      "sha256": "be79d0f15bb11c1914b2439c380098679f1f6af322e7b5868a67dba6aa14cbf5",
+      "bytes": 25684
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/baseline/paper.pdf",
+      "sha256": "cef003e481e8a0b0da49be5d0a3f32e7d3df2e59add4a30ac21e492f64ede898",
+      "bytes": 294192
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/baseline/paper.tex",
+      "sha256": "1902189145183342a560527ba18e54cdbb443054523bff29b1945f1490abb799",
+      "bytes": 21050
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/build.log",
+      "sha256": "3a2820bb188b9753710e5750e63d9e55aad7e3694e974fe508c8dea43dd88acd",
+      "bytes": 14024
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/calculations.json",
+      "sha256": "54f2a2ef9e4bc20e241acb15ec696d689c48e5f78f3b9171be02bd1b91c4baa2",
+      "bytes": 550
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/check_calculations.py",
+      "sha256": "a97862526dab2f77009b5b4798a16ad6771a1647641fcffd519d1d89616cf4d2",
+      "bytes": 2092
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/contact-1.png",
+      "sha256": "22e5ec61297ed8b327d330b0c036f8acbbb596398df1f64b9cbff80a8bbd46c4",
+      "bytes": 706673
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/contact-2.png",
+      "sha256": "44f09cf3f9b53ce8f57582385e20e0f3b3c9f7320b8cce45314e161ecbfc571d",
+      "bytes": 810114
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/contact-3.png",
+      "sha256": "7b8ca0f9536ee27994fcd19c968d4cf16fefda3db85a98bc60de4766e075109e",
+      "bytes": 666139
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/inspected-render-before-final-wording.json",
+      "sha256": "b04e9280b908bd10476ade569a9dd9ef2b2528102ec7f30955efa219a8315ac3",
+      "bytes": 1108
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/mining-dispositions.json",
+      "sha256": "0ad99ed47867ef688ef727410cdd07973488d560797dd81fcbe33827e6d0605d",
+      "bytes": 22508
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-01.png",
+      "sha256": "277839c741c866dd019ed7113678199ba501c9989d1a0a9e1cd1056b0956cd16",
+      "bytes": 235325
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-02.png",
+      "sha256": "b753f7206a61c670c63b0839bbfafac17b02b8fcadbc303153c6b6835ebdc2c9",
+      "bytes": 212084
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-03.png",
+      "sha256": "c19cd8b4917980a1da8cf81da8a5b1503b4ca3ff43b46ae4d80087012e31fe26",
+      "bytes": 263331
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-04.png",
+      "sha256": "eaee317dbc9ebc5fca70276dce0e30336001e7536c07cd88af8acebf4cda0906",
+      "bytes": 227565
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-05.png",
+      "sha256": "3c9da864b0094a5e64a8897ca25cded17d0183e43c358597a1c301e90f7e2969",
+      "bytes": 333885
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-06.png",
+      "sha256": "b1ca93e94b9db65c53d00212416c9ee7e71ddf021478a9501dad236c12bc51c6",
+      "bytes": 224471
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-07.png",
+      "sha256": "ffebfcaff6414b73f47122cddae8b06b471e430b86b2678ab21da88be1949a1c",
+      "bytes": 277877
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-08.png",
+      "sha256": "94b5c8c4f62df4afdeeaa0a1542efb53eb25b3ba7a74f83bf5b2682ace624cda",
+      "bytes": 240045
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-09.png",
+      "sha256": "1dcde201fc427021214494249acd7bce2020c2d4f73a4917df725a3c7a3f2862",
+      "bytes": 236031
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-10.png",
+      "sha256": "01683bff041c82be6a19a94b711d7208c1b10d5c00e8e7ed936801f5fcb9287b",
+      "bytes": 260475
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-11.png",
+      "sha256": "5c8f464b293c5706f79673fec8b8239dff9462f8cabe224ae9fd328070cece08",
+      "bytes": 275026
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-12.png",
+      "sha256": "c7b50ee717e30569c40fb4141470139ff0839080200c852e021e71baeda77761",
+      "bytes": 268612
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/page-13.png",
+      "sha256": "322b602c614fb6a1102e2475135ca31dc163ebbd2c4a9686490cd0c276599ca3",
+      "bytes": 86066
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/paper.txt",
+      "sha256": "9b0457a710b78f778d8cc9558920b49ccc04fde5052d783ea22dfaaabc888967",
+      "bytes": 40756
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/record_mining.py",
+      "sha256": "64a2e90f036646ab983f39c2ba98e2b5b0be05422fd901c756ca7acb3acc6a15",
+      "bytes": 12340
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render-pages.json",
+      "sha256": "1d568a1f284d7a37758899777c13525a2100f70028b99c4c1302adfcd1dd0ea5",
+      "bytes": 1108
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/repeat-build.log",
+      "sha256": "3a2820bb188b9753710e5750e63d9e55aad7e3694e974fe508c8dea43dd88acd",
+      "bytes": 14024
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/reproducibility.json",
+      "sha256": "dbb7ddb9cb77f9e8e271a1b969669c8de561a249946cbc9df6fd65f927c350d0",
+      "bytes": 274
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/source.patch",
+      "sha256": "770f9d9c023f01c37dc8f8bc575e6446e9b823d59e359f3356c5d26331255299",
+      "bytes": 27959
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/archived-copoisson.tex",
+      "sha256": "7706234b140a21fb772d9f031aa3e4970383513e2d9660c9655af376417336dd",
+      "bytes": 37896
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/archived-gaussians.tex",
+      "sha256": "5120bfcfbc251446d363cdb7196b89b3cf024e814863bc32c92ffedc4956eb4b",
+      "bytes": 40024
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/archived-kms.tex",
+      "sha256": "a704b37a946dca47ad1497085cd484bb20f34e171194078d1cc1ea74afef64f0",
+      "bytes": 65456
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/base-paper.tex",
+      "sha256": "1902189145183342a560527ba18e54cdbb443054523bff29b1945f1490abb799",
+      "bytes": 21050
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/dlmf-5.11.E2.tex",
+      "sha256": "047977abf52ef55a672f3824ce10932cb767ee686b877798b5a85dc40171199e",
+      "bytes": 90
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/historical-platonic.tex",
+      "sha256": "bc9bea5959381262b0d664ba161b95da323b405293553c3b09ccaf5e042446be",
+      "bytes": 52745
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/historical-recap.md",
+      "sha256": "81bd9faaac3bfb146ee481f0e924a7f4d193737d7d5d79d79a59a45fad7f726c",
+      "bytes": 13530
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/historical-weil-seed.md",
+      "sha256": "298768f86e8c43f303c63a766ddfd4d930a465f7b1fea8adbb5f36b21a69a806",
+      "bytes": 1835
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/powers-page-09.png",
+      "sha256": "dfe229269cebddf68a051c4a9929ebd5f016953e3dc3f86a63f2272bbdc68037",
+      "bytes": 103179
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/powers-page-10.png",
+      "sha256": "bab2e2208b551801f13e02a8ced4e020498fb58f8812386064a2db394e9a945e",
+      "bytes": 106840
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/powers-preprint.pdf",
+      "sha256": "07640f69f486114fe82953154cc6fd0031e9e73ddc3ab09f96c687bfc567c1cf",
+      "bytes": 1731460
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/powers-preprint.txt",
+      "sha256": "0726ad051b0e179928d509354e409f0e895e337c62e4317145668e08e49849d1",
+      "bytes": 135492
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/return-cr-g05-s001.md",
+      "sha256": "ea46407fe21123c138fc6db2b1fbfe50f6268cd471ca7292d01110c0bd6b0651",
+      "bytes": 35513
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/return-cr-g08-p004.md",
+      "sha256": "e20ab2ce342293a475acf8cfd9f8920069e631c92541d7c2755e429d7384d3a9",
+      "bytes": 46637
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/return-sw002-g02-p03.md",
+      "sha256": "3fa3d029572c75b8087e3ce7ec5cc880f25f1a0547923e261edd0ee325b4f36a",
+      "bytes": 14481
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/root--critique_groups_02_08--g05--s001-public.json",
+      "sha256": "4f89a4407a584a2db0a2d4b21eb9c652bef41bc233b9c0974c5a8322f25f990d",
+      "bytes": 41177
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/root--critique_groups_02_08--g08--p004-public.json",
+      "sha256": "ecad77a777b6ea3f57de1e2c20217f6e8a7571bc457bda6293be5c3c26502f75",
+      "bytes": 54026
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/root--sw002_g02--p03-public.json",
+      "sha256": "e5fbf33f3d76879994adcf5b434749b8c8b98774a399ff47a801be614e66dbda",
+      "bytes": 17579
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/sources/synthesis-arithmetic.tex",
+      "sha256": "126c38996953cc4fd7f09f9aca9be329bdcbe44d20609121fedb3c09f244a023",
+      "bytes": 97904
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/verification.json",
+      "sha256": "8fc17ffce7409b93ca8e763e63a885245ee5fc42894a8af9f0e466df69e80500",
+      "bytes": 1148
+    }
+  ],
+  "build_command": "SOURCE_DATE_EPOCH=1788515194 make -B check",
+  "calculation_command": "/opt/homebrew/opt/python@3.14/bin/python3.14 reports/research/MINING-2026-09-13/check_calculations.py",
+  "pdf_pages": 13,
+  "pdf_sha256": "665e790a8846106385f133386193525dd0b4fb5279ad609afa3c767d4371fd21",
+  "acceptance": "none; parent must assign independent exact-byte review",
+  "central_artifacts_changed": false
+}
