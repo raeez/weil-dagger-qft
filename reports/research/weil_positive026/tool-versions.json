@@ -1,0 +1,8 @@
+{
+  "python": "3.14.6",
+  "pymupdf": "1.27.2",
+  "pdflatex": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)",
+  "pdfinfo": "pdfinfo version 26.02.0",
+  "pdftoppm": "pdftoppm version 26.02.0",
+  "pdffonts": "pdffonts version 26.02.0"
+}

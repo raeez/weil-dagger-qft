@@ -1,0 +1,51 @@
+{
+  "versions": {
+    "python": "3.14.6",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "exact_checks": {
+    "prime_two_gram_eigenvalues": true,
+    "prime_two_gram_determinant": true,
+    "one_euler_factor_rational_density": true,
+    "factorial_prime_exponent_identity_bounds": [
+      4,
+      5,
+      10,
+      31,
+      100
+    ]
+  },
+  "numerical_check": {
+    "digits": 65,
+    "spatial_difference_norm": "2.575260059535378719271940696032077000280546402150962923",
+    "fourier_density_integral": "2.575260059535378719271940696032077000280546402150962923",
+    "finite_gram_value": "(2.575260059535378719271940696032077000280546402150962923 + 0.0j)",
+    "spatial_fourier_difference": "0.0",
+    "spatial_gram_difference": "4.7477839e-66",
+    "scope": "Diagnostic quadrature. Differences are observed errors, not certified error bounds."
+  },
+  "mass_ratios": [
+    {
+      "a": "0.01",
+      "ratio": "3.920279206444875334706363",
+      "ratio_over_leading": "1.002458665484986821479984"
+    },
+    {
+      "a": "0.001",
+      "ratio": "12.36660600880297677486051",
+      "ratio_over_leading": "1.0"
+    },
+    {
+      "a": "0.0001",
+      "ratio": "39.10664191374169765549598",
+      "ratio_over_leading": "1.0"
+    },
+    {
+      "a": "0.00001",
+      "ratio": "123.6660600880297677486051",
+      "ratio_over_leading": "1.0"
+    }
+  ],
+  "proof_scope": "Symbolic identities certify only the displayed finite formulas. General positivity, domains, and divergence are proved in the TeX source."
+}

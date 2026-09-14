@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "title": "Introduction to representations of the canonical commutation and anticommutation relations",
+      "author": "Jan Derezinski",
+      "url": "https://arxiv.org/pdf/math-ph/0511030v2",
+      "path": "primary-sources/derezinski-0511030v2.pdf",
+      "sha256": "696a733e17adf0abd4cf1824b8e9cb7def801e657f84143ea2487ad217d3e275",
+      "locators": [
+        "Section 2.2, preprint page 6: inner-product convention",
+        "Sections 5.5-5.7, preprint pages 21-23",
+        "Theorems 17 and 18: CCR and mixed second-quantization commutators"
+      ],
+      "use": "Standard current formulas only. The weighted carrier and arithmetic comparison are proved in the module."
+    }
+  ]
+}

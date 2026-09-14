@@ -1,0 +1,600 @@
+diff --git a/Users/raeez/mathematics/worktrees/frontier-weil-positive-026-20260914/research-candidates/weil_positive026/current027/prime-current-carrier.tex b/Users/raeez/mathematics/worktrees/frontier-weil-positive-026-20260914/research-candidates/weil_positive026/current027/prime-current-carrier.tex
+new file mode 100644
+index 0000000..03a0daf
+--- /dev/null
++++ b/Users/raeez/mathematics/worktrees/frontier-weil-positive-026-20260914/research-candidates/weil_positive026/current027/prime-current-carrier.tex
+@@ -0,0 +1,594 @@
++\section{Arithmetic currents and prime inclusions}
++\label{sec:wc-currents}
++
++The prime forms define creation and annihilation currents with the native
++convolution involution.  Orthogonal prime coordinates give compatible
++inclusions for all finite sets of primes.  Their Hilbert sum also supports
++infinite families of currents with square-summable prime coordinates.
++The arithmetic diagonal does not belong to this infinite Hilbert sum.
++
++All vector spaces are complex.  Inner products are linear in their first
++argument.  Algebra elements have degree zero.  Particle number gives a
++separate nonnegative grading, with ordinary commutators throughout.
++No coefficient change, deformation parameter, or zero spectrum enters
++the construction.
++
++For a prime $p$, retain every power $p^m$ and set
++\begin{equation}
++ \begin{aligned}
++ c_{p,m}&=(\log p)p^{-m/2},&
++ C_p&=\sum_{m\geq1}c_{p,m}=\frac{\log p}{\sqrt p-1},\\
++ \lambda_p(t)&=\sum_{m\geq1}c_{p,m}|1-e^{itm\log p}|^2,&
++ d\mu_p(t)&=\lambda_p(t)\frac{dt}{2\pi},\\
++ W_p(g)&=\sum_{m\geq1}c_{p,m}
++ \bigl(2g(0)-g(m\log p)-g(-m\log p)\bigr).
++ \end{aligned}
++ \label{eq:wc-local-data}
++\end{equation}
++The density is given explicitly by \eqref{eq:wp-euler-density}.
++In particular, $0\leq\lambda_p\leq4C_p$ and $\lambda_p>0$ almost
++everywhere.  The measure is locally finite and has infinite total mass.
++The Fourier map of \eqref{eq:fourier} gives
++\[
++ H_p=L^2(\R,\mu_p),\qquad
++ T_p f=\widehat f,\qquad
++ \langle T_pf,T_ph\rangle=W_p(h^*\star f).
++\]
++Theorem~\ref{thm:wp-carrier} proves that $T_p(\cA_\zeta)$ is dense in $H_p$.
++
++\subsection{The two-prime calculation}
++
++Begin with $H_{\{2,3\}}=H_2\oplus H_3$ and
++$v_2(f)=(T_2f,0)$, $v_3(f)=(0,T_3f)$.
++Their inner products are
++\begin{equation}
++ \langle v_p(f),v_q(h)\rangle
++ =\delta_{pq}W_p(h^*\star f),\qquad p,q\in\{2,3\}.
++ \label{eq:wc-two-prime-covariance}
++\end{equation}
++Thus $v_2(f)+v_3(f)$ realizes the sum of both full local Euler factors.
++For $f=g_a$, where
++$g_a(u)=(4\pi a)^{-1/2}e^{-u^2/(4a)}$ and $a>0$, its squared norm is
++\begin{equation}
++ q_2(a)+q_3(a),\qquad
++ q_p(a)=\frac{\log p}{\sqrt{2\pi a}}
++ \sum_{m\geq1}p^{-m/2}
++ \left(1-e^{-m^2(\log p)^2/(8a)}\right)>0.
++ \label{eq:wc-gaussian-norm}
++\end{equation}
++This follows from $g_a^*\star g_a=g_{2a}$ and the displayed value of
++$W_p(g_{2a})$.  Truncation after $M$ powers has error at most
++\[
++ \frac{\log p}{\sqrt{2\pi a}}
++ \frac{p^{-(M+1)/2}}{1-p^{-1/2}}.
++\]
++
++Let $\Omega$ have norm one in particle number zero.
++The current formulas below give, for $p,q\in\{2,3\}$,
++\begin{equation}
++ \begin{aligned}
++ A_p^+(f)\Omega&=v_p(f),& A_p^-(f)\Omega&=0,\\
++ A_p^-(f)A_q^+(h)\Omega
++ &=\delta_{pq}W_p(f\star h)\Omega,&
++ A_p^+(f)A_q^+(h)\Omega
++ &=\sqrt2\,S_2(v_p(f)\otimes v_q(h)).
++ \end{aligned}
++ \label{eq:wc-two-prime-action}
++\end{equation}
++Here $S_2(x\otimes y)=(x\otimes y+y\otimes x)/2$.
++For distinct primes the squared norm of the last vector is
++$W_p(f^*\star f)W_q(h^*\star h)$.
++For $p=q$ and $f=h$, it is $2W_p(f^*\star f)^2$.
++These are the actual two-particle products, including their normalization.
++For the Gaussian, the vectors
++$e_p=v_p(g_a)/\sqrt{q_p(a)}$ are orthonormal.
++The normalized occupation vectors
++\[
++ |r,s\rangle=
++ \frac{a^*(e_2)^r a^*(e_3)^s}{\sqrt{r!s!}}\Omega
++ \qquad(r,s\geq0)
++\]
++therefore obey
++\[
++ A_2^+(g_a)|r,s\rangle
++ =\sqrt{q_2(a)}\sqrt{r+1}|r+1,s\rangle,\qquad
++ A_3^-(g_a)|r,s\rangle
++ =\sqrt{q_3(a)}\sqrt{s}|r,s-1\rangle.
++\]
++The second expression is zero when $s=0$.
++
++\subsection{The nonunital arithmetic algebra}
++
++Let $\mathcal P$ denote the set of primes.  On the disjoint union
++$X=\mathcal P\times\R$, put
++$\nu(\{p\}\times E)=\mu_p(E)$ for Borel sets $E$.
++For a finite nonempty $P\subset\mathcal P$, define
++\begin{equation}
++ \begin{aligned}
++ B_P&=\bigoplus_{p\in P}\mathscr S(\R),&
++ B_{\mathrm{loc}}&=\bigoplus_{p\in\mathcal P}^{\mathrm{alg}}\mathscr S(\R),\\
++ H_P&=\bigoplus_{p\in P}H_p,&
++ H&=\bigoplus_{p\in\mathcal P}H_p=L^2(X,\nu),\\
++ \omega(b)&=\sum_p\int_\R b_p(t)\,d\mu_p(t),&
++ (\pi(b)h)_p(t)&=b_p(t)h_p(t).
++ \end{aligned}
++ \label{eq:wc-local-algebra}
++\end{equation}
++The superscript $\mathrm{alg}$ means finite prime support.
++Products and involution are pointwise:
++$(bd)_p=b_pd_p$ and $(b^*)_p=\overline{b_p}$.
++Give $B_{\mathrm{loc}}$ the locally convex direct sum topology of its
++Schwartz summands.  All defining integrals are finite in this algebra.
++
++\begin{proposition}[Prime algebra, weight, and arithmetic map]
++\label{prop:wc-weight}
++The algebra $B_{\mathrm{loc}}$ is nonunital, and $\omega$ is a continuous
++positive functional with zero GNS null space.
++Its GNS completion is $H$, with bounded multiplication representation $\pi$.
++For $b\in B_{\mathrm{loc}}$,
++\[
++ \|\pi(b)\|=\max_p\|b_p\|_\infty.
++\]
++The extended positive weight on $L^\infty(X,\nu)$ is
++$\Phi(b)=\int_X b\,d\nu\in[0,\infty]$ for $b\geq0$.
++Its finite ideals are
++\[
++ \mathfrak m_\Phi=L^1(\nu)\cap L^\infty(\nu),\qquad
++ \mathfrak n_\Phi=L^2(\nu)\cap L^\infty(\nu).
++\]
++One has $\Phi(1)=\infty$.
++The functional $\omega$ has no positive unitization of finite mass.
++
++For finite nonempty $P$, the map
++\begin{equation}
++ T_P:\cA_\zeta\longrightarrow B_P,\qquad
++ (T_Pf)_p=\widehat f\quad(p\in P)
++ \label{eq:wc-arithmetic-map}
++\end{equation}
++is an injective $*$-homomorphism.  With $W_P=\sum_{p\in P}W_p$,
++\[
++ \omega(T_Pg)=W_P(g),\qquad
++ \|T_Pf\|_{H_P}^2=W_P(f^*\star f).
++\]
++\end{proposition}
++\begin{proof}
++An identity would restrict to the constant one in each Schwartz summand,
++which is impossible.  The density bound for $\lambda_p$ proves continuity
++of each integral in the Schwartz topology.  The direct sum topology gives
++continuity of their sum.  Positivity and the null-space assertion follow
++from
++\[
++ \omega(b^*b)=\sum_p\|b_p\|_{H_p}^2
++\]
++and $\lambda_p>0$ almost everywhere.
++Truncation in primes and density of Schwartz functions in each $H_p$
++prove density in $H$.  The multiplication norm follows by choosing a
++bump in one prime coordinate near the supremum of its multiplier.
++
++For bounded measurable functions, integration gives the stated ideals.
++The sets consisting of finitely many prime coordinates and bounded real
++intervals have finite measure and exhaust $X$.
++Their characteristic functions give finite-weight truncations of every
++nonnegative bounded function.  A single prime coordinate already has
++infinite total measure, so $\Phi(1)=\infty$.
++A finite positive unitization of $\omega$ would restrict to one for its
++$p=2$ summand, contrary to Theorem~\ref{thm:wp-carrier}.
++Finally, the Fourier product and involution identities apply in every
++coordinate.  Equation~\eqref{eq:wp-positive-realization} gives both
++functional identities and Fourier inversion gives injectivity.
++\end{proof}
++
++The minimal Hilbert space for $W_P$ alone is
++$\widetilde H_P=L^2(\R,(\sum_{p\in P}\lambda_p)dt/(2\pi))$.
++The isometry
++\[
++ \Delta_P:\widetilde H_P\longrightarrow H_P,\qquad
++ \Delta_Ph=(h)_{p\in P}
++\]
++has closed image equal to the closure of $T_P(\cA_\zeta)$.
++Density follows from Theorem~\ref{thm:wp-carrier} applied to the summable
++family for $P$.
++When $P$ contains two primes, this image is proper.
++A vector supported in just one prime coordinate cannot be diagonal
++unless it vanishes, since all $\mu_p$ are equivalent to Lebesgue measure.
++The larger space $H_P$ retains the independently addressable prime currents.
++
++\subsection{Operators and their common domain}
++
++For any of the Hilbert spaces $K=H_P$ or $K=H$, let $S_n$ be the
++orthogonal symmetrizer on the Hilbert tensor power $K^{\otimes n}$.
++Set $K^{\odot n}=S_nK^{\otimes n}$, $K^{\odot0}=\C$, and
++\begin{equation}
++ \mathcal F(K)=\bigoplus_{n\geq0}K^{\odot n},\qquad
++ \mathcal D_{\mathrm{fin}}(K)
++ =\bigoplus_{n\geq0}^{\mathrm{alg}}K^{\odot n}.
++ \label{eq:wc-fock-domain}
++\end{equation}
++Each sector here is a completed Hilbert space.
++Finite particle number does not require finite prime support.
++The vacuum is $\Omega=(1,0,0,\ldots)$.
++
++For $v\in K$ and $\psi_n\in K^{\odot n}$, define
++\begin{equation}
++ \begin{aligned}
++ a^*(v)\psi_n&=\sqrt{n+1}\,S_{n+1}(v\otimes\psi_n),\\
++ a(v)\psi_n&=\sqrt n\,C_v\psi_n\quad(n\geq1),&
++ a(v)\Omega&=0.
++ \end{aligned}
++ \label{eq:wc-creation-definition}
++\end{equation}
++The bounded contraction $C_v$ on $K^{\otimes n}$ sends
++$h_1\otimes\cdots\otimes h_n$ to
++$\langle h_1,v\rangle h_2\otimes\cdots\otimes h_n$.
++It maps symmetric tensors to symmetric tensors.
++Thus $a^*(v)$ is linear in $v$, while $a(v)$ is conjugate-linear in $v$.
++These definitions agree with the standard bosonic normalization
++\cite{wc-Derezinski}*{Sections 5.5--5.7, pp.~21--23}, after reversing
++the inner-product convention there.
++
++Regard $b\in B_P$ or $B_{\mathrm{loc}}$ as its vector $j(b)\in K$.
++Define three complex-linear families on $\mathcal D_{\mathrm{fin}}(K)$:
++\begin{equation}
++ \begin{aligned}
++ J^+(b)&=a^*(j(b)),&
++ J^-(b)&=a(j(b^*)),\\
++ \mathsf N(b)|_{K^{\odot n}}
++ &=\sum_{r=1}^n
++ I^{\otimes(r-1)}\otimes\pi(b)\otimes I^{\otimes(n-r)},&
++ \mathsf N(b)\Omega&=0.
++ \end{aligned}
++ \label{eq:wc-current-definition}
++\end{equation}
++The sum commutes with $S_n$ and therefore restricts to the displayed sector.
++The symbol $\mathsf N(b)$ denotes a number current, distinct from the
++frequency multiplier in \eqref{eq:wp-moment-domain}.
++
++\begin{theorem}[Arithmetic current relations]
++\label{thm:wc-current}
++Every operator in \eqref{eq:wc-current-definition} preserves the dense
++domain $\mathcal D_{\mathrm{fin}}(K)$ and is closable.
++On this common domain, the adjoint pairing relations are
++\begin{equation}
++ J^+(b)^\dagger=J^-(b^*),\qquad
++ J^-(b)^\dagger=J^+(b^*),\qquad
++ \mathsf N(b)^\dagger=\mathsf N(b^*).
++ \label{eq:wc-current-star}
++\end{equation}
++Here $A^\dagger=B$ means
++$\langle A\psi,\eta\rangle=\langle\psi,B\eta\rangle$ on this domain.
++It does not identify the full Hilbert adjoint domain with this domain.
++All finite products are defined there, and
++\begin{equation}
++ \begin{aligned}
++ [J^-(b),J^+(d)]&=\omega(bd)I,&
++ [J^+(b),J^+(d)]&=[J^-(b),J^-(d)]=0,\\
++ [\mathsf N(b),J^+(d)]&=J^+(bd),&
++ [\mathsf N(b),J^-(d)]&=-J^-(bd),\\
++ [\mathsf N(b),\mathsf N(d)]&=0.&&
++ \end{aligned}
++ \label{eq:wc-current-relations}
++\end{equation}
++In particular, these operators represent the associative $*$-algebra
++of finite noncommutative polynomials subject to the displayed linearity,
++involution, and commutator relations.  The generator $I$ acts as the identity.
++Creation and annihilation are unbounded for nonzero labels.
++\end{theorem}
++\begin{proof}
++Orthogonal symmetrization and contraction give the sector bounds
++\begin{equation}
++ \begin{aligned}
++ \|a^*(v)\psi_n\|&\leq\sqrt{n+1}\|v\|\|\psi_n\|,\\
++ \|a(v)\psi_n\|&\leq\sqrt n\|v\|\|\psi_n\|,\\
++ \|\mathsf N(b)\psi_n\|&\leq n\|\pi(b)\|\|\psi_n\|.
++ \end{aligned}
++ \label{eq:wc-sector-bounds}
++\end{equation}
++They prove invariance and finite values on every sector.
++The defining tensor inner product gives
++$\langle a^*(v)\psi,\eta\rangle=\langle\psi,a(v)\eta\rangle$.
++Likewise, the adjoint pairing for multiplication gives the one for
++$\mathsf N$.  Replacing $v$ by $j(b)$ or $j(b^*)$ proves
++\eqref{eq:wc-current-star}.
++Each densely defined operator has a densely defined operator in its
++Hilbert adjoint, and is therefore closable.
++
++On $h_1\odot\cdots\odot h_n=S_n(h_1\otimes\cdots\otimes h_n)$,
++the contraction formula is
++\[
++ a(v)(h_1\odot\cdots\odot h_n)
++ =\frac1{\sqrt n}\sum_{r=1}^n\langle h_r,v\rangle
++ h_1\odot\cdots\odot\widehat h_r\odot\cdots\odot h_n.
++\]
++Contracting a newly inserted vector gives $\langle w,v\rangle$.
++The other contractions equal those in the reverse composition.
++Hence $[a(v),a^*(w)]=\langle w,v\rangle I$.
++The creation operators commute by symmetrization, and the contraction
++operators commute by their displayed formula.
++Applying the sum defining $\mathsf N(b)$ gives
++\[
++ [\mathsf N(b),a^*(v)]=a^*(\pi(b)v),\qquad
++ [\mathsf N(b),a(v)]=-a(\pi(b^*)v).
++\]
++These equalities hold first on elementary symmetric tensors.
++The sector bounds extend each fixed product to the whole input sector,
++so they hold on $\mathcal D_{\mathrm{fin}}(K)$.
++Now
++$\langle j(d),j(b^*)\rangle=\omega(bd)$ and
++$\pi(b^*)j(d^*)=j((bd)^*)$.
++This gives every mixed relation in \eqref{eq:wc-current-relations}.
++The number currents commute because their one-particle multipliers do.
++The adjoint pairing reverses products on the invariant domain, which
++gives the stated $*$-representation.
++Finally, for $e=v/\|v\|$, the unit vector $e^{\otimes n}$ has creation
++norm $\sqrt{n+1}\|v\|$ and annihilation norm $\sqrt n\|v\|$.
++These values prove unboundedness.
++\end{proof}
++
++The currents $Q(b)=J^+(b)+J^-(b)$ and
++$P(b)=i(J^+(b)-J^-(b))$ satisfy
++\[
++ \begin{gathered}
++ Q(b)^\dagger=Q(b^*),\qquad P(b)^\dagger=P(b^*),\\
++ [Q(b),Q(d)]=[P(b),P(d)]=0,\qquad
++ [Q(b),P(d)]=2i\omega(bd)I.
++ \end{gathered}
++\]
++For a finite prime set, put
++$A_P^\pm(f)=J^\pm(T_Pf)$ and $D_P(f)=\mathsf N(T_Pf)$.
++The relations become
++\begin{equation}
++ \begin{aligned}
++ [A_P^-(f),A_P^+(h)]&=W_P(f\star h)I,\\
++ [D_P(f),A_P^\pm(h)]&=\pm A_P^\pm(f\star h),\\
++ A_P^\pm(f)^\dagger&=A_P^\mp(f^*),&
++ D_P(f)^\dagger&=D_P(f^*).
++ \end{aligned}
++ \label{eq:wc-native-current-relations}
++\end{equation}
++Moreover,
++\begin{equation}
++ \langle Q(T_Pf)\Omega,Q(T_Ph)\Omega\rangle
++ =W_P(h^*\star f).
++ \label{eq:wc-vacuum-covariance}
++\end{equation}
++This establishes the current action and its arithmetic covariance
++without changing the test algebra.
++The map $f\mapsto Q(T_Pf)$ is linear and respects the involution.
++It is not a convolution homomorphism.
++For a nonzero self-adjoint $f$, its square on $\Omega$ has nonzero
++vacuum and two-particle components, while $Q(T_P(f\star f))\Omega$
++has only a one-particle component.
++
++The central identity in the current algebra is distinct from a unit in
++$B_{\mathrm{loc}}$.  The latter still has none.
++In particular, $\langle\mathsf N(b)\Omega,\Omega\rangle=0$, even when
++$\omega(b)>0$.  Thus the vacuum is not a representing vector for
++$\omega$ under $b\mapsto\mathsf N(b)$.
++That map is also not an associative homomorphism: its two-particle
++product has cross terms absent from $\mathsf N(bd)$.
++Equation~\eqref{eq:wc-vacuum-covariance} represents the quadratic form
++through current vectors.  It supplies no finite positive unitization
++of the arithmetic weight.
++
++\subsection{Coherent prime inclusions and the infinite domain}
++
++For finite $P\subset Q$, let $e_{PQ}:B_P\to B_Q$ and
++$i_{PQ}:H_P\to H_Q$ insert zero in the new prime coordinates.
++The first is a $*$-homomorphism and preserves $\omega$.
++The second is an isometry and obeys
++$i_{PQ}\pi_P(b)=\pi_Q(e_{PQ}b)i_{PQ}$.
++Both maps compose exactly along $P\subset Q\subset R$.
++
++\begin{theorem}[The prime current system]
++\label{thm:wc-system}
++The isometries
++\[
++ \Gamma(i_{PQ})=\bigoplus_{n\geq0}i_{PQ}^{\otimes n}:
++ \mathcal F(H_P)\longrightarrow\mathcal F(H_Q)
++\]
++preserve the vacuum and intertwine $J^\pm(b)$ and $\mathsf N(b)$
++with the currents labeled by $e_{PQ}b$.
++They compose exactly.  Their Hilbert completion is $\mathcal F(H)$.
++The same operator formulas give all local currents on its common
++domain $\mathcal D_{\mathrm{fin}}(H)$.
++
++For an arbitrary vector $v=(v_p)\in H$, let $v^{(P)}$ be its finite
++prime truncation.  Then, for every $\psi\in\mathcal D_{\mathrm{fin}}(H)$,
++\begin{equation}
++ a^*(v^{(P)})\psi\longrightarrow a^*(v)\psi,\qquad
++ a(v^{(P)})\psi\longrightarrow a(v)\psi.
++ \label{eq:wc-infinite-currents}
++\end{equation}
++Conversely, convergence of $a^*(v^{(P)})\Omega$ for a prescribed family
++$(v_p)$ requires $\sum_p\|v_p\|^2<\infty$.
++Thus square summability is the exact domain for creation limits
++whose common domain contains the vacuum.
++\end{theorem}
++\begin{proof}
++Tensor powers of an isometry commute with symmetrization and preserve
++tensor inner products.  The creation and contraction formulas therefore
++give both intertwiners.  The one-particle multiplication intertwiner
++gives the number-current identity after summing over tensor positions.
++Composition follows on each tensor power, including particle number zero.
++
++Finite prime truncations converge strongly to the identity on $H$.
++Their tensor powers converge on elementary tensors by a telescoping
++expansion, and hence on each completed tensor power by their norm bound.
++They also commute with $S_n$.
++Truncation in particle number proves density of the union of the embedded
++Fock spaces in $\mathcal F(H)$.
++
++If $\psi$ has particle number at most $N$, the sector bounds give
++\[
++ \|(a^*(v^{(P)})-a^*(v))\psi\|
++ \leq\sqrt{N+1}\|v^{(P)}-v\|\|\psi\|.
++\]
++The annihilation estimate has $\sqrt N$ in place of $\sqrt{N+1}$.
++This proves both limits.  Conversely,
++$a^*(v^{(P)})\Omega=v^{(P)}$.
++The squared distances of two such vectors are sums of squared norms
++of their differing prime coordinates.  The Cauchy criterion gives the
++necessary and sufficient square summability.
++\end{proof}
++
++The theorem yields currents with infinite prime support.
++For example, choose a unit vector $u_p\in H_p$ for every prime.
++Then $v_p=p^{-1}u_p$ has infinite support and
++$\sum_p\|v_p\|^2\leq\sum_{n\geq2}n^{-2}<\infty$.
++Its current is defined by \eqref{eq:wc-infinite-currents}.
++For labels $b,d\in H$, pointwise conjugation is still an isometry and
++$\int_X|bd|\,d\nu\leq\|b\|_H\|d\|_H$.
++Thus $J^+(b)=a^*(b)$ and $J^-(b)=a(b^*)$ extend the Heisenberg
++relations to all Hilbert labels with central pairing $\int_Xbd\,d\nu$.
++Number currents also extend to each bounded measurable multiplier $b$,
++using \eqref{eq:wc-current-definition} and
++$\|\mathsf N(b)\psi_n\|\leq n\|b\|_\infty\|\psi_n\|$.
++The two extensions have different label spaces.
++
++\begin{proposition}[Failure of the native diagonal current]
++\label{prop:wc-diagonal-barrier}
++For $f\in L^2(\R,du)$, define the formal prime family
++$\delta f=(\widehat f)_p$, using the $L^2$ Fourier transform.
++Every coordinate belongs to $H_p$.
++Its finite norm domain is exactly
++\begin{equation}
++ \{f\in L^2(\R,du):\delta f\in H\}=\{0\}.
++ \label{eq:wc-diagonal-domain}
++\end{equation}
++Consequently, for each nonzero $f\in\cA_\zeta$, neither
++$A_P^+(f)\Omega$ nor $Q(T_Pf)\Omega$ converges as $P$ increases to
++all primes.  No operators agreeing with these limits can have a common
++domain containing $\Omega$.
++For $P\subsetneq Q$, there is no isometry between the minimal
++arithmetic Hilbert spaces that sends every $T_Pf$ to $T_Qf$.
++\end{proposition}
++\begin{proof}
++The bound on $\lambda_p$ and Plancherel's identity put every coordinate
++in $H_p$.  Monotone summation gives
++\[
++ \sum_p\|\widehat f\|_{H_p}^2
++ =\sum_p\sum_{m\geq1}\frac{\log p}{p^{m/2}}
++ \|f-\tau_{m\log p}f\|_2^2.
++\]
++Theorem~\ref{thm:wp-prime-limit} proves that this equals infinity for
++every nonzero $f\in L^2$.
++All terms are nonnegative, so exhaustion by finite sets of whole prime
++factors has the same supremum as exhaustion by finite prime powers.
++This proves \eqref{eq:wc-diagonal-domain}.
++Both current vectors on the vacuum equal the finite truncation of
++$\delta f$, so Theorem~\ref{thm:wc-system} excludes their convergence.
++Finally, for nonzero $f\in\cA_\zeta$,
++\[
++ \|T_Qf\|^2-\|T_Pf\|^2
++ =\sum_{p\in Q\setminus P}W_p(f^*\star f)>0.
++\]
++An isometry preserving those vectors would require equality of the norms.
++\end{proof}
++
++The actual inclusion instead obeys
++\[
++ T_Qf=e_{PQ}T_Pf+T_{Q\setminus P}f.
++\]
++The two terms have orthogonal prime support, and their currents add.
++
++\begin{proposition}[Infinite arithmetic multiplication]
++\label{prop:wc-infinite-multiplication}
++There is an injective $*$-homomorphism
++\[
++ \rho:\cA_\zeta\longrightarrow\mathcal B(H),\qquad
++ (\rho(f)h)_p(t)=\widehat f(t)h_p(t),\qquad
++ \|\rho(f)\|=\|\widehat f\|_\infty.
++\]
++For $n\geq1$ define the bounded sector operator
++\[
++ D_{\infty,n}(f)=\sum_{r=1}^n
++ I^{\otimes(r-1)}\otimes\rho(f)\otimes I^{\otimes(n-r)}
++ \quad\hbox{on }H^{\odot n},\qquad D_{\infty,0}(f)=0.
++\]
++The closed number current $D_\infty(f)$ is their direct sum, with domain
++\begin{equation}
++ \mathcal D(D_\infty(f))=
++ \left\{\psi\in\mathcal F(H):
++ \sum_{n\geq0}\|D_{\infty,n}(f)\psi_n\|^2<\infty\right\}.
++ \label{eq:wc-infinite-number-domain}
++\end{equation}
++Its Hilbert adjoint is $D_\infty(f^*)$, and
++$\mathcal D_{\mathrm{fin}}(H)$ is an invariant core.
++For self-adjoint $f=f^*$, the operator $D_\infty(f)$ is self-adjoint.
++On the common finite-particle domain, the prime cutoffs obey
++\[
++ D_P(f)\psi\longrightarrow D_\infty(f)\psi.
++\]
++Here $D_P(f)$ acts on $\mathcal F(H)$ by its prime-supported multiplier.
++For every $v\in H$, the same domain supports the relations
++\begin{equation}
++ [D_\infty(f),a^*(v)]=a^*(\rho(f)v),\qquad
++ [D_\infty(f),a(v)]=-a(\rho(f^*)v).
++ \label{eq:wc-infinite-mixed}
++\end{equation}
++\end{proposition}
++\begin{proof}
++The Fourier product and involution identities prove the homomorphism
++property.  A bump in any one prime coordinate proves its norm formula.
++Fourier inversion then gives injectivity.
++Each sector operator has norm at most $n\|\widehat f\|_\infty$.
++Testing against vectors in a single sector identifies the adjoint of
++the direct sum with the direct sum of the sector adjoints.
++These are $D_{\infty,n}(f^*)$.
++The maximal direct sum domain in \eqref{eq:wc-infinite-number-domain}
++is closed: convergence of a vector and its image gives the required
++identity in each sector, and the limiting image is square summable.
++Particle truncation approximates both a vector and its image, which
++proves the core assertion.  For $f=f^*$ the adjoint has the same domain
++and action, proving self-adjointness.
++
++Prime truncations of $\rho(f)$ converge strongly on $H$, with a uniform
++bound $\|\widehat f\|_\infty$.
++The tensor-position sums therefore converge strongly on each sector.
++There are only finitely many sectors in $\psi$, giving the claimed limit.
++The proof of Theorem~\ref{thm:wc-current} for an arbitrary bounded
++one-particle multiplier gives \eqref{eq:wc-infinite-mixed}.
++\end{proof}
++
++Thus the native diagonal defines a number current for every arithmetic
++test.  Its creation vector exists only for the zero test, by
++Proposition~\ref{prop:wc-diagonal-barrier}.
++
++\subsection{The full Weil comparison}
++
++Let $\mathcal R(g)$ be the sum of the two polar evaluations and the
++archimedean integral in \eqref{eq:weil-functional}, and set
++$C_P=\sum_{p\in P}C_p$.  For every $g\in\cA_\zeta$,
++\begin{equation}
++ \begin{split}
++ L_\zeta(g)-W_P(g)
++ ={}&\mathcal R(g)-2C_Pg(0)\\
++ &-\sum_{p\notin P}\sum_{m\geq1}
++ \frac{\log p}{p^{m/2}}
++ \bigl(g(m\log p)+g(-m\log p)\bigr).
++ \end{split}
++ \label{eq:wc-weil-comparison}
++\end{equation}
++The double tail tends to zero along increasing finite prime sets.
++Indeed, the native prime series converges absolutely on this test algebra,
++so dominated convergence permits regrouping and exhaustion by primes.
++Also $C_P\to\infty$ by Theorem~\ref{thm:wp-prime-limit}.
++For a fixed nonzero square $g=f^*\star f$, the residual in
++\eqref{eq:wc-weil-comparison} therefore tends to $-\infty$.
++
++In particular, an additional orthogonal positive current sector cannot
++turn these cumulative currents into a covariance for $L_\zeta$.
++Such a sector would require
++$L_\zeta(f^*\star f)-W_P(f^*\star f)\geq0$ for every test $f$.
++The preceding limit violates that condition for every fixed nonzero
++$f$ once $P$ is sufficiently large.
++A positive realization of the full functional must instead combine
++the prime, polar, and archimedean terms before assigning a Hilbert norm.
++It requires an actual map $V$ on the same test algebra with
++\[
++ \langle V(f),V(h)\rangle=L_\zeta(h^*\star f),
++\]
++together with the desired operator products and their common domain.
++The present currents establish that identity with $W_P$ in place of
++$L_\zeta$.  Their commutation relations do not provide the displayed
++full-functional identity or a comparison with other quantum current algebras.

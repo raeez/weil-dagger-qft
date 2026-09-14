@@ -1,0 +1,2396 @@
+Chapter 1
+
+
+Arithmetic forms and operator domains
+
+Closing an operator kernel to a scalar and giving states positive norms are separate requirements in a field
+theory. A cyclic trace controls an operator contraction. An involution and a positive functional instead
+produce a Hilbert space and operators on a common domain. Arithmetic supplies a concrete test of
+the second construction: can its prime, archimedean and polar terms define a positive pairing without
+prescribing the spectrum in advance?
+    The arithmetic terms of the zeta explicit formula define a Hermitian pairing on a nonunital convolu-
+tion algebra. Gaussian reflection and a contour integral derive the full formula on this algebra. A separate
+polynomial–Gaussian argument identifies its positivity with the Riemann hypothesis. A local Gaussian
+calculation proves a further restriction: the full Weil functional admits no positive unitization of finite
+mass and no realization by a finite-norm vector on an invariant ∗-representation domain. The same
+calculation gives positive Gaussian subspaces of every finite dimension at sufficiently small scales. We
+construct the common graph completion of nonunital GNS multipliers and prove its exact domain and
+transfer properties. Closed quadratic forms for individual multipliers need not have invariant domains.
+Their common domain over the whole algebra does. An independent positive arithmetic functional
+remains open, with its possible representation constrained by the Gaussian divergence.
+    The decisive question is whether the arithmetic expression is a squared norm for a reason independent
+of the location of the zeros. Such a norm would construct a Hilbert space from test functions. It need not
+come from a distinguished vector representing the functional. The Gaussian calculation in Section 1.16
+excludes that stronger realization. We first derive the arithmetic expression and its positivity criterion;
+then we construct the representation and its domain under a stated positivity hypothesis.
+
+1.1   The arithmetic identity and its variables
+The Dirichlet series 𝑛 ≥1 𝑛− 𝑠 has two useful descriptions. Prime factorization gives a product when
+                       P
+Re 𝑠 > 1. A Gaussian sum gives a continuation and a reflection in 𝑠 = 1/2. Taking a logarithmic derivative
+changes prime factors into weighted prime powers and changes zeros into simple poles. A contour integral
+can then compare them. The test function must control that contour before it can define an identity.
+    All vector spaces are complex, and all real integrals use Lebesgue measure. The starting language is
+calculus, absolutely convergent integrals and series, and the complete fields ℝ and ℂ. We use the usual
+limit rules for absolutely integrable functions: an integrable common bound permits passage through
+an integral. Every infinite sum and parameter integral below has an explicit such bound. The elementary
+complex-variable tools needed for the contour are recorded in Section 1.2.
+    For 𝑎 > 0, define
+                                                ∫                                          
+                             ∞                       𝑎|𝑢| (𝑘)
+             A 𝑎 = 𝑔 ∈ 𝐶 (ℝ) : 𝑝 𝑎,𝑘 ( 𝑔 ) :=       𝑒 | 𝑔 ( 𝑢)| 𝑑𝑢 < ∞ for every 𝑘 ≥ 0 ,
+                                                  ℝ
+                    [                                                                                 (1.1)
+              A=         A𝑎.
+                   𝑎 >1/2
+
+
+
+                                                     1
+Chapter 1. Arithmetic forms and operator domains                                                              2
+
+
+Here 𝐶 ∞ means that every real derivative exists and is continuous. The functions may be complex-valued
+and need not be even. Define convolution, involution, and Fourier transform by
+                    ∫                                                            ∫
+                                                  ∗
+   ( 𝑓 ★ 𝑔 ) ( 𝑢) =   𝑓 ( 𝑣 ) 𝑔 ( 𝑢 − 𝑣 ) 𝑑𝑣,    𝑔 ( 𝑢) = 𝑔 (−𝑢) ,     𝑔b( 𝑧 ) =   𝑔 ( 𝑢) 𝑒 𝑖 𝑧𝑢 𝑑𝑢. (1.2)
+                      ℝ                                                                   ℝ
+
+The complex variable suited to the Dirichlet series is
+                                          ∫                            ∫ ∞
+                                                      ( 𝑠 −1/2) 𝑢                              𝑑𝑥
+                                                                           𝑔 (log 𝑥 ) 𝑥 𝑠 −1/2
+                                       
+           𝐹𝑔 ( 𝑠 ) = 𝑔b − 𝑖 ( 𝑠 − 1/2) =    𝑔 ( 𝑢) 𝑒             𝑑𝑢 =                            .        (1.3)
+                                           ℝ                            0                       𝑥
+The last equality is the change of variable 𝑥 = 𝑒 𝑢 . In particular 𝐹𝑔 (1/2 + 𝑖𝑡 ) = 𝑔
+                                                                                     b( 𝑡 ). The half in this
+substitution determines the weights of all prime terms.
+   Write ΛvM ( 𝑛) = log 𝑝 if 𝑛 = 𝑝𝑚 with 𝑝 prime and 𝑚 ≥ 1, and write ΛvM ( 𝑛) = 0 otherwise. The
+gamma function and the meromorphic continuation of 𝜁 will be constructed below. Put 𝜓 = Γ′ /Γ.
+The identity to be proved is
+                        ∑︁
+                            𝐹𝑔 ( 𝜌) = 𝐹𝑔 (0) + 𝐹𝑔 (1)
+                          𝜌
+                                                 ∫                                
+                                              1                     1 𝑖𝑡
+                                          +         𝑔b( 𝑡 ) Re 𝜓 +           − log 𝜋 𝑑𝑡                    (1.4)
+                                            2𝜋 ℝ                    4 2
+                                            ∑︁ ΛvM ( 𝑛)                             
+                                          −        √         𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                                            𝑛 ≥2      𝑛
+
+Zeros 𝜌 are counted with multiplicity. Their precise definition will exclude the canceled gamma poles
+and the poles at zero and one. Theorem 1.7.1 proves (1.4) for every 𝑔 ∈ A. The proof uses no positivity
+statement.
+
+1.2   Elementary complex estimates
+A holomorphic function is a complex-differentiable function on an open set. Differentiability implies
+continuity, but we will not assume continuity of the derivative in deriving the integral formulas. A
+meromorphic function is locally a quotient of holomorphic functions, with denominator not identically
+zero. A zero or pole has order 𝑚 if its local expression contains a factor ( 𝑧 − 𝑧0 ) 𝑚 or ( 𝑧 − 𝑧0 ) − 𝑚 with
+nonzero remaining factor. The residue is the coefficient of ( 𝑧 − 𝑧0 ) −1 .
+   For a piecewise continuously differentiable path 𝛾 : [ 𝑎, 𝑏 ] → ℂ, define
+                                   ∫                   ∫ 𝑏
+                                         ℎ (𝑤 ) 𝑑𝑤 =         ℎ ( 𝛾 ( 𝑡 )) 𝛾 ′ ( 𝑡 ) 𝑑𝑡,
+                                     𝛾                  𝑎
+
+adding the integrals over its differentiable pieces. Reversing a path reverses the sign of its integral.
+Lemma 1.2.1 (Integration
+                 ∫           around a triangle). If ℎ is holomorphic on a neighborhood of a closed
+triangle 𝑇 , then 𝜕𝑇 ℎ (𝑤 ) 𝑑𝑤 = 0, with the boundary oriented counterclockwise.
+
+Proof. Joining the edge midpoints divides 𝑇 into four triangles. Their oriented boundary integrals sum
+to the original integral because every internal edge occurs in both directions. Choose a subtriangle whose
+integral has modulus at least one quarter of that of its parent, and repeat. The resulting nested closed
+triangles 𝑇𝑛 have diameter 2− 𝑛 𝐷 and perimeter 2− 𝑛 𝑃 , where 𝐷, 𝑃 are those of 𝑇 . Points chosen in
+Chapter 1. Arithmetic forms and operator domains                                                             3
+
+
+these triangles form a Cauchy sequence. Completeness gives a limit 𝑤0 belonging to every 𝑇𝑛 , and their
+shrinking diameters make this common point unique.
+   Differentiability at 𝑤0 gives
+
+         ℎ ( 𝑤 ) = ℎ ( 𝑤0 ) + ℎ′ ( 𝑤0 ) ( 𝑤 − 𝑤0 ) + ( 𝑤 − 𝑤0 ) 𝜖 ( 𝑤 ) ,   𝜖 (𝑤 ) −→ 0   ( 𝑤 → 𝑤0 ) .
+
+The first two terms have polynomial primitives, so their integrals around each triangle vanish by the real
+fundamental theorem of calculus on each edge. Put 𝜖𝑛 = sup𝑤 ∈𝑇𝑛 | 𝜖 (𝑤 )|, defining 𝜖 ( 𝑤0 ) = 0. Then
+𝜖𝑛 → 0, and
+             ∫                    ∫
+                  ℎ (𝑤 ) 𝑑𝑤 ≤ 4 𝑛
+                                       ℎ (𝑤 ) 𝑑𝑤 ≤ 4𝑛 𝜖𝑛 (2− 𝑛 𝐷 ) (2− 𝑛 𝑃 ) = 𝜖𝑛 𝐷𝑃 −→ 0.
+                𝜕𝑇                       𝜕𝑇𝑛
+
+
+
+
+Lemma 1.2.2 (Contour formulas). Let a function be holomorphic on a neighborhood of a closed
+disc. For any interior point 𝑧 ,
+                            ∫
+                         1                ℎ (𝑤 )                         𝑘!
+              ℎ ( 𝑧) =                           𝑑𝑤, | ℎ ( 𝑘 ) ( 𝑧0 )| ≤ 𝑘 max | ℎ ( 𝑤 )| .
+                       2 𝜋 𝑖 | 𝑤 − 𝑧0 |=𝑅 𝑤 − 𝑧                         𝑅 | 𝑤 − 𝑧0 |=𝑅
+The contour has counterclockwise orientation. For a meromorphic function on a rectangle with no
+boundary poles, its boundary integral is 2 𝜋 𝑖 times the sum of its interior residues. Locally uniform limits
+of holomorphic functions are holomorphic.
+
+Proof. Summing the triangle identity gives zero around any polygonal region on whose neighborhood
+the integrand is holomorphic, including a region with polygonal holes. To obtain a finite subdivision,
+draw parallel lines through its finitely many vertices, divide the resulting strips into trapezoids and
+triangles, and split each trapezoid along a diagonal. The internal edges cancel, leaving the outer boundary
+counterclockwise and the inner boundaries clockwise.
+    The same identity holds for a circular boundary by polygonal approximation. Linear interpolation of
+its smooth parametrization converges uniformly in position; on each interpolation interval its derivative
+is the average of the original derivative. Uniform continuity of that derivative gives convergence of
+tangents in the integral norm. Continuity of the integrand, uniformly on a compact neighborhood of
+the circle, then gives convergence of the boundary integrals.
+    Apply this identity to ℎ (𝑤 )/( 𝑤 − 𝑧 ) between the original circle and a small circle centered at 𝑧 .
+Its neighborhood contains no singularity of this integrand. On the small circle, write ℎ (𝑤 ) = ℎ ( 𝑧 ) +
+𝑂 (|𝑤 − 𝑧 |) and let its radius tend to zero. The constant term integrates to 2 𝜋 𝑖ℎ ( 𝑧 ) and the error tends
+to zero. This proves the first formula without a regularity assumption on ℎ′ . Expansion of ( 𝑤 − 𝑧 ) −1 as
+a geometric series gives the derivative formula and the displayed estimate, as well as a convergent local
+power series for every holomorphic function. For the residue formula, remove disjoint small discs around
+the poles. The same boundary argument applies to the remaining region. The finite principal part at
+each pole follows by factoring the first nonzero Taylor term of the denominator in a local quotient. On
+its small circle, only the term ( 𝑤 − 𝑤0 ) −1 has nonzero integral, namely 2 𝜋 𝑖 times its coefficient. Adding
+the circles proves the residue statement. For a locally uniform limit, pass to the limit in the circle formula.
+The resulting expression is differentiable in the interior point and gives its convergent power series. These
+arguments also justify the formulas on discs and rectangles with finitely many small discs removed.
+Chapter 1. Arithmetic forms and operator domains                                                                     4
+
+
+   The circle formula implies the identity theorem: a nonzero holomorphic function has isolated zeros,
+since its first nonzero Taylor coefficient factors out the entire order of a zero. It also implies the maximum
+modulus principle. If an interior modulus is maximal, equality in the circle average forces constant
+argument and modulus on a small circle. Its Taylor coefficients of positive degree then vanish, and the
+function is constant on the connected domain.
+Lemma 1.2.3 (Logarithms and counting zeros). A zero-free holomorphic function on a disc has a
+holomorphic logarithm. If an entire function ℎ satisfies ℎ (0) ≠ 0 and
+
+                              log max | ℎ ( 𝑧 )| ≤ 𝐶 𝑅 log( 𝑅 + 2)           ( 𝑅 ≥ 2) ,
+                                  |𝑧|≤𝑅
+
+then the number 𝑛ℎ ( 𝑅) of its zeros in | 𝑧 | ≤ 𝑅, with multiplicity, satisfies 𝑛ℎ ( 𝑅) = 𝑂 ( 𝑅 log( 𝑅 + 2)).
+
+Proof. For a zero-free function, the integral of ℎ′ /ℎ around any closed contour in the disc is zero by
+Lemma 1.2.2. Its path integral is thus a primitive ℓ . Differentiation shows that 𝑒 − ℓ ℎ is constant. Choosing
+the additive constant gives ℎ = 𝑒 ℓ .
+   Choose 𝑟 > 𝑅 so that ℎ has no zero on | 𝑧 | = 𝑟 . Factor out its finitely many zeros 𝑎𝑗 inside that circle.
+The remaining nonzero factor has a logarithm whose real part has its value at zero equal to its circle
+average. For | 𝑎 | < 𝑟 , the power series of log(1 − 𝑎𝑒 − 𝑖𝜃 /𝑟 ) gives the circle average log | 𝑟 𝑒 𝑖𝜃 − 𝑎 | = log 𝑟 .
+Subtracting the value at zero gives
+                                                     ∫ 2𝜋
+                            ∑︁            𝑟       1
+                                    log        =          log | ℎ ( 𝑟 𝑒 𝑖𝜃 )| 𝑑𝜃 − log | ℎ (0)| .
+                          | 𝑎𝑗 |< 𝑟     | 𝑎𝑗 |   2 𝜋  0
+
+
+Take 2 𝑅 < 𝑟 < 2 𝑅 + 1, avoiding the isolated radii of zeros. Each zero in | 𝑧 | ≤ 𝑅 contributes at least
+log 2. The asserted growth bound proves the count.
+
+   The contour will need a logarithmic derivative estimate, not only a count. The next lemma supplies
+that extra information locally.
+Lemma 1.2.4 (A local logarithmic derivative bound). Let ℎ be holomorphic on a neighborhood
+of | 𝑧 | ≤ 𝑅, where 5 ≤ 𝑅 ≤ 6, and suppose ℎ (0) ≠ 0 and ℎ has no boundary zero. Suppose
+
+                       | ℎ ( 𝑧 )| ≤ 𝑒 𝑀    (| 𝑧 | ≤ 𝑅) ,     | ℎ (0)| ≥ 𝑒 − 𝑀 ,       𝑀 ≥ 1.
+
+If ℎ has 𝑁 zeros in the disc and | 𝑧 | ≤ 3 is at distance at least 𝛿 > 0 from each zero, then
+
+                                          ℎ′ ( 𝑧 )
+                                                   ≤ 𝐶 𝑀 + 𝑁 ( 𝛿 −1 + 1/2) ,
+                                          ℎ ( 𝑧)
+where 𝐶 is an absolute constant.
+
+Proof. For each zero 𝑎, including multiplicities, use the factor 𝑏 𝑎 ( 𝑧 ) = 𝑅 ( 𝑧 − 𝑎)/( 𝑅2 − ¯𝑎𝑧 ). It has
+modulus one on | 𝑧 | = 𝑅 and no denominator zero in the disc. Divide ℎ by their product and remove
+the canceled singularities. The quotient 𝑣 is holomorphic and zero-free. The maximum principle gives
+| 𝑣 | ≤ 𝑒 𝑀 . Since | 𝑏 𝑎 (0)| < 1, also | 𝑣 (0)| ≥ | ℎ (0)| ≥ 𝑒 − 𝑀 . Choose ℓ = log 𝑣 with ℓ (0) real after
+multiplying 𝑣 by a constant of modulus one. The function 𝑝 = 𝑀 + 1 − ℓ has positive real part and
+1 ≤ 𝑝 (0) ≤ 2 𝑀 + 1.
+Chapter 1. Arithmetic forms and operator domains                                                                                5
+
+
+     The function 𝑞 = ( 𝑝 − 𝑝 (0))/( 𝑝 + 𝑝 (0)) maps the disc into the unit disc and vanishes at zero.
+Applying the maximum principle to 𝑞 ( 𝑧 )/ 𝑧 on smaller circles and increasing their radii to 𝑅 gives
+| 𝑞 ( 𝑧 )| ≤ | 𝑧 |/ 𝑅. Hence | 𝑝 ( 𝑧 )| ≤ 9 𝑝 (0) on | 𝑧 | ≤ 4. The derivative estimate on radius-one circles about
+| 𝑧 | ≤ 3 yields | ℓ ′ ( 𝑧 )| = | 𝑝 ′ ( 𝑧 )| ≤ 9 𝑝 (0) ≤ 27 𝑀 . Finally
+
+                                              ℎ′
+                                                                               
+                                                      ′
+                                                         ∑︁      1        𝑎¯
+                                                  =ℓ +               + 2          .
+                                              ℎ           𝑎 𝑧−𝑎         𝑅 − ¯𝑎𝑧
+For | 𝑧 | ≤ 3, the second fraction has modulus at most 1/( 𝑅 − 3) ≤ 1/2. The assumed distance bound
+controls the first.
+
+
+1.3   The test algebra and Gaussian Fourier inversion
+Lemma 1.3.1 (Decay, boundary values, and transforms). If 𝑔 ∈ A 𝑎 , then 𝑒 𝑎 | 𝑢 | 𝑔 ( 𝑘 ) ( 𝑢) → 0 at
+both ends of ℝ, and | 𝑔 ( 𝑘 ) ( 𝑢)| ≤ 𝐶𝑘 𝑒 − 𝑎 | 𝑢 | . The transform 𝑔
+                                                                     b is holomorphic for | Im 𝑧 | < 𝑎. For every
+0 < 𝑏 < 𝑎 and every integer 𝑁 ≥ 0,
+
+                                                      sup (1 + | 𝑧 |) 𝑁 |b
+                                                                         𝑔 ( 𝑧 )| < ∞.                                      (1.5)
+                                                   | Im 𝑧 | ≤ 𝑏
+
+Equivalently, 𝐹𝑔 is holomorphic for 1/2 − 𝑎 < Re 𝑠 < 1/2 + 𝑎 and decreases faster than any inverse
+power of | Im 𝑠 | on every smaller closed vertical strip.
+
+Proof. On 𝑢 ≥ 0, the function ℎ ( 𝑢) = 𝑒 𝑎𝑢 𝑔 ( 𝑘 ) ( 𝑢) and its derivative 𝑒 𝑎𝑢 ( 𝑎 𝑔 ( 𝑘 ) + 𝑔 ( 𝑘+1) ) are integrable.
+The integral of the derivative∫makes ℎ have a finite limit at infinity. Integrability of ℎ forces that limit to
+                                ∞
+be zero. Moreover | ℎ ( 𝑢)| ≤ 𝑢 | ℎ′ ( 𝑣 )| 𝑑𝑣 . The negative half-line has the same proof after reflection.
+   For 𝑏 < 𝑎, the functions | 𝑢 | 𝑚 𝑒 𝑏 | 𝑢 | | 𝑔 ( 𝑢)| are integrable for every 𝑚, because | 𝑢 | 𝑚 𝑒 − ( 𝑎 − 𝑏 ) | 𝑢 | is
+bounded. These bounds permit termwise complex differentiation of the integral. Repeated integra-
+tion by parts has zero boundary terms by the first assertion and gives
+                                                         ∫
+                                          𝑁
+                                  (− 𝑖 𝑧 ) 𝑔   b( 𝑧 ) =      𝑔 ( 𝑁 ) ( 𝑢) 𝑒 𝑖 𝑧𝑢 𝑑𝑢.
+                                                                           ℝ
+
+Its right side is bounded on | Im 𝑧 | ≤ 𝑏 . Combining this with the bound for 𝑁 = 0 proves (1.5). Substi-
+tution in (1.3) proves the last assertion.
+
+Lemma 1.3.2 (The normalized Gaussian). For 𝐴 > 0, put
+                                                                                         2
+                                                   𝑔 𝐴 ( 𝑢) = (4 𝜋 𝐴) −1/2 𝑒 − 𝑢 /(4 𝐴 ) .
+
+Then 𝑔 𝐴 ∈ A 𝑎 for every 𝑎 > 0, and
+                                                                                                ∫
+                                      − 𝐴𝑧 2
+                      𝑔b𝐴 ( 𝑧 ) = 𝑒            ,            𝑔 𝐴 ★ 𝑔𝐵 = 𝑔 𝐴+ 𝐵 ,                          𝑔 𝐴 ( 𝑢) 𝑑𝑢 = 1.   (1.6)
+                                                                                                     ℝ
+
+For 𝑔 ∈ A one has the inverse formula
+                                                                       ∫
+                                                                   1
+                                                    𝑔 ( 𝑢) =                   𝑔b( 𝑡 ) 𝑒 − 𝑖𝑡𝑢 𝑑𝑡.                          (1.7)
+                                                                  2𝜋   ℝ
+
+The same inverse formula holds for a smooth function 𝑔 with 𝑔, 𝑔 ′ , 𝑔 ′′ ∈ 𝐿 1 (ℝ).
+Chapter 1. Arithmetic forms and operator domains                                                                            6
+
+                     ∫     2                                                             √
+Proof. Squaring 𝑒 − 𝑥 𝑑𝑥 and using polar coordinates gives its value 𝜋 . Scaling proves the mass
+assertion. Every derivative of 𝑔 𝐴 is a polynomial times this Gaussian, proving membership and vanishing
+of every exponential-weighted boundary value. For real 𝑡 , differentiate 𝐽 ( 𝑡 ) = 𝑔       b𝐴 ( 𝑡 ) under the integral.
+                        ′                                      ′
+Since 𝑢 𝑔 𝐴 = −2 𝐴 𝑔 𝐴 , integration by parts gives 𝐽 ( 𝑡 ) = −2 𝐴𝑡 𝐽 ( 𝑡 ). The initial value 𝐽 (0) = 1 gives
+                2
+𝐽 ( 𝑡 ) = 𝑒 − 𝐴𝑡 . Both sides are entire, so the identity theorem extends the formula to 𝑧 ∈ ℂ. Completing
+the square in the convolution integral gives 𝑔 𝐴+ 𝐵 .
+                                              2
+     For inversion, insert the factor 𝑒 − 𝐴𝑡 on the right of (1.7). Absolute integrability permits reversing
+the integrals. The Gaussian transform just proved gives
+                                       ∫
+                                    1            2
+                                           𝑒 − 𝐴𝑡 𝑔b( 𝑡 ) 𝑒 − 𝑖𝑡𝑢 𝑑𝑡 = ( 𝑔 𝐴 ★ 𝑔 ) ( 𝑢) .
+                                   2𝜋 ℝ
+The left side tends to the proposed inverse by (1.5). On the right, continuity of 𝑔 controls | 𝑣 | < 𝜂 in the
+convolution difference, and the Gaussian mass outside | 𝑣 | < 𝜂 tends to zero. Boundedness of 𝑔 controls
+that tail. Thus ( 𝑔 𝐴 ★ 𝑔 ) ( 𝑢) → 𝑔 ( 𝑢). For the stated larger class, integrability of 𝑔, 𝑔 ′ , 𝑔 ′′ makes 𝑔, 𝑔 ′
+bounded with zero limits at infinity, by the half-line argument of Lemma 1.3.1 with zero weight. Two
+integrations by parts give an integrable bound for 𝑔   b. The same proof then applies.
+    The parameter 𝐴 is also a heat parameter. Direct differentiation gives
+                                                   𝑢2
+                                                      
+                                             1
+                           𝜕 𝐴 𝑔 𝐴 ( 𝑢) = −    +         𝑔 𝐴 ( 𝑢) = 𝜕𝑢2 𝑔 𝐴 ( 𝑢) .
+                                            2 𝐴 4 𝐴2
+Thus convolution by 𝑔 𝐴 solves heat evolution on the real line for the smooth integrable initial functions
+                                        2
+considered here. The factor 𝑒 − 𝐴𝑡 damps high Fourier frequencies, and 𝑔 𝐴 ★ 𝑔𝐵 = 𝑔 𝐴+ 𝐵 expresses
+addition of elapsed heat times. This supplies an explicit analytic regularization for the inverse transform
+and for the arithmetic identities below.
+    A complex ∗-algebra is an associative complex algebra with a conjugate-linear map 𝑎 ↦→ 𝑎∗ such
+that ( 𝑎∗ ) ∗ = 𝑎 and ( 𝑎𝑏 ) ∗ = 𝑏 ∗ 𝑎∗ . For the ∗-algebras in this chapter, a unit is a nonzero element 1 with
+1 𝑎 = 𝑎1 = 𝑎 for every 𝑎; nonunital means that no such element is present. In particular, the zero algebra
+is nonunital under this convention.
+Proposition 1.3.3 (Algebra and change of exponential convention). Each A 𝑎 for 𝑎 > 0, and
+also A, is a commutative nonunital ∗-algebra under (1.2), and
+
+                                    𝑓[
+                                     ★ 𝑔 ( 𝑧 ) = 𝑓b( 𝑧 ) 𝑔
+                                                         b( 𝑧 ) ,      𝑓b∗ ( 𝑧 ) = 𝑓b( 𝑧¯ ) .                           (1.8)
+These equations hold on every common strip of holomorphy. The union in (1.1) is unchanged if weighted
+𝐿 1 bounds are replaced by weighted supremum bounds, with the exponential rate allowed to decrease
+strictly.
+Proof. For 𝑎 > 0 and 𝑓 , 𝑔 ∈ A 𝑎 , use 𝑒 𝑎 | 𝑢 | ≤ 𝑒 𝑎 | 𝑣 | 𝑒 𝑎 | 𝑢 −𝑣 | to obtain 𝑝 𝑎,𝑘 ( 𝑓 ★ 𝑔 ) ≤ 𝑝 𝑎,𝑘 ( 𝑓 ) 𝑝 𝑎,0 ( 𝑔 ).
+If 𝑓 , 𝑔 ∈ A, they admit a common 𝑎 > 1/2. Differentiation, reassociation, and exchange of factors
+are justified by these absolute integral bounds. Reflection proves the involution rule, and reversing the
+absolutely convergent double integral proves the first transform equation. The second follows from
+𝑢 ↦→ −𝑢 and conjugation. If an identity 𝑒 existed in any one of these algebras, convolution with 𝑔 𝐴
+would imply 𝑒b( 𝑡 ) = 1, contradicting (1.5).
+    Lemma 1.3.1 changes weighted 𝐿 1 bounds into weighted supremum bounds at the same rate. Con-
+versely, if | 𝑔 ( 𝑘 ) ( 𝑢)| ≤ 𝐶𝑘 𝑒 − 𝑎 | 𝑢 | , then for 1/2 < 𝑏 < 𝑎, 𝑝𝑏,𝑘 ( 𝑔 ) ≤ 2𝐶𝑘 /( 𝑎 − 𝑏 ). This proves the union
+equality without identifying its individual fixed-rate spaces or silently removing the loss in the rate.
+Chapter 1. Arithmetic forms and operator domains                                                                7
+
+
+1.4   Prime factors and the gamma factor
+For positive 𝑥 and complex 𝑠 , write 𝑥 𝑠 = exp( 𝑠 log 𝑥 ) with the real logarithm of 𝑥 . This convention fixes
+every power used below.
+Lemma 1.4.1 (The convergent prime product). The series 𝜁 ( 𝑠 ) = 𝑛 ≥1 𝑛− 𝑠 defines a holomorphic
+                                                                            P
+nonzero function for Re 𝑠 > 1. In that half-plane,
+
+                                                                𝜁′
+                                                                                 ΛvM ( 𝑛) 𝑛− 𝑠 .
+                                   Y                                        ∑︁
+                        𝜁 ( 𝑠) =        (1 − 𝑝 − 𝑠 ) −1 ,          ( 𝑠) = −                                 (1.9)
+                                    𝑝                           𝜁           𝑛 ≥2
+
+Both the logarithmic series and its derivative converge absolutely on every smaller closed half-plane. On
+𝑠 = 2 + 𝑖𝑡 , | 𝜁 ( 𝑠 )| ≥ 𝜁 (2) −1 .
+Proof. Existence and uniqueness of prime factorization follow by induction from the fact that a prime
+dividing a product divides a factor. The latter follows from the integer Euclidean algorithm and its
+identity for the greatest common divisor. Expanding a finite prime product into geometric series therefore
+gives∫ the sum over integers supported on those primes. For 𝜎 > 1, the integral comparison 𝑛− 𝜎 ≤
+                                                                                                P
+       ∞ −𝜎
+1 + 1 𝑥 𝑑𝑥 is finite. It bounds the omitted tails and proves the product identity.
+   The series 𝑝 𝑚 ≥1 𝑝 − 𝑚𝑠 /𝑚 and its derivative are locally uniformly absolutely convergent: their
+                P P
+absolute values are bounded by constants times 𝑛 ≥2 (1 + log 𝑛) 𝑛− 𝜎 . Exponentiating that series gives
+                                                     P
+the product, so the product is nonzero. Differentiation gives (1.9). Finally
+                                             Y               Y
+                         | 𝜁 (2 + 𝑖𝑡 )| −1 ≤   (1 + 𝑝 −2 ) ≤   (1 − 𝑝 −2 ) −1 = 𝜁 (2) .
+                                                 𝑝                   𝑝
+
+
+
+
+Lemma 1.4.2 (Gamma product and vertical bounds). For Re 𝑧 > 0, the integral
+                                       ∫ ∞
+                              Γ ( 𝑧) =     𝑒 − 𝑥 𝑥 𝑧 −1 𝑑𝑥
+                                                            0
+
+is holomorphic and nonzero. Its reciprocal extends to the entire function
+                                                 1            Y
+                                   𝐸 ( 𝑧) =          = 𝑧𝑒 𝛾 𝑧      (1 + 𝑧 /𝑛) 𝑒 − 𝑧 /𝑛 ,                    (1.10)
+                                              Γ ( 𝑧)          𝑛 ≥1
+
+where 𝛾 = lim 𝑁 →∞ (     𝑛=1 1/𝑛 − log 𝑁 ). Its zeros are simple and are exactly 0, −1, −2, . . .. For 𝑅 ≥ 2,
+                       P𝑁
+
+                              | 𝐸 ( 𝑧 )| ≤ exp( 𝐶 𝑅 log( 𝑅 + 2))            (| 𝑧 | ≤ 𝑅) .                   (1.11)
+
+The logarithmic derivative satisfies
+                             ∑︁  1        1 
+             𝜓 ( 𝑧) = − 𝛾 +             −      ,                    𝜓 ( 𝜎 + 𝑖𝑡 ) = 𝑂 𝛼,𝛽 (log(2 + | 𝑡 |))   (1.12)
+                             𝑛 ≥0 𝑛 + 1   𝑛+𝑧
+
+uniformly for 0 < 𝛼 ≤ 𝜎 ≤ 𝛽 .
+Chapter 1. Arithmetic forms and operator domains                                                                     8
+
+
+Proof. The integral and its derivatives have integrable majorants on compact subsets of Re 𝑧 > 0. Re-
+peated real integration by parts gives
+                            ∫ 1
+                                                                   𝑁!
+                                 𝑥 𝑧 −1 (1 − 𝑥 ) 𝑁 𝑑𝑥 =                            .
+                              0                         𝑧 ( 𝑧 + 1) · · · ( 𝑧 + 𝑁 )
+After multiplying by 𝑁 𝑧 and substituting 𝑢 = 𝑁 𝑥 , the integrand tends to 𝑢 𝑧 −1 𝑒 − 𝑢 . The inequality
+(1 − 𝑢/ 𝑁 ) 𝑁 ≤ 𝑒 − 𝑢 for 0 ≤ 𝑢 < 𝑁 is an integrable bound, also after any fixed number of 𝑧 derivatives
+on compact subsets. Thus
+                                                          𝑁 𝑧𝑁!
+                                   Γ ( 𝑧 ) = lim                            .
+                                            𝑁 →∞ 𝑧 ( 𝑧 + 1) · · · ( 𝑧 + 𝑁 )
+
+The sequence 𝑛𝑁=1 1/𝑛 − log 𝑁 decreases and is bounded below by the comparison of 1/ 𝑥 with its left
+                P
+and right rectangle sums. Taking reciprocals of the finite expressions gives the finite products in (1.10).
+For | 𝑤 | ≤ 1/2, the power series of the logarithm gives | log(1 + 𝑤 ) − 𝑤 | ≤ 𝐶 |𝑤 | 2 . Hence their tails
+converge uniformly on compact sets to a nonzero factor. The finite initial factors identify the zeros and
+their orders. Multiplication of the two limits gives Γ𝐸 = 1 on the right half-plane, proving nonvanishing
+and the reciprocal formula.
+    For | 𝑧 | ≤ 𝑅, split the product at 𝑛 = ⌈2 𝑅⌉. The logarithms of absolute values of the initial factors
+are bounded above by
+                              ∑︁                          
+                                   log(1 + 𝑅/𝑛) + 𝑅/𝑛 = 𝑂 ( 𝑅 log( 𝑅 + 2)) .
+                              𝑛 ≤ ⌈2 𝑅 ⌉
+
+The remaining logarithmic tail is 𝑂 ( 𝑅2 𝑛>2 𝑅 𝑛−2 ) = 𝑂 ( 𝑅). Including 𝑧𝑒 𝛾 𝑧 proves (1.11).
+                                             P
+    Logarithmic differentiation gives the series in (1.12). For | 𝑡 | ≥ 1, split that series at 𝑛 = ⌈2(| 𝑡 | + 𝛽 + 1)⌉.
+The sum of 1/( 𝑛 + 1) before that point is 𝑂 (log(2 + | 𝑡 |)), and the sum of | 𝑛 + 𝑧 | −1 is 𝑂 (1) because
+| 𝑛 + 𝑧 | ≥ | 𝑡 |. After that point, each difference is bounded by 𝐶 | 𝑧 − 1|/( 𝑛 + 1) 2 , whose sum is 𝑂 (1).
+The compact part with | 𝑡 | ≤ 1 has no pole and is bounded.
+
+      Define
+                                                                 Γℝ′          1       1
+                   Γℝ ( 𝑠 ) = 𝜋 − 𝑠/2 Γ ( 𝑠 /2) ,   𝐻Γ ( 𝑠 ) =       ( 𝑠 ) = − log 𝜋 + 𝜓 ( 𝑠 /2) .              (1.13)
+                                                                 Γℝ           2       2
+The half in 𝑠 /2 and the real factor 𝜋 − 𝑠/2 will produce respectively the argument 1/4 + 𝑖𝑡 /2 and the term
+− log 𝜋 in (1.4).
+
+1.5     Gaussian reflection and the completed function
+The completion of the Dirichlet series will come from a lattice sum. The identity needed for that sum is
+a direct consequence of the Gaussian Fourier transform, with its normalization kept explicit.
+    The normalization in Lemma 1.3.2 also gives the Fourier integral used by periodization. The substitu-
+tion 𝐴 = 1/(4 𝜋 𝑥 ) and 𝑧 = −2 𝜋 𝑡 relates the two conventions.
+Lemma 1.5.1 (Gaussian Fourier transform). For 𝑥 > 0 and real 𝑡 ,
+                            ∫
+                                        2                             2
+                                𝑒 − 𝜋 𝑥𝑣 𝑒 −2𝜋 𝑖𝑡𝑣 𝑑𝑣 = 𝑥 −1/2 𝑒 − 𝜋 𝑡 / 𝑥 .
+                                           ℝ
+Chapter 1. Arithmetic forms and operator domains                                                                      9
+
+                        ∫      2                                                          ∫∞  2
+Proof. Squaring 𝐼 = ℝ 𝑒 − 𝑢 𝑑𝑢 and using polar coordinates gives 𝐼 2 = 2 𝜋 0 𝑟 𝑒 − 𝑟 𝑑𝑟 = 𝜋 . The
+                               √                    ∫           2
+integrand is positive, so 𝐼 = 𝜋 . Scaling gives ℝ 𝑒 − 𝜋 𝑥𝑣 𝑑𝑣 = 𝑥 −1/2 . Let 𝐽 ( 𝑡 ) denote the integral in the
+                                                       2
+statement. Every fixed power of | 𝑣 | times 𝑒 − 𝜋 𝑥𝑣 is integrable. This bound permits differentiation in 𝑡
+                                                 2                     2
+and integration by parts in 𝑣 . Using 𝜕𝑣 𝑒 − 𝜋 𝑥𝑣 = −2 𝜋 𝑥𝑣𝑒 − 𝜋 𝑥𝑣 gives
+                                       ∫
+                             ′       𝑖                   2                   2𝜋 𝑡
+                            𝐽 (𝑡 ) =        𝜕𝑣 ( 𝑒 − 𝜋 𝑥𝑣 ) 𝑒 −2𝜋 𝑖𝑡𝑣 𝑑𝑣 = −      𝐽 (𝑡 ).
+                                     𝑥 ℝ                                      𝑥
+The boundary terms vanish because of Gaussian decay. The initial value 𝐽 (0) = 𝑥 −1/2 solves this differ-
+ential equation and proves the formula.
+
+Lemma 1.5.2 (Periodization of a Gaussian). For 𝑥 > 0, put 𝜃 ( 𝑥 ) =
+                                                                                   P            − 𝜋 𝑛2 𝑥 . Then
+                                                                                       𝑛 ∈ℤ 𝑒
+
+                                              𝜃 ( 𝑥 ) = 𝑥 −1/2 𝜃 (1/ 𝑥 ) .                                        (1.14)
+
+For 𝑥 ≥ 1, one has 0 < 𝜃 ( 𝑥 ) − 1 ≤ 𝐶 𝑒 − 𝜋 𝑥 .
+                                                                   2
+Proof. The periodized function 𝑃𝑥 ( 𝑢) = 𝑛 ∈ℤ 𝑒 − 𝜋 𝑥 ( 𝑢+𝑛 ) and all its derivatives converge uniformly
+                                                 P
+for 0 ≤ 𝑢 ≤ 1. Its 𝑘 th Fourier coefficient, with period one, is
+                      ∫ 1                          ∫
+                                     −2 𝜋 𝑖𝑘𝑢                2                             2
+                          𝑃𝑥 ( 𝑢 ) 𝑒          𝑑𝑢 =   𝑒 − 𝜋 𝑥𝑣 𝑒 −2𝜋 𝑖𝑘𝑣 𝑑𝑣 = 𝑥 −1/2 𝑒 − 𝜋 𝑘 / 𝑥 ,
+                        0                            ℝ
+
+by Lemma 1.3.2. These coefficients are absolutely summable and define a continuous periodic Fourier
+series.
+    For completeness, a continuous periodic function with all Fourier coefficients zero is zero. Indeed,
+the kernel                                                          2
+                                                      −1
+                                                  1 𝑁
+                                                    ∑︁     2 𝜋 𝑖𝑗 𝑢
+                                      𝐾𝑁 ( 𝑢 ) =         𝑒
+                                                 𝑁 𝑗 =0
+is nonnegative, has integral one over a period, and is a finite Fourier sum. Away from the integers it is at
+most 1/( 𝑁 sin2 𝜋 𝑢). Uniform continuity and this bound show that convolution with 𝐾𝑁 converges
+uniformly to any continuous periodic function. When all coefficients vanish, each convolution is zero.
+Apply this uniqueness statement to 𝑃𝑥 minus its displayed Fourier series, then set 𝑢 = 0 to obtain (1.14).
+                                             2
+Finally 𝜃 ( 𝑥 ) − 1 = 2𝑒 − 𝜋 𝑥 𝑛 ≥1 𝑒 − 𝜋 ( 𝑛 −1) 𝑥 , and the last sum is bounded by its value at 𝑥 = 1.
+                              P
+
+
+Theorem 1.5.3 (Continuation and reflection). The function L ( 𝑠 ) = Γℝ ( 𝑠 ) 𝜁 ( 𝑠 ), initially defined
+for Re 𝑠 > 1, extends meromorphically to ℂ by
+                                            ∫ ∞
+                               1   1      1                                        𝑑𝑥
+                     L ( 𝑠) = − +      +        ( 𝜃 ( 𝑥 ) − 1) 𝑥 𝑠/2 + 𝑥 (1− 𝑠 )/2      .         (1.15)
+                               𝑠 𝑠−1 2 1                                              𝑥
+It has simple poles at zero and one, with residues −1 and 1. It satisfies L ( 𝑠 ) = L (1 − 𝑠 ) and L ( 𝑠¯) = L ( 𝑠 ).
+The function
+                                                   1
+                                          𝑋 ( 𝑠 ) = 𝑠 ( 𝑠 − 1)L ( 𝑠 )                                        (1.16)
+                                                   2
+is entire, obeys the same symmetries, and satisfies 𝑋 (0) = 𝑋 (1) = 1/2 and
+
+                              log max | 𝑋 ( 𝑠 )| ≤ 𝐶 𝑅 log( 𝑅 + 2)           ( 𝑅 ≥ 2) .                           (1.17)
+                                  |𝑠|≤𝑅
+
+Every zero of 𝑋 lies in 0 ≤ Re 𝑠 ≤ 1.
+Chapter 1. Arithmetic forms and operator domains                                                                10
+
+
+Proof. For Re 𝑠 > 1, absolute convergence gives
+
+                 1
+                   ∫ ∞
+                                          𝑠 /2 𝑑𝑥
+                                                    ∑︁ ∫ ∞ − 𝜋 𝑛2 𝑥 𝑠/2 𝑑𝑥
+                         ( 𝜃 ( 𝑥 ) − 1) 𝑥         =        𝑒       𝑥       = Γℝ ( 𝑠 ) 𝜁 ( 𝑠 ) .
+                 2 0                            𝑥   𝑛 ≥1 0               𝑥
+
+For the integral from zero to one, use 𝜃 ( 𝑥 ) − 1 = 𝑥 −1/2 − 1 + 𝑥 −1/2 ( 𝜃 (1/ 𝑥 ) − 1). The first two terms
+integrate to 1/( 𝑠 − 1) − 1/ 𝑠 after the factor 1/2. Substitution 𝑦 = 1/ 𝑥 in the third gives the second term
+in the integral of (1.15).
+     The exponential bound in Lemma 1.5.2 makes that integral entire: on every compact set, powers of
+𝑥 and any fixed powers of log 𝑥 are bounded by an integrable exponential majorant. The pole, residue,
+and symmetry assertions now follow directly. In particular
+                                                    ∫ ∞
+                                       1 𝑠 ( 𝑠 − 1)                                         𝑑𝑥
+                            𝑋 ( 𝑠) = +                   ( 𝜃 ( 𝑥 ) − 1) 𝑥 𝑠/2 + 𝑥 (1− 𝑠 )/2      .
+                                       2      4       1                                        𝑥
+                                                                     ∫∞
+For | 𝑠 | ≤ 𝑅, the integral is bounded by a constant times 1 𝑒 − 𝜋 𝑥 𝑥 ( 𝑅+1)/2 𝑑𝑥 . If 𝑟 = ( 𝑅 + 1)/2, then
+𝑥 𝑟 𝑒 − 𝜋 𝑥 /2 ≤ (2𝑟 /( 𝜋 𝑒 )) 𝑟 , by maximizing its logarithm. The remaining exponential is integrable. This
+proves (1.17), including the polynomial prefactor.
+     For Re 𝑠 > 1, the gamma factor and the prime product are nonzero, so 𝑋 is nonzero there. Reflection
+excludes zeros for Re 𝑠 < 0.
+
+   The continuation of the original Dirichlet series is now the specific meromorphic function 𝜁 ( 𝑠 ) =
+𝜋 𝑠/2 𝐸 ( 𝑠 /2)L ( 𝑠 ). It has a simple pole at one. At zero the zero of 𝐸 ( 𝑠 /2) cancels the pole of L and gives
+𝜁 (0) = −1/2. At each negative even integer, 𝐸 ( 𝑠 /2) has a simple zero and L ( 𝑠 ) = L (1 − 𝑠 ) ≠ 0. These
+are its trivial zeros. Its other zeros are precisely the zeros of 𝑋 , with the same multiplicities. We call them
+the nontrivial zeros. No assertion about their real parts inside the closed strip has been used.
+    The closed strip can be sharpened by a positive trigonometric identity. The argument uses the pole
+of 𝜁 at one and holomorphy at every other point of the line Re 𝑠 = 1.
+Lemma 1.5.4 (The pole and the boundary germs). The continuation 𝜁 ( 𝑠 ) = 𝜋 𝑠/2 𝐸 ( 𝑠 /2)L ( 𝑠 ) is
+holomorphic on ℂ \ {1} and has a simple pole of residue one at 𝑠 = 1. For every nonzero real 𝑡 , it is
+holomorphic on neighborhoods of 1 + 𝑖𝑡 and 1 + 2 𝑖𝑡 .
+
+Proof. Theorem 1.5.3 makes L holomorphic away from zero and one. Lemma 1.4.2 makes 𝐸 entire, with
+𝐸 ( 𝑧 ) = 𝑧 + 𝑂 ( 𝑧 2 ) at zero. Thus 𝜋 𝑠/2 𝐸 ( 𝑠 /2)L ( 𝑠 ) = −1/2 + 𝑂 ( 𝑠 ) there, and its singularity at zero is
+removable. The Gaussian integral gives
+                                                     ∫ ∞
+                                                                  2    √
+                                       Γ (1/2) = 2           𝑒 − 𝑢 𝑑𝑢 = 𝜋 .
+                                                        0
+
+Consequently 𝜋 1/2 𝐸 (1/2) = 1. The residue of L at one is one, so
+                                                         1
+                                             𝜁 ( 𝑠) =       + 𝐻 ( 𝑠)                                         (1.18)
+                                                        𝑠−1
+on a neighborhood of one, with 𝐻 holomorphic. The asserted local holomorphy follows because 𝑡 ≠ 0
+places both 1 + 𝑖𝑡 and 1 + 2 𝑖𝑡 away from the only pole.
+Chapter 1. Arithmetic forms and operator domains                                                                  11
+
+
+Lemma 1.5.5 (A positive prime sum). For every real 𝜎 > 1 and real 𝑡 ,
+
+                                     𝜁 ( 𝜎 ) 3 | 𝜁 ( 𝜎 + 𝑖𝑡 )| 4 | 𝜁 ( 𝜎 + 2 𝑖𝑡 )| ≥ 1.                       (1.19)
+
+Proof. On Re 𝑠 > 1, define the holomorphic function
+                                                          ∑︁ ∑︁ 𝑝 − 𝑟 𝑠
+                                               𝐵 ( 𝑠) =                     .
+                                                           𝑝 𝑟 ≥1      𝑟
+
+Here 𝑝 runs over positive primes and 𝑝 − 𝑟 𝑠 = 𝑒 − 𝑟 𝑠 log 𝑝 . For every 𝛿 > 0, its series converges absolutely
+and uniformly on Re 𝑠 ≥ 1 + 𝛿 , since
+
+                               ∑︁ ∑︁ 𝑝 − 𝑟 (1+𝛿 )            1      ∑︁ −1− 𝛿
+                                                      ≤       −1−
+                                                                         𝑛   < ∞.
+                                 𝑝 𝑟 ≥1       𝑟           1−2     𝛿
+                                                                    𝑛 ≥2
+
+Lemma 1.4.1 gives 𝑒 𝐵 ( 𝑠 ) = 𝜁 ( 𝑠 ). Taking absolute values yields Re 𝐵 ( 𝑠 ) = log | 𝜁 ( 𝑠 )|, with the real loga-
+rithm of a positive number. This operation needs no choice of a logarithm at a boundary point. Absolute
+convergence permits the three series to be combined. The identity
+
+                          3 + 4 cos 𝜃 + cos(2 𝜃 ) = 2(1 + cos 𝜃 ) 2 ≥ 0                   ( 𝜃 ∈ ℝ)
+
+therefore gives
+
+                      3 log 𝜁 ( 𝜎 ) + 4 log | 𝜁 ( 𝜎 + 𝑖𝑡 )| + log | 𝜁 ( 𝜎 + 2 𝑖𝑡 )|
+                             ∑︁ ∑︁ 𝑝 − 𝑟 𝜎                                          
+                          =                    3 + 4 cos( 𝑟𝑡 log 𝑝) + cos(2𝑟𝑡 log 𝑝) ≥ 0.
+                              𝑝 𝑟 ≥1 𝑟
+
+The Dirichlet series makes 𝜁 ( 𝜎 ) > 0. Exponentiation proves (1.19).
+
+   The exponents in (1.19) decide the boundary case. A simple pole contributes order −3, while even a
+simple zero in the middle factor contributes order 4. The third factor is bounded at the limiting point
+whenever 𝑡 ≠ 0.
+Theorem 1.5.6 (Nonvanishing on the boundary and the strict strip). For every real 𝑡 ≠ 0, one
+has 𝜁 (1 + 𝑖𝑡 ) ≠ 0. At 𝑠 = 1, the function 𝜁 has a simple pole of residue one. Every zero 𝜌 of 𝑋 satisfies
+                                                                                              1
+                         0 < Re 𝜌 < 1,            𝑧 𝜌 = − 𝑖 ( 𝜌 − 1/2) ,          | Im 𝑧 𝜌 | < .              (1.20)
+                                                                                              2
+The zeros of 𝑋 are exactly the nontrivial zeros of 𝜁 , with the same multiplicities. Reflection and complex
+conjugation preserve these multiplicities.
+
+Proof. Fix 𝑡 ∈ ℝ \ {0} and suppose 𝜁 (1 + 𝑖𝑡 ) = 0. By Lemma 1.5.4, this is a zero of a holomorphic
+function. It has some finite order 𝑚 ≥ 1. Indeed, a zero of infinite order would make the function vanish
+on a disc, contrary to its nonzero Euler product in the same disc’s intersection with Re 𝑠 > 1. Taylor
+expansion gives a holomorphic function 𝑎, with 𝑎 (0) ≠ 0, such that
+
+                                            𝜁 (1 + 𝑖𝑡 + 𝑤 ) = 𝑤 𝑚 𝑎 (𝑤 )
+Chapter 1. Arithmetic forms and operator domains                                                               12
+
+
+for sufficiently small complex 𝑤 . For positive real ℎ tending to zero, the pole expansion and local holo-
+morphy at 1 + 2 𝑖𝑡 give constants 𝐶0 , 𝐶1 , 𝐶2 > 0 such that
+          0 < 𝜁 (1 + ℎ) ≤ 𝐶0 ℎ −1 ,        | 𝜁 (1 + ℎ + 𝑖𝑡 )| ≤ 𝐶1 ℎ𝑚 ,          | 𝜁 (1 + ℎ + 2 𝑖𝑡 )| ≤ 𝐶2 .
+The constants can depend on 𝑡 and on the chosen neighborhoods. In particular, boundedness of the
+third factor allows a zero at 1 + 2 𝑖𝑡 . Lemma 1.5.5 now implies
+                1 ≤ 𝜁 (1 + ℎ) 3 | 𝜁 (1 + ℎ + 𝑖𝑡 )| 4 | 𝜁 (1 + ℎ + 2 𝑖𝑡 )| ≤ 𝐶03 𝐶14 𝐶2 ℎ4𝑚 −3 −→ 0.
+This contradiction proves nonvanishing for 𝑡 ≠ 0. When 𝑡 = 0, Lemma 1.5.4 gives the pole directly.
+Thus the preceding limiting argument never treats the pole as a holomorphic value of 𝜁 .
+   For 𝑠 = 1 + 𝑖𝑡 with 𝑡 ≠ 0, the factors 𝑠 , 𝑠 − 1, and Γℝ ( 𝑠 ) = 𝜋 − 𝑠/2 Γ ( 𝑠 /2) are finite and nonzero. The
+nonvanishing just proved therefore gives 𝑋 (1 + 𝑖𝑡 ) ≠ 0. The value 𝑋 (1) = 1/2 handles 𝑡 = 0. On the
+other boundary, the exact reflection identity gives 𝑋 ( 𝑖𝑡 ) = 𝑋 (1 − 𝑖𝑡 ) ≠ 0 for every real 𝑡 , including
+𝑋 (0) = 1/2. The closed-strip statement in Theorem 1.5.3 now yields 0 < Re 𝜌 < 1 for every zero 𝜌 of 𝑋 .
+   On this open strip, 𝑠 ( 𝑠 − 1) Γℝ ( 𝑠 )/2 is holomorphic and nonzero. Multiplication by it preserves each
+zero order, so the zeros of 𝑋 and 𝜁 there have the same multiplicities. At 𝑠 = 0, one has 𝜁 (0) = −1/2.
+For Re 𝑠 < 0, reflection gives L ( 𝑠 ) = L (1 − 𝑠 ) ≠ 0. The reciprocal gamma factor has simple zeros
+exactly at 𝑠 = 0, −2, −4, . . .. It follows that the zeros of 𝜁 in Re 𝑠 < 0 are exactly the simple zeros at
+𝑠 = −2, −4, . . .. These are the trivial zeros. On Re 𝑠 = 0 with 𝑠 ≠ 0, both 𝐸 ( 𝑠 /2) and L ( 𝑠 ) are nonzero.
+The Euler product excludes zeros for Re 𝑠 > 1. This proves the stated classification of all other zeros.
+   If 𝜌 = 𝛽 + 𝑖 𝛾 with 𝛽, 𝛾 ∈ ℝ, then
+                                             𝑧 𝜌 = 𝛾 + 𝑖 (1/2 − 𝛽 ) .
+Thus 0 < 𝛽 < 1 is exactly the strict bound in (1.20). The affine map 𝑠 ↦→ − 𝑖 ( 𝑠 − 1/2) has nonzero
+derivative. Consequently a zero of order 𝑚 at 𝑠 = 𝜌 is a zero of order 𝑚 of 𝑧 ↦→ 𝑋 (1/2 + 𝑖 𝑧 ) at 𝑧 = 𝑧 𝜌 .
+Finally the identities 𝑋 ( 𝑠 ) = 𝑋 (1 − 𝑠 ) and 𝑋 ( 𝑠¯) = 𝑋 ( 𝑠 ) preserve orders in the local power series. In
+centered variables their images are
+                               𝑧1− 𝜌 = − 𝑧 𝜌 ,      𝑧 𝜌¯ = − 𝑧 𝜌 ,      𝑧1− 𝜌¯ = 𝑧 𝜌 .
+All three parameters therefore occur with the same multiplicity as 𝑧 𝜌 , with coincident parameters counted
+only according to their actual zero order.
+    Lemma 1.3.1 supplies exponential decay for every test in A. The same centered coordinate specifies
+where the Weil transform is evaluated. Suppose 𝑎 > 1/2 and 𝑔 : ℝ → ℂ is continuous with | 𝑔 ( 𝑢)| ≤
+𝐶 𝑒 − 𝑎 | 𝑢 | . Define
+                           ∫                                                   ∫
+                 𝑔b( 𝑧 ) =   𝑔 ( 𝑢) 𝑒 𝑖 𝑧𝑢 𝑑𝑢, 𝐹𝑔 ( 𝑠 ) = 𝑔b(− 𝑖 ( 𝑠 − 1/2)) =   𝑔 ( 𝑢) 𝑒 ( 𝑠 −1/2) 𝑢 𝑑𝑢.
+                       ℝ                                                          ℝ
+For each 0 ≤ 𝑏 < 𝑎 and integer 𝑘 ≥ 0, the absolute value of the 𝑘 th derivative integrand is bounded on
+| Im 𝑧 | ≤ 𝑏 by
+                                          𝐶 | 𝑢 | 𝑘 𝑒 − ( 𝑎−𝑏 ) | 𝑢 | .
+This is integrable on ℝ. Termwise differentiation therefore makes 𝑔      b holomorphic on | Im 𝑧 | < 𝑎. It
+makes 𝐹𝑔 holomorphic on 1/2 − 𝑎 < Re 𝑠 < 1/2 + 𝑎. Every nontrivial zero lies in this domain, and
+𝐹𝑔 ( 𝜌) = 𝑔b( 𝑧 𝜌 ) uses the same multiplicity under the invertible affine change of variable.
+    The strict strip permits zeros with Re 𝜌 ≠ 1/2. The assertion that all 𝑧 𝜌 are real is the Riemann
+hypothesis. It remains an additional assertion beyond boundary nonvanishing.
+Chapter 1. Arithmetic forms and operator domains                                                                 13
+
+
+Corollary 1.5.7 (Zero count and absolute test sums). The number of nontrivial zeros with | 𝜌 | ≤
+𝑅, counted with multiplicity, is 𝑂 ( 𝑅 log( 𝑅 + 2)). For every 𝑔 ∈ A, the series 𝜌 | 𝐹𝑔 ( 𝜌)| converges.
+                                                                                P
+
+Proof. Apply Lemma 1.2.3 to 𝑋 , using 𝑋 (0) = 1/2. Since 0 ≤ Re 𝜌 ≤ 1, Lemma 1.3.1 gives | 𝐹𝑔 ( 𝜌)| ≤
+𝐶𝑁 (1 + | Im 𝜌 |) − 𝑁 for every 𝑁 . The zeros in 2𝑗 ≤ | Im 𝜌 | < 2𝑗 +1 contribute at most 𝐶 ( 𝑗 + 1)2𝑗 (1− 𝑁 ) .
+Taking 𝑁 = 3 gives a convergent series. The bounded region has only finitely many zeros.
+
+1.6   Heights at which the horizontal integrals vanish
+Write 𝐻 ( 𝑠 ) = L ′ ( 𝑠 )/L ( 𝑠 ). It has residue equal to the multiplicity at each nontrivial zero. Its residue at
+each of zero and one is −1. These signs follow by differentiating the logarithm of a local factor ( 𝑠 − 𝑠0 ) 𝑚
+or ( 𝑠 − 𝑠0 ) −1 . The identity
+                                      𝑋 ′ ( 𝑠) 1  1
+                           𝐻 ( 𝑠) =           − −    ,           𝐻 (1 − 𝑠 ) = − 𝐻 ( 𝑠 )                      (1.21)
+                                      𝑋 ( 𝑠) 𝑠 𝑠 − 1
+will control both the poles and the left vertical line.
+Lemma 1.6.1 (Admissible rectangle heights). There are heights 𝑇𝑚 ∈ [ 𝑚, 𝑚 + 1], for all sufficiently
+large integers 𝑚, such that no zero lies on either horizontal segment −1/2 ≤ Re 𝑠 ≤ 3/2, Im 𝑠 = ±𝑇𝑚 ,
+and
+                             sup | 𝐻 ( 𝜎 ± 𝑖𝑇𝑚 )| = 𝑂 (𝑇𝑚2 log2 (𝑇𝑚 + 2)) .                     (1.22)
+                             −1/2≤ 𝜎 ≤3/2
+
+For 𝑔 ∈ A 𝑎 and 1 < 𝑐 < min( 𝑎 + 1/2, 3/2), both horizontal integrals of 𝐻 ( 𝑠 ) 𝐹𝑔 ( 𝑠 ) between the lines
+1 − 𝑐 and 𝑐 tend to zero at these heights.
+
+Proof. Let 𝑁𝑚 count all zeros in | 𝑠 | ≤ 𝑚 + 8, with multiplicity, and set 𝛿𝑚 = 1/(8( 𝑁𝑚 + 1)). Remove
+from [ 𝑚, 𝑚 + 1] the intervals of radius 𝛿𝑚 about the absolute values of their imaginary parts. The
+removed length is at most 2𝛿𝑚 𝑁𝑚 < 1/4, so a remaining 𝑇𝑚 exists. Zeros outside this disc have | Im 𝜌 | >
+𝑚 + 1 + 𝛿𝑚 for large 𝑚, because 0 ≤ Re 𝜌 ≤ 1. Thus both heights have distance at least 𝛿𝑚 from every
+zero ordinate. Corollary 1.5.7 gives 𝛿𝑚−1 = 𝑂 ( 𝑚 log( 𝑚 + 2)).
+    Fix 𝑇 = 𝑇𝑚 and center a disc at 𝑠0 = 2 + 𝑖𝑇 . By (1.17), | 𝑋 ( 𝑠0 + 𝑧 )| ≤ exp( 𝐶 (𝑇 + 8) log(𝑇 + 8))
+for | 𝑧 | ≤ 6. At its center, the prime-product lower bound and (1.11) give
+                      |(2 + 𝑖𝑇 ) (1 + 𝑖𝑇 )|
+   | 𝑋 (2 + 𝑖𝑇 )| =                         | Γ (1 + 𝑖𝑇 /2)| | 𝜁 (2 + 𝑖𝑇 )| ≥ exp(−𝐶 (𝑇 + 8) log(𝑇 + 8)) .
+                              2𝜋
+Choose 𝑅 ∈ [5, 6] with no zero on the circle. The number of zeros in it is 𝑂 (𝑇 log(𝑇 + 2)) by the
+global count. Every point of the desired horizontal segment has | 𝑠 − 𝑠0 | ≤ 5/2, and its distance from
+every zero is at least 𝛿𝑚 . Lemma 1.2.4 now gives
+
+                    | 𝑋 ′ ( 𝑠 )/ 𝑋 ( 𝑠 )| ≤ 𝐶𝑇 log(𝑇 + 2) (1 + 𝛿𝑚−1 ) = 𝑂 (𝑇 2 log2 (𝑇 + 2)) .
+
+The two rational terms in (1.21) are bounded at these heights. Conjugation gives the same estimate on
+the bottom segment.
+   The chosen vertical strip lies strictly inside 1/2 − 𝑎 < Re 𝑠 < 1/2 + 𝑎. Its test transform is 𝑂 (𝑇 −4 )
+uniformly by Lemma 1.3.1. The horizontal lengths are bounded, so their integrals are 𝑂 (𝑇 −2 log2 (𝑇 +
+2)), which tends to zero.
+
+   The proof uses a polynomial bound, which suffices for every test in A. It does not require a sharper
+local zero count, a product over all zeros, or an asymptotic formula for the number of zeros.
+Chapter 1. Arithmetic forms and operator domains                                                             14
+
+
+1.7   The normalized explicit formula
+Theorem 1.7.1 (The full arithmetic functional). For every 𝑔 ∈ A, equation (1.4) holds, with all
+sums and integrals absolutely convergent. Its right side defines a linear functional 𝐿 : A → ℂ satisfying
+                                                           ∑︁
+                          𝐿 ( 𝑔 ∗) = 𝐿 ( 𝑔 ),
+                                                                                
+                                                 𝐿( 𝑔) =       𝑔b − 𝑖 ( 𝜌 − 1/2) .                  (1.23)
+                                                              𝜌
+
+Proof. Choose 𝑔 ∈ A 𝑎 and 1 < 𝑐 < min( 𝑎 + 1/2, 3/2). The prime terms converge because Lemma 1.3.1
+gives
+              ∑︁ ΛvM ( 𝑛)                                     ∑︁
+                   √      (| 𝑔 (log 𝑛)| + | 𝑔 (− log 𝑛)|) ≤ 𝐶      (log 𝑛) 𝑛− 𝑎 −1/2 < ∞.
+              𝑛 ≥2    𝑛                                       𝑛 ≥2
+The gamma integral converges by (1.12) and (1.5). The polar values are inside the transform strip, and the
+zero sum converges by Corollary 1.5.7.
+    Integrate 𝐻 ( 𝑠 ) 𝐹𝑔 ( 𝑠 ) around the rectangle with vertical sides 1 − 𝑐, 𝑐 and heights ±𝑇𝑚 , counter-
+clockwise. Its right side is traversed upward. There are no poles on the vertical sides, since the ze-
+ros lie in the closed critical strip. The residue formula gives the zero sum inside the rectangle minus
+𝐹𝑔 (0) + 𝐹𝑔 (1). Lemma 1.6.1 eliminates the horizontal integrals. On Re 𝑠 = 𝑐 , equations (1.9) and (1.12)
+give 𝐻 ( 𝑐 + 𝑖𝑡 ) = 𝑂 (log(2 + | 𝑡 |)). Reflection gives the same bound on 1 − 𝑐 , so both vertical inte-
+grals converge absolutely. In the left integral, substitute 𝑠 = 1 − 𝑤 and use 𝐻 (1 − 𝑤 ) = − 𝐻 (𝑤 ). Both
+vertical-line integrals in the resulting expression are oriented upward. The outcome is
+                                                       ∫
+                 ∑︁                                 1                                        
+                      𝐹𝑔 ( 𝜌) − 𝐹𝑔 (0) − 𝐹𝑔 (1) =              𝐻 ( 𝑠 ) 𝐹𝑔 ( 𝑠 ) + 𝐹𝑔 (1 − 𝑠 ) 𝑑𝑠.    (1.24)
+                  𝜌                               2 𝜋 𝑖 Re 𝑠=𝑐
+
+   On this line, split 𝐻 = 𝐻Γ + 𝜁 ′ / 𝜁 . The series for 𝜁 ′ / 𝜁 can pass through the integral because
+   ΛvM ( 𝑛) 𝑛− 𝑐 < ∞ and both test factors are integrable on the vertical line. For the first factor, Fourier
+P
+inversion applied to 𝑢 ↦→ 𝑒 ( 𝑐 −1/2) 𝑢 𝑔 ( 𝑢) gives
+                       ∫
+                    1
+                               𝑛− 𝑠 𝐹𝑔 ( 𝑠 ) 𝑑𝑠 = 𝑛− 𝑐 𝑒 ( 𝑐 −1/2) log 𝑛 𝑔 (log 𝑛) = 𝑛−1/2 𝑔 (log 𝑛) .  (1.25)
+                  2 𝜋 𝑖 Re 𝑠=𝑐
+This weighted function has exponential decay with all derivatives, since 𝑐 − 1/2 < 𝑎. The proof
+of Lemma 1.3.2 therefore applies to it. For 𝐹𝑔 (1 − 𝑠 ), use 𝑢 ↦→ 𝑒 ( 𝑐 −1/2) 𝑢 𝑔 (−𝑢) instead. It gives
+𝑛−1/2 𝑔 (− log 𝑛). The minus sign in (1.9) proves exactly the prime-power term in (1.4).
+    It remains to evaluate the gamma contribution. The function 𝐻Γ is holomorphic for Re 𝑠 > 0. Shift
+each gamma integral from 𝑐 to 1/2. There is no pole between these lines, and the logarithmic bound
+(1.12) times the rapid test decay eliminates the horizontal sides. Set 𝑠 = 1/2 + 𝑖𝑡 . The two factors are 𝑔
+                                                                                                          b( 𝑡 )
+and 𝑔b(−𝑡 ). Changing 𝑡 to −𝑡 in the second term gives
+                               ∫
+                             1                                             
+                                   𝑔b( 𝑡 ) 𝐻Γ (1/2 + 𝑖𝑡 ) + 𝐻Γ (1/2 − 𝑖𝑡 ) 𝑑𝑡
+                           2𝜋 ℝ
+                                           ∫
+                                         1                                      
+                                   =           𝑔b( 𝑡 ) Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 𝑑𝑡.
+                                      2𝜋 ℝ
+Here conjugation of Γ follows from its defining real integral and analytic continuation. Together with
+(1.24), this proves (1.4).
+                                                                         c∗ ( 𝑡 ) = 𝑔
+    Finally the gamma bracket is real and even. For real 𝑡 , (1.8) gives 𝑔          b( 𝑡 ). The involution
+interchanges the two polar values and the two values at ± log 𝑛, followed by conjugation. Thus all three
+local terms obey the Hermitian identity in (1.23).
+Chapter 1. Arithmetic forms and operator domains                                                                 15
+
+
+    The proof explains the normalization directly. The poles of L each contribute residue −1 to its loga-
+rithmic derivative, giving the two positive polar values after rearrangement. The logarithmic derivative
+of each Euler factor gives the negative prime term. The reflection combines the two gamma factors at
+1/2 ± 𝑖𝑡 . These operations preserve the original complex test function throughout.
+
+1.8   Gaussian tests and their boundary terms
+For 𝑔 𝐴 from Lemma 1.3.2, substitution in the formula gives
+                                              ∫
+               ∑︁ 𝐴 ( 𝜌 −1/2) 2             1          2
+                                = 2𝑒 𝐴/4 +       𝑒 − 𝐴𝑡 Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 𝑑𝑡
+                                                                                  
+                  𝑒
+                𝜌                          2𝜋 ℝ
+                                                                                                            (1.26)
+                                                 1 ∑︁ ΛvM ( 𝑛) − (log 𝑛 ) 2 /(4 𝐴 )
+                                            −√          √     𝑒                     .
+                                               𝜋 𝐴 𝑛 ≥2   𝑛
+If every nontrivial zero has real part 1/2, each term in this Gaussian zero sum is positive. The identity
+itself is unconditional.
+Proposition 1.8.1 (Polynomial–Gaussian compatibility). Let 𝐴 > 0, 𝜏 ∈ ℝ, and 𝑃 ∈ ℂ[𝑤 ].
+The function
+                              𝑓 ( 𝑢) = 𝑒 − 𝑖𝜏 𝑢 𝑃 ( 𝑖𝜕𝑢 ) 𝑔 𝐴 ( 𝑢)               (1.27)
+belongs to A 𝑎 for every 𝑎 > 0, and
+                                                                                    2
+                                               𝑓b( 𝑧 ) = 𝑃 ( 𝑧 − 𝜏 ) 𝑒 − 𝐴 ( 𝑧 − 𝜏 ) .                      (1.28)
+For every fixed 𝑏 > 0 and 𝑧 = 𝑡 + 𝑖𝑦 with | 𝑦 | ≤ 𝑏 ,
+                                                                                          2     2
+                                   | 𝑓b( 𝑧 )| ≤ 𝐶𝑃 , 𝐴,𝑏,𝜏 (1 + | 𝑡 |) deg 𝑃 𝑒 − 𝐴 ( 𝑡 − 𝜏 ) + 𝐴𝑏 .         (1.29)
+Consequently every real integration-by-parts boundary value and every horizontal contour term used in
+Theorem 1.7.1 vanishes for 𝑓 and 𝑓 ∗ ★ 𝑓 .
+                                                                                 2
+Proof. Each derivative in (1.27) is a polynomial in 𝑢 times 𝑒 − 𝑢 /(4 𝐴 ) , multiplied by 𝑒 − 𝑖𝜏 𝑢 . This descrip-
+tion holds after any further derivative. Multiplication by 𝑒 𝑎 | 𝑢 | still leaves an integrable function tending
+to zero at both infinities, for every 𝑎 > 0. Integration by parts gives 𝑖𝜕          𝑢 ℎ ( 𝑧 ) = 𝑧 ℎ ( 𝑧 ), and mod-
+                                                                                                 b
+ulation gives 𝑒 − 𝑖𝜏
+               \     𝑢 ℎ ( 𝑧) = ℎ
+                                b( 𝑧 − 𝜏 ). Together these prove (1.28). The exact Gaussian modulus is
+               2               2        2
+| 𝑒 − 𝐴 ( 𝑡 − 𝜏 +𝑖𝑦 ) | = 𝑒 − 𝐴 ( 𝑡 − 𝜏 ) + 𝐴𝑦 , which proves (1.29). This bound times (1.22) tends to zero at both
+heights. The convolution square lies in every A 𝑎 by Proposition 1.3.3; its transform is the product in
+(1.8), with Gaussian decay of twice the exponent. Thus it has the same boundary properties.
+
+Example 1.8.2 (The ﬁrst polynomial and a missing conjugation). For 𝑃 ( 𝑤 ) = 𝑤 , the function and its
+transform are
+                                 𝑓 ( 𝑢) = − 𝑖𝑢 𝑒 − 𝑖𝜏 𝑢 𝑔 𝐴 ( 𝑢)/(2 𝐴) ,
+                                                                      2
+                                   𝑓b( 𝑧 ) = ( 𝑧 − 𝜏 ) 𝑒 − 𝐴 ( 𝑧 − 𝜏 ) .
+Its convolution square has transform
+                                                                                       2
+                                            𝑓∗
+                                            \  ★ 𝑓 ( 𝑧 ) = ( 𝑧 − 𝜏 ) 2 𝑒 −2 𝐴 ( 𝑧 − 𝜏 ) .
+                                           2
+At 𝑧 = 𝜏 + 𝑖𝑏 , this value is −𝑏 2 𝑒 2 𝐴𝑏 . The correct analytic expression is 𝑓b( 𝑧¯ ) 𝑓b( 𝑧 ). Replacing it by
+| 𝑓b( 𝑧 )| 2 would erase the negative sign and would not give a holomorphic function of 𝑧 .
+Chapter 1. Arithmetic forms and operator domains                                                              16
+
+
+1.9   A separate positivity argument
+The explicit formula compares linear functionals. Positivity concerns its value on every convolution
+square and requires a different argument. Define the Riemann hypothesis to mean that every nontrivial
+zero 𝜌 satisfies Re 𝜌 = 1/2.
+Theorem 1.9.1 (Positivity on the exact test algebra). The Riemann hypothesis is equivalent to
+
+                                   𝐿(𝑓 ∗ ★ 𝑓 ) ≥ 0          for every 𝑓 ∈ A .                             (1.30)
+
+Under the Riemann hypothesis, writing 𝜌 = 1/2 + 𝑖 𝛾 𝜌 gives 𝐿 ( 𝑓 ∗ ★ 𝑓 ) = 𝜌 | 𝑓b( 𝛾 𝜌 )| 2 . If there is a zero
+                                                                               P
+off the critical line, a function of the form (1.27) has strictly negative convolution-square value.
+
+Proof. Put 𝑧 𝜌 = − 𝑖 ( 𝜌 − 1/2). Theorem 1.5.3 gives | Im 𝑧 𝜌 | ≤ 1/2. Its reflection and conjugation sym-
+metries show that 𝑧 𝜌 and 𝑧¯ 𝜌 occur with equal multiplicity. Under the Riemann hypothesis all these
+parameters are real. Then Theorem 1.7.1 and (1.8) give the asserted nonnegative sum.
+    For the converse, suppose 𝑧0 = 𝜏 + 𝑖𝑏 occurs, where 𝑏 ≠ 0. Its conjugate has the same multiplicity
+𝑚. Center the parameter by 𝑤 = 𝑧 − 𝜏 . There are finitely many distinct centered zero parameters with
+| Re 𝑤 | ≤ 2. This follows from the global zero count and the bound on their imaginary parts. Form the
+monic polynomial 𝑄 whose roots are these distinct points except 𝑖𝑏 and − 𝑖𝑏 . If there are none, set 𝑄 = 1.
+This root set is invariant under conjugation, so 𝑄 has real coefficients and 𝑄 ( 𝑖𝑏 ) 𝑄 (− 𝑖𝑏 ) = | 𝑄 ( 𝑖𝑏 )| 2 ≠
+0. Set
+                                                                                       2
+                𝑃 (𝑤 ) = 𝑤𝑄 (𝑤 ) 𝑄 (−𝑤 ) ,      𝑓b𝐴 ( 𝑧 ) = 𝑃 ( 𝑧 − 𝜏 ) 𝑒 − 𝐴 ( 𝑧 − 𝜏 ) , 𝐴 ≥ 1.
+The polynomial 𝑃 is real and odd. Proposition 1.8.1 constructs 𝑓 𝐴 ∈ A exactly. Since 𝜏 and the coeffi-
+cients are real, 𝑓b𝐴 ( 𝑧¯ ) = 𝑓b𝐴 ( 𝑧 ). The two selected zero parameters therefore contribute
+                                                                          2
+                                            −2𝑚𝑏 2 | 𝑄 ( 𝑖𝑏 )| 4 𝑒 2 𝐴𝑏                                    (1.31)
+
+to 𝐿 ( 𝑓 𝐴∗ ★ 𝑓 𝐴 ). All other centered zero parameters with | Re 𝑤 | ≤ 2 give zero because 𝑄 vanishes there.
+   For a remaining parameter 𝑤 = 𝑥 + 𝑖𝑦 , one has | 𝑥 | > 2, | 𝑦 | ≤ 1/2, and 𝐷 = 𝑥 2 − 𝑦 2 ≥ 15/4. For
+𝐴 ≥ 1, 2 𝐴𝐷 ≥ 15 𝐴/4 + ( 𝑥 2 − 1/4). Thus the absolute value of the remaining sum is bounded by
+                                                 ∑︁                      2
+                                       𝑒 −15 𝐴/4      | 𝑃 (𝑤 )| 2 𝑒 − ( 𝑥 −1/4) .                      (1.32)
+                                             | Re 𝑤 |>2
+
+The final series is finite by the polynomial growth of 𝑃 and the zero count. It is independent of 𝐴.
+Expression (1.31) tends to minus infinity while (1.32) tends to zero. The Hermitian identity in (1.23)
+makes the full value real, so it is strictly negative for sufficiently large 𝐴. This contradicts (1.30) and
+proves the converse.
+
+   The conclusion is a criterion, not a proof of the Riemann hypothesis. The transform estimates, the
+continuation, and the contour formula were proved before invoking any sign condition. Their exact
+comparison identifies the remaining arithmetic question: whether the full local expression is nonnegative
+on every convolution square. The negative separator describes what any off-line zero would force.
+Chapter 1. Arithmetic forms and operator domains                                                                  17
+
+
+1.10    The form on the nonunital test algebra
+For the representation theory, write A 𝜁 = A and 𝐿 𝜁 = 𝐿 . These are identical sets, algebra operations,
+and functional values. This identification takes no completion. Membership in A means that there is
+𝑎 > 1/2 with every 𝑝 𝑎,𝑘 finite. Setting 𝜖 = 𝑎 − 1/2 says precisely that 𝑒 (1/2+𝜖 ) | 𝑢 | 𝑔 ( 𝑘 ) ( 𝑢) is integrable
+for every 𝑘 . The involution is the reflection and conjugation in (1.2); its square transform is the analytic
+product (1.8).
+    The operations on this algebra are
+                                        ∫
+                       ( 𝑓 ★ 𝑔 ) ( 𝑢) =     𝑓 ( 𝑣 ) 𝑔 ( 𝑢 − 𝑣 ) 𝑑𝑣, 𝑓 ∗ ( 𝑢) = 𝑓 (−𝑢) .                        (1.33)
+                                            ℝ
+
+On each common holomorphic strip their transforms obey
+
+                                 𝑓[
+                                  ★ 𝑔 ( 𝑧 ) = 𝑓b( 𝑧 ) 𝑔
+                                                      b( 𝑧 ) ,       𝑓b∗ ( 𝑧 ) = 𝑓b( 𝑧¯ ) .                   (1.34)
+
+These are the operations and identities already proved in (1.2) and Proposition 1.3.3. For real 𝑢, the same
+Fourier convention and Lemma 1.3.2 give
+                              ∫                                   ∫
+                                                                1
+                     𝑓 ( 𝑧) =
+                     b                   𝑖 𝑧𝑢
+                                 𝑓 ( 𝑢) 𝑒 𝑑𝑢,        𝑓 ( 𝑢) =         𝑓b( 𝑡 ) 𝑒 − 𝑖𝑡𝑢 𝑑𝑡.              (1.35)
+                               ℝ                               2𝜋 ℝ
+In particular, the product identity on the real Fourier axis is
+
+                                       𝑓∗
+                                       \  ★ 𝑓 ( 𝑡 ) = | 𝑓b( 𝑡 )| 2    ( 𝑡 ∈ ℝ) .                              (1.36)
+
+The derivative of the gamma normalization in (1.13) reads
+
+                                     Γℝ′
+                              2 Re       (1/2 + 𝑖𝑡 ) = Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 .                           (1.37)
+                                     Γℝ
+   The multiplicative variable 𝑥 = 𝑒 𝑢 gives the identity
+                                ∫ ∞
+                                                          𝑑𝑥
+                                       𝑔 (log 𝑥 ) 𝑥 𝑠 −1/2 ,
+                             
+            𝑔b − 𝑖 ( 𝑠 − 1/2) =                                            1/2 − 𝑎 < Re 𝑠 < 1/2 + 𝑎           (1.38)
+                                 0                         𝑥
+for 𝑔 ∈ A 𝑎 . The centered Mellin convention gives 𝐹𝑔 (0) = 𝑔
+                                                            b( 𝑖 /2) and 𝐹𝑔 (1) = 𝑔
+                                                                                  b(− 𝑖 /2). Thus the
+functional constructed in Theorem 1.7.1 is exactly
+
+                          𝐿 𝜁 ( 𝑔 ) = 𝑔b( 𝑖 /2) + 𝑔b(− 𝑖 /2)
+                                               ∫
+                                            1                                        
+                                       +           𝑔b( 𝑡 ) Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 𝑑𝑡
+                                          2𝜋 ℝ                                                                (1.39)
+                                          ∑︁ ΛvM ( 𝑛)                              
+                                       −         √          𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                                          𝑛 ≥2       𝑛
+
+All sums and integrals converge absolutely on this algebra. Theorem 1.7.1 also gives the exact zero expres-
+sion                                          ∑︁                    
+                                    𝐿𝜁 ( 𝑔) =      𝑔b − 𝑖 ( 𝜌 − 1/2) .                               (1.40)
+                                                        𝜌
+Chapter 1. Arithmetic forms and operator domains                                                          18
+
+
+A sesquilinear form is linear in its first argument and conjugate-linear in its second. It is Hermitian when
+reversing the arguments conjugates the value, and positive when its diagonal values are nonnegative real
+numbers. Define the sesquilinear form by
+
+                                        𝐵𝜁 ( 𝑓 , 𝑔) = 𝐿𝜁 ( 𝑔∗ ★ 𝑓 ).
+
+The identity
+                                               𝐿𝜁 ( 𝑔 ∗) = 𝐿𝜁 ( 𝑔 )                                    (1.41)
+from Theorem 1.7.1 makes 𝐵 𝜁 Hermitian. Theorem 1.9.1 states
+
+                          RH     ⇐⇒        𝐿 𝜁 ( 𝑓 ∗ ★ 𝑓 ) ≥ 0 for every 𝑓 ∈ A 𝜁 .                    (1.42)
+
+Under RH, the same theorem gives
+                                               ∑︁
+                            𝐿𝜁 ( 𝑓 ∗ ★ 𝑓 ) =        | 𝑓b( 𝛾 𝜌 )| 2 ,   𝜌 = 1/2 + 𝑖 𝛾 𝜌 .              (1.43)
+                                               𝜌
+
+The right side explains positivity conditional on RH. Both the reality of the parameters 𝛾 𝜌 and their
+occurrence in this expression use the stated zero placement. They do not construct positivity from the
+arithmetic local terms independently.
+    Theorem 1.5.6 proves 0 < Re 𝜌 < 1 and | Im 𝑧 𝜌 | < 1/2, with the same zero multiplicities in both
+coordinates. The closed bounds used in the contour and separator follow from these strict bounds.
+Nonreal 𝑧 𝜌 are still permitted, so boundary nonvanishing supplies no independent positivity of 𝐵 𝜁 .
+
+1.11   Positive functionals and their representations
+A ∗-homomorphism preserves addition, complex scalar multiplication, products, and this involution;
+no preservation of a unit is imposed here. For a positive form, expansion of the diagonal at 𝑥 + 𝜆𝑦 gives
+Hermitian symmetry and
+                                       |⟨ 𝑥, 𝑦 ⟩| 2 ≤ ⟨ 𝑥, 𝑥 ⟩⟨𝑦, 𝑦 ⟩ .
+Indeed, when ⟨𝑦, 𝑦 ⟩ > 0, minimize that quadratic expression in 𝜆; if it is zero, arbitrarily large multiples
+                                                                                √︁
+force the cross term to vanish. A positive definite form gives a norm ∥ 𝑥 ∥ = ⟨ 𝑥, 𝑥 ⟩. Its space is a pre-
+Hilbert space. Completing Cauchy sequences modulo sequences tending to zero gives a Hilbert space;
+continuity extends the inner product to that completion. An isometry preserves this inner product, and
+a surjective isometry is unitary. An operator is bounded if ∥ 𝑆 𝑥 ∥ ≤ 𝐶 ∥ 𝑥 ∥ on its domain; the least such
+constant is its operator norm.
+    Orthogonality means vanishing of the inner product. For a linear subspace 𝑀 of a Hilbert space 𝐻 ,
+write
+                            𝑀 ⊥ = {𝑣 ∈ 𝐻 : ⟨𝑣, 𝑚⟩ = 0 for every 𝑚 ∈ 𝑀 } .
+Closed subspaces have the following decomposition, which will distinguish a dense operator range from
+a proper one.
+Lemma 1.11.1 (Projection onto a closed subspace). If 𝑀 ⊂ 𝐻 is a closed linear subspace, every 𝑣 ∈ 𝐻
+has a unique expression 𝑣 = 𝑚 + 𝑛 with 𝑚 ∈ 𝑀 and 𝑛 ∈ 𝑀 ⊥ . In particular, 𝑀 ⊥ = {0} implies
+𝑀 = 𝐻.
+Chapter 1. Arithmetic forms and operator domains                                                                 19
+
+
+Proof. Put 𝑑 2 = inf 𝑚 ∈ 𝑀 ∥ 𝑣 − 𝑚 ∥ 2 and choose 𝑚𝑗 ∈ 𝑀 with ∥ 𝑣 − 𝑚𝑗 ∥ 2 → 𝑑 2 . Expansion of inner
+products gives the parallelogram identity and hence
+                                                           𝑚𝑗 + 𝑚𝑘 2
+∥ 𝑚𝑗 − 𝑚𝑘 ∥ 2 = 2∥ 𝑣 − 𝑚𝑗 ∥ 2 + 2∥ 𝑣 − 𝑚𝑘 ∥ 2 − 4 𝑣 −                ≤ 2∥ 𝑣 − 𝑚𝑗 ∥ 2 + 2∥ 𝑣 − 𝑚𝑘 ∥ 2 − 4 𝑑 2 .
+                                                              2
+Thus ( 𝑚𝑗 ) is Cauchy. Completeness and closedness give a limit 𝑚 ∈ 𝑀 attaining the infimum. For
+𝑦 ∈ 𝑀 , the real function 𝑡 ↦→ ∥ 𝑣 − 𝑚 − 𝑡𝑦 ∥ 2 is minimized at zero, so its linear coefficient gives
+Re⟨𝑣 − 𝑚, 𝑦 ⟩ = 0. Replacing 𝑦 by 𝑖𝑦 also makes the imaginary part zero. Therefore 𝑛 = 𝑣 − 𝑚 lies in
+𝑀 ⊥ . The intersection 𝑀 ∩ 𝑀 ⊥ is zero, since an element of that intersection has squared norm zero.
+This proves uniqueness and the last assertion.
+
+   An operator on a Hilbert space 𝐻 means a linear map 𝑆 : 𝐷 → 𝐻 on a specified dense linear
+subspace. Its graph is {( 𝑥, 𝑆 𝑥 ) : 𝑥 ∈ 𝐷 }. It is closed when its graph is closed in 𝐻 ⊕ 𝐻 , and closable
+when the graph closure is again a graph. Equivalently, 𝑥𝑛 → 0 and 𝑆 𝑥𝑛 → 𝑦 must imply 𝑦 = 0; this
+equivalence follows by subtracting two possible limiting graph values at the same vector. The graph
+norm is (∥ 𝑥 ∥ 2 + ∥ 𝑆 𝑥 ∥ 2 ) 1/2 . A core for a closable operator is a subspace of its domain dense in this norm.
+The adjoint has domain
+
+       D ( 𝑆 ∗ ) = { 𝑦 ∈ 𝐻 : there is 𝑧 ∈ 𝐻 with ⟨ 𝑆 𝑥, 𝑦 ⟩ = ⟨ 𝑥, 𝑧 ⟩ for all 𝑥 ∈ 𝐷 },         𝑆 ∗ 𝑦 = 𝑧.
+Density makes 𝑧 unique. Passing to limits in this identity shows that the adjoint is closed. If this adjoint
+domain is dense, the preceding sequence test proves closability: a proposed 𝑦 pairs to zero with every
+adjoint-domain vector. A symmetric operator satisfies 𝑆 ⊆ 𝑆 ∗ ; a self-adjoint operator satisfies equality,
+including its domain.
+   A representation on 𝐷 is an algebra homomorphism into linear maps 𝐷 → 𝐷 . It is a ∗-representation
+when ⟨ 𝜋 ( 𝑎) 𝑥, 𝑦 ⟩ = ⟨ 𝑥, 𝜋 ( 𝑎∗ ) 𝑦 ⟩ for 𝑥, 𝑦 ∈ 𝐷 . Thus the algebraic domain must be invariant before
+the adjoint identity can be used in repeated products. We now construct such a representation from a
+positive functional; this is the nonunital GNS construction.
+   Let 𝔄 be a complex ∗-algebra, with no norm or unit assumed, and let 𝑊 : 𝔄 → ℂ be positive:
+
+                                         𝑊 ( 𝑎∗ 𝑎) ≥ 0         ( 𝑎 ∈ 𝔄) .
+
+Theorem 1.11.2 (Nonunital algebraic GNS). Put
+
+                          ⟨ 𝑎, 𝑏 ⟩𝑊 = 𝑊 ( 𝑏 ∗ 𝑎) ,      N𝑊 = { 𝑎 : 𝑊 ( 𝑎∗ 𝑎) = 0} .
+
+Then N𝑊 is a left ideal, meaning a linear subspace preserved by left multiplication by every algebra
+element, and
+                            𝐷𝑊 = 𝔄/N𝑊 ,           𝜋𝑊 ( 𝑎) [ 𝑏 ] = [ 𝑎𝑏 ] ,                     (1.44)
+is a ∗-representation on a pre-Hilbert space. Regard 𝐷𝑊 as a common invariant dense domain in its
+Hilbert completion H𝑊 . For every 𝑎 ∈ 𝔄,
+
+                                             𝜋𝑊 ( 𝑎∗ ) ⊆ 𝜋𝑊 ( 𝑎) ∗ ,                                         (1.45)
+
+so 𝜋𝑊 ( 𝑎) is closable. It extends boundedly to H𝑊 if and only if there is a constant 𝐶𝑎 such that
+
+                                 𝑊 ( 𝑏 ∗ 𝑎∗ 𝑎𝑏 ) ≤ 𝐶𝑎2𝑊 ( 𝑏 ∗ 𝑏 )      ( 𝑏 ∈ 𝔄) .                            (1.46)
+
+The least such 𝐶𝑎 is the norm of the extension.
+Chapter 1. Arithmetic forms and operator domains                                                            20
+
+
+Proof. Positivity and polarization make ⟨ , ⟩𝑊 Hermitian and give Cauchy–Schwarz. If 𝑏 ∈ N𝑊 , then
+
+                                    𝑊 (( 𝑎𝑏 ) ∗ 𝑎𝑏 ) = ⟨ 𝑎∗ 𝑎𝑏, 𝑏 ⟩𝑊 = 0,
+
+so N𝑊 is a left ideal and (1.44) is well defined. For classes in 𝐷𝑊 ,
+
+                       ⟨ 𝜋𝑊 ( 𝑎) [ 𝑏 ] , [ 𝑐 ]⟩𝑊 = 𝑊 ( 𝑐 ∗ 𝑎𝑏 ) = ⟨[ 𝑏 ] , 𝜋𝑊 ( 𝑎∗ ) [ 𝑐 ]⟩𝑊 .
+
+This proves (1.45). The adjoint domain contains the dense subspace 𝐷𝑊 , so 𝜋𝑊 ( 𝑎) is closable. Finally,
+
+                                       ∥ 𝜋𝑊 ( 𝑎) [ 𝑏 ] ∥ 2 = 𝑊 ( 𝑏 ∗ 𝑎∗ 𝑎𝑏 ) ,
+
+so the bounded-operator criterion is exactly (1.46).
+
+     For 𝑎 = 𝑎∗ , the operator 𝜋𝑊 ( 𝑎) is symmetric and closable. The closure need not be self-adjoint or
+admit a self-adjoint extension. The obstruction can be checked directly. For a closed symmetric operator
+𝑆 , expansion gives ∥ ( 𝑆 ± 𝑖 ) 𝑥 ∥ 2 = ∥ 𝑆 𝑥 ∥ 2 + ∥ 𝑥 ∥ 2 . Consequently both ranges are closed, and
+
+                                        𝑉 : ( 𝑆 + 𝑖 ) 𝑥 ↦−→ ( 𝑆 − 𝑖 ) 𝑥
+
+is an isometry from ran( 𝑆 + 𝑖 ) onto ran( 𝑆 − 𝑖 ). Their orthogonal complements are respectively
+ker( 𝑆 ∗ − 𝑖 ) and ker( 𝑆 ∗ + 𝑖 ), by the definition of the adjoint. If a self-adjoint 𝑇 extends 𝑆 , each 𝑇 ± 𝑖
+has closed dense range: its orthogonal complement is ker(𝑇 ∓ 𝑖 ) = 0 by the norm identity. Lemma 1.11.1
+therefore makes each range all of 𝐻 . Thus (𝑇 − 𝑖 ) (𝑇 + 𝑖 ) −1 is a unitary extension of 𝑉 . Its restrictions
+to the two range complements must be unitary too, so these complements must have the same dimension.
+     For example,
+                                       𝑑
+                              𝑃 = −𝑖 ,           D ( 𝑃 ) = 𝐶𝑐∞ (0, ∞) ⊂ 𝐿 2 (0, ∞) ,
+                                       𝑑𝑥
+Here 𝐶𝑐∞ (0, ∞) consists of smooth functions with compact support inside the half-line. It is dense in
+𝐿 2 : truncate the support and size of an 𝐿 2 function, approximate by step functions, and replace interval
+endpoints by smooth ramps on sets of arbitrarily small length. The operator is symmetric by integration
+by parts, and hence closable by the dense adjoint-domain criterion. The adjoint equations, tested against
+compactly supported smooth functions, say weakly that 𝑢′ = −𝑢 and 𝑢′ = 𝑢. Multiplication by the
+integrating factors 𝑒 𝑥 and 𝑒 − 𝑥 gives a weak zero derivative. A locally integrable function with weak zero
+derivative is constant: every compact test function of integral zero is the derivative of another compact
+test function, so the resulting distribution depends only on the integral of its test. The solutions are
+therefore 𝑐𝑒 − 𝑥 and 𝑐𝑒 𝑥 , respectively. Only the first belongs to 𝐿 2 (0, ∞). Passing to the closure does not
+change the adjoint, since its defining identity passes through graph limits. Its two range complements
+thus have dimensions one and zero, which excludes a self-adjoint extension.
+     This operator is itself a GNS multiplier. Put 𝐷 = D ( 𝑃 ) and use on 𝐿 2 (0, ∞) the inner product
+linear in its first argument. For 𝑓 , 𝑔 ∈ 𝐷 , define the rank-one operator
+
+                                      𝑅 𝑓 , 𝑔 𝑥 = ⟨ 𝑥, 𝑔 ⟩ 𝑓      ( 𝑥 ∈ 𝐷) .
+
+Let 𝔄 𝐷 be the unital algebra of operators 𝐷 → 𝐷 generated by 𝑃 and all 𝑅 𝑓 , 𝑔 . Every generator preserves
+𝐷 ; integration by parts and the inner product identity give adjoints on 𝐷 by 𝐼 ∗ = 𝐼 , 𝑃 ∗ = 𝑃 , and
+𝑅∗𝑓 , 𝑔 = 𝑅 𝑔,𝑓 . For a finite linear combination of words, conjugate the coefficients and reverse each
+word with these adjoints. The resulting operator 𝐵 ∗ satisfies ⟨ 𝐵𝑥, 𝑦 ⟩ = ⟨ 𝑥, 𝐵 ∗ 𝑦 ⟩ for 𝑥, 𝑦 ∈ 𝐷 . If two
+Chapter 1. Arithmetic forms and operator domains                                                          21
+
+
+expressions define the same operator 𝐵 , this identity and density of 𝐷 make their adjoint operators equal.
+Thus the involution is well-defined on 𝔄 𝐷 , and is the restriction of the Hilbert adjoint to 𝐷 . It makes
+𝔄 𝐷 a ∗-algebra with invariant domain 𝐷 .
+   Choose Ω ∈ 𝐷 with ∥ Ω ∥ = 1 and put 𝑊 ( 𝐵 ) = ⟨ 𝐵Ω, Ω⟩ for 𝐵 ∈ 𝔄 𝐷 . Then
+
+                           𝑊 ( 𝐵 ∗ 𝐵 ) = ∥ 𝐵Ω ∥ 2 ,      N𝑊 = { 𝐵 : 𝐵Ω = 0} .
+
+The map 𝑈0 : [ 𝐵 ] ↦→ 𝐵Ω from its GNS quotient to 𝐷 is an isometry, since 𝑊 ( 𝐶 ∗ 𝐵 ) = ⟨ 𝐵Ω, 𝐶Ω⟩.
+It is onto: 𝑅 𝑓 ,Ω Ω = 𝑓 for every 𝑓 ∈ 𝐷 . Its Hilbert completion is therefore all of 𝐿 2 (0, ∞), and
+
+                         𝑈0 𝜋𝑊 ( 𝐶 ) [ 𝐵 ] = 𝐶 𝐵Ω = 𝐶𝑈0 [ 𝐵 ]         ( 𝐵, 𝐶 ∈ 𝔄 𝐷 ) .
+
+In particular, the symmetric algebra element 𝑃 acts in this GNS representation as exactly the operator 𝑃
+with domain 𝐷 . The domain is invariant under the entire algebra and is a core for 𝑃 by the definition of
+graph closure. The preceding range-complement calculation therefore gives a symmetric GNS multiplier
+whose closure has no self-adjoint extension.
+   Products of closures require a separate common-domain construction. We give that construction in
+Section 1.12.
+Example 1.11.3 (An unbounded positive GNS multiplier). Let 𝔄 = ℂ[ 𝑥 ], let 𝑥 ∗ = 𝑥 , and set
+                                                ∫
+                                             1                   2
+                                   𝑊 ( 𝑝) = √       𝑝 ( 𝑡 ) 𝑒 − 𝑡 𝑑𝑡.
+                                              𝜋 ℝ
+Then 𝑊 is positive, but multiplication by 𝑥 is unbounded, since
+                                                   ∫               2
+                           ∥ 𝜋𝑊 ( 𝑥 ) [ 𝑥 𝑛 ] ∥ 2   ℝ
+                                                      𝑡 2𝑛+2 𝑒 − 𝑡 𝑑𝑡    1
+                                         2
+                                                  = ∫            2
+                                                                      =𝑛+ .
+                               ∥ [𝑥 ] ∥
+                                    𝑛                    2 𝑛 −
+                                                        𝑡 𝑒 𝑑𝑡 𝑡         2
+                                                     ℝ
+                                                                     2
+The last equality follows by integrating the derivative of 𝑡 2𝑛+1 𝑒 − 𝑡 ; its boundary values vanish.
+
+1.12   Closed forms and the common invariant domain
+For a linear operator 𝑆 on a dense subspace 𝐷 ⊂ 𝐻 , the quadratic form 𝑞 ( 𝑥 ) = ∥ 𝑆 𝑥 ∥ 2 is nonnegative.
+Its form norm is (∥ 𝑥 ∥ 2 + 𝑞 ( 𝑥 )) 1/2 . Such a form is closable if 𝑥𝑛 → 0 in 𝐻 and 𝑞 ( 𝑥𝑛 − 𝑥𝑚 ) → 0 imply
+𝑞 ( 𝑥𝑛 ) → 0; the implication follows from closability of 𝑆 . A closed form has a complete form norm,
+and the closure is obtained by completing this norm and identifying the Hilbert limits. A finite form
+value permits one operator application. Repeated products require control of every algebra element.
+    For sequence examples, ℓ 2 (ℕ, 𝑤 ) consists of complex sequences with 𝑛 ≥1 𝑤𝑛 | 𝑥𝑛 | 2 < ∞, for strictly
+                                                                                P
+positive weights 𝑤𝑛 . Its inner product is 𝑛 𝑤𝑛 𝑥𝑛 𝑦¯𝑛 . Finite sequences, denoted 𝑐00 (ℕ), are dense by co-
+                                               P
+ordinate truncation; 𝑒𝑛 denotes the 𝑛th coordinate vector. Unspecified weights are one. The distinction
+between a single form and all products already occurs for a diagonal operator.
+Example 1.12.1 (A maximal form domain need not be invariant). On ℓ 2 (ℕ), let 𝑁 𝑒𝑛 = 𝑛𝑒𝑛 , initially on
+𝑐00 (ℕ). Its closure and the closed form 𝑞 ( 𝑣 ) = ∥ 𝑁 𝑣 ∥ 2 have domain
+                                            (                       )
+                                                  ∑︁ 2 2
+                                      𝑉 = 𝑣:          𝑛 | 𝑣𝑛 | < ∞ .
+                                                  𝑛 ≥1
+Chapter 1. Arithmetic forms and operator domains                                                                  22
+
+
+Coordinate convergence proves that the maximal diagonal operator is closed. Finite coordinate trunca-
+tions approximate every vector in its graph norm, so they prove the asserted closure. The vector 𝑣𝑛 = 𝑛−2
+belongs to 𝑉 , but 𝑁 𝑣 ∉ 𝑉 , since 𝑛4 | 𝑣𝑛 | 2 = ∞. For the polynomial algebra generated by 𝑁 , the
+                                      P
+common domain is instead                     (                       )
+                                          \       ∑︁ 2𝑘
+                                   𝑉∞ =        𝑣:     𝑛 | 𝑣𝑛 | 2 < ∞ .                              (1.47)
+                                              𝑘 ≥0        𝑛 ≥1
+
+Multiplication by each polynomial preserves 𝑉∞ . Truncations converge in every displayed seminorm.
+    Return to Theorem 1.11.2. Write 𝐷 = 𝐷𝑊 , 𝐻 = H𝑊 , and 𝐴 𝑎 = 𝜋𝑊 ( 𝑎) for 𝑎 ∈ 𝔄. The graph
+topology on 𝐷 is generated by ∥ 𝜉 ∥ and ∥ 𝜋𝑊 ( 𝑎) 𝜉 ∥, for all 𝑎 ∈ 𝔄. A neighborhood bounds finitely
+many of these seminorms, so the topology is locally convex. A representation is called closed when its
+domain is complete for this topology. Completion can require nets, namely families indexed by a directed
+set, when there is no countable family of controlling seminorms. A net is Cauchy here when it is Cauchy
+in every graph seminorm.
+Theorem 1.12.2 (The exact common graph domain). The completion of 𝐷 in its graph topology
+identifies with                       \
+                                 cl
+                               𝐷𝑊   =    D ( 𝐴𝑎 ) ⊂ 𝐻 .                             (1.48)
+                                                     𝑎 ∈𝔄
+                          cl ( 𝑎) = 𝐴 |
+On this domain, the maps 𝜋𝑊          𝑎 𝐷 cl form an invariant ∗-representation. In particular,
+                                                 𝑊
+
+                   cl
+                  𝜋𝑊        cl
+                      ( 𝑎) 𝜋𝑊             cl
+                               ( 𝑏 ) 𝜉 = 𝜋𝑊  ( 𝑎𝑏 ) 𝜉 ,             cl
+                                                                 ⟨ 𝜋𝑊                        cl
+                                                                       ( 𝑎) 𝜉 , 𝜂 ⟩ = ⟨ 𝜉 , 𝜋𝑊  ( 𝑎∗ ) 𝜂 ⟩ .   (1.49)
+
+Each action is continuous in the graph topology. For each 𝑎, the nonnegative form
+
+                                  𝑞 𝑎 ( [ 𝑏 ]) = 𝑊 ( 𝑏 ∗ 𝑎∗ 𝑎𝑏 ) = ∥ 𝜋𝑊 ( 𝑎) [ 𝑏 ] ∥ 2
+
+is closable on 𝐻 . Its closure is 𝑞 𝑎 ( 𝜉 ) = ∥ 𝐴 𝑎 𝜉 ∥ 2 on D ( 𝐴 𝑎 ). Thus (1.48) is exactly the intersection of
+these closed form domains. Each 𝜋𝑊      cl ( 𝑎) has closure 𝐴 .
+                                                              𝑎
+
+Proof. A graph Cauchy net ( 𝜉𝑖 ) has a Hilbert limit 𝜉 and limits 𝜂𝑎 = lim𝑖 𝜋𝑊 ( 𝑎) 𝜉𝑖 . Closedness of
+𝐴 𝑎 gives 𝜉 ∈ D ( 𝐴 𝑎 ) and 𝐴 𝑎 𝜉 = 𝜂𝑎 . If 𝜉 = 0, closability gives 𝜂𝑎 = 0 for every 𝑎. Hence the graph
+completion injects into the right side of (1.48).
+   To prove the reverse inclusion, fix 𝜉 in that intersection and a finite set 𝐹 ⊂ 𝔄. Set 𝑐 = 𝑎 ∈ 𝐹 𝑎∗ 𝑎.
+                                                                                              P
+For 𝑢 ∈ 𝐷 , the adjoint identity gives the estimate
+                          ∑︁
+                              ∥ 𝜋𝑊 ( 𝑎) 𝑢 ∥ 2 = ⟨ 𝜋𝑊 ( 𝑐 ) 𝑢, 𝑢⟩ ≤ ∥ 𝜋𝑊 ( 𝑐 ) 𝑢 ∥ ∥ 𝑢 ∥ .          (1.50)
+                           𝑎∈ 𝐹
+
+Since 𝜉 ∈ D ( 𝐴𝑐 ), choose 𝑢𝑗 ∈ 𝐷 with 𝑢𝑗 → 𝜉 and 𝜋𝑊 ( 𝑐 ) 𝑢𝑗 → 𝐴𝑐 𝜉 . Apply (1.50) to 𝑢𝑗 − 𝑢𝑘 .
+Every 𝜋𝑊 ( 𝑎) 𝑢𝑗 , 𝑎 ∈ 𝐹 , is Cauchy. Closedness identifies its limit with 𝐴 𝑎 𝜉 . Thus 𝐷 approximates 𝜉
+in any prescribed finite collection of graph seminorms. Directing these approximations by finite sets and
+positive tolerances produces one net converging in all graph seminorms.
+    Let this net be ( 𝜉𝑖 ) and fix 𝑏 ∈ 𝔄. Then 𝜋𝑊 ( 𝑏 ) 𝜉𝑖 → 𝐴𝑏 𝜉 and 𝜋𝑊 ( 𝑎) 𝜋𝑊 ( 𝑏 ) 𝜉𝑖 = 𝜋𝑊 ( 𝑎𝑏 ) 𝜉𝑖 →
+𝐴 𝑎𝑏 𝜉 for every 𝑎. Closedness gives 𝐴𝑏 𝜉 ∈ 𝐷𝑊   cl and 𝐴 𝐴 𝜉 = 𝐴 𝜉 . Linearity follows by the same
+                                                            𝑎 𝑏        𝑎𝑏
+approximation. Approximating both vectors in the algebraic adjoint identity proves the second equality
+in (1.49). Continuity follows from ∥ 𝐴 𝑎 𝐴𝑏 𝜉 ∥ = ∥ 𝐴 𝑎𝑏 𝜉 ∥ and ∥ 𝐴𝑏 𝜉 ∥ itself.
+Chapter 1. Arithmetic forms and operator domains                                                               23
+
+
+   The form norm for 𝑞 𝑎 is (∥ 𝜉 ∥ 2 + ∥ 𝜋𝑊 ( 𝑎) 𝜉 ∥ 2 ) 1/2 . Its completion is the graph of 𝐴 𝑎 , which proves
+the form assertion. Finally 𝜋𝑊 ( 𝑎) ⊆ 𝜋𝑊  cl ( 𝑎) ⊆ 𝐴 , so taking closures proves the last statement. Any
+                                                         𝑎
+closed ∗-representation extending 𝜋𝑊 contains the limits of these graph Cauchy nets and agrees with
+their multiplier limits. Thus it extends 𝜋𝑊cl , which proves minimality.
+
+
+    The word ‘‘closed’’ refers to completeness in the common graph topology. It does not assert that each
+                cl is a closed operator or is self-adjoint. Example 1.12.1 separates the common domain
+restriction to 𝐷𝑊
+from the maximal domain of one multiplier.
+
+1.13   Norm and order in a complete involutive algebra
+Bounded target algebras impose estimates which an arbitrary algebraic representation need not satisfy.
+We derive those estimates from the norm before using them in transfer or unitization. A Banach space
+is a complete normed vector space. A 𝐶 ∗ -algebra is a complex ∗-algebra complete in a norm satisfying
+∥ 𝑎𝑏 ∥ ≤ ∥ 𝑎 ∥ ∥ 𝑏 ∥ and ∥ 𝑎∗ 𝑎 ∥ = ∥ 𝑎 ∥ 2 . The involution is isometric: the latter identity first gives ∥ 𝑎 ∥ ≤
+∥ 𝑎∗ ∥, and application to 𝑎∗ gives equality. No representation by bounded operators is assumed in this
+definition.
+Lemma 1.13.1 (Adjoining a unit with its norm). For a nonunital 𝐶 ∗ -algebra 𝐴, the algebra 𝐴+ =
+𝐴 ⊕ ℂ1 with
+
+                   ( 𝑎 + 𝜆1) ( 𝑏 + 𝜇1) = 𝑎𝑏 + 𝜆𝑏 + 𝜇𝑎 + 𝜆𝜇1,            ( 𝑎 + 𝜆1) ∗ = 𝑎∗ + 𝜆¯ 1
+
+has a complete 𝐶 ∗ -norm extending the norm of 𝐴. If 𝐴 ≠ {0}, that norm is
+
+                                       ∥ 𝑎 + 𝜆1∥ + = sup ∥ 𝑎𝑏 + 𝜆𝑏 ∥ .
+                                                       ∥ 𝑏 ∥ ≤1
+
+For 𝐴 = {0} take 𝐴+ = ℂ with the absolute value.
+
+Proof. For 𝐴 = {0} the assertion is the usual 𝐶 ∗ -norm on ℂ. Assume henceforth that 𝐴 ≠ {0}. Write
+𝐿 𝑥 𝑏 = 𝑥𝑏 for 𝑥 ∈ 𝐴+ and 𝑏 ∈ 𝐴. These are bounded maps on the Banach space 𝐴. For 𝑎 ∈ 𝐴, the
+choice 𝑏 = 𝑎∗ /∥ 𝑎 ∥ shows ∥ 𝐿 𝑎 ∥ = ∥ 𝑎 ∥ when 𝑎 ≠ 0. If 𝐿 𝑎+𝜆1 = 0 with 𝜆 ≠ 0, then − 𝑎/𝜆 is a left
+identity. Its adjoint is a right identity; multiplying the two identities shows that they agree and give a
+unit in 𝐴, a contradiction. Thus 𝑥 ↦→ 𝐿 𝑥 is injective and the displayed expression is a norm.
+    For 𝑏 ∈ 𝐴,
+                             ∥ 𝑥𝑏 ∥ 2 = ∥ 𝑏 ∗ 𝑥 ∗ 𝑥𝑏 ∥ ≤ ∥ 𝑏 ∥ ∥ 𝑥 ∗ 𝑥𝑏 ∥ ≤ ∥ 𝐿 𝑥 ∗ 𝑥 ∥ ∥ 𝑏 ∥ 2 .
+Taking suprema gives ∥ 𝐿 𝑥 ∥ 2 ≤ ∥ 𝐿 𝑥 ∗ 𝑥 ∥ ≤ ∥ 𝐿 𝑥 ∗ ∥ ∥ 𝐿 𝑥 ∥. Applying this also to 𝑥 ∗ proves equality of the
+two adjoint norms and then the 𝐶 ∗ -identity.
+    To check completeness directly, one has | 𝜆 | ≤ ∥ 𝐿 𝑎+𝜆1 ∥. Otherwise 𝐿 𝑎 = 𝐿 𝑎+𝜆1 − 𝜆𝐼 would be
+invertible by the convergent geometric series. Choose 𝑒 ∈ 𝐴 with 𝑎𝑒 = 𝑎. Then 𝐿 𝑎 𝐿 𝑒 = 𝐿 𝑎 forces
+𝐿 𝑒 = 𝐼 , again giving a unit in 𝐴. It follows that
+
+                                   ∥ 𝑎 + 𝜆1∥ + ≤ ∥ 𝑎 ∥ + | 𝜆 | ≤ 3∥ 𝑎 + 𝜆1∥ + .
+
+A Cauchy sequence therefore has Cauchy components in 𝐴 and ℂ, whose limits supply its limit in
+𝐴+ .
+Chapter 1. Arithmetic forms and operator domains                                                                    24
+
+
+    For an element ℎ of a nonzero unital Banach algebra, its spectrum 𝜎 ( ℎ) is the set of complex 𝜆 for
+which 𝜆1 − ℎ has no two-sided inverse. In a nonunital 𝐶 ∗ -algebra we use the unitization just constructed;
+in particular, the spectrum for 𝐴 = {0} is computed in 𝐴+ = ℂ. In every one of these nonzero ambient
+algebras, 𝜆1 is invertible exactly when 𝜆 ≠ 0: its inverse is 𝜆 −1 1, while zero cannot have an inverse because
+1 ≠ 0. Thus 𝜎 (0) = {0}. A self-adjoint element is called positive when its spectrum is contained in
+[0, ∞). The next two lemmas show that this is precisely the algebraic notion of a square 𝑐 ∗ 𝑐 .
+Lemma 1.13.2 (The calculus of a self-adjoint element). For a self-adjoint ℎ in a 𝐶 ∗ -algebra, the
+spectrum is real and contained in [−∥ ℎ ∥ , ∥ ℎ ∥]. Every continuous complex function 𝑓 on this interval
+has a well-defined value 𝑓 ( ℎ) obtained by norm limits of polynomials. The construction preserves sums,
+products, constants, and conjugation, and
+
+                                             ∥ 𝑓 ( ℎ) ∥ = max | 𝑓 ( 𝑡 )| .
+                                                             𝑡 ∈ 𝜎 (ℎ)
+
+If 𝐴 is nonunital, ℎ ∈ 𝐴, and 𝑓 (0) = 0, then 𝑓 ( ℎ) ∈ 𝐴. A continuous function specified on a smaller
+interval containing the spectrum may be extended constantly past its endpoints. Its value is independent
+of that extension by the norm identity. Every positive element has a positive square root in the same
+algebra. Every self-adjoint element is a difference ℎ = ℎ+ − ℎ− of positive elements with ℎ+ ℎ− = 0 and
+∥ ℎ± ∥ ≤ ∥ ℎ ∥.
+
+Proof. For ℎ = 0, take 𝑓 ( ℎ) = 𝑓 (0)1. We may therefore assume ∥ ℎ ∥ > 0. We supply the spectral
+facts used in the polynomial construction. In a nonzero unital Banach algebra, the series ( 𝜆1 − 𝑥 ) −1 =
+P         − 𝑛 −1 𝑥 𝑛 converges for | 𝜆 | > ∥ 𝑥 ∥; the same series about any inverse proves openness of the invert-
+   𝑛 ≥0 𝜆
+ible set and holomorphy of the resolvent. Thus the spectrum is compact. It is nonempty: an everywhere-
+defined resolvent would be an entire bounded Banach-valued function tending to zero at infinity. The
+circle derivative estimate makes such a function constant, hence zero, contradicting its inverse identity.
+The circle formulas of Lemma 1.2.2 hold for Banach-valued functions by the same uniform Riemann
+sums and norm estimates; completeness supplies their limits.
+     Polynomial factorization shows 𝜎 ( 𝑝 ( 𝑥 )) = 𝑝 ( 𝜎 ( 𝑥 )). Indeed, the factors of 𝑝 ( 𝑥 ) − 𝜆1 commute,
+and a product of commuting elements is invertible exactly when all its factors are invertible. Existence
+of complex roots for a nonconstant polynomial follows from the same circle estimate: otherwise its
+reciprocal would be bounded entire and constant. Repeated division gives the factorization used here. If
+𝑟 ( 𝑥 ) = max{| 𝜆 | : 𝜆 ∈ 𝜎 ( 𝑥 )} and 𝑅 > 𝑟 ( 𝑥 ), deformation of a circle from radius greater than ∥ 𝑥 ∥ to
+radius 𝑅 gives                                        ∫
+                                                   1
+                                         𝑥𝑛 =                 𝜆𝑛 ( 𝜆1 − 𝑥 ) −1 𝑑𝜆.
+                                                2 𝜋 𝑖 | 𝜆 |=𝑅
+The norm estimate and the polynomial spectral identity imply 𝑟 ( 𝑥 ) = lim𝑛 ∥ 𝑥 𝑛 ∥ 1/𝑛 . For a normal
+element 𝑥 , meaning 𝑥 ∗ 𝑥 = 𝑥 𝑥 ∗ , the 𝐶 ∗ -identity gives ∥ 𝑥 2 ∥ = ∥ 𝑥 ∥ 2 . Iteration at powers 2𝑛 therefore
+gives 𝑟 ( 𝑥 ) = ∥ 𝑥 ∥.
+   For self-adjoint ℎ, the exponential series gives ( 𝑒 𝑖𝑡ℎ ) ∗ 𝑒 𝑖𝑡ℎ = 1, so ∥ 𝑒 𝑖𝑡ℎ ∥ = 1 for real 𝑡 . When Im 𝜆 > 0,
+the norm-convergent integral                   ∫       ∞
+                                               𝑖           𝑒 − 𝑖𝑡 ( ℎ − 𝜆1) 𝑑𝑡
+                                                   0
+is an inverse of ℎ − 𝜆1, by integration of its derivative. Conjugation gives an inverse in the lower half-plane.
+Hence the spectrum of ℎ is real. For any polynomial 𝑝, the element 𝑝 ( ℎ) is normal; thus ∥ 𝑝 ( ℎ) ∥ =
+max 𝜎 ( ℎ ) | 𝑝 |.
+Chapter 1. Arithmetic forms and operator domains                                                                  25
+
+
+   Continuous functions on a compact real interval admit uniform polynomial approximation. An
+explicit proof on [0, 1] uses 𝐵 𝑛 𝑓 ( 𝑡 ) = 𝑛𝑘=0 𝑓 ( 𝑘 /𝑛) 𝑛𝑘 𝑡 𝑘 (1 − 𝑡 ) 𝑛− 𝑘 . The binomial coefficients with
+                                           P                 
+
+these weights have total mass one, mean 𝑡 , and variance 𝑡 (1 − 𝑡 )/𝑛. Splitting the sum into | 𝑘 /𝑛 − 𝑡 | < 𝛿
+and its complement bounds the approximation error by
+
+                                                                     2∥ 𝑓 ∥ ∞
+                                         sup | 𝑓 ( 𝑢) − 𝑓 ( 𝑣 )| +            .
+                                       | 𝑢 − 𝑣 |< 𝛿                   4𝑛𝛿 2
+
+Uniform continuity, followed by 𝑛 → ∞, proves the assertion; an affine change of variable treats the
+stated interval. The polynomial norm identity now defines 𝑓 ( ℎ) by completion and proves all its dis-
+played properties. Subtracting the constant term from the approximating polynomials proves the asser-
+tion when 𝑓 (0) = 0.                √︁
+    If ℎ is positive, take 𝑓 ( 𝑡 ) = max( 𝑡, 0) on the full interval. Then 𝑓 ( ℎ) 2 = ℎ, since the difference
+vanishes on 𝜎 ( ℎ). The element 𝑓 ( ℎ) is itself positive: write it as 𝑞 ( ℎ) 2 with 𝑞 ( 𝑡 ) = (max( 𝑡, 0)) 1/4 ,
+and use the real spectrum of the self-adjoint 𝑞 ( ℎ) and the polynomial spectral identity. Taking 𝑓± ( 𝑡 ) =
+max(±𝑡, 0) gives the final decomposition and norm bounds by the same argument.
+
+Lemma 1.13.3 (Positive squares and order bounds). The positive elements form a norm-closed cone
+whose intersection with its negative is zero. They are exactly the elements 𝑐 ∗ 𝑐 . Write 𝑎 ≤ 𝑏 when 𝑏 − 𝑎
+is positive. Conjugation by any element preserves this order, and
+
+                               0 ≤ 𝑎 ≤ 𝑏 =⇒ ∥ 𝑎 ∥ ≤ ∥ 𝑏 ∥ ,             𝑐 ∗ 𝑐 ≤ ∥ 𝑐 ∥ 2 1.
+
+Proof. For self-adjoint ℎ and 𝑅 > 0, the condition ∥ ℎ − 𝑅1∥ ≤ 𝑅 says exactly 𝜎 ( ℎ) ⊂ [0, 2 𝑅]. This
+criterion and the triangle inequality show that positive elements are closed under addition: use radii
+∥ 𝑎 ∥ and ∥ 𝑏 ∥ for two nonzero positive elements. Scalar multiplication by nonnegative reals preserves
+positivity. A norm-convergent sequence of positive elements has a common bounding radius, so the
+cone is closed. If both ℎ and −ℎ are positive, the spectrum is {0} and the normal-element norm identity
+gives ℎ = 0.
+    For every 𝑥 , the nonzero spectra of 𝑥 ∗ 𝑥 and 𝑥 𝑥 ∗ coincide. This follows by scaling the identity (1 −
+𝑢𝑣 ) −1 = 1 + 𝑢 (1 − 𝑣𝑢) −1 𝑣 whenever the latter inverse exists. Suppose first that − 𝑥 ∗ 𝑥 is positive. Writing
+𝑥 = 𝑢 + 𝑖𝑣 with self-adjoint 𝑢, 𝑣 gives
+
+                                          𝑥 𝑥 ∗ = 2𝑢2 + 2𝑣 2 − 𝑥 ∗ 𝑥 ≥ 0.
+
+The common nonzero spectrum must then be both positive and negative, hence empty. Thus ∥ 𝑥 ∥ 2 =
+∥ 𝑥 ∗ 𝑥 ∥ = 0. For a general 𝑥 , put ℎ = 𝑥 ∗ 𝑥 , take its negative part ℎ− from Lemma 1.13.2, and set 𝑦 = 𝑥ℎ1/2   − .
+Commutation in the calculus gives 𝑦 ∗ 𝑦 = ℎℎ− = −ℎ2− . The preceding argument forces 𝑦 = 0, hence
+ℎ− = 0 and 𝑥 ∗ 𝑥 ≥ 0. Conversely, a positive element is the square of its self-adjoint square root, proving
+the characterization.
+     If ℎ = 𝑑 ∗ 𝑑 ≥ 0, then 𝑐 ∗ ℎ𝑐 = ( 𝑑𝑐 ) ∗ ( 𝑑𝑐 ) ≥ 0. The spectral bound for 𝑐 ∗ 𝑐 is [0, ∥ 𝑐 ∥ 2 ], which proves
+the second order estimate. Finally 𝑏 ≤ ∥ 𝑏 ∥1 implies 𝑎 ≤ ∥ 𝑏 ∥1 when 0 ≤ 𝑎 ≤ 𝑏 . The spectra of 𝑎 and
+∥ 𝑏 ∥1 − 𝑎 are nonnegative, so 𝜎 ( 𝑎) ⊂ [0, ∥ 𝑏 ∥] and ∥ 𝑎 ∥ ≤ ∥ 𝑏 ∥.
+Chapter 1. Arithmetic forms and operator domains                                                           26
+
+
+Lemma 1.13.4 (A positive approximate identity). Every 𝐶 ∗ -algebra 𝐴 has a net ( 𝑒 𝑖 ) of positive
+elements with ∥ 𝑒 𝑖 ∥ ≤ 1 and 𝑒 𝑖 𝑎 → 𝑎, 𝑎𝑒 𝑖 → 𝑎 for every 𝑎 ∈ 𝐴. Such a net is called a positive contractive
+two-sided approximate identity.
+Proof. For a unital algebra take the constant net 1; the zero algebra is immediate. Suppose now that 𝐴 is
+nonunital. For a finite set 𝐹 ⊂ 𝐴 and 𝜖 > 0, define in the unitization
+                                 ∑︁ ∗
+                            𝑡𝐹 =     ( 𝑎 𝑎 + 𝑎𝑎∗ ) ,      𝑒 𝐹 ,𝜖 = 𝑡𝐹 ( 𝑡𝐹 + 𝜖 1) −1 .
+                                  𝑎∈ 𝐹
+The calculus shows 𝑒 𝐹 ,𝜖 ∈ 𝐴 and 0 ≤ 𝑒 𝐹 ,𝜖 ≤ 1, since 𝑡 /( 𝑡 + 𝜖 ) lies in [0, 1] for 𝑡 ≥ 0 and vanishes at
+zero. For 𝑎 ∈ 𝐹 , both 𝑎∗ 𝑎 and 𝑎𝑎∗ are bounded above by 𝑡𝐹 . Writing 𝑒 = 𝑒 𝐹 ,𝜖 , Lemma 1.13.3 gives
+                                                                                   𝜖2 𝑡     𝜖
+                         ∥ 𝑎 (1 − 𝑒 ) ∥ 2 ≤ ∥ (1 − 𝑒 ) 𝑡𝐹 (1 − 𝑒 ) ∥ ≤ sup               2
+                                                                                           = .
+                                                                          𝑡 ≥0 ( 𝑡 + 𝜖 )    4
+Apply the same bound to 𝑎∗ to obtain ∥ (1 − 𝑒 ) 𝑎 ∥ 2 ≤ 𝜖 /4. Direct finite sets by inclusion and positive 𝜖
+by decreasing size. Every fixed 𝑎 then satisfies both limits.
+
+
+1.14    Dagger transfer and completion
+Theorem 1.14.1 (Dagger transfer). Let 𝑇 : 𝔄 → 𝔅 be a ∗-homomorphism of complex ∗-algebras,
+let 𝜔 : 𝔅 → ℂ be positive, and put 𝑊 = 𝜔 ◦ 𝑇 . Then
+                           ⟨ 𝑎, 𝑐 ⟩𝑊 = ⟨𝑇 ( 𝑎) , 𝑇 ( 𝑐 )⟩ 𝜔 ,          N𝑊 = 𝑇 −1 (N𝜔 ) .                (1.51)
+Consequently
+                                𝑈0 : 𝐷𝑊 −→ 𝐷 𝜔 ,                  [ 𝑎] ↦−→ [𝑇 ( 𝑎)] ,                   (1.52)
+is an isometric injection and extends uniquely to an isometry
+                                                𝑈 : H𝑊 −→ H𝜔                                            (1.53)
+with closed range. On the algebraic common domain,
+                                         𝑈0 𝜋𝑊 ( 𝑎) = 𝜋 𝜔 (𝑇 ( 𝑎))𝑈0 .                                  (1.54)
+   If 𝔅 is a 𝐶 ∗ -algebra, both sides of (1.54) extend boundedly and
+                               ∥ 𝜋𝜔 ( 𝑏) ∥ ≤ ∥ 𝑏 ∥ ,         ∥ 𝜋𝑊 ( 𝑎) ∥ ≤ ∥𝑇 ( 𝑎) ∥ ,                  (1.55)
+while
+                                   𝑈 𝜋𝑊 ( 𝑎) = 𝜋 𝜔 (𝑇 ( 𝑎))𝑈              on H𝑊 .                       (1.56)
+Proof. For 𝑎, 𝑐 ∈ 𝔄,
+                                         𝑊 ( 𝑐 ∗ 𝑎) = 𝜔 (𝑇 ( 𝑐 ) ∗𝑇 ( 𝑎)) ,
+which proves positivity, (1.51), and the isometry (1.52). Every isometry of pre-Hilbert spaces extends
+uniquely to their completions; its range is closed because its domain is complete. Multiplicativity of 𝑇
+gives (1.54).
+   Suppose now that 𝔅 is a 𝐶 ∗ -algebra. Lemma 1.13.3, with conjugation by 𝑑 , gives
+                                         𝜔 ( 𝑑 ∗ 𝑏 ∗ 𝑏𝑑 ) ≤ ∥ 𝑏 ∥ 2 𝜔 ( 𝑑 ∗ 𝑑 ) ,
+which proves the first estimate in (1.55). Taking 𝑏 = 𝑇 ( 𝑎) and 𝑑 = 𝑇 ( 𝑐 ) proves the second. Continuity
+then extends (1.54) to (1.56). No equality between arbitrary unbounded closure domains is used.
+Chapter 1. Arithmetic forms and operator domains                                                         27
+
+
+Proposition 1.14.2 (Transfer of closed graph domains). Use the data of Theorem 1.14.1, and set
+𝐾 = 𝑈 H𝑊 ⊂ H𝜔 and 𝐸 = 𝑈0 𝐷𝑊 . On the dense subspace 𝐸 ⊂ 𝐾 , define
+
+                                          𝜌 ( 𝑎) = 𝜋 𝜔 (𝑇 ( 𝑎))| 𝐸 .
+
+Then 𝜌 is a ∗-representation, and
+                                cl
+                             𝑈 𝐷𝑊  = 𝐷 cl𝜌 ,          cl
+                                                   𝑈 𝜋𝑊  ( 𝑎) 𝜉 = 𝜌cl ( 𝑎)𝑈 𝜉 .                       (1.57)
+
+Here every closure defining 𝐷 cl𝜌 is taken in 𝐾 . For the ambient closures on H𝜔 one has
+
+                 𝑈 D ( 𝜋𝑊 ( 𝑎)) ⊆ D ( 𝜋 𝜔 (𝑇 ( 𝑎))) ,       𝜋 𝜔 (𝑇 ( 𝑎))𝑈 𝜉 = 𝑈 𝜋𝑊 ( 𝑎) 𝜉 .           (1.58)
+                                        cl = 𝐷 cl . Without surjectivity this last domain equality need not
+If 𝑇 is surjective, 𝑈 is unitary and 𝑈 𝐷𝑊      𝜔
+hold, even when 𝑈 is unitary.
+
+Proof. The algebraic intertwining identifies 𝜌 ( 𝑎) with 𝑈 𝜋𝑊 ( 𝑎)𝑈 −1 on 𝐸 . As a map onto 𝐾 , 𝑈 is
+unitary. It identifies the individual graph closures and all graph seminorms. Theorem 1.12.2 therefore
+gives (1.57). If 𝜉𝑗 ∈ 𝐷𝑊 approaches 𝜉 in the graph norm of 𝜋𝑊 ( 𝑎), its images approach 𝑈 𝜉 and have
+multiplier images approaching 𝑈 𝜋𝑊 ( 𝑎) 𝜉 . This proves (1.58). For surjective 𝑇 , one has 𝑈0 𝐷𝑊 = 𝐷 𝜔
+and 𝑇 (𝔄) = 𝔅. Hence the Hilbert spaces and their full graph topologies agree.
+
+Example 1.14.3 (A Hilbert isometry can miss the full target domain). Let 𝔄 = 𝑐00 (ℕ) and 𝔅 = ℂ[ 𝑛] +
+𝑐00 (ℕ), with pointwise multiplication and conjugation. Here ℂ[ 𝑛] denotes polynomial sequences on
+the positive integers. Let 𝑇 be inclusion and set
+                                           ∑︁ − 𝑛
+                                   𝜔 (𝑏) =     𝑒 𝑏𝑛 ,       𝑊 = 𝜔 |𝔄 .
+                                            𝑛 ≥1
+
+All sums converge, and both functionals are positive and faithful: their square values are zero only on
+the zero element, since every weight is positive. Both GNS completions identify with 𝐻 = ℓ 2 (ℕ, 𝑒 − 𝑛 ),
+because they contain the finite sequences. Thus 𝑈 is the identity on 𝐻 . Every 𝔄-multiplier is bounded,
+so 𝐷𝑊cl = 𝐻 . The element 𝑛 ∈ 𝔅 acts by an unbounded multiplier. Finite truncations give cores for
+
+every polynomial multiplier. Therefore
+                                   (                                      )
+                              cl
+                                        ∑︁ − 𝑛 2𝑘      2
+                            𝐷𝜔 = 𝑣 :        𝑒 𝑛 | 𝑣𝑛 | < ∞ for all 𝑘 ≥ 0 .
+                                         𝑛 ≥1
+
+The vector 𝑣𝑛 = 𝑒 𝑛/2 /𝑛 belongs to 𝐻 , but fails the condition for 𝑘 = 1. Thus 𝑈 𝐷𝑊
+                                                                                   cl ⊈ 𝐷 cl . Only the
+                                                                                          𝜔
+restricted algebra 𝑇 (𝔄) appears in (1.57).
+   For a field interpretation, algebra products represent repeated operations on a common domain.
+Theorem 1.12.2 supplies this domain after positivity has supplied the Hilbert norm. Proposition 1.14.2
+preserves it for the represented algebra. A vacuum vector, self-adjoint generators, locality, and a positive
+energy condition require their own constructions.
+Chapter 1. Arithmetic forms and operator domains                                                          28
+
+
+1.15   Positive unitization for nonunital 𝐶 ∗ -algebras
+The unit missing from a convolution algebra cannot be adjoined to an arbitrary positive functional
+without an additional bound. Let 𝜔 be a positive linear functional on a nonunital ∗-algebra 𝔄. Write
+𝔄 + = 𝔄 ⊕ ℂ1 and
+                                   𝜔𝑚 ( 𝑎 + 𝜆1) = 𝜔 ( 𝑎) + 𝑚𝜆.                                 (1.59)
+Expanding a square in this algebra gives
+                                                                        ¯ ( 𝑎) + 𝑚 | 𝜆 | 2 .
+                   𝜔𝑚 (( 𝑎 + 𝜆1) ∗ ( 𝑎 + 𝜆1)) = 𝜔 ( 𝑎∗ 𝑎) + 𝜆𝜔 ( 𝑎∗ ) + 𝜆𝜔
+
+Requiring real nonnegative values first forces 𝑚 ≥ 0 and Hermitian symmetry. For 𝑚 > 0, minimization
+in 𝜆 gives the inequality below. For 𝑚 = 0, varying 𝜆 forces 𝜔 ( 𝑎) = 0 for every 𝑎. Thus the exact algebraic
+criterion is
+                                                 
+                                                 
+                                                  𝑚 ∈ ℝ, 𝑚 ≥ 0,
+                                                 
+                                                 
+                      𝜔𝑚 is positive ⇐⇒            𝜔 ( 𝑎∗ ) = 𝜔 ( 𝑎) ,                                 (1.60)
+                                                 
+                                                  | 𝜔 ( 𝑎)| 2 ≤ 𝑚 𝜔 ( 𝑎∗ 𝑎) ( 𝑎 ∈ 𝔄) .
+                                                 
+                                                 
+   A bounded representation is nondegenerate when span{ 𝜋 ( 𝑎) 𝑥 : 𝑎 ∈ 𝔄 , 𝑥 ∈ 𝐻 } = 𝐻 . It is cyclic
+with vector Ω when 𝜋 (𝔄) Ω = 𝐻 .
+Theorem 1.15.1 (The nonunital 𝐶 ∗ case). Let 𝔄 be a nonunital 𝐶 ∗ -algebra and let 𝜔 : 𝔄 → ℂ be
+positive. Then 𝜔 is Hermitian and bounded, and the functional (1.59) on the unitization constructed in
+Lemma 1.13.1 is positive exactly when
+
+                                          𝑚 ∈ ℝ,            𝑚 ≥ ∥ 𝜔∥.                                  (1.61)
+
+Let ( 𝑒 𝑖 ) be any positive contractive two-sided approximate identity. For the minimal extension 𝑚 = ∥ 𝜔 ∥,
+its GNS vector Ω = [1] satisfies
+                                                  [ 𝑒 𝑖 ] −→ Ω,                                      (1.62)
+and the restricted representation of 𝔄 is bounded, nondegenerate, and cyclic:
+
+                              𝜔 ( 𝑎) = ⟨ 𝜋 𝜔 ( 𝑎) Ω, Ω⟩ ,       𝜋 𝜔 (𝔄) Ω = H𝜔 .                       (1.63)
+
+For 𝑚 > ∥ 𝜔 ∥, the vector [1] of that larger extension is not the limit in (1.62).
+
+Proof. Every self-adjoint element is the difference of two positive elements, so positivity makes 𝜔 Her-
+mitian. If 𝜔 were unbounded, its values would be unbounded on the positive unit ball: otherwise the
+decomposition of an arbitrary element into four positive parts would bound it. One could then choose
+𝑎𝑛 ≥ 0 with
+                                       ∥ 𝑎𝑛 ∥ ≤ 2 − 𝑛 ,         𝜔 ( 𝑎𝑛 ) = 1 .
+The norm-convergent positive sum 𝑎 = 𝑛 𝑎𝑛 would satisfy 𝜔 ( 𝑎) ≥ 𝑛𝑁=1 𝜔 ( 𝑎𝑛 ) = 𝑁 for every 𝑁 , a
+                                            P                                    P
+contradiction. Hence 𝜔 is bounded.
+   Lemma 1.13.4 constructs a positive contractive approximate identity. Cauchy–Schwarz and 𝑒 𝑖 𝑎 → 𝑎
+give
+                               | 𝜔 ( 𝑎)| 2 = lim | 𝜔 ( 𝑒 𝑖 𝑎)| 2 ≤ ∥ 𝜔 ∥ 𝜔 ( 𝑎∗ 𝑎) .               (1.64)
+                                              𝑖
+Chapter 1. Arithmetic forms and operator domains                                                                    29
+
+
+Equations (1.60) and (1.64) prove positivity for 𝑚 = ∥ 𝜔 ∥; adding ( 𝑚 − ∥ 𝜔 ∥) times the positive quotient
+functional 𝑎 + 𝜆1 ↦→ 𝜆, whose value on a square is | 𝜆 | 2 , proves sufficiency for every larger 𝑚. For a positive
+functional 𝜂 on a unital 𝐶 ∗ -algebra, Cauchy–Schwarz and Lemma 1.13.3 give
+
+                                      | 𝜂 ( 𝑎)| 2 ≤ 𝜂 (1) 𝜂 ( 𝑎∗ 𝑎) ≤ 𝜂 (1) 2 ∥ 𝑎 ∥ 2 .
+
+Evaluation at 1 therefore gives ∥ 𝜂 ∥ = 𝜂 (1). Applying this to 𝜂 = 𝜔𝑚 and restricting yields ∥ 𝜔 ∥ ≤ 𝑚.
+   It remains to identify the vector [1]. If ∥ 𝜔 ∥ > 0, choose ∥ 𝑎 ∥ ≤ 1 with | 𝜔 ( 𝑎)| arbitrarily close to ∥ 𝜔 ∥.
+Cauchy–Schwarz gives | 𝜔 ( 𝑒 𝑖 𝑎)| 2 ≤ 𝜔 ( 𝑒 2𝑖 ) 𝜔 ( 𝑎∗ 𝑎) ≤ 𝜔 ( 𝑒 2𝑖 ) ∥ 𝜔 ∥. Since 𝑒 𝑖 𝑎 → 𝑎, this forces the lower
+limit of 𝜔 ( 𝑒 2𝑖 ) to be at least ∥ 𝜔 ∥. The upper bound is ∥ 𝜔 ∥ ∥ 𝑒 2𝑖 ∥ ≤ ∥ 𝜔 ∥. Therefore 𝜔 ( 𝑒 2𝑖 ) → ∥ 𝜔 ∥. Since
+0 ≤ 𝑒 2𝑖 ≤ 𝑒 𝑖 ≤ 1 in the unitization, also 𝜔 ( 𝑒 𝑖 ) → ∥ 𝜔 ∥. Therefore
+
+                                ∥ [1] − [ 𝑒 𝑖 ] ∥ 2 = ∥ 𝜔 ∥ − 2 𝜔 ( 𝑒 𝑖 ) + 𝜔 ( 𝑒 2𝑖 ) −→ 0,
+
+which is (1.62); the zero functional is immediate. Moreover 𝜋 𝜔 ( 𝑎) Ω = [ 𝑎], proving cyclicity, and
+𝜋 𝜔 ( 𝑒 𝑖 ) [ 𝑎] = [ 𝑒 𝑖 𝑎] → [ 𝑎], proving nondegeneracy. The 𝐶 ∗ -estimate in (1.55) proves boundedness. If
+𝑚 > ∥ 𝜔 ∥, the same computation instead gives
+
+                                       lim ∥ [1] − [ 𝑒 𝑖 ] ∥ 2 = 𝑚 − ∥ 𝜔 ∥ > 0.
+                                         𝑖
+
+   For 𝔄 = {0}, the only functional is 𝜔 = 0, and 𝔄 + = ℂ. The extension 𝜔𝑚 ( 𝜆) = 𝑚𝜆 is positive
+exactly when 𝑚 ≥ 0. At minimal mass 𝑚 = 0, its GNS Hilbert space and Ω are both zero, and the
+constant approximate identity 𝑒 𝑖 = 0 gives [ 𝑒 𝑖 ] = Ω. For 𝑚 > 0, the extended GNS space is one-
+dimensional with ∥ Ω ∥ 2 = 𝑚; the original zero algebra acts as zero and [ 𝑒 𝑖 ] = 0 cannot converge to
+Ω.
+Example 1.15.2 (Positive unitization can fail algebraically). Let 𝔄 = 𝑐00 (ℕ) with pointwise multiplica-
+tion and conjugation, and define                     ∑︁
+                                            𝜔 ( 𝑎) =     𝑛𝑎𝑛 .
+                                                              𝑛 ≥1
+This is a Hermitian positive functional. If a positive extension 𝜔𝑚 existed, Cauchy–Schwarz in the
+unitization, applied to the 𝑛th point mass 𝑒𝑛 , would give
+
+                                   𝑛2 = | 𝜔𝑚 ( 𝑒𝑛 )| 2 ≤ 𝜔𝑚 (1) 𝜔𝑚 ( 𝑒𝑛∗ 𝑒𝑛 ) = 𝑚𝑛
+
+for every 𝑛, which is impossible for finite 𝑚.
+
+Lemma 1.15.3 (The logarithmic size of the gamma term). For each fixed 𝜎 > 0,
+
+                                Re 𝜓 ( 𝜎 + 𝑖𝑡 ) = log | 𝑡 | + 𝑂 𝜎 (1)            (| 𝑡 | ≥ 1) .
+
+Consequently 𝑘∞ ( 𝑡 ) = Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 differs from log | 𝑡 | by a bounded function outside
+[−1, 1].
+
+Proof. For | 𝑡 | ≥ 1, put ℎ𝑡 ( 𝑥 ) = ( 𝑥 + 𝜎 )/(( 𝑥 + 𝜎 ) 2∫ + 𝑡 2 ) on 𝑥 ≥ 0. Its derivative changes sign at
+                                                             ∞
+most once, and its maximum is at most 1/(2| 𝑡 |). Thus 0 | ℎ𝑡′ ( 𝑥 )| 𝑑𝑥 ≤ 1/| 𝑡 |. On each unit interval the
+fundamental theorem of calculus gives
+                                         ∫ 𝑛+1                ∫ 𝑛+1
+                               ℎ𝑡 ( 𝑛) −       ℎ𝑡 ( 𝑥 ) 𝑑𝑥 ≤          | ℎ𝑡′ ( 𝑥 )| 𝑑𝑥.
+                                             𝑛                         𝑛
+Chapter 1. Arithmetic forms and operator domains                                                                30
+
+
+The real part of the series in (1.12) therefore equals
+                                                                    !
+                                     𝑁
+                                     1
+                                     ∑︁   1    ( 𝑁 + 1 + 𝜎 )2 + 𝑡 2
+                     − 𝛾 + lim           − log                        + 𝑂 (| 𝑡 | −1 ) .
+                          𝑁 →∞ 𝑛=0 𝑛 + 1  2         𝜎 2 + 𝑡2
+By the defining limit of 𝛾 , this is 21 log( 𝜎 2 + 𝑡 2 ) + 𝑂 (| 𝑡 | −1 ). The stated bound follows, and replacing 𝑡
+by 𝑡 /2 changes the logarithm only by − log 2.
+
+1.16   The Gaussian obstruction to finite mass
+For the full Weil functional, failure of positive unitization follows from its arithmetic local terms. It
+does not require a hypothesis about the zeros. The relevant functions approach the convolution identity
+while remaining inside A 𝜁 :
+                                 2
+                           𝑒 − 𝑢 /(4 𝑎 )                           2
+                 𝑔 𝑎 ( 𝑢) = √            ,        𝑔b𝑎 ( 𝑡 ) = 𝑒 − 𝑎𝑡 ,       𝑔𝑎∗ ★ 𝑔𝑎 = 𝑔2 𝑎 ,   𝑎 > 0.      (1.65)
+                                4𝜋 𝑎
+
+Theorem 1.16.1 (No finite positive unitization of the Weil functional). As 𝑎 ↓ 0, the functional
+in (1.39) satisfies
+                                                  𝑎 −1/2 log(1/ 𝑎)
+                                     𝐿 𝜁 ( 𝑔𝑎 ) =        √         + 𝑂 ( 𝑎 −1/2 ) .       (1.66)
+                                                       4 𝜋
+In particular 𝐿 𝜁 ( 𝑔2 𝑎 ) > 0 for all sufficiently small 𝑎, and
+                                                      √
+                                  | 𝐿 𝜁 ( 𝑔𝑎 )| 2        2
+                                                  ∼    √ 𝑎 −1/2 log(1/ 𝑎) −→ ∞.           (1.67)
+                                𝐿 𝜁 ( 𝑔𝑎∗ ★ 𝑔𝑎 ) 4 𝜋
+There is no positive extension of 𝐿 𝜁 to A +𝜁 with a finite value at the adjoined unit.
+Proof. Every derivative of 𝑔𝑎 is a polynomial times a Gaussian. Thus 𝑔𝑎 ∈ A 𝜁 . Completing the square
+proves (1.65), with the Fourier normalization (1.2). The polar contribution is 2𝑒 𝑎/4 = 𝑂 (1).
+   For 0 < 𝑎 ≤ 1, split the Gaussian exponent into two equal parts. Since ΛvM ( 𝑛) ≤ log 𝑛, the absolute
+prime contribution is bounded by
+                                                   2
+                                         𝑒 − (log 2) /(8 𝑎 ) ∑︁ log 𝑛 − (log 𝑛 ) 2 /8
+                                               √                  √ 𝑒                 .                     (1.68)
+                                                  𝜋𝑎         𝑛 ≥2  𝑛
+The series is finite: its terms are at most 𝑛−2 for all sufficiently large 𝑛. Hence this contribution is expo-
+nentially small relative to 𝑎 −1/2 .
+      Put 𝑘∞ ( 𝑡 ) = Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 . Lemma 1.15.3 shows that 𝑘∞ ( 𝑡 ) − log | 𝑡 | is bounded for
+| 𝑡 | ≥ 1. It is integrable on [−1, 1], since 𝑘∞ is smooth there. Therefore
+                                   ∫
+                                              2
+                                        𝑒 − 𝑎𝑡 𝑘∞ ( 𝑡 ) − log | 𝑡 | 𝑑𝑡 = 𝑂 ( 𝑎 −1/2 ) .
+                                                                   
+                                     ℝ
+                   √
+Substitution 𝑠 = 𝑎 𝑡 gives
+                                                     √
+                                               𝑎 −1/2 𝜋
+                   ∫                                                 ∫                
+                 1       − 𝑎𝑡 2                                          − 𝑠2
+                       𝑒        log | 𝑡 | 𝑑𝑡 =           log(1/ 𝑎) +    𝑒 log | 𝑠 | 𝑑𝑠 .
+                2𝜋 ℝ                            2𝜋     2              ℝ
+The remaining integral is finite. Adding all three local terms proves (1.66). Applying that formula at 𝑎
+and 2 𝑎 proves (1.67). A positive unitization of mass 𝑚 would require | 𝐿 𝜁 ( 𝑔𝑎 )| 2 ≤ 𝑚𝐿 𝜁 ( 𝑔2 𝑎 ) by (1.60),
+which contradicts the divergence.
+Chapter 1. Arithmetic forms and operator domains                                                          31
+
+
+Theorem 1.16.2 (Positive finite Gaussian subspaces). Fix distinct positive real numbers 𝜆1 , . . . , 𝜆𝑟 .
+There exists 𝑎0 > 0 such that the Weil form is positive definite on
+                             𝐸𝑎 = spanℂ { 𝑔𝑎𝜆1 , . . . , 𝑔𝑎𝜆𝑟 }            (0 < 𝑎 < 𝑎0 ) .
+The dimension of 𝐸𝑎 is 𝑟 . This assertion is unconditional. The threshold 𝑎0 may depend on the entire
+finite family.
+Proof. The Gram matrix of the displayed functions is the real symmetric matrix
+                                          𝐺 ( 𝑎)𝑗 𝑘 = 𝐿 𝜁 ( 𝑔𝑎 ( 𝜆𝑗 +𝜆𝑘 ) ) .
+Apply (1.66) at each of the finitely many scales 𝑎 ( 𝜆𝑗 + 𝜆𝑘 ). Entry by entry,
+                             √ √
+                           4 𝜋 𝑎                                          1
+                                     𝐺 ( 𝑎) −→ 𝑀 ,         𝑀𝑗 𝑘 = √︃            .                     (1.69)
+                           log(1/ 𝑎)                                   𝜆𝑗 + 𝜆𝑘
+For a column 𝑐 ∈ ℂ𝑟 , let 𝑐 ∗ be its conjugate transpose. Then
+                                                   ∫ ∑︁                 2
+                                                       𝑟
+                                      ∗         1              − 𝜆𝑗 𝑡 2
+                                     𝑐 𝑀𝑐 = √             𝑐𝑗 𝑒            𝑑𝑡.                        (1.70)
+                                                 𝜋 ℝ 𝑗 =1
+If this integral vanishes, continuity makes its integrand zero everywhere. Order the 𝜆𝑗 increasingly, divide
+                                  2
+the resulting identity by 𝑒 − 𝜆1 𝑡 , and let 𝑡 → +∞. This gives 𝑐1 = 0. Repeating proves 𝑐 = 0. Thus 𝑀 is
+positive definite. Write ∥ 𝑐 ∥ 22 = 𝑗 | 𝑐𝑗 | 2 and put
+                                    P
+
+                                                𝜇 = inf 𝑐 ∗ 𝑀 𝑐.
+                                                      ∥ 𝑐 ∥ 2 =1
+
+This infimum is attained: from a minimizing sequence, successively choose subsequences on which
+each of its finitely many real and imaginary coordinates converges. A bounded real sequence has such a
+subsequence by bisecting a bounded interval and retaining at each step a half containing infinitely many
+terms. The nested intervals have lengths tending to zero, and completeness supplies their common limit.
+The resulting coordinate limit still has norm one, and continuity of the finite quadratic expression gives
+its value 𝜇. Positive definiteness at that nonzero limit therefore gives 𝜇 > 0.
+    Let 𝐴 ( 𝑎) denote the matrix on the left of (1.69), and set 𝛿 ( 𝑎) = max𝑗,𝑘 | 𝐴 ( 𝑎)𝑗 𝑘 − 𝑀𝑗 𝑘 |. The
+entrywise convergence gives 𝛿 ( 𝑎) → 0. Finite-sum Cauchy–Schwarz gives, for every 𝑐 ∈ ℂ𝑟 ,
+                                                                      !2
+                                                             ∑︁
+                           | 𝑐 ∗ ( 𝐴 ( 𝑎) − 𝑀 ) 𝑐 | ≤ 𝛿 ( 𝑎)    | 𝑐𝑗 | ≤ 𝑟 𝛿 ( 𝑎) ∥ 𝑐 ∥ 22 .
+                                                                   𝑗
+
+Choose 0 < 𝑎 < 1 small enough that 𝑟 𝛿 ( 𝑎) < 𝜇/2. Then 𝑐 ∗ 𝐴 ( 𝑎) 𝑐 ≥ ( 𝜇/2) ∥ 𝑐 ∥ 22 . The scalar relating
+𝐴 ( 𝑎) to 𝐺 ( 𝑎) is positive, so 𝐺 ( 𝑎) is positive definite as well. The same linear-independence argument
+                                             2
+applied to the Fourier transforms 𝑒 − 𝑎𝜆𝑗 𝑡 proves dim 𝐸𝑎 = 𝑟 .
+   For 𝜆1 = 1 and 𝜆2 = 4, the limiting matrix is
+                                       √     √ !
+                                    1/ 2 1/ 5                                     1
+                            𝑀= √             √ ,                       det 𝑀 =      > 0.
+                                     1/ 5 1/ 8                                   20
+This gives a positive two-dimensional family directly from the local terms. The quantifiers in Theo-
+rem 1.16.2 fix the finite family before choosing its scale. They do not imply positivity on all of A 𝜁 at
+once.
+Chapter 1. Arithmetic forms and operator domains                                                             32
+
+
+Corollary 1.16.3 (Excluded positive carriers). There is no representation
+
+                                             𝐿 𝜁 ( 𝑔 ) = ⟨ 𝜋 ( 𝑔 ) Ω, Ω⟩
+
+on a positive Hilbert space with Ω of finite norm in a common invariant ∗-representation domain. There
+is also no ∗-homomorphism 𝑇 : A 𝜁 → 𝔅 to a 𝐶 ∗ -algebra with a positive linear functional 𝜔 : 𝔅 → ℂ
+such that 𝐿 𝜁 = 𝜔 ◦ 𝑇 .
+
+Proof. In the vector case, the adjoint identity on the invariant domain gives
+
+                           | 𝐿 𝜁 ( 𝑔 )| 2 ≤ ∥ Ω ∥ 2 ∥ 𝜋 ( 𝑔 ) Ω ∥ 2 = ∥ Ω ∥ 2 𝐿 𝜁 ( 𝑔 ∗ ★ 𝑔 ) .
+
+This contradicts (1.67). In the 𝐶 ∗ case, positivity implies boundedness and | 𝜔 ( 𝑏 )| 2 ≤ ∥ 𝜔 ∥ 𝜔 ( 𝑏 ∗ 𝑏 ) by
+Theorem 1.15.1, or its unital Cauchy–Schwarz proof. Substitute 𝑏 = 𝑇 ( 𝑔 ) and use the same divergence.
+
+
+  This obstruction concerns the functional’s representing vector. It does not prevent bounded GNS
+multipliers. Indeed, under RH, (1.43) and | 𝑓b( 𝑡 )| ≤ ∥ 𝑓 ∥ 𝐿1 give
+
+                               𝐿 𝜁 (( 𝑓 ★ 𝑏 ) ∗ ★ ( 𝑓 ★ 𝑏 )) ≤ ∥ 𝑓 ∥ 2𝐿1 𝐿 𝜁 ( 𝑏 ∗ ★ 𝑏 ) .
+
+Thus every convolution multiplier is bounded under that hypothesis, and 𝐷 cl𝐿 = H𝐿 𝜁 . The functional
+                                                                                   𝜁
+itself has no finite representing vector. A positive functional on a proper test algebra, or a positive weight
+finite on a specified test ideal, remains compatible with this restriction. A positive weight assigns values
+in [0, ∞] to positive elements, additively and homogeneously for nonnegative scalars. Its finite test ideal
+and all products must be specified before a GNS or field interpretation can be asserted.
+
+1.17   Why an indefinite quotient does not give positivity
+The Hermitian part of the construction exists without positivity. For a complex ∗-algebra 𝔄 and a
+Hermitian functional 𝑊 , meaning 𝑊 ( 𝑎∗ ) = 𝑊 ( 𝑎), put
+
+              𝐵𝑊 ( 𝑓 , 𝑔 ) = 𝑊 ( 𝑔 ∗ 𝑓 ) ,        𝑅𝑊 = { 𝑓 : 𝐵𝑊 ( 𝑓 , 𝑔 ) = 0 for every 𝑔 ∈ 𝔄} .
+
+Then 𝑅𝑊 is a left ideal, since
+
+                      𝐵𝑊 ( 𝑎𝑓 , 𝑔 ) = 𝑊 ( 𝑔 ∗ 𝑎𝑓 ) = 𝐵𝑊 ( 𝑓 , 𝑎∗ 𝑔 ) = 0             ( 𝑓 ∈ 𝑅𝑊 ) .
+
+The quotient 𝔄/ 𝑅𝑊 consequently has a nondegenerate Hermitian pairing and an algebraic left action
+satisfying 𝐵𝑊 ( 𝑎𝑓 , 𝑔 ) = 𝐵𝑊 ( 𝑓 , 𝑎∗ 𝑔 ). This applies unconditionally to (A 𝜁 , 𝐿 𝜁 ) by (1.41). It supplies
+neither a positive norm nor a class of the missing unit. Under positivity, Cauchy–Schwarz identifies 𝑅𝑊
+with N𝑊 , and Theorem 1.11.2 applies.
+    Let 𝑉 = ℂ2 , 𝐽 = diag(1, −1), and
+                                               [ 𝑥, 𝑦 ] = 𝑦 ∗ 𝐽 𝑥.
+The vectors 𝑒1 + 𝑒2 and 𝑒1 − 𝑒2 are isotropic, while their sum is not. Thus the isotropic cone { 𝑥 : [ 𝑥, 𝑥 ] =
+0} is not a linear subspace and cannot be divided out. The radical { 𝑥 : [ 𝑥, 𝑦 ] = 0 ∀𝑦 } is zero here. In
+general, quotienting by the radical produces only a nondegenerate Hermitian space; it supplies neither a
+fundamental symmetry nor a complete Hilbert majorant. A fundamental symmetry is a linear involution
+Chapter 1. Arithmetic forms and operator domains                                                         33
+
+
+𝐽 satisfying [ 𝐽 𝑥, 𝑦 ] = [ 𝑥, 𝐽 𝑦 ] and [ 𝐽 𝑥, 𝑥 ] > 0 for 𝑥 ≠ 0. A complete Hilbert majorant is a complete
+Hilbert norm on the same space for which the original Hermitian pairing is continuous. In this finite-
+dimensional example the displayed 𝐽 gives both choices, but the radical quotient itself selects neither
+choice.
+   Nor is a vector functional for an indefinite adjoint positive. On 𝑀2 (ℂ) put 𝐴♯ = 𝐽 𝐴∗ 𝐽 , let Ω = 𝑒1 ,
+and set 𝜔 ( 𝐴) = [ 𝐴Ω, Ω]. For                                 !
+                                                          0 0
+                                                    𝑋 =
+                                                           1 0
+one has
+                                𝜔 ( 𝑋 ♯ 𝑋 ) = [ 𝑋 Ω, 𝑋 Ω] = [ 𝑒2 , 𝑒2 ] = −1.                         (1.71)
+Hence an indefinite pairing does not provide the positivity required in (1.42).
+
+1.18   The independent arithmetic question
+Proposition 1.18.1 (Formal factorization). For a linear functional 𝑊 on a complex ∗-algebra 𝔄,
+the following are equivalent:
+   (i) 𝑊 is positive;
+  (ii) there are a complex ∗-algebra 𝔅 and maps
+
+                                       𝜔 : 𝔅 −→ ℂ,          𝑇 : 𝔄 −→ 𝔅,
+       where 𝜔 is positive, 𝑇 is a ∗-homomorphism, and 𝑊 = 𝜔 ◦ 𝑇 .
+
+Proof. Dagger transfer proves (ii) ⇒ (i). For the converse take 𝔅 = 𝔄, 𝜔 = 𝑊 , and 𝑇 equal to the
+identity.
+
+   For 𝑊 = 𝐿 𝜁 , formal factorization is therefore equivalent to the positivity in (1.42), and hence to
+RH. The identity factorization, or a Hilbert space whose spectral data are prescribed from the zeta zeros,
+cannot establish that positivity independently.
+Open Problem 1.18.2 (Independent dagger realization of 𝐿 𝜁 ). Construct a complex ∗-algebra 𝔅, a positive
+linear functional 𝜔 : 𝔅 → ℂ, and a ∗-homomorphism 𝑇 : A 𝜁 → 𝔅 such that
+
+                                               𝐿𝜁 = 𝜔 ◦ 𝑇 .                                          (1.72)
+
+Derive the carrier, the map, and the positivity of 𝜔 from the polar, archimedean, and prime-power
+structures in (1.39), without using RH, the multiset of zeta zeros, or an assertion equivalent to (1.42).
+Prove (1.72) with all three local terms and the Fourier and measure conventions above. Corollary 1.16.3
+excludes a positive functional on a 𝐶 ∗ -algebra as the target. Any admissible positive functional 𝜔 must
+fail the finite-mass unitization bound on the image of 𝑇 . Theorem 1.12.2 and Proposition 1.14.2 then
+specify the common invariant domain supplied by this factorization.
+   The resulting representation would still need an additional comparison to a spectral determinant.
+Equality of functionals does not preserve trace multiplicities. For example, on ℂ the positive functional
+𝑊 ( 𝑧 ) = 𝑚𝑧 , with integer 𝑚 ≥ 2, has a one-dimensional GNS space. A scalar 𝜆 consequently has
+determinant 𝑠 − 𝜆 there. The trace realization 𝑧 ↦→ 𝑧𝐼𝑚 on ℂ𝑚 has the same functional and deter-
+minant ( 𝑠 − 𝜆) 𝑚 . Thus a determinant realization must identify the operator, its domain, and spectral
+multiplicities separately.
+Chapter 1. Arithmetic forms and operator domains                                                               34
+
+
+1.19   Finite matrix kernels and positive trace
+A scalar obtained by closing an operator kernel need not define a positive pairing. This distinction
+can already be seen on finite matrices inside the formal operator algebra. For this comparison, use the
+underlying field ℂ with the discrete topology and put
+
+                                                𝐻for = ℂ[[ 𝑥, 𝑦 ]]/ℂ.
+
+Enumerate the nonconstant monomials as 𝑒0 , 𝑒1 , . . . in increasing total degree. The formal topology
+makes 𝐻for the product ℂℕ of discrete coefficient spaces. Write 𝜖 𝑗 ( ℎ) = ℎ𝑗 for its coefficient functionals.
+A continuous endomorphism has a matrix with finitely many nonzero entries in each row. Indeed, every
+output coefficient must depend on finitely many input coefficients. Conversely, this condition makes
+every finite output projection continuous. Denote this algebra by E . Its operator topology requires
+agreement of each entire row in a fixed finite set of output rows.
+   Put 𝐸𝑖𝑗 = 𝑒 𝑖 ⊗ 𝜖 𝑗 and let F0 be their finite complex span. These are the matrices with finitely many
+nonzero entries in total. They satisfy
+
+                                      𝐸𝑖𝑗 𝐸𝑘ℓ = 𝛿𝑗 𝑘 𝐸𝑖ℓ ,        𝐸𝑖𝑗∗ = 𝐸𝑗 𝑖 .
+
+Conjugating coefficients defines the displayed involution on F0 . This algebra has no unit, since each of
+its elements annihilates all but finitely many basis vectors. It is dense in E : retaining finitely many whole
+rows of a row-finite matrix gives a matrix in F0 with those rows unchanged.
+    The same matrix units act on 𝐷0 = ℂ (ℕ) , the finite sequences, inside the Hilbert space ℓ 2 (ℕ) over
+the usual complex field. Its inner product is ⟨𝑣, 𝑤 ⟩ = 𝑗 𝑣𝑗 𝑤𝑗 . Every finite matrix preserves 𝐷0 , and
+                                                            P
+conjugate transpose is its Hilbert adjoint restricted to 𝐷0 . Thus this comparison preserves the algebra
+and involution on F0 . It does not identify the two topologies or their completions.
+Proposition 1.19.1 (The positive finite-matrix trace). Define 𝜏 ( 𝐵 ) = 𝑖 𝐵 𝑖𝑖 on F0 . It is a posi-
+                                                                                     P
+tive linear functional with zero GNS null space. Its GNS completion is ℓ 2 (ℕ × ℕ), with [ 𝐵 ] identified
+with its coefficient array ( 𝐵 𝑖𝑗 ). The GNS action is left matrix multiplication, and
+
+                                   ∥ 𝜋𝜏 ( 𝐴) ∥ = ∥ 𝐴 ∥ ℓ 2 →ℓ 2     ( 𝐴 ∈ F0 ) .
+
+Nevertheless, 𝜏 has no positive extension of finite mass to F0+ = ℂ 𝐼 + F0 .
+
+Proof. All sums in the algebraic calculation are finite, and
+                                       ∑︁                             ∑︁
+                          𝜏 (𝐶 ∗ 𝐵 ) =    𝐵 𝑖𝑗 𝐶𝑖𝑗 ,      𝜏 ( 𝐵∗ 𝐵) =    | 𝐵 𝑖𝑗 | 2 .
+                                          𝑖,𝑗                                  𝑖,𝑗
+
+The second expression vanishes exactly when 𝐵 = 0. For a norm-Cauchy sequence of finite arrays,
+every coefficient has a limit 𝑏 𝑖𝑗 . A common norm bound bounds every finite sum of | 𝑏 𝑖𝑗 | 2 , so the limit
+array is square-summable. Pass to the coefficientwise limit in a finite sum of |( 𝐵 𝑛 ) 𝑖𝑗 − ( 𝐵 𝑚 ) 𝑖𝑗 | 2 , then
+take the supremum over the finite sums. The Cauchy estimate gives ∥ 𝐵 𝑛 − 𝑏 ∥ → 0. Conversely, finite
+rectangular truncations of a square-summable array converge in this norm. This identifies the quotient
+and completion. Multiplication by 𝐴 acts separately on each column, so
+                                         ∑︁                                  ∑︁
+                           ∥ 𝐴𝐵 ∥ 2 =       ∥ 𝐴𝐵 •𝑗 ∥ 2ℓ 2 ≤ ∥ 𝐴 ∥ 2ℓ 2 →ℓ 2    ∥ 𝐵 •𝑗 ∥ 2ℓ 2 .
+                                         𝑗                                 𝑗
+Chapter 1. Arithmetic forms and operator domains                                                                   35
+
+
+The operator norm on the right is finite. The entrywise Cauchy–Schwarz inequality bounds it by
+( 𝑖,𝑗 | 𝐴𝑖𝑗 | 2 ) 1/2 . Conversely, take a matrix 𝐵 whose only nonzero column is a finite vector 𝑣 . The ratio
+ P
+∥ 𝐴𝐵 ∥/∥ 𝐵 ∥ is ∥ 𝐴𝑣 ∥/∥ 𝑣 ∥. Since 𝐴 uses only finitely many input coordinates, such vectors compute its
+full operator norm. This proves equality.
+                            P −1
+    For 𝑛 ≥ 1, let 𝑄 𝑛 = 𝑛𝑖 =0      𝐸𝑖𝑖 . It is a self-adjoint projection with 𝜏 ( 𝑄 𝑛 ) = 𝑛. If a positive extension
+had value 𝑐 on 𝐼 , then 𝑐 would be real and nonnegative, while
+
+                                    0 ≤ 𝜏 + (( 𝐼 − 𝑄 𝑛 ) ∗ ( 𝐼 − 𝑄 𝑛 )) = 𝑐 − 𝑛
+
+for every 𝑛. No finite 𝑐 satisfies these inequalities. Equivalently, | 𝜏 ( 𝑄 𝑛 )| 2 / 𝜏 ( 𝑄 𝑛∗ 𝑄 𝑛 ) = 𝑛 is unbounded.
+
+
+    The map ( 𝜆, 𝐵 ) ↦→ 𝜆𝐼 + 𝐵 identifies the algebraic unitization with the displayed subalgebra of E .
+It is injective because a scalar multiple of the infinite identity is a finite matrix only when that scalar is
+zero. On this subalgebra, any linear extension of finite-matrix trace has the form
+
+                                           𝜏𝑐 ( 𝜆𝐼 + 𝐵 ) = 𝑐𝜆 + tr( 𝐵 ) .
+
+For 𝐴, 𝐵 ∈ F0 , its value on a product is
+                                                                                   ∑︁
+                   𝜏𝑐 (( 𝜆𝐼 + 𝐴) ( 𝜇𝐼 + 𝐵 )) = 𝑐𝜆𝜇 + 𝜆 tr( 𝐵 ) + 𝜇 tr( 𝐴) +               𝐴𝑖𝑗 𝐵𝑗 𝑖 .
+                                                                                    𝑖,𝑗
+
+The sum is finite and is unchanged when the two factors are exchanged. Thus 𝜏𝑐 is cyclic, but the
+proposition excludes positivity for every 𝑐 . In particular, any cyclic trace on a larger formal differential-
+operator algebra that restricts to this formula cannot be positive for an involution restricting to the one
+above. This conclusion needs no choice of an involution on the larger algebra.
+   The finite-dimensional corners 𝑄 𝑛 F0 𝑄 𝑛 do have positive traces, and the traces agree under their
+inclusions. Their units are 𝑄 𝑛 , with masses 𝑛. Compatibility of these finite traces supplies 𝜏 on their
+union, but supplies no uniform mass bound on a unitization. The common GNS domain and a vector
+representing the functional are therefore separate constructions even in this explicit matrix example.
+Proposition 1.19.2 (Formal completion and Hilbert adjoints). Conjugate transpose on F0 does
+not extend to a continuous involution on E with its operator topology. The finite-matrix action on 𝐷0
+also does not extend by the same coefficient formula to an action of all E on ℓ 2 (ℕ).
+
+Proof. Let 𝑇𝑛 = 𝑛𝑖=0 𝐸𝑖 0 . Every fixed row stabilizes, so 𝑇𝑛 converges in E to
+                 P
+
+                                             𝑇 ( ℎ) = ℎ0 (1, 1, 1, . . .) .
+
+The matrices 𝑇𝑛∗ = 𝑛𝑖=0 𝐸0𝑖 do not converge in E . Their zeroth rows do not stabilize, and an entire
+                         P
+output row is discrete in the operator topology. Continuity of a proposed involution would send the
+convergent sequence 𝑇𝑛 to a convergent sequence, which is impossible. For the second assertion, 𝑒0 ∈ ℓ 2
+but 𝑇 ( 𝑒0 ) = (1, 1, . . .) ∉ ℓ 2 .
+
+    There is also a direct norm obstruction. The projections 𝐸𝑛𝑛 tend to zero in the formal operator
+topology, but each has Hilbert operator norm one and GNS vector norm one for 𝜏 . Thus the formal
+completion, operator-norm completion and GNS completion are different constructions on the same
+finite matrices. For the Weil algebra, Theorem 1.12.2 specifies a fourth topology when its multipliers are
+unbounded: the common graph topology. None of these completions is selected by cyclicity alone.
+Chapter 1. Arithmetic forms and operator domains                                                           36
+
+
+1.20    Gaussian averages and formal coefficients
+The Gaussian in the explicit formula also permits an exact comparison between a numerical integral and
+formal polynomial elimination. It is necessary to specify both the observable algebra and the parameter.
+For a positive real number ℎ, set
+                              ∫                            ∫
+                         1                    2
+            𝔼ℎ ( 𝑝 ) = √          𝑝 ( 𝑢) 𝑒 − 𝑢 /(2ℎ ) 𝑑𝑢 =    𝑝 ( 𝑢) 𝑔ℎ/2 ( 𝑢) 𝑑𝑢, 𝑝 ∈ ℂ[ 𝑢] .
+                        2𝜋 ℎ ℝ                              ℝ
+
+The polynomial algebra here uses pointwise multiplication and 𝑝∗ ( 𝑢) = 𝑝 ( 𝑢) for real 𝑢. Its involution
+fixes 𝑢. Polynomial growth and Gaussian decay make every displayed integral absolutely convergent.
+Proposition 1.20.1 (Numerical and formal Gaussian elimination). For every polynomial 𝑝
+and real ℎ > 0,
+                                       ∑︁ ℎ𝑚 (2𝑚 )
+                            𝔼ℎ ( 𝑝 ) =           𝑝 (0) .                         (1.73)
+                                       𝑚 ≥0 2 𝑚!
+                                             𝑚
+
+The sum is finite. In particular, 𝔼ℎ is positive, 𝔼ℎ ( 𝑢) = 0 and 𝔼ℎ ( 𝑢2 ) = ℎ.
+   Let ℏ instead be a formal central variable of degree zero. The same finite derivative formula on each
+polynomial gives a continuous ℂ[[ℏ]]-linear map
+                                                                        !            (2𝑚 )
+                                                      ∑︁            𝑗
+                                                                               ∑︁ 𝑝𝑗 (0) 𝑗 +𝑚
+             G : ℂ[ 𝑢] [[ℏ]] −→ ℂ[[ℏ]] ,          G          𝑝𝑗 ( 𝑢)ℏ       =              ℏ  .
+                                                                              𝑗,𝑚 ≥0 2 𝑚!
+                                                                                       𝑚
+                                                      𝑗 ≥0
+
+Continuity refers to the ℏ-adic topologies. On ℂ[ 𝑢, ℏ], evaluating this result at ℏ = ℎ > 0 agrees with the
+numerical Gaussian average of the specialized polynomial. There is no unital ℂ-algebra homomorphism
+ℂ[[ℏ]] → ℂ that sends ℏ to a nonzero number ℎ.
+
+Proof. Lemma 1.3.2 gives 𝔼ℎ (1) = 1. Reflection makes every odd moment zero. For 𝑛 ≥ 2, integrate the
+                        2
+derivative of 𝑢𝑛−1 𝑒 − 𝑢 /(2ℎ ) over ℝ. Its values at both ends are zero, and its derivative is integrable. It
+follows that
+                                       𝔼ℎ ( 𝑢𝑛 ) = ( 𝑛 − 1) ℎ 𝔼ℎ ( 𝑢𝑛−2 ) .
+Thus 𝔼ℎ ( 𝑢2𝑚 ) = (2𝑚)!ℎ𝑚 /(2𝑚 𝑚!). Expansion of 𝑝 proves (1.73). The positive integral of | 𝑝 | 2 proves
+positivity, and the moments of 𝑢 and 𝑢2 have the stated values.
+    In the formal formula, the coefficient of ℏ 𝑁 uses only 𝑗, 𝑚 ≥ 0 with 𝑗 + 𝑚 = 𝑁 . There are finitely
+many such pairs. Each derivative is a derivative of a polynomial, so this defines every coefficient without
+a convergence assumption. The map preserves every power of ℏ, proving continuity. Reindexing these
+finite coefficient sums proves ℂ[[ℏ]]-linearity. For a polynomial in 𝑢, ℏ, all sums are finite, so numerical
+specialization commutes with the proved moment formula.
+    For ℎ ≠ 0, the formal series                        ∑︁
+                                        (1 − ℏ/ℎ) −1 =      (ℏ/ℎ) 𝑛
+                                                             𝑛 ≥0
+
+is an inverse in ℂ[[ℏ]]. A unital homomorphism sending ℏ to ℎ would send the unit 1 − ℏ/ℎ to zero,
+which is impossible. At ℎ = 0, the constant-coefficient homomorphism does exist.
+
+    The comparison at positive ℎ therefore holds on the polynomial subalgebra. Extension to a selected
+class of infinite series requires an additional summability rule and its compatibility with the operations.
+Formal coefficientwise existence alone gives no such rule.
+Chapter 1. Arithmetic forms and operator domains                                                         37
+
+
+  The Gaussian average is not multiplicative: 𝔼ℎ ( 𝑢) 2 = 0 while 𝔼ℎ ( 𝑢2 ) = ℎ. Nor does inserting a
+Gaussian turn pointwise polynomial multiplication into convolution. For 𝐴 > 0, the linear map
+
+                           𝐽𝐴 : ℂ[ 𝑢] −→ A 𝜁 ,            𝐽 𝐴 ( 𝑝 ) ( 𝑢) = 𝑝 ( 𝑢) 𝑔 𝐴 ( 𝑢)
+
+is well-defined, since every derivative is a polynomial times a Gaussian. But
+
+                𝐽𝐴 (1) ★ 𝐽𝐴 (1) = 𝑔2 𝐴 ≠ 𝑔 𝐴 = 𝐽𝐴 (1) ,          𝐽 𝐴 ( 𝑢) ∗ = − 𝐽 𝐴 ( 𝑢) ≠ 𝐽𝐴 ( 𝑢∗ ) .
+
+The first inequality follows already from the values at zero. The second uses the reflection in the con-
+volution involution. Thus 𝐽𝐴 is neither an algebra homomorphism nor an involution-preserving map.
+Positivity of the numerical Gaussian average cannot pass through it by Theorem 1.14.1.
+
+1.21   The remaining comparison with quantum currents
+The formal Hamiltonian bracket on 𝐻for is [ 𝑓 , 𝑔 ] = 𝑓𝑥 𝑔𝑦 − 𝑓𝑦 𝑔𝑥 modulo constants. Put 𝑎 𝑓 = − 𝑓𝑦 𝜕𝑥 +
+𝑓𝑥 𝜕𝑦 on this quotient. Changing a representative by a constant changes neither the derivatives nor the
+induced operator. An output through degree 𝑁 uses only monomials through degree 𝑁 + 1 in each
+input, because a bracket of monomials has degree equal to the sum of their degrees minus two. This
+proves continuity, including continuity of 𝑓 ↦→ 𝑎 𝑓 in the row topology. Computing the two derivative
+coefficients gives
+                           [ 𝑎 𝑓 , 𝑎 𝑔 ] = − 𝜕𝑦 [ 𝑓 , 𝑔 ] 𝜕𝑥 + 𝜕𝑥 [ 𝑓 , 𝑔 ] 𝜕𝑦 = 𝑎 [ 𝑓 , 𝑔 ] .
+Thus these operators give an actual symmetry action on 𝐻for . A numerical positive representation needs
+further data: a complex Hilbert space, a common invariant dense domain, and operators whose restricted
+adjoints realize the chosen involution. Proposition 1.19.2 prevents obtaining these data by completing
+all finite matrix kernels in the formal operator topology. Proposition 1.20.1 also prevents specializing an
+arbitrary formal parameter at a positive numerical value. These are restrictions on the stated carriers and
+maps.
+     An algebra generated by products includes the empty product as a unit. For a positive comparison, one
+might choose an ordinary degree-zero subalgebra containing this identity and closed under an involution.
+The finite-mass calculation excludes this choice if the positive scalar functional is to be defined on the
+entire subalgebra.
+Proposition 1.21.1 (An obstruction for unital observable algebras). There is no unital complex
+∗-algebra 𝔅, positive linear functional 𝜔 : 𝔅 → ℂ, and ∗-homomorphism 𝑇 : A 𝜁 → 𝔅 such that
+𝐿 𝜁 = 𝜔 ◦ 𝑇 . No continuity hypothesis on 𝑇 or 𝜔 is needed.
+Proof. Suppose these data exist. Put 𝑚 = 𝜔 (1), a finite nonnegative real number. Extend 𝑇 to the
+algebraic unitization by
+                                   𝑇 + ( 𝑓 + 𝜆1) = 𝑇 ( 𝑓 ) + 𝜆1𝔅 .
+The unitization product and the multiplicativity of 𝑇 show that 𝑇 + is a unital ∗-homomorphism. Thus
+𝜔 ◦ 𝑇 + is a positive extension of 𝐿 𝜁 with mass 𝑚. By (1.60),
+
+                       | 𝐿 𝜁 ( 𝑔𝑎 )| 2 ≤ 𝑚𝐿 𝜁 ( 𝑔𝑎∗ ★ 𝑔𝑎 ) = 𝑚𝐿 𝜁 ( 𝑔2 𝑎 )        ( 𝑎 > 0) .
+
+Theorem 1.16.1 makes the ratio on the left to 𝐿 𝜁 ( 𝑔2 𝑎 ) unbounded as 𝑎 decreases to zero. The denominator
+is positive for all sufficiently small 𝑎, by the same asymptotic. This contradicts the finite bound 𝑚.
+Chapter 1. Arithmetic forms and operator domains                                                           38
+
+
+  A remaining positive arithmetic comparison must therefore choose a proper nonunital algebra on
+which the functional is finite. Its first missing map is an involution-preserving algebra map
+
+                                              𝑇 : A 𝜁 −→ 𝔅
+
+into such a specified algebra of current observables, together with a positive linear functional 𝜔 on
+𝔅 satisfying 𝐿 𝜁 = 𝜔 ◦ 𝑇 . The algebra, involution, domain and positivity of 𝜔 must be constructed
+independently of the zeta zero locations. Theorem 1.14.1 would give the isometry 𝑈 : [ 𝑓 ] ↦→ [𝑇 ( 𝑓 )]
+onto the closed subspace 𝐾 = [𝑇 (A 𝜁 )] ⊂ H𝜔 . Proposition 1.14.2 identifies the transported common
+graph domain with that of the restricted multipliers on 𝐸 = [𝑇 (A 𝜁 )] ⊂ 𝐾 , with every closure taken
+in 𝐾 . Equality with the full ambient common domain requires a further hypothesis, such as surjectivity
+of 𝑇 . The finite-mass obstruction in Theorem 1.16.1 still applies: a finite-norm vector representing this
+functional, or a positive functional on a 𝐶 ∗ -algebra as target, cannot supply this factorization. A positive
+functional on a proper nonunital algebra remains a possible kind of carrier, as the finite-matrix trace
+demonstrates. This example does not supply the map 𝑇 or the equality with 𝐿 𝜁 .
+    Any current-field construction must also specify its operator products, contraction tensors and the
+scalar trace or weight on those products. Their convergence with the spatial propagators is an additional
+analytic condition. Neither the strict zero strip nor the equality of the Gaussian moment formulas
+constructs this comparison or proves the positivity of the full Weil form.
+Chapter 1. Arithmetic forms and operator domains                                                                39
+
+
+1.22   Positive arithmetic forms from prime translations
+The negative prime coefficients admit a positive realization after an explicit diagonal compensation. The
+compensation is forced by positivity, even for a single prime. This gives a nonunital arithmetic carrier
+with infinite mass and determines the obstruction to summing its positive forms over all primes. The
+comparison uses the convolution algebra A 𝜁 and the Fourier normalization of (1.35) throughout. All
+spaces and algebras in this section are complex and have degree zero. There is no formal parameter or
+change of coefficient field.
+   For 𝑣 ∈ ℝ, let ( 𝜏𝑣 𝑓 ) ( 𝑢) = 𝑓 ( 𝑢 − 𝑣 ). Lebesgue measure makes 𝜏𝑣 unitary on 𝐿 2 (ℝ, 𝑑𝑢). If 𝑓 ∈ A 𝜁
+and 𝑔 = 𝑓 ∗ ★ 𝑓 , direct substitution gives
+
+       𝑔 (0) = ∥ 𝑓 ∥ 22 ,    𝑔 ( 𝑣 ) = ⟨ 𝑓 , 𝜏𝑣 𝑓 ⟩2 ,     ∥ 𝑓 − 𝜏𝑣 𝑓 ∥ 22 = 2 𝑔 (0) − 𝑔 ( 𝑣 ) − 𝑔 (−𝑣 ) .   (1.74)
+
+The inner product is linear in its first argument. The reflected value satisfies 𝑔 (−𝑣 ) = 𝑔 ( 𝑣 ). These
+identities follow from absolutely convergent integrals, since A 𝜁 ⊂ 𝐿 2 (ℝ).
+Example 1.22.1 (One prime and one Gaussian). Retain only 𝑛 = 2, with the native coefficient 𝑐 =
+      √
+log 2/ 2 and translation length ℓ = log 2. Define
+                                                                        
+                              𝑊{2} ( 𝑔 ) = 𝑐 2 𝑔 (0) − 𝑔 ( ℓ ) − 𝑔 (−ℓ ) .
+
+Equation (1.74) gives 𝑊{2} ( 𝑓 ∗ ★ 𝑓 ) = 𝑐 ∥ 𝑓 − 𝜏ℓ 𝑓 ∥ 22 ≥ 0. For the normalized Gaussian 𝑓 = 𝑔𝑎 with
+𝑎 = ℓ 2 /8,                                                    √︂
+                                                                  2
+                                              𝑊{2} ( 𝑔2 𝑎 ) =       (1 − 𝑒 −1 ) ,
+                                                                  𝜋
+                                                                √︂
+                                                                   2 −1
+                                −𝑐 𝑔2 𝑎 ( ℓ ) + 𝑔2 𝑎 (−ℓ ) = −        𝑒 ,
+                                                                    𝜋
+                                                               √︂
+                                                                  2
+                                                2𝑐 𝑔2 𝑎 (0) =       .
+                                                                  𝜋
+                      √
+Indeed, 𝑔2 𝑎 (0) = 1/( 𝜋 ℓ ) and 𝑔2 𝑎 ( ℓ ) = 𝑒 −1 𝑔2 𝑎 (0). Thus the raw prime term is already negative on
+this convolution square. Its positive realization includes the displayed nonzero diagonal term.
+   The same prime gives a two-dimensional calculation with an exact Gram matrix. Keep 𝑎 = ℓ 2 /8, put
+𝑥 = 𝑒 −1 , and use the ordered vectors 𝑓0 = 𝑔𝑎 , 𝑓1 = 𝜏ℓ 𝑔𝑎 . The Hermitian form 𝐵 ( 𝑓 , ℎ) = 𝑊{2} ( ℎ∗ ★ 𝑓 )
+has matrix                                                                !
+                                          1      2(1 − 𝑥 ) 2 𝑥 − 1 − 𝑥 4
+                                  𝐺=√                                       .
+                                          2 𝜋 2 𝑥 − 1 − 𝑥 4 2(1 − 𝑥 )
+To compute its off-diagonal entry, expand 𝑐 ⟨ 𝑓0 − 𝜏ℓ 𝑓0 , 𝜏ℓ 𝑓0 − 𝜏2ℓ 𝑓0 ⟩2 . The four correlations give
+                                                            √
+𝑐 (2 𝑔2 𝑎 ( ℓ ) − 𝑔2 𝑎 (0) − 𝑔2 𝑎 (2ℓ )). The eigenvalues of 2 𝜋𝐺 are
+
+                            1 − 𝑥 4,         3 − 4 𝑥 + 𝑥 4 = (1 − 𝑥 ) 2 ( 𝑥 2 + 2 𝑥 + 3) .
+
+Both are positive because 0 < 𝑥 < 1. This calculation retains the actual prime weight, convolution
+involution, and off-diagonal pairing on the two displayed test functions.
+   Let ( 𝑐𝑛 )𝑛 ≥2 be nonnegative real numbers satisfying
+                                                    ∑︁
+                                         0 < 𝐶 :=       𝑐𝑛 < ∞ .
+                                                          𝑛 ≥2
+Chapter 1. Arithmetic forms and operator domains                                                                         40
+
+                                                                                              √
+Only indices with 𝑐𝑛 > 0 contribute. The cases of interest retain the native weights ΛvM ( 𝑛)/ 𝑛 on
+finitely many prime powers, or on every power of finitely many primes. Define
+                                ∑︁                                      
+                     𝑊𝑐 ( 𝑔 ) =     𝑐𝑛 2 𝑔 (0) − 𝑔 (log 𝑛) − 𝑔 (− log 𝑛) ,
+                                        𝑛 ≥2
+                                        ∑︁                                   ∑︁
+                           𝜆𝑐 ( 𝑡 ) =          𝑐𝑛 |1 − 𝑒 𝑖𝑡 log 𝑛 | 2 = 2           𝑐𝑛 (1 − cos( 𝑡 log 𝑛)) ,          (1.75)
+                                        𝑛 ≥2                                 𝑛 ≥2
+                                                  𝑑𝑡
+                         𝑑𝜇𝑐 ( 𝑡 ) = 𝜆𝑐 ( 𝑡 )        .
+                                                  2𝜋
+The coefficient sum makes the first series absolutely convergent for bounded 𝑔 , and the second uniformly
+convergent on ℝ. Consequently 𝜆𝑐 is continuous and 0 ≤ 𝜆𝑐 ≤ 4𝐶 . Choosing any 𝑛0 with 𝑐𝑛0 > 0
+shows that its zeros belong to {2 𝜋 𝑘 /log 𝑛0 : 𝑘 ∈ ℤ}. It is therefore positive almost everywhere. When
+all coefficients vanish, 𝑊𝑐 and 𝜇𝑐 are zero. That degenerate case has a zero Hilbert space and admits finite
+positive unitizations. The hypothesis 𝐶 > 0 excludes it in the following statements.
+Theorem 1.22.2 (The arithmetic positive form and its least compensation). For every 𝑔 ∈ A 𝜁
+and 𝑓 ∈ A 𝜁 ,                  ∫
+                               𝑊𝑐 ( 𝑔 ) =              𝑔b( 𝑡 ) 𝑑𝜇𝑐 ( 𝑡 ) ,
+                                                  ℝ
+                                                ∑︁                                   ∫                                (1.76)
+                                 ∗
+                         𝑊𝑐 ( 𝑓 ★ 𝑓 ) =                𝑐𝑛 ∥ 𝑓 − 𝜏log 𝑛 𝑓 ∥ 22 =            | 𝑓b( 𝑡 )| 2 𝑑𝜇𝑐 ( 𝑡 ) .
+                                                𝑛 ≥2                                   ℝ
+
+The second value is strictly positive for 𝑓 ≠ 0. For real 𝑑 , define
+                                                ∑︁                           
+                           𝑉𝑑 ( 𝑔 ) = 𝑑 𝑔 (0) −    𝑐𝑛 𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                                                            𝑛 ≥2
+
+Then 𝑉𝑑 ( 𝑓 ∗ ★ 𝑓 ) ≥ 0 for every 𝑓 ∈ A 𝜁 if and only if 𝑑 ≥ 2𝐶 .
+
+Proof. Fourier inversion gives
+                                                        ∫
+                                                      1
+                       2 𝑔 (0) − 𝑔 ( 𝑣 ) − 𝑔 (−𝑣 ) =        𝑔b( 𝑡 ) (2 − 𝑒 − 𝑖𝑡𝑣 − 𝑒 𝑖𝑡𝑣 ) 𝑑𝑡.
+                                                     2𝜋 ℝ
+      b is integrable and 𝑐𝑛 = 𝐶 , an integrable bound 4𝐶 |b      𝑔 ( 𝑡 )| permits summation inside the integral.
+                           P
+Since 𝑔
+                                                               ∗
+This proves the first identity in (1.76). Apply it to 𝑔 = 𝑓 ★ 𝑓 and use 𝑓 ∗       \   ★ 𝑓 = | 𝑓b| 2 on the real axis.
+Equation (1.74) gives the other expression. If its value is zero, 𝑓b vanishes almost everywhere because
+𝜆𝑐 > 0 almost everywhere. Continuity and Fourier inversion then give 𝑓 = 0.
+   For 𝑑 ≥ 2𝐶 , the identity 𝑉𝑑 ( 𝑓 ∗ ★ 𝑓 ) = 𝑊𝑐 ( 𝑓 ∗ ★ 𝑓 ) + ( 𝑑 − 2𝐶 ) ∥ 𝑓 ∥ 22 proves positivity. Conversely,
+use 𝑓 = 𝑔 𝐴 and divide by the positive number 𝑔2 𝐴 (0). The Gaussian formula gives
+                   𝑉𝑑 ( 𝑔2 𝐴 )      ∑︁ − (log 𝑛 ) 2 /(8 𝐴 )
+                               =𝑑−2      𝑐𝑛 𝑒               −→ 𝑑 − 2𝐶                                    ( 𝐴 → ∞) .
+                    𝑔2 𝐴 (0)        𝑛 ≥2
+
+The summable coefficients justify the limit. If 𝑑 < 2𝐶 , the value is negative for sufficiently large 𝐴.
+
+   Every power of one prime can be retained without a cutoff. For a prime 𝑝, put 𝑟 = 𝑝 −1/2 , 𝜃 = 𝑡 log 𝑝,
+and 𝑐 𝑝𝑚 = log 𝑝 𝑟 𝑚 for 𝑚 ≥ 1, with all other coefficients zero. Then
+                                 log 𝑝 𝑟                              2 log 𝑝 𝑟 (1 + 𝑟 ) (1 − cos 𝜃 )
+                          𝐶𝑝 =           ,               𝜆 𝑝 (𝑡 ) =                                   .               (1.77)
+                                  1−𝑟                                 (1 − 𝑟 ) (1 − 2𝑟 cos 𝜃 + 𝑟 2 )
+Chapter 1. Arithmetic forms and operator domains                                                                         41
+
+
+To verify the expression, sum 𝑚 ≥1 𝑟 𝑚 = 𝑟 /(1 − 𝑟 ) and take the real part of 𝑚 ≥1 ( 𝑟 𝑒 𝑖𝜃 ) 𝑚 . The latter
+                                  P                                                P
+real part is ( 𝑟 cos 𝜃 − 𝑟 2 )/(1 − 2𝑟 cos 𝜃 + 𝑟 2 ). Subtracting gives (1.77). Its denominator is positive
+because 0 < 𝑟 < 1. This constructs the positive form of one complete local Euler factor, with exactly its
+prime-power coefficients and least diagonal compensation.
+
+1.22.1   A nonunital algebra and its Hilbert completion
+Let S (ℝ) be the space of smooth functions 𝑏 such that
+
+                                   sup (1 + | 𝑡 |) 𝑗 | 𝑏 ( 𝑘 ) ( 𝑡 )| < ∞          ( 𝑗, 𝑘 ≥ 0) .
+                                   𝑡 ∈ℝ
+
+These seminorms specify its topology. Use pointwise multiplication and the involution 𝑏 ∗ ( 𝑡 ) = 𝑏 ( 𝑡 ).
+The product rule makes S (ℝ) a complex ∗-algebra. It has no identity: a pointwise identity must equal
+                  2
+one wherever 𝑒 − 𝑡 is nonzero, whereas Schwartz functions tend to zero at infinity. Define
+                                       ∫
+        𝔅𝑐 = S (ℝ) ,         𝜔𝑐 ( 𝑏 ) = 𝑏 ( 𝑡 ) 𝑑𝜇𝑐 ( 𝑡 ) , 𝑇𝑐 : A 𝜁 −→ 𝔅𝑐 , 𝑇𝑐 ( 𝑔 ) = 𝑔b| ℝ .
+                                                ℝ
+
+The bound 𝜆𝑐 ≤ 4𝐶 makes this integral finite and continuous in the Schwartz topology. It is not asserted
+to be continuous in the supremum norm.
+Theorem 1.22.3 (Arithmetic GNS representation). The map 𝑇𝑐 is an injective ∗-homomorphism,
+and 𝑊𝑐 = 𝜔𝑐 ◦ 𝑇𝑐 . The functional 𝜔𝑐 is positive with zero GNS null space. Its GNS Hilbert space and
+algebraic invariant domain are
+
+                                    𝐻𝑐 = 𝐿 2 (ℝ, 𝜇𝑐 ) ,             𝐷 𝑐 = S (ℝ) ⊂ 𝐻𝑐 ,
+
+with action ( 𝜋𝑐 ( 𝑏 ) ℎ) ( 𝑡 ) = 𝑏 ( 𝑡 ) ℎ ( 𝑡 ). Every 𝜋𝑐 ( 𝑏 ) extends boundedly, with ∥ 𝜋𝑐 ( 𝑏 ) ∥ = sup𝑡 ∈ℝ | 𝑏 ( 𝑡 )|.
+The image 𝑇𝑐 (A 𝜁 ) is dense in 𝐻𝑐 . Thus the GNS isometry [ 𝑓 ] ↦→ 𝑓b for 𝑊𝑐 is onto after Hilbert
+completion. Neither 𝑊𝑐 nor 𝜔𝑐 admits a positive unitization of finite mass.
+
+Proof. For 𝑔 ∈ A 𝜁 , every derivative of 𝑢𝑗 𝑔 ( 𝑢) is integrable. Fourier differentiation and repeated in-
+tegration by parts therefore show 𝑔b ∈ S (ℝ). The product and involution identities in (1.34) prove
+that 𝑇𝑐 is a ∗-homomorphism. Fourier inversion proves its injectivity, and (1.76) proves the equality of
+functionals. The identity                         ∫
+                                             𝜔𝑐 ( 𝑏 ∗ 𝑏 ) =        | 𝑏 ( 𝑡 )| 2 𝑑𝜇𝑐 ( 𝑡 )
+                                                               ℝ
+proves positivity and identifies its null space as zero.
+    Smooth compactly supported functions are dense in 𝐻𝑐 . Indeed, truncate a vector’s support and size
+first. The resulting bounded functions of compact support belong to ordinary 𝐿 2 ( 𝑑𝑡 ) and approximate
+the vector in 𝐻𝑐 by dominated convergence. Approximate them in 𝐿 2 ( 𝑑𝑡 ) by smooth compactly sup-
+ported functions. The bound 𝑑𝜇𝑐 ≤ (2𝐶 / 𝜋 ) 𝑑𝑡 transfers this approximation to 𝐻𝑐 . For this ordinary
+approximation, step functions are dense in 𝐿 2 ( 𝑑𝑡 ), and smooth ramps replace their interval endpoints
+on sets of vanishing measure. It follows that 𝐷 𝑐 has Hilbert completion 𝐻𝑐 . Multiplication preserves
+𝐷 𝑐 and satisfies the adjoint identity there. Its norm is at most sup | 𝑏 |. Every interval has positive 𝜇𝑐
+measure. A bump function in an interval where | 𝑏 | > sup | 𝑏 | − 𝜖 gives the reverse norm bound, after
+normalization and then 𝜖 ↓ 0.
+Chapter 1. Arithmetic forms and operator domains                                                              42
+
+
+   To prove density of the image, take 𝑏 ∈ 𝐶𝑐∞ (ℝ) and let 𝑓 be its inverse Fourier transform. Integration
+by parts shows that 𝑓 ∈ S (ℝ) and 𝑓b = 𝑏 . Choose a smooth cutoff 𝜒 equal to one on [−1, 1] and
+supported in [−2, 2]. Then 𝑓𝑗 ( 𝑢) = 𝜒 ( 𝑢/𝑗 ) 𝑓 ( 𝑢) belongs to 𝐶𝑐∞ (ℝ) ⊂ A 𝜁 and converges to 𝑓 in every
+Schwartz seminorm. Fourier differentiation and integration by parts show that 𝑓b𝑗 → 𝑏 in every Schwartz
+seminorm. In particular, this convergence holds in 𝐻𝑐 . The preceding density proves the assertion about
+the GNS isometry.
+   Finally, evaluate 𝑊𝑐 on the Gaussians 𝑔𝑎 as 𝑎 ↓ 0. Since every contributing 𝑛 is at least two,
+                                                 1 ∑︁                       2
+                                                         𝑐𝑛 1 − 𝑒 − (log 𝑛 ) /(4 𝑎 )
+                                                                                     
+                                    𝑊𝑐 ( 𝑔𝑎 ) = √
+                                                𝜋 𝑎 𝑛 ≥2
+                                                𝐶                    2
+                                                                               
+                                             =√      1 + 𝑂 𝑒 − (log 2) /(4 𝑎 ) ,                          (1.78)
+                                                𝜋𝑎
+                                           2   √
+                               |𝑊𝑐 ( 𝑔𝑎 )|      2𝐶
+                                             ∼ √ 𝑎 −1/2 −→ ∞.
+                                𝑊𝑐 ( 𝑔2 𝑎 )       𝜋
+The unitization inequality (1.60) excludes any finite mass. A positive unitization of 𝜔𝑐 would pull back
+through 𝑇𝑐 to one of 𝑊𝑐 , so it is excluded as well.
+
+    The weight can also be defined on the positive cone of 𝐿 ∞ ( 𝜇𝑐 ) by Φ𝑐 ( 𝑏 ) = 𝑏 𝑑𝜇𝑐 ∈ [0, ∞]. Its
+                                                                                           ∫
+
+finite linear ideal is 𝔪𝑐 = 𝐿 1 ( 𝜇𝑐 ) ∩ 𝐿 ∞ ( 𝜇𝑐 ). This ideal is closed under conjugation and multiplication by
+bounded functions. Its square-integrable ideal is 𝔫 𝑐 = 𝐿 2 ( 𝜇𝑐 ) ∩ 𝐿 ∞ ( 𝜇𝑐 ). For 𝑏 ∈ 𝔫 𝑐 , one has 𝑏 ∗ 𝑏 ∈ 𝔪𝑐
+and Φ𝑐 ( 𝑏 ∗ 𝑏 ) = ∥ 𝑏 ∥ 2𝐻𝑐 . Bounded functions supported on finite intervals approximate any vector in 𝐻𝑐 .
+Moreover, restricting a nonnegative bounded function to these intervals gives increasing finite-weight
+functions with that function as their limit. These statements specify the finite ideals without assigning a
+finite value to the identity. Equation (1.78) implies Φ𝑐 (1) = ∞.
+    Although every Schwartz multiplier is bounded, the functional has no finite-norm representing vector
+in any invariant ∗-representation domain. Such a vector would give |𝑊𝑐 ( 𝑔 )| 2 ≤ ∥ Ω ∥ 2𝑊𝑐 ( 𝑔 ∗ ★ 𝑔 ) by
+Cauchy–Schwarz, contrary to (1.78). The positive functional is defined on the proper algebra 𝔅𝑐 . It
+does not extend positively to its entire 𝐶 ∗ completion. Such an extension would admit a finite positive
+unitization by Theorem 1.15.1, contrary to the proved divergence.
+
+1.22.2   Frequency multipliers on a common invariant domain
+There is a natural unbounded multiplier compatible with this arithmetic representation: the real Fourier
+coordinate 𝑡 . For clarity, it is a multiplier of 𝔅𝑐 , not an element of it. Its powers cannot be inserted as
+finite-weight observables. Put
+
+                ( 𝑁 ℎ) ( 𝑡 ) = 𝑡ℎ ( 𝑡 ) ,          D ( 𝑁 ) = { ℎ ∈ 𝐻𝑐 : 𝑡ℎ ∈ 𝐻𝑐 },
+                         ∞
+                               \          𝑘
+                     𝐷 𝑐 = { ℎ ∈ 𝐻𝑐 : 𝑡 ℎ ∈ 𝐻𝑐 } .                                                        (1.79)
+                             𝑘 ≥0
+
+Proposition 1.22.4 (Self-adjoint frequency and all products). The operator 𝑁 is unbounded
+and self-adjoint. Schwartz functions form a core for every power 𝑁 𝑘 . The space 𝐷 𝑐∞ is dense and
+complete for the seminorms ∥ 𝑡 𝑘 ℎ ∥ 𝐻𝑐 , 𝑘 ≥ 0. It is invariant under 𝑁 , polynomial multipliers, Schwartz
+multipliers, and 𝑈𝑠 ℎ ( 𝑡 ) = 𝑒 𝑖 𝑠𝑡 ℎ ( 𝑡 ) for every real 𝑠 . All products and adjoint identities hold on this
+common domain. The image 𝑇𝑐 (A 𝜁 ) is dense in 𝐷 𝑐∞ for these seminorms. On that image, 𝑁 𝑇𝑐 ( 𝑓 ) =
+𝑇𝑐 ( 𝑖𝜕𝑢 𝑓 ) and 𝑈𝑠𝑇𝑐 ( 𝑓 ) = 𝑇𝑐 ( 𝜏𝑠 𝑓 ).
+Chapter 1. Arithmetic forms and operator domains                                                                     43
+
+
+Proof. Multiplication by a measurable real function on its maximal domain is closed in this case: take
+an almost-everywhere convergent subsequence of a convergent pair ℎ𝑗 → ℎ, 𝑡ℎ𝑗 → 𝑣 in 𝐻𝑐 . Its limits
+obey 𝑣 = 𝑡ℎ. To construct such a subsequence, choose successive errors with summable squared norms
+and apply the integral bound to their squared sum.
+    The operator is symmetric. If 𝑣 belongs to its adjoint domain, the adjoint identity tested on all
+bounded functions of compact support forces 𝑁 ∗ 𝑣 = 𝑡𝑣 almost everywhere. Those tests belong to
+D ( 𝑁 ), and on each compact interval both sides are integrable against them by Cauchy–Schwarz. Thus
+𝑡𝑣 ∈ 𝐻𝑐 and 𝑣 ∈ D ( 𝑁 ). This proves self-adjointness. The same argument applies to multiplication
+by 𝑡 𝑘 . Support and size truncation followed by smooth approximation gives density of 𝐶𝑐∞ in its graph
+norm, because (1 + 𝑡 2𝑘 ) 𝜆𝑐 ( 𝑡 ) is bounded on each compact interval. It follows that Schwartz functions
+form a core. Normalized bumps supported in ( 𝑅, 𝑅 + 1) have ∥ 𝑁 ℎ ∥ ≥ 𝑅 ∥ ℎ ∥, so 𝑁 is unbounded.
+    A Cauchy sequence in all the displayed seminorms has a Hilbert limit ℎ and limits for every 𝑡 𝑘 ℎ𝑗 .
+Closedness of each multiplication operator identifies these limits as 𝑡 𝑘 ℎ and proves completeness. Sup-
+port truncation and smooth approximation give density of Schwartz functions simultaneously in any
+finite collection of the seminorms. Polynomial multiplication only increases their indices. A Schwartz
+multiplier 𝑏 obeys ∥ 𝑡 𝑘 𝑏ℎ ∥ ≤ ∥ 𝑏 ∥ ∞ ∥ 𝑡 𝑘 ℎ ∥, and 𝑈𝑠 preserves each seminorm. These estimates prove invari-
+ance and continuity. Pointwise multiplication and conjugation prove all product and adjoint identities
+on 𝐷 𝑐∞ .
+    For 𝑏 ∈ S , the cutoff construction in the preceding theorem approximates 𝑏 by transforms of com-
+pactly supported smooth functions in the Schwartz topology. That topology controls every seminorm
+in (1.79), since 𝜆𝑐 is bounded. This proves the image density. Integration by parts gives 𝑖𝜕   𝑢 𝑓 ( 𝑡 ) = 𝑡 𝑓 ( 𝑡 ),
+                                                                                               d             b
+and a change of variable gives 𝜏c   𝑠 𝑓 ( 𝑡 ) = 𝑒 𝑓 ( 𝑡 ). Both 𝑖𝜕𝑢 𝑓 and 𝜏𝑠 𝑓 remain in A 𝜁 .
+                                                 𝑖 𝑠𝑡 b
+
+    Dominated convergence makes (𝑈𝑠 ) 𝑠 ∈ℝ a strongly continuous unitary group on 𝐻𝑐 . For ℎ ∈ D ( 𝑁 ),
+the estimate |( 𝑒 𝑖 𝑠𝑡 − 1)/ 𝑠 | ≤ | 𝑡 | gives (𝑈𝑠 ℎ − ℎ)/ 𝑠 → 𝑖 𝑁 ℎ in 𝐻𝑐 . Conversely, a convergent difference
+quotient has almost-everywhere limit 𝑖𝑡ℎ along a subsequence, so its Hilbert limit requires 𝑡ℎ ∈ 𝐻𝑐 .
+Thus its generator domain is exactly D ( 𝑁 ). The smaller domain 𝐷 𝑐∞ permits every polynomial in this
+generator. For the Schwartz algebra alone, its common GNS graph completion is all of 𝐻𝑐 , since each of
+its multipliers is bounded. These two domain statements refer to different multiplier algebras.
+
+1.22.3   The sum over all primes and the native comparison
+For 𝑋 ≥ 2 and a real exponent 𝜎 , set
+
+                         ΛvM ( 𝑛) 𝑛− 𝜎 ,                                       ΛvM ( 𝑛) 𝑛− 𝜎 ∥ 𝑓 − 𝜏log 𝑛 𝑓 ∥ 22 .
+                    ∑︁                                               ∑︁
+          𝐶𝑋 ,𝜎 =                                  𝑞 𝑋 ,𝜎 ( 𝑓 ) =
+                      2≤ 𝑛 ≤ 𝑋                                      2≤ 𝑛 ≤ 𝑋
+
+These forms are defined for every 𝑓 ∈ 𝐿 2 (ℝ, 𝑑𝑢). Increasing 𝑋 increases their values. The native expo-
+nent is 𝜎 = 1/2.
+Chapter 1. Arithmetic forms and operator domains                                                            44
+
+
+Theorem 1.22.5 (The exact convergence boundary for the positive prime sum). For 𝜎 > 1, the
+coefficient sum 𝐶𝜎 = 𝑛 ≥2 ΛvM ( 𝑛) 𝑛− 𝜎 is finite. It therefore defines the positive carrier above with all
+                    P
+primes present. Moreover,
+
+                                0 ≤ 𝑞 𝜎 ( 𝑓 ) := lim 𝑞 𝑋 ,𝜎 ( 𝑓 ) ≤ 4𝐶𝜎 ∥ 𝑓 ∥ 22 .
+                                                 𝑋 →∞
+
+For every real 𝜎 ≤ 1 and every nonzero 𝑓 ∈ 𝐿 2 (ℝ),
+
+                                             lim 𝑞 𝑋 ,𝜎 ( 𝑓 ) = +∞.                                     (1.80)
+                                            𝑋 →∞
+
+Thus the finite domain of the increasing limit form is {0} when 𝜎 ≤ 1. It is not a densely defined
+quadratic form on 𝐿 2 (ℝ).
+
+Proof. For 𝜎 > 1, use 0 ≤ ΛvM ( 𝑛) ≤ log 𝑛 and the integral comparison for (log 𝑛) 𝑛− 𝜎 . The bound
+                                                                              P
+∥ 𝑓 − 𝜏𝑣 𝑓 ∥ 2 ≤ 2∥ 𝑓 ∥ 2 proves the stated estimate.
+    For divergence of the coefficients, prime factorization gives 𝑑 | 𝑚 ΛvM ( 𝑑 ) = log 𝑚. For an integer
+                                                                 P
+𝑀 ≥ 4, sum this identity over 𝑚 ≤ 𝑀 to obtain
+
+                                                           ∑︁ ΛvM ( 𝑛)
+                                         𝑀               𝑀
+                                                    𝑀
+                                           ΛvM ( 𝑛)
+                                         ∑︁
+                           log( 𝑀 !) =                  ≤𝑀             .
+                                       𝑛=2          𝑛      𝑛=2  𝑛
+
+The last ⌈ 𝑀 /2⌉ factorial factors are at least 𝑀 /2. Hence the last sum is at least 21 log( 𝑀 /2) and tends
+to infinity. For 𝜎 ≤ 1, 𝑛− 𝜎 ≥ 𝑛−1 , so 𝐶𝑋 ,𝜎 → ∞ as well.
+    Finally, ⟨ 𝑓 , 𝜏𝑣 𝑓 ⟩2 → 0 as 𝑣 → +∞. To prove this, approximate 𝑓 in 𝐿 2 by a function ℎ supported
+in a fixed finite interval. For sufficiently large 𝑣 , ℎ and 𝜏𝑣 ℎ have disjoint supports. Cauchy–Schwarz
+bounds the difference between their correlation and that of 𝑓 by ∥ 𝑓 − ℎ ∥ 2 (∥ 𝑓 ∥ 2 + ∥ ℎ ∥ 2 ), uniformly
+in 𝑣 . The approximation error can tend to zero. It follows that ∥ 𝑓 − 𝜏log 𝑛 𝑓 ∥ 22 → 2∥ 𝑓 ∥ 22 as 𝑛 → ∞. For
+𝑓 ≠ 0, these squared norms are at least ∥ 𝑓 ∥ 22 for every sufficiently large 𝑛. The divergent coefficient tail
+proves (1.80).
+
+   The damping exponent changes the coefficients and therefore changes the functional. For 𝜎 > 1, the
+Euler product in (1.9) also writes its positive Fourier density as
+                                               ′
+                                                             𝜁′
+                                                                      
+                                                𝜁
+                                 𝜆 𝜎 ( 𝑡 ) = 2 − ( 𝜎 ) + Re ( 𝜎 − 𝑖𝑡 ) .
+                                                 𝜁            𝜁
+This equality uses only absolutely convergent Dirichlet series. Continuation of its right side beyond that
+half-plane does not continue the positive sum in (1.75). Theorem 1.22.5 proves the failure of that sum
+already at 𝜎 = 1.
+                                                                                                       √
+    For the exact comparison with 𝐿 𝜁 , put 𝐶𝑋 = 𝐶𝑋 ,1/2 and let 𝑊𝑋 have coefficients 𝑐𝑛 = ΛvM ( 𝑛)/ 𝑛
+for 𝑛 ≤ 𝑋 , zero otherwise. Retain the polar and archimedean functional
+                                                     ∫
+                                                   1                                    
+              𝑅∞ ( 𝑔 ) = 𝑔b( 𝑖 /2) + 𝑔b(− 𝑖 /2) +      𝑔b( 𝑡 ) Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 𝑑𝑡.
+                                                  2𝜋 ℝ
+Chapter 1. Arithmetic forms and operator domains                                                         45
+
+
+Proposition 1.22.6 (Subtraction and the remaining arithmetic form). For every 𝑔 ∈ A 𝜁 ,
+
+                          𝐿 𝜁 ( 𝑔 ) = 𝑊𝑋 ( 𝑔 ) + 𝑅∞ ( 𝑔 ) − 2𝐶𝑋 𝑔 (0)
+                                        ∑︁ ΛvM ( 𝑛)                                                  (1.81)
+                                      −         √       𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                                        𝑛> 𝑋      𝑛
+
+The tail tends to zero as 𝑋 → ∞. Consequently
+
+                                             ∑︁ ΛvM ( 𝑛)                        
+                 lim 𝑊𝑋 ( 𝑔 ) − 2𝐶𝑋 𝑔 (0) = −      √      𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                𝑋 →∞                          𝑛 ≥2   𝑛
+
+The functional on the right is strictly negative on every Gaussian convolution square. For each nonzero
+𝑓 ∈ A𝜁 ,
+                                   𝑅∞ ( 𝑓 ∗ ★ 𝑓 ) − 2𝐶𝑋 ∥ 𝑓 ∥ 22 −→ −∞.                           (1.82)
+Thus the full functional cannot be obtained as the increasing limit of these positive prime forms, or by
+adding a positive residual to each sufficiently large cutoff.
+
+Proof. Substitute the definition of 𝑊𝑋 into (1.39). This gives (1.81) with its stated signs. Choose 𝑎 > 1/2
+such that 𝑔 ∈ A 𝑎 . Lemma 1.3.1 bounds the absolute tail by
+                                           ∑︁
+                                       𝐾𝑔       (log 𝑛) 𝑛− 𝑎 −1/2 ,
+                                             𝑛> 𝑋
+
+which tends to zero because 𝑎 + 1/2 > 1. The Gaussian 𝑔2𝑏 is strictly positive at every real argument. At
+least the 𝑛 = 2 term is nonzero, so the negative prime sum on 𝑔2𝑏 = 𝑔𝑏∗ ★ 𝑔𝑏 is strictly negative. The
+value 𝑅∞ ( 𝑓 ∗ ★ 𝑓 ) is finite and independent of 𝑋 . Since 𝐶𝑋 → ∞ and ∥ 𝑓 ∥ 2 > 0, (1.82) follows. The
+full residual 𝐿 𝜁 − 𝑊𝑋 differs from this expression on the chosen square by a tail tending to zero. It is
+therefore negative there for every sufficiently large 𝑋 .
+
+    The construction gives an arithmetic ∗-homomorphism and a positive functional with the required
+failure of finite mass. Its pullback is 𝑊𝑐 , with the exact diagonal compensation specified above. For every
+fixed summable coefficient family, the Gaussian asymptotics also distinguish this pullback from the full
+Weil functional:
+                                  𝑊𝑐 ( 𝑔𝑎 )        4𝐶
+                                             ∼            −→ 0        ( 𝑎 ↓ 0) .
+                                  𝐿 𝜁 ( 𝑔𝑎 ) log(1/ 𝑎)
+This follows by dividing (1.78) by (1.66). The equality 𝐿 𝜁 = 𝜔 ◦ 𝑇 still requires a construction that
+combines the prime, polar, and archimedean terms before asserting positivity. Equation (1.81) states the
+entire missing comparison. A representation of quantum currents would additionally have to identify
+their products and involution with this numerical carrier on a common domain. No formal completion,
+change of exponent, or removal of a divergent diagonal term supplies either identification.
+

@@ -1,0 +1,70 @@
+{
+  "source_aggregate_sha256": "a677f7c46a6ee524a3f70458112aae58ddbac01e5bedd10bc48dec79bb716eab",
+  "pdf_sha256": "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338",
+  "renderer": "pdftoppm 120 dpi PNG",
+  "inspected_pages": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54
+  ],
+  "observations": [
+    "All equations and text are readable, with no clipping, overlap, missing glyphs, or exposed technical paths.",
+    "Page 45 is the unchanged inherited transition.",
+    "Pages 46 and 47 retain both full Euler factors and readable occupation formulas.",
+    "Pages 48 through 50 state the operators, common domain, involution, and current relations without layout defects.",
+    "Pages 51 and 52 have complete paragraph endings after the final spacing correction.",
+    "Pages 52 and 53 display the full-functional comparison and its limitation.",
+    "Page 54 contains a readable primary-source citation with a mathematical bibliography heading."
+  ],
+  "manuscript_firewall": "The inspected pages and PDF metadata contain mathematical exposition only.",
+  "acceptance_scope": "Visual inspection only. No independent mathematical verdict is asserted.",
+  "rendered_images": [
+    {
+      "path": "build/page-45.png",
+      "sha256": "9d064edb456301f65b29b54d8b697690c566b56e8abb13788eabba60e192b90a"
+    },
+    {
+      "path": "build/page-46.png",
+      "sha256": "dcf0c8c964c930885f7b0b7502dcbc1d813a710ec0c59949ec75d672ad1eb9a3"
+    },
+    {
+      "path": "build/page-47.png",
+      "sha256": "9683f5e0188b9d785136979f1142dd14d3be6cd62cb523eaf54edbce1111034b"
+    },
+    {
+      "path": "build/page-48.png",
+      "sha256": "af40c512d19504d2e76e676cfd86160442e145e17bcd166cf2cd99ea3a73666b"
+    },
+    {
+      "path": "build/page-49.png",
+      "sha256": "88dc0bcfb2c034f08683418f20c4bcafd503b6337b958237763860a240e25bc9"
+    },
+    {
+      "path": "build/page-50.png",
+      "sha256": "dae01e39b9f55d9a443fb11a5e36da405667e3e883edca9a5b0586449b5bec78"
+    },
+    {
+      "path": "build/page-51.png",
+      "sha256": "f577d8ffcb043c2689330ae3877975f9a7c95bf38cb8d95c0322c1538cd1e69c"
+    },
+    {
+      "path": "build/page-52.png",
+      "sha256": "ebd5b6460ddb5359f2a86f0fdace33e9982a4a7ba8c573dc375781c77d2b5a9b"
+    },
+    {
+      "path": "build/page-53.png",
+      "sha256": "db249b8892a36594d9507f7c90c57b70598da7bf93ba353e6e1da165c698155e"
+    },
+    {
+      "path": "build/page-54.png",
+      "sha256": "808cc814998069d7f957fbc25cfea7cc671bf420fe2d6a8fb21ee36dfc38bfb3"
+    }
+  ]
+}

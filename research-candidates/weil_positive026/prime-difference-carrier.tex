@@ -1,0 +1,556 @@
+\section{Positive arithmetic forms from prime translations}
+\label{sec:wp-prime-translations}
+
+The negative prime coefficients admit a positive realization after an
+explicit diagonal compensation.
+The compensation is forced by positivity, even for a single prime.
+This gives a nonunital arithmetic carrier with infinite mass and determines
+the obstruction to summing its positive forms over all primes.
+The comparison uses the convolution algebra $\cA_\zeta$ and the Fourier
+normalization of \eqref{eq:fourier} throughout.
+All spaces and algebras in this section are complex and have degree zero.
+There is no formal parameter or change of coefficient field.
+
+For $v\in\R$, let $(\tau_v f)(u)=f(u-v)$.
+Lebesgue measure makes $\tau_v$ unitary on $L^2(\R,du)$.
+If $f\in\cA_\zeta$ and $g=f^*\star f$, direct substitution gives
+\begin{equation}
+ g(0)=\|f\|_2^2,\qquad
+ g(v)=\langle f,\tau_v f\rangle_2,\qquad
+ \|f-\tau_v f\|_2^2=2g(0)-g(v)-g(-v).
+ \label{eq:wp-translation-square}
+\end{equation}
+The inner product is linear in its first argument.
+The reflected value satisfies $g(-v)=\overline{g(v)}$.
+These identities follow from absolutely convergent integrals, since
+$\cA_\zeta\subset L^2(\R)$.
+
+\begin{example}[One prime and one Gaussian]
+\label{ex:wp-prime-two}
+Retain only $n=2$, with the native coefficient
+$c=\log 2/\sqrt 2$ and translation length $\ell=\log 2$.
+Define
+\[
+ W_{\{2\}}(g)=c\bigl(2g(0)-g(\ell)-g(-\ell)\bigr).
+\]
+Equation~\eqref{eq:wp-translation-square} gives
+$W_{\{2\}}(f^*\star f)=c\|f-\tau_\ell f\|_2^2\geq0$.
+For the normalized Gaussian $f=g_a$ with $a=\ell^2/8$,
+\begin{equation}
+ \begin{aligned}
+ W_{\{2\}}(g_{2a})&=\sqrt{\frac2\pi}(1-e^{-1}),\\
+ -c\bigl(g_{2a}(\ell)+g_{2a}(-\ell)\bigr)
+ &=-\sqrt{\frac2\pi}e^{-1},\\
+ 2c\,g_{2a}(0)&=\sqrt{\frac2\pi}.
+ \end{aligned}
+ \label{eq:wp-prime-two-values}
+\end{equation}
+Indeed, $g_{2a}(0)=1/(\sqrt\pi\ell)$ and
+$g_{2a}(\ell)=e^{-1}g_{2a}(0)$.
+Thus the raw prime term is already negative on this convolution square.
+Its positive realization includes the displayed nonzero diagonal term.
+\end{example}
+
+The same prime gives a two-dimensional calculation with an exact Gram
+matrix.  Keep $a=\ell^2/8$, put $x=e^{-1}$, and use the ordered vectors
+$f_0=g_a$, $f_1=\tau_\ell g_a$.
+The Hermitian form $B(f,h)=W_{\{2\}}(h^*\star f)$ has matrix
+\begin{equation}
+ G=\frac1{\sqrt{2\pi}}
+ \begin{pmatrix}
+ 2(1-x)&2x-1-x^4\\
+ 2x-1-x^4&2(1-x)
+ \end{pmatrix}.
+ \label{eq:wp-two-vector-gram}
+\end{equation}
+To compute its off-diagonal entry, expand
+$c\langle f_0-\tau_\ell f_0,
+\tau_\ell f_0-\tau_{2\ell}f_0\rangle_2$.
+The four correlations give
+$c(2g_{2a}(\ell)-g_{2a}(0)-g_{2a}(2\ell))$.
+The eigenvalues of $\sqrt{2\pi}G$ are
+\[
+ 1-x^4,\qquad 3-4x+x^4=(1-x)^2(x^2+2x+3).
+\]
+Both are positive because $0<x<1$.
+This calculation retains the actual prime weight, convolution involution,
+and off-diagonal pairing on the two displayed test functions.
+
+Let $(c_n)_{n\geq2}$ be nonnegative real numbers satisfying
+\[
+ 0<C:=\sum_{n\geq2}c_n<\infty.
+\]
+Only indices with $c_n>0$ contribute.
+The cases of interest retain the native weights
+$\Lambda_{\mathrm{vM}}(n)/\sqrt n$ on finitely many prime powers,
+or on every power of finitely many primes.
+Define
+\begin{equation}
+ \begin{aligned}
+ W_c(g)&=\sum_{n\geq2}c_n
+       \bigl(2g(0)-g(\log n)-g(-\log n)\bigr),\\
+ \lambda_c(t)&=\sum_{n\geq2}c_n|1-e^{it\log n}|^2
+       =2\sum_{n\geq2}c_n(1-\cos(t\log n)),\\
+ d\mu_c(t)&=\lambda_c(t)\,\frac{dt}{2\pi}.
+ \end{aligned}
+ \label{eq:wp-positive-density}
+\end{equation}
+The coefficient sum makes the first series absolutely convergent for
+bounded $g$, and the second uniformly convergent on $\R$.
+Consequently $\lambda_c$ is continuous and $0\leq\lambda_c\leq4C$.
+Choosing any $n_0$ with $c_{n_0}>0$ shows that its zeros belong to
+$\{2\pi k/\log n_0:k\in\Z\}$.
+It is therefore positive almost everywhere.
+When all coefficients vanish, $W_c$ and $\mu_c$ are zero.
+That degenerate case has a zero Hilbert space and admits finite positive
+unitizations.  The hypothesis $C>0$ excludes it in the following statements.
+
+\begin{theorem}[The arithmetic positive form and its least compensation]
+\label{thm:wp-positive-form}
+For every $g\in\cA_\zeta$ and $f\in\cA_\zeta$,
+\begin{equation}
+ \begin{aligned}
+ W_c(g)&=\int_{\R}\widehat g(t)\,d\mu_c(t),\\
+ W_c(f^*\star f)
+ &=\sum_{n\geq2}c_n\|f-\tau_{\log n}f\|_2^2
+   =\int_{\R}|\widehat f(t)|^2\,d\mu_c(t).
+ \end{aligned}
+ \label{eq:wp-positive-realization}
+\end{equation}
+The second value is strictly positive for $f\ne0$.
+For real $d$, define
+\[
+ V_d(g)=d\,g(0)-\sum_{n\geq2}c_n
+                         \bigl(g(\log n)+g(-\log n)\bigr).
+\]
+Then $V_d(f^*\star f)\geq0$ for every $f\in\cA_\zeta$
+if and only if $d\geq2C$.
+\end{theorem}
+\begin{proof}
+Fourier inversion gives
+\[
+ 2g(0)-g(v)-g(-v)
+ =\frac1{2\pi}\int_{\R}\widehat g(t)(2-e^{-itv}-e^{itv})\,dt.
+\]
+Since $\widehat g$ is integrable and $\sum c_n=C$, an integrable
+bound $4C|\widehat g(t)|$ permits summation inside the integral.
+This proves the first identity in \eqref{eq:wp-positive-realization}.
+Apply it to $g=f^*\star f$ and use
+$\widehat{f^*\star f}=|\widehat f|^2$ on the real axis.
+Equation~\eqref{eq:wp-translation-square} gives the other expression.
+If its value is zero, $\widehat f$ vanishes almost everywhere because
+$\lambda_c>0$ almost everywhere.
+Continuity and Fourier inversion then give $f=0$.
+
+For $d\geq2C$, the identity
+$V_d(f^*\star f)=W_c(f^*\star f)+(d-2C)\|f\|_2^2$
+proves positivity.
+Conversely, use $f=g_A$ and divide by the positive number $g_{2A}(0)$.
+The Gaussian formula gives
+\[
+ \frac{V_d(g_{2A})}{g_{2A}(0)}
+ =d-2\sum_{n\geq2}c_n e^{-(\log n)^2/(8A)}
+ \longrightarrow d-2C\qquad(A\to\infty).
+\]
+The summable coefficients justify the limit.
+If $d<2C$, the value is negative for sufficiently large $A$.
+\end{proof}
+
+Every power of one prime can be retained without a cutoff.
+For a prime $p$, put $r=p^{-1/2}$, $\theta=t\log p$, and
+$c_{p^m}=\log p\,r^m$ for $m\geq1$, with all other coefficients zero.
+Then
+\begin{equation}
+ C_p=\frac{\log p\,r}{1-r},\qquad
+ \lambda_p(t)=
+ \frac{2\log p\,r(1+r)(1-\cos\theta)}
+ {(1-r)(1-2r\cos\theta+r^2)}.
+ \label{eq:wp-euler-density}
+\end{equation}
+To verify the expression, sum $\sum_{m\geq1}r^m=r/(1-r)$ and
+take the real part of $\sum_{m\geq1}(re^{i\theta})^m$.
+The latter real part is
+$(r\cos\theta-r^2)/(1-2r\cos\theta+r^2)$.
+Subtracting gives \eqref{eq:wp-euler-density}.
+Its denominator is positive because $0<r<1$.
+This constructs the positive form of one complete local Euler factor,
+with exactly its prime-power coefficients and least diagonal compensation.
+
+\subsection{A nonunital algebra and its Hilbert completion}
+
+Let $\mathscr S(\R)$ be the space of smooth functions $b$ such that
+\[
+ \sup_{t\in\R}(1+|t|)^j|b^{(k)}(t)|<\infty
+ \qquad(j,k\geq0).
+\]
+These seminorms specify its topology.
+Use pointwise multiplication and the involution
+$b^*(t)=\overline{b(t)}$.
+The product rule makes $\mathscr S(\R)$ a complex $*$-algebra.
+It has no identity: a pointwise identity must equal one wherever
+$e^{-t^2}$ is nonzero, whereas Schwartz functions tend to zero at infinity.
+Define
+\begin{equation}
+ \mathfrak B_c=\mathscr S(\R),\qquad
+ \omega_c(b)=\int_{\R}b(t)\,d\mu_c(t),\qquad
+ T_c:\cA_\zeta\longrightarrow\mathfrak B_c,
+ \quad T_c(g)=\widehat g|_{\R}.
+ \label{eq:wp-carrier}
+\end{equation}
+The bound $\lambda_c\leq4C$ makes this integral finite and continuous
+in the Schwartz topology.
+It is not asserted to be continuous in the supremum norm.
+
+\begin{theorem}[Arithmetic GNS representation]
+\label{thm:wp-carrier}
+The map $T_c$ is an injective $*$-homomorphism, and
+$W_c=\omega_c\circ T_c$.
+The functional $\omega_c$ is positive with zero GNS null space.
+Its GNS Hilbert space and algebraic invariant domain are
+\[
+ H_c=L^2(\R,\mu_c),\qquad D_c=\mathscr S(\R)\subset H_c,
+\]
+with action $(\pi_c(b)h)(t)=b(t)h(t)$.
+Every $\pi_c(b)$ extends boundedly, with
+$\|\pi_c(b)\|=\sup_{t\in\R}|b(t)|$.
+The image $T_c(\cA_\zeta)$ is dense in $H_c$.
+Thus the GNS isometry $[f]\mapsto\widehat f$ for $W_c$ is onto
+after Hilbert completion.
+Neither $W_c$ nor $\omega_c$ admits a positive unitization of finite mass.
+\end{theorem}
+\begin{proof}
+For $g\in\cA_\zeta$, every derivative of $u^j g(u)$ is integrable.
+Fourier differentiation and repeated integration by parts therefore show
+$\widehat g\in\mathscr S(\R)$.
+The product and involution identities in \eqref{eq:transform} prove
+that $T_c$ is a $*$-homomorphism.
+Fourier inversion proves its injectivity, and
+\eqref{eq:wp-positive-realization} proves the equality of functionals.
+The identity
+\[
+ \omega_c(b^*b)=\int_{\R}|b(t)|^2\,d\mu_c(t)
+\]
+proves positivity and identifies its null space as zero.
+
+Smooth compactly supported functions are dense in $H_c$.
+Indeed, truncate a vector's support and size first.
+The resulting bounded functions of compact support belong to ordinary
+$L^2(dt)$ and approximate the vector in $H_c$ by dominated convergence.
+Approximate them in $L^2(dt)$ by smooth compactly supported functions.
+The bound $d\mu_c\leq(2C/\pi)dt$ transfers this approximation to $H_c$.
+For this ordinary approximation, step functions are dense in $L^2(dt)$,
+and smooth ramps replace their interval endpoints on sets of vanishing measure.
+It follows that $D_c$ has Hilbert completion $H_c$.
+Multiplication preserves $D_c$ and satisfies the adjoint identity there.
+Its norm is at most $\sup|b|$.
+Every interval has positive $\mu_c$ measure.
+A bump function in an interval where $|b|>\sup|b|-\epsilon$
+gives the reverse norm bound, after normalization and then
+$\epsilon\downarrow0$.
+
+To prove density of the image, take $b\in C_c^\infty(\R)$ and
+let $f$ be its inverse Fourier transform.
+Integration by parts shows that $f\in\mathscr S(\R)$ and $\widehat f=b$.
+Choose a smooth cutoff $\chi$ equal to one on $[-1,1]$ and supported
+in $[-2,2]$.
+Then $f_j(u)=\chi(u/j)f(u)$ belongs to $C_c^\infty(\R)\subset\cA_\zeta$
+and converges to $f$ in every Schwartz seminorm.
+Fourier differentiation and integration by parts show that
+$\widehat f_j\to b$ in every Schwartz seminorm.
+In particular, this convergence holds in $H_c$.
+The preceding density proves the assertion about the GNS isometry.
+
+Finally, evaluate $W_c$ on the Gaussians $g_a$ as $a\downarrow0$.
+Since every contributing $n$ is at least two,
+\begin{equation}
+ \begin{aligned}
+ W_c(g_a)&=\frac1{\sqrt{\pi a}}
+       \sum_{n\geq2}c_n\bigl(1-e^{-(\log n)^2/(4a)}\bigr)\\
+ &=\frac{C}{\sqrt{\pi a}}
+       \left(1+O\left(e^{-(\log2)^2/(4a)}\right)\right),\\
+ \frac{|W_c(g_a)|^2}{W_c(g_{2a})}
+ &\sim\frac{\sqrt2\,C}{\sqrt\pi}\,a^{-1/2}\longrightarrow\infty.
+ \end{aligned}
+ \label{eq:wp-infinite-mass}
+\end{equation}
+The unitization inequality \eqref{eq:unit-criterion} excludes any finite mass.
+A positive unitization of $\omega_c$ would pull back through $T_c$
+to one of $W_c$, so it is excluded as well.
+\end{proof}
+
+The weight can also be defined on the positive cone of $L^\infty(\mu_c)$
+by $\Phi_c(b)=\int b\,d\mu_c\in[0,\infty]$.
+Its finite linear ideal is
+$\mathfrak m_c=L^1(\mu_c)\cap L^\infty(\mu_c)$.
+This ideal is closed under conjugation and multiplication by bounded functions.
+Its square-integrable ideal is
+$\mathfrak n_c=L^2(\mu_c)\cap L^\infty(\mu_c)$.
+For $b\in\mathfrak n_c$, one has $b^*b\in\mathfrak m_c$ and
+$\Phi_c(b^*b)=\|b\|_{H_c}^2$.
+Bounded functions supported on finite intervals approximate any vector
+in $H_c$.
+Moreover, restricting a nonnegative bounded function to these intervals
+gives increasing finite-weight functions with that function as their limit.
+These statements specify the finite ideals without assigning a finite
+value to the identity.
+Equation~\eqref{eq:wp-infinite-mass} implies $\Phi_c(1)=\infty$.
+
+Although every Schwartz multiplier is bounded, the functional has no
+finite-norm representing vector in any invariant $*$-representation domain.
+Such a vector would give
+$|W_c(g)|^2\leq\|\Omega\|^2W_c(g^*\star g)$ by Cauchy--Schwarz,
+contrary to \eqref{eq:wp-infinite-mass}.
+The positive functional is defined on the proper algebra $\mathfrak B_c$.
+It does not extend positively to its entire $C^*$ completion.
+Such an extension would admit a finite positive unitization by
+Theorem~\ref{thm:cstar-unitization}, contrary to the proved divergence.
+
+\subsection{Frequency multipliers on a common invariant domain}
+
+There is a natural unbounded multiplier compatible with this arithmetic
+representation: the real Fourier coordinate $t$.
+For clarity, it is a multiplier of $\mathfrak B_c$, not an element of it.
+Its powers cannot be inserted as finite-weight observables.
+Put
+\begin{equation}
+ \begin{aligned}
+ (Nh)(t)&=t h(t),&
+ \mathcal D(N)&=\{h\in H_c:t h\in H_c\},\\
+ D_c^\infty&=\bigcap_{k\geq0}\{h\in H_c:t^k h\in H_c\}.&&
+ \end{aligned}
+ \label{eq:wp-moment-domain}
+\end{equation}
+
+\begin{proposition}[Self-adjoint frequency and all products]
+\label{prop:wp-domain}
+The operator $N$ is unbounded and self-adjoint.
+Schwartz functions form a core for every power $N^k$.
+The space $D_c^\infty$ is dense and complete for the seminorms
+$\|t^k h\|_{H_c}$, $k\geq0$.
+It is invariant under $N$, polynomial multipliers, Schwartz multipliers,
+and $U_s h(t)=e^{ist}h(t)$ for every real $s$.
+All products and adjoint identities hold on this common domain.
+The image $T_c(\cA_\zeta)$ is dense in $D_c^\infty$ for these seminorms.
+On that image, $N T_c(f)=T_c(i\partial_u f)$ and
+$U_s T_c(f)=T_c(\tau_s f)$.
+\end{proposition}
+\begin{proof}
+Multiplication by a measurable real function on its maximal domain is
+closed in this case: take an almost-everywhere convergent subsequence
+of a convergent pair $h_j\to h$, $t h_j\to v$ in $H_c$.
+Its limits obey $v=th$.
+To construct such a subsequence, choose successive errors with summable
+squared norms and apply the integral bound to their squared sum.
+
+The operator is symmetric.
+If $v$ belongs to its adjoint domain, the adjoint identity tested on all
+bounded functions of compact support forces $N^*v=tv$ almost everywhere.
+Those tests belong to $\mathcal D(N)$, and on each compact interval
+both sides are integrable against them by Cauchy--Schwarz.
+Thus $tv\in H_c$ and $v\in\mathcal D(N)$.
+This proves self-adjointness.
+The same argument applies to multiplication by $t^k$.
+Support and size truncation followed by smooth approximation gives density
+of $C_c^\infty$ in its graph norm, because
+$(1+t^{2k})\lambda_c(t)$ is bounded on each compact interval.
+It follows that Schwartz functions form a core.
+Normalized bumps supported in $(R,R+1)$ have $\|Nh\|\geq R\|h\|$,
+so $N$ is unbounded.
+
+A Cauchy sequence in all the displayed seminorms has a Hilbert limit
+$h$ and limits for every $t^k h_j$.
+Closedness of each multiplication operator identifies these limits as
+$t^k h$ and proves completeness.
+Support truncation and smooth approximation give density of Schwartz
+functions simultaneously in any finite collection of the seminorms.
+Polynomial multiplication only increases their indices.
+A Schwartz multiplier $b$ obeys
+$\|t^k bh\|\leq\|b\|_\infty\|t^k h\|$, and $U_s$ preserves each seminorm.
+These estimates prove invariance and continuity.
+Pointwise multiplication and conjugation prove all product and adjoint
+identities on $D_c^\infty$.
+
+For $b\in\mathscr S$, the cutoff construction in the preceding theorem
+approximates $b$ by transforms of compactly supported smooth functions
+in the Schwartz topology.
+That topology controls every seminorm in \eqref{eq:wp-moment-domain},
+since $\lambda_c$ is bounded.
+This proves the image density.
+Integration by parts gives $\widehat{i\partial_u f}(t)=t\widehat f(t)$,
+and a change of variable gives $\widehat{\tau_s f}(t)=e^{ist}\widehat f(t)$.
+Both $i\partial_u f$ and $\tau_s f$ remain in $\cA_\zeta$.
+\end{proof}
+
+Dominated convergence makes $(U_s)_{s\in\R}$ a strongly continuous
+unitary group on $H_c$.
+For $h\in\mathcal D(N)$, the estimate
+$|(e^{ist}-1)/s|\leq|t|$ gives
+$(U_s h-h)/s\to iNh$ in $H_c$.
+Conversely, a convergent difference quotient has almost-everywhere limit
+$ith$ along a subsequence, so its Hilbert limit requires $th\in H_c$.
+Thus its generator domain is exactly $\mathcal D(N)$.
+The smaller domain $D_c^\infty$ permits every polynomial in this generator.
+For the Schwartz algebra alone, its common GNS graph completion is all
+of $H_c$, since each of its multipliers is bounded.
+These two domain statements refer to different multiplier algebras.
+
+\subsection{The sum over all primes and the native comparison}
+
+For $X\geq2$ and a real exponent $\sigma$, set
+\[
+ C_{X,\sigma}=\sum_{2\leq n\leq X}
+               \Lambda_{\mathrm{vM}}(n)n^{-\sigma},\qquad
+ q_{X,\sigma}(f)=\sum_{2\leq n\leq X}
+    \Lambda_{\mathrm{vM}}(n)n^{-\sigma}
+                        \|f-\tau_{\log n}f\|_2^2.
+\]
+These forms are defined for every $f\in L^2(\R,du)$.
+Increasing $X$ increases their values.
+The native exponent is $\sigma=1/2$.
+
+\Needspace{13\baselineskip}
+\begin{theorem}[The exact convergence boundary for the positive prime sum]
+\label{thm:wp-prime-limit}
+For $\sigma>1$, the coefficient sum
+$C_\sigma=\sum_{n\geq2}\Lambda_{\mathrm{vM}}(n)n^{-\sigma}$ is finite.
+It therefore defines the positive carrier above with all primes present.
+Moreover,
+\[
+ 0\leq q_\sigma(f):=\lim_{X\to\infty}q_{X,\sigma}(f)
+ \leq4C_\sigma\|f\|_2^2.
+\]
+For every real $\sigma\leq1$ and every nonzero $f\in L^2(\R)$,
+\begin{equation}
+ \lim_{X\to\infty}q_{X,\sigma}(f)=+\infty.
+ \label{eq:wp-prime-divergence}
+\end{equation}
+Thus the finite domain of the increasing limit form is $\{0\}$
+when $\sigma\leq1$.
+It is not a densely defined quadratic form on $L^2(\R)$.
+\end{theorem}
+\begin{proof}
+For $\sigma>1$, use
+$0\leq\Lambda_{\mathrm{vM}}(n)\leq\log n$ and the integral comparison
+for $\sum(\log n)n^{-\sigma}$.
+The bound $\|f-\tau_v f\|_2\leq2\|f\|_2$ proves the stated estimate.
+
+For divergence of the coefficients, prime factorization gives
+$\sum_{d\mid m}\Lambda_{\mathrm{vM}}(d)=\log m$.
+For an integer $M\geq4$, sum this identity over $m\leq M$ to obtain
+\[
+ \log(M!)=\sum_{n=2}^M\Lambda_{\mathrm{vM}}(n)
+                          \left\lfloor\frac Mn\right\rfloor
+ \leq M\sum_{n=2}^M\frac{\Lambda_{\mathrm{vM}}(n)}n.
+\]
+The last $\lceil M/2\rceil$ factorial factors are at least $M/2$.
+Hence the last sum is at least $\frac12\log(M/2)$ and tends to infinity.
+For $\sigma\leq1$, $n^{-\sigma}\geq n^{-1}$, so
+$C_{X,\sigma}\to\infty$ as well.
+
+Finally, $\langle f,\tau_v f\rangle_2\to0$ as $v\to+\infty$.
+To prove this, approximate $f$ in $L^2$ by a function $h$ supported
+in a fixed finite interval.
+For sufficiently large $v$, $h$ and $\tau_vh$ have disjoint supports.
+Cauchy--Schwarz bounds the difference between their correlation and
+that of $f$ by $\|f-h\|_2(\|f\|_2+\|h\|_2)$, uniformly in $v$.
+The approximation error can tend to zero.
+It follows that
+$\|f-\tau_{\log n}f\|_2^2\to2\|f\|_2^2$ as $n\to\infty$.
+For $f\ne0$, these squared norms are at least $\|f\|_2^2$
+for every sufficiently large $n$.
+The divergent coefficient tail proves \eqref{eq:wp-prime-divergence}.
+\end{proof}
+
+The damping exponent changes the coefficients and therefore changes the
+functional.
+For $\sigma>1$, the Euler product in \eqref{eq:euler} also writes its
+positive Fourier density as
+\[
+ \lambda_\sigma(t)=2\left(-\frac{\zeta'}{\zeta}(\sigma)
+       +\operatorname{Re}\frac{\zeta'}{\zeta}(\sigma-it)\right).
+\]
+This equality uses only absolutely convergent Dirichlet series.
+Continuation of its right side beyond that half-plane does not continue
+the positive sum in \eqref{eq:wp-positive-density}.
+Theorem~\ref{thm:wp-prime-limit} proves the failure of that sum already
+at $\sigma=1$.
+
+For the exact comparison with $L_\zeta$, put
+$C_X=C_{X,1/2}$ and let $W_X$ have coefficients
+$c_n=\Lambda_{\mathrm{vM}}(n)/\sqrt n$ for $n\leq X$, zero otherwise.
+Retain the polar and archimedean functional
+\[
+ R_\infty(g)=\widehat g(i/2)+\widehat g(-i/2)
+  +\frac1{2\pi}\int_{\R}\widehat g(t)
+       \bigl[\operatorname{Re}\psi(1/4+it/2)-\log\pi\bigr]dt.
+\]
+
+\Needspace{20\baselineskip}
+\begin{proposition}[Subtraction and the remaining arithmetic form]
+\label{prop:wp-native-comparison}
+For every $g\in\cA_\zeta$,
+\begin{equation}
+ \begin{split}
+ L_\zeta(g)={}&W_X(g)+R_\infty(g)-2C_Xg(0)\\
+ &-\sum_{n>X}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                            \bigl(g(\log n)+g(-\log n)\bigr).
+ \end{split}
+ \label{eq:wp-native-comparison}
+\end{equation}
+The tail tends to zero as $X\to\infty$.
+Consequently
+\[
+ \lim_{X\to\infty}\bigl(W_X(g)-2C_Xg(0)\bigr)
+ =-\sum_{n\geq2}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                            \bigl(g(\log n)+g(-\log n)\bigr).
+\]
+The functional on the right is strictly negative on every Gaussian
+convolution square.
+For each nonzero $f\in\cA_\zeta$,
+\begin{equation}
+ R_\infty(f^*\star f)-2C_X\|f\|_2^2\longrightarrow-\infty.
+ \label{eq:wp-residual-negative}
+\end{equation}
+Thus the full functional cannot be obtained as the increasing limit of
+these positive prime forms, or by adding a positive residual to each
+sufficiently large cutoff.
+\end{proposition}
+\begin{proof}
+Substitute the definition of $W_X$ into \eqref{eq:weil-functional}.
+This gives \eqref{eq:wp-native-comparison} with its stated signs.
+Choose $a>1/2$ such that $g\in\mathcal A_a$.
+Lemma~\ref{lem:test-bounds} bounds the absolute tail by
+\[
+ K_g\sum_{n>X}(\log n)n^{-a-1/2},
+\]
+which tends to zero because $a+1/2>1$.
+The Gaussian $g_{2b}$ is strictly positive at every real argument.
+At least the $n=2$ term is nonzero, so the negative prime sum on
+$g_{2b}=g_b^*\star g_b$ is strictly negative.
+The value $R_\infty(f^*\star f)$ is finite and independent of $X$.
+Since $C_X\to\infty$ and $\|f\|_2>0$,
+\eqref{eq:wp-residual-negative} follows.
+The full residual $L_\zeta-W_X$ differs from this expression on the
+chosen square by a tail tending to zero.
+It is therefore negative there for every sufficiently large $X$.
+\end{proof}
+
+The construction gives an arithmetic $*$-homomorphism and a positive
+functional with the required failure of finite mass.
+Its pullback is $W_c$, with the exact diagonal compensation specified above.
+For every fixed summable coefficient family, the Gaussian asymptotics
+also distinguish this pullback from the full Weil functional:
+\[
+ \frac{W_c(g_a)}{L_\zeta(g_a)}
+ \sim\frac{4C}{\log(1/a)}\longrightarrow0
+ \qquad(a\downarrow0).
+\]
+This follows by dividing \eqref{eq:wp-infinite-mass} by
+\eqref{eq:weil-gaussian-asymptotic}.
+The equality $L_\zeta=\omega\circ T$ still requires a construction that
+combines the prime, polar, and archimedean terms before asserting positivity.
+Equation~\eqref{eq:wp-native-comparison} states the entire missing comparison.
+A representation of quantum currents would additionally have to identify
+their products and involution with this numerical carrier on a common domain.
+No formal completion, change of exponent, or removal of a divergent
+diagonal term supplies either identification.

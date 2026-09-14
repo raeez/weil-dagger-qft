@@ -1,0 +1,127 @@
+{
+  "source_aggregate_sha256": "a677f7c46a6ee524a3f70458112aae58ddbac01e5bedd10bc48dec79bb716eab",
+  "source_manifest_sha256": "0c2826077bff987bbf311fcc509d763f22d49edec9fa42cd0ba5b92f9a36b6d8",
+  "pdf_sha256": "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338",
+  "page_count": 54,
+  "files": [
+    {
+      "path": "reports/research/weil_positive026/current027/REPORT.md",
+      "sha256": "adbd0c3417c103c02054b93f96e13dbfefda5bb927e24dd63f915c684389b114",
+      "bytes": 11173
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build/addition.txt",
+      "sha256": "f76080b614d37d45b5e5b4de76c53fea2f58e2b68c44302940134dd334ee4714",
+      "bytes": 22402
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build/candidate.fls",
+      "sha256": "2b30324a08f2fac141668eba0bba38a9776ad6a03232d6caa8f51d64778b0319",
+      "bytes": 60284
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build/candidate.log",
+      "sha256": "99a72429a5b1b12f419ce3c95abf60924790a0725be39873a56898c95ba87c8e",
+      "bytes": 172548
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build/candidate.pdf",
+      "sha256": "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338",
+      "bytes": 474026
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build/pdffonts.txt",
+      "sha256": "9cc7cf26d41755d10982b241413b5c36c4507a063bf8544db50e5f86ffe643e2",
+      "bytes": 1504
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build/pdfinfo.txt",
+      "sha256": "93e0e9bc7fb5cbeb4baef33b595044cf030df832982f0e069b3c1aef3bcb6161",
+      "bytes": 581
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build-commands.json",
+      "sha256": "23a183614d78a021534556890a9444e80c2cfa2828651ffb001d2e8b0c7bd0f2",
+      "bytes": 1763
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/build_and_verify.py",
+      "sha256": "478fe3b22e785ab2b9c80d7bc23af3e0e189a65db4c9cd2fa76d31dfbb0c5a23",
+      "bytes": 7002
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/calculation-results.json",
+      "sha256": "d250edac21449cdafc257556ec1f75b59fe0bbbe1769c75b32baf7b48b0aa39d",
+      "bytes": 2181
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/candidate.tex",
+      "sha256": "bb7cd65c61e73a4dea4b69a0ca1d843c228e29991f17065bb3ce9d6b4a2a5e01",
+      "bytes": 752
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/check_currents.py",
+      "sha256": "f9a7a42204ecd36dfb96ff38080029c618b05525192bc5e4c927a1d333f6b089",
+      "bytes": 5296
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/primary-sources/derezinski-0511030v2.pdf",
+      "sha256": "696a733e17adf0abd4cf1824b8e9cb7def801e657f84143ea2487ad217d3e275",
+      "bytes": 555898
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/primary-sources/derezinski-0511030v2.txt",
+      "sha256": "be576d467778f7439f16c8fbdb4a38d573b92d8e30b93756e08a2acfb89ede57",
+      "bytes": 193334
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/primary-sources/manifest.json",
+      "sha256": "587e0e40442b0fe6743bbfa1574422b879ef033677ef02656e454ada42710644",
+      "bytes": 717
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/source-manifest.json",
+      "sha256": "0c2826077bff987bbf311fcc509d763f22d49edec9fa42cd0ba5b92f9a36b6d8",
+      "bytes": 1724
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/source.patch",
+      "sha256": "0e0e1dc6612c8c70ff7132584852b22e4ce4da8fe31a3bf26e4afd105a998e33",
+      "bytes": 24587
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/verification-results.json",
+      "sha256": "9c7180bf440c29fcee8beea75a6e6bbd5dcc132acba63f2a36964f2f0bad1297",
+      "bytes": 9206
+    },
+    {
+      "path": "reports/research/weil_positive026/current027/visual-inspection.json",
+      "sha256": "baee7a54b066812e9e4e94b0b540e74833dbc0c05960399f22e23514d875b4c3",
+      "bytes": 2543
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/arithmetic.tex",
+      "sha256": "56b73a14e153c3405d29e9b842919d6576cff110d17175a2e999443745d17112",
+      "bytes": 125539
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "bytes": 43118
+    },
+    {
+      "path": "research-candidates/weil_positive026/current027/prime-current-carrier.tex",
+      "sha256": "3e8639041170fb59c6c76c2908c86ef4c131946f7096aed22a845ec188d2f3ce",
+      "bytes": 23464
+    },
+    {
+      "path": "research-candidates/weil_positive026/prime-difference-carrier.tex",
+      "sha256": "00338ca975438f5a457354e13f808d1245830da49888edf92c9e633b43bcfc6b",
+      "bytes": 22814
+    }
+  ],
+  "artifact_aggregate_algorithm": "SHA-256 of sorted path + NUL + SHA-256 + newline rows",
+  "artifact_aggregate_sha256": "6dec1171c7959979e50eb6caefca1c1f4941fd7a2d56aca7d720e84a6cdb8c20",
+  "status": "Frozen constructed candidate awaiting independent acceptance.",
+  "mathematical_scope": "Prime-local current representation, square-summable infinite creation labels, infinite arithmetic multiplier and number-current action. Full Weil covariance and other quantum current comparisons remain unresolved."
+}

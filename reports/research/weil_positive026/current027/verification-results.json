@@ -1,0 +1,309 @@
+{
+  "source_aggregate_sha256": "a677f7c46a6ee524a3f70458112aae58ddbac01e5bedd10bc48dec79bb716eab",
+  "source_closure_verified": true,
+  "project_inputs": [
+    "reports/research/weil_positive026/current027/candidate.tex",
+    "reports/research/weil_positive026/inputs/arithmetic.tex",
+    "reports/research/weil_positive026/inputs/raeez-math-template.sty",
+    "research-candidates/weil_positive026/current027/prime-current-carrier.tex",
+    "research-candidates/weil_positive026/prime-difference-carrier.tex"
+  ],
+  "proof_counts": {
+    "inherited": 39,
+    "positiveweight": 5,
+    "current": 5
+  },
+  "labels_and_references": "all unique and resolved",
+  "manuscript_firewall": "no prohibited prose or paths in the addition and its metadata",
+  "final_build_warnings": [],
+  "pdf_sha256": "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338",
+  "repeated_pdf_hashes": [
+    "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338",
+    "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338",
+    "37fbde897ab4a9db6aaf8d5d6eb08c67f40fc5cc9b17e3b483a51e23bb89d338"
+  ],
+  "repeated_build_byte_identity": true,
+  "page_count": 54,
+  "preserved_pages": [
+    {
+      "page": 1,
+      "text_identical": true,
+      "raster_sha256": "d002272620ad0633b38b35f3b73d19760d71dbcdd1abcc73a373e5bab0785e15"
+    },
+    {
+      "page": 2,
+      "text_identical": true,
+      "raster_sha256": "3b087b2a07519461e10f0d7db5ec19a39b33320c14e5598c05f52b9e464d1f4a"
+    },
+    {
+      "page": 3,
+      "text_identical": true,
+      "raster_sha256": "a08c3758028e2d28db8926b1b846ed961a3950469eb972d3d8404eec2492c7b2"
+    },
+    {
+      "page": 4,
+      "text_identical": true,
+      "raster_sha256": "f2fd95940912e8494452ab53ad16b12bb1140be55d2758ee638b44bdafbbebef"
+    },
+    {
+      "page": 5,
+      "text_identical": true,
+      "raster_sha256": "0d7a2d4e713f470fcac408760b7a7851895a0114b162ee79745dc3613eb3ddaf"
+    },
+    {
+      "page": 6,
+      "text_identical": true,
+      "raster_sha256": "dca4a6f6cf87342886f19266c7dc2ef95c4a528c88f4564d1b9c11faa5ea9c00"
+    },
+    {
+      "page": 7,
+      "text_identical": true,
+      "raster_sha256": "a8f13b0ef90179e4777d1b262365f902490a081d8c8ac57c620b5ffe44bfa827"
+    },
+    {
+      "page": 8,
+      "text_identical": true,
+      "raster_sha256": "15b8e672865bf0706a408fc6a5d694c536b73ed5a6d6305116c187203bc14102"
+    },
+    {
+      "page": 9,
+      "text_identical": true,
+      "raster_sha256": "661d3d1cd612ef4a874c83bc959e1b228e21ec1d347c6b2694e605466e891ec4"
+    },
+    {
+      "page": 10,
+      "text_identical": true,
+      "raster_sha256": "dbbb26849d03f694911a6f0728c07d301291ba70118dc7ea5e43c0ed87ee402d"
+    },
+    {
+      "page": 11,
+      "text_identical": true,
+      "raster_sha256": "f75cb2939754617a45a3bb2f99f36b2e346a54665bd840c159c14b1844b82bfc"
+    },
+    {
+      "page": 12,
+      "text_identical": true,
+      "raster_sha256": "6043f3fbe5ffa3656d70575636b63e0fbe68efc1ac17d6eb35fac3c05f47bdd8"
+    },
+    {
+      "page": 13,
+      "text_identical": true,
+      "raster_sha256": "ca16c542b27ca087957f72a0b6e40cbbd6d5d9668846687677950870aa06c35a"
+    },
+    {
+      "page": 14,
+      "text_identical": true,
+      "raster_sha256": "907b713185384070a8ecfe2fd6852d4227143e7d1324afdbbf97d5015b46c302"
+    },
+    {
+      "page": 15,
+      "text_identical": true,
+      "raster_sha256": "bbc342e91119305b1218304652b35701f906091433c68dfcb4fb239bd494f337"
+    },
+    {
+      "page": 16,
+      "text_identical": true,
+      "raster_sha256": "b819fd3d7965f4e2b272a236ef4acdab0b86dedbd270762a337a6916c1e59a4c"
+    },
+    {
+      "page": 17,
+      "text_identical": true,
+      "raster_sha256": "2d779e03d914e1306271de12b734f17b6a536b59bf7c4bfd53e7b3d11ad07078"
+    },
+    {
+      "page": 18,
+      "text_identical": true,
+      "raster_sha256": "8cfc20fa6de125c1b6e19f1ab8bd72f56dcc462de50159ec76181357c7094a34"
+    },
+    {
+      "page": 19,
+      "text_identical": true,
+      "raster_sha256": "267a4aa11819359c1c12cb89df18fcefabd89ac3e3d0ea9084d6bb41aadffe99"
+    },
+    {
+      "page": 20,
+      "text_identical": true,
+      "raster_sha256": "5c312c4e7a41d05e12638df510028c060803fb8508603ce31613be80f777c97a"
+    },
+    {
+      "page": 21,
+      "text_identical": true,
+      "raster_sha256": "6859d1de3acdd7d6c3f986b76d88dcde2c77e8855dae4baaa0924919574b6f9d"
+    },
+    {
+      "page": 22,
+      "text_identical": true,
+      "raster_sha256": "a1e44abae7b90b8ba02f43600ef60d766f456472b8a85c9705fdf3a775e9d4f3"
+    },
+    {
+      "page": 23,
+      "text_identical": true,
+      "raster_sha256": "9f50acb07f32ed6fcddf5bd760b898c21aa4ec1d3b8655d26a14b3d7f7cdf9b3"
+    },
+    {
+      "page": 24,
+      "text_identical": true,
+      "raster_sha256": "e0dccee8dc8f95632e335bff7ee76b848b5d01a06142f5d9bd73c7ebc8979f5a"
+    },
+    {
+      "page": 25,
+      "text_identical": true,
+      "raster_sha256": "e1c6fe4a3c3489dbb3d0cfebc33290b78ca52e67865f166bf385829de0efb12a"
+    },
+    {
+      "page": 26,
+      "text_identical": true,
+      "raster_sha256": "4b3eca8cff4c667c11c5d925aab4eb496ce99a4dbbe1cbce446c806d64ee5662"
+    },
+    {
+      "page": 27,
+      "text_identical": true,
+      "raster_sha256": "5a32cabf01101a0355db915323a173b880c1852d8356e7d9b2f38b683c60630f"
+    },
+    {
+      "page": 28,
+      "text_identical": true,
+      "raster_sha256": "dd6549fb30ad4aefa4d0af9e8b1893cb7f99f735c0e1435ddb3f716e34faee8d"
+    },
+    {
+      "page": 29,
+      "text_identical": true,
+      "raster_sha256": "fce02f665245c4b90a33ff4a8147b83025ee221471220e75eb6ecb47f7ee39d8"
+    },
+    {
+      "page": 30,
+      "text_identical": true,
+      "raster_sha256": "7c439916b0e2d405a82cafaeeb80358ba278a3d554042eb4e2a722b0c4329975"
+    },
+    {
+      "page": 31,
+      "text_identical": true,
+      "raster_sha256": "6277a29ea3786e374b8d21ae6688237ae8bd5adadfac4609d6d92656f601f6ed"
+    },
+    {
+      "page": 32,
+      "text_identical": true,
+      "raster_sha256": "242c9aa9e993b75ed58385b07a65c44ecc624ca28a98d6ad0dc23130f3b4eade"
+    },
+    {
+      "page": 33,
+      "text_identical": true,
+      "raster_sha256": "8784df132313873a775f1320ccca4d53965897f0d05a633381df7e6a3c380666"
+    },
+    {
+      "page": 34,
+      "text_identical": true,
+      "raster_sha256": "b8ce686c10440ce97244473b3d73f50b41bffe0fdd259ba89c1fa892367322ff"
+    },
+    {
+      "page": 35,
+      "text_identical": true,
+      "raster_sha256": "68c794a45413f74894e366c5410cdfe47de0bd3f6e5d6a0cfb5bd7640bb23a74"
+    },
+    {
+      "page": 36,
+      "text_identical": true,
+      "raster_sha256": "5bd7e2ba31d9ca55d9d5d0492258bae1e08625da339a0acfdb21156d05af9314"
+    },
+    {
+      "page": 37,
+      "text_identical": true,
+      "raster_sha256": "f4169e5c7b6b54880057bda1dc489986f78ac20cae82031c119ab4a2e87aa1a7"
+    },
+    {
+      "page": 38,
+      "text_identical": true,
+      "raster_sha256": "2940209223a5c253a086955041f54e2e7f46c97b3e492cca45d6e333630eb8f6"
+    },
+    {
+      "page": 39,
+      "text_identical": true,
+      "raster_sha256": "40ad72d8d4f3ab02aa8cf8cae44475400ebebb61aa81b248e1392b9f32b28b68"
+    },
+    {
+      "page": 40,
+      "text_identical": true,
+      "raster_sha256": "6a089fc8aed9a598be2ec02b3d4843ebe58715f551a7b5ac1c79f8cdcc556b73"
+    },
+    {
+      "page": 41,
+      "text_identical": true,
+      "raster_sha256": "6e67cb8458c4dbc0b174c44b262aef94090bff693c8d4df063553d5a97ed8c24"
+    },
+    {
+      "page": 42,
+      "text_identical": true,
+      "raster_sha256": "7ff1f681ae27676dbaf1c4a49997bf84883118d1c8e52c1df10ee9d15a4cf93f"
+    },
+    {
+      "page": 43,
+      "text_identical": true,
+      "raster_sha256": "911576dabffd229c48c0714b24eac405ab464f11eea399518e939713ccf0a496"
+    },
+    {
+      "page": 44,
+      "text_identical": true,
+      "raster_sha256": "e5390a8605ac4841e73eccb891e8a0a213f23803dd695fa9c05d61848ebe7efe"
+    },
+    {
+      "page": 45,
+      "text_identical": true,
+      "raster_sha256": "2ee686ea957aa187887e68e8b030ea209ae60ed030572223af05c0fa1a5ec875"
+    }
+  ],
+  "added_pages": [
+    {
+      "page": 46,
+      "text_characters": 2136,
+      "text_inside_page": true
+    },
+    {
+      "page": 47,
+      "text_characters": 1542,
+      "text_inside_page": true
+    },
+    {
+      "page": 48,
+      "text_characters": 2716,
+      "text_inside_page": true
+    },
+    {
+      "page": 49,
+      "text_characters": 2549,
+      "text_inside_page": true
+    },
+    {
+      "page": 50,
+      "text_characters": 2560,
+      "text_inside_page": true
+    },
+    {
+      "page": 51,
+      "text_characters": 2658,
+      "text_inside_page": true
+    },
+    {
+      "page": 52,
+      "text_characters": 2241,
+      "text_inside_page": true
+    },
+    {
+      "page": 53,
+      "text_characters": 1158,
+      "text_inside_page": true
+    },
+    {
+      "page": 54,
+      "text_characters": 242,
+      "text_inside_page": true
+    }
+  ],
+  "font_embedding": "all fonts embedded, subset, and Unicode-mapped",
+  "visual_inspection": "separate record required for rendered pages 45 through 54",
+  "mathematical_acceptance": "not established by this verification script",
+  "versions": {
+    "python": "3.14.6",
+    "pymupdf": "1.27.2",
+    "pdflatex": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)"
+  }
+}

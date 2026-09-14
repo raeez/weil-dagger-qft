@@ -1,0 +1,36 @@
+{
+  "base_head": "cce2bc383bcf2fd930e917a5abb773e0469465cc",
+  "branch": "intake/frontier-weil-positive-026-20260914",
+  "inputs": [
+    {
+      "source": "/Users/raeez/mathematics/worktrees/frontier-synthesis-latest-033-20260914/research-candidates/programme-033/immutable032/manuscript/weil-forms-and-domains.tex",
+      "copy": "reports/research/weil_positive026/inputs/arithmetic.tex",
+      "sha256": "56b73a14e153c3405d29e9b842919d6576cff110d17175a2e999443745d17112",
+      "bytes": 125539,
+      "lines": 3129,
+      "proofs": 39
+    },
+    {
+      "source": "/Users/raeez/mathematics/worktrees/frontier-weil-positive-026-20260914/paper.tex",
+      "copy": "reports/research/weil_positive026/inputs/native-paper.tex",
+      "sha256": "1902189145183342a560527ba18e54cdbb443054523bff29b1945f1490abb799",
+      "bytes": 21050,
+      "lines": 619,
+      "proofs": 7
+    },
+    {
+      "source": "/Users/raeez/mathematics/worktrees/frontier-synthesis-latest-033-20260914/research-candidates/programme-033/immutable032/raeez-math-template.sty",
+      "copy": "reports/research/weil_positive026/inputs/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "bytes": 43118,
+      "lines": 1166,
+      "proofs": 0
+    }
+  ],
+  "source_correction": "The packet synthesis032 worktree path is absent. Exact programme-032, immutable032 and source033 arithmetic bytes were compared and have identical SHA-256.",
+  "required_runtime_controls": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "ultra"
+  },
+  "observed_runtime_controls": "unverified; independent runtime metadata unavailable"
+}

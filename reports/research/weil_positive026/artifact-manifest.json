@@ -1,0 +1,288 @@
+{
+  "source_manifest_sha256": "53a3267c77d7bbece16c135870168d2092d61e8124f09a8ece2973293fd6ce62",
+  "source_aggregate_sha256": "9bfaa346c0c7e02010e180060e80cecd4970afc7d26aab5c774a859b46dc0fea",
+  "source_diff_sha256": "6f205bbd3e474bb57c134ba2aa53a85fd2e23f7b7cc7f9d42dc8be6efd5e6cc2",
+  "base_head": "cce2bc383bcf2fd930e917a5abb773e0469465cc",
+  "branch": "intake/frontier-weil-positive-026-20260914",
+  "files": [
+    {
+      "path": "reports/research/weil_positive026/REPORT.md",
+      "sha256": "d84990aaf73c282c2f619b4866495e22efde9194a432e3d1e6bdb3366e628951",
+      "bytes": 11150
+    },
+    {
+      "path": "reports/research/weil_positive026/SPINE.md",
+      "sha256": "941fa5f47c41ff6f0ddf362fad8b36b18fefecf5735ba223b8a83cc90f7b9bd2",
+      "bytes": 1083
+    },
+    {
+      "path": "reports/research/weil_positive026/baseline.tex",
+      "sha256": "fc0fef49dba9f0ee797577adf6fc7d837bc97f77434ce0cc06fe198b1150af7a",
+      "bytes": 196
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/baseline.aux",
+      "sha256": "77e6a16a1485dd2f3e78fc134f855dea01df0fea6b3cb74507108f5509f82b38",
+      "bytes": 34104
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/baseline.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/baseline.log",
+      "sha256": "fb6eb8c9827435302a762d109a1f7c0bfcd2b785c91f26fb06e81e4ea3c79851",
+      "bytes": 94314
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/baseline.pdf",
+      "sha256": "bbfbf0ae14b3e070a5da59267be35ddc299616bf4584716bb1b48ab3ed9b47d2",
+      "bytes": 386107
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/pass1.stdout",
+      "sha256": "f6506fa65d919ed8bb2df51fba06d52165a87817c6bc4373f949a8702f295cf5",
+      "bytes": 41753
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/pass2.stdout",
+      "sha256": "f5100237664d6b05f392373c0542ccc6fbc02c080d04e883bce2081c7f37b57d",
+      "bytes": 24398
+    },
+    {
+      "path": "reports/research/weil_positive026/build-baseline/pass3.stdout",
+      "sha256": "44732c7b45578701fad8a56daeb6c86f4e46ba70a4a7e89488f2bb3ef4392cb2",
+      "bytes": 20460
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/addition.txt",
+      "sha256": "2986c806e935c90b969bffd78efd676010c144b4c58848aceada01de3e1b4ed1",
+      "bytes": 31720
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/candidate.aux",
+      "sha256": "e8ab7b42dada124af59f6fda2a58f438af185bfe8d396c523e96c648666acaf8",
+      "bytes": 39726
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/candidate.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/candidate.log",
+      "sha256": "b933da78da2598651c23627b742942f677815af123aeb66df764f4081489685a",
+      "bytes": 133806
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/candidate.pdf",
+      "sha256": "9115251c8df79a8f0d4394904b8851b6e24cb44248cab96ad9b1d7663e449142",
+      "bytes": 425788
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/contact-1.png",
+      "sha256": "141c2f40df4b349032cb5e590ac25ae934382ad1b52cfb9c7c0371eb389ff757",
+      "bytes": 792878
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/contact-2.png",
+      "sha256": "ed4e93b3ef955bcd33db11229462b88acacb3f558a801dba796083c9ba7a938a",
+      "bytes": 899060
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/fonts.txt",
+      "sha256": "20122788b39e0b0d45703a44c8edcf66a62ec639bc046269e489592326956166",
+      "bytes": 1410
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-38.png",
+      "sha256": "434ab40ed3d448fe73ae931f9dcd7e5051100d6e34fd69a0fcbbee627cf5f3d1",
+      "bytes": 165335
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-39.png",
+      "sha256": "1ee08583ece12cce56c58c500a0960a7f7fd062a710e08602fcd74dc47d30e4c",
+      "bytes": 264417
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-40.png",
+      "sha256": "6219dcebd91e9d01990d54bfdb1bcd852f829a0d2a476ae072596709518a00c5",
+      "bytes": 270977
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-41.png",
+      "sha256": "3133ffee8622c3a16a994f3b2e41365ebbf992e5d9dd7c3c991409b91c3d3017",
+      "bytes": 313456
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-42.png",
+      "sha256": "e1d5ce2301092650c3fb718cc564061239878dd84d3ab2774d665e30863f2071",
+      "bytes": 336137
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-43.png",
+      "sha256": "a5629b8547f1d4e88a16c9fad944ffb93a60baa0f732ae6b912fae639d5d5261",
+      "bytes": 315931
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-44.png",
+      "sha256": "48db80726879048da728a445e4e8ab2f619ac9588b31f78e4ff4027afc260532",
+      "bytes": 253049
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/page-45.png",
+      "sha256": "2f3047e87224312db8c102d8a99679dbad29c42ef10f42825a6c60b34e950136",
+      "bytes": 248705
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass1.stdout",
+      "sha256": "8ba54a40e3663ec5b2f818cd426883e11142b5a266b328316cce680265cf5319",
+      "bytes": 44164
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass2.stdout",
+      "sha256": "d30529832230bd1f850630b4ff6dd001dd776b65aefb242c12674267037e47ce",
+      "bytes": 25763
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass3.stdout",
+      "sha256": "c9933ecd7afc98e54fe73fd7c92bdf8b21f365792bfaefd3c278348e1a03c256",
+      "bytes": 21062
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass4.stdout",
+      "sha256": "690b9732a277ae782f81ceae938de9fa3b6d1fe77274700e8d90faf41f059595",
+      "bytes": 20663
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass5.stdout",
+      "sha256": "e20709b8fefba49b69dc14e66ca45d698a0256e82170144c908a82b4b2405ccc",
+      "bytes": 20582
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass6.stdout",
+      "sha256": "2abcb37cc9f1776c6a70de1dc769059865e44a25ae4b132fe203ede2ce237e92",
+      "bytes": 20582
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass7.stdout",
+      "sha256": "2abcb37cc9f1776c6a70de1dc769059865e44a25ae4b132fe203ede2ce237e92",
+      "bytes": 20582
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass8.stdout",
+      "sha256": "4dd8f76cada756cdbc62273fb086cdcd6442dc3ef801fd59a976e54bf14a60b8",
+      "bytes": 20663
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pass9.stdout",
+      "sha256": "f7f244fe2a7bc95fe1297abbc3c9f7fa4576af9e8a04f432939a976e93a0c63c",
+      "bytes": 20582
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/pdfinfo.txt",
+      "sha256": "708fd23700cee7d53b077db6d381413bebb659bcfab1ed6312c7283b471bb3f9",
+      "bytes": 583
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/reader.txt",
+      "sha256": "60e927bf46cdf91110def39a13e94d732189b297ed29eac1b77027139f3f439f",
+      "bytes": 188316
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/render-final.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/render-final.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/render.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/weil_positive026/build-candidate/render.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reports/research/weil_positive026/calculate.py",
+      "sha256": "b1aa6fe70553dd1eddac1c7f27093e6bdfe7d2153747ee8d9e54e3827c59f366",
+      "bytes": 4038
+    },
+    {
+      "path": "reports/research/weil_positive026/calculation-results.json",
+      "sha256": "95cb5a3981a71c64532541e29c26bd6be170c6e8483e07fc2e4124f12f8847b7",
+      "bytes": 1514
+    },
+    {
+      "path": "reports/research/weil_positive026/candidate.tex",
+      "sha256": "4820e6731e973edbb8423fa1e1c8c4bfb6cb7f3b37ec21cec36416fafde820ca",
+      "bytes": 279
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/arithmetic.tex",
+      "sha256": "56b73a14e153c3405d29e9b842919d6576cff110d17175a2e999443745d17112",
+      "bytes": 125539
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/native-paper.tex",
+      "sha256": "1902189145183342a560527ba18e54cdbb443054523bff29b1945f1490abb799",
+      "bytes": 21050
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "bytes": 43118
+    },
+    {
+      "path": "reports/research/weil_positive026/source-freeze.json",
+      "sha256": "c5ceb58bc353a2ec2e2ae711f17109e010c739c25eee0d84115a13381bcd1149",
+      "bytes": 1652
+    },
+    {
+      "path": "reports/research/weil_positive026/source-manifest.json",
+      "sha256": "53a3267c77d7bbece16c135870168d2092d61e8124f09a8ece2973293fd6ce62",
+      "bytes": 1704
+    },
+    {
+      "path": "reports/research/weil_positive026/source.patch",
+      "sha256": "6f205bbd3e474bb57c134ba2aa53a85fd2e23f7b7cc7f9d42dc8be6efd5e6cc2",
+      "bytes": 23665
+    },
+    {
+      "path": "reports/research/weil_positive026/tool-versions.json",
+      "sha256": "0b4312c00429b838f0b093df6e0621193bbf28920bc338394353d6a0547ffd60",
+      "bytes": 236
+    },
+    {
+      "path": "reports/research/weil_positive026/verification-results.json",
+      "sha256": "80a184e60c8ee981ab1cc20ab48cf6bedc1dffdc268c7346fb2ed3a6271794e9",
+      "bytes": 8611
+    },
+    {
+      "path": "reports/research/weil_positive026/verify.py",
+      "sha256": "6c9c6812fb79ffa85150a3b23e01997d8ab37050196a0a7b14be2aa4a580df3e",
+      "bytes": 4628
+    },
+    {
+      "path": "reports/research/weil_positive026/visual-inspection.json",
+      "sha256": "a6fe8e8e95e7aaebf7eb314c03ddd9fc3ea273788209875f69b034805b8979bd",
+      "bytes": 607
+    },
+    {
+      "path": "research-candidates/weil_positive026/prime-difference-carrier.tex",
+      "sha256": "00338ca975438f5a457354e13f808d1245830da49888edf92c9e633b43bcfc6b",
+      "bytes": 22814
+    }
+  ],
+  "aggregate_serialization": "UTF-8 JSON of files, sort_keys=True, separators=(comma,colon)",
+  "artifact_aggregate_sha256": "c649a91541e4f1c74d63530aa542690fb4f1a413d049aed8306d70501aa6ef9e",
+  "self_exclusion": "This manifest excludes itself. All owned files present at freeze are listed.",
+  "acceptance": "Independent mathematical review pending."
+}

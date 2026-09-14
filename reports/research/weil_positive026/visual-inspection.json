@@ -1,0 +1,22 @@
+{
+  "source_aggregate_sha256": "9bfaa346c0c7e02010e180060e80cecd4970afc7d26aab5c774a859b46dc0fea",
+  "candidate_pdf_sha256": "9115251c8df79a8f0d4394904b8851b6e24cb44248cab96ad9b1d7663e449142",
+  "inspected_pages": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "checks": {
+    "readable_prose_and_math": true,
+    "no_clipping_or_overlap": true,
+    "consistent_template": true,
+    "final_theorem_statements_not_split": true,
+    "no_manuscript_firewall_violation_observed": true
+  },
+  "scope": "Visual inspection of PNG renderings. This is no mathematical acceptance verdict."
+}

@@ -1,0 +1,384 @@
+Chapter 1. Arithmetic forms and operator domains                                                           38
+
+
+  A remaining positive arithmetic comparison must therefore choose a proper nonunital algebra on
+which the functional is finite. Its first missing map is an involution-preserving algebra map
+
+                                              𝑇 : A 𝜁 −→ 𝔅
+
+into such a specified algebra of current observables, together with a positive linear functional 𝜔 on
+𝔅 satisfying 𝐿 𝜁 = 𝜔 ◦ 𝑇 . The algebra, involution, domain and positivity of 𝜔 must be constructed
+independently of the zeta zero locations. Theorem 1.14.1 would give the isometry 𝑈 : [ 𝑓 ] ↦→ [𝑇 ( 𝑓 )]
+onto the closed subspace 𝐾 = [𝑇 (A 𝜁 )] ⊂ H𝜔 . Proposition 1.14.2 identifies the transported common
+graph domain with that of the restricted multipliers on 𝐸 = [𝑇 (A 𝜁 )] ⊂ 𝐾 , with every closure taken
+in 𝐾 . Equality with the full ambient common domain requires a further hypothesis, such as surjectivity
+of 𝑇 . The finite-mass obstruction in Theorem 1.16.1 still applies: a finite-norm vector representing this
+functional, or a positive functional on a 𝐶 ∗ -algebra as target, cannot supply this factorization. A positive
+functional on a proper nonunital algebra remains a possible kind of carrier, as the finite-matrix trace
+demonstrates. This example does not supply the map 𝑇 or the equality with 𝐿 𝜁 .
+    Any current-field construction must also specify its operator products, contraction tensors and the
+scalar trace or weight on those products. Their convergence with the spatial propagators is an additional
+analytic condition. Neither the strict zero strip nor the equality of the Gaussian moment formulas
+constructs this comparison or proves the positivity of the full Weil form.
+Chapter 1. Arithmetic forms and operator domains                                                                39
+
+
+1.22   Positive arithmetic forms from prime translations
+The negative prime coefficients admit a positive realization after an explicit diagonal compensation. The
+compensation is forced by positivity, even for a single prime. This gives a nonunital arithmetic carrier
+with infinite mass and determines the obstruction to summing its positive forms over all primes. The
+comparison uses the convolution algebra A 𝜁 and the Fourier normalization of (1.35) throughout. All
+spaces and algebras in this section are complex and have degree zero. There is no formal parameter or
+change of coefficient field.
+   For 𝑣 ∈ ℝ, let ( 𝜏𝑣 𝑓 ) ( 𝑢) = 𝑓 ( 𝑢 − 𝑣 ). Lebesgue measure makes 𝜏𝑣 unitary on 𝐿 2 (ℝ, 𝑑𝑢). If 𝑓 ∈ A 𝜁
+and 𝑔 = 𝑓 ∗ ★ 𝑓 , direct substitution gives
+
+       𝑔 (0) = ∥ 𝑓 ∥ 22 ,    𝑔 ( 𝑣 ) = ⟨ 𝑓 , 𝜏𝑣 𝑓 ⟩2 ,     ∥ 𝑓 − 𝜏𝑣 𝑓 ∥ 22 = 2 𝑔 (0) − 𝑔 ( 𝑣 ) − 𝑔 (−𝑣 ) .   (1.74)
+
+The inner product is linear in its first argument. The reflected value satisfies 𝑔 (−𝑣 ) = 𝑔 ( 𝑣 ). These
+identities follow from absolutely convergent integrals, since A 𝜁 ⊂ 𝐿 2 (ℝ).
+Example 1.22.1 (One prime and one Gaussian). Retain only 𝑛 = 2, with the native coefficient 𝑐 =
+      √
+log 2/ 2 and translation length ℓ = log 2. Define
+                                                                        
+                              𝑊{2} ( 𝑔 ) = 𝑐 2 𝑔 (0) − 𝑔 ( ℓ ) − 𝑔 (−ℓ ) .
+
+Equation (1.74) gives 𝑊{2} ( 𝑓 ∗ ★ 𝑓 ) = 𝑐 ∥ 𝑓 − 𝜏ℓ 𝑓 ∥ 22 ≥ 0. For the normalized Gaussian 𝑓 = 𝑔𝑎 with
+𝑎 = ℓ 2 /8,                                                    √︂
+                                                                  2
+                                              𝑊{2} ( 𝑔2 𝑎 ) =       (1 − 𝑒 −1 ) ,
+                                                                  𝜋
+                                                                √︂
+                                                                   2 −1
+                                −𝑐 𝑔2 𝑎 ( ℓ ) + 𝑔2 𝑎 (−ℓ ) = −        𝑒 ,
+                                                                    𝜋
+                                                               √︂
+                                                                  2
+                                                2𝑐 𝑔2 𝑎 (0) =       .
+                                                                  𝜋
+                      √
+Indeed, 𝑔2 𝑎 (0) = 1/( 𝜋 ℓ ) and 𝑔2 𝑎 ( ℓ ) = 𝑒 −1 𝑔2 𝑎 (0). Thus the raw prime term is already negative on
+this convolution square. Its positive realization includes the displayed nonzero diagonal term.
+   The same prime gives a two-dimensional calculation with an exact Gram matrix. Keep 𝑎 = ℓ 2 /8, put
+𝑥 = 𝑒 −1 , and use the ordered vectors 𝑓0 = 𝑔𝑎 , 𝑓1 = 𝜏ℓ 𝑔𝑎 . The Hermitian form 𝐵 ( 𝑓 , ℎ) = 𝑊{2} ( ℎ∗ ★ 𝑓 )
+has matrix                                                                !
+                                          1      2(1 − 𝑥 ) 2 𝑥 − 1 − 𝑥 4
+                                  𝐺=√                                       .
+                                          2 𝜋 2 𝑥 − 1 − 𝑥 4 2(1 − 𝑥 )
+To compute its off-diagonal entry, expand 𝑐 ⟨ 𝑓0 − 𝜏ℓ 𝑓0 , 𝜏ℓ 𝑓0 − 𝜏2ℓ 𝑓0 ⟩2 . The four correlations give
+                                                            √
+𝑐 (2 𝑔2 𝑎 ( ℓ ) − 𝑔2 𝑎 (0) − 𝑔2 𝑎 (2ℓ )). The eigenvalues of 2 𝜋𝐺 are
+
+                            1 − 𝑥 4,         3 − 4 𝑥 + 𝑥 4 = (1 − 𝑥 ) 2 ( 𝑥 2 + 2 𝑥 + 3) .
+
+Both are positive because 0 < 𝑥 < 1. This calculation retains the actual prime weight, convolution
+involution, and off-diagonal pairing on the two displayed test functions.
+   Let ( 𝑐𝑛 )𝑛 ≥2 be nonnegative real numbers satisfying
+                                                    ∑︁
+                                         0 < 𝐶 :=       𝑐𝑛 < ∞ .
+                                                          𝑛 ≥2
+Chapter 1. Arithmetic forms and operator domains                                                                         40
+
+                                                                                              √
+Only indices with 𝑐𝑛 > 0 contribute. The cases of interest retain the native weights ΛvM ( 𝑛)/ 𝑛 on
+finitely many prime powers, or on every power of finitely many primes. Define
+                                ∑︁                                      
+                     𝑊𝑐 ( 𝑔 ) =     𝑐𝑛 2 𝑔 (0) − 𝑔 (log 𝑛) − 𝑔 (− log 𝑛) ,
+                                        𝑛 ≥2
+                                        ∑︁                                   ∑︁
+                           𝜆𝑐 ( 𝑡 ) =          𝑐𝑛 |1 − 𝑒 𝑖𝑡 log 𝑛 | 2 = 2           𝑐𝑛 (1 − cos( 𝑡 log 𝑛)) ,          (1.75)
+                                        𝑛 ≥2                                 𝑛 ≥2
+                                                  𝑑𝑡
+                         𝑑𝜇𝑐 ( 𝑡 ) = 𝜆𝑐 ( 𝑡 )        .
+                                                  2𝜋
+The coefficient sum makes the first series absolutely convergent for bounded 𝑔 , and the second uniformly
+convergent on ℝ. Consequently 𝜆𝑐 is continuous and 0 ≤ 𝜆𝑐 ≤ 4𝐶 . Choosing any 𝑛0 with 𝑐𝑛0 > 0
+shows that its zeros belong to {2 𝜋 𝑘 /log 𝑛0 : 𝑘 ∈ ℤ}. It is therefore positive almost everywhere.
+Theorem 1.22.2 (The arithmetic positive form and its least compensation). For every 𝑔 ∈ A 𝜁
+and 𝑓 ∈ A 𝜁 ,                  ∫
+                               𝑊𝑐 ( 𝑔 ) =              𝑔b( 𝑡 ) 𝑑𝜇𝑐 ( 𝑡 ) ,
+                                                  ℝ
+                                                ∑︁                                   ∫                                (1.76)
+                         𝑊𝑐 ( 𝑓 ∗ ★ 𝑓 ) =              𝑐𝑛 ∥ 𝑓 − 𝜏log 𝑛 𝑓 ∥ 22 =            | 𝑓b( 𝑡 )| 2 𝑑𝜇𝑐 ( 𝑡 ) .
+                                                𝑛 ≥2                                   ℝ
+
+The second value is strictly positive for 𝑓 ≠ 0. For real 𝑑 , define
+                                                ∑︁                           
+                           𝑉𝑑 ( 𝑔 ) = 𝑑 𝑔 (0) −    𝑐𝑛 𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                                                            𝑛 ≥2
+
+Then 𝑉𝑑 ( 𝑓 ∗ ★ 𝑓 ) ≥ 0 for every 𝑓 ∈ A 𝜁 if and only if 𝑑 ≥ 2𝐶 .
+
+Proof. Fourier inversion gives
+                                                        ∫
+                                                      1
+                       2 𝑔 (0) − 𝑔 ( 𝑣 ) − 𝑔 (−𝑣 ) =        𝑔b( 𝑡 ) (2 − 𝑒 − 𝑖𝑡𝑣 − 𝑒 𝑖𝑡𝑣 ) 𝑑𝑡.
+                                                     2𝜋 ℝ
+
+      b is integrable and 𝑐𝑛 = 𝐶 , an integrable bound 4𝐶 |b      𝑔 ( 𝑡 )| permits summation inside the integral.
+                           P
+Since 𝑔
+                                                               ∗
+This proves the first identity in (1.76). Apply it to 𝑔 = 𝑓 ★ 𝑓 and use 𝑓 ∗       \   ★ 𝑓 = | 𝑓b| 2 on the real axis.
+Equation (1.74) gives the other expression. If its value is zero, 𝑓b vanishes almost everywhere because
+𝜆𝑐 > 0 almost everywhere. Continuity and Fourier inversion then give 𝑓 = 0.
+   For 𝑑 ≥ 2𝐶 , the identity 𝑉𝑑 ( 𝑓 ∗ ★ 𝑓 ) = 𝑊𝑐 ( 𝑓 ∗ ★ 𝑓 ) + ( 𝑑 − 2𝐶 ) ∥ 𝑓 ∥ 22 proves positivity. Conversely,
+use 𝑓 = 𝑔 𝐴 and divide by the positive number 𝑔2 𝐴 (0). The Gaussian formula gives
+
+                   𝑉𝑑 ( 𝑔2 𝐴 )      ∑︁ − (log 𝑛 ) 2 /(8 𝐴 )
+                               =𝑑−2      𝑐𝑛 𝑒               −→ 𝑑 − 2𝐶                                    ( 𝐴 → ∞) .
+                    𝑔2 𝐴 (0)        𝑛 ≥2
+
+The summable coefficients justify the limit. If 𝑑 < 2𝐶 , the value is negative for sufficiently large 𝐴.
+
+   Every power of one prime can be retained without a cutoff. For a prime 𝑝, put 𝑟 = 𝑝 −1/2 , 𝜃 = 𝑡 log 𝑝,
+and 𝑐 𝑝𝑚 = log 𝑝 𝑟 𝑚 for 𝑚 ≥ 1, with all other coefficients zero. Then
+
+                                 log 𝑝 𝑟                              2 log 𝑝 𝑟 (1 + 𝑟 ) (1 − cos 𝜃 )
+                          𝐶𝑝 =           ,               𝜆 𝑝 (𝑡 ) =                                   .               (1.77)
+                                  1−𝑟                                 (1 − 𝑟 ) (1 − 2𝑟 cos 𝜃 + 𝑟 2 )
+Chapter 1. Arithmetic forms and operator domains                                                                         41
+
+
+To verify the expression, sum 𝑚 ≥1 𝑟 𝑚 = 𝑟 /(1 − 𝑟 ) and take the real part of 𝑚 ≥1 ( 𝑟 𝑒 𝑖𝜃 ) 𝑚 . The latter
+                                  P                                                P
+real part is ( 𝑟 cos 𝜃 − 𝑟 2 )/(1 − 2𝑟 cos 𝜃 + 𝑟 2 ). Subtracting gives (1.77). Its denominator is positive
+because 0 < 𝑟 < 1. This constructs the positive form of one complete local Euler factor, with exactly its
+prime-power coefficients and least diagonal compensation.
+
+1.22.1   A nonunital algebra and its Hilbert completion
+Let S (ℝ) be the space of smooth functions 𝑏 such that
+
+                                   sup (1 + | 𝑡 |) 𝑗 | 𝑏 ( 𝑘 ) ( 𝑡 )| < ∞          ( 𝑗, 𝑘 ≥ 0) .
+                                   𝑡 ∈ℝ
+
+These seminorms specify its topology. Use pointwise multiplication and the involution 𝑏 ∗ ( 𝑡 ) = 𝑏 ( 𝑡 ).
+The product rule makes S (ℝ) a complex ∗-algebra. It has no identity: a pointwise identity must equal
+                  2
+one wherever 𝑒 − 𝑡 is nonzero, whereas Schwartz functions tend to zero at infinity. Define
+                                       ∫
+        𝔅𝑐 = S (ℝ) ,         𝜔𝑐 ( 𝑏 ) = 𝑏 ( 𝑡 ) 𝑑𝜇𝑐 ( 𝑡 ) , 𝑇𝑐 : A 𝜁 −→ 𝔅𝑐 , 𝑇𝑐 ( 𝑔 ) = 𝑔b| ℝ .
+                                                ℝ
+
+The bound 𝜆𝑐 ≤ 4𝐶 makes this integral finite and continuous in the Schwartz topology. It is not asserted
+to be continuous in the supremum norm.
+Theorem 1.22.3 (The nonunital arithmetic representation). The map 𝑇𝑐 is an injective
+∗-homomorphism, and 𝑊𝑐 = 𝜔𝑐 ◦ 𝑇𝑐 . The functional 𝜔𝑐 is positive with zero GNS null space. Its GNS
+Hilbert space and algebraic invariant domain are
+
+                                    𝐻𝑐 = 𝐿 2 (ℝ, 𝜇𝑐 ) ,             𝐷 𝑐 = S (ℝ) ⊂ 𝐻𝑐 ,
+
+with action ( 𝜋𝑐 ( 𝑏 ) ℎ) ( 𝑡 ) = 𝑏 ( 𝑡 ) ℎ ( 𝑡 ). Every 𝜋𝑐 ( 𝑏 ) extends boundedly, with ∥ 𝜋𝑐 ( 𝑏 ) ∥ = sup𝑡 ∈ℝ | 𝑏 ( 𝑡 )|.
+The image 𝑇𝑐 (A 𝜁 ) is dense in 𝐻𝑐 . Thus the GNS isometry [ 𝑓 ] ↦→ 𝑓b for 𝑊𝑐 is onto after Hilbert
+completion. Neither 𝑊𝑐 nor 𝜔𝑐 admits a positive unitization of finite mass.
+
+Proof. For 𝑔 ∈ A 𝜁 , every derivative of 𝑢𝑗 𝑔 ( 𝑢) is integrable. Fourier differentiation and repeated in-
+tegration by parts therefore show 𝑔b ∈ S (ℝ). The product and involution identities in (1.34) prove
+that 𝑇𝑐 is a ∗-homomorphism. Fourier inversion proves its injectivity, and (1.76) proves the equality of
+functionals. The identity                         ∫
+                                             𝜔𝑐 ( 𝑏 ∗ 𝑏 ) =        | 𝑏 ( 𝑡 )| 2 𝑑𝜇𝑐 ( 𝑡 )
+                                                               ℝ
+proves positivity and identifies its null space as zero.
+    Smooth compactly supported functions are dense in 𝐻𝑐 . Indeed, truncate a vector’s support and size
+first. The resulting bounded functions of compact support belong to ordinary 𝐿 2 ( 𝑑𝑡 ) and approximate
+the vector in 𝐻𝑐 by dominated convergence. Approximate them in 𝐿 2 ( 𝑑𝑡 ) by smooth compactly sup-
+ported functions. The bound 𝑑𝜇𝑐 ≤ (2𝐶 / 𝜋 ) 𝑑𝑡 transfers this approximation to 𝐻𝑐 . For this ordinary
+approximation, step functions are dense in 𝐿 2 ( 𝑑𝑡 ), and smooth ramps replace their interval endpoints
+on sets of vanishing measure. It follows that 𝐷 𝑐 has Hilbert completion 𝐻𝑐 . Multiplication preserves
+𝐷 𝑐 and satisfies the adjoint identity there. Its norm is at most sup | 𝑏 |. Every interval has positive 𝜇𝑐
+measure. A bump function in an interval where | 𝑏 | > sup | 𝑏 | − 𝜖 gives the reverse norm bound, after
+normalization and then 𝜖 ↓ 0.
+Chapter 1. Arithmetic forms and operator domains                                                              42
+
+
+   To prove density of the image, take 𝑏 ∈ 𝐶𝑐∞ (ℝ) and let 𝑓 be its inverse Fourier transform. Integration
+by parts shows that 𝑓 ∈ S (ℝ) and 𝑓b = 𝑏 . Choose a smooth cutoff 𝜒 equal to one on [−1, 1] and
+supported in [−2, 2]. Then 𝑓𝑗 ( 𝑢) = 𝜒 ( 𝑢/𝑗 ) 𝑓 ( 𝑢) belongs to 𝐶𝑐∞ (ℝ) ⊂ A 𝜁 and converges to 𝑓 in every
+Schwartz seminorm. Fourier differentiation and integration by parts show that 𝑓b𝑗 → 𝑏 in every Schwartz
+seminorm. In particular, this convergence holds in 𝐻𝑐 . The preceding density proves the assertion about
+the GNS isometry.
+   Finally, evaluate 𝑊𝑐 on the Gaussians 𝑔𝑎 as 𝑎 ↓ 0. Since every contributing 𝑛 is at least two,
+                                                 1 ∑︁                       2
+                                                         𝑐𝑛 1 − 𝑒 − (log 𝑛 ) /(4 𝑎 )
+                                                                                     
+                                    𝑊𝑐 ( 𝑔𝑎 ) = √
+                                                𝜋 𝑎 𝑛 ≥2
+                                                𝐶                    2
+                                                                               
+                                             =√      1 + 𝑂 𝑒 − (log 2) /(4 𝑎 ) ,                          (1.78)
+                                                𝜋𝑎
+                                           2   √
+                               |𝑊𝑐 ( 𝑔𝑎 )|      2𝐶
+                                             ∼ √ 𝑎 −1/2 −→ ∞.
+                                𝑊𝑐 ( 𝑔2 𝑎 )       𝜋
+The unitization inequality (1.60) excludes any finite mass. A positive unitization of 𝜔𝑐 would pull back
+through 𝑇𝑐 to one of 𝑊𝑐 , so it is excluded as well.
+
+    The weight can also be defined on the positive cone of 𝐿 ∞ ( 𝜇𝑐 ) by Φ𝑐 ( 𝑏 ) = 𝑏 𝑑𝜇𝑐 ∈ [0, ∞]. Its
+                                                                                           ∫
+
+finite linear ideal is 𝔪𝑐 = 𝐿 1 ( 𝜇𝑐 ) ∩ 𝐿 ∞ ( 𝜇𝑐 ). This ideal is closed under conjugation and multiplication by
+bounded functions. Its square-integrable ideal is 𝔫 𝑐 = 𝐿 2 ( 𝜇𝑐 ) ∩ 𝐿 ∞ ( 𝜇𝑐 ). For 𝑏 ∈ 𝔫 𝑐 , one has 𝑏 ∗ 𝑏 ∈ 𝔪𝑐
+and Φ𝑐 ( 𝑏 ∗ 𝑏 ) = ∥ 𝑏 ∥ 2𝐻𝑐 . Bounded functions supported on finite intervals approximate any vector in 𝐻𝑐 .
+Moreover, restricting a nonnegative bounded function to these intervals gives increasing finite-weight
+functions with that function as their limit. These statements specify the finite ideals without assigning a
+finite value to the identity. Equation (1.78) implies Φ𝑐 (1) = ∞.
+    Although every Schwartz multiplier is bounded, the functional has no finite-norm representing vector
+in any invariant ∗-representation domain. Such a vector would give |𝑊𝑐 ( 𝑔 )| 2 ≤ ∥ Ω ∥ 2𝑊𝑐 ( 𝑔 ∗ ★ 𝑔 ) by
+Cauchy–Schwarz, contrary to (1.78). The positive functional is defined on the proper algebra 𝔅𝑐 . It does
+not extend positively to its entire 𝐶 ∗ completion.
+
+1.22.2   Frequency multipliers on a common invariant domain
+There is a natural unbounded multiplier compatible with this arithmetic representation: the real Fourier
+coordinate 𝑡 . For clarity, it is a multiplier of 𝔅𝑐 , not an element of it. Its powers cannot be inserted as
+finite-weight observables. Put
+
+                ( 𝑁 ℎ) ( 𝑡 ) = 𝑡ℎ ( 𝑡 ) ,             D ( 𝑁 ) = { ℎ ∈ 𝐻𝑐 : 𝑡ℎ ∈ 𝐻𝑐 },
+                               \
+                     𝐷 𝑐∞ = { ℎ ∈ 𝐻𝑐 : 𝑡 𝑘 ℎ ∈ 𝐻𝑐 } .                                                     (1.79)
+                             𝑘 ≥0
+
+Proposition 1.22.4 (Self-adjoint frequency and all products). The operator 𝑁 is unbounded
+and self-adjoint. Schwartz functions form a core for every power 𝑁 𝑘 . The space 𝐷 𝑐∞ is dense and
+complete for the seminorms ∥ 𝑡 𝑘 ℎ ∥ 𝐻𝑐 , 𝑘 ≥ 0. It is invariant under 𝑁 , polynomial multipliers, Schwartz
+multipliers, and 𝑈𝑠 ℎ ( 𝑡 ) = 𝑒 𝑖 𝑠𝑡 ℎ ( 𝑡 ) for every real 𝑠 . All products and adjoint identities hold on this
+common domain. The image 𝑇𝑐 (A 𝜁 ) is dense in 𝐷 𝑐∞ for these seminorms. On that image, 𝑁 𝑇𝑐 ( 𝑓 ) =
+𝑇𝑐 ( 𝑖𝜕𝑢 𝑓 ) and 𝑈𝑠𝑇𝑐 ( 𝑓 ) = 𝑇𝑐 ( 𝜏𝑠 𝑓 ).
+Chapter 1. Arithmetic forms and operator domains                                                                        43
+
+
+Proof. Multiplication by a measurable real function on its maximal domain is closed in this case: take
+an almost-everywhere convergent subsequence of a convergent pair ℎ𝑗 → ℎ, 𝑡ℎ𝑗 → 𝑣 in 𝐻𝑐 . Its limits
+obey 𝑣 = 𝑡ℎ. To construct such a subsequence, choose successive errors with summable squared norms
+and apply the integral bound to their squared sum.
+    The operator is symmetric. If 𝑣 belongs to its adjoint domain, the adjoint identity tested on all
+bounded functions of compact support forces 𝑁 ∗ 𝑣 = 𝑡𝑣 almost everywhere. Those tests belong to
+D ( 𝑁 ), and on each compact interval both sides are integrable against them by Cauchy–Schwarz. Thus
+𝑡𝑣 ∈ 𝐻𝑐 and 𝑣 ∈ D ( 𝑁 ). This proves self-adjointness. The same argument applies to multiplication
+by 𝑡 𝑘 . Support and size truncation followed by smooth approximation gives density of 𝐶𝑐∞ in its graph
+norm, because (1 + 𝑡 2𝑘 ) 𝜆𝑐 ( 𝑡 ) is bounded on each compact interval. It follows that Schwartz functions
+form a core. Normalized bumps supported in ( 𝑅, 𝑅 + 1) have ∥ 𝑁 ℎ ∥ ≥ 𝑅 ∥ ℎ ∥, so 𝑁 is unbounded.
+    A Cauchy sequence in all the displayed seminorms has a Hilbert limit ℎ and limits for every 𝑡 𝑘 ℎ𝑗 .
+Closedness of each multiplication operator identifies these limits as 𝑡 𝑘 ℎ and proves completeness. Sup-
+port truncation and smooth approximation give density of Schwartz functions simultaneously in any
+finite collection of the seminorms. Polynomial multiplication only increases their indices. A Schwartz
+multiplier 𝑏 obeys ∥ 𝑡 𝑘 𝑏ℎ ∥ ≤ ∥ 𝑏 ∥ ∞ ∥ 𝑡 𝑘 ℎ ∥, and 𝑈𝑠 preserves each seminorm. These estimates prove invari-
+ance and continuity. Pointwise multiplication and conjugation prove all product and adjoint identities
+on 𝐷 𝑐∞ .
+    For 𝑏 ∈ S , the cutoff construction in the preceding theorem approximates 𝑏 by transforms of com-
+pactly supported smooth functions in the Schwartz topology. That topology controls every seminorm
+in (1.79), since 𝜆𝑐 is bounded. This proves the image density. Integration by parts gives 𝑖𝜕   𝑢 𝑓 ( 𝑡 ) = 𝑡 𝑓 ( 𝑡 ),
+                                                                                               d             b
+and a change of variable gives 𝜏c   𝑠 𝑓 ( 𝑡 ) = 𝑒 𝑓 ( 𝑡 ). Both 𝑖𝜕𝑢 𝑓 and 𝜏𝑠 𝑓 remain in A 𝜁 .
+                                                 𝑖 𝑠𝑡 b
+
+    Dominated convergence makes (𝑈𝑠 ) 𝑠 ∈ℝ a strongly continuous unitary group on 𝐻𝑐 . For ℎ ∈ D ( 𝑁 ),
+the estimate |( 𝑒 𝑖 𝑠𝑡 − 1)/ 𝑠 | ≤ | 𝑡 | gives (𝑈𝑠 ℎ − ℎ)/ 𝑠 → 𝑖 𝑁 ℎ in 𝐻𝑐 . Conversely, a convergent difference
+quotient has almost-everywhere limit 𝑖𝑡ℎ along a subsequence, so its Hilbert limit requires 𝑡ℎ ∈ 𝐻𝑐 .
+Thus its generator domain is exactly D ( 𝑁 ). The smaller domain 𝐷 𝑐∞ permits every polynomial in this
+generator. For the Schwartz algebra alone, its common GNS graph completion is all of 𝐻𝑐 , since each of
+its multipliers is bounded. These two domain statements refer to different multiplier algebras.
+
+1.22.3   The sum over all primes and the native comparison
+For 𝑋 ≥ 2 and a real exponent 𝜎 , set
+
+                         ΛvM ( 𝑛) 𝑛− 𝜎 ,                                       ΛvM ( 𝑛) 𝑛− 𝜎 ∥ 𝑓 − 𝜏log 𝑛 𝑓 ∥ 22 .
+                    ∑︁                                               ∑︁
+          𝐶𝑋 ,𝜎 =                                  𝑞 𝑋 ,𝜎 ( 𝑓 ) =
+                      2≤ 𝑛 ≤ 𝑋                                      2≤ 𝑛 ≤ 𝑋
+
+These forms are defined for every 𝑓 ∈ 𝐿 2 (ℝ, 𝑑𝑢). Increasing 𝑋 increases their values. The native expo-
+nent is 𝜎 = 1/2.
+Theorem 1.22.5 (The exact convergence boundary for the positive prime sum). For 𝜎 > 1, the
+coefficient sum 𝐶𝜎 = 𝑛 ≥2 ΛvM ( 𝑛) 𝑛− 𝜎 is finite. It therefore defines the positive carrier above with all
+                    P
+primes present. Moreover,
+
+                                  0 ≤ 𝑞 𝜎 ( 𝑓 ) := lim 𝑞 𝑋 ,𝜎 ( 𝑓 ) ≤ 4𝐶𝜎 ∥ 𝑓 ∥ 22 .
+                                                   𝑋 →∞
+
+For every real 𝜎 ≤ 1 and every nonzero 𝑓 ∈ 𝐿 2 (ℝ),
+
+                                               lim 𝑞 𝑋 ,𝜎 ( 𝑓 ) = +∞.                                                (1.80)
+                                              𝑋 →∞
+Chapter 1. Arithmetic forms and operator domains                                                            44
+
+
+Thus the finite domain of the increasing limit form is {0} when 𝜎 ≤ 1. It is not a densely defined
+quadratic form on 𝐿 2 (ℝ).
+Proof. For 𝜎 > 1, use 0 ≤ ΛvM ( 𝑛) ≤ log 𝑛 and the integral comparison for (log 𝑛) 𝑛− 𝜎 . The bound
+                                                                              P
+∥ 𝑓 − 𝜏𝑣 𝑓 ∥ 2 ≤ 2∥ 𝑓 ∥ 2 proves the stated estimate.
+    For divergence of the coefficients, prime factorization gives 𝑑 | 𝑚 ΛvM ( 𝑑 ) = log 𝑚. For an integer
+                                                                 P
+𝑀 ≥ 4, sum this identity over 𝑚 ≤ 𝑀 to obtain
+                                                                     ΛvM ( 𝑛)
+                                           𝑀                   𝑀
+                                                         𝑀
+                                               ΛvM ( 𝑛)
+                                           ∑︁                    ∑︁
+                             log( 𝑀 !) =                    ≤𝑀                .
+                                           𝑛=2           𝑛       𝑛=2     𝑛
+The last ⌈ 𝑀 /2⌉ factorial factors are at least 𝑀 /2. Hence the last sum is at least 21 log( 𝑀 /2) and tends
+to infinity. For 𝜎 ≤ 1, 𝑛− 𝜎 ≥ 𝑛−1 , so 𝐶𝑋 ,𝜎 → ∞ as well.
+    Finally, ⟨ 𝑓 , 𝜏𝑣 𝑓 ⟩2 → 0 as 𝑣 → +∞. To prove this, approximate 𝑓 in 𝐿 2 by a function ℎ supported
+in a fixed finite interval. For sufficiently large 𝑣 , ℎ and 𝜏𝑣 ℎ have disjoint supports. Cauchy–Schwarz
+bounds the difference between their correlation and that of 𝑓 by ∥ 𝑓 − ℎ ∥ 2 (∥ 𝑓 ∥ 2 + ∥ ℎ ∥ 2 ), uniformly
+in 𝑣 . The approximation error can tend to zero. It follows that ∥ 𝑓 − 𝜏log 𝑛 𝑓 ∥ 22 → 2∥ 𝑓 ∥ 22 as 𝑛 → ∞. For
+𝑓 ≠ 0, these squared norms are at least ∥ 𝑓 ∥ 22 for every sufficiently large 𝑛. The divergent coefficient tail
+proves (1.80).
+   The damping exponent changes the coefficients and therefore changes the functional. For 𝜎 > 1, the
+Euler product in (1.9) also writes its positive Fourier density as
+                                               ′
+                                                             𝜁′
+                                                                      
+                                                𝜁
+                                 𝜆 𝜎 ( 𝑡 ) = 2 − ( 𝜎 ) + Re ( 𝜎 − 𝑖𝑡 ) .
+                                                 𝜁            𝜁
+This equality uses only absolutely convergent Dirichlet series. Continuation of its right side beyond that
+half-plane does not continue the positive sum in (1.75). Theorem 1.22.5 proves the failure of that sum
+already at 𝜎 = 1.
+                                                                                                       √
+    For the exact comparison with 𝐿 𝜁 , put 𝐶𝑋 = 𝐶𝑋 ,1/2 and let 𝑊𝑋 have coefficients 𝑐𝑛 = ΛvM ( 𝑛)/ 𝑛
+for 𝑛 ≤ 𝑋 , zero otherwise. Retain the polar and archimedean functional
+                                                     ∫
+                                                   1                                    
+              𝑅∞ ( 𝑔 ) = 𝑔b( 𝑖 /2) + 𝑔b(− 𝑖 /2) +      𝑔b( 𝑡 ) Re 𝜓 (1/4 + 𝑖𝑡 /2) − log 𝜋 𝑑𝑡.
+                                                  2𝜋 ℝ
+Proposition 1.22.6 (Subtraction and the remaining arithmetic form). For every 𝑔 ∈ A 𝜁 ,
+                           𝐿 𝜁 ( 𝑔 ) = 𝑊𝑋 ( 𝑔 ) + 𝑅∞ ( 𝑔 ) − 2𝐶𝑋 𝑔 (0)
+                                         ∑︁ ΛvM ( 𝑛)                                                    (1.81)
+                                       −         √       𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                                         𝑛> 𝑋      𝑛
+The tail tends to zero as 𝑋 → ∞. Consequently
+                                             ∑︁ ΛvM ( 𝑛)                        
+                 lim 𝑊𝑋 ( 𝑔 ) − 2𝐶𝑋 𝑔 (0) = −      √      𝑔 (log 𝑛) + 𝑔 (− log 𝑛) .
+                𝑋 →∞                          𝑛 ≥2   𝑛
+The functional on the right is strictly negative on every Gaussian convolution square. For each nonzero
+𝑓 ∈ A𝜁 ,
+                                   𝑅∞ ( 𝑓 ∗ ★ 𝑓 ) − 2𝐶𝑋 ∥ 𝑓 ∥ 22 −→ −∞.                           (1.82)
+Thus the full functional cannot be obtained as the increasing limit of these positive prime forms, or by
+adding a positive residual to each sufficiently large cutoff.
+Chapter 1. Arithmetic forms and operator domains                                                        45
+
+
+Proof. Substitute the definition of 𝑊𝑋 into (1.39). This gives (1.81) with its stated signs. Choose 𝑎 > 1/2
+such that 𝑔 ∈ A 𝑎 . Lemma 1.3.1 bounds the absolute tail by
+                                           ∑︁
+                                       𝐾𝑔       (log 𝑛) 𝑛− 𝑎 −1/2 ,
+                                             𝑛> 𝑋
+
+which tends to zero because 𝑎 + 1/2 > 1. The Gaussian 𝑔2𝑏 is strictly positive at every real argument. At
+least the 𝑛 = 2 term is nonzero, so the negative prime sum on 𝑔2𝑏 = 𝑔𝑏∗ ★ 𝑔𝑏 is strictly negative. The
+value 𝑅∞ ( 𝑓 ∗ ★ 𝑓 ) is finite and independent of 𝑋 . Since 𝐶𝑋 → ∞ and ∥ 𝑓 ∥ 2 > 0, (1.82) follows. The
+full residual 𝐿 𝜁 − 𝑊𝑋 differs from this expression on the chosen square by a tail tending to zero. It is
+therefore negative there for every sufficiently large 𝑋 .
+
+    The construction gives an arithmetic ∗-homomorphism and a positive functional with the required
+failure of finite mass. Its pullback is 𝑊𝑐 , with the exact diagonal compensation specified above. The
+equality 𝐿 𝜁 = 𝜔 ◦ 𝑇 still requires a construction that combines the prime, polar, and archimedean terms
+before asserting positivity. Equation (1.81) states the entire missing comparison. A representation of
+quantum currents would additionally have to identify their products and involution with this numerical
+carrier on a common domain. No formal completion, change of exponent, or removal of a divergent
+diagonal term supplies either identification.
+

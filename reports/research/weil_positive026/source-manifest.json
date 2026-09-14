@@ -1,0 +1,43 @@
+{
+  "base_head": "cce2bc383bcf2fd930e917a5abb773e0469465cc",
+  "branch": "intake/frontier-weil-positive-026-20260914",
+  "source_files": [
+    {
+      "path": "research-candidates/weil_positive026/prime-difference-carrier.tex",
+      "sha256": "00338ca975438f5a457354e13f808d1245830da49888edf92c9e633b43bcfc6b",
+      "bytes": 22814
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/arithmetic.tex",
+      "sha256": "56b73a14e153c3405d29e9b842919d6576cff110d17175a2e999443745d17112",
+      "bytes": 125539
+    },
+    {
+      "path": "reports/research/weil_positive026/inputs/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "bytes": 43118
+    },
+    {
+      "path": "reports/research/weil_positive026/candidate.tex",
+      "sha256": "4820e6731e973edbb8423fa1e1c8c4bfb6cb7f3b37ec21cec36416fafde820ca",
+      "bytes": 279
+    }
+  ],
+  "source_aggregate_sha256": "9bfaa346c0c7e02010e180060e80cecd4970afc7d26aab5c774a859b46dc0fea",
+  "source_diff_sha256": "6f205bbd3e474bb57c134ba2aa53a85fd2e23f7b7cc7f9d42dc8be6efd5e6cc2",
+  "diff_scope": "New reader module only. The inherited arithmetic chapter and template are unchanged dependency snapshots.",
+  "external_label_dependencies": [
+    "eq:euler",
+    "eq:fourier",
+    "eq:transform",
+    "eq:unit-criterion",
+    "eq:weil-functional",
+    "eq:weil-gaussian-asymptotic",
+    "lem:test-bounds",
+    "thm:cstar-unitization"
+  ],
+  "inherited_proofs": 39,
+  "new_proofs": 5,
+  "include_location": "After the full arithmetic forms chapter and before the prime-distribution continuation.",
+  "acceptance": "Prepared for independent review; this record is not acceptance."
+}
