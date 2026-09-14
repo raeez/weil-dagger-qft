@@ -1,0 +1,547 @@
+\chapter{Merging ordered insertions}
+\label{chap:merging-ordered-insertions}
+
+Bringing two points together asks two different questions.
+A Laurent expansion retains their separation as a small parameter.
+A collision sets that separation to zero and must specify the state
+left at the merged point.
+The expansion at the end of
+Chapter~\ref{chap:ordered-coefficient-bar} answers the first question.
+We now construct maps answering the second for ordered coefficients
+and a free algebra of composite states.
+
+Order matters at the moment of collision.
+The two branches of the binary coefficient algebra give two
+restrictions to the same point.
+With three labels, successive restrictions must retain the same
+total order.
+We will write the maps, the complexes recording the equations of
+collision, and the changes of variables that prove this compatibility.
+Their bar duals require an additional change of coefficients.
+A binary example will show why that change cannot be omitted.
+
+\section{Which charts survive a collision?}
+
+Retain the polynomial ring $R_I=\mathbb C[z_i\mid i\in I]$ and
+the coefficient algebra $C_I$ of
+Chapter~\ref{chap:ordered-coefficient-bar}.
+Its components use a nonempty collection of total-order charts.
+A difference $z_i-z_{i'}$ is inverted exactly when that pair
+changes order among those charts.
+Compatible polynomial forms on their simplices define $C_I$.
+The differential acts on the simplex variables and fixes all $z_i$.
+
+Let $p:I\to J$ be a surjection of nonempty finite sets.
+The labels in $p^{-1}(j)$ are to become one label $j$.
+Choose an order $\tau_j$ on each such fibre.
+An order $\sigma$ of $J$ expands to an order $e_p(\sigma)$ of $I$:
+list the blocks according to $\sigma$, and list their members
+according to $\tau_j$.
+This is an injection between the two finite sets of orders.
+
+Write $Z_j$ for the merged coordinates.
+The coordinate substitution is
+\[
+ R_I\longrightarrow R_J,\qquad z_i\longmapsto Z_{p(i)}.
+\]
+It cannot be applied to every localization in $C_I$.
+For example, an inverse of $z_1-z_2$ cannot be specialized when
+$p(1)=p(2)$.
+The selected charts remove exactly this difficulty.
+
+For a nonempty collection $L$ of orders of $J$, consider the
+component indexed by $e_p(L)$.
+The relative order of two labels in one block is fixed on this
+component. Their difference is therefore never inverted.
+For labels in different blocks, their order varies precisely when
+the order of their two blocks varies in $L$.
+Consequently coordinate substitution defines
+\[
+ R_{I,e_p(L)}\longrightarrow R_{J,L}.
+\]
+Restrict a coefficient family to these selected components,
+replace $t_{e_p(\sigma)}$ by $t_\sigma$, and make this substitution.
+Face restrictions commute with both steps.
+
+\begin{proposition}\label{prop:moi-coefficient-map}
+The prescribed formulas define a unital morphism of commutative
+differential graded algebras
+\[
+ k_p:C_I\longrightarrow C_J,
+ \qquad k_p(z_i)=Z_{p(i)}.
+\]
+For nested ordered surjections, the maps compose by concatenating
+the orders inside their fibres.
+\end{proposition}
+\begin{proof}
+Localization is permitted by the preceding pairwise test.
+The injection $e_p$ identifies each retained simplex with the
+corresponding target simplex, including all its faces.
+The component maps therefore preserve the defining compatibility
+equations of $C_I$.
+They preserve multiplication, the unit, and the polynomial-form
+differential term by term.
+
+Let $q:J\to K$ be another ordered surjection.
+The order of $(qp)^{-1}(k)$ first lists the $J$-blocks in the
+chosen order inside $q^{-1}(k)$, then their $I$-labels.
+Thus $e_{qp}=e_p e_q$.
+Both composite coefficient maps select the same component and
+make the substitution $z_i\mapsto W_{q(p(i))}$.
+Their simplex variables also have the same images.
+This proves the identity $k_{qp}=k_qk_p$.
+\end{proof}
+
+The closed comparison form
+$\omega_{ii'}=dq_{ii'}/(z_i-z_{i'})$ has a particularly simple image:
+\begin{equation}\label{eq:moi-omega-image}
+ k_p(\omega_{ii'})=
+ \begin{cases}
+ 0,&p(i)=p(i'),\\
+ \omega_{p(i),p(i')},&p(i)\ne p(i').
+ \end{cases}
+\end{equation}
+In the first case, the selected simplex face makes $q_{ii'}$
+constant, so its differential is zero before coordinates are
+specialized.
+In the second case its order indicator is the order indicator
+of the two blocks, with the corresponding denominator.
+
+For $p(1)=p(2)=a$, $p(3)=b$, and $1<2$ in the first block,
+the retained charts are $123$ and $312$.
+Thus $\omega_{12}$ vanishes, while both $\omega_{13}$ and
+$\omega_{23}$ become $\omega_{ab}$.
+Following this by $a<b$ selects $123$.
+Merging $2<3$ first and then placing $1$ before that block
+selects the same chart.
+
+\section{The Koszul complex of a diagonal}
+
+A collision sets coordinate differences to zero.
+For each independent difference, adjoin a degree-minus-one exterior
+generator whose differential is that difference.
+The resulting Koszul complex computes derived restriction, as in
+Chapter~\ref{chap:ordered-collisions-residues}.
+
+Let $r_p(j)$ be the first label in the chosen order of $p^{-1}(j)$.
+Introduce
+\[
+ x_i=z_i-z_{r_p(p(i))}\quad(i\ne r_p(p(i))).
+\]
+Using $Z_j=z_{r_p(j)}$ gives a polynomial identification
+\[
+ R_I=R_J[x_i\mid i\ne r_p(p(i))].
+\]
+The collision sets every $x_i$ to zero.
+
+Form the graded-commutative algebra
+\[
+ K_p=R_I\otimes\Lambda(\epsilon_i\mid i\ne r_p(p(i))),
+ \qquad |\epsilon_i|=-1,\qquad d\epsilon_i=x_i.
+\]
+The exterior generators anticommute and square to zero.
+The differential fixes $R_I$ and obeys the graded Leibniz rule.
+Its square vanishes on the generators, hence on the algebra.
+
+For one normal coordinate, this is
+$R_J[x]\epsilon\xrightarrow{x}R_J[x]$.
+Multiplication by $x$ is injective, and its cokernel is $R_J$.
+An explicit contraction over $R_J$ sends
+\[
+ f(x)\longmapsto
+ \epsilon\,\frac{f(x)-f(0)}{x},
+ \qquad \epsilon g(x)\longmapsto0.
+\]
+The quotient is polynomial.
+On degree zero, $dh+hd$ is $f\mapsto f-f(0)$.
+On degree minus one it is the identity.
+Tensoring these one-variable contractions, with their tensor
+signs, proves that $K_p\to R_J$ is a resolution.
+It is bounded and free as a complex of $R_I$-modules.
+
+For a complex $M$ of $R_I$-modules, the complex
+$K_p\otimes_{R_I}M$ is its derived restriction to this diagonal.
+Multiplication by $x_i$ has the explicit homotopy
+\[
+ x_i m=d(\epsilon_i m)+\epsilon_i\,dm.
+\]
+For a cycle $m$, this gives $x_i m=d(\epsilon_i m)$.
+Exterior products of the $\epsilon_i$ supply the compatibility
+between these homotopies.
+This construction preserves quasi-isomorphisms.
+Indeed, filter its tensor product with an acyclic complex by the
+finite exterior degree. Each quotient is a finite sum of shifted
+copies of that acyclic complex. Induction on this finite
+filtration proves acyclicity.
+
+Apply the construction to the coefficients:
+\[
+ B_p=K_p\otimes_{R_I}C_I.
+\]
+It is a commutative differential graded algebra over $R_J$,
+using the representative-coordinate embedding just specified.
+The previous map extends to
+\begin{equation}\label{eq:moi-derived-coefficient}
+ \kappa_p:B_p\longrightarrow C_J,\qquad
+ \epsilon_i\longmapsto0,\qquad c\longmapsto k_p(c).
+\end{equation}
+This is a chain map because $k_p(x_i)=0$.
+Thus the coefficient restriction exists on an explicit complex
+computing the derived restriction. No flatness of $C_I$ has been
+assumed.
+
+The nested compatibility also has an explicit expression.
+For $q:J\to K$, write
+\[
+ y_j=Z_j-Z_{r_q(q(j))},\qquad d\eta_j=y_j,
+\]
+with $y_j=\eta_j=0$ on representative labels.
+For $p$ use $x_i=\epsilon_i=0$ on representatives.
+A direct collision from $I$ to $K$ has normal coordinate
+\[
+ w_i=z_i-z_{r_p(r_q(q(p(i))))}=x_i+y_{p(i)}.
+\]
+Its exterior generator $\zeta_i$ is sent to
+\begin{equation}\label{eq:moi-koszul-composition}
+ \zeta_i\longmapsto\epsilon_i+\eta_{p(i)}.
+\end{equation}
+There are $|I|-|K|$ generators on each side.
+The inverse sends
+\[
+ \eta_j\longmapsto\zeta_{r_p(j)},\qquad
+ \epsilon_i\longmapsto\zeta_i-\zeta_{r_p(p(i))},
+\]
+where the final representative has $\zeta=0$.
+These formulas are inverse linear changes of exterior generators.
+They commute with the differential by the formula for $w_i$.
+Consequently the complex for successive restrictions is
+isomorphic to the complex for the direct restriction.
+Every coefficient collision sends these exterior generators to zero.
+The equality of their remaining maps is exactly $k_{qp}=k_qk_p$.
+For further nested collisions, each generator becomes the sum along
+its successive blocks, independent of parenthesization.
+
+\section{Translation and composite states}
+
+Translation of an insertion is differentiation in its position.
+On a localized coefficient ring, define
+\[
+ \partial_{z_i}(z_i-z_{i'})^{-1}
+ =-(z_i-z_{i'})^{-2}
+\]
+and extend by the usual product rule.
+The derivations kill simplex variables.
+They preserve face compatibility and commute with the coefficient
+differential, hence act on $C_I$.
+
+A connection on a module over $R_I$ means operators $\nabla_i$
+satisfying
+\[
+ \nabla_i(fm)=(\partial_{z_i}f)m+f\nabla_i m.
+\]
+It is flat when the operators commute.
+It is compatible with a complex when each commutes with its
+differential.
+Equivalently these operators make the module a module over the
+algebra generated by $z_i,\partial_{z_i}$ with relations
+\[
+ [z_i,z_{i'}]=[\partial_{z_i},\partial_{z_{i'}}]=0,\qquad
+ [\partial_{z_i},z_{i'}]=\delta_{ii'}.
+\]
+This algebra is the algebra of polynomial differential operators
+on the coordinate space. These are left differential modules.
+
+The tangent derivative along a merged coordinate is
+\[
+ \nabla_{Z_j}=\sum_{p(i)=j}\partial_{z_i}.
+\]
+It annihilates every $x_i$.
+On $B_p$, let it also annihilate $\epsilon_i$.
+It then commutes with $d\epsilon_i=x_i$.
+The chain rule gives
+\begin{equation}\label{eq:moi-connection}
+ \partial_{Z_j}\kappa_p(c)
+ =\kappa_p\left(\sum_{p(i)=j}\partial_{z_i}c\right).
+\end{equation}
+Thus collision respects translation along the merged point.
+For nested collisions, summing tangent derivatives over blocks
+gives the derivative for the composite block.
+
+Now introduce an actual composite state for every finite word.
+Let $V_I$ have basis $u_i$, all of degree zero and weight one.
+Its tensor algebra is the vector space of finite linear
+combinations of words, with concatenation as multiplication.
+Set
+\[
+ \mathcal A_I=C_I\otimes_{\mathbb C}T(V_I).
+\]
+The differential acts on coefficients. The states are horizontal:
+$\nabla_i u_{i'}=0$.
+The augmentation kills every nonempty word.
+The algebra is associative because concatenation is associative.
+
+After extending coefficients by \eqref{eq:moi-derived-coefficient},
+define
+\[
+ u_{i_1}\cdots u_{i_m}
+ \longmapsto u_{p(i_1)}\cdots u_{p(i_m)}.
+\]
+It preserves products, differential, weight, augmentation, and
+the connection. In particular, $u_1u_2$ becomes the nonzero state
+$u_a^2$ when $1,2$ merge to $a$.
+The target retains a composite word at one position.
+
+This free-word algebra differs from the finite algebra $A_I$
+of Chapter~\ref{chap:ordered-coefficient-bar}.
+There the coefficient $\omega_{ij}$ entered the state product.
+Here products of states are horizontal, while collision classes
+remain in the coefficient algebra. Both constructions have
+explicit bar differentials. An identification between them would
+require an additional map preserving the structures in question.
+
+\section{Bar words follow the merged states}
+
+Put $Q_I=B_{C_I}\mathcal A_I$.
+Its elements are words $[a_1|\cdots|a_\ell]$ in nonempty states,
+with $|sa|=|a|-1$.
+The differential has internal part $b_1(sa)=-s(da)$ and
+multiplication part
+\[
+ b_2(sa\otimes sb)=(-1)^{|a|}s(ab).
+\]
+These are the conventions already derived in
+Chapter~\ref{chap:ordered-coefficient-bar}.
+Disjoint adjacent contractions cancel by their odd degree.
+Overlapping contractions give the signed associator, and mixed
+terms give the coefficient Leibniz identity.
+Those same calculations prove $b^2=0$ for $\mathcal A_I$.
+
+For a $C_I$-module $M$, define its coefficient extension by
+\[
+ E_p(M)=C_J\otimes_{B_p}^{\mathbb L}
+                  (K_p\otimes_{R_I}M).
+\]
+The superscript means that a free resolution is used before
+tensoring when necessary.
+For the bar modules at a fixed weight, no unspecified resolution
+is needed. A word of weight $w$ uses at most $w$ letters.
+There are finitely many label words and cuts at that weight.
+Filtering by bar length makes $Q_I(w)$ a finite semifree
+$C_I$-module: the differential of each state-word basis vector
+uses shorter bar words.
+The same property holds after tensoring with $K_p$ over $R_I$.
+Thus ordinary scalar extension computes $E_p(Q_I(w))$.
+
+The collision map on the relative bar is
+\[
+ \gamma_p:E_p(Q_I)\longrightarrow Q_J,\qquad
+ [a_1|\cdots|a_\ell]\longmapsto
+ [\alpha_p(a_1)|\cdots|\alpha_p(a_\ell)].
+\]
+Here $\alpha_p$ denotes the coefficient and state map just defined.
+It preserves each product and each degree.
+Substitution in $b_1,b_2$ shows that $\gamma_p$ is a chain map.
+It also preserves every word cut.
+All these maps respect the connection by
+\eqref{eq:moi-connection}.
+The explicit changes of exterior generators in
+\eqref{eq:moi-koszul-composition} give the same compatibility
+for nested collisions.
+
+For the three-label example,
+\[
+ b[u_1|u_2|u_3]=[u_1u_2|u_3]-[u_1|u_2u_3].
+\]
+After merging $1,2$ this becomes
+\[
+ [u_a^2|u_b]-[u_a|u_au_b].
+\]
+Its next boundary is zero by associativity.
+Multiplying the original word by $\omega_{13}$ transports that
+coefficient to $\omega_{ab}$ with the same tensor signs.
+Thus state merger and coefficient restriction occur in one
+nonzero bar calculation.
+
+The resolution $\mathcal A_I\otimes_{C_I}Q_I$ has leading face
+\[
+ a_0\otimes[a_1|\cdots|a_\ell]\longmapsto
+ -(-1)^{|a_0|}a_0a_1\otimes[a_2|\cdots|a_\ell].
+\]
+The insertion $-1\otimes[\overline a_0|a_1|\cdots|a_\ell]$
+contracts its augmentation.
+The cancellation and semifree lifting argument in the preceding
+bar chapter depend only on associativity, augmentation, and a
+free positive-weight state basis. They apply here at each weight
+and to the full algebraic resolution.
+Consequently its coefficient dual computes
+$R\operatorname{Hom}_{\mathcal A_I}(C_I,C_I)$.
+The product is convolution by cuts, equivalently composition of
+the lifted resolution endomorphisms. This is a relative algebraic
+Hom, not the space of horizontal maps.
+
+\section{Why dual collision changes the coefficients}
+
+Write $Q_I^\vee(w)=\operatorname{Hom}_{C_I}(Q_I(w),C_I)$.
+Precomposition with $\gamma_p$ defines
+\begin{equation}\label{eq:moi-dual-collision}
+ d_p^\vee:Q_J^\vee(w)\longrightarrow E_p(Q_I^\vee(w)).
+\end{equation}
+To justify this target, consider one shifted free $C_I$-module.
+Evaluation identifies its dual after extension with the extension
+of its dual. The identification persists under finite direct
+sums, shifts, and cones.
+The finite bar-length filtration therefore gives
+\[
+ \operatorname{RHom}_{C_J}(E_p(Q_I(w)),C_J)
+ \simeq E_p(Q_I^\vee(w)).
+\]
+Differentiating a coefficient-linear map requires subtracting the
+derivative of its input. For complexes $M,N$ over $C_J$ with the
+flat tangent connections just constructed, define
+\[
+ \nabla_j^{\operatorname{Hom}}F
+      =\nabla_j^N\circ F-F\circ\nabla_j^M,
+ \qquad
+ d_{\operatorname{Hom}}F=d_N\circ F-(-1)^{|F|}F\circ d_M.
+\]
+Here $F$ is homogeneous and the connections have degree zero.
+For homogeneous $c\in C_J$, the two terms differentiating $c$
+cancel. Thus
+\[
+ (\nabla_j^{\operatorname{Hom}}F)(cm)
+       =(-1)^{|F||c|}c(\nabla_j^{\operatorname{Hom}}F)(m),
+\]
+so this is again a graded coefficient-linear map.
+Expanding two commutators gives
+\[
+ [\nabla_i^{\operatorname{Hom}},\nabla_j^{\operatorname{Hom}}]F
+   =[\nabla_i^N,\nabla_j^N]F-F[\nabla_i^M,\nabla_j^M]=0.
+\]
+Since each connection commutes with its complex differential,
+expansion of the displayed Hom differential also gives
+$d_{\operatorname{Hom}}\nabla_j^{\operatorname{Hom}}
+ =\nabla_j^{\operatorname{Hom}}d_{\operatorname{Hom}}$.
+
+Under the duality identification above, the map in
+\eqref{eq:moi-dual-collision} is $F\mapsto F\gamma_p$.
+The chain and horizontal identities for $\gamma_p$ imply
+\[
+ d_{\operatorname{Hom}}(F\gamma_p)
+     =(d_{\operatorname{Hom}}F)\gamma_p,
+ \qquad
+ \nabla_j^{\operatorname{Hom}}(F\gamma_p)
+     =(\nabla_j^{\operatorname{Hom}}F)\gamma_p.
+\]
+Thus dual collision preserves both the differential and connection.
+
+Complete by weight in each cohomological degree, retaining a
+direct sum over cohomological degrees.
+The dual map then has target
+\[
+ \prod_{w\ge0} E_p(Q_I^\vee(w)).
+\]
+Coefficients are extended at each finite weight before taking
+this product. No interchange of an unrestricted product with
+derived restriction is asserted.
+Convolution uses finitely many splittings of each output weight.
+The coalgebra identity for $\gamma_p$ therefore makes the
+completed dual map unital and multiplicative.
+For nested collisions the composition is
+\[
+ d_{qp}^\vee=E_q(d_p^\vee)\circ d_q^\vee,
+\]
+under the coefficient-extension identification supplied by the
+isomorphism between the Koszul complexes for nested restrictions.
+
+The simplest coefficient fibre forces this extension.
+Take $B=\mathbb C^2$, $C=\mathbb C$, and let $B$ act on $C$
+by the first projection.
+If $f:C\to B$ is $B$-linear, then
+\[
+ (0,1)f(1)=f((0,1)\cdot1)=0.
+\]
+Thus $f(1)$ lies in the first summand and cannot equal $(1,1)$.
+There is no unital reverse $B$-linear map from $C$ to $B$.
+After extension, $C\otimes_B B=C$, and the weight-zero
+dual map is the identity of $C$.
+
+The completed cobar counit has the corresponding covariance.
+It sends $t(sa)$ to $a$ and longer bar generators to zero.
+Its internal and cut terms cancel on a two-letter generator.
+The finite gap contraction proved in
+Theorem~\ref{thm:ocb-reconstruction} applies at every weight:
+each original state has positive weight, and only finitely many
+letters and cuts can occur.
+It gives
+\[
+ \widehat\Omega_{C_I}Q_I\simeq\widehat{\mathcal A}_I.
+\]
+The target is now completed as well. For example,
+$\sum_{m\ge0}u_i^m$ is a degree-zero element of this target.
+Both the differential and counit commute with collision because
+collision preserves products and cuts.
+All completed statements are obtained weight by weight.
+
+\section{What order retains at the diagonal}
+
+Fix the merged coordinate in the binary case and write $x$ for
+the separation. The coefficient complex is
+\[
+ [R^2\xrightarrow{(a,b)\mapsto b-a}R[x^{-1}]],
+ \qquad R=\mathbb C[x].
+\]
+Its comparison with the compatible polynomial-form model is explicit.
+A degree-zero path has coefficients in $R[x^{-1}][t]$ and endpoints
+in $R$; a degree-one path is $g(t)dt$ with localized coefficients.
+Send the path to its two endpoints and send $g(t)dt$ to
+$\int_0^1g(t)dt$.
+The fundamental theorem for polynomial integration makes this a
+map of complexes to the displayed two-term complex.
+It is surjective: interpolate the two endpoints linearly, and
+use a constant one-form for any prescribed integral.
+Its kernel contracts by $g(t)dt\mapsto\int_0^t g(s)ds$.
+The zero-integral condition gives the second zero endpoint.
+Thus it is a quasi-isomorphism of complexes over $R$.
+No multiplicativity of polynomial integration is needed.
+Its terms are flat over $R$.
+Its derived fibre at $x=0$ is therefore $\mathbb C^2$ in degree
+zero, with its two coordinate projections.
+Endpoint evaluation is itself multiplicative, so this identifies
+the product on that fibre with coordinatewise multiplication.
+The coefficient algebra for one merged label has fibre
+$\mathbb C$. Neither projection is an equivalence.
+
+This calculation separates the ordered family from descent that
+forgets the number of repeated labels.
+Such descent would require a family on finite powers whose
+derived restrictions along repeated-coordinate maps are
+equivalences to the merged family.
+This is the Cartesian diagonal condition used for the usual
+space of finite subsets, called the Ran space.
+The binary ranks already show that the present ordered family
+does not satisfy that condition.
+The constructed collision maps retain the chosen order precisely
+because they are noninvertible restrictions.
+
+There is also an obstruction to declaring every earlier state
+model horizontal.
+For the finite coefficient-weighted multiplication
+$a_i a_j=\omega_{ij}b_{ij}$, suppose
+$\nabla a_i=\nabla a_j=\nabla b_{ij}=0$.
+Then the connection Leibniz rule would require
+\[
+ 0=\partial_{z_i}(\omega_{ij}b_{ij})
+   =-\frac{dq_{ij}}{(z_i-z_j)^2}b_{ij}.
+\]
+The right side is nonzero on the adjacent-exchange simplex.
+The coefficient-weighted algebra therefore does not acquire
+this horizontal connection.
+A differential-module realization would need additional state
+connection data or a different explicitly compared construction.
+
+We have obtained coherent coefficient restrictions, composite
+states at merged points, and their bar and dual maps on finite
+powers. Forgetting order, realizing coefficient-weighted states,
+and comparing with singular operator expansions each require
+further maps. Their domains and the first obstructing identities
+are now explicit.

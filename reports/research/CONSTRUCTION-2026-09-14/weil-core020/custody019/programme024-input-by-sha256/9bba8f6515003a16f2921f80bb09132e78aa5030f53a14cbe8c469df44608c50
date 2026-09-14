@@ -1,0 +1,569 @@
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\markboth{Preface}{Preface}
+
+A fluctuating quantity can disappear from a description while its effects
+remain. Consider the displacement $x$ of a spring in thermal equilibrium.
+Choose units in which its energy is $x^2/2$, and write $h>0$ for the thermal
+energy. The probability density of the displacement is proportional to
+$e^{-x^2/(2h)}$. A polynomial $f(x)$ represents a measurement, or
+\emph{observable}. Its average is
+\[
+ \langle f\rangle_h=
+ \frac{\displaystyle\int_{\mathbb R}f(x)e^{-x^2/(2h)}\,dx}
+      {\displaystyle\int_{\mathbb R}e^{-x^2/(2h)}\,dx}.
+\]
+The denominator is positive and finite. All polynomial moments exist:
+outside a sufficiently large interval, any fixed power of $|x|$ times
+$e^{-x^2/(2h)}$ is bounded by a constant times $e^{-|x|}$.
+Symmetry gives $\langle x\rangle_h=0$. Yet the spring moves, and
+$\langle x^2\rangle_h=h$.
+Replacing the displacement by its mean therefore loses a measurable effect.
+
+We want to simplify a system while retaining its operations on observables.
+Measurements can be multiplied, moved, or brought together.
+Symmetries can act before or after elimination.
+The equalities comparing these procedures contain more information than
+the separate answers. For the spring, one integration by parts supplies them.
+
+If $p$ is a real polynomial, then $p(x)e^{-x^2/(2h)}$ tends to zero at
+both ends of the real line. Integrating its derivative gives
+\[
+ \boxed{\quad\langle xp\rangle_h=h\langle p'\rangle_h.\quad}
+\]
+Taking $p=1,x,x^2,\ldots$ determines every moment. The odd moments vanish,
+and, for $n\ge1$, the even moments satisfy
+\[
+ \langle x^{2n}\rangle_h
+ =(2n-1)h\langle x^{2n-2}\rangle_h
+ =1\cdot3\cdots(2n-1)h^n,
+ \qquad \langle1\rangle_h=1.
+\]
+Thus the same equation that eliminates $x$ also determines its surviving
+fluctuations.
+
+We can retain the equation itself. Set
+$B_h p=xp-hp'$. Every $B_h p$ has average zero, and every polynomial of
+average zero has this form. To see the converse, remove the leading term
+$a x^m$ of a nonconstant polynomial by subtracting $aB_h(x^{m-1})$.
+The degree decreases. Repetition writes any polynomial uniquely as
+$c+B_h p$. The constant is its average, and uniqueness follows because
+$B_h p$ has degree $\deg p+1$ whenever $p\ne0$.
+The polynomial $p$ records how the relation was obtained.
+
+Multiplying that relation by another polynomial changes it:
+\[
+ \boxed{\quad (B_h p)q=B_h(pq)+hpq'.\quad}
+\]
+This follows by expanding $(pq)'=p'q+pq'$. In particular,
+$(B_h1)x=B_hx+h$. The zero-average polynomial $x=B_h1$ becomes
+the polynomial $x^2$, whose average is $h$.
+Consequently, polynomials with the same average cannot be multiplied
+as equivalence classes using their ordinary product.
+The correction $hpq'$ is part of the elimination rule.
+
+At $h=0$, the rule becomes ordinary division by $x$:
+$f(x)=f(0)+xp(x)$. The terms involving $h$ describe exactly how a
+relation at zero fluctuation changes when fluctuations are admitted.
+This is a useful reason to retain a relation together with its primitive,
+the element mapped to it by $B_h$.
+In more general problems there are several possible primitives.
+Their differences, their products, and the equations comparing those
+products then become mathematical data in their own right.
+
+\medskip
+
+Elimination becomes richer when some variables remain. Let $y$ be a
+retained displacement and let $x$ be an independent Gaussian displacement
+of variance $h$. Averaging a polynomial of their sum defines
+\[
+ T_h f(y)=\langle f(y+x)\rangle_h
+ =\sum_{k\ge0}\frac{h^k}{2^k k!}f^{(2k)}(y).
+\]
+Taylor's formula and the moments above give the equality. The sum is finite
+for every polynomial. The operator retains the mean together with its
+fluctuation corrections.
+
+The same finite formula defines $T_h$ for any real $h$, including negative
+values. Negative $h$ here specifies a polynomial operator, with no
+probability interpretation. Composing the formulas gives
+\[
+ T_aT_b=T_{a+b},\qquad T_0=1,\qquad T_h^{-1}=T_{-h}.
+\]
+Multiply the coefficient of $f^{(2m)}$ by $2^m m!$.
+It becomes the binomial sum
+$\sum_{j=0}^m\binom mj a^jb^{m-j}=(a+b)^m$.
+For $a,b>0$, eliminating independent Gaussian displacements adds
+their variances.
+
+Because $T_h$ is invertible on polynomials, it carries ordinary
+multiplication to a multiplication on the averaged descriptions:
+\[
+ f\star_h g=T_h\bigl((T_{-h}f)(T_{-h}g)\bigr).
+\]
+Thus $T_h(fg)=(T_hf)\star_h(T_hg)$. Explicitly,
+\[
+ \boxed{\quad
+ f\star_h g=\sum_{k\ge0}\frac{h^k}{k!}f^{(k)}g^{(k)}.
+ \quad}
+\]
+Here is a direct verification. Temporarily give the two factors variables
+$u,v$, and restrict to $u=v=y$ after differentiating.
+Differentiation in $y$ then acts as $\partial_u+\partial_v$.
+Write $T_h=\exp(h\partial_y^2/2)$, where the exponential means its
+terminating power series on polynomials. The three commuting operators
+in the definition of $\star_h$ combine to give
+\[
+ \exp\!\left(\frac h2(\partial_u+\partial_v)^2
+                 -\frac h2\partial_u^2-\frac h2\partial_v^2\right)
+ =\exp(h\partial_u\partial_v).
+\]
+Expanding this last exponential proves the formula.
+
+Each derivative in one factor is paired with a derivative in the other.
+For example,
+\[
+ y\star_h y=y^2+h,\qquad
+ (y\star_h y)\star_h y=y^3+3hy
+ =y\star_h(y\star_h y).
+\]
+Associativity holds for all polynomials because applying $T_{-h}$ turns
+either parenthesization into an ordinary product of three polynomials.
+For $r$ factors the same argument gives
+\[
+ f_1\star_h\cdots\star_h f_r
+ =\left.
+ \exp\!\left(h\sum_{i<j}\partial_{y_i}\partial_{y_j}\right)
+ \prod_{i=1}^r f_i(y_i)\right|_{y_1=\cdots=y_r=y}.
+\]
+All sums still terminate. For monomials, the derivatives count choices of
+paired factors and the factorials remove repeated orderings of those pairs.
+Thus a single two-factor correction already
+has consequences for every number of measurements.
+
+There is an elementary way to retain all these composition equations.
+For an integer $r\ge1$, let $W_r$ be the real vector space of finite
+linear combinations of words $[f_1|\cdots|f_r]$ of $r$ real polynomials,
+imposing linearity in every letter. Let $W_0$ be the one-dimensional
+space spanned by the empty word $[\,]$. An element of
+$W=\bigoplus_{r\ge0}W_r$ is a finite sum of elements of these spaces.
+Assign degree $-r$ to $W_r$.
+
+Join adjacent letters using $\star_h$, taking alternating signs from
+left to right. Denote this linear map by $b:W\to W$, and set it to
+zero on words of lengths zero and one. It raises degree by one.
+Its first nonzero formulas are
+\[
+ \begin{aligned}
+ b[f|g]&=[f\star_h g],\\
+ b[f|g|k]&=[f\star_h g|k]-[f|g\star_h k].
+ \end{aligned}
+\]
+Applying $b$ again to the second line gives
+$[(f\star_h g)\star_h k-f\star_h(g\star_h k)]=0$.
+On longer words, two disjoint joins occur twice with opposite signs.
+Overlapping joins cancel by the same three-letter calculation.
+Hence $b^2=0$ at every word length.
+
+This is the multiplication part of the \emph{bar construction}.
+The degree-one map $b$, whose square is zero, is called a differential.
+The Gaussian product makes the three-letter defect vanish exactly.
+A weaker comparison would retain an explicit correction to such a defect.
+For a bilinear multiplication $\mu:V\times V\to V$ on a real vector
+space $V$, choose another real vector space $E$ and a linear map
+$L:E\to V$. A trilinear correction $K:V\times V\times V\to E$
+would have to satisfy
+\[
+ \mu(\mu(a,b),c)-\mu(a,\mu(b,c))=L\bigl(K(a,b,c)\bigr).
+\]
+Here $K(a,b,c)$ is a primitive of the associator under the specified map
+$L$. This equation is a requirement on $K$, and supplies no existence
+claim. It also leaves the comparison of four or more inputs unsettled.
+The search for corrections compatible with every grouping motivates
+higher associativity.
+
+There is also an elementary motivation for a dual construction.
+A linear functional on $W$ is a linear map $W\to\mathbb R$.
+Write $W^\vee$ for the space of all these functionals.
+Cutting a word at each possible position defines their product:
+\[
+ (\lambda*\eta)[f_1|\cdots|f_r]
+ =\sum_{i=0}^r
+   \lambda[f_1|\cdots|f_i]\,
+   \eta[f_{i+1}|\cdots|f_r].
+\]
+The term $i=0$ uses the empty left word, and $i=r$ uses the empty
+right word. Extend by linearity to $W$.
+Every evaluation is a finite sum and respects linearity in each letter.
+Both $(\lambda*\eta)*\theta$ and $\lambda*(\eta*\theta)$ evaluate
+on a word as the sum
+\[
+ \sum_{0\le i\le j\le r}
+ \lambda[f_1|\cdots|f_i]\,
+ \eta[f_{i+1}|\cdots|f_j]\,
+ \theta[f_{j+1}|\cdots|f_r].
+\]
+Thus the product is associative. Its unit takes value one on the empty
+word and zero on all positive lengths.
+
+The transpose of $b$ means precomposition:
+$b^\vee\lambda=\lambda\circ b$. It is a linear map $W^\vee\to W^\vee$,
+and $(b^\vee)^2\lambda=\lambda\circ b^2=0$.
+On two letters it gives
+$(b^\vee\lambda)[f|g]=\lambda[f\star_h g]$.
+Thus a coefficient measured after joining becomes a two-input coefficient,
+while cutting has supplied a product of coefficient functionals.
+These elementary operations motivate the exchange between joining and
+splitting in bar and cobar duality.
+They use finite words throughout. Admitting infinite sums of words
+requires further choices about which coefficient evaluations are defined.
+
+\medskip
+
+Even counting the polynomials forces this issue. Give independent variables
+$x_1,x_2,\ldots$ positive integer weights $d_1,d_2,\ldots$.
+A monomial $\prod_j x_j^{n_j}$ has weight $\sum_j d_jn_j$, with only
+finitely many $n_j$ nonzero. If only finitely many variables have weight
+below any prescribed bound, then the number of monomials of each weight
+is finite. Choosing their exponents gives
+\[
+ \sum_{m\ge0}(\text{number of monomials of weight }m)t^m
+ =\prod_j(1+t^{d_j}+t^{2d_j}+\cdots)
+ =\prod_j\frac1{1-t^{d_j}}.
+\]
+Each coefficient uses finitely many choices. This makes the infinite
+product a well-defined formal series, without assigning a numerical
+value to $t$.
+
+The product counts available polynomial measurements. It contains no
+choice of Gaussian average. Two variables can have independent
+fluctuations, or they can be correlated, with the same monomial count.
+For example, take independent centered variables $x,u$ of variance $h$
+and set $v=cx+u$. The polynomials in $x,v$ have the same basis count
+for every real $c$, whereas $\langle xv\rangle=ch$.
+The coefficient needed to combine two measurements has disappeared
+from the counting series.
+
+A formal series also retains more than any one numerical substitution.
+Consider $f(y)=\sum_{n\ge0}y^{2n}$. The constant coefficient of
+$T_hf$, denoted by $[y^0]T_hf$, is formally
+\[
+ [y^0]T_hf=\sum_{n\ge0}1\cdot3\cdots(2n-1)h^n,
+\]
+where the term for $n=0$ is $1$. For fixed powers of $h$ and $y$,
+only one term of $f$ contributes, so this calculation is well-defined
+as a series in two formal variables. For every numerical $h>0$, the
+displayed terms eventually increase: the ratio of consecutive terms is
+$(2n+1)h$. The numerical series diverges.
+Agreement of all finite coefficient truncations therefore does not
+supply a convergent average at a fixed positive variance.
+
+Completing a space means specifying which infinite coefficient lists
+are admitted, and which finite portions determine their approximations.
+For a nonnegative integer $N$, reduction modulo $h^{N+1}$ retains
+only the first $N+1$ powers
+of $h$. Results at successive orders must agree under these reductions.
+An operation on the completion must have a finite prescription for each
+retained coefficient. Substituting a number for $h$ is a further operation,
+with its own convergence question.
+To give the Gaussian variables spatial meaning, let $s\in\mathbb R^d$
+and choose smooth real functions $e_1(s),\ldots,e_r(s)$.
+For independent centered Gaussian variables $x_1,\ldots,x_r$ of variance
+$h$, the random function
+\[
+ \phi(s)=\sum_{i=1}^r x_i e_i(s)
+\]
+is a finite-mode field. Each fixed spatial function $e_i$ is a mode,
+and $x_i$ is its fluctuating amplitude. The Gaussian amplitudes make
+this a free model. Passing to infinitely many modes requires precisely
+the choices of coefficients and convergence just encountered.
+
+\medskip
+
+To attach positions to our polynomial operations, begin with translation.
+Taylor's formula says
+\[
+ e^{z\partial_y}f(y)=f(y+z).
+\]
+Both sides are polynomials in $y,z$. Translation commutes with every
+derivative, so it also respects $\star_h$.
+Thus measurements can be translated and combined in a compatible way.
+Singular coefficients appear when infinitely many modes participate.
+
+On complex polynomials in $x_0,x_1,\ldots$, let $X_n$ multiply by $x_n$ and
+let $D_n=\partial/\partial x_n$. Each polynomial uses finitely many
+variables. The product rule gives
+\[
+ [D_m,X_n]=\delta_{mn}1,
+ \qquad [A,B]:=AB-BA,
+\]
+where $\delta_{mn}$ is $1$ for $m=n$ and $0$ otherwise.
+Package these operators into position-dependent series
+\[
+ A(z)=\sum_{n\ge0}D_nz^{-n-1},\qquad
+ B(w)=\sum_{n\ge0}X_nw^n.
+\]
+Their products and commutator are interpreted coefficient by coefficient.
+For each pair of exponents the operator is specified by one pair of
+modes. Consequently
+\[
+ [A(z),B(w)]=\sum_{n\ge0}z^{-n-1}w^n\,1.
+\]
+The scalar coefficient is the geometric expansion of $1/(z-w)$
+for $|w|<|z|$. An elementary differentiation-and-multiplication relation
+has produced a pole at coincident positions.
+
+The same rational function has another expansion:
+\[
+ C_>(z,w)=\sum_{n\ge0}z^{-n-1}w^n,
+ \qquad
+ C_<(z,w)=-\sum_{n\ge0}z^nw^{-n-1}.
+\]
+They converge respectively for $|w|<|z|$ and $|z|<|w|$.
+Their difference makes sense as an array of coefficients of integer
+powers of $z,w$:
+\[
+ \Delta(z,w)=C_>(z,w)-C_<(z,w)
+ =\sum_{n\in\mathbb Z}z^{-n-1}w^n.
+\]
+Multiplication by $z-w$ cancels adjacent terms, giving
+$(z-w)\Delta=0$ coefficientwise. Moreover, for every polynomial $f$,
+\[
+ [z^{-1}]\bigl(f(z)\Delta(z,w)\bigr)=f(w).
+\]
+Indeed, the term $az^j$ of $f$ selects exactly the term with $n=j$.
+The symbol $[z^{-1}]$ means taking the coefficient of $z^{-1}$,
+also called the residue coefficient. The difference between two expansion
+orders thus evaluates a measurement at the collision.
+The two convergent expansions have disjoint domains. Their coefficient
+array comparison is a separate algebraic operation.
+
+This example also shows why a single residue can lose information.
+The Laurent polynomials $z^{-1}$ and $z^{-1}+z^{-2}$ have the same residue,
+but multiplying them by $z$ gives different residues.
+Keeping enough coefficients to permit the next multiplication matters
+even when the eventual answer is one number.
+
+Two complex position coordinates change the geometry of a collision.
+Let $u,v$ be the differences of those coordinates. Distinct positions
+satisfy $u\ne0$ or $v\ne0$.
+On the first region allow finite Laurent sums in $u$ with polynomial
+coefficients in $v$:
+$R_u=\mathbb C[u,u^{-1},v]$.
+On the second use $R_v=\mathbb C[u,v,v^{-1}]$.
+Their intersection region admits
+$R_{uv}=\mathbb C[u,u^{-1},v,v^{-1}]$.
+
+A pair $a\in R_u$, $b\in R_v$ agrees on the intersection precisely
+when $b-a=0$ there. A Laurent monomial lying in both rings has
+nonnegative exponents in both variables. Thus every agreeing pair
+comes from a polynomial in $u,v$.
+There are nevertheless overlap terms that no difference $b-a$ produces:
+\[
+ \frac1{uv},\quad \frac1{u^2v},\quad\frac1{uv^2},\quad\ldots.
+\]
+Every monomial from $R_u+R_v$ has at least one nonnegative exponent.
+Uniqueness of Laurent coefficients therefore gives the vector-space quotient
+\[
+ R_{uv}/(R_u+R_v)
+ =\bigoplus_{a,b\ge0}\mathbb C\,u^{-a-1}v^{-b-1}.
+\]
+The direct sum means finite sums. These collision coefficients reside
+in the comparison on the overlap, while agreeing functions themselves
+extend across the origin.
+
+Their pairing with polynomial measurements is explicit:
+\[
+ [u^{-1}v^{-1}]
+ \bigl(u^iv^j u^{-a-1}v^{-b-1}\bigr)
+ =\delta_{ia}\delta_{jb}
+ \qquad(i,j,a,b\ge0).
+\]
+Multiplying a discarded term by a polynomial still leaves a nonnegative
+exponent in at least one variable. Its $u^{-1}v^{-1}$ coefficient
+therefore vanishes, so the pairing is well-defined on the quotient.
+This explains how a singular coefficient can detect any prescribed
+Taylor coefficient. There are two complex coordinates here, hence four
+real coordinates. The overlap calculation describes a puncture in
+$\mathbb C^2$ directly. Constructing free fields on this space also
+requires a specified linear field equation and an inverse with fixed
+normalization. These data determine the actual contraction coefficients.
+
+\medskip
+
+Spatial dependence places another condition on elimination: a
+measurement has a region in which it is made.
+A response $f$ has compact support if it vanishes outside some bounded
+closed set $K$. For the finite-mode field $\phi$, a detector with
+smooth compactly supported response $f(s)$ measures
+\[
+ M_f(\phi)=\int_{\mathbb R^d}f(s)\phi(s)\,ds.
+\]
+If $K$ lies in an open region $U$, the measurement depends only
+on the field in $U$. This is the locality of this observable.
+Its correlations follow from the Gaussian moments:
+\[
+ \begin{aligned}
+ \langle M_fM_g\rangle
+ &=h\sum_{i=1}^r
+       \left(\int f(s)e_i(s)\,ds\right)
+       \left(\int g(t)e_i(t)\,dt\right)\\
+ &=\int\!\!\int f(s)C(s,t)g(t)\,ds\,dt,
+ \qquad C(s,t)=h\sum_{i=1}^r e_i(s)e_i(t).
+ \end{aligned}
+\]
+The function $C$ is the covariance kernel. Even detectors in disjoint
+regions can be correlated: one mode may be nonzero in both regions.
+Local dependence of a measurement and independence of its fluctuations
+are different conditions.
+
+Combining detector regions requires products as well as sums.
+If $f=f_1+f_2$, with the two responses supported in respective regions,
+then
+\[
+ M_f=M_{f_1}+M_{f_2},\qquad
+ M_f^2=M_{f_1}^2+2M_{f_1}M_{f_2}+M_{f_2}^2.
+\]
+The middle term is a joint measurement using both regions.
+Let $\mathcal O(U)$ be the algebra generated by $1$ and all $M_f$
+with response supported compactly inside $U$.
+If $U\subset V$, each such measurement also belongs to $\mathcal O(V)$.
+For disjoint regions $U_1,\ldots,U_k\subset V$, set
+\[
+ \mu_{U_1,\ldots,U_k;V}(F_1,\ldots,F_k)=F_1\cdots F_k
+ \in\mathcal O(V),\qquad F_i\in\mathcal O(U_i).
+\]
+Suppose $U_1,U_2\subset V_1$, $U_3\subset V_2$, and $V_1,V_2$
+are disjoint subsets of $V$. Associativity says
+\[
+ \mu_{V_1,V_2;V}
+ \bigl(\mu_{U_1,U_2;V_1}(F_1,F_2),F_3\bigr)
+ =\mu_{U_1,U_2,U_3;V}(F_1,F_2,F_3).
+\]
+The same equality holds for every grouping. Permuting regions permutes
+factors, and the empty product is $1$.
+These maps and identities constitute a \emph{prefactorization algebra}.
+A \emph{factorization algebra} additionally reconstructs observables
+from regions and their overlaps, using covers that contain every finite
+set of measurement positions in one member.
+The finite model verifies the displayed product identities.
+Reconstruction requires further overlap equations, including the mixed
+measurements visible in $M_{f_1}M_{f_2}$.
+
+\medskip
+
+Symmetry imposes equations on these operations. Return to two real
+Gaussian variables, now called $q,p$, with energy
+$H=(q^2+p^2)/2$ and weight $e^{-H/h}$.
+An infinitesimal rotation acts on polynomial observables by
+\[
+ Jf=q\frac{\partial f}{\partial p}
+       -p\frac{\partial f}{\partial q}.
+\]
+It preserves the energy, since $JH=0$.
+Integration by parts in $p$ and in $q$ gives
+\[
+ \langle q\,\partial_p f\rangle
+   =h^{-1}\langle pqf\rangle
+   =\langle p\,\partial_q f\rangle,
+ \qquad \langle Jf\rangle=0.
+\]
+This is a symmetry identity for every observable, including products
+of arbitrarily many measurements. Such identities are called Ward
+identities. They express invariance after averaging.
+
+The rotation has a Hamiltonian description. Write
+$F_q=\partial F/\partial q$ and $F_p=\partial F/\partial p$.
+For polynomials in $q,p$, define
+\[
+ \{F,G\}=F_qG_p-F_pG_q.
+\]
+Then $Jf=\{H,f\}$. More generally, $\{F,-\}$ is the infinitesimal
+motion with velocity $(-F_p,F_q)$ in the $(q,p)$ plane, and
+$\{F,F\}=0$ says that its own Hamiltonian is constant along that motion.
+A monomial calculation gives a useful finite approximation. Fix an
+integer $N\ge0$.
+If every term of $F$ has degree at least two and every term of $g$
+has degree at least $N+1$, then every term of $\{F,g\}$ has degree
+at least $N+1$.
+Thus these motions act on polynomials modulo terms of degree $N+1$
+and higher. They fix the origin and act on the finite Taylor spaces.
+A translation does not: $\partial_q(q^{N+1})=(N+1)q^N$ returns a
+discarded term to the retained range.
+
+This failure is measurable in the original multiplication and
+differentiation operators. Let $V_N$ have basis $1,x,\ldots,x^N$.
+Let $D$ differentiate, and let $X_N$ multiply by $x$ except that
+$X_Nx^N=0$. For $0\le j<N$ the product rule still gives
+\[
+ (DX_N-X_ND)x^j=x^j.
+\]
+On the last basis vector it gives $-Nx^N$.
+Let $\Pi_N$ keep only the term of degree $N$, so that
+$\Pi_N(\sum_{j=0}^N a_jx^j)=a_Nx^N$. Then
+\[
+ [D,X_N]=1-(N+1)\Pi_N.
+\]
+The trace of a finite matrix is the sum of its diagonal entries.
+Here it equals $(N+1)-(N+1)=0$.
+This agrees with the general identity $\operatorname{tr}(AB)=
+\operatorname{tr}(BA)$: expanding either trace gives the same finite
+sum $\sum_{i,j}A_{ij}B_{ji}$.
+
+On all polynomials, multiplication by $x$ instead gives $[D,X]=1$.
+Every fixed polynomial eventually lies below the cutoff and sees this
+identity exactly. The boundary term has disappeared from that
+calculation, although its trace is $-(N+1)$.
+The identity on all polynomials has no ordinary finite trace.
+Hence agreement on each polynomial does not justify passing a trace
+through the limit.
+An infinite collection of matter modes requires a separate trace
+construction before finite-dimensional symmetry calculations can
+be carried over.
+
+In a quantum theory, observable operators can fail to commute, as $D$
+and $X$ do. A symmetry identity may acquire a correction when products
+of such operators are defined. An \emph{anomaly} is a resulting defect
+that the permitted changes of the theory cannot remove.
+Our cutoff calculation only obstructs a trace argument.
+To establish an anomaly for fields, one must specify their equations,
+their averaging or operator rules, and the allowed corrections.
+Local corrections must use fields and finitely many derivatives at
+the same position. The existence of an unrestricted correction does
+not ensure the existence of one with this property.
+
+The force of the last requirement appears in elementary calculus.
+For a smooth compactly supported function $f$ on the real line, put
+\[
+ F(t)=\int_{-\infty}^t f(s)\,ds.
+\]
+Then $F'=f$. To the left of the support, $F=0$.
+To its right, $F=\int_{\mathbb R}f$.
+Thus this primitive is compactly supported exactly when the total
+integral of $f$ is zero. Even when it is compactly supported, its
+value uses measurements away from $t$.
+
+Could a formula using only finitely many derivatives at $t$ do the same
+job for every $f$? Suppose such a linear formula were
+\[
+ Rf(t)=\sum_{j=0}^m a_j(t)f^{(j)}(t),\qquad (Rf)'=f,
+\]
+with fixed smooth coefficients $a_j$.
+At any chosen point, compactly supported smooth functions can have
+arbitrarily prescribed derivatives through order $m+1$.
+Indeed, multiply a polynomial with those Taylor coefficients by a
+smooth function equal to one near the point and zero outside a
+larger interval.
+Such functions can be constructed from $e^{-1/u}$ for $u>0$, extended
+by zero for $u\le0$: every derivative tends to zero at the joining point.
+In $(Rf)'$, the coefficient of $f^{(m+1)}$ is $a_m$.
+It must vanish everywhere. Repeating the argument forces
+$a_{m-1},\ldots,a_0$ to vanish, contradicting $(Rf)'=f$.
+The integral gives a primitive, but no finite differential formula
+provides a right inverse on all these test functions.
+
+The spring identity led from a vanished boundary term to a product
+correction. With fields, such corrections must also respect position,
+support, and symmetry. The mathematical task is to construct them
+together with all their composition equations, and to determine the
+obstructions when they cannot exist.

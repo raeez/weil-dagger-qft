@@ -1,0 +1,30 @@
+--- a/manuscript/operators-and-traces.tex
++++ b/manuscript/operators-and-traces.tex
+@@ -568,3 +568,10 @@
+ an algebraic choice, while its discontinuity prevents it from closing
+ completed kernels by a continuous scalar contraction. A quantum
+ construction must resolve these precise trace and contraction conditions.
++
++Positive representations require an involution and a positive functional
++in addition to a cyclic scalar contraction.
++For finite matrix kernels, the positive trace gives a Hilbert space
++completion but has no positive extension of finite mass to the unitization.
++Chapter~\ref{chap:weil-operator-domains} proves this comparison and
++formulates the arithmetic domain question using the zeta explicit formula.
+
+--- a/manuscript/programme.tex
++++ b/manuscript/programme.tex
+@@ -9,6 +9,7 @@
+ \input{manuscript/preface.tex}
+ \clearpage
+ \setcounter{tocdepth}{1}
++\setlength{\cftsectionnumwidth}{3em}
+ \tableofcontents*
+ \input{manuscript/relations-and-homotopies.tex}
+ \input{manuscript/products-and-coefficients.tex}
+@@ -29,4 +30,5 @@
+ \input{manuscript/all-arity-current-actions.tex}
+ \input{manuscript/local-anomaly-and-nonlocal-primitive.tex}
+ \input{manuscript/hamiltonian-jets.tex}
++\input{manuscript/weil-forms-and-domains.tex}
+ \end{document}

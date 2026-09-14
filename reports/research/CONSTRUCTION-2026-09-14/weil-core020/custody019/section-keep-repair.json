@@ -1,0 +1,10 @@
+{
+  "reason": "A theorem keep immediately after a section heading could leave the heading on the previous page; observed fullpage344",
+  "moved_guards": [
+    "\\section{The test algebra and Gaussian Fourier inversion}\n\\label{sec:tests}\n\n",
+    "\\section{The normalized explicit formula}\n\\label{sec:formula}\n\n",
+    "\\section{Dagger transfer and completion}\n\n",
+    "\\section{The independent arithmetic question}\n\n"
+  ],
+  "change": "Place a seven-baseline keep before the section and its opening theorem, using the existing public Needspace command; no proof text or template changed"
+}

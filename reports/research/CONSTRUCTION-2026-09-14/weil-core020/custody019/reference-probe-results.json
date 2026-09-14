@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "late_false",
+    "text": "1\n\ud835\udc65= 1\n(1)\nReference , ordinary 1.\n"
+  },
+  {
+    "variant": "early_false",
+    "text": "1\n\ud835\udc65= 1\n(1)\nReference (1), ordinary 1.\n"
+  },
+  {
+    "variant": "early_false_toggle",
+    "text": "1\n\ud835\udc65= 1\n(1)\nReference (1), ordinary 1.\n"
+  },
+  {
+    "variant": "early_false_group",
+    "text": "1\nOld text.\n\ud835\udc65= 1\n(1)\nReference (1), ordinary 1.\n"
+  }
+]

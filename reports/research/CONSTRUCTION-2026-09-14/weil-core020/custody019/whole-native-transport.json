@@ -1,0 +1,13 @@
+{
+  "original_native_source_sha256": "1212702973c5ff9c51bd23f8a4a186d3d4f76c3f3d3c6b57f39c3da42afb703d",
+  "new_chapter_sha256": "aa4e5a679475d0d82c37f75992bc2fef60447bd6d4f83b127f55860656ce66f3",
+  "entire_native_abstract_and_body_preserved_under_declared_transport": true,
+  "transported_body_sha256": "ecb58b0fa901cb93836c6297692f026cd369abd23e3876620d2b417712a74307",
+  "normalizations": [
+    "Eight legacy von Mangoldt font subscripts mapped to mathrm{vM}.",
+    "Unit convention expressly scoped to star algebras in this chapter; nonzero-unit and zero-algebra meanings unchanged.",
+    "Public Needspace pagination declarations removed for body comparison."
+  ],
+  "reader_frontmatter_replaced_by_chapter_heading_and_physical_motivation": true,
+  "all_native_definitions_hypotheses_examples_and_open_boundaries_retained": true
+}

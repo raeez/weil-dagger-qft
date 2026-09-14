@@ -1,0 +1,15 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+XUTFXB+EBGaramond-Regular            Type 1            Custom           yes yes yes     13  0
+XUTFXB+EBGaramond-Regular            Type 1            Custom           yes yes yes     22  0
+GRLMFB+txsys                         Type 1            Builtin          yes yes yes     23  0
+KSNPAL+txexs                         Type 1            Builtin          yes yes yes     25  0
+DFDKFY+ebgMI                         Type 1            Builtin          yes yes yes     26  0
+CBWVJB+NewTXMI                       Type 1            Builtin          yes yes yes     27  0
+TXSHPK+txmiaX                        Type 1            Builtin          yes yes yes     28  0
+ZYAZFB+txmiaSTbb                     Type 1            Builtin          yes yes yes     29  0
+EGYWRT+ebgMRM                        Type 1            Builtin          yes yes yes     41  0
+YOIQRV+EBGaramond-Italic             Type 1            Custom           yes yes yes     45  0
+RIDQDC+MSBM10                        Type 1            Builtin          yes yes yes     82  0
+QDEUXV+rsfs10                        Type 1            Builtin          yes yes yes    483  0
+FBAKJN+SourceSansPro-Regular         Type 1            Custom           yes yes yes    504  0

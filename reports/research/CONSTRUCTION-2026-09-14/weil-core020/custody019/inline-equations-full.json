@@ -1,0 +1,444 @@
+{
+  "pdf_sha256": "7dc4020c6b152ef56e71e4ba952cc90e6e12aa2d7226519c73cb92d7c76a1802",
+  "records": [
+    {
+      "label": "eq:test-class",
+      "number": "20.1",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:operations",
+      "number": "20.2",
+      "expected_display_plus_inline_count": 5,
+      "actual_pdf_count": 5
+    },
+    {
+      "label": "eq:centered-mellin",
+      "number": "20.3",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:target",
+      "number": "20.4",
+      "expected_display_plus_inline_count": 6,
+      "actual_pdf_count": 6
+    },
+    {
+      "label": "eq:strip-decay",
+      "number": "20.5",
+      "expected_display_plus_inline_count": 5,
+      "actual_pdf_count": 5
+    },
+    {
+      "label": "eq:gaussian",
+      "number": "20.6",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:inverse",
+      "number": "20.7",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:star-transform",
+      "number": "20.8",
+      "expected_display_plus_inline_count": 5,
+      "actual_pdf_count": 5
+    },
+    {
+      "label": "eq:euler",
+      "number": "20.9",
+      "expected_display_plus_inline_count": 4,
+      "actual_pdf_count": 4
+    },
+    {
+      "label": "eq:gamma-product",
+      "number": "20.10",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:reciprocal-growth",
+      "number": "20.11",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:digamma",
+      "number": "20.12",
+      "expected_display_plus_inline_count": 6,
+      "actual_pdf_count": 6
+    },
+    {
+      "label": "eq:gamma-real",
+      "number": "20.13",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:theta-reflection",
+      "number": "20.14",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:theta-mellin",
+      "number": "20.15",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:entire-completion",
+      "number": "20.16",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:entire-growth",
+      "number": "20.17",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:boundary-pole",
+      "number": "20.18",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:boundary-product",
+      "number": "20.19",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:strict-strip",
+      "number": "20.20",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:log-reflection",
+      "number": "20.21",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:horizontal-H",
+      "number": "20.22",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:functional",
+      "number": "20.23",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:spine-contour",
+      "number": "20.24",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:prime-inversion",
+      "number": "20.25",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:gaussian-explicit",
+      "number": "20.26",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:gaussian-inverse",
+      "number": "20.27",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:polynomial-transform",
+      "number": "20.28",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:gaussian-strip",
+      "number": "20.29",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:positivity",
+      "number": "20.30",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:negative-pair",
+      "number": "20.31",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:separator-tail",
+      "number": "20.32",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:conv",
+      "number": "20.33",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:transform",
+      "number": "20.34",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:fourier",
+      "number": "20.35",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:square-transform",
+      "number": "20.36",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:gamma-normalization",
+      "number": "20.37",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:mellin",
+      "number": "20.38",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:weil-functional",
+      "number": "20.39",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:explicit",
+      "number": "20.40",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:hermitian",
+      "number": "20.41",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:weil-criterion",
+      "number": "20.42",
+      "expected_display_plus_inline_count": 4,
+      "actual_pdf_count": 4
+    },
+    {
+      "label": "eq:zero-norm",
+      "number": "20.43",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:gns-action",
+      "number": "20.44",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:adjoint-inclusion",
+      "number": "20.45",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:multiplier-bound",
+      "number": "20.46",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:all-moments",
+      "number": "20.47",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:common-domain",
+      "number": "20.48",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:closed-products",
+      "number": "20.49",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:graph-control",
+      "number": "20.50",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:pullback",
+      "number": "20.51",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:gns-map",
+      "number": "20.52",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:completion-map",
+      "number": "20.53",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:algebraic-intertwining",
+      "number": "20.54",
+      "expected_display_plus_inline_count": 4,
+      "actual_pdf_count": 4
+    },
+    {
+      "label": "eq:cstar-bounds",
+      "number": "20.55",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:bounded-intertwining",
+      "number": "20.56",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:graph-transfer",
+      "number": "20.57",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:ambient-transfer",
+      "number": "20.58",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:unit-extension",
+      "number": "20.59",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:unit-criterion",
+      "number": "20.60",
+      "expected_display_plus_inline_count": 4,
+      "actual_pdf_count": 4
+    },
+    {
+      "label": "eq:minimal-mass",
+      "number": "20.61",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:approx-vector",
+      "number": "20.62",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:cyclic-vector",
+      "number": "20.63",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:hilbert-bound",
+      "number": "20.64",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:gaussian-semigroup",
+      "number": "20.65",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:weil-gaussian-asymptotic",
+      "number": "20.66",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:weil-unitization-divergence",
+      "number": "20.67",
+      "expected_display_plus_inline_count": 3,
+      "actual_pdf_count": 3
+    },
+    {
+      "label": "eq:prime-gaussian-bound",
+      "number": "20.68",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:gaussian-gram-limit",
+      "number": "20.69",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:limiting-gaussian-gram",
+      "number": "20.70",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:indefinite-negative",
+      "number": "20.71",
+      "expected_display_plus_inline_count": 1,
+      "actual_pdf_count": 1
+    },
+    {
+      "label": "eq:factorization",
+      "number": "20.72",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    },
+    {
+      "label": "eq:weil-gaussian-moments",
+      "number": "20.73",
+      "expected_display_plus_inline_count": 2,
+      "actual_pdf_count": 2
+    }
+  ],
+  "all_counts_exact": true
+}

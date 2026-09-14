@@ -1,0 +1,236 @@
+\contentsline {chapter}{Preface}{2}{chapter*.1}%
+\contentsline {chapter}{\chapternumberline {1}Relations and compatible homotopies}{16}{chapter.3}%
+\contentsline {section}{\numberline {1.1}A differential for a scalar relation}{16}{section.4}%
+\contentsline {section}{\numberline {1.2}Freely adjoining a primitive}{17}{section.8}%
+\contentsline {section}{\numberline {1.3}A complex for a polynomial relation}{18}{section.10}%
+\contentsline {section}{\numberline {1.4}A homotopy and its multiplication defect}{19}{section.15}%
+\contentsline {section}{\numberline {1.5}Maps from the free algebra}{20}{section.16}%
+\contentsline {section}{\numberline {1.6}Two actions as one algebra action}{21}{section.19}%
+\contentsline {section}{\numberline {1.7}An explicit two-cell resolution}{24}{section.25}%
+\contentsline {section}{\numberline {1.8}Why this resolution computes derived maps}{25}{section.28}%
+\contentsline {section}{\numberline {1.9}The central complex and its product}{28}{section.34}%
+\contentsline {section}{\numberline {1.10}The exact scalar exponent and the full cohomology ring}{30}{section.41}%
+\contentsline {section}{\numberline {1.11}The first two relations}{32}{section.45}%
+\contentsline {section}{\numberline {1.12}The square of a primitive}{33}{section.50}%
+\contentsline {section}{\numberline {1.13}Changing the coefficients}{35}{section.57}%
+\contentsline {chapter}{\chapternumberline {2}Products and coefficients}{37}{chapter.60}%
+\contentsline {section}{\numberline {2.1}Counting monomials}{37}{section.61}%
+\contentsline {section}{\numberline {2.2}Formal multiplication and integer powers}{38}{section.63}%
+\contentsline {section}{\numberline {2.3}Locally finite products and weighted counts}{40}{section.69}%
+\contentsline {section}{\numberline {2.4}Logarithmic coefficients and the recurrence}{41}{section.76}%
+\contentsline {section}{\numberline {2.5}Integer coefficients and factors of weight one}{43}{section.83}%
+\contentsline {section}{\numberline {2.6}How many coefficients determine a series?}{45}{section.90}%
+\contentsline {section}{\numberline {2.7}The three-generator example revisited}{46}{section.93}%
+\contentsline {section}{\numberline {2.8}Lattice labels at a fixed frame}{47}{section.94}%
+\contentsline {subsection}{\numberline {2.8.1}Numerical exponential weights}{47}{subsection.95}%
+\contentsline {subsection}{\numberline {2.8.2}Period coordinates and the finite product}{50}{subsection.96}%
+\contentsline {section}{\numberline {2.9}Information lost by a scalar series}{51}{section.97}%
+\contentsline {chapter}{\chapternumberline {3}Completion and coefficients}{53}{chapter.98}%
+\contentsline {section}{\numberline {3.1}Polynomial coefficients and compatible truncations}{53}{section.100}%
+\contentsline {section}{\numberline {3.2}Localization and the lower bound on parameter order}{56}{section.108}%
+\contentsline {section}{\numberline {3.3}A differential equation and its inverse}{59}{section.115}%
+\contentsline {section}{\numberline {3.4}Solving one coefficient at a time}{60}{section.118}%
+\contentsline {section}{\numberline {3.5}Length restrictions and continuous operations}{62}{section.124}%
+\contentsline {section}{\numberline {3.6}The algebraic tensor product and its completion}{64}{section.127}%
+\contentsline {section}{\numberline {3.7}Scalar extension before and after a limit}{66}{section.131}%
+\contentsline {section}{\numberline {3.8}Localization commutes with quotients}{68}{section.138}%
+\contentsline {section}{\numberline {3.9}Limits of complexes and compatible primitives}{69}{section.142}%
+\contentsline {chapter}{\chapternumberline {4}Compatible formal lifts}{72}{chapter.150}%
+\contentsline {section}{\numberline {4.1}The equation for a lift}{72}{section.151}%
+\contentsline {section}{\numberline {4.2}A later obstruction and its torsion}{74}{section.158}%
+\contentsline {section}{\numberline {4.3}A contraction chooses the corrections}{76}{section.161}%
+\contentsline {section}{\numberline {4.4}A homotopy compatible with both differentials}{79}{section.171}%
+\contentsline {section}{\numberline {4.5}A lift that requires infinitely many coefficients}{80}{section.175}%
+\contentsline {section}{\numberline {4.6}Reduction, uniqueness, and choices}{80}{section.176}%
+\contentsline {section}{\numberline {4.7}Multiplication and pairings impose further equations}{82}{section.178}%
+\contentsline {section}{\numberline {4.8}Formal differentials with higher corrections}{84}{section.179}%
+\contentsline {chapter}{\chapternumberline {5}Higher associativity and formality}{87}{chapter.183}%
+\contentsline {section}{\numberline {5.1}Normal forms and the first multiplication defect}{87}{section.184}%
+\contentsline {section}{\numberline {5.2}Encoding multiplication and its successive homotopies}{89}{section.187}%
+\contentsline {section}{\numberline {5.3}Transferring the product to cohomology}{92}{section.194}%
+\contentsline {section}{\numberline {5.4}A primitive for the fourth operation}{93}{section.199}%
+\contentsline {section}{\numberline {5.5}The sixth operation after changing coordinates}{96}{section.205}%
+\contentsline {section}{\numberline {5.6}A bar cycle detects the sixth operation}{97}{section.206}%
+\contentsline {section}{\numberline {5.7}Transport through arbitrary quasi-isomorphisms}{99}{section.210}%
+\contentsline {section}{\numberline {5.8}The fourth operation over an arbitrary field}{105}{section.218}%
+\contentsline {section}{\numberline {5.9}Formality of the nonpositive truncation}{108}{section.223}%
+\contentsline {section}{\numberline {5.10}Localizing at an even cycle}{112}{section.228}%
+\contentsline {section}{\numberline {5.11}Characteristic two and the fixed coefficient action}{113}{section.229}%
+\contentsline {section}{\numberline {5.12}Cohomology under reduction of coefficients}{114}{section.232}%
+\contentsline {section}{\numberline {5.13}The exact coefficient-ring boundary}{115}{section.235}%
+\contentsline {chapter}{\chapternumberline {6}Translation and braided exchange}{122}{chapter.238}%
+\contentsline {section}{\numberline {6.1}Multiplication at two positions}{122}{section.239}%
+\contentsline {section}{\numberline {6.2}Formal fields and their products}{123}{section.240}%
+\contentsline {section}{\numberline {6.3}A derivation produces regular fields}{124}{section.241}%
+\contentsline {section}{\numberline {6.4}The order of an exchange}{126}{section.248}%
+\contentsline {section}{\numberline {6.5}The quantum plane}{127}{section.250}%
+\contentsline {section}{\numberline {6.6}Compatibility of the exchange operator}{129}{section.255}%
+\contentsline {section}{\numberline {6.7}Unflipped and flipped equations}{130}{section.260}%
+\contentsline {section}{\numberline {6.8}Exchange depending on displacement}{131}{section.262}%
+\contentsline {section}{\numberline {6.9}The delta identity and regular Jacobi identity}{133}{section.265}%
+\contentsline {section}{\numberline {6.10}A formal deformation of the quantum plane}{134}{section.269}%
+\contentsline {section}{\numberline {6.11}Nondegeneracy of field evaluation}{137}{section.277}%
+\contentsline {chapter}{\chapternumberline {7}Gaussian elimination and quantum observables}{139}{chapter.278}%
+\contentsline {section}{\numberline {7.1}The one-variable Gaussian complex}{139}{section.279}%
+\contentsline {subsection}{\numberline {7.1.1}The real Gaussian average}{139}{subsection.280}%
+\contentsline {subsection}{\numberline {7.1.2}The algebraic Gaussian complex}{144}{subsection.285}%
+\contentsline {section}{\numberline {7.2}The bracket of a second-order operator}{146}{section.290}%
+\contentsline {section}{\numberline {7.3}Actions and the master equation}{148}{section.304}%
+\contentsline {section}{\numberline {7.4}A finite heat homotopy and its residual variables}{149}{section.308}%
+\contentsline {section}{\numberline {7.5}The effective interaction and the linear observable map}{152}{section.314}%
+\contentsline {section}{\numberline {7.6}Two sites and the support of the effective interaction}{158}{section.325}%
+\contentsline {section}{\numberline {7.7}The first quantum obstruction}{160}{section.327}%
+\contentsline {chapter}{\chapternumberline {8}Ordered collisions and two holomorphic directions}{163}{chapter.329}%
+\contentsline {section}{\numberline {8.1}Two orders and their common region}{163}{section.330}%
+\contentsline {section}{\numberline {8.2}A puncture in the complex plane of dimension two}{164}{section.335}%
+\contentsline {section}{\numberline {8.3}Keeping the two collision branches}{165}{section.339}%
+\contentsline {section}{\numberline {8.4}Specializing to coincidence preserves multiplication}{166}{section.342}%
+\contentsline {section}{\numberline {8.5}Residues pair singular coefficients with formal jets}{168}{section.348}%
+\contentsline {section}{\numberline {8.6}Derived restriction to a coordinate line}{169}{section.351}%
+\contentsline {section}{\numberline {8.7}Commuting matrices and their Koszul complex}{169}{section.352}%
+\contentsline {chapter}{\chapternumberline {9}Bar duality with ordered collision coefficients}{171}{chapter.355}%
+\contentsline {section}{\numberline {9.1}Coefficients on all order charts}{171}{section.356}%
+\contentsline {section}{\numberline {9.2}A nonzero collision class}{172}{section.357}%
+\contentsline {section}{\numberline {9.3}An associative multiplication with a collision coefficient}{173}{section.360}%
+\contentsline {section}{\numberline {9.4}The ordered word differential}{173}{section.364}%
+\contentsline {section}{\numberline {9.5}The dual differential records the same collision}{174}{section.368}%
+\contentsline {section}{\numberline {9.6}Why the augmentation dual computes derived endomorphisms}{175}{section.372}%
+\contentsline {section}{\numberline {9.7}Recovering the algebra from its bar coalgebra}{176}{section.373}%
+\contentsline {section}{\numberline {9.8}Nested positions and a common expansion ring}{177}{section.376}%
+\contentsline {chapter}{\chapternumberline {10}Merging ordered insertions}{179}{chapter.377}%
+\contentsline {section}{\numberline {10.1}Which charts survive a collision?}{179}{section.378}%
+\contentsline {section}{\numberline {10.2}The Koszul complex of a diagonal}{180}{section.381}%
+\contentsline {section}{\numberline {10.3}Translation and composite states}{181}{section.384}%
+\contentsline {section}{\numberline {10.4}Bar words follow the merged states}{182}{section.386}%
+\contentsline {section}{\numberline {10.5}Why dual collision changes the coefficients}{183}{section.387}%
+\contentsline {section}{\numberline {10.6}What order retains at the diagonal}{185}{section.389}%
+\contentsline {chapter}{\chapternumberline {11}Free fields in two holomorphic dimensions}{186}{chapter.390}%
+\contentsline {section}{\numberline {11.1}Fields and the holomorphic differential}{186}{section.391}%
+\contentsline {section}{\numberline {11.2}A Green homotopy with fixed metric conventions}{187}{section.392}%
+\contentsline {section}{\numberline {11.3}The normalized two-dimensional contraction}{188}{section.394}%
+\contentsline {section}{\numberline {11.4}Residue derivatives and two-variable modes}{189}{section.398}%
+\contentsline {section}{\numberline {11.5}The free Heisenberg algebra and its representation}{189}{section.399}%
+\contentsline {section}{\numberline {11.6}A central operation with three inputs}{190}{section.402}%
+\contentsline {section}{\numberline {11.7}Adding the two topological directions}{191}{section.404}%
+\contentsline {chapter}{\chapternumberline {12}Local observables and regular current actions}{193}{chapter.405}%
+\contentsline {section}{\numberline {12.1}Measurements with several positions}{193}{section.406}%
+\contentsline {section}{\numberline {12.2}The free differential on measurement kernels}{194}{section.408}%
+\contentsline {section}{\numberline {12.3}Smooth estimates and support bounds}{196}{section.412}%
+\contentsline {section}{\numberline {12.4}Two completions and the series they permit}{198}{section.416}%
+\contentsline {section}{\numberline {12.5}Multiplication in disjoint regions}{199}{section.417}%
+\contentsline {section}{\numberline {12.6}Why a cover must contain every finite configuration}{200}{section.419}%
+\contentsline {section}{\numberline {12.7}Compact supports give an exact overlap calculation}{201}{section.421}%
+\contentsline {section}{\numberline {12.8}Descent at every power of the quantum parameter}{202}{section.425}%
+\contentsline {section}{\numberline {12.9}Polynomial symmetries of the free action}{204}{section.429}%
+\contentsline {section}{\numberline {12.10}Noether operators on two-variable polynomial states}{205}{section.432}%
+\contentsline {section}{\numberline {12.11}Quadratic normal ordering and a finite residue formula}{206}{section.436}%
+\contentsline {section}{\numberline {12.12}The bilocal Wick expression retains two positions}{207}{section.438}%
+\contentsline {section}{\numberline {12.13}The comparison required by singular currents}{208}{section.440}%
+\contentsline {chapter}{\chapternumberline {13}The quantum obstruction to local symmetry}{210}{chapter.441}%
+\contentsline {section}{\numberline {13.1}Local symmetries and their sources}{210}{section.442}%
+\contentsline {section}{\numberline {13.2}Which contractions are defined}{211}{section.445}%
+\contentsline {section}{\numberline {13.3}The classical identity and the first two currents}{214}{section.447}%
+\contentsline {section}{\numberline {13.4}Connected contractions and the quantum equation}{216}{section.453}%
+\contentsline {section}{\numberline {13.5}The marked triangle}{217}{section.456}%
+\contentsline {section}{\numberline {13.6}Odd contractions and the trace coefficient}{219}{section.465}%
+\contentsline {section}{\numberline {13.7}Convergence of the unmarked loop}{220}{section.467}%
+\contentsline {section}{\numberline {13.8}The cocycle and charge cancellation}{221}{section.471}%
+\contentsline {section}{\numberline {13.9}A residue value and the comparison it requires}{222}{section.475}%
+\contentsline {chapter}{\chapternumberline {14}Hamiltonian symmetry and continuous cochains}{223}{chapter.476}%
+\contentsline {section}{\numberline {14.1}Area-preserving changes of formal coordinates}{223}{section.477}%
+\contentsline {section}{\numberline {14.2}Why a Taylor window is not a Lie quotient}{224}{section.478}%
+\contentsline {section}{\numberline {14.3}Coefficients and continuous symmetry parameters}{225}{section.481}%
+\contentsline {section}{\numberline {14.4}The differential expressing the symmetry relations}{227}{section.485}%
+\contentsline {section}{\numberline {14.5}Cotangent coordinates and their degrees}{228}{section.490}%
+\contentsline {section}{\numberline {14.6}The contraction bracket}{229}{section.491}%
+\contentsline {section}{\numberline {14.7}An inverse limit that preserves the differential}{230}{section.495}%
+\contentsline {section}{\numberline {14.8}Changing the completion changes the operations}{231}{section.498}%
+\contentsline {section}{\numberline {14.9}Operators, tensor kernels, and matter representations}{232}{section.499}%
+\contentsline {chapter}{\chapternumberline {15}Smooth fields and formal Hamiltonians}{233}{chapter.500}%
+\contentsline {section}{\numberline {15.1}Holomorphic fields and Hamiltonian parameters}{233}{section.501}%
+\contentsline {section}{\numberline {15.2}Smooth realization and holomorphic convergence}{236}{section.513}%
+\contentsline {subsection}{\numberline {15.2.1}Cauchy integration and holomorphicity}{237}{subsection.519}%
+\contentsline {section}{\numberline {15.3}The Dolbeault complex and its Taylor kernel}{240}{section.535}%
+\contentsline {section}{\numberline {15.4}Two formal topologies}{243}{section.548}%
+\contentsline {section}{\numberline {15.5}Continuous scalar cochains and their completion}{245}{section.559}%
+\contentsline {subsection}{\numberline {15.5.1}Suspension and signs}{246}{subsection.565}%
+\contentsline {subsection}{\numberline {15.5.2}Bounded products and degreewise completeness}{249}{subsection.579}%
+\contentsline {section}{\numberline {15.6}Taylor pullback of scalar cochains}{251}{section.585}%
+\contentsline {section}{\numberline {15.7}Translations, representations, and dual contraction}{252}{section.589}%
+\contentsline {subsection}{\numberline {15.7.1}The continuous dual}{253}{subsection.595}%
+\contentsline {subsection}{\numberline {15.7.2}The cotangent boundary of the scalar comparison}{255}{subsection.601}%
+\contentsline {chapter}{\chapternumberline {16}Operator kernels and traces}{256}{chapter.602}%
+\contentsline {section}{\numberline {16.1}A kernel for each finite output}{256}{section.603}%
+\contentsline {section}{\numberline {16.2}Continuous operators and the order of limits}{257}{section.607}%
+\contentsline {section}{\numberline {16.3}Which bilinear contractions extend}{258}{section.612}%
+\contentsline {section}{\numberline {16.4}Evaluation, composition, and Hamiltonian symmetry}{258}{section.616}%
+\contentsline {section}{\numberline {16.5}Derivations and the Euler kernel}{259}{section.618}%
+\contentsline {section}{\numberline {16.6}Finite-rank trace and a disappearing boundary}{260}{section.620}%
+\contentsline {section}{\numberline {16.7}A restricted algebra with an algebraic trace}{262}{section.624}%
+\contentsline {section}{\numberline {16.8}Continuous invariant coefficients and quantum matter}{263}{section.628}%
+\contentsline {chapter}{\chapternumberline {17}Quantum currents at every arity}{264}{chapter.631}%
+\contentsline {section}{\numberline {17.1}Compact sources and the meaning of the series}{264}{section.632}%
+\contentsline {section}{\numberline {17.2}Paths and cycles with their coefficients}{266}{section.635}%
+\contentsline {section}{\numberline {17.3}Every path has a compact observable kernel}{267}{section.638}%
+\contentsline {section}{\numberline {17.4}A Gaussian bound for all wheels}{268}{section.640}%
+\contentsline {section}{\numberline {17.5}Heat edges and collapsed insertions}{270}{section.645}%
+\contentsline {section}{\numberline {17.6}The exact finite-scale Ward identity}{271}{section.649}%
+\contentsline {section}{\numberline {17.7}Transport between positive heat scales}{273}{section.657}%
+\contentsline {section}{\numberline {17.8}Suspension and the source differential}{274}{section.659}%
+\contentsline {section}{\numberline {17.9}The Taylor components in every degree}{277}{section.666}%
+\contentsline {section}{\numberline {17.10}From the master equation to all higher identities}{278}{section.670}%
+\contentsline {section}{\numberline {17.11}The central extension and the quantum current map}{280}{section.672}%
+\contentsline {chapter}{\chapternumberline {18}A local anomaly and its nonlocal primitive}{283}{chapter.677}%
+\contentsline {section}{\numberline {18.1}Background forms and their differential}{283}{section.678}%
+\contentsline {section}{\numberline {18.2}The cubic variation and a concrete component}{284}{section.684}%
+\contentsline {section}{\numberline {18.3}All finite-order local cochains}{285}{section.691}%
+\contentsline {section}{\numberline {18.4}Polarization and integration by parts}{287}{section.696}%
+\contentsline {section}{\numberline {18.5}The nonzero local symbol}{288}{section.701}%
+\contentsline {section}{\numberline {18.6}The complete component complex}{289}{section.707}%
+\contentsline {section}{\numberline {18.7}Position-dependent local counterterms}{290}{section.713}%
+\contentsline {section}{\numberline {18.8}Continuous cochains on compact smooth inputs}{291}{section.716}%
+\contentsline {section}{\numberline {18.9}A normalized Green homotopy}{292}{section.718}%
+\contentsline {section}{\numberline {18.10}The nonlocal primitive and its continuity}{293}{section.726}%
+\contentsline {section}{\numberline {18.11}Local cancellation and the choice of cochains}{295}{section.736}%
+\contentsline {chapter}{\chapternumberline {19}Hamiltonian jets and quantum currents}{296}{chapter.742}%
+\contentsline {section}{\numberline {19.1}A finite Taylor module that retains the action}{296}{section.743}%
+\contentsline {section}{\numberline {19.2}The first two jets}{297}{section.748}%
+\contentsline {section}{\numberline {19.3}Why only quadratic Hamiltonians enter a trace}{298}{section.749}%
+\contentsline {section}{\numberline {19.4}The cubic invariant and ordered color factors}{300}{section.754}%
+\contentsline {section}{\numberline {19.5}Cartan moments as the jet order increases}{300}{section.759}%
+\contentsline {section}{\numberline {19.6}Internal Hamiltonians and compact spatial sources}{301}{section.764}%
+\contentsline {section}{\numberline {19.7}The finite matter theory and its path kernels}{302}{section.768}%
+\contentsline {section}{\numberline {19.8}Reversal cancels the complete wheels}{304}{section.773}%
+\contentsline {section}{\numberline {19.9}Quantum currents and every higher identity}{305}{section.783}%
+\contentsline {section}{\numberline {19.10}What a matter projection fails to preserve}{308}{section.794}%
+\contentsline {section}{\numberline {19.11}An inverse system of current Lie algebras}{309}{section.797}%
+\contentsline {section}{\numberline {19.12}Products of currents and the BV operator}{311}{section.809}%
+\contentsline {section}{\numberline {19.13}The algebra generated by actual current kernels}{312}{section.812}%
+\contentsline {section}{\numberline {19.14}Why restriction preserves these products}{314}{section.818}%
+\contentsline {section}{\numberline {19.15}A nonzero contraction of actual current products}{315}{section.822}%
+\contentsline {section}{\numberline {19.16}The algebraic BV limit and its distribution topology}{316}{section.825}%
+\contentsline {section}{\numberline {19.17}Current maps into the BV algebra}{317}{section.826}%
+\contentsline {section}{\numberline {19.18}Compatible currents and incompatible traces}{318}{section.828}%
+\contentsline {section}{\numberline {19.19}Translations and geometric jet prolongation}{318}{section.829}%
+\contentsline {chapter}{\chapternumberline {20}Arithmetic forms and operator domains}{321}{chapter.832}%
+\contentsline {section}{\numberline {20.1}The arithmetic identity and its variables}{321}{section.833}%
+\contentsline {section}{\numberline {20.2}Elementary complex estimates}{322}{section.838}%
+\contentsline {section}{\numberline {20.3}The test algebra and Gaussian Fourier inversion}{324}{section.845}%
+\contentsline {section}{\numberline {20.4}Prime factors and the gamma factor}{326}{section.856}%
+\contentsline {section}{\numberline {20.5}Gaussian reflection and the completed function}{327}{section.866}%
+\contentsline {section}{\numberline {20.6}Heights at which the horizontal integrals vanish}{332}{section.888}%
+\contentsline {section}{\numberline {20.7}The normalized explicit formula}{333}{section.893}%
+\contentsline {section}{\numberline {20.8}Gaussian tests and their boundary terms}{334}{section.899}%
+\contentsline {section}{\numberline {20.9}A separate positivity argument}{335}{section.908}%
+\contentsline {section}{\numberline {20.10}The form on the nonunital test algebra}{336}{section.914}%
+\contentsline {section}{\numberline {20.11}Positive functionals and their representations}{337}{section.926}%
+\contentsline {section}{\numberline {20.12}Closed forms and the common invariant domain}{340}{section.934}%
+\contentsline {section}{\numberline {20.13}Norm and order in a complete involutive algebra}{341}{section.943}%
+\contentsline {section}{\numberline {20.14}Dagger transfer and completion}{345}{section.952}%
+\contentsline {section}{\numberline {20.15}Positive unitization for nonunital $C^*$-algebras}{346}{section.967}%
+\contentsline {section}{\numberline {20.16}The Gaussian obstruction to finite mass}{348}{section.980}%
+\contentsline {section}{\numberline {20.17}Why an indefinite quotient does not give positivity}{350}{section.993}%
+\contentsline {section}{\numberline {20.18}The independent arithmetic question}{351}{section.995}%
+\contentsline {section}{\numberline {20.19}Finite matrix kernels and positive trace}{352}{section.1003}%
+\contentsline {section}{\numberline {20.20}Gaussian averages and formal coefficients}{354}{section.1008}%
+\contentsline {section}{\numberline {20.21}The remaining comparison with quantum currents}{355}{section.1012}%

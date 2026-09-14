@@ -1,0 +1,1319 @@
+\chapter{Hamiltonian jets and quantum currents}
+\label{chap:hamiltonian-jets}
+
+A finite Taylor expansion can carry a nontrivial Hamiltonian symmetry
+when the symmetry fixes the expansion point. Translations violate that
+condition: differentiation can return a discarded coefficient to the
+retained range. Removing translations therefore changes the representation
+problem, and it permits finite matter modules with an exact quantum action.
+
+The first module is spanned by $x,y$. Quadratic Hamiltonians act by
+$\mathfrak{sl}_2$, yet their symmetric cubic trace is zero.
+The same cancellation persists at every Taylor order. Higher Hamiltonians
+only raise matter degree, so a closed matrix word sees only the quadratic
+blocks. A bilinear form on each block reverses that word with a sign.
+Together with the odd propagator and background signs, this identity
+cancels every complete scalar wheel in the free theory on $\mathbb C^2$.
+
+We construct the resulting current maps and the unital BV algebras they
+generate inside the actual distribution observables. Their inverse limit
+retains multiplication, the differential, the BV operator, and every higher
+current component. Although individual currents have zero BV Laplacian,
+products can have a nonzero contraction. A removed pair of matter modes
+shows why the full ambient BV algebras do not admit the same projections.
+Finally, Taylor expansion of a spatial Hamiltonian supplies the transport
+term needed to compare internal symmetry with motion of insertion points.
+
+\section{A finite Taylor module that retains the action}
+
+Work over \(\mathbb C\). The variables \(x,y\) in this section are formal internal variables. Put
+\[
+R=\mathbb C[[x,y]],\qquad \mathfrak m=(x,y),\qquad
+H_+=\mathfrak m^2,
+\]
+with
+\[
+\{f,g\}=f_xg_y-f_yg_x.
+\]
+We identify \(\mathfrak m^2\) with its image in \(R/\mathbb C\).
+Give the coefficient field the discrete topology for this formal
+construction. The subspaces $\mathfrak m^r$ define its neighborhoods
+of zero. All Lie algebras and matter modules in this section are
+concentrated in cohomological degree zero.
+
+For \(N\geq1\), define
+\begin{equation}
+V_N=\mathfrak m/\mathfrak m^{N+1},
+\qquad
+\mathfrak g_N=\mathfrak m^2/\mathfrak m^{N+2}.
+\label{eq:hj-1}
+\end{equation}
+The action is
+\begin{equation}
+\rho_N(\overline f)(\overline g)
+   =\overline{\{f,g\}}\in V_N.
+\label{eq:hj-2}
+\end{equation}
+
+\begin{proposition}\label{prop:hj-faithful}
+For every $N\geq1$, $\mathfrak g_N$ is a Lie algebra and
+\eqref{eq:hj-2} is a faithful representation on $V_N$.
+\end{proposition}
+\begin{proof}
+For \(a,b\geq1\),
+\begin{equation}
+\{\mathfrak m^a,\mathfrak m^b\}
+   \subset\mathfrak m^{a+b-2}.
+\label{eq:hj-3}
+\end{equation}
+Consequently:
+
+\begin{itemize}
+\item \(\mathfrak m^{N+2}\) is a Lie ideal of \(\mathfrak m^2\).
+\item \(\mathfrak m^{N+1}\) is preserved by \(\mathfrak m^2\).
+\item Changing \(f\) by \(\mathfrak m^{N+2}\) changes \(\{f,g\}\), for \(g\in\mathfrak m\), by \(\mathfrak m^{N+1}\).
+\end{itemize}
+
+Thus both quotients and the action are well-defined. Jacobi gives
+\begin{equation}
+[\rho_N(f),\rho_N(g)]=\rho_N(\{f,g\}).
+\label{eq:hj-4}
+\end{equation}
+
+The representation is faithful. If \(\rho_N(f)=0\), evaluating on \(x,y\) gives
+\[
+-f_y,\ f_x\in\mathfrak m^{N+1}.
+\]
+All homogeneous components of \(f\) of degrees \(2,\ldots,N+1\) therefore vanish. Characteristic zero is used here. Hence \(f=0\) in \(\mathfrak g_N\).
+\end{proof}
+
+Writing \(H_d=\mathbb C[x,y]_d\), we have
+\[
+V_N=\bigoplus_{d=1}^N H_d,
+\qquad
+\mathfrak g_N=\bigoplus_{r=2}^{N+1}H_r,
+\]
+and
+\begin{equation}
+\dim V_N=\frac{N(N+3)}2,\qquad
+\dim\mathfrak g_N=\frac{N(N+5)}2.
+\label{eq:hj-5}
+\end{equation}
+
+The projection \(H_+\to\mathfrak g_N\) is continuous for the formal topology because its kernel is open. Its composite with \(\rho_N\) is a continuous finite-dimensional representation. This remains true when the finite-dimensional target has its usual complex topology.
+Write $\pi_N:H_+\to\mathfrak g_N$ for this quotient map.
+
+If \(f_r\in H_r\), then
+\begin{equation}
+\rho_N(f_r):H_d\longrightarrow H_{d+r-2},
+\label{eq:hj-6}
+\end{equation}
+with the target interpreted as zero when \(d+r-2>N\). Thus every action matrix is nondecreasing in internal degree.
+
+\section{The first two jets}
+
+The first quotient contains the full quadratic action. The next one adds a degree-raising block, which reveals why higher Taylor terms cannot close an internal loop.
+
+Put
+\[
+e=x^2/2,\qquad f=-y^2/2,\qquad h=-xy.
+\]
+Direct Poisson brackets give
+\begin{equation}
+[h,e]=2e,\qquad[h,f]=-2f,\qquad[e,f]=h.
+\label{eq:hj-8}
+\end{equation}
+These are the defining brackets of $\mathfrak{sl}_2$.
+In matrix expressions, a Hamiltonian denotes its action on the
+specified module. Columns record the images of basis vectors.
+
+For \(N=1\), the ordered basis \(x,y\) gives
+\[
+h=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+e=\begin{pmatrix}0&1\\0&0\end{pmatrix},\qquad
+f=\begin{pmatrix}0&0\\1&0\end{pmatrix}.
+\]
+Thus
+\begin{equation}
+\operatorname{Tr}(h^2)=2,\quad
+\operatorname{Tr}(h^3)=0,\quad
+\operatorname{Tr}(h^4)=2,\quad
+\operatorname{Tr}(hef)=1.
+\label{eq:hj-24}
+\end{equation}
+
+For \(N=2\), use \(x,y,x^2,xy,y^2\). Then
+\[
+h=\operatorname{diag}(1,-1,2,0,-2),
+\]
+and the other two action matrices are
+\[
+e=\begin{pmatrix}
+0&1&0&0&0\\
+0&0&0&0&0\\
+0&0&0&1&0\\
+0&0&0&0&2\\
+0&0&0&0&0
+\end{pmatrix},\qquad
+f=\begin{pmatrix}
+0&0&0&0&0\\
+1&0&0&0&0\\
+0&0&0&0&0\\
+0&0&2&0&0\\
+0&0&0&1&0
+\end{pmatrix}.
+\]
+Their traces give
+\begin{equation}
+\operatorname{Tr}(h^2)=10,\quad
+\operatorname{Tr}(h^3)=0,\quad
+\operatorname{Tr}(h^4)=34,\quad
+\operatorname{Tr}(hef)=5.
+\label{eq:hj-25}
+\end{equation}
+The four cubic Hamiltonians act by
+\[
+\begin{array}{c|cc}
+ &x&y\\ \hline
+x^3&0&3x^2\\
+x^2y&-x^2&2xy\\
+xy^2&-2xy&y^2\\
+y^3&-3y^2&0
+\end{array}
+\]
+and annihilate \(H_2\). Their matrices are strictly degree-raising, so none contributes to a trace word.
+For example, with the decomposition $V_2=H_1\oplus H_2$,
+\[
+\rho_2(x^3)=
+\begin{pmatrix}0_{2\times2}&0_{2\times3}\\
+C_{x^3}&0_{3\times3}\end{pmatrix},
+\qquad
+C_{x^3}=\begin{pmatrix}0&3\\0&0\\0&0\end{pmatrix}.
+\]
+The remaining lower-left blocks, in the same bases, are
+\[
+C_{x^2y}=\begin{pmatrix}-1&0\\0&2\\0&0\end{pmatrix},\quad
+C_{xy^2}=\begin{pmatrix}0&0\\-2&0\\0&1\end{pmatrix},\quad
+C_{y^3}=\begin{pmatrix}0&0\\0&0\\-3&0\end{pmatrix}.
+\]
+The new matter degrees affect traces of quadratic Hamiltonians.
+The new Hamiltonian degrees cannot return an input to its original
+degree. This distinction persists at every $N$.
+
+\section{Why only quadratic Hamiltonians enter a trace}
+
+A closed internal contraction is a trace of an action word.
+Its diagonal coefficients must return to the starting matter degree.
+Let \(f_{j,2}\) denote the quadratic component of \(f_j\in H_+\).
+In a trace over $H_d$, $\rho_d(q)$ means its restriction to the
+invariant summand $H_d\subset V_d$, for a quadratic Hamiltonian $q$.
+Equation~\eqref{eq:hj-6} gives, for every word length \(r\geq1\),
+\begin{equation}
+\boxed{
+\begin{aligned}
+&\operatorname{Tr}_{V_N}
+ \bigl(\rho_N(f_1)\cdots\rho_N(f_r)\bigr)
+ \\ &\qquad={}
+ \sum_{d=1}^N
+ \operatorname{Tr}_{H_d}
+ \bigl(\rho_d(f_{1,2})\cdots\rho_d(f_{r,2})\bigr).
+\end{aligned}
+}
+\label{eq:hj-7}
+\end{equation}
+Indeed, each factor raises internal degree by a nonnegative amount. A diagonal block of a product can therefore use only the degree-preserving part of every factor. These are precisely the quadratic Hamiltonian parts.
+
+In particular, any trace word containing one Hamiltonian with zero quadratic component vanishes. This includes all higher Taylor components, without any genericity assumption.
+
+On
+\[
+v_a=x^ay^{d-a},\qquad 0\leq a\leq d,
+\]
+their actions are
+\begin{equation}
+hv_a=(2a-d)v_a,\qquad
+ev_a=(d-a)v_{a+1},\qquad
+fv_a=av_{a-1}.
+\label{eq:hj-9}
+\end{equation}
+The product rule identifies this action with the $d$th symmetric
+power of the action on $\mathbb Cx\oplus\mathbb Cy$.
+
+Define a bilinear form on \(H_d\) by
+\begin{equation}
+B_d(v_a,v_b)=0\quad(a+b\ne d),
+\qquad
+B_d(v_a,v_{d-a})=\frac{(-1)^a}{\binom da}.
+\label{eq:hj-10}
+\end{equation}
+It is nondegenerate. Formula \eqref{eq:hj-9} directly verifies
+\begin{equation}
+B_d(Xv,w)+B_d(v,Xw)=0
+\qquad(X=e,f,h).
+\label{eq:hj-11}
+\end{equation}
+For example, invariance under \(e\) reduces to
+\[
+(d-a)B_d(v_{a+1},v_{d-a-1})
+ +(a+1)B_d(v_a,v_{d-a})=0.
+\]
+The displayed coefficients in \eqref{eq:hj-10} satisfy this identity. The checks for \(f,h\) are immediate from \eqref{eq:hj-9}.
+
+If \(J_d\) is the matrix of \(B_d\), every quadratic action matrix satisfies
+\[
+X^{\mathsf T}J_d+J_dX=0.
+\]
+Transposing a product and conjugating by \(J_d\) gives
+\[
+\operatorname{Tr}_{H_d}(X_1\cdots X_r)
+ =(-1)^r\operatorname{Tr}_{H_d}(X_r\cdots X_1).
+\]
+Combining this with \eqref{eq:hj-7} proves the full jet identity
+\begin{equation}
+\boxed{
+\begin{aligned}
+&\operatorname{Tr}_{V_N}
+ \bigl(\rho_N(f_1)\cdots\rho_N(f_r)\bigr)
+ \\ &\qquad=(-1)^r
+\operatorname{Tr}_{V_N}
+ \bigl(\rho_N(f_r)\cdots\rho_N(f_1)\bigr).
+\end{aligned}
+}
+\label{eq:hj-12}
+\end{equation}
+The full jet representation need not preserve the forms \eqref{eq:hj-10}. The trace identity follows from its degree-preserving blocks.
+
+\section{The cubic invariant and ordered color factors}
+
+The local scalar curvature in complex dimension two uses a symmetric
+cubic trace. An individual orientation of a loop instead has an ordered
+matrix word. To distinguish them, define
+\begin{equation}
+T_N(f_1,f_2,f_3)
+ =\frac16\sum_{\sigma\in S_3}
+ \operatorname{Tr}_{V_N}
+ \bigl(\rho_N(f_{\sigma(1)})
+       \rho_N(f_{\sigma(2)})
+       \rho_N(f_{\sigma(3)})\bigr).
+\label{eq:hj-13}
+\end{equation}
+\begin{proposition}\label{prop:hj-cubic}
+The complete symmetric cubic tensor of $\rho_N$ vanishes:
+\begin{equation}
+\boxed{T_N=0\qquad\text{for every }N\geq1.}
+\label{eq:hj-14}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Reversal pairs each summand of \eqref{eq:hj-13} with its negative
+by \eqref{eq:hj-12}. This applies to arbitrary Hamiltonian inputs,
+including every higher Taylor component.
+\end{proof}
+
+Individual ordered cubic traces can be nonzero. Cyclicity and \eqref{eq:hj-12} give
+\begin{equation}
+\operatorname{Tr}(XYZ)
+ =-\operatorname{Tr}(XZY)
+ =\frac12\operatorname{Tr}\bigl(X[Y,Z]\bigr).
+\label{eq:hj-15}
+\end{equation}
+This also computes the entire ordered cubic tensor in terms of the quadratic trace pairing.
+
+The vanishing in \eqref{eq:hj-14} is thus stronger than vanishing on a selected Cartan element, but weaker than vanishing of every ordered cubic word.
+
+\section{Cartan moments as the jet order increases}
+
+The cubic invariant is already zero, but a limit of ordinary traces
+would also have to accommodate the even moments. They provide a separate
+test of what passage to increasing Taylor order can preserve.
+The eigenvalues of \(\rho_N(h)\) are
+\[
+2a-d,\qquad 1\leq d\leq N,\quad 0\leq a\leq d.
+\]
+Hence
+\begin{equation}
+\operatorname{Tr}_{V_N}(h^r)
+ =\sum_{d=1}^N\sum_{a=0}^d(2a-d)^r.
+\label{eq:hj-16}
+\end{equation}
+All odd moments vanish by pairing \(a\) with \(d-a\).
+
+For a single degree \(d\),
+\begin{equation}
+\sum_{a=0}^d(2a-d)^2
+ =\frac{d(d+1)(d+2)}3,
+\label{eq:hj-17}
+\end{equation}
+and
+\begin{equation}
+\sum_{a=0}^d(2a-d)^4
+ =\frac{d(d+1)(d+2)(3d^2+6d-4)}{15}.
+\label{eq:hj-18}
+\end{equation}
+One direct derivation expands
+\[
+\sum_{a=0}^d e^{(2a-d)t}
+ =\frac{\sinh((d+1)t)}{\sinh t}
+\]
+as a formal power series through \(t^4\).
+More explicitly, this quotient is
+\[
+(d+1)\left(
+1+\frac{(d+1)^2-1}{6}t^2
+ +\frac{3(d+1)^4-10(d+1)^2+7}{360}t^4
+ +O(t^6)\right).
+\]
+Multiplication of the two coefficients by $2!$ and $4!$ gives
+\eqref{eq:hj-17} and \eqref{eq:hj-18}.
+
+Summing \eqref{eq:hj-17}--\eqref{eq:hj-18} gives
+\begin{equation}
+\boxed{
+\operatorname{Tr}_{V_N}(h^2)
+ =\frac{N(N+1)(N+2)(N+3)}{12},
+}
+\label{eq:hj-19}
+\end{equation}
+\begin{equation}
+\boxed{\operatorname{Tr}_{V_N}(h^3)=0,}
+\label{eq:hj-20}
+\end{equation}
+\begin{equation}
+\boxed{
+\operatorname{Tr}_{V_N}(h^4)
+ =
+\frac{N(N+1)(N+2)(N+3)(2N^2+6N-3)}{60}.
+}
+\label{eq:hj-21}
+\end{equation}
+The sums can also be verified without any summation formula: the difference between the right sides at \(N\) and \(N-1\) is respectively \eqref{eq:hj-17} and \eqref{eq:hj-18}, and both vanish at \(N=0\).
+
+For an arbitrary quadratic
+\[
+q=ae+bh+cf,
+\]
+its matrix on \(H_1\) is
+\[
+\begin{pmatrix}b&a\\ c&-b\end{pmatrix}.
+\]
+Consequently,
+\begin{equation}
+\operatorname{Tr}_{V_N}\rho_N(q)^2
+ =\operatorname{Tr}_{V_N}(h^2)(b^2+ac),
+\label{eq:hj-22}
+\end{equation}
+\begin{equation}
+\operatorname{Tr}_{V_N}\rho_N(q)^4
+ =\operatorname{Tr}_{V_N}(h^4)(b^2+ac)^2.
+\label{eq:hj-23}
+\end{equation}
+To prove these formulas, first diagonalize the displayed matrix when \(b^2+ac\ne0\). Equation \eqref{eq:hj-9} then determines its action on every symmetric power. Both sides are polynomial in \(a,b,c\), so the identities extend to \(b^2+ac=0\).
+
+\section{Internal Hamiltonians and compact spatial sources}
+
+To form currents, place these finite internal modules over a spatial
+manifold. A matrix acts on the matter coefficient at an insertion point;
+the propagator connects different insertion points. The spatial manifold is
+\[
+X=\mathbb C^2_z.
+\]
+Its coordinates \(z_1,z_2\) are distinct from the internal formal variables \(x,y\).
+
+For each \(N\), define the differential graded Lie algebra
+\[
+\mathfrak a_N=\Omega_c^{0,\bullet}(X,\mathfrak g_N),
+\qquad
+d=\bar\partial,
+\]
+\begin{equation}
+[\alpha\otimes f,\eta\otimes g]
+ =(\alpha\wedge\eta)\otimes\{f,g\}.
+\label{eq:hj-26}
+\end{equation}
+These smooth coefficients use the usual complex topology. On each fixed compact support, use the ordinary smooth seminorms.
+Thus, for a compact $K\subset X$, a seminorm bounds the coefficients
+and their real spatial derivatives through an assigned order on $K$.
+The bracket is well-defined because $\pi_N$ is a Lie quotient, and
+$\bar\partial$ is a derivation of the wedge product.
+The quotient maps $\mathfrak g_{N+1}\to\mathfrak g_N$ induce
+surjective differential graded Lie maps on these sources.
+
+A minimal formal Hamiltonian current source is the algebraic differential graded Lie algebra
+\begin{equation}
+\Omega_c^{0,\bullet}(X)\otimes_{\mathbb C}H_+.
+\label{eq:hj-27}
+\end{equation}
+Its maps
+\begin{equation}
+q_N=\operatorname{id}\otimes\pi_N:
+\Omega_c^{0,\bullet}(X)\otimes H_+
+ \longrightarrow\mathfrak a_N
+\label{eq:hj-28}
+\end{equation}
+commute with the differential and bracket. Every construction below can be pulled back along \eqref{eq:hj-28}. Its continuity statements hold on the specified finite families and fixed compact supports.
+
+For the inverse construction, an explicit larger source is
+\begin{equation}
+\mathfrak a_+=\varprojlim_N\mathfrak a_N.
+\label{eq:hj-29}
+\end{equation}
+An element has smooth formal Taylor coefficients such that each finite internal jet has compact spatial support. A common compact support for all coefficients is allowed but is not imposed by \eqref{eq:hj-29}. Formula \eqref{eq:hj-27} embeds in \eqref{eq:hj-29}.
+The inverse limit is degreewise. Its coordinate projections are the
+maps to $\mathfrak a_N$; no interchange of a tensor product with this
+inverse limit is assumed. Fixed-support continuity below always refers
+to the ordinary seminorms at each finite $N$.
+
+This definition avoids identifying smooth formal coefficients with smooth maps into a vector space whose coefficient field was given the discrete topology.
+
+\section{The finite matter theory and its path kernels}
+
+The matrix action gives the local coupling $\int\beta\rho_N(A)\gamma\Omega$.
+Its Gaussian contractions produce paths with two external matter legs,
+and cycles with none. Fix \(N\) and a positive heat scale \(L\).
+Take matter fields
+\[
+\gamma\in\Omega^{0,\bullet}(X,V_N),
+\qquad
+\beta\in\Omega^{0,\bullet}(X)\otimes V_N^\vee[1].
+\]
+Use
+\[
+\Omega=dz_1\wedge dz_2,\qquad
+d\bar z_1d\bar z_2\Omega=4\,dV_4.
+\]
+The total degrees of \(\beta,A,\gamma\) are \(1,1,0\). Ghost coefficients precede forms:
+\begin{equation}
+(u\alpha)(v\eta)
+ =(-1)^{|\alpha|\operatorname{gh}(v)}
+   uv\,\alpha\wedge\eta.
+\label{eq:hj-30}
+\end{equation}
+The shift convention is $(E[k])^j=E^{j+k}$.
+A form-degree-$q$ component of $\gamma,\beta,A$ has ghost number
+$-q,1-q,1-q$, respectively. Here $\beta$ is the coefficient field:
+its full field is $\beta\wedge\Omega$.
+If $z_j=s_j+ir_j$, then
+$dV_4=ds_1\wedge dr_1\wedge ds_2\wedge dr_2$.
+
+Evaluate the universal background on any finite family
+\[
+A=\sum_i t_i\alpha_i,\qquad
+\alpha_i\in\mathfrak a_N^{p_i},\qquad |t_i|=1-p_i.
+\]
+The parameters form a free graded commutative algebra.
+Odd parameters square to zero. Identities mean identities of every
+ordered parameter coefficient. One may adjoin the finitely many
+differentials and brackets occurring in that coefficient.
+No finite-dimensional background subspace is assumed closed under them.
+The scalar $\hbar$ is a formal parameter of degree zero.
+
+Write
+\[
+M_N(A)=\rho_N(A).
+\]
+For \(0<\epsilon<L\), use the fixed propagator
+\begin{equation}
+P_{\epsilon,L}(u)
+ =\int_\epsilon^L
+   \frac{e^{-|u|^2/(4t)}}{64\pi^2t^3}
+   \bigl(\bar u_1d\bar u_2-\bar u_2d\bar u_1\bigr)\,dt.
+\label{eq:hj-31}
+\end{equation}
+All forms use full differences. In particular,
+\begin{equation}
+P_{\epsilon,L}(-u)=P_{\epsilon,L}(u).
+\label{eq:hj-32}
+\end{equation}
+For $u=z-w$, this means $d\bar u_j=d\bar z_j-d\bar w_j$.
+The corresponding heat form is
+\[
+H_t(u)=\frac{e^{-|u|^2/(4t)}}{64\pi^2t^2}
+              d\bar u_1\wedge d\bar u_2,
+\qquad dP_{\epsilon,L}=H_\epsilon-H_L.
+\]
+The internal pairing is evaluation $V_N^\vee\otimes V_N\to\mathbb C$.
+
+Let $E_N$ be the graded finite-rank bundle of matter components.
+The algebra of observables is
+\[
+\mathcal O_{\mathrm{dist},N}
+=\bigoplus_{m\geq0}
+\mathcal E'_c\bigl(X^m;(E_N^\vee)^{\boxtimes m}
+                     \otimes\operatorname{Dens}\bigr)_{S_m}.
+\]
+Its elements are compact distribution kernels, modulo graded symmetric
+permutations of the matter slots. The summand $m=0$ is $\mathbb C$.
+A scalar kernel $T$ has a bound
+\[
+|T(\phi)|\leq C\max_{|\nu|\leq m}\sup_K|\partial^\nu\phi|
+\]
+for some compact $K$ and finite $m$.
+Its strong topology is uniform convergence on families of smooth tests
+bounded in every derivative on each compact set.
+Products keep position variables separate by external tensor product.
+The free differential $Q$ acts by transposing the matter differential
+onto tests. A positive-scale contraction inserts its smooth kernel into
+a test and pushes forward over the contracted slots.
+These are the operations constructed in
+Chapter~\ref{chap:quantum-current-anomaly}.
+
+For the paired heat tensor $K_t$, use the signs
+\[
+\Delta_t=-\partial_{K_t},\qquad
+\mathcal C_{\epsilon,L}=\partial_{P_{\epsilon,L}},\qquad
+[Q,\mathcal C_{\epsilon,L}]=\Delta_\epsilon-\Delta_L.
+\]
+Odd coordinate derivatives are left derivatives. The propagator form
+stands on the left of its contraction operator.
+The operator $\Delta_t$ and its derived bracket have degree one.
+They satisfy $\Delta_t^2=0$, $Q\Delta_t+\Delta_tQ=0$, and the
+graded Jacobi and derivation identities proved there.
+The singular $P_{0,L}$ is used only in the path kernels below,
+not as an operator on arbitrary distributions.
+
+For
+\[
+s_n=(-1)^{(n-1)(n-2)/2},
+\]
+the tree interaction is
+\begin{equation}
+\begin{aligned}
+T_{n,N}^{\epsilon,L}(A)
+={}&s_n\int_{X^n}P_{12}\cdots P_{n-1,n}\\
+&\quad\cdot
+ \beta(z_1)M_N(A(z_1))\cdots
+ M_N(A(z_n))\gamma(z_n)\,
+ \Omega_1\cdots\Omega_n.
+\end{aligned}
+\label{eq:hj-33}
+\end{equation}
+For \(n=1\), the propagator product is \(1\).
+
+These kernels have limits \(T_{n,N}^L\). Indeed,
+\[
+\|P_{0,L}\|_{L^1}\leq C\sqrt L,\qquad
+\|P_{0,L}-P_{\epsilon,L}\|_{L^1}
+ \leq C\sqrt\epsilon.
+\]
+For $n\geq2$, the $n-1$ edge differences and one base point are
+independent coordinates, with absolute real Jacobian one.
+A telescoping product expansion therefore gives, on a fixed compact support,
+\begin{equation}
+\bigl|(T_{n,N}^{\epsilon,L}-T_{n,N}^L)(\Phi)\bigr|
+ \leq C_{n,N,K}\sqrt\epsilon\,L^{(n-2)/2}
+           \|\Phi\|_{C^0}.
+\label{eq:hj-34}
+\end{equation}
+The resulting observable is quadratic, with a compact distribution kernel in its two matter slots.
+In this estimate $\Phi$ includes the smooth background coefficients
+and the smooth test in the two remaining matter slots.
+On a bounded family of backgrounds with fixed support, its bound is
+uniform. The independent edge variables cover partial collisions as well
+as the full diagonal. For $n=1$, the kernel is independent of $\epsilon$.
+
+The scalar wheel formula is
+\begin{equation}
+\begin{aligned}
+W_{n,N}^{\epsilon,L}(A)
+ ={}&\frac{s_n}{n}\int_{X^n} P_{12}\cdots P_{n1}\\
+ &\quad\cdot
+ \operatorname{Tr}_{V_N}
+ \bigl(M_N(A(z_1))\cdots M_N(A(z_n))\bigr)
+ \Omega_1\cdots\Omega_n.
+\end{aligned}
+\label{eq:hj-35}
+\end{equation}
+for \(n\geq3\), with \(W_{1,N}=W_{2,N}=0\).
+
+The connected Gaussian expansion in Chapter~\ref{chap:all-arity-current-actions} gives the factor \(1/n\) and sign \(s_n\). A path uses all \(n!\) vertex orders, whereas a cycle identifies its \(n\) cyclic rotations. Specializing the representation does not change these counts.
+
+\section{Reversal cancels the complete wheels}
+
+An ordered trace can be nonzero, as $\operatorname{Tr}(hef)$ shows.
+The quantum term sums both orientations with their form and ghost signs.
+Those additional signs determine whether a scalar correction remains.
+\begin{proposition}\label{prop:hj-wheel}
+At every $0<\epsilon<L$, all complete scalar wheel polynomials for
+$\rho_N$ vanish. Their limiting polynomials and the local cubic
+curvature vanish as well.
+\end{proposition}
+\begin{proof}
+Each \(A_i\) has total degree one. Expand each matrix-valued \(A_i\) into an odd scalar coefficient times an ordinary Hamiltonian matrix. Reversing the scalar coefficients contributes
+\[
+(-1)^{n(n-1)/2}.
+\]
+Reversing the ordinary matrix trace contributes \((-1)^n\) by \eqref{eq:hj-12}. Hence
+\begin{equation}
+\operatorname{Tr}(M_N(A_n)\cdots M_N(A_1))
+ =
+(-1)^{n(n+1)/2}
+\operatorname{Tr}(M_N(A_1)\cdots M_N(A_n)).
+\label{eq:hj-36}
+\end{equation}
+
+In \eqref{eq:hj-35}, reverse the vertex labels \(i\mapsto n+1-i\). The volume forms introduce no sign. Equation \eqref{eq:hj-32} fixes each reversed edge form. Reordering the first \(n-1\) odd edge forms back to their original order contributes
+\[
+(-1)^{(n-1)(n-2)/2}.
+\]
+Together with \eqref{eq:hj-36}, the total sign is
+\[
+(-1)^{n(n+1)/2+(n-1)(n-2)/2}
+ =(-1)^{n^2-n+1}=-1.
+\]
+Thus
+\[
+W_{n,N}^{\epsilon,L}(A)=-W_{n,N}^{\epsilon,L}(A),
+\]
+and
+\begin{equation}
+\boxed{
+W_{n,N}^{\epsilon,L}=W_{n,N}^{L}=0
+\quad\text{for every }n.
+}
+\label{eq:hj-37}
+\end{equation}
+
+This cancellation holds for the complete wheel polynomial. It does not say that each ordered color trace or each labeled oriented graph is zero.
+
+The cubic local curvature also vanishes directly. Its prescribed expression is
+\begin{equation}
+\Theta_N(A)
+ =-\frac1{24\pi^2}\int_X
+ \operatorname{Tr}_{V_N}
+ \left[
+ A(\partial_{z_1}A\,\partial_{z_2}A
+    -\partial_{z_2}A\,\partial_{z_1}A)
+ \right]\Omega.
+\label{eq:hj-38}
+\end{equation}
+Here and below \(A\) in a matrix product means \(M_N(A)\).
+
+All three matrix-valued factors in either cubic trace have total degree one. Formula \eqref{eq:hj-36} at \(n=3\), followed by graded cyclicity, identifies the two traces in \eqref{eq:hj-38}. Consequently,
+\begin{equation}
+\boxed{\Theta_N=0.}
+\label{eq:hj-39}
+\end{equation}
+This agrees with the vanishing of the complete symmetric cubic tensor in \eqref{eq:hj-14}.
+For $n=1$, the propagator has $P_{\epsilon,L}(0)=0$.
+For $n=2$, its full-difference pullback gives the product
+$P_{\epsilon,L}(u)^2=0$. These supply the two cases excluded
+from the formula \eqref{eq:hj-35}.
+\end{proof}
+
+Define the formal interaction
+\begin{equation}
+I_{N,L}(A)=\sum_{n\geq1}T_{n,N}^L(A),
+\label{eq:hj-40}
+\end{equation}
+completed in background weight. It is interpreted on finite parameter families
+\[
+A=\sum_i t_i\alpha_i,\qquad |t_i|=1-|\alpha_i|.
+\]
+At each background order, every expression is finite. No numerical convergence of \eqref{eq:hj-40} is asserted.
+
+Theorem~\ref{thm:aac-fixed-scale}, with its algebra of compact distribution kernels and positive-scale contractions, gives
+\begin{equation}
+\boxed{
+(Q+d_{\mathrm{CE}})I_{N,L}
+ +\frac12\{I_{N,L},I_{N,L}\}_L
+ +\hbar\Delta_LI_{N,L}=0.
+}
+\label{eq:hj-41}
+\end{equation}
+Its scalar component, using \eqref{eq:hj-37} and \eqref{eq:hj-39}, gives separately
+\begin{equation}
+\boxed{\Delta_LT_{n,N}^L=0\quad\text{for every }n.}
+\label{eq:hj-42}
+\end{equation}
+Its quadratic components are
+\begin{equation}
+(Q+d_{\mathrm{CE},1})T_{n,N}^L
+ +d_{\mathrm{CE},2}T_{n-1,N}^L
+ +\frac12\sum_{i+j=n}
+     \{T_{i,N}^L,T_{j,N}^L\}_L=0.
+\label{eq:hj-43}
+\end{equation}
+Here $T_{0,N}^L=0$, and the bracket sum uses $i,j\geq1$.
+
+Thus no central extension is needed. In this example, the classical tree components themselves are quantum current components.
+
+\section{Quantum currents and every higher identity}
+
+The master equation packages infinitely many multilinear identities.
+Their target differential includes $\hbar\Delta_L$, even though the
+current components themselves have no positive power of $\hbar$.
+Fix the suspension signs to recover each identity from that equation.
+
+\begin{theorem}\label{thm:hj-finite-current}
+For every $N\geq1$ and $L>0$, the maps \eqref{eq:hj-46} form a
+nontrivial quantum $L_\infty$ current morphism from $\mathfrak a_N$.
+Its source has no central extension. Its values are compact quadratic
+distribution kernels, with continuity on the stated fixed-support families.
+Pullback along $q_N$ gives a morphism from the source
+\eqref{eq:hj-27}, and from the projection of \eqref{eq:hj-29}.
+\end{theorem}
+\begin{proof}
+Let
+\[
+\mathcal L_{N,L}
+ =\mathcal O_{\mathrm{dist},N}[[\hbar]][-1],
+\qquad |uF|=|F|+1,
+\]
+with
+\begin{equation}
+d_{\mathcal L}(uF)=-u(Q+\hbar\Delta_L)F,
+\qquad
+[uF,uG]_L=u\{F,G\}_L.
+\label{eq:hj-44}
+\end{equation}
+
+For homogeneous \(\alpha_i\in\mathfrak a_N^{p_i}\), define
+\begin{equation}
+\begin{aligned}
+K_{n,N,L}(\alpha_1,\ldots,\alpha_n)
+={}&\int_{X^n}P_{0,L,12}\cdots P_{0,L,n-1,n}\\
+&\quad\cdot
+\beta_1\rho_N(\alpha_1)_1\cdots
+\rho_N(\alpha_n)_n\gamma_n\,
+\Omega_1\cdots\Omega_n.
+\end{aligned}
+\label{eq:hj-45}
+\end{equation}
+Let
+\[
+\operatorname{Alt}K(\alpha_1,\ldots,\alpha_n)
+ =\sum_{\sigma\in S_n}
+   \operatorname{sgn}(\sigma)\epsilon(\sigma;p)
+   K(\alpha_{\sigma(1)},\ldots,\alpha_{\sigma(n)}).
+\]
+The maps are
+\begin{equation}
+\boxed{
+\begin{aligned}
+&F_{n,N,L}(\alpha_1,\ldots,\alpha_n)\\
+&\qquad={}
+(-1)^{p_1+\cdots+p_n+1}
+u\,\operatorname{Alt}K_{n,N,L}(\alpha_1,\ldots,\alpha_n).
+\end{aligned}
+}
+\label{eq:hj-46}
+\end{equation}
+They have degree \(1-n\). There is no omitted wheel term: its polarized value vanishes by \eqref{eq:hj-37}.
+Indeed, if the two remaining matter forms have degrees
+$q_\beta,q_\gamma$, the integral requires
+\[
+q_\beta+q_\gamma+\sum_i p_i+(n-1)=2n.
+\]
+The observable degree is $1-q_\beta-q_\gamma=\sum_i p_i-n$.
+The shift by $u$ gives the asserted map degree.
+Here $\epsilon(\sigma;p)$ is the Koszul sign for the input degrees
+$p_i$, and the displayed antisymmetrization has no factorial divisor.
+
+The pullback from formal Hamiltonian currents is explicitly
+\begin{equation}
+F_{n,N,L}^+
+   =F_{n,N,L}\circ q_N^{\otimes n}.
+\label{eq:hj-47}
+\end{equation}
+
+For a graded space $W$, use $S^c(W)=\bigoplus_{m\geq0}S^m(W)$.
+Multiplication satisfies $xy=(-1)^{|x||y|}yx$.
+The coaugmentation is $1$, the counit projects to length zero,
+and the coproduct sums over all two-block unshuffles:
+\[
+\Delta(x_1\cdots x_n)=
+\sum_{i=0}^n\sum_{\sigma\in\operatorname{Sh}(i,n-i)}
+\epsilon_s(\sigma)
+(x_{\sigma(1)}\cdots x_{\sigma(i)})
+\otimes(x_{\sigma(i+1)}\cdots x_{\sigma(n)}).
+\]
+An unshuffle preserves the order inside each block, and
+$\epsilon_s$ is the Koszul sign for the shifted degrees.
+The two empty-block terms give the counit identities.
+Splitting into three blocks proves coassociativity.
+
+Set $x_i=s\alpha_i$, with $|x_i|=p_i-1$.
+On $S^c(\mathfrak a_N[1])$, put
+\begin{equation}
+q_1(s\alpha)=s(d\alpha),\qquad
+q_2(s\alpha\,s\eta)=(-1)^{|\alpha|}s[\alpha,\eta].
+\label{eq:hj-48}
+\end{equation}
+Extend them by the signed unshuffle coderivation formulas. Jacobi and the differential derivation identity give \(q^2=0\).
+Explicitly, a component $q_j$ contributes
+\[
+\sum_{\sigma\in\operatorname{Sh}(j,n-j)}\epsilon_s(\sigma)
+q_j(x_{\sigma(1)}\cdots x_{\sigma(j)})
+x_{\sigma(j+1)}\cdots x_{\sigma(n)}
+\]
+on a length-$n$ word, and $q(1)=0$ on the empty word.
+The binary cancellation is the differential derivation identity;
+the ternary cancellation is Jacobi. These are the only nonzero
+corestrictions of $q^2$, so
+Lemma~\ref{lem:aac-symmetric-coderivations} gives the full square-zero identity.
+The convention in \eqref{eq:hj-48} uses $+sd$ as its unary component.
+
+Identify \(s'(uF)=F\) on the target suspension. Its operations are
+\begin{equation}
+q'_1(F)=-(Q+\hbar\Delta_L)F,\qquad
+q'_2(F,G)=(-1)^{|F|+1}\{F,G\}_L.
+\label{eq:hj-49}
+\end{equation}
+The BV identities give \((q')^2=0\).
+
+Set
+\begin{equation}
+f_{n,N,L}(s\alpha_1\cdots s\alpha_n)
+ =
+(-1)^{\sum_i(n-i)p_i}s'F_{n,N,L}(\alpha_1,\ldots,\alpha_n).
+\label{eq:hj-50}
+\end{equation}
+These maps have degree zero and are graded symmetric.
+The sign can be checked directly from an ordered background coefficient.
+Put
+\[
+B_n(p)=\sum_i(n-i)p_i,\qquad
+E_n(p)=\sum_{i<j}(p_i-1)(p_j-1),\qquad
+\delta_n(p)=B_n(p)+E_n(p).
+\]
+Moving the formal parameters to the left of the ordered path gives
+\[
+M_n(p)=n\sum_i(1-p_i)+\sum_{i<j}p_i(1-p_j).
+\]
+The identity
+\[
+\frac{(n-1)(n-2)}2+M_n(p)+\delta_n(p)
+\equiv\sum_i p_i+1\pmod2
+\]
+gives \eqref{eq:hj-46}. Interchanging adjacent degrees $p,q$
+contributes $(-1)^{1+pq}$, which gives its graded antisymmetry.
+The graded-dual product convention adds $(-1)^{E_n(p)}$ on evaluation,
+so \eqref{eq:hj-50} is precisely
+\[
+f_n(x_1\cdots x_n)=(-1)^{E_n(p)}
+[t_1\cdots t_n]T_{n,N}^L\left(\sum_i t_i\alpha_i\right).
+\]
+
+Their full coalgebra map is
+\begin{equation}
+\begin{aligned}
+\mathbf f(x_1\cdots x_n)
+={}&
+\sum_{k=1}^n\frac1{k!}
+\sum_{\substack{n_1+\cdots+n_k=n\\n_j\geq1}}
+\sum_{\sigma\in\operatorname{Sh}(n_1,\ldots,n_k)}
+\epsilon_s(\sigma)\\
+&\qquad\cdot
+f_{n_1}(x_{\sigma(1)},\ldots)\cdots
+f_{n_k}(\ldots,x_{\sigma(n)}),
+\end{aligned}
+\label{eq:hj-51}
+\end{equation}
+with \(\mathbf f(1)=1\). This finite formula is well-defined on each input arity.
+The successive arguments of the factor $f_{n_j}$ are exactly the
+$j$th unshuffle block. The factor $1/k!$ removes the ordering of
+the $k$ output blocks, with their graded symmetric signs.
+
+Polarizing \eqref{eq:hj-41}, with the ghost-first rule \eqref{eq:hj-30}, gives
+\begin{equation}
+q'\mathbf f=\mathbf f q.
+\label{eq:hj-52}
+\end{equation}
+More explicitly, the arity-\(n\) identity is
+\begin{equation}
+\begin{aligned}
+q'_1f_n(x_1,\ldots,x_n)
+&+\frac12\sum_{i+j=n}
+ \sum_{\sigma\in\operatorname{Sh}(i,j)}
+ \epsilon_s(\sigma)
+ q'_2\bigl(f_i(x_{\sigma(1)},\ldots),
+           f_j(\ldots,x_{\sigma(n)})\bigr)\\
+&=\sum_{k=1}^n
+ (-1)^{|x_1|+\cdots+|x_{k-1}|}
+ f_n(x_1,\ldots,q_1x_k,\ldots,x_n)\\
+&\quad+\sum_{\sigma\in\operatorname{Sh}(2,n-2)}
+ \epsilon_s(\sigma)
+ f_{n-1}\bigl(q_2(x_{\sigma(1)},x_{\sigma(2)}),
+                   x_{\sigma(3)},\ldots,x_{\sigma(n)}\bigr).
+\end{aligned}
+\label{eq:hj-53}
+\end{equation}
+The binary target sum uses $i,j\geq1$.
+The final source sum is absent when $n=1$.
+
+For completeness, the passage from \eqref{eq:hj-41} to these signs
+can be tested on a homogeneous suspended word $v$ of degree $r$.
+Let $h_J(v)$ denote graded-dual evaluation of an interaction $J$,
+including the product sign just specified. For $D_L=Q+\hbar\Delta_L$,
+\[
+h_{D_LJ}(v)=(-1)^rD_Lh_J(v),\qquad
+h_{d_{\mathrm{CE}}J}(v)=(-1)^rh_J(qv).
+\]
+The first sign is the coefficient tensor differential sign.
+The second follows from
+$(d_{\mathrm{CE}}\phi)(v)=-(-1)^{|\phi|}\phi(qv)$.
+For coefficients placed before observables, the bracket is
+\[
+\{\phi F,\psi G\}_L
+=(-1)^{(|F|+1)|\psi|}\phi\psi\{F,G\}_L.
+\]
+For a split of degrees $r_1,r_2$, the extension sign and the
+dual-product sign multiply to $(-1)^{r_2}$.
+Consequently, if
+$\mathcal R=(D_L+d_{\mathrm{CE}})J+\tfrac12\{J,J\}_L$, then
+\[
+(q'\mathbf f-\mathbf f q)_{\mathrm{corestr}}(v)
+ =(-1)^{r+1}h_{\mathcal R}(v).
+\]
+Equation~\eqref{eq:hj-41} sets the right side to zero.
+
+Expanding \eqref{eq:hj-51} by partitions proves its coalgebra identity.
+Both $q'\mathbf f$ and $\mathbf f q$ are coderivations along
+$\mathbf f$. Their difference is determined by its projection to
+the cogenerators: induction on input arity reduces the difference
+to a primitive element. In characteristic zero, the only primitives
+of $S^c(W)$ are $W$. Indeed, multiplication composed with the component
+\[
+S^n(W)\longrightarrow W\otimes S^{n-1}(W)
+\]
+of the reduced coproduct is \(n\) times the identity. Thus vanishing of the cogenerator projection proves \eqref{eq:hj-52} in every arity.
+For $n\geq2$ this kills a primitive's length-$n$ component.
+A primitive scalar $\lambda1$ must satisfy $\lambda=2\lambda$
+and therefore vanishes as well. The induction begins at the empty
+word, which both coderivations kill.
+
+Equations \eqref{eq:hj-46}--\eqref{eq:hj-53} give the actual quantum \(L_\infty\) morphism from each finite source, and its pullback from \eqref{eq:hj-27} or \eqref{eq:hj-29}.
+Nontriviality is already visible in the $H_1$ block at every $N$:
+$\rho_N(e)y=x$. Choose a compact $(0,2)$ source form whose integral
+against $\Omega$ is nonzero, and smooth matter coefficients selecting
+$\beta_x$ and $\gamma_y$. Its linear current is nonzero.
+The fixed-support continuity follows from \eqref{eq:hj-34} and its
+finite polarization. This completes the construction.
+\end{proof}
+
+\section{What a matter projection fails to preserve}
+
+The quotient modules form a compatible representation system.
+A current theory also pairs a matter module with its dual.
+The variance of that dual, and the survival of scalar contractions,
+must therefore be checked before taking a quantum limit.
+The maps
+\begin{equation}
+\pi_{N+1,N}:\mathfrak g_{N+1}\to\mathfrak g_N,
+\qquad
+p_{N+1,N}:V_{N+1}\to V_N
+\label{eq:hj-54}
+\end{equation}
+are the quotient projections. They satisfy
+\begin{equation}
+p_{N+1,N}\rho_{N+1}(f)
+ =\rho_N(\pi_{N+1,N}f)\,p_{N+1,N}.
+\label{eq:hj-55}
+\end{equation}
+This follows directly by taking the same Poisson bracket before either quotient.
+
+The module projection has no \(H_+\)-equivariant section. Suppose \(s\) were such a section. Then
+\[
+s(y)=y+w,\qquad w\in H_{N+1}.
+\]
+Take \(f=x^{N+2}\). It acts trivially on \(V_N\), but
+\[
+\rho_{N+1}(f)s(y)
+ =(N+2)x^{N+1}\ne0.
+\]
+The bracket with \(w\) has degree \(2N+1\), hence vanishes modulo \(\mathfrak m^{N+2}\). This contradicts equivariance.
+
+The canonical dual map is
+\begin{equation}
+p_{N+1,N}^\vee:V_N^\vee\hookrightarrow V_{N+1}^\vee,
+\label{eq:hj-56}
+\end{equation}
+in the opposite direction. There is no automatic paired matter projection supplied by \eqref{eq:hj-55}.
+
+Using the homogeneous splitting, one can nevertheless delete every \(\beta\)- and \(\gamma\)-coordinate of internal degree \(N+1\). Call this observable restriction \(r_N\). It commutes with \(Q\), but it does not preserve BV contractions.
+
+Choose a removed pair of internal dual basis vectors. Choose compact linear observables \(b,g\) in paired form components for which the positive-scale heat contraction is nonzero. Such choices exist because the heat kernel and internal evaluation pairing are nonzero. Normalize them so that
+\[
+\{b,g\}_L=1.
+\]
+Then
+\[
+r_N(b)=r_N(g)=0,\qquad r_N(1)=1,
+\]
+and therefore
+\begin{equation}
+r_N\{b,g\}_L=1
+ \ne \{r_Nb,r_Ng\}_L.
+\label{eq:hj-57}
+\end{equation}
+Thus deletion is not a morphism of the ambient BV algebras or their shifted Lie algebras.
+
+The opposite inclusion of lower modes preserves the free contractions, but does not intertwine the current maps. Already for \(N=1\to2\),
+\begin{equation}
+\rho_1(x^3)=0,\qquad
+J_2(\alpha x^3)
+ =3\int_X\beta_{x^2}\,\alpha\,\gamma_y\,\Omega,
+\label{eq:hj-58}
+\end{equation}
+which is generally nonzero.
+
+These are concrete failures of the canonical ambient transition maps. They do not rule out every possible construction involving additional fields, homotopies, or integration over discarded modes.
+
+\section{An inverse system of current Lie algebras}
+
+The currents retain a property absent from the discarded linear pair:
+their mixed quadratic kernels never lower internal degree.
+This bounds every intermediate degree in a single-contraction bracket,
+and permits a smaller inverse system despite \eqref{eq:hj-57}.
+
+At fixed \(N,L\), consider mixed quadratic observables
+\[
+F=\sum_{a,b}\beta_a\,K_{ab}\,\gamma_b,
+\]
+where \(K_{ab}\) denotes a compact spatial distribution kernel, including its form and density labels. Call such a kernel degree-nondecreasing when
+\begin{equation}
+K_{ab}=0\quad\text{if }d(a)<d(b).
+\label{eq:hj-59}
+\end{equation}
+Here $a$ is an output monomial label, $b$ an input monomial label,
+and $d(a),d(b)$ are their positive total degrees in the internal variables.
+Every tree kernel \eqref{eq:hj-45} has this property, by \eqref{eq:hj-6}.
+
+The bracket of two mixed quadratic observables is again mixed quadratic. It contracts one \(\beta\)-slot with one \(\gamma\)-slot. Its internal matrix terms are compositions, with the smooth heat kernel inserted between their spatial slots.
+
+For a matrix coefficient with low input degree \(b\) and low output degree \(a\), a nonzero intermediate degree \(c\) must satisfy
+\begin{equation}
+d(b)\leq d(c)\leq d(a).
+\label{eq:hj-60}
+\end{equation}
+Hence, when \(d(a),d(b)\leq N\), every intermediate degree is already at most \(N\). Deleting higher modes therefore preserves the bracket on degree-nondecreasing mixed quadratics:
+\begin{equation}
+r_N\{F,G\}_L=\{r_NF,r_NG\}_L.
+\label{eq:hj-61}
+\end{equation}
+The graded signs are unchanged, since deletion does not reorder any surviving slot. The same argument proves closure of condition \eqref{eq:hj-59} under the bracket. Spatial differentiation also preserves it.
+
+Define \(S_{N,L}^0\) to be the smallest graded Lie subspace of
+\(\mathcal O_{\mathrm{dist},N}[-1]\) which:
+
+\begin{enumerate}
+\item contains every value of every map \(F_{n,N,L}\);
+\item is preserved by \(uF\mapsto-uQF\).
+\end{enumerate}
+
+Every element is a degree-nondecreasing mixed quadratic. Equation \eqref{eq:hj-42} kills the BV Laplacian on the generators. The identities
+\[
+Q\Delta_L+\Delta_LQ=0
+\]
+and the BV derivation identity for \(\Delta_L\) acting on the odd bracket then give
+\begin{equation}
+\Delta_LF=0\qquad(uF\in S_{N,L}^0).
+\label{eq:hj-62}
+\end{equation}
+Therefore
+\begin{equation}
+S_{N,L}=S_{N,L}^0[[\hbar]]
+\label{eq:hj-63}
+\end{equation}
+is a differential graded Lie subalgebra of the quantum target \eqref{eq:hj-44}. Its differential is simply \(-uQ\), because its \(\Delta_L\) term vanishes.
+
+\begin{theorem}\label{thm:hj-current-limit}
+Restriction to internal degrees at most $N$ gives surjective
+differential graded Lie maps $S_{N+1,L}\to S_{N,L}$.
+The current components are compatible with these maps and the
+source quotient maps. They define the $L_\infty$ morphism
+\eqref{eq:hj-68} into the algebraic inverse limit.
+\end{theorem}
+\begin{proof}
+For compatible source inputs, deleting higher modes in \eqref{eq:hj-45} gives exactly
+\begin{equation}
+r_NF_{n,N+1,L}(\alpha_1,\ldots,\alpha_n)
+ =
+F_{n,N,L}(\pi_{N+1,N}\alpha_1,\ldots,
+                        \pi_{N+1,N}\alpha_n).
+\label{eq:hj-64}
+\end{equation}
+Indeed, low matrix coefficients of the product use only low intermediate degrees by \eqref{eq:hj-60}. The scalar propagators and integration domains are identical.
+
+Equations \eqref{eq:hj-61}, \eqref{eq:hj-62}, and commutation with \(Q\) now prove that
+\begin{equation}
+\boxed{
+r_N:S_{N+1,L}\longrightarrow S_{N,L}
+}
+\label{eq:hj-65}
+\end{equation}
+is a differential graded Lie map.
+
+It is surjective. The source projection \(\mathfrak a_{N+1}\to\mathfrak a_N\) is surjective: lift each finite-dimensional coefficient by its homogeneous polynomial representative. Thus every generating current at level \(N\) lifts through \eqref{eq:hj-64}. Lift a finite expression in generators, their differentials, and their brackets by lifting its generators. Formal \(\hbar\)-series lift coefficientwise.
+
+Consequently,
+\begin{equation}
+S_{\infty,L}=\varprojlim_NS_{N,L}
+\label{eq:hj-66}
+\end{equation}
+is a well-defined differential graded Lie algebra. Its operations are coordinatewise. No additional completeness of the generated distribution subspaces is asserted.
+This is an algebraic inverse limit, with formal $\hbar$ coefficients
+treated coefficientwise. Its projective topology is specified by the
+finite-level distribution coordinates. The analytic estimates remain
+the fixed-compact-support estimates at each finite level.
+They do not assert unrestricted global joint continuity, completeness
+of $S_{N,L}^0$, or one compact kernel on an infinite-dimensional
+matter space.
+
+For \(\alpha_i=(\alpha_{i,N})_N\in\mathfrak a_+\), define
+\begin{equation}
+\boxed{
+F_{n,\infty,L}(\alpha_1,\ldots,\alpha_n)
+ =
+\bigl(F_{n,N,L}(\alpha_{1,N},\ldots,\alpha_{n,N})\bigr)_N.
+}
+\label{eq:hj-67}
+\end{equation}
+Compatibility follows from \eqref{eq:hj-64}. Every all-arity identity holds after every coordinate projection, hence holds in the inverse limit. Thus \eqref{eq:hj-67} is an actual \(L_\infty\) morphism
+\begin{equation}
+\mathfrak a_+\longrightarrow S_{\infty,L}.
+\label{eq:hj-68}
+\end{equation}
+\end{proof}
+
+This inverse system preserves the differential, the single-contraction BV
+bracket, the vanishing BV Laplacian on the current Lie space, and every
+current component. Products can leave that Lie space. To retain them,
+we next form the algebra generated by its actual distribution kernels
+and check the BV identities there. The full ambient counterexample
+\eqref{eq:hj-57} remains a separate restriction.
+
+\input{manuscript/current-products-and-bv.tex}
+
+\section{Compatible currents and incompatible traces}
+
+The following data are exactly compatible as \(N\) increases:
+
+\begin{itemize}
+\item the Lie quotients \(\mathfrak g_N\);
+\item the module projections \(V_{N+1}\to V_N\);
+\item every fixed low matrix coefficient of an action word;
+\item the tree current components under deletion;
+\item the zero symmetric cubic tensor and zero complete wheel corrections;
+\item the current Lie subalgebras and morphism \eqref{eq:hj-68};
+\item the actual generated BV algebras and current map \eqref{eq:hj-bv-current-map}.
+\end{itemize}
+
+The ordinary finite-dimensional traces are not compatible. For instance,
+\[
+\operatorname{Tr}_{V_{N+1}}I
+ -\operatorname{Tr}_{V_N}I=N+2,
+\]
+and
+\begin{equation}
+\operatorname{Tr}_{V_{N+1}}h^2
+ -\operatorname{Tr}_{V_N}h^2
+ =\frac{(N+1)(N+2)(N+3)}3.
+\label{eq:hj-69}
+\end{equation}
+Equations \eqref{eq:hj-19} and \eqref{eq:hj-21} grow respectively as \(N^4/12\) and \(N^6/30\).
+
+Therefore no scalar trace on the inverse system can both assign a single value to a compatible operator and equal its ordinary trace at every finite stage. The identity alone proves this obstruction.
+
+The current BV limit preserves its prescribed algebra operations.
+Complete scalar wheels vanish, while pair contractions can act
+nontrivially on products, as \eqref{eq:hj-bv-nonzero-product} shows.
+It does not identify all ordinary finite-dimensional matrix traces.
+
+Likewise, the growth of \(\operatorname{Tr}(h^4)\) does not prove divergence of the complete four-wheel: that wheel is zero by \eqref{eq:hj-37}. A nonzero ordered color coefficient is not a complete physical graph sum. No physical quantum limit is inferred from the moment calculation alone.
+
+\section{Translations and geometric jet prolongation}
+
+The current inverse limit preserves origin-fixing internal symmetries.
+Two separate comparisons remain: adding internal translations, and
+allowing a Hamiltonian to move the spatial insertion point.
+The full translation-containing algebra
+\[
+H=\mathbb C[[x,y]]/\mathbb C
+\]
+does not act on \(V_N\) by the quotient formula \eqref{eq:hj-2}. Indeed,
+\[
+\{x,y^{N+1}\}=(N+1)y^N
+\]
+shows that its translations do not preserve \(\mathfrak m^{N+1}\).
+
+Deleting the linear Hamiltonian terms before applying \(\rho_N\) also fails to define a Lie algebra action. This projection is not a Lie algebra map:
+\[
+\{x,y^3\}=3y^2
+\]
+has a nonzero quadratic projection, while the projected first input is zero.
+
+More generally, every continuous finite-dimensional representation of \(H\) is zero. Its kernel is an open ideal. An open ideal containing \(\mathfrak m^M\) contains
+\[
+I_y^Mf
+ =\sum_{a+b\geq1}\frac{b!}{(b+M)!}
+     f_{ab}x^ay^{b+M},
+\]
+and repeated brackets with \(x\) give
+\[
+(\operatorname{ad}_x)^MI_y^Mf=f.
+\]
+Thus the ideal is all of \(H\). If the finite-dimensional target uses its usual complex topology, continuity still yields an open kernel: an open linear subspace mapped into a bounded ball must map to zero.
+
+The nontrivial jet representations therefore have no continuous extension to the full \(H\). The full operator trace obstructions remain separate and unchanged.
+
+There is also a geometric distinction. The preceding quantum theory treats \(x,y\) as internal formal variables and \(z_1,z_2\) as spatial coordinates. Its matrix symmetry acts on matter without differentiating its spatial argument.
+
+An explicit comparison with geometric Hamiltonian action requires jet prolongation. For actual holomorphic functions \(F,g\) on a spatial domain \(U\subset\mathbb C^2_z\), introduce internal jet variables \(\xi_1,\xi_2\) and put
+\[
+j_N^+g(z,\xi)
+ =\sum_{1\leq|\alpha|\leq N}
+      \frac{\partial_z^\alpha g(z)}{\alpha!}\xi^\alpha,
+\]
+\[
+F_z^{\geq2}(\xi)
+ =\sum_{2\leq|\alpha|\leq N+1}
+      \frac{\partial_z^\alpha F(z)}{\alpha!}\xi^\alpha.
+\]
+Let
+\[
+H_F(z)=-F_{z_2}(z)\partial_{z_1}
+                   +F_{z_1}(z)\partial_{z_2}.
+\]
+Taylor expansion and the product rule give the exact identity
+\begin{equation}
+\boxed{
+j_N^+(H_Fg)
+ =
+H_F(z)\cdot\partial_z j_N^+g
+ +\rho_N(F_z^{\geq2})j_N^+g.
+}
+\label{eq:hj-70}
+\end{equation}
+To verify it, write the full Taylor series \(Jg(z,\xi)\). Then
+\[
+J(H_Fg)=\{JF,Jg\}_\xi.
+\]
+Split \(JF\) into constant, linear, and degree-at-least-two terms. The constant contributes nothing. The linear term acts by
+\(H_F(z)\cdot\partial_\xi Jg
+ =H_F(z)\cdot\partial_zJg\).
+Remove the constant output and truncate to degree \(N\). This is \eqref{eq:hj-70}.
+
+Thus the geometric prolonged action is
+\begin{equation}
+\widetilde H_{F,N}
+ =H_F(z)\cdot\partial_z+\rho_N(F_z^{\geq2}),
+\label{eq:hj-71}
+\end{equation}
+not merely its matrix term. At a fixed point where \(dF=0\), the spatial vector field term vanishes on that fiber, recovering the origin-preserving jet module.
+For example, take $F=z_1$, $g=z_2^2$, and $N=1$.
+Then $F_z^{\geq2}=0$ and $j_1^+g=2z_2\xi_2$, whereas
+\[
+j_1^+(H_Fg)=2\xi_2
+ =\partial_{z_2}(2z_2\xi_2).
+\]
+The matrix term is zero and the transport term supplies the entire action.
+
+Arbitrary formal power series need not define holomorphic functions at moving spatial points. Equation \eqref{eq:hj-70} therefore assumes actual holomorphic functions, or a separately specified formal geometric setting.
+
+A native geometric quantum-current comparison must construct the theory for the first-order spatial operators \eqref{eq:hj-71}, respect the relation defining holonomic jets, and compare its contractions with the matrix theory. The finite-dimensional internal current theorem does not supply those maps.
+
+The next geometric construction must therefore retain both terms of
+\eqref{eq:hj-71}. Its observable differential and contractions must
+intertwine the holonomic jet map \eqref{eq:hj-70}; a matrix substitution
+alone cannot provide that comparison.

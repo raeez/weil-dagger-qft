@@ -1,0 +1,22 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+GFBJFJ+EBGaramond-Regular            Type 1            Custom           yes yes yes     13  0
+GFBJFJ+EBGaramond-Regular            Type 1            Custom           yes yes yes     20  0
+GNFLSZ+ebgMI                         Type 1            Builtin          yes yes yes     21  0
+XJRDKX+txsys                         Type 1            Builtin          yes yes yes     22  0
+FDWCFG+NewTXMI                       Type 1            Builtin          yes yes yes     23  0
+LSOCZR+EBGaramond-Italic             Type 1            Custom           yes yes yes     24  0
+WGFJRT+txmiaX                        Type 1            Builtin          yes yes yes     25  0
+VHFWXP+txexs                         Type 1            Builtin          yes yes yes     26  0
+ARXNIO+txmiaSTbb                     Type 1            Builtin          yes yes yes     27  0
+FGYXPR+ebgMRM                        Type 1            Builtin          yes yes yes     44  0
+YTPBNT+EBGaramond-SemiBold           Type 1            Custom           yes yes yes     99  0
+EZRMTT+MSBM10                        Type 1            Builtin          yes yes yes    622  0
+SLHJES+txsyc                         Type 1            Builtin          yes yes yes    629  0
+LJGUUV+EBGaramond-Bold               Type 1            Custom           yes yes yes    754  0
+CZRBLR+STIXGeneral-Regular           CID TrueType      Identity-H       yes yes yes   1466  0
+FTXWZA+STIXGeneral-Italic            CID TrueType      Identity-H       yes yes yes   1467  0
+PZZXTK+SourceSansPro-Regular         Type 1            Custom           yes yes yes   1818  0
+PUPXFK+MSAM10                        Type 1            Builtin          yes yes yes   1840  0
+EWFCLP+rsfs10                        Type 1            Builtin          yes yes yes   1848  0
+GFBJFJ+EBGaramond-Regular            Type 1            Custom           yes yes yes   2809  0

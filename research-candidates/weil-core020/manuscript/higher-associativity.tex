@@ -1,0 +1,2730 @@
+\chapter{Higher associativity and formality}
+\label{chap:higher-associativity}
+
+The relation $t^r=2uz$ holds in the cohomology of the central algebra.
+We ask whether this differential graded algebra can be connected to
+its cohomology by a finite zigzag of multiplicative quasi-isomorphisms.
+A six-input operation will exclude such a zigzag for every $r\geq2$.
+
+Let $k$ be a field of characteristic different from two, and let $r\geq1$ be an integer.
+All tensor products in this chapter are over $k$, unless a coefficient
+ring is displayed. Every element of a direct sum has finitely many
+nonzero components.
+
+Define the unital associative differential graded
+algebra
+\[
+ C_r=k[t]\langle\tau\rangle[z]/(z^2),\qquad
+ |t|=0,\quad |\tau|=-1,\quad |z|=2,
+ \qquad D\tau=t^r-2\tau^2z,\quad Dt=Dz=0.
+\]
+The elements $t,z$ commute with every element. The differential has
+degree one and obeys $D(ab)=(Da)b+(-1)^{|a|}aDb$.
+
+Put $u=\tau^2$, so $|u|=-2$. Since $D\tau$ commutes with $\tau$,
+\[
+ Du=(D\tau)\tau-\tau D\tau=0.
+\]
+It follows that $D^2\tau=0$. The differential also preserves the
+relations involving $t,z$, so these formulas define $C_r$.
+
+A quasi-isomorphism is a degree-preserving algebra map that commutes
+with differentials and induces an isomorphism on cohomology.
+Formality over a coefficient ring means a finite zigzag of unital
+quasi-isomorphisms to cohomology with zero differential. Every arrow
+preserves the specified coefficient action. Formality over $k$ therefore
+allows the images of $t,u,z$ to change.
+
+\section{Normal forms and the first multiplication defect}
+\label{sec:ha-normal-forms}
+
+For $r=2$, the scalar $t^4$ has the primitive
+\[
+ w=\tau(t^2+2uz),\qquad Dw=t^4.
+\]
+Its square is also a boundary:
+\[
+ w^2=u(t^4+4t^2uz)
+     =D\bigl(\tau u(t^2+6uz)\bigr).
+\]
+Thus $[w^2]=0$, so the square of this primitive gives no obstruction to formality.
+The remaining question concerns compatible primitives for all
+multiplication defects.
+
+To choose primitives for all boundaries by a linear map, put
+\[
+ B=k[u,z]/(z^2),\qquad S=B[t],\qquad f=t^r-2uz.
+\]
+All elements of $S$ have even degree. Separating even and odd powers
+of $\tau$ gives
+\begin{equation}\label{eq:ha-two-summands}
+ C_r=S\oplus\tau S,\qquad D(a+\tau b)=fb.
+\end{equation}
+
+The polynomial $f$ is monic, meaning that its leading coefficient is one.
+Multiplication by $f$ is injective on $S$. Indeed, a nonzero polynomial
+multiplied by the monic polynomial $f$ retains a nonzero leading
+coefficient. This remains valid for coefficients in $B$, where $z^2=0$.
+Consequently
+\[
+ H:=H^*(C_r)=k[u,t,z]/(t^r-2uz,z^2),
+ \qquad H^{\mathrm{odd}}=0.
+\]
+
+Division by $f$ can be performed without dividing any coefficient in
+$B$. If a polynomial has leading term $a_dt^d$ with $d\geq r$,
+subtract $a_dt^{d-r}f$. The leading terms cancel, so the degree
+strictly decreases. Repeat until the remaining polynomial has degree
+less than $r$, or is zero. The degrees are nonnegative integers,
+so this process terminates.
+
+Adding the subtracted multiples gives a decomposition
+\[
+ a=fq+v,\qquad q,v\in B[t],\qquad
+ v=0\ \text{or}\ \deg_t v<r.
+\]
+Suppose $a=fq'+v'$ is another such decomposition.
+Then $f(q-q')=v'-v$. If $q-q'$ were nonzero, the left-hand side
+would have degree at least $r$, by the leading-coefficient argument.
+The right-hand side has degree less than $r$ or is zero.
+Thus $q=q'$ and $v=v'$.
+
+Adding two decompositions, or multiplying one by an element of $B$,
+preserves the bound on the remainder's degree. Uniqueness therefore
+makes both the quotient and remainder maps $B$-linear.
+Since $f$ has cohomological degree zero, division also preserves that
+grading. Only the leading coefficient one was used, so the same
+construction applies to any monic polynomial over a commutative ring.
+
+Every element of $H$ consequently has a unique representative of
+$t$-degree less than $r$. Let $i:H\to S$ select it.
+Let $p:C_r\to H$ take the class of the even component and kill the odd
+component. These are degree-zero maps of complexes, and $pi=1_H$.
+
+Define the degree-minus-one map
+\[
+ h(a)=\tau\frac{a-ip(a)}{f}\quad(a\in S),\qquad h(\tau a)=0.
+\]
+The numerator is divisible by $f$. On $S$, the equality $Dh=1-ip$
+is its defining division identity. On $\tau S$, one has
+$hD(\tau a)=h(fa)=\tau a$. Hence
+\begin{equation}\label{eq:ha-contraction}
+ Dh+hD=1-ip,\qquad h^2=hi=ph=0.
+\end{equation}
+
+Such maps are called a contraction onto cohomology. They choose
+representatives and a primitive for the part removed by projection.
+The linearity of division makes $i$ and $h$ $B$-linear, since
+$\tau$ commutes with $B$. The quotient map $p$ is also $B$-linear.
+
+The representative map $i$ generally fails to preserve products.
+Its failure has the unique expression
+\begin{equation}\label{eq:ha-F-definition}
+ i(a)i(b)-i(ab)=f\,iF(a,b),
+ \qquad F:H\otimes H\longrightarrow H.
+\end{equation}
+The quotient has $t$-degree less than $r$, because the product has
+$t$-degree at most $2r-2$. Thus $F$ is defined without another choice.
+It is $B$-bilinear and has degree zero.
+
+For $r=2$, one has $H=B\oplus Bt$ and
+\[
+ F(bt,ct)=bc,\qquad F(B,H)=F(H,B)=0.
+\]
+In particular, $i(t)^2-i(t^2)=t^2-2uz=D\tau$.
+Define the degree-minus-one map
+\[
+ f_2:H\otimes H\longrightarrow C_r,\qquad
+ f_2(a,b)=-\tau iF(a,b).
+\]
+Then
+\[
+ Df_2(a,b)=i(ab)-i(a)i(b).
+\]
+For three inputs, the two product homotopies differ by
+\[
+ \begin{split}
+ T(a,b,c)={}&i(a)f_2(b,c)-f_2(ab,c)\\
+ &+f_2(a,bc)-f_2(a,b)i(c).
+ \end{split}
+\]
+
+The displayed differential identity and the Leibniz rule give
+\[
+ \begin{split}
+ DT={}&i(a)\bigl(i(bc)-i(b)i(c)\bigr)
+       -\bigl(i(abc)-i(ab)i(c)\bigr)\\
+ &+\bigl(i(abc)-i(a)i(bc)\bigr)
+       -\bigl(i(ab)-i(a)i(b)\bigr)i(c)=0.
+ \end{split}
+\]
+Equating the two homotopies requires a degree-minus-two map
+$f_3:H^{\otimes3}\to C_r$ satisfying $Df_3=-T$.
+Here $T$ lies in $\tau S$, where $D$ is injective, so $T=0$
+and $f_3=0$ is a possible choice.
+At four inputs, the comparison also contains
+$f_2(a,b)f_2(c,d)$.
+For $r=2$, its value on $(t,t,t,t)$ is $\tau^2=u$.
+
+\section{Encoding multiplication and its successive homotopies}
+\label{sec:ha-coalgebra}
+
+An $n$-input map has arity $n$.
+A tensor coalgebra records these compatibility equations together
+with their signs. A degree shift makes each operation have degree one.
+
+For a graded vector space $V$, define $sV$ by $(sV)^j=V^{j+1}$.
+The map $s:V\to sV$ has degree $-1$, so $|sx|=|x|-1$.
+The tensor convention for homogeneous maps is
+\[
+ (F\otimes G)(x\otimes y)=(-1)^{|G||x|}F(x)\otimes G(y).
+\]
+In particular,
+\[
+ s^{\otimes n}(x_1\otimes\cdots\otimes x_n)
+ =(-1)^{\sum_{j=1}^n(n-j)|x_j|}
+ sx_1\otimes\cdots\otimes sx_n.
+\]
+
+The tensor coalgebra is the vector space
+\[
+ T^c(sV)=\bigoplus_{n\geq1}(sV)^{\otimes n}
+\]
+with coproduct given by cutting a word into two nonempty consecutive
+pieces. There is no length-zero summand or counit:
+\[
+ \Delta(v_1\otimes\cdots\otimes v_n)
+ =\sum_{j=1}^{n-1}(v_1\otimes\cdots\otimes v_j)
+        \otimes(v_{j+1}\otimes\cdots\otimes v_n).
+\]
+Cutting twice gives every decomposition into three pieces once in
+either order. This is the coassociativity identity
+$(\Delta\otimes1)\Delta=(1\otimes\Delta)\Delta$.
+Let $\pi:T^c(sV)\to sV$ project to words of length one.
+Composing a map with $\pi$ is called corestriction.
+
+An element is primitive if its coproduct is zero.
+Every word of length one is primitive.
+For $n\geq2$, project the coproduct of a length-$n$ component
+to $sV\otimes(sV)^{\otimes(n-1)}$.
+This gives the original component, with its first factor separated.
+Thus a primitive element has zero component in every length greater
+than one, and
+\begin{equation}\label{eq:ha-primitives}
+ \ker\bigl(\Delta:T^c(sV)\to T^c(sV)\otimes T^c(sV)\bigr)=sV.
+\end{equation}
+
+A coderivation of degree $d$ is a map $b$ satisfying
+$\Delta b=(b\otimes1+1\otimes b)\Delta$ with the tensor signs above.
+It is determined by its components $b_n=\pi b|_{(sV)^{\otimes n}}$.
+Their extension is
+\begin{equation}\label{eq:ha-coderivation-extension}
+ \begin{split}
+ &b(v_1\otimes\cdots\otimes v_N)\\
+ &\quad=\sum_{a+n+c=N}(-1)^{d(|v_1|+\cdots+|v_a|)}
+ v_1\otimes\cdots\otimes v_a\otimes
+ b_n(v_{a+1},\ldots,v_{a+n})\otimes
+ v_{a+n+1}\otimes\cdots\otimes v_N .
+ \end{split}
+\end{equation}
+
+Here $a,c\geq0$ and $n\geq1$.
+An output cut lies before or after the inserted factor $b_n$.
+It corresponds to an input cut before or after the interval replaced
+by $b_n$. These terms are exactly
+$(b\otimes1+1\otimes b)\Delta$, with the same prefix signs.
+This proves the coderivation identity.
+
+To prove uniqueness, suppose two coderivations have the same
+corestrictions and agree on words shorter than $n$.
+Their difference on a word of length $n$ has zero coproduct:
+the coderivation identity expresses it using only differences on
+shorter words. This difference is therefore primitive and has zero
+corestriction. Equation~\eqref{eq:ha-primitives} makes it zero.
+The same argument starts at length one, proving uniqueness by induction.
+
+A degree-zero linear map $\Phi:T^c(sV)\to T^c(sW)$ is a
+coalgebra map if it satisfies
+\[
+ \Delta_W\Phi=(\Phi\otimes\Phi)\Delta_V.
+\]
+Write $\pi_W:T^c(sW)\to sW$ for the length-one projection.
+Its components are the corestrictions
+\[
+ \Phi_n=\pi_W\Phi|_{(sV)^{\otimes n}}:(sV)^{\otimes n}\to sW.
+\]
+
+Conversely, a family of such degree-zero components defines a
+coalgebra map by summing over all consecutive partitions:
+\begin{equation}\label{eq:ha-coalgebra-map}
+ \Phi|_{(sV)^{\otimes N}}
+ =\sum_{i_1+\cdots+i_q=N}\Phi_{i_1}\otimes\cdots\otimes\Phi_{i_q}.
+\end{equation}
+All indices are positive. A cut between two output factors is a cut
+between two blocks, which proves compatibility with coproducts.
+These formulas use finitely many intervals or partitions on each word.
+
+Suppose coalgebra maps $\Phi,\Psi$ have the same components and
+agree on words shorter than $n$. For a word $w$ of length $n$,
+\[
+ \Delta_W(\Phi-\Psi)(w)
+ =\bigl((\Phi-\Psi)\otimes\Phi+
+                \Psi\otimes(\Phi-\Psi)\bigr)\Delta_V(w)=0.
+\]
+Every cut of $w$ has two shorter pieces, so each term is zero.
+The difference $(\Phi-\Psi)(w)$ is primitive with zero corestriction,
+and is therefore zero by~\eqref{eq:ha-primitives}.
+Starting at length one proves that the components determine the map.
+
+\begin{definition}\label{def:ha-ainfinity}
+An $A_\infty$-algebra on $V$ is a degree-one coderivation $b$ of
+$T^c(sV)$ satisfying $b^2=0$. Its unshifted operations $m_n$ are
+defined by
+\[
+ b_n s^{\otimes n}=s m_n,\qquad |m_n|=2-n.
+\]
+
+The structure is minimal if $m_1=0$. A morphism of these algebras
+is a coalgebra map $\Phi$ satisfying $b^W\Phi=\Phi b^V$.
+Its unshifted components $f_n$ satisfy
+\[
+ \Phi_n s^{\otimes n}=s f_n,\qquad |f_n|=1-n.
+\]
+It is a quasi-isomorphism if $f_1$ induces an isomorphism of the
+cohomology groups for $m_1$.
+No unit condition is imposed on the higher components.
+\end{definition}
+
+The degrees explain why multiplication requires a different test
+from the linear obstructions of Chapter~\ref{chap:compatible-formal-lifts}.
+For a mixed complex in that chapter, the maps
+\[
+ pB(hB)^{j-1}i:H_n\longrightarrow H_{n+2j-1},\qquad j\geq1,
+\]
+have odd chain degree $2j-1$.
+If its homology is concentrated in even degrees, these maps vanish.
+Here $m_{2j}:H^{\otimes2j}\to H$ has even cochain degree $2-2j$,
+while $m_{2j+1}$ has odd degree.
+Thus the evenness of $H$ forces the odd-arity operations to vanish
+and permits the even-arity operations.
+
+Corestricting $b^2=0$ and removing the shifts gives
+\begin{equation}\label{eq:ha-stasheff}
+ \sum_{a+j+c=n}(-1)^{a+jc}
+ m_{a+1+c}(1^{\otimes a}\otimes m_j\otimes1^{\otimes c})=0.
+\end{equation}
+
+For an explicit sign calculation, put $d_i=|x_i|$ and
+$S_n(d_1,\ldots,d_n)=\sum_i(n-i)d_i$.
+The inner coderivation contributes $\sum_{i\leq a}(d_i-1)$.
+The inserted unshifted output has degree
+$d_{a+1}+\cdots+d_{a+j}+2-j$.
+Adding the initial, inner, and outer shift exponents gives, modulo two,
+\[
+ \begin{split}
+ &S_n(d)+\sum_{i\leq a}(d_i-1)
+   +S_j(d_{a+1},\ldots,d_{a+j})\\
+ &\quad+
+ S_{a+1+c}\bigl(d_1,\ldots,d_a,
+             \textstyle\sum_{i=a+1}^{a+j}d_i+2-j,
+             d_{a+j+1},\ldots,d_n\bigr)\\
+ &\hspace{2cm}\equiv a+jc+(2-j)\sum_{i\leq a}d_i .
+ \end{split}
+\]
+
+The last term is the tensor-map sign for moving $m_j$ past the
+first $a$ inputs. This proves the sign in~\eqref{eq:ha-stasheff}.
+For $n=1,2$, this gives $m_1^2=0$ and the graded Leibniz rule.
+For a minimal structure, $n=3$ gives associativity of $m_2$.
+
+The same removal of shifts from $b^W\Phi=\Phi b^V$ gives
+\begin{equation}\label{eq:ha-morphism}
+ \begin{split}
+ &\sum_{a+j+c=n}(-1)^{a+jc}
+ f_{a+1+c}(1^{\otimes a}\otimes m_j^V\otimes1^{\otimes c})\\
+ &\hspace{1cm}=
+ \sum_{i_1+\cdots+i_q=n}
+ (-1)^{\sum_{v=1}^{q-1}(q-v)(i_v-1)}
+ m_q^W(f_{i_1}\otimes\cdots\otimes f_{i_q}).
+ \end{split}
+\end{equation}
+
+For the right-hand side, let $d_v$ be the sum of the input degrees
+in block $v$. The total shift exponent reduces to
+\[
+ \sum_{v<w}(1-i_w)d_v+
+ \sum_{v=1}^{q-1}(q-v)(i_v-1).
+\]
+The first sum is the tensor-map sign for the maps $f_{i_w}$.
+The second is therefore the remaining sign in the formula.
+
+For a differential graded algebra, only $m_1=D$ and $m_2=\mu$ occur,
+where $\mu$ is multiplication. Its shifted components are
+\[
+ b_1(sa)=sDa,\qquad b_2(sa,sb)=(-1)^{|a|}s(ab).
+\]
+Their square-zero equation states $D^2=0$, the Leibniz rule, and
+associativity. Thus every algebra and map used in a formality zigzag
+has this coalgebra description.
+
+A differential graded algebra map gives a morphism whose only
+nonzero component is $f_1$. Such a morphism is called strict.
+
+\section{Transferring the product to cohomology}
+\label{sec:ha-transfer}
+
+The contraction~\eqref{eq:ha-contraction} chooses a primitive whenever
+a product differs from its normal representative. Repeating this
+operation constructs a minimal algebra on $H$.
+
+\begin{proposition}\label{prop:ha-transfer}
+Let $\mu$ denote multiplication in $C_r$. The recursive formulas
+\begin{equation}\label{eq:ha-transfer-recursion}
+ \begin{gathered}
+ f_1=i,\qquad
+ U_n=\sum_{a+b=n}(-1)^{a-1}\mu(f_a\otimes f_b),\\
+ m_1=0,\qquad m_n=pU_n,\qquad f_n=-hU_n\quad(n\geq2)
+ \end{gathered}
+\end{equation}
+define an $A_\infty$-algebra on $H$ and a quasi-isomorphism to $C_r$.
+The operation $m_2$ is the cohomology product.
+\end{proposition}
+
+\begin{proof}
+Suspend the contraction, writing $I=si s^{-1}$, $P=sp s^{-1}$,
+$K=shs^{-1}$, and $D_1=sDs^{-1}$. Then
+\[
+ D_1K+KD_1=1-IP,\qquad PI=1,\qquad PK=KI=K^2=0.
+\]
+Let $D_1$ also denote its unary coderivation extension.
+Let $\Lambda$ be the binary coderivation of multiplication in $C_r$.
+The differential graded algebra identities give
+\[
+ D_1^2=\Lambda^2=0,\qquad D_1\Lambda+\Lambda D_1=0.
+\]
+
+Define, in increasing input length,
+\[
+ Q_n=\sum_{a+b=n}\Lambda_2(\Phi_a\otimes\Phi_b),\qquad
+ \Phi_1=I,\quad\Phi_n=-KQ_n,\quad\beta_1=0,\quad\beta_n=PQ_n.
+\]
+Extend $\Phi$ as a coalgebra map and $\beta$ as a coderivation.
+Write $Q=\pi\Lambda\Phi$. These definitions use only smaller
+components at every stage.
+
+Consider the defect $E=(D_1+\Lambda)\Phi-\Phi\beta$.
+It satisfies
+\[
+ \Delta E=(E\otimes\Phi+\Phi\otimes E)\Delta.
+\]
+
+Suppose that $E$ vanishes on words shorter than $n$.
+The displayed identity then makes $E$ of a word of length $n$
+primitive. By~\eqref{eq:ha-primitives}, it has length one.
+Thus $\pi\Lambda E=0$ on length $n$.
+
+Substituting $E$, using $\Lambda^2=0$, and moving $\Lambda$
+past $D_1$ with a minus sign gives
+\[
+ \pi\Lambda E=-D_1Q-Q\beta.
+\]
+
+The corestriction of the defect is therefore
+\[
+ \begin{split}
+ \pi E
+ &=-D_1KQ+Q-IPQ+KQ\beta\\
+ &=K(D_1Q+Q\beta)=0
+ \end{split}
+\]
+on length $n$. The defect already vanishes on length one.
+Induction proves $(D_1+\Lambda)\Phi=\Phi\beta$.
+
+The output component of greatest length of $\Phi$ is $I^{\otimes n}$.
+It is injective because $P^{\otimes n}I^{\otimes n}=1$.
+Taking the greatest nonzero input length proves that $\Phi$ is
+injective on the direct sum. It follows that
+\[
+ \Phi\beta^2=(D_1+\Lambda)^2\Phi=0
+ \quad\Longrightarrow\quad\beta^2=0.
+\]
+Unshifting a binary partition $(a,b)$ gives the sign $(-1)^{a-1}$
+in~\eqref{eq:ha-morphism}, which proves
+\eqref{eq:ha-transfer-recursion}. The linear component is $i$,
+which induces the identity of $H$, so the morphism is a
+quasi-isomorphism.
+\end{proof}
+
+Because $H$ has only even degrees, every odd-arity operation $m_n$
+vanishes. The recursion gives more information about the even ones.
+First,
+\[
+ f_2(a,b)=-\tau iF(a,b),\qquad f_3=0.
+\]
+Indeed, $U_2=i(a)i(b)$ and $-hU_2$ gives the first formula.
+Every term of $U_3$ is odd and is killed by both $p$ and $h$.
+
+For four inputs, the only surviving binary partition is $(2,2)$,
+whose sign is negative. Therefore
+\begin{equation}\label{eq:ha-m4}
+ \begin{split}
+ m_4(a,b,c,d)&=-uF(a,b)F(c,d),\\
+ f_4(a,b,c,d)&=\tau u\,iF\bigl(F(a,b),F(c,d)\bigr).
+ \end{split}
+\end{equation}
+Dividing $iF(a,b)iF(c,d)$ by $f$ gives the formula for $f_4$.
+
+Induction in the recursion gives, for every $j\geq1$,
+\[
+ \begin{gathered}
+ f_{2j+1}=0,\qquad
+ f_{2j}(H^{\otimes2j})\subseteq\tau u^{j-1}S,\\
+ m_{2j}(H^{\otimes2j})\subseteq u^{j-1}H.
+ \end{gathered}
+\]
+In odd arity, each nonzero binary term has odd output and is killed
+by $p$ and $h$.
+In even arity greater than two, both surviving branches are
+even-arity maps with odd output.
+Their product contributes $\tau^2=u$, and the $B$-linearity of
+$p,h$ preserves its coefficient.
+
+For six inputs write $F_{ij}=F(a_i,a_j)$. The binary partitions
+$(2,4)$ and $(4,2)$ each have negative sign, while $f_2$ also has
+a negative sign. It follows that
+\begin{equation}\label{eq:ha-m6}
+ m_6(a_1,\ldots,a_6)
+ =u^2\bigl(F_{12}F(F_{34},F_{56})
+          +F(F_{12},F_{34})F_{56}\bigr).
+\end{equation}
+
+For $r=2$, the image of $F$ lies in $B$ and $F$ vanishes on a
+$B$ input. Hence $f_4=0$ and all $f_n$ with $n\geq3$ vanish.
+The only higher operation that remains is
+\[
+ m_4(t,t,t,t)=-u.
+\]
+Its nonzero value still does not decide formality.
+A ternary change of coordinates on $H$ can remove it, and that
+change modifies the sixth operation.
+
+\section{A primitive for the fourth operation}
+\label{sec:ha-hochschild}
+
+Removing $m_4$ requires a ternary correction compatible with the
+cohomology product. The Hochschild differential records this compatibility.
+
+For integers $p\geq1$ and $q$, let
+\[
+ C^{p,q}(H,H)=\operatorname{Hom}_k^q(H^{\otimes p},H).
+\]
+The superscript $q$ means that the output degree is the sum of the
+input degrees plus $q$. Since $H$ is even, these spaces are zero for
+odd $q$. For a cochain $P\in C^{p,q}(H,H)$ define
+\begin{equation}\label{eq:ha-hochschild-differential}
+ \begin{split}
+ (\delta P)(a_1,\ldots,a_{p+1})
+ ={}&a_1P(a_2,\ldots,a_{p+1})\\
+ &+\sum_{j=1}^{p}(-1)^j
+ P(a_1,\ldots,a_ja_{j+1},\ldots,a_{p+1})\\
+ &+(-1)^{p+1}P(a_1,\ldots,a_p)a_{p+1}.
+ \end{split}
+\end{equation}
+
+All internal degrees here are even, so there are no additional element
+signs. Applying $\delta$ twice merges each pair of intervals in both
+orders with opposite signs. The overlapping merges agree by
+associativity, and the end terms cancel in the same way.
+Thus $\delta^2=0$. A cocycle satisfies $\delta P=0$, and a boundary
+has the form $\delta Q$. Their quotient in bidegree $(p,q)$ is
+the Hochschild cohomology group $HH^{p,q}(H,H)$.
+
+Let $Q:M'\to M$ be an $A_\infty$-morphism between minimal
+structures on the even space $H$ whose underlying coalgebra map
+is invertible. Assume $q_1=1_H$ and $q_3$ is its first higher component.
+The arity-two identity identifies their binary products.
+The arity-four identity~\eqref{eq:ha-morphism} then gives
+\[
+ m'_4=m_4+\delta q_3.
+\]
+Thus removing $m_4$ requires $\delta q_3=-m_4$.
+
+For cochains $P,Q$ of arities $p,\ell$, the cup product and insertion are
+\[
+ \begin{split}
+ (P\smile Q)(a_1,\ldots,a_{p+\ell})
+ &=P(a_1,\ldots,a_p)Q(a_{p+1},\ldots,a_{p+\ell}),\\
+ (P\circ Q)(a_1,\ldots,a_{p+\ell-1})
+ &=\sum_{j=0}^{p-1}(-1)^{j(\ell-1)}
+ P(a_1,\ldots,a_j,Q(a_{j+1},\ldots,a_{j+\ell}),\ldots).
+ \end{split}
+\]
+Expansion of~\eqref{eq:ha-hochschild-differential} gives
+\[
+ \delta(P\smile Q)=\delta P\smile Q+(-1)^pP\smile\delta Q.
+\]
+The middle exterior terms cancel. The remaining terms act within
+the first block or within the second block, with the displayed signs.
+
+Since $m_4=-uF\smile F$, a degree-minus-two unary cochain
+$\theta$ with $\delta\theta=-2uF$ would give the primitive
+$\tfrac12\theta\smile F$.
+Differentiation in $z$ also detects the relation $z^2=0$, so both
+defining relations enter the calculation.
+Introduce central parameters $\alpha,\beta$ of degrees zero and
+four, and the associative algebra
+\[
+ \mathcal H=k[u,t,z,\alpha,\beta]/
+           (t^r-2uz-\alpha,z^2-\beta).
+\]
+
+Put $L=k[u,\alpha,\beta]$ and
+$L_z=L[z]/(z^2-\beta)$. Division by the monic polynomial
+$z^2-\beta$ makes $L_z$ free over $L$ on $1,z$.
+Now write
+\[
+ \mathcal H=L_z[t]/(t^r-2uz-\alpha).
+\]
+The polynomial in $t$ is monic over the specified coefficient ring
+$L_z$, so the same division construction makes $\mathcal H$ free
+over $L_z$ on $1,t,\ldots,t^{r-1}$. Combining the two unique
+expressions makes it free over $L$ on $t^iz^j$, where
+$0\leq i<r$ and $j=0,1$.
+
+Using this basis identifies its underlying module with $H[\alpha,\beta]$.
+Let $\mu_{\alpha,\beta}$ be its multiplication in these coordinates.
+The coefficients of $\alpha$ and $\beta$ in its expansion at zero are
+\[
+ F=\left.\partial_\alpha\mu_{\alpha,\beta}\right|_{0,0},
+ \qquad G=\left.\partial_\beta\mu_{\alpha,\beta}\right|_{0,0}.
+\]
+These derivatives extract coefficients from a polynomial normal-form
+product, so they are defined in every characteristic.
+
+The first agrees with~\eqref{eq:ha-F-definition}. Their internal
+degrees are zero and $-4$. The coefficients of $\alpha$ and $\beta$
+in associativity give respectively
+\begin{equation}\label{eq:ha-FG-cocycles}
+ \delta F=0,\qquad\delta G=0.
+\end{equation}
+For example, the first coefficient equates
+$F(ab,c)+F(a,b)c$ with $F(a,bc)+aF(b,c)$,
+which is exactly $\delta F=0$.
+
+For $a\geq0$, $0\leq i<r$, and $j\in\{0,1\}$, define
+coefficient derivatives on the normal basis by
+\[
+ \theta_u(u^at^iz^j)=a u^{a-1}t^iz^j,
+ \qquad
+ \theta_z(u^at^iz^j)=j u^at^iz^{j-1}.
+\]
+The first expression is zero when $a=0$, and the second is zero
+when $j=0$.
+The factors $a,j$ denote the images of these integers in $k$.
+Their degrees are $2$ and $-2$. These formulas differentiate the chosen
+representatives, so the maps need not preserve products in $H$.
+
+Their defects can be computed without differentiating a quotient.
+For $x=u^at^iz^j$, $y=u^bt^\ell z^m$, put
+$A=a+b$, $N=i+\ell$, and $J=j+m$. Then
+\[
+ F(x,y)=
+ \begin{cases}
+ u^At^{N-r}z^J,&N\geq r,\ J\leq1,\\
+ 0,&\text{otherwise},
+ \end{cases}
+\]
+and
+\[
+ G(x,y)=
+ \begin{cases}
+ u^At^N,&N<r,\ J=2,\\
+ 2u^{A+1}t^{N-r}z^{J-1},&N\geq r,\ J\geq1,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\]
+The inequality $N\leq2r-2$ allows only one replacement of $t^r$.
+The resulting $z$-power needs at most one replacement of $z^2$.
+These two replacements prove the formulas for $F,G$.
+
+They also give
+\begin{equation}\label{eq:ha-derivative-defects}
+ \delta\theta_u=-2zF,
+ \qquad\delta\theta_z=-2uF+2zG.
+\end{equation}
+For the first identity, differentiating the factor $2u$ introduced
+by $t^r=2uz$ gives the extra $2zF$ in the derivative of a product.
+The differential $\delta$ subtracts that derivative, giving $-2zF$.
+For the second identity, differentiation of the same replacement
+gives $-2uF$. Differentiating the two factors of a product killed
+by $z^2=0$ contributes $2zG$.
+
+The overlap of the replacements can be checked in the following
+complete list of nonzero defects:
+\[
+ \begin{array}{c|c|c|c}
+ \text{condition}&J&(\delta\theta_u)(x,y)&(\delta\theta_z)(x,y)\\\hline
+ N<r&2&0&2u^At^Nz\\
+ N\geq r&0&-2u^At^{N-r}z&-2u^{A+1}t^{N-r}\\
+ N\geq r&1&0&2u^{A+1}t^{N-r}z
+ \end{array}.
+\]
+All other cases give zero in both columns.
+Substitution of the formulas for $F,G$ gives exactly these entries,
+proving~\eqref{eq:ha-derivative-defects} on the full normal basis.
+
+For these two cocycles, insertion gives
+\[
+ (F\circ G)(a,b,c)=F(G(a,b),c)-F(a,G(b,c)),
+\]
+and
+\begin{equation}\label{eq:ha-insertion-FG}
+ \delta(F\circ G)=G\smile F-F\smile G.
+\end{equation}
+To verify the sign, expand the five terms of the Hochschild
+differential of $F\circ G$:
+\[
+ \begin{split}
+ \delta(F\circ G)(a,b,c,d)
+ ={}&aF(G(b,c),d)-aF(b,G(c,d))\\
+ &-F(G(ab,c),d)+F(ab,G(c,d))\\
+ &+F(G(a,bc),d)-F(a,G(bc,d))\\
+ &-F(G(a,b),cd)+F(a,G(b,cd))\\
+ &+F(G(a,b),c)d-F(a,G(b,c))d.
+ \end{split}
+\]
+
+Apply $\delta F=0$ to the triples $(a,b,G(c,d))$ and
+$(G(a,b),c,d)$. The resulting exterior products are
+$G(a,b)F(c,d)-F(a,b)G(c,d)$.
+The remaining terms with outer $F(-,d)$ combine using
+$G(ab,c)-G(a,bc)=aG(b,c)-G(a,b)c$.
+Those with outer $F(a,-)$ combine using the same identity on
+$(b,c,d)$. The remaining four terms are the equation
+$\delta F(a,G(b,c),d)=0$.
+This proves~\eqref{eq:ha-insertion-FG}.
+
+Define the arity-three, degree-minus-two cochain
+\begin{equation}\label{eq:ha-g-definition}
+ g=\tfrac12(\theta_z\smile F+\theta_u\smile G)-z(F\circ G).
+\end{equation}
+Combining the cup differential with
+\eqref{eq:ha-derivative-defects} and~\eqref{eq:ha-insertion-FG} gives
+\[
+ \begin{split}
+ \delta g
+ &=-uF\smile F+z(G\smile F-F\smile G)
+                  -z(G\smile F-F\smile G)\\
+ &=-uF\smile F=m_4.
+ \end{split}
+\]
+Thus the fourth operation is a Hochschild boundary for every $r$.
+The primitive is $k$-linear, as permitted by formality over $k$.
+
+The formulas for $F,G,\theta_u,\theta_z$ have integer coefficients
+on the normal basis, and the cup and insertion identities are signed
+multilinear expansions.
+The cochain $g$ uses only $2^{-1}$.
+Thus $\delta g=m_4$ also holds when the characteristic divides $r$.
+
+\section{The sixth operation after changing coordinates}
+\label{sec:ha-coordinate-change}
+
+Let $M$ denote the transferred structure on $H$. Define a coalgebra
+map $Q:T^c(sH)\to T^c(sH)$ by its unshifted components
+\[
+ q_1=1_H,\qquad q_3=-g,\qquad q_n=0\quad(n\ne1,3).
+\]
+The difference $Q-1$ lowers tensor length by at least two.
+Hence
+\[
+ Q^{-1}=\sum_{j\geq0}(-1)^j(Q-1)^j
+\]
+is a finite sum on every input. Its inverse also preserves the
+coproduct, by applying $Q^{-1}\otimes Q^{-1}$ to the coalgebra-map
+identity.
+
+Conjugation $b'=Q^{-1}bQ$ therefore gives a square-zero
+coderivation, hence a new minimal structure $M'$ on $H$.
+The map $Q:M'\to M$ is an isomorphism of these structures.
+
+The augmentation is the graded algebra map
+\[
+ \epsilon:H\longrightarrow k,\qquad
+ \epsilon(t)=\epsilon(u)=\epsilon(z)=0.
+\]
+The defining relations map to zero, so the map is well-defined.
+
+The full space $H$ is needed for $Q$.
+Indeed, $u,z\in\ker\epsilon$, whereas $q_3(u,z,z)=-1/2$.
+Thus $Q$ does not restrict to $T^c(s\ker\epsilon)$.
+
+Equation~\eqref{eq:ha-morphism} in arity four gives
+\[
+ m'_4=m_4+\delta q_3=m_4-\delta g=0.
+\]
+The arity-two morphism identity gives $m'_2=m_2$.
+Degree parity gives $m'_3=m'_5=0$.
+
+In arity six, the source-side terms containing $q_3$ also contain
+$m'_4$, and therefore vanish. The four target partitions with one
+block of size three and three blocks of size one all have positive
+sign. In fact, their sign exponents are $2(3-j)$ for
+$j=0,1,2,3$. The partition $(3,3)$ has exponent $2$, also even.
+It follows that
+\begin{equation}\label{eq:ha-six-coordinate}
+ m'_6=m_6-\sum_{j=0}^3
+ m_4(1^{\otimes j}\otimes g\otimes1^{\otimes(3-j)})+g\smile g.
+\end{equation}
+
+Equation~\eqref{eq:ha-m6} gives $\epsilon m_6=0$.
+Every term with outer operation $m_4$ has a factor $u$, so
+\begin{equation}\label{eq:ha-six-augmentation}
+ \epsilon m'_6=(\epsilon g)\smile(\epsilon g).
+\end{equation}
+
+The arity-seven identity~\eqref{eq:ha-stasheff} reduces to
+$-\delta m'_6=0$. Thus $m'_6$ defines a class in $HH^{6,-4}(H,H)$.
+
+\section{A bar cycle detects the sixth operation}
+\label{sec:ha-bar-pairing}
+
+To annihilate every Hochschild boundary at once, we need a chain
+whose adjacent products cancel. Put $I=\ker\epsilon$.
+The reduced bar complex has underlying graded vector space
+\[
+ \mathcal B(H)=\bigoplus_{n\geq0}(sI)^{\otimes n}.
+\]
+
+The length-zero term is $k$. Write
+$[a_1|\cdots|a_n]$ for $sa_1\otimes\cdots\otimes sa_n$.
+Its degree is $\sum_i|a_i|-n$.
+Every element of $I$ has even degree, so every shifted letter is odd.
+The differential is consequently
+\begin{equation}\label{eq:ha-bar-differential}
+ b[a_1|\cdots|a_n]
+ =\sum_{j=1}^{n-1}(-1)^{j-1}
+ [a_1|\cdots|a_ja_{j+1}|\cdots|a_n].
+\end{equation}
+
+The product remains in $I$ because $\epsilon$ is multiplicative.
+Two disjoint merges occur with opposite signs in $b^2$.
+Two overlapping merges agree by associativity and also have opposite
+signs. Hence $b^2=0$.
+
+For two words, a shuffle is an interleaving that preserves the order
+within each original word. The shuffle product is the sum of these
+interleavings with the sign of the permutation of their shifted letters.
+Here that sign is $(-1)^\nu$, where $\nu$ counts pairs moved past
+each other. Denote the product by $\amalg$.
+
+Since $H$ is commutative and even,
+\[
+ b(x\amalg y)=bx\amalg y+(-1)^{|x|}x\amalg by.
+\]
+Indeed, a merge within one source word gives the corresponding
+term on the right. A merge between different source words appears
+twice, with reversed adjacent letters and opposite signs.
+Commutativity identifies their products, so these terms cancel.
+
+Assume $r\geq2$, and put $A=t^{r-1}$. All letters in
+\[
+ \rho=[A|t]-[u|z]-[z|u],\qquad \sigma=[z|z]
+\]
+belong to $I$. Their differentials are
+\[
+ b\rho=t^r-uz-zu=0,\qquad b\sigma=z^2=0.
+\]
+
+Thus
+\begin{equation}\label{eq:ha-detecting-chain}
+ c=\rho\amalg\rho\amalg\sigma
+\end{equation}
+is a cycle of length six. Its internal degree, the sum of the
+unshifted input degrees, is four. Its total bar degree is $4-6=-2$.
+The degree-minus-four cochain $m'_6$ evaluates it in $H^0$.
+
+Write $\gamma=\epsilon g$. The outer factor $z$ in
+\eqref{eq:ha-g-definition} disappears under augmentation.
+On normal monomials, $\epsilon\theta_z$ is nonzero only at $z$,
+where it is one. Similarly, $\epsilon\theta_u$ is nonzero only at $u$.
+
+The constant coefficient of $F(t^i,t^j)$ is one exactly when
+$i+j=r$. The constant coefficient of $G(x,y)$ is one only at
+$(x,y)=(z,z)$. Therefore, among the letters used by $c$, the only
+possibly nonzero triples for $r>2$ are
+\[
+ Z_1=[z|A|t],\qquad Z_2=[z|t|A],\qquad U=[u|z|z].
+\]
+Each has $\gamma$-value $1/2$.
+
+The signed coefficients in $c$ on concatenations of these triples
+are
+\[
+ \begin{array}{c|rrr}
+       &Z_1&Z_2&U\\\hline
+ Z_1&2&0&-2\\
+ Z_2&0&0&0\\
+ U&-2&0&0
+ \end{array}.
+\]
+
+Here is an explicit enumeration of the nonzero entries.
+Abbreviate the three source words of $\rho$ by
+$\alpha=[A|t]$, $\eta=[u|z]$, and $\xi=[z|u]$.
+Their coefficients are $1,-1,-1$.
+For each ordered pair of source words, interleave their letters with
+$[z|z]$, preserving the order in all three words.
+Before multiplying by the source coefficients, the nonzero counts are
+\[
+ \begin{array}{c|rrr}
+ \text{ordered sources}&Z_1Z_1&Z_1U&UZ_1\\\hline
+ (\alpha,\alpha)&2&0&0\\
+ (\alpha,\eta),(\eta,\alpha)&0&0&1\ \text{each}\\
+ (\alpha,\xi),(\xi,\alpha)&0&1\ \text{each}&0
+ \end{array}.
+\]
+
+Each count is the sum of $(-1)^\nu$ over placements of the two
+letters of each source. For $Z_1Z_1$, the two choices assigning the
+two $\alpha$ words both have even $\nu$.
+For $Z_1U$, the choices involving $\eta$ cancel, while each choice
+involving $\xi$ has signed sum one.
+For $UZ_1$, each choice involving $\eta$ has two positive placements
+and one negative placement. Those involving $\xi$ have no admissible placement.
+
+For $UU$, the pair $(\eta,\eta)$ has six placements of each sign.
+Each mixed pair $(\eta,\xi)$ or $(\xi,\eta)$ has three of each sign.
+The pair $(\xi,\xi)$ has no placement, because its words start with $z$.
+
+A word containing $Z_2$ places $t$ before all available $A$ letters,
+or ends in $A$, contrary to the order in $\alpha$.
+These possibilities exhaust the nine ordered pairs of source words.
+
+For $r=2$, put $Z=[z|t|t]$.
+In $ZZ$, the source $[z|z]$ occupies positions one and four.
+Choosing two of the remaining four positions for the first ordered
+$[t|t]$ gives six placements.
+For the subsets
+\[
+ (2,3),\ (2,5),\ (2,6),\ (3,5),\ (3,6),\ (5,6),
+\]
+the signs are respectively
+\[
+ +,\ -,\ +,\ +,\ -,\ +.
+\]
+Thus the coefficient of $ZZ$ is two.
+
+The coefficients of $ZU,UZ,UU$ retain the preceding counts:
+each word with $U$ contains at most one source $[A|t]$, whose
+two positions still have their prescribed order after $A=t$.
+The matrix on $Z,U$ is therefore
+\[
+ \begin{pmatrix}2&-2\\-2&0\end{pmatrix}.
+\]
+Thus for every $r\geq2$,
+\begin{equation}\label{eq:ha-nonzero-pairing}
+ (\epsilon m'_6)(c)=(\gamma\smile\gamma)(c)
+ =\tfrac14(2-2-2)=-\tfrac12.
+\end{equation}
+This value is nonzero in $k$ because $2\ne0$.
+
+If $m'_6=\delta K$ for $K\in C^{5,-4}(H,H)$, augmentation kills
+the two exterior terms of~\eqref{eq:ha-hochschild-differential}
+on inputs from $I$. The interior terms have the opposite signs
+to~\eqref{eq:ha-bar-differential}. Hence
+\[
+ (\epsilon\delta K)(c)=-(\epsilon K)(bc)=0.
+\]
+This contradicts~\eqref{eq:ha-nonzero-pairing}. We have proved
+\begin{equation}\label{eq:ha-nonzero-class}
+ [m'_6]\ne0\quad\text{in }HH^{6,-4}(H,H).
+\end{equation}
+
+The pairing uses inputs from $I$.
+Hochschild boundaries and coordinate changes are computed on the
+full algebra $H$.
+
+\section{Transport through arbitrary quasi-isomorphisms}
+\label{sec:ha-transport}
+
+To exclude a formality zigzag, we must transport the minimal model
+across quasi-isomorphisms in either direction.
+Only arities through six enter the obstruction.
+The comparison will also be needed over coefficient rings, where an
+acyclic kernel need not have a contracting homotopy.
+Projectivity of the source will supply the individual lifts that the
+construction requires.
+
+For the lifting and transport constructions in this section, let $S$
+be any commutative unital ring.
+An $S$-algebra here is associative and unital, and the specified map
+from $S$ has central degree-zero image killed by the differential.
+All maps preserve this action, and all tensor products in these
+constructions are over $S$.
+The previous coalgebra definitions apply to graded $S$-modules with
+the same tensor signs and algebraic direct sums.
+
+The proofs of the component extension formulas use only consecutive
+partitions and signed sums, so they still prove the coalgebra and
+coderivation identities over $S$.
+The primitive-element argument also remains valid: the cut after
+the first letter is the reassociation isomorphism
+$(sV)^{\otimes n}\cong sV\otimes(sV)^{\otimes(n-1)}$ on each
+length $n\geq2$.
+Thus the same primitive induction proves component uniqueness.
+An $A_\infty$-structure over $S$ means a square-zero degree-one
+coderivation of this tensor coalgebra, with the component conventions
+in Definition~\ref{def:ha-ainfinity}.
+Minimality means $b_1=0$, and a morphism is an $S$-linear coalgebra
+map satisfying $b^W\Phi=\Phi b^V$.
+
+For a positive integer $N$, write
+\[
+ T^c_{\leq N}(sV)=\bigoplus_{1\leq n\leq N}(sV)^{\otimes n}.
+\]
+Coderivations and coalgebra maps restrict to this space because their
+formulas do not increase tensor length. An equation through arity $N$
+means the corresponding equation on this truncated coalgebra.
+
+An $S$-module $M$ is projective if every $S$-linear map $M\to Y$
+lifts through every surjective $S$-linear map $X\to Y$.
+A free module has this property: choose a preimage in $X$ of the
+image of each basis vector, then extend linearly.
+A direct summand of a free module is projective, by extending the
+map to the free module using the projection and restricting its lift.
+Conversely, a projective module is a direct summand of a free module.
+Indeed, the free module on its underlying set surjects onto it, and
+lifting its identity gives a section of that surjection.
+
+Finite tensor products of projective modules are projective.
+For splittings $M_i\xrightarrow{j_i}F_i\xrightarrow{p_i}M_i$
+with $p_ij_i=1$, tensoring gives
+$(\bigotimes_i p_i)(\bigotimes_i j_i)=1$.
+The tensor product of the free modules $F_i$ is free on tuples of
+basis vectors, so $\bigotimes_i M_i$ is its direct summand.
+A direct sum of projective modules is also projective, since a map
+from it lifts by lifting its restriction to each summand.
+
+Say that a graded module is degreewise projective if each of its
+homogeneous components is projective.
+For such a $V$, put $W_n=(sV)^{\otimes_S n}$.
+Each component
+\[
+ W_n^j=\bigoplus_{j_1+\cdots+j_n=j}
+ (sV)^{j_1}\otimes_S\cdots\otimes_S(sV)^{j_n}
+\]
+is projective by the preceding two constructions.
+These sums may have infinitely many summands, but each element has
+finite support.
+Consequently a degree-zero map from $W_n$ lifts through a degreewise
+surjective graded map by lifting separately in each degree.
+Over a field every vector space is free, so these conclusions include
+the earlier field setting.
+
+\begin{lemma}\label{lem:ha-surjective-lifting}
+Let $q:P\to A$ be a degreewise surjective quasi-isomorphism of
+differential graded $S$-algebras.
+Let $(V,b)$ be a minimal $A_\infty$-algebra over $S$ whose
+underlying graded module is degreewise projective.
+Every coalgebra chain map
+\[
+ F:T^c_{\leq N}(sV)\longrightarrow T^c_{\leq N}(sA)
+\]
+lifts through $q$ to a coalgebra chain map
+$\Phi:T^c_{\leq N}(sV)\to T^c_{\leq N}(sP)$.
+If $F_1$ is a quasi-isomorphism, so is $\Phi_1$.
+\end{lemma}
+
+\begin{proof}
+The complex $L=\ker q$ is acyclic. Take a cycle
+$x\in L$. Injectivity of $H(q)$ gives $x=dy$ in $P$.
+
+The element $qy$ is a cycle. Surjectivity of $H(q)$ gives a cycle
+$z\in P$ and an element $a\in A$ such that $qy-qz=da$.
+Choose $w\in P$ with $qw=a$. Then $y-z-dw\in L$ and
+$d(y-z-dw)=x$, proving the assertion.
+
+Suppose the lift $\Phi$ is constructed through length $n-1$.
+The source $W_n=(sV)^{\otimes_S n}$ is degreewise projective,
+so choose a degree-zero lift $\widetilde\Phi_n:W_n\to sP$ of $F_n$.
+Use it as the new component of $\Phi$, and extend the components
+by consecutive partitions. Let
+\[
+ E=D_P\Phi-\Phi b,
+\]
+where $D_P$ is the coderivation of the target differential and product.
+The defect satisfies
+\[
+ \Delta E=(E\otimes\Phi+\Phi\otimes E)\Delta,
+ \qquad D_PE+Eb=0.
+\]
+
+The first identity follows from the coalgebra identities for
+$D_P,\Phi,b$. The second follows by expanding and using
+$D_P^2=b^2=0$.
+
+Since the defect vanishes below length $n$, its value in length $n$
+is primitive. It lies in $sP$ by~\eqref{eq:ha-primitives}.
+Minimality means that
+$b$ lowers length, so $Eb=0$ on this input length.
+It follows that $D_{P,1}E_n=0$.
+
+The equality $q\Phi=F$ through length $n$ also gives $qE_n=0$.
+Write $Z^j(sL)=\ker(D_{P,1}:(sL)^j\to(sL)^{j+1})$.
+In each degree the defect is a map
+\[
+ E_n^j:W_n^j\longrightarrow Z^{j+1}(sL).
+\]
+Acyclicity of $L$ makes
+\[
+ D_{P,1}:(sL)^j\longrightarrow Z^{j+1}(sL)
+\]
+surjective.
+Projectivity of $W_n^j$ supplies a map $T_n^j:W_n^j\to(sL)^j$
+with $D_{P,1}T_n^j=E_n^j$.
+
+Assembling the degree components gives $T_n:W_n\to sL$ of degree zero.
+Replace the new component by
+\[
+ \Phi_n=\widetilde\Phi_n-T_n.
+\]
+Its image under $q$ is unchanged.
+All contributions involving products or $b$ in input length $n$
+use lower components of $\Phi$.
+Consequently the replacement changes the defect only by
+$-D_{P,1}T_n=-E_n$ and removes it in that length.
+
+The correction lifts this particular map from $W_n$ into cycles.
+It does not require a contracting homotopy on $L$.
+The same argument starts at length one and proves the lift by induction.
+Finally, $H(q)H(\Phi_1)=H(F_1)$ proves the assertion about the
+linear component.
+\end{proof}
+
+A backward arrow need not be surjective. Its replacement will use
+an algebra with two evaluations and a contraction onto the first.
+The first evaluation imposes compatibility with the given arrow.
+The second evaluation will provide the required surjection.
+
+Define a graded free $S$-module
+\[
+ J^0=Se_0\oplus Se_1,\qquad J^1=S\eta,\qquad
+ J^n=0\quad(n\ne0,1).
+\]
+Give it the bilinear product
+\[
+ \begin{split}
+ &(ae_0+be_1+c\eta)(a'e_0+b'e_1+c'\eta)\\
+ &\qquad=aa'e_0+bb'e_1+(ac'+cb')\eta,
+ \qquad a,b,c,a',b',c'\in S.
+ \end{split}
+\]
+For three factors, either parenthesization gives coefficients
+$aa'a''$, $bb'b''$ on $e_0,e_1$ and coefficient
+$aa'c''+ac'b''+cb'b''$ on $\eta$.
+Thus the product is associative, with unit $e_0+e_1$.
+It respects degrees because products of two degree-one elements are zero.
+
+The product gives
+\[
+ e_0\eta=\eta,\qquad \eta e_1=\eta,\qquad
+ \eta e_0=e_1\eta=\eta^2=0.
+\]
+Define a degree-one differential by
+\[
+ d_Je_0=-\eta,\qquad d_Je_1=\eta,\qquad d_J\eta=0.
+\]
+On a homogeneous element $x$, these formulas are equivalent to
+\[
+ d_Jx=\eta x-(-1)^{|x|}x\eta.
+\]
+
+For homogeneous $x,y$, expansion gives
+\[
+ \begin{split}
+ (d_Jx)y+(-1)^{|x|}x\,d_Jy
+ &=
+ \eta xy-(-1)^{|x|}x\eta y
+ +(-1)^{|x|}x\eta y
+ -(-1)^{|x|+|y|}xy\eta\\
+ &=d_J(xy).
+ \end{split}
+\]
+The same expression for the differential gives
+$d_J^2x=\eta^2x-x\eta^2=0$.
+Also $d_J(e_0+e_1)=0$, so $J$ is a unital differential graded algebra.
+
+Define evaluations $\epsilon_0,\epsilon_1:J\to S$ and a constant inclusion by
+\[
+ \begin{split}
+ \epsilon_0(ae_0+be_1+c\eta)&=a,\\
+ \epsilon_1(ae_0+be_1+c\eta)&=b,\\
+ \iota:S\longrightarrow J,\qquad \iota(c)&=c(e_0+e_1).
+ \end{split}
+\]
+The product formula makes each evaluation multiplicative.
+Both evaluations kill $d_J(J)$ and send the unit to one.
+The map $\iota$ preserves the product and has closed image.
+Thus these are unital differential graded algebra maps, and
+$\epsilon_0\iota=\epsilon_1\iota=1_S$.
+
+Define the degree-minus-one map $K:J\to J$ by
+\[
+ K(\eta)=e_1,\qquad K(e_0)=K(e_1)=0.
+\]
+The maps $d_JK+Kd_J$ and $1-\iota\epsilon_0$ both take the values
+$-e_1,e_1,\eta$ on $e_0,e_1,\eta$, respectively.
+Consequently
+\[
+ d_JK+Kd_J=1-\iota\epsilon_0,\qquad
+ \epsilon_0K=K\iota=K^2=0.
+\]
+Together with $\epsilon_0\iota=1_S$, these equations give the required
+contraction onto the first endpoint.
+The displayed basis formulas have integer coefficients, and no division occurs.
+
+For a differential graded $S$-algebra $A$, give $A\otimes_S J$ the
+differential and product
+\[
+ \begin{split}
+ d(a\otimes x)&=da\otimes x+(-1)^{|a|}a\otimes d_Jx,\\
+ (a\otimes x)(b\otimes y)&=(-1)^{|x||b|}ab\otimes xy
+ \end{split}
+\]
+on homogeneous factors.
+For a product of three tensors, the two parenthesizations give the same
+tensor $abc\otimes xyz$.
+Their sign exponents agree because
+\[
+ |x||b|+(|x|+|y|)|c|
+ =|y||c|+|x|(|b|+|c|).
+\]
+Thus multiplication is associative, with unit
+$1_A\otimes(e_0+e_1)$.
+
+To check the differential, put $p=|a|$, $q=|b|$, and $\ell=|x|$.
+Applying it twice gives
+\[
+ \begin{split}
+ d^2(a\otimes x)
+ ={}&d_A^2a\otimes x
+ +\bigl((-1)^{p+1}+(-1)^p\bigr)da\otimes d_Jx
+ +a\otimes d_J^2x\\
+ ={}&0.
+ \end{split}
+\]
+For the Leibniz rule, both
+$d((a\otimes x)(b\otimes y))$ and
+$d(a\otimes x)(b\otimes y)+(-1)^{p+\ell}(a\otimes x)d(b\otimes y)$
+expand to
+\[
+ \begin{split}
+ (-1)^{\ell q}\bigl(&
+ (da)b\otimes xy+(-1)^p a(db)\otimes xy\\
+ &+(-1)^{p+q}ab\otimes(d_Jx)y
+ +(-1)^{p+q+\ell}ab\otimes x\,d_Jy\bigr).
+ \end{split}
+\]
+The last two signs use the Leibniz rule in $J$.
+These calculations prove that $A\otimes J$ is a differential graded algebra.
+
+The endpoint maps and constant map extend to
+\[
+ \operatorname{ev}_i=1\otimes\epsilon_i:A\otimes J\longrightarrow A,
+ \qquad
+ \operatorname{const}(a)=a\otimes(e_0+e_1),\qquad i=0,1.
+\]
+They preserve units and commute with the differentials.
+Each $\epsilon_i$ vanishes in degree one, so every surviving
+tensor-product sign in the endpoint multiplication equation is positive.
+Together with multiplicativity of $\epsilon_i$, this proves that
+$\operatorname{ev}_i$ is multiplicative.
+The degree-zero unit of $J$ makes $\operatorname{const}$ multiplicative.
+
+The contraction also extends, with the tensor sign
+\[
+ K_A(a\otimes x)=(-1)^{|a|}a\otimes Kx.
+\]
+For homogeneous $a$, the two composites are
+\[
+ \begin{split}
+ dK_A(a\otimes x)
+ &=(-1)^{|a|}da\otimes Kx+a\otimes d_JKx,\\
+ K_Ad(a\otimes x)
+ &=(-1)^{|a|+1}da\otimes Kx+a\otimes Kd_Jx.
+ \end{split}
+\]
+The terms containing $da$ cancel, leaving
+\[
+ dK_A+K_Ad=1-\operatorname{const}\operatorname{ev}_0,
+ \qquad \operatorname{ev}_0K_A=0.
+\]
+The second identity follows from $\epsilon_0K=0$.
+
+For a quasi-isomorphism $g:B_0\to A$ of unital differential graded
+$S$-algebras, impose the first
+endpoint equation by defining
+\[
+ P(g)=
+ \{(b,\omega)\in B_0\oplus(A\otimes J):
+                    \operatorname{ev}_0\omega=g(b)\}.
+\]
+The product and differential preserve this equation because
+$\operatorname{ev}_0$ and $g$ are differential graded algebra maps.
+The unit is $(1_{B_0},\operatorname{const}(1_A))$.
+Thus $P(g)$ is a unital differential graded algebra.
+Its degree-$n$ elements have the unique form
+\[
+ \bigl(b,g(b)\otimes e_0+a\otimes e_1+c\otimes\eta\bigr),
+ \qquad b\in B_0^n,\quad a\in A^n,\quad c\in A^{n-1}.
+\]
+
+There are unital differential graded algebra maps
+\[
+ \begin{split}
+ j:B_0\longrightarrow P(g),&\qquad
+ j(b)=(b,\operatorname{const}g(b)),\\
+ p:P(g)\longrightarrow B_0,&\qquad p(b,\omega)=b,\\
+ q:P(g)\longrightarrow A,&\qquad
+ q(b,\omega)=\operatorname{ev}_1\omega.
+ \end{split}
+\]
+The second endpoint makes $q$ degreewise surjective:
+$(0,a\otimes e_1)\in P(g)$ maps to every homogeneous $a\in A$.
+The constant inclusion satisfies $pj=1_{B_0}$ and $qj=g$.
+
+Since $\operatorname{ev}_0K_A=0$, the degree-minus-one map
+\[
+ S(b,\omega)=(0,K_A\omega)
+\]
+takes values in $P(g)$.
+The tensor contraction and the defining endpoint equation give
+\[
+ \begin{split}
+ (dS+Sd)(b,\omega)
+ &=(0,\omega-\operatorname{const}\operatorname{ev}_0\omega)\\
+ &=(0,\omega-\operatorname{const}g(b))
+ =(1-jp)(b,\omega).
+ \end{split}
+\]
+Together with $pj=1$, this proves that $p,j$ induce inverse cohomology maps.
+The equation $qj=g$ then proves that $q$ is a quasi-isomorphism.
+It provides the surjective backward-arrow replacement needed in
+Lemma~\ref{lem:ha-surjective-lifting}.
+
+\begin{proposition}\label{prop:ha-zigzag-transport}
+Let $S$ be a commutative unital ring.
+Suppose a minimal $A_\infty$-algebra $M$ over $S$ is degreewise
+projective and has a quasi-isomorphism to a differential graded
+$S$-algebra $A$.
+Every finite quasi-isomorphism zigzag of $S$-algebras from $A$ to
+$A'$ induces, through any prescribed finite arity, an
+$A_\infty$-morphism $M\to A'$ whose linear component is a
+quasi-isomorphism.
+\end{proposition}
+
+\begin{proof}
+For a forward arrow, compose with its strict coalgebra map.
+For a backward arrow $g:B_0\to A_0$, replace it by
+\[
+ B_0\xleftarrow{\ p\ }P(g)\xrightarrow{\ q\ }A_0.
+\]
+Lift the current morphism $M\to A_0$ through $q$ using
+Lemma~\ref{lem:ha-surjective-lifting}, then compose with $p$.
+Both maps are quasi-isomorphisms, so the linear component remains
+a quasi-isomorphism. Repeat along the finitely many arrows.
+The construction keeps the same operations on $M$ throughout.
+\end{proof}
+
+For the central algebra $C_r$, return to the original field $k$.
+Its cohomology is degreewise free over $k$, so the transport
+proposition applies to its transferred minimal structure.
+
+\begin{theorem}\label{thm:ha-formality-dichotomy}
+Over a field $k$ of characteristic different from two, the differential graded algebra
+$C_r$ is formal over $k$ exactly when $r=1$.
+For every $r\geq2$, it is also nonformal over $k[t]$.
+\end{theorem}
+
+\begin{proof}
+Suppose $r\geq2$ and a formality zigzag exists. Compose the
+coordinate isomorphism $M'\to M$ with the transferred morphism
+$M\to C_r$. Proposition~\ref{prop:ha-zigzag-transport}, with $N=6$,
+then gives a morphism from $M'$ to the zero-differential algebra $H$
+through arity six.
+
+Its linear component $\phi$ is a graded vector-space isomorphism.
+The arity-two equation gives $\phi(ab)=\phi(a)\phi(b)$.
+Thus $\phi$ is a graded algebra automorphism. Postcomposition with
+its inverse makes the linear component the identity.
+This imposes no constraint on the original action of the zigzag
+on $t,u,z$, or on the augmentation.
+
+Let $a=F_3$ and $d=F_5$ be the remaining comparison components.
+Their degrees are $-2,-4$, respectively. The evenness of $H$ forces
+$F_2=F_4=F_6=0$.
+
+In arity four, equation~\eqref{eq:ha-morphism} reads
+\[
+ \begin{split}
+ a(x_1x_2,x_3,x_4)-a(x_1,x_2x_3,x_4)
+ +a(x_1,x_2,x_3x_4)\\
+ =x_1a(x_2,x_3,x_4)+a(x_1,x_2,x_3)x_4.
+ \end{split}
+\]
+Hence $\delta a=0$.
+In arity six, the source has $m'_6$ and the five alternating
+insertions of the binary product into $d$.
+The target partitions $(1,5),(3,3),(5,1)$ have positive signs.
+Consequently
+\begin{equation}\label{eq:ha-formality-comparison}
+ m'_6=\delta d+a\smile a.
+\end{equation}
+
+The cup square on the right is a boundary. To prove this directly,
+write
+\[
+ E=\delta a,\qquad a_{ijk}=a(x_i,x_j,x_k).
+\]
+Since the arity of $a$ is three, its self-insertion has three
+positive terms. Expansion gives
+\[
+ \begin{split}
+ \delta(a\circ a)(x_1,\ldots,x_6)
+ ={}&E(a_{123},x_4,x_5,x_6)
+     +E(x_1,a_{234},x_5,x_6)\\
+ &+E(x_1,x_2,a_{345},x_6)
+     +E(x_1,x_2,x_3,a_{456})\\
+ &+a(E(x_1,x_2,x_3,x_4),x_5,x_6)\\
+ &-a(x_1,E(x_2,x_3,x_4,x_5),x_6)\\
+ &+a(x_1,x_2,E(x_3,x_4,x_5,x_6))
+     -2a_{123}a_{456}.
+ \end{split}
+\]
+
+To check the expansion, the terms containing a multiplication
+immediately outside an inner $a$ cancel in pairs. They are
+\[
+ \begin{gathered}
+ a(a_{123}x_4,x_5,x_6),\quad a(x_1a_{234},x_5,x_6),\\
+ a(x_1,a_{234}x_5,x_6),\quad a(x_1,x_2a_{345},x_6),\\
+ a(x_1,x_2,a_{345}x_6),\quad a(x_1,x_2,x_3a_{456}).
+ \end{gathered}
+\]
+The first and fourth $E$ terms each contribute $a_{123}a_{456}$.
+After their subtraction, the remaining terms are precisely the
+Hochschild differential of the three self-insertions.
+
+Since $E=0$, the identity reduces to
+\[
+ \delta(a\circ a)=-2a\smile a.
+\]
+Equation~\eqref{eq:ha-formality-comparison} would therefore imply
+\[
+ m'_6=\delta\bigl(d-\tfrac12a\circ a\bigr),
+\]
+contradicting~\eqref{eq:ha-nonzero-class}.
+
+This excludes all formality zigzags over $k$.
+Forgetting the coefficient action turns any $k[t]$-linear zigzag
+into a $k$-linear one, proving the second assertion.
+
+When $r=1$, every normal representative lies in $B$.
+The inclusion $B\hookrightarrow C_1$ induces the isomorphism
+\[
+ B\longrightarrow H^*(C_1),\qquad
+ H^*(C_1)=B[t]/(t-2uz)\cong B.
+\]
+Its source has zero differential. It is therefore a unital
+quasi-isomorphism proving formality over $k$.
+\end{proof}
+
+The class in~\eqref{eq:ha-nonzero-class} obstructs a change of all
+coordinates, even one that changes the augmentation.
+The augmentation only supplies a linear evaluation proving that this
+class is nonzero. The formality contradiction itself permits every
+graded algebra automorphism of $H$.
+
+\section{The fourth operation over an arbitrary field}
+\label{sec:ha-arbitrary-field}
+
+For this section, let $k$ be a field of arbitrary characteristic.
+The preceding six-input argument used $2^{-1}$.
+We now compute a fourth-operation obstruction that requires no division.
+For the free differential graded algebra
+\[
+ E_r=k[t]\langle\tau\rangle,\qquad |\tau|=-1,\qquad d\tau=t^r,
+\]
+this obstruction is nonzero when $r\geq2$.
+Four cohomology classes whose adjacent products vanish detect it.
+Allowing general even coefficients will also cover $C_r$, its
+truncation, and its localization in characteristic two.
+
+Let $B$ be a commutative graded $k$-algebra concentrated in even
+degrees, with zero differential. Fix $0\ne u\in B^{-2}$.
+Define
+\[
+ X_r(B,u)=B[t]\langle\tau\rangle/(\tau^2-u),
+ \qquad |t|=0,\quad|\tau|=-1,
+ \qquad d\tau=t^r,\quad d(B[t])=0,
+\]
+where $B[t]$ acts centrally.
+The free algebra has $B[t]$-basis $1,\tau,\tau^2,\ldots$.
+
+Division by the monic relation in $\tau$ gives the unique expression
+\[
+ X_r(B,u)=B[t]\oplus\tau B[t].
+\]
+Its multiplication is
+\[
+ (a+\tau b)(c+\tau e)=ac+ube+\tau(ae+bc),
+ \qquad a,b,c,e\in B[t].
+\]
+It is associative because it is the product in the displayed quotient
+of a free associative algebra.
+
+The graded Leibniz rule preserves the defining relation:
+\[
+ d(\tau^2-u)=t^r\tau-\tau t^r=0.
+\]
+Thus the differential descends to the quotient, where
+\[
+ d(a+\tau b)=t^r b.
+\]
+This formula gives $d^2=0$ directly.
+Multiplication by $t^r$ is injective on $B[t]$, including when $B$
+has zero divisors, because it shifts the polynomial coefficients.
+Consequently
+\[
+ H_X:=H^*(X_r(B,u))=B[t]/(t^r),\qquad H_X^{\mathrm{odd}}=0.
+\]
+The constant coefficient classes identify $B$ with a subalgebra of $H_X$,
+so the class of $u$ remains nonzero.
+
+\begin{theorem}\label{thm:ha-common-model-formality}
+For every field $k$, every such pair $(B,u)$, and every integer
+$r\geq1$, the algebra $X_r(B,u)$ is formal over $k$ exactly when $r=1$.
+For every $r\geq1$, it is nonformal over $k[t]$ in the category
+of differential graded algebras with central $k[t]$-action.
+\end{theorem}
+
+\begin{proof}
+Let $i_X:H_X\to B[t]$ choose the representative of $t$-degree less
+than $r$. Let $p_X$ take the class of the even component and kill
+the odd component. Define
+\[
+ h_X(a)=\tau\frac{a-i_Xp_X(a)}{t^r},\qquad h_X(\tau b)=0.
+\]
+The division argument proves
+\[
+ dh_X+h_Xd=1-i_Xp_X,\qquad
+ p_Xi_X=1,\qquad h_X^2=h_Xi_X=p_Xh_X=0.
+\]
+All these maps are $B$-linear.
+
+The proof of Proposition~\ref{prop:ha-transfer} uses this contraction
+identity and the recursion~\eqref{eq:ha-transfer-recursion}.
+That recursion and its defect proof use only integer signs and
+finite sums, so they apply over the present field.
+Define the degree-zero defect $F_X$ by
+\[
+ i_X(a)i_X(b)-i_X(ab)=t^r\,i_XF_X(a,b).
+\]
+It is $B$-bilinear, and on powers of $t$ it has the values
+\[
+ F_X(t^i,t^j)=
+ \begin{cases}
+ t^{i+j-r},&i+j\geq r,\\
+ 0,&i+j<r,
+ \end{cases}
+ \qquad 0\leq i,j<r.
+\]
+
+The second comparison component is $f_2^X=-\tau i_XF_X$.
+The arity-three outputs are odd and are killed by $p_X,h_X$.
+Thus $f_3^X=m_3^X=0$.
+At arity four, only the binary partition $(2,2)$ survives,
+with its negative sign. Hence
+\[
+ m_4^X=-uF_X\smile F_X,\qquad \delta m_4^X=0,
+\]
+where the cocycle identity follows from the arity-five equation.
+For example, at $r=2$ this gives
+$f_2^X(t,t)=-\tau$ and $m_4^X(t,t,t,t)=-u$.
+
+For general $r\geq2$, put $a=t^{r-1}$.
+All three adjacent products of the ordered tuple $(a,t,a,t)$
+are zero in $H_X$. Moreover,
+\[
+ F_X(a,t)=1,\qquad m_4^X(a,t,a,t)=-u.
+\]
+Choose a linear functional $\ell:B^{-2}\to k$ with $\ell(u)=1$:
+extend $u$ to a basis and set $\ell$ to zero on the remaining basis vectors.
+Define
+\[
+ \lambda:H_X^{-2}\longrightarrow k,\qquad
+ \lambda\left(\sum_{i=0}^{r-1}b_it^i\right)=\ell(b_0),
+ \quad b_i\in B^{-2}.
+\]
+Then $\lambda(tH_X^{-2})=0$ and $\lambda(u)=1$.
+
+Let $K:H_X^{\otimes3}\to H_X$ be any $k$-linear cochain of degree
+$-2$. Its Hochschild differential on this tuple is
+\[
+ (\delta K)(a,t,a,t)=aK(t,a,t)+K(a,t,a)t.
+\]
+Every interior term vanishes because its merged adjacent product is zero.
+Both remaining terms lie in $tH_X^{-2}$, since $a$ is divisible by $t$.
+Consequently
+\[
+ \lambda(\delta K)(a,t,a,t)=0,\qquad
+ \lambda m_4^X(a,t,a,t)=-1\ne0.
+\]
+Thus $m_4^X$ is not a Hochschild boundary.
+
+The test uses $\lambda$ only as a linear functional.
+It requires no augmentation of $B$ or $H_X$, so it also applies
+when $u$ is invertible.
+
+A formality zigzag would transport the transferred structure to
+strict $H_X$ through arity four, by
+Proposition~\ref{prop:ha-zigzag-transport}.
+Its linear component is a graded algebra automorphism.
+Composing with its inverse makes that component the identity.
+Parity forces the second component to vanish, and the arity-four
+equation then gives $m_4^X=\delta F_3$.
+This contradicts the displayed evaluation.
+
+For $r=1$, the inclusion $B\hookrightarrow X_1(B,u)$ is a
+quasi-isomorphism, since it induces $B\cong B[t]/(t)$.
+
+To treat the fixed central action of $k[t]$, let $D$ be an associative
+differential graded algebra with $H^{-1}(D)=0$.
+Let $s\in D^0$ be a central exact cycle, and choose $x\in D^{-1}$
+with $dx=s$. The square is a cycle because
+\[
+ d(x^2)=sx-xs=0.
+\]
+Any other primitive is $x+dy$ for some $y\in D^{-2}$.
+Indeed, the difference of two primitives is a degree-minus-one cycle,
+and the vanishing of $H^{-1}(D)$ makes it a boundary.
+
+The square class is independent of the primitive.
+The required identity is
+\[
+ \begin{split}
+ d(-xy+yx+y\,dy)
+ &=-sy+x\,dy+(dy)x+ys+(dy)^2\\
+ &=(x+dy)^2-x^2.
+ \end{split}
+\]
+The two terms involving $s$ cancel because $s$ is central.
+Every differential graded algebra map preserving $s$ preserves this
+square class by mapping a primitive and its square to their images.
+
+Along a quasi-isomorphism zigzag preserving the central coefficient
+action, the exactness of $s$ and the vanishing of $H^{-1}$ hold at every step.
+Both conditions pass in either direction through the induced cohomology
+isomorphisms, which preserve the specified class of $s$.
+The induced cohomology isomorphisms therefore preserve whether this
+square class is zero.
+
+For $X_r(B,u)$, take the fixed scalar $s=t^r$ and its primitive
+$x=\tau$. Its square class is $u\ne0$.
+In the zero-differential cohomology algebra, $t^r=0$ has primitive zero,
+whose square class is zero.
+This excludes every central $k[t]$-linear formality zigzag.
+The argument uses no inverse of a scalar, so it holds in every characteristic.
+\end{proof}
+
+\begin{corollary}\label{prop:ha-witness-k-formality}
+Over every field $k$, the algebra $E_r$ is formal over $k$ exactly
+when $r=1$. It is nonformal over the central coefficient ring $k[t]$
+for every $r\geq1$.
+\end{corollary}
+
+\begin{proof}
+Take $B=k[u]$ in Theorem~\ref{thm:ha-common-model-formality}.
+The unique even--odd decomposition identifies $X_r(k[u],u)$ with $E_r$.
+\end{proof}
+
+For $r\geq2$, the fourth operation of $E_r$ has a nonzero
+Hochschild class in every characteristic.
+For $C_r$ with $2$ invertible, the cochain~\eqref{eq:ha-g-definition}
+removes the fourth operation.
+The resulting sixth operation has the nonzero class~\eqref{eq:ha-nonzero-class}.
+
+\section{Formality of the nonpositive truncation}
+\label{sec:ha-truncation}
+
+Assume again that $k$ is a field of characteristic different from two
+in this section and the next.
+
+The positive-degree generator $z$ occurs in the detecting bar chain.
+Removing positive degrees changes the formality question. The resulting
+algebra admits explicit multiplicative quasi-isomorphisms to cohomology.
+
+For a differential graded algebra $C$, its nonpositive truncation
+$\tau_{\leq0}C$ has $C^j$ in degrees $j<0$, the kernel of
+$d:C^0\to C^1$ in degree zero, and zero in positive degrees.
+The product preserves these subspaces by the Leibniz rule.
+
+In $C_r$, every degree-zero element is a cycle. Set
+\[
+ A=\tau_{\leq0}C_r,\qquad s=t^r,\qquad v=uz,\qquad B_0=k[t,u].
+\]
+Here $|v|=0$ and $|u|=-2$.
+
+The nonpositive basis words of $C_r$
+are $\tau^n$ and $\tau^{n+2}z$, for $n\geq0$.
+Consequently
+\[
+ \begin{split}
+ A&=k[t]\langle\tau\rangle[v]/(v^2)
+   =B_0[v]/(v^2)\oplus\tau B_0[v]/(v^2),\\
+ D\tau&=s-2v,
+ \end{split}
+\]
+where $v,t$ are central and $u=\tau^2$.
+The basis word $\tau^nv$ maps to $\tau^{n+2}z$, proving that
+this description is injective as well as surjective.
+
+Multiplication by $s-2v$ is injective on $B_0[v]/(v^2)$.
+Indeed,
+\[
+ (s-2v)(a+vb)=sa+v(sb-2a)=0
+\]
+first gives $a=0$ and then $b=0$, since multiplication by $t^r$
+shifts polynomial coefficients injectively. Thus
+\[
+ H^*(A)=B_0[v]/(v^2,s-2v)\cong B_0/(s^2).
+\]
+The last isomorphism eliminates $v=s/2$.
+
+A primitive of $s^2$ in $A$ is $\tau(s+2v)$.
+Its square need not vanish as an element, so a single exterior
+generator would impose an extra equation. Instead, introduce one
+generator for each successive product relation:
+\begin{equation}\label{eq:ha-semifree-algebra}
+ \begin{gathered}
+ P=B_0\langle h_1,h_2,h_3,\ldots\rangle,\qquad |h_n|=1-2n,\\
+ dh_1=s^2,\qquad
+ dh_n=-\sum_{i+j=n}h_ih_j\quad(n\geq2).
+ \end{gathered}
+\end{equation}
+The sum has positive $i,j$. The coefficients $B_0$ are central,
+and their differential is zero. This algebra is semifree over $B_0$:
+its underlying algebra is free on the ordered generators, and each
+generator's differential uses only earlier ones.
+
+All $h_n$ have odd degree. For $n\geq2$, the Leibniz rule gives
+\[
+ d^2h_n=-\sum_{i+j=n}(dh_i)h_j+
+          \sum_{i+j=n}h_i(dh_j).
+\]
+The terms with a scalar differential cancel as
+$-s^2h_{n-1}+h_{n-1}s^2=0$.
+The other terms are two copies of
+$\sum_{a+b+c=n}h_ah_bh_c$ with opposite signs.
+Together with $d^2h_1=0$, this proves that $P$ is a differential
+graded algebra.
+
+Define integers $a_n$ recursively by
+\[
+ a_1=1,\qquad a_n=-\sum_{i+j=n}a_ia_j\quad(n\geq2).
+\]
+The recurrence uses integer multiplication and addition only.
+
+There are unital $B_0$-algebra maps
+\begin{equation}\label{eq:ha-positive-zigzag}
+ B_0/(s^2)\xleftarrow{\ \varepsilon\ }P
+          \xrightarrow{\ \Phi\ }A
+\end{equation}
+given by
+\[
+ \varepsilon(h_n)=0,\qquad
+ \Phi(h_n)=a_n\tau u^{n-1}\bigl(s+(4n-2)v\bigr).
+\]
+The coefficient maps are the quotient map and the specified action
+of $B_0$ on $A$. Every image has degree $1-2n$.
+
+The map $\varepsilon$ respects the differential because $s^2=0$
+in its target. For $\Phi$, one computes
+\[
+ D\Phi(h_n)=a_nu^{n-1}\bigl(s^2+4(n-1)sv\bigr).
+\]
+For $n=1$ this is $s^2$.
+For $i+j=n$, the equality $v^2=0$ gives
+\[
+ \Phi(h_i)\Phi(h_j)
+ =a_ia_j u^{n-1}\bigl(s^2+4(n-1)sv\bigr).
+\]
+The recurrence for $a_n$ proves $D\Phi(h_n)=\Phi(dh_n)$ on
+every generator. Thus both arrows in~\eqref{eq:ha-positive-zigzag}
+are differential graded algebra maps.
+
+For $r=2$, the first three generator images are:
+\[
+ \begin{split}
+ \Phi(h_1)&=\tau(t^2+2uz),\\
+ \Phi(h_2)&=-\tau u(t^2+6uz),\\
+ \Phi(h_3)&=2\tau u^2(t^2+10uz).
+ \end{split}
+\]
+The identity $D\Phi(h_2)=-\Phi(h_1)^2$ recovers the square
+calculation at the beginning of the chapter. The higher generators
+supply the remaining differential identities.
+
+To prove that these maps are quasi-isomorphisms, compare $P$ with
+the differential graded algebra
+\[
+ K=B_0\otimes\Lambda(h),\qquad |h|=-1,\qquad dh=s^2.
+\]
+Here $\Lambda(h)$ has basis $1,h$ with $h^2=0$.
+There is a differential graded algebra map
+\[
+ \pi:P\longrightarrow K,\qquad
+ \pi(h_1)=h,\qquad\pi(h_n)=0\quad(n\geq2).
+\]
+For $n=2$, the image of $dh_2$ is $-h^2=0$.
+For $n>2$, every product in $dh_n$ contains a generator of index
+at least two and also maps to zero.
+
+Give $h_n$ weight $n$, and give $B_0$ weight zero.
+Let $F_NP$ be the $B_0$-span of words of weight at most $N$,
+and set $F_NP=0$ for $N<0$.
+These subspaces form an increasing filtration, meaning a nested
+sequence preserved by the differential.
+The quadratic part $d_0$ of the differential preserves weight,
+while $dh_1=s^2$ lowers it.
+
+Give $h\in K$ weight one and retain weight zero on $B_0$.
+The corresponding filtration is
+\[
+ F_NK=
+ \begin{cases}
+ 0,&N<0,\\
+ B_0,&N=0,\\
+ K=B_0\oplus B_0h,&N\geq1.
+ \end{cases}
+\]
+The differential $dh=s^2$ lowers weight, so it preserves this
+filtration. The map $\pi$ also preserves the filtrations:
+it sends $h_1$ to $h$, each $h_n$ with $n\geq2$ to zero,
+and fixes $B_0$.
+
+The quotients $\operatorname{gr}_NP=F_NP/F_{N-1}P$ form the
+associated graded complex of $P$, with differential $d_0$.
+The analogous quotients define $\operatorname{gr}_NK$.
+Their differential is zero because $dh=s^2$ lowers weight.
+The filtered map $\pi$ induces
+$\operatorname{gr}_N\pi:\operatorname{gr}_NP\to
+\operatorname{gr}_NK$ on these quotients.
+
+At weight $N\geq1$, the words are indexed by compositions
+$N=n_1+\cdots+n_\ell$ into positive integers.
+Identify a word with the subset of cuts
+\[
+ \{n_1,n_1+n_2,\ldots,n_1+\cdots+n_{\ell-1}\}
+ \subseteq\{1,\ldots,N-1\}.
+\]
+
+Let
+\[
+ L_N=B_0\otimes_k\Lambda_k(e_1,\ldots,e_{N-1})
+\]
+as a $B_0$-module.
+The exterior factor has basis $e_{j_1}\wedge\cdots\wedge e_{j_q}$
+indexed by increasing subsets. Multiplication orders concatenated
+symbols with the sign of their permutation, and a repeated symbol
+gives zero.
+For homogeneous $b\in B_0$, assign
+\[
+ \bigl|b\,e_{j_1}\wedge\cdots\wedge e_{j_q}\bigr|
+ =|b|+q+1-2N.
+\]
+Send each word to the increasing exterior monomial of its cut
+subset, and extend this map $B_0$-linearly.
+It is a degree-preserving bijection $\operatorname{gr}_NP\to L_N$.
+
+Splitting the $k$th factor inserts a cut after $k-1$ existing cuts.
+The preceding odd factors contribute $(-1)^{k-1}$, and the generator
+differential contributes a minus sign.
+Thus the differential corresponds to
+\[
+ d_0=-\omega\wedge(-),\qquad\omega=e_1+\cdots+e_{N-1}.
+\]
+
+For $N\geq2$, define the $B_0$-linear map $\iota$ to remove $e_1$
+from an increasing monomial containing it and to give zero otherwise.
+The exterior relations give
+\[
+ \iota(\omega\wedge x)+\omega\wedge\iota(x)=x.
+\]
+Indeed, the $e_1$ summand contributes $x$, while every other
+summand appears twice with opposite signs. Thus $c=-\iota$ satisfies
+$d_0c+cd_0=1$. In composition notation this contraction is
+\[
+ c(h_1h_{n_2}\cdots h_{n_\ell})
+ =-h_{1+n_2}h_{n_3}\cdots h_{n_\ell},
+\]
+and it is zero if the first part exceeds one.
+
+Every weight at least two is therefore acyclic.
+Weights zero and one contribute $B_0$ and $B_0h_1$.
+The associated-graded map of $\pi$ is the identity in those two
+weights, and has acyclic source in the remaining weights.
+
+To pass from weights to the full complex, form the cone of $\pi$.
+Its degree-$j$ part is $K^j\oplus P^{j+1}$, with differential
+\[
+ d(y,x)=(d_Ky+\pi x,-d_Px).
+\]
+
+Give this cone the filtration
+\[
+ F_N\operatorname{Cone}(\pi)^j=F_NK^j\oplus F_NP^{j+1}.
+\]
+Here $F_NK^j=F_NK\cap K^j$ and $F_NP^{j+1}=F_NP\cap P^{j+1}$.
+The differential preserves this filtration because $d_K,d_P,\pi$
+preserve their filtrations. Taking the two component classes gives
+an isomorphism of complexes
+\[
+ \operatorname{gr}_N\operatorname{Cone}(\pi)
+ \cong\operatorname{Cone}(\operatorname{gr}_N\pi).
+\]
+The displayed cone differential gives the differential on both sides.
+
+At weights zero and one, the cone of the identity contracts by
+$(y,x)\mapsto(0,y)$.
+At higher weights its target is zero, so the contraction is $-c$
+on the shifted source.
+Thus every associated graded piece of the cone is acyclic.
+
+For any cycle in this cone, choose its greatest nonzero weight.
+Associated-graded acyclicity gives a primitive for that component.
+Subtract its differential to obtain a cycle of smaller greatest weight.
+Repeating reaches weight zero and then zero after finitely many steps.
+Every element has finite weight support, so the argument terminates.
+
+If $y\in K^j$ is a cycle, then $(y,0)$ is a cone cycle.
+Acyclicity gives
+\[
+ (y,0)=d(z,x)=(d_Kz+\pi x,-d_Px).
+\]
+Thus $x$ is closed and $[y]=H(\pi)[x]$, proving surjectivity.
+
+If $x\in P^j$ is closed and $\pi x=d_Ky$, then $(-y,x)$ is a
+cone cycle.
+Writing $(-y,x)=d(z,w)$ gives $x=-d_Pw$.
+This proves injectivity.
+
+The map $K\to B_0/(s^2)$ sending $h$ to zero is a
+quasi-isomorphism. Its odd differential is multiplication by $s^2$,
+which is injective, and its even quotient is $B_0/(s^2)$.
+Its composite with $\pi$ is $\varepsilon$.
+Thus $H^*(P)=B_0/(s^2)$, generated by the coefficient classes.
+The map $\Phi$ fixes these classes and maps them to the same
+generators of $H^*(A)=B_0/(s^2)$. Hence $\Phi$ is also a
+quasi-isomorphism.
+
+\begin{theorem}\label{thm:ha-truncation-formal}
+For every $r\geq1$, the nonpositive truncation $\tau_{\leq0}C_r$
+is formal over $k[t,u]$. Its cohomology is $k[t,u]/(t^{2r})$,
+and~\eqref{eq:ha-positive-zigzag} is an explicit formality zigzag.
+\end{theorem}
+
+The same construction and proof work over every commutative
+coefficient ring in which $2$ is invertible.
+Multiplication by $t^r$ is injective over such a ring because it
+shifts polynomial coefficients. The contraction uses only signs,
+and the numbers $a_n$ are integers before mapping into the ring.
+The inverse of $2$ is required when eliminating $v=s/2$.
+For example, in characteristic two the cohomology instead has the
+presentation $k[t,u,v]/(v^2,t^r)$, so that elimination is unavailable.
+
+\section{Localizing at an even cycle}
+\label{sec:ha-localization}
+
+The inclusion $A\hookrightarrow C_r$ omits $z$ but contains $v=uz$.
+After $u$ becomes invertible, the equation $z=u^{-1}v$ recovers
+the omitted generator.
+
+Let $C$ be a graded algebra with a central element $u$ of degree $-2$.
+Its localization consists of fractions $u^{-n}a$, with $n\geq0$.
+Equality means
+\[
+ u^{-n}a=u^{-m}b
+ \quad\Longleftrightarrow\quad
+ u^\ell(u^ma-u^nb)=0
+ \quad\text{for some }\ell\geq0.
+\]
+Addition uses a common denominator, and
+\[
+ (u^{-n}a)(u^{-m}b)=u^{-(n+m)}ab.
+\]
+A homogeneous fraction has degree $|a|+2n$.
+
+If $C$ has differential $D$ with $Du=0$, set
+$D(u^{-n}a)=u^{-n}Da$.
+These operations respect fraction equality: multiplying an equality
+by a numerator uses centrality, and differentiating it uses $Du=0$
+and the even degree of $u$.
+The differential still squares to zero and satisfies the Leibniz rule,
+as follows by applying those identities to the numerators.
+Only finite sums and finite denominators occur.
+
+The displayed equation for $z$ gives an isomorphism
+\[
+ A[u^{-1}]\longrightarrow C_r[u^{-1}].
+\]
+Its inverse sends $z$ to $u^{-1}v$ and preserves $t,\tau,u$.
+The relation $z^2=0$ and the formula for $D\tau$ are preserved
+because $v^2=0$ and $uz=v$.
+
+Localization commutes with cohomology.
+Sending a fraction of a closed representative to its class defines
+an algebra map
+\[
+ H^*(C)[u^{-1}]\longrightarrow H^*(C[u^{-1}]).
+\]
+A boundary in the numerator maps to a boundary, and the fraction
+relation makes the map independent of the representative fraction.
+If $u^{-n}a$ is closed, then $u^mDa=0$ for some $m\geq0$.
+Thus
+\[
+ u^{-n}a=u^{-(n+m)}u^ma
+\]
+has a closed numerator, proving surjectivity.
+
+For injectivity, let $a$ be closed and suppose the image of
+$u^{-j}[a]$ is a boundary.
+Multiplying by the invertible cycle $u^j$ gives
+$a=D(u^{-n}b)$ for some $n\geq0$.
+Fraction equality gives
+\[
+ u^m(u^na-Db)=0
+\]
+for some $m\geq0$.
+Hence $u^{m+n}a=D(u^mb)$ before localization, so
+$u^{-j}[a]=0$ in $H^*(C)[u^{-1}]$.
+The same argument applies to a complex of graded $k[u]$-modules.
+
+Applying this to the two quasi-isomorphisms in
+\eqref{eq:ha-positive-zigzag} gives
+\[
+ k[t,u,u^{-1}]/(t^{2r})
+ \xleftarrow{\ \simeq\ }P[u^{-1}]
+ \xrightarrow{\ \simeq\ }C_r[u^{-1}].
+\]
+
+This is a zigzag over $k[t,u,u^{-1}]$.
+In the cohomology of its right-hand algebra,
+\[
+ z=\frac{t^r}{2u},\qquad z^2=0
+ \quad\Longleftrightarrow\quad t^{2r}=0.
+\]
+Thus the localized full algebra is formal over the displayed
+coefficient ring for every $r\geq1$.
+These maps specify the action of $t,u,u^{-1}$.
+They do not assert formality with an additional fixed action of $z$.
+
+The nonformality obstruction uses both cohomology relations
+$t^r=2uz$ and $z^2=0$.
+Truncation removes $z$ from the algebra.
+After localization, its cohomology class satisfies $z=t^r/(2u)$.
+The displayed zigzags prove formality for these changed algebras.
+
+\section{Characteristic two and the fixed coefficient action}
+\label{sec:ha-characteristic-two}
+
+Let $k$ now be a field of characteristic two, and retain the defining
+formulas for $C_r$. Its differential reduces to $D\tau=t^r$.
+The relation coupling $u$ and $z$ in the differential has disappeared.
+The full algebra, its nonpositive truncation, and its localization
+therefore belong to the family $X_r(B,u)$.
+
+Set $A_r=\tau_{\leq0}C_r$, and define the even coefficient algebras
+\[
+ B_C=k[u,z]/(z^2),\qquad B_A=k[u,v]/(v^2),\qquad
+ B_L=k[u,u^{-1},z]/(z^2),
+\]
+with $|u|=-2$, $|z|=2$, and $|v|=0$.
+All have zero differential, and $u$ is nonzero in each.
+Their presentations give
+\[
+ \begin{split}
+ C_r&=X_r(B_C,u),\\
+ A_r&=X_r(B_A,u),\\
+ C_r[u^{-1}]&=X_r(B_L,u).
+ \end{split}
+\]
+The first identity follows by separating the even and odd powers
+of $\tau$.
+
+For the second identity, the nonpositive words are $\tau^n$ and
+$\tau^{n+2}z$, with $n\geq0$.
+Fix $t,\tau$, and send $v$ to $uz$, so $\tau^nv$ maps to $\tau^{n+2}z$.
+These are bijections of the displayed bases, preserving products and
+the differential $D\tau=t^r$.
+For the third identity, adjoining the central inverse $u^{-1}$
+retains the decomposition into even and odd powers of $\tau$.
+The equality $\tau^{-1}=\tau u^{-1}$ introduces no further generators.
+
+The common cohomology calculation gives
+\[
+ \begin{split}
+ H^*(C_r)&=k[t,u,z]/(t^r,z^2),\\
+ H^*(A_r)&=k[t,u,v]/(t^r,v^2),\\
+ H^*(C_r[u^{-1}])&=k[t,u,u^{-1},z]/(t^r,z^2).
+ \end{split}
+\]
+In particular, the class of $u$ survives in all three algebras.
+
+\begin{theorem}\label{thm:ha-characteristic-two}
+Over a field of characteristic two, each of $C_r$, $A_r$, and
+$C_r[u^{-1}]$ is formal over $k$ exactly when $r=1$.
+Each is nonformal over the central coefficient ring $k[t]$ for
+every $r\geq1$.
+Consequently $A_r$ is nonformal over $k[t,u]$, and
+$C_r[u^{-1}]$ is nonformal over $k[t,u,u^{-1}]$, with their central
+coefficient actions fixed.
+\end{theorem}
+
+\begin{proof}
+The three presentations satisfy the hypotheses of
+Theorem~\ref{thm:ha-common-model-formality}.
+That theorem gives both the formality classifications over $k$ and
+the nonformality over central $k[t]$.
+A zigzag fixing either of the larger coefficient rings would also
+fix $k[t]$, so it is excluded.
+\end{proof}
+
+For $r=1$, the inclusions of $B_C,B_A,B_L$ into their respective
+algebras give the asserted formality over $k$.
+Their source cohomology algebras have $t=0$, while the target
+algebras contain the nonzero element $t=D\tau$.
+Thus these inclusions do not preserve the chain-level action of $k[t]$.
+The square class in Theorem~\ref{thm:ha-common-model-formality}
+excludes every comparison that does preserve it.
+
+For every field, $C_r$ is therefore formal over $k$ exactly when
+$r=1$.
+The algebras $A_r$ and $C_r[u^{-1}]$ are formal over $k$ exactly
+when $2\ne0$ in $k$ or $r=1$.
+Their formality over the respective central coefficient rings
+$k[t,u]$ and $k[t,u,u^{-1}]$ holds exactly when $2\ne0$ in $k$.
+
+\section{Cohomology under reduction of coefficients}
+\label{sec:ha-integral-reduction}
+
+Cohomology can commute with every extension of coefficients while
+formality changes under reduction.
+An algebra over the integers with the same presentation as the
+nonpositive truncation exhibits this distinction.
+Fix $r\geq2$, and put
+\[
+ T_{\mathbb Z}=(\mathbb Z[u,v]/(v^2))[t],
+ \qquad |u|=-2,\quad |v|=|t|=0.
+\]
+Define
+\[
+ A_{\mathbb Z}=T_{\mathbb Z}\oplus\tau T_{\mathbb Z},
+ \qquad |\tau|=-1,\qquad \tau^2=u,
+\]
+with $\tau$ commuting with $T_{\mathbb Z}$.
+
+The multiplication and differential are
+\[
+ \begin{split}
+ (a+\tau b)(c+\tau e)&=ac+ube+\tau(ae+bc),\\
+ d(a+\tau b)&=(t^r-2v)b.
+ \end{split}
+\]
+Equivalently, the underlying algebra is
+$T_{\mathbb Z}\langle\tau\rangle/(\tau^2-u)$.
+Its differential kills $T_{\mathbb Z}$ and sends $\tau$ to $t^r-2v$.
+The latter element commutes with $\tau$, so
+$d(\tau^2-u)=(t^r-2v)\tau-\tau(t^r-2v)=0$.
+Thus the graded Leibniz rule descends to this quotient, and the
+displayed differential gives $d^2=0$.
+
+For a commutative ring $S$, set
+$A_S=A_{\mathbb Z}\otimes_{\mathbb Z}S$.
+The tensor product has the same presentation over $S$, with the
+integer $2$ interpreted in $S$.
+Indeed, the words $u^av^jt^i$ and $\tau u^av^jt^i$, with
+$a,i\geq0$ and $j=0,1$, give a free abelian basis before extending
+coefficients. Extending this basis and the displayed structure
+formulas gives precisely that presentation over $S$.
+
+The polynomial $t^r-2v$ is monic in $t$ over $S[u,v]/(v^2)$.
+Its multiplication is therefore injective, and division gives
+\[
+ H^*(A_S)=S[u,v,t]/(v^2,t^r-2v).
+\]
+This cohomology has no odd-degree part.
+Its normal representatives form the free $S$-module on
+\[
+ u^av^jt^i,\qquad a\geq0,\quad j=0,1,\quad 0\leq i<r.
+\]
+The degree of this monomial is $-2a$.
+In particular, $H^{-2a}(A_{\mathbb Z})$ is free abelian of rank
+$2r$ for every $a\geq0$, and all other degrees vanish.
+
+In degree zero, the relation $t^r=2v$ gives $t^{2r}=4v^2=0$.
+Thus the scalar map factors as
+\[
+ \pi_0:\mathbb Z[t]/(t^{2r})\longrightarrow H^0(A_{\mathbb Z}).
+\]
+Use the ordered bases
+\[
+ (1,t,\ldots,t^{2r-1})
+ \quad\text{and}\quad
+ (1,t,\ldots,t^{r-1},v,vt,\ldots,vt^{r-1})
+\]
+for its source and target.
+For $0\leq i<r$, the first $r$ basis vectors map to $t^i$,
+and the remaining vectors satisfy $\pi_0(t^{r+i})=2vt^i$.
+Writing $I_r$ for the $r$-by-$r$ identity matrix, the matrix of $\pi_0$ is
+\[
+ \begin{pmatrix}I_r&0\\0&2I_r\end{pmatrix}.
+\]
+
+Multiplication by $2$ is injective on $\mathbb Z$, so $\pi_0$ is injective.
+Its cokernel is $(\mathbb Z/2\mathbb Z)^r$.
+Over the rational field $\mathbb Q$, the same matrix is invertible.
+Let $\mathbb F_2=\mathbb Z/(2)$.
+Over this field, the last block is zero.
+The scalar comparison over $\mathbb F_2$ therefore has the
+$r$-dimensional kernel
+\[
+ \operatorname{span}_{\mathbb F_2}
+ \{t^r,t^{r+1},\ldots,t^{2r-1}\}.
+\]
+
+Consequently the scalar kernels over $\mathbb Z$ and $\mathbb Q$
+are $(t^{2r})$, while the scalar kernel over $\mathbb F_2$ is $(t^r)$.
+These are also the ideals that annihilate the full cohomology:
+a scalar kills every class exactly when it kills the unit.
+The same normal cohomology basis survives the reduction, while the
+scalar comparison loses injectivity.
+
+\begin{corollary}\label{cor:ha-formality-under-reduction}
+For every commutative ring $S$, the canonical map
+\[
+ H^*(A_{\mathbb Z})\otimes_{\mathbb Z}S
+ \longrightarrow H^*(A_{\mathbb Z}\otimes_{\mathbb Z}S)
+\]
+is an isomorphism.
+The algebra $A_{\mathbb Z}\otimes_{\mathbb Z}\mathbb Q$ is formal
+over $\mathbb Q$, whereas
+$A_{\mathbb Z}\otimes_{\mathbb Z}\mathbb F_2$ is nonformal over
+the two-element field $\mathbb F_2$.
+\end{corollary}
+
+\begin{proof}
+The canonical map sends $[x]\otimes s$ to $[x\otimes s]$.
+It is multiplicative by the tensor-product multiplication.
+It sends each displayed normal-basis class to the corresponding
+normal-basis class over $S$.
+These are free-module bases on both sides, so the map is an isomorphism.
+This proof imposes no flatness condition on $S$.
+
+Over $\mathbb Q$, the presentation of $A_S$ is the nonpositive
+truncation model in Theorem~\ref{thm:ha-truncation-formal}.
+Its explicit zigzag proves formality.
+Over $\mathbb F_2$, the differential is $d\tau=t^r$, so
+\[
+ A_{\mathbb F_2}
+ =X_r\bigl(\mathbb F_2[u,v]/(v^2),u\bigr).
+\]
+Theorem~\ref{thm:ha-common-model-formality} proves nonformality because
+$u\ne0$ and $r\geq2$.
+\end{proof}
+
+Define $P_{\mathbb Z}$ and
+$\Phi_{\mathbb Z}:P_{\mathbb Z}\to A_{\mathbb Z}$ by the integer
+formulas in~\eqref{eq:ha-semifree-algebra} and~\eqref{eq:ha-positive-zigzag},
+with $B_0=\mathbb Z[t,u]$ and $s=t^r$.
+The recurrence makes $\Phi_{\mathbb Z}$ a chain map without dividing by two.
+The $B_0$-linear weight contraction and the finite cone argument use
+only integer signs, while multiplication by $t^{2r}$ is injective.
+They therefore give
+\[
+ H^*(P_{\mathbb Z})=\mathbb Z[t,u]/(t^{2r}).
+\]
+
+The map $\Phi_{\mathbb Z}$ fixes $t,u$.
+Under the normal-basis identifications, its cohomology map in degree
+$-2a$ is $u^a\pi_0$, with matrix $\operatorname{diag}(I_r,2I_r)$.
+The same contraction computes $H^*(P_{\mathbb Z}\otimes S)$
+for $S=\mathbb Q$ and $S=\mathbb F_2$.
+Thus this cohomology comparison is an isomorphism over $\mathbb Q$
+and is singular over $\mathbb F_2$, although the cohomology of
+$A_{\mathbb Z}$ commutes with both extensions of coefficients.
+The fourth-operation obstruction excludes every replacement
+formality zigzag over $\mathbb F_2$.
+
+\section{The exact coefficient-ring boundary}
+\label{sec:ha-ring-formality}
+
+The coefficient two in the relation $t^r=2v$ determines both the
+fourth-operation detector and the scalar comparison matrix.
+We now replace it by an arbitrary scalar and determine which
+property of that scalar permits formality.
+Let $S$ be a commutative unital ring, let $\kappa\in S$, and let
+$r\geq1$ be an integer.
+All algebras and maps in this section have central $S$-action,
+and all tensor products and polynomials are algebraic.
+An element is a unit if it has a multiplicative inverse, and
+$S^\times$ denotes the set of units.
+The zero ring is allowed, with $0=1$ and its unique element a unit.
+
+Put
+\[
+ B_S=S[u,v]/(v^2),\qquad T_S=B_S[t],\qquad f_\kappa=t^r-\kappa v,
+ \qquad |u|=-2,\quad |v|=|t|=0.
+\]
+Define
+\[
+ A_\kappa=A(S,\kappa,r)=T_S\oplus\tau T_S,
+ \qquad |\tau|=-1,\qquad\tau^2=u,
+\]
+where $\tau$ commutes with $T_S$, and set
+\[
+ \begin{split}
+ (a+\tau b)(c+\tau e)&=ac+ube+\tau(ae+bc),\\
+ d(a+\tau b)&=f_\kappa b.
+ \end{split}
+\]
+The quotient $T_S\langle\tau\rangle/(\tau^2-u)$ gives this
+associative product and unit.
+There is no imposed relation $2\tau^2=0$.
+The degree-one differential descends by the graded Leibniz rule,
+since $d(\tau^2-u)=f_\kappa\tau-\tau f_\kappa=0$,
+and its displayed formula squares to zero.
+
+Multiplication by $f_\kappa$ is injective on $T_S$.
+Indeed, multiplying a nonzero polynomial by this monic polynomial
+retains a nonzero leading coefficient, even when $S$ has zero divisors.
+Consequently
+\[
+ H_\kappa:=H^*(A_\kappa)
+ =S[u,v,t]/(v^2,t^r-\kappa v),\qquad H_\kappa^{\mathrm{odd}}=0.
+\]
+Monic division gives the $S$-basis
+\[
+ u^av^jt^i,\qquad a\geq0,\quad j=0,1,\quad 0\leq i<r.
+\]
+The monomial has degree $-2a$, so each $H_\kappa^{-2a}$ is free
+on the $2r$ displayed generators, and all other degrees vanish.
+For the zero ring these statements mean equalities of zero modules.
+
+\begin{theorem}\label{thm:ha-ring-truncation-formality}
+For every commutative unital ring $S$, scalar $\kappa\in S$, and
+integer $r\geq1$,
+\[
+ A(S,\kappa,r)\text{ is formal over }S
+ \quad\Longleftrightarrow\quad
+ r=1\ \text{or}\ \kappa\in S^\times.
+\]
+Here formality is in the category of unital associative differential
+graded algebras with central $S$-action, and means a finite zigzag
+of unital $S$-linear quasi-isomorphisms to cohomology with zero differential.
+When $r=1$, a formality map preserves the action of $B_S$.
+When $\kappa$ is a unit, a formality zigzag preserves the action of $S[t,u]$.
+\end{theorem}
+
+Passing a hypothetical zigzag to $S/\kappa S$ by ordinary tensor
+product would not prove the negative implication.
+Even free cohomology does not ensure that a quasi-isomorphism
+survives such a tensor product.
+For an explicit example, let $L$ be the complex
+\[
+ L^{-2}=\mathbb Z\xrightarrow{\ 2\ }L^{-1}=\mathbb Z
+ \xrightarrow{\ \bmod 2\ }L^0=\mathbb Z/2,
+\]
+with zero terms in other degrees.
+Its first map is injective, the kernel of its second map is $2\mathbb Z$,
+and its second map is surjective, so $L$ is acyclic.
+
+Form the differential graded algebra $\mathbb Z\oplus L$ by
+putting all products of two elements of $L$ equal to zero and
+using the usual scalar action of $\mathbb Z$.
+Explicitly,
+\[
+ (s,x)(t,y)=(st,sy+tx),\qquad d(s,x)=(0,dx).
+\]
+For factors $(s,x),(t,y),(w,z)$, both triple products have scalar
+component $stw$ and $L$-component $stz+swy+twx$.
+Thus the product is associative.
+The unit is $(1,0)$, and the differential satisfies the Leibniz rule:
+scalar factors have degree zero, and every product within $L$ is zero.
+The projection $\mathbb Z\oplus L\to\mathbb Z$ is therefore a
+unital quasi-isomorphism with free cohomology.
+
+After tensoring with $\mathbb F_2$, the ideal complex becomes
+\[
+ \mathbb F_2\xrightarrow{\ 0\ }\mathbb F_2
+ \xrightarrow{\ 1\ }\mathbb F_2.
+\]
+It has $H^{-2}=\mathbb F_2$, so the tensored projection is not
+a quasi-isomorphism.
+The acyclic kernel $L$ also has no contraction: in degree zero a
+contraction would supply a section $\mathbb Z/2\to\mathbb Z$
+of the quotient map, but every such homomorphism is zero.
+The projective-source transport proof works over $S$ throughout,
+so it avoids both of these failed implications.
+
+\begin{proof}[Proof of Theorem~\ref{thm:ha-ring-truncation-formality}]
+For the zero ring, all the displayed algebras are zero and $\kappa$
+is a unit, so the conclusion holds.
+Assume henceforth that $S$ is nonzero.
+Let $i_\kappa:H_\kappa\to T_S$ select the normal representative,
+and let $p_\kappa:A_\kappa\to H_\kappa$ take the class of the
+even component and kill the odd component.
+Set
+\[
+ h_\kappa(a)=\tau\frac{a-i_\kappa p_\kappa(a)}{f_\kappa},
+ \qquad h_\kappa(\tau b)=0.
+\]
+Monic division gives
+\[
+ dh_\kappa+h_\kappa d=1-i_\kappa p_\kappa,\qquad
+ p_\kappa i_\kappa=1,\qquad
+ h_\kappa^2=h_\kappa i_\kappa=p_\kappa h_\kappa=0.
+\]
+
+These maps give a transferred minimal structure over $S$ by the
+recursion~\eqref{eq:ha-transfer-recursion}.
+The defect calculation in Proposition~\ref{prop:ha-transfer} uses
+only this contraction and the signed coalgebra identities already
+proved over $S$ in Section~\ref{sec:ha-transport}.
+Its final injectivity step also holds: $I=si_\kappa s^{-1}$ has
+left inverse $P=sp_\kappa s^{-1}$, so
+$P^{\otimes n}I^{\otimes n}=1$ over $S$.
+Taking the greatest nonzero input length again makes the coalgebra
+map injective and forces the transferred coderivation to square to zero.
+Thus this explicit contraction supplies the minimal model.
+
+Define the degree-zero, $B_S$-bilinear defect $F_\kappa$ by
+\[
+ i_\kappa(a)i_\kappa(b)-i_\kappa(ab)
+ =f_\kappa\,i_\kappa F_\kappa(a,b).
+\]
+For $0\leq i,j<r$, it has the formula
+\[
+ F_\kappa(t^i,t^j)=
+ \begin{cases}
+ t^{i+j-r},&i+j\geq r,\\
+ 0,&i+j<r.
+ \end{cases}
+\]
+When $i+j\geq r$, the identity
+$t^{i+j}=f_\kappa t^{i+j-r}+\kappa vt^{i+j-r}$ is the division
+formula, because $i+j-r<r$.
+When $i+j<r$, the product already has normal degree.
+The $B_S$-linearity of division proves the asserted bilinearity.
+
+For an even graded $S$-algebra, use $S$-linear Hochschild cochains
+and tensor products over $S$ in the differential and cup formulas
+of Section~\ref{sec:ha-hochschild}.
+The proofs of $\delta^2=0$ and the cup differential use only signed
+multilinear expansions, so they hold over $S$.
+The transfer gives $f_2=-\tau i_\kappa F_\kappa$.
+Every arity-three binary term has odd output and is killed by
+$p_\kappa,h_\kappa$, so $f_3=m_3=0$.
+
+Only the partition $(2,2)$ contributes at arity four.
+Its sign is negative, and the even input degrees introduce no
+additional tensor sign, so
+\[
+ m_4=-uF_\kappa\smile F_\kappa,\qquad \delta m_4=0.
+\]
+The second identity is the arity-five relation, with its common
+sign removed.
+In the smallest case $r=2$, the formula gives
+$m_4(t,t,t,t)=-u$, independently of $\kappa$.
+The distinction between scalars will arise from the Hochschild boundaries.
+
+Suppose $r\geq2$ and $A_\kappa$ is formal over $S$.
+The normal basis makes $H_\kappa$ degreewise free and therefore
+projective over $S$.
+Proposition~\ref{prop:ha-zigzag-transport} transports its fixed
+minimal model through the arbitrary formality zigzag to strict
+$H_\kappa$, using only arities through four.
+The linear component is an $S$-linear graded algebra automorphism
+by the arity-two equation.
+Composing with its inverse makes this component the identity,
+without fixing the original coordinates $t,u,v$ along the zigzag.
+
+Evenness forces the second comparison component to vanish.
+The arity-four equation therefore gives
+\[
+ m_4=\delta K
+\]
+for an $S$-linear degree-minus-two cochain
+$K:H_\kappa^{\otimes_S3}\to H_\kappa$.
+Put $a=t^{r-1}$.
+The three adjacent products of $(a,t,a,t)$ are all $\kappa v$, and
+\[
+ F_\kappa(a,t)=1,\qquad m_4(a,t,a,t)=-u.
+\]
+
+The assignment $t,v\mapsto0$ defines a graded algebra map
+$H_\kappa\to S[u]$, since it sends both defining relations to zero.
+On degree minus two, compose it with $bu\mapsto b$ for $b\in S$
+to obtain
+\[
+ \lambda:H_\kappa^{-2}\longrightarrow S.
+\]
+Thus $\lambda(u)=1$ and $\lambda(tH_\kappa^{-2})=0$.
+In terms of the normal basis, $\lambda$ extracts the coefficient
+of $u$ with no $v$ or $t$ factor.
+
+The Hochschild differential on the chosen tuple is
+\[
+ \begin{split}
+ (\delta K)(a,t,a,t)
+ ={}&aK(t,a,t)+K(a,t,a)t\\
+ &+\kappa\bigl(-K(v,a,t)+K(a,v,t)-K(a,t,v)\bigr).
+ \end{split}
+\]
+The three interior products equal $\kappa v$, and $S$-linearity
+extracts $\kappa$ with the displayed alternating signs.
+Because $r\geq2$, the element $a$ is divisible by $t$, so
+$\lambda$ kills both exterior terms.
+Consequently $m_4=\delta K$ implies
+\[
+ -1=\kappa b,\qquad
+ b=\lambda\bigl(-K(v,a,t)+K(a,v,t)-K(a,t,v)\bigr)\in S.
+\]
+Thus $-b$ is an inverse of $\kappa$.
+
+Equivalently, the functional
+\[
+ P\longmapsto\lambda(P(a,t,a,t))\bmod\kappa S
+ \quad\text{on}\quad
+ C_S^{4,-2}(H_\kappa,H_\kappa)
+ =\operatorname{Hom}_S^{-2}(H_\kappa^{\otimes_S4},H_\kappa)
+\]
+kills every Hochschild boundary and sends $m_4$ to $-1$ in
+$S/\kappa S$.
+If $\kappa$ is not a unit, then $1\notin\kappa S$, so this quotient
+and this value are nonzero.
+Only the explicit cochain equation is evaluated modulo $\kappa S$.
+No arrow of the original zigzag is tensored with this quotient.
+
+For the first positive case, $r=1$, normal forms identify
+\[
+ H_\kappa=B_S[t]/(t-\kappa v)\cong B_S.
+\]
+The inclusion $B_S\hookrightarrow A_\kappa$ is a unital
+quasi-isomorphism and preserves the displayed $B_S$-action.
+The cohomological action of $t$ on its source is multiplication by
+$\kappa v$, while the target retains $t$ as a polynomial element.
+Thus this inclusion does not fix the chain-level action of $t$.
+
+To treat a unit $\kappa$, construct a comparison for every scalar
+$\kappa$ and compute when it is a quasi-isomorphism.
+Put $R_S=S[t,u]$ and $s=t^r$.
+Since $s^2=\kappa^2v^2=0$ in $H_\kappa$, the coefficient map
+$R_S\to H_\kappa$ factors through $R_S/(s^2)$.
+A primitive for $s^2$ in $A_\kappa$ is
+\[
+ w=\tau(s+\kappa v),\qquad dw=(s-\kappa v)(s+\kappa v)=s^2.
+\]
+Its square is $u(s^2+2\kappa sv)$, a nonzero element when $S\ne0$,
+because its coefficient of $ut^{2r}$ is one.
+
+An exterior generator $h$ with $h^2=0$ therefore cannot map to this
+primitive, and injectivity of $d$ on $\tau T_S$ makes the primitive unique.
+Instead, use the free associative algebra
+\[
+ P_S=R_S\langle h_1,h_2,\ldots\rangle,\qquad |h_n|=1-2n,
+\]
+with central coefficient ring $R_S$, zero differential on $R_S$, and
+\[
+ dh_1=s^2,\qquad
+ dh_n=-\sum_{\substack{i+j=n\\i,j\geq1}}h_ih_j\quad(n\geq2).
+\]
+Each differential is a finite expression in earlier generators.
+For $n\geq2$, the Leibniz rule gives
+\[
+ d^2h_n=-\sum_{i+j=n}(dh_i)h_j+\sum_{i+j=n}h_i(dh_j).
+\]
+The scalar terms cancel as $-s^2h_{n-1}+h_{n-1}s^2=0$,
+and the other terms are the two opposite sums of $h_ah_bh_c$ over
+$a+b+c=n$ with positive indices.
+Together with $d^2h_1=0$, this proves $d^2=0$.
+
+Use the integers $a_n$ defined by
+\[
+ a_1=1,\qquad a_n=-\sum_{i+j=n}a_ia_j\quad(n\geq2).
+\]
+They give unital graded $R_S$-algebra maps
+\[
+ R_S/(s^2)\xleftarrow{\ \varepsilon\ }P_S
+ \xrightarrow{\ \Phi_\kappa\ }A_\kappa
+\]
+by
+\[
+ \varepsilon(h_n)=0,\qquad
+ \Phi_\kappa(h_n)=a_n\tau u^{n-1}\bigl(s+(2n-1)\kappa v\bigr).
+\]
+The left coefficient map is the quotient, and the right coefficient
+map is the specified action on $A_\kappa$.
+The image of $h_n$ has degree $1-2n$.
+The left arrow commutes with the differential because its target
+has $s^2=0$.
+
+For the right arrow, $v^2=0$ gives
+\[
+ \begin{split}
+ d\Phi_\kappa(h_n)
+ &=a_nu^{n-1}(s-\kappa v)(s+(2n-1)\kappa v)\\
+ &=a_nu^{n-1}\bigl(s^2+2(n-1)\kappa sv\bigr).
+ \end{split}
+\]
+For $n=1$ this is $s^2$.
+For positive $i,j$ with $i+j=n$, multiplication gives
+\[
+ \begin{split}
+ \Phi_\kappa(h_i)\Phi_\kappa(h_j)
+ &=a_ia_j u^{n-1}
+   (s+(2i-1)\kappa v)(s+(2j-1)\kappa v)\\
+ &=a_ia_j u^{n-1}\bigl(s^2+2(n-1)\kappa sv\bigr).
+ \end{split}
+\]
+The recurrence proves $d\Phi_\kappa(h_n)=\Phi_\kappa(dh_n)$
+on every generator, for every scalar $\kappa$.
+In particular, the first two images satisfy
+$\Phi_\kappa(h_1)=w$ and $d\Phi_\kappa(h_2)=-w^2$.
+
+To compute the cohomology of $P_S$, put
+\[
+ K_S=R_S\oplus R_Sh,\qquad |h|=-1,\qquad h^2=0,\qquad dh=s^2.
+\]
+The square-zero relation is imposed in every characteristic.
+The graded Leibniz rule preserves it because $s^2h-hs^2=0$.
+The assignment $h_1\mapsto h$, $h_n\mapsto0$ for $n\geq2$
+defines a unital $R_S$-algebra map $\pi:P_S\to K_S$.
+It respects the differential: the image of $dh_2$ is $-h^2=0$,
+and each product in $dh_n$ for $n>2$ contains a generator with index
+at least two.
+
+Give $h_n$ weight $n$, give $h$ weight one, and give $R_S$ weight zero.
+The filtrations by weight at most $N$ and their cone filtration
+are those of Section~\ref{sec:ha-truncation}, now over $R_S$.
+At weight $N\geq1$, compositions of $N$ give the cut-module description
+\[
+ \operatorname{gr}_NP_S
+ \cong R_S\otimes_S\Lambda_S(e_1,\ldots,e_{N-1}),
+ \qquad |b\,e_{j_1}\wedge\cdots\wedge e_{j_q}|=|b|+q+1-2N
+\]
+for homogeneous $b\in R_S$.
+A split in the $k$th factor contributes $(-1)^{k-1}$ from the
+preceding odd factors and a minus sign from the generator differential.
+Hence the differential on this module is $-\omega\wedge(-)$,
+where $\omega=e_1+\cdots+e_{N-1}$.
+
+For $N\geq2$, let $\iota$ be the $R_S$-linear map removing $e_1$
+from an increasing exterior monomial containing it and giving zero otherwise.
+The $e_1$ term and cancellation of all other terms give
+\[
+ \iota(\omega\wedge x)+\omega\wedge\iota(x)=x.
+\]
+Thus $-\iota$ contracts every weight at least two over $S$.
+In weights zero and one, $\operatorname{gr}\pi$ is the identity.
+The associated graded cone is therefore acyclic, using the explicit
+identity-cone and shifted-source contractions already derived in
+Section~\ref{sec:ha-truncation}.
+
+For each cycle in the cone, subtract a differential lifting a primitive
+of its greatest nonzero weight component.
+The greatest weight strictly decreases, so the nonnegative filtration
+and finite support make this process terminate.
+The cone is acyclic, and the two cone equations in
+Section~\ref{sec:ha-truncation} prove that $\pi$ is a quasi-isomorphism.
+Finally, multiplication by $s^2=t^{2r}$ is injective on $R_S$, so
+\[
+ H^*(P_S)\cong H^*(K_S)\cong R_S/(s^2).
+\]
+The composite $P_S\to K_S\to R_S/(s^2)$ is $\varepsilon$,
+which is therefore a quasi-isomorphism for every $\kappa$.
+
+The right arrow fixes $t,u$, so its cohomology map is the scalar map
+\[
+ H(\Phi_\kappa):R_S/(s^2)\longrightarrow H_\kappa.
+\]
+In degree $-2a$, for every $a\geq0$, use the ordered bases
+\[
+ \begin{split}
+ &u^a(1,t,\ldots,t^{2r-1}),\\
+ &u^a(1,t,\ldots,t^{r-1},v,vt,\ldots,vt^{r-1})
+ \end{split}
+\]
+for its source and target.
+For $0\leq i<r$, the first $r$ vectors map to themselves,
+while $t^{r+i}$ maps to $\kappa vt^i$.
+Thus the matrix in every such degree is
+\[
+ \operatorname{diag}(I_r,\kappa I_r).
+\]
+
+Write $\operatorname{Ann}_S(\kappa)=\{b\in S:\kappa b=0\}$.
+The first block has zero kernel and cokernel, while each coordinate
+of the second block is multiplication by $\kappa$.
+Consequently, in every degree $-2a$,
+\[
+ \ker H(\Phi_\kappa)\cong\operatorname{Ann}_S(\kappa)^r,
+ \qquad
+ \operatorname{coker}H(\Phi_\kappa)\cong(S/\kappa S)^r.
+\]
+All other degrees have zero source and target.
+This map is an isomorphism exactly when $\kappa$ is a unit:
+a unit makes the second block invertible, while surjectivity gives
+$1\in\kappa S$ and hence an inverse.
+When $\kappa$ is a unit, both arrows in the displayed zigzag are
+therefore quasi-isomorphisms over $S[t,u]$, completing the proof.
+\end{proof}
+
+When $r=1$ and $\kappa$ is a nonunit, $\Phi_\kappa$ still fails
+to be a quasi-isomorphism, but the inclusion of $B_S$ proves formality.
+For $r\geq2$, the functional modulo $\kappa S$ excludes every
+replacement formality zigzag when this scalar map is not invertible.
+Thus the matrix tests the displayed comparison, while the fourth
+operation establishes the full nonexistence statement.
+
+The family with fixed coefficient two is the specialization
+\[
+ A_{S,r}=A(S,2\cdot1_S,r).
+\]
+It is formal over $S$ exactly when $r=1$ or $2$ is a unit in $S$.
+For $r\geq2$, the integral algebra $A_{\mathbb Z}$ of
+Section~\ref{sec:ha-integral-reduction} is nonformal over $\mathbb Z$,
+and its scalar extension to $S$ is formal exactly when $2$ becomes a unit.
+This scalar extension has $\kappa=2\cdot1_S$.
+An arbitrary scalar $\kappa$ defines a larger family and is not
+in general obtained by extending that fixed integral algebra.
+
+For $r\geq2$, $A(\mathbb Z/4,2,r)$ is nonformal, since its detector
+has value $-1=3$ modulo the ideal $2S=\{0,2\}$.
+The algebra $A(\mathbb Z/4,3,r)$ is formal for every $r$, since
+$3$ is a unit even though the ring contains a nonzero nilpotent.
+Over $\mathbb Z[1/2]$, the fixed-coefficient-two family is formal
+for every $r$.
+Over a field, the condition on $\kappa$ is simply $\kappa\ne0$,
+with the additional formal case $r=1$ for every $\kappa$.
+In particular, $A(\mathbb F_2,1,r)$ is formal for every $r$,
+whereas $A(\mathbb F_2,0,r)$ is nonformal for $r\geq2$.
+
+In any nonzero ring, a scalar annihilating a nonzero element cannot
+be a unit, because multiplication by a unit is injective.
+A nilpotent scalar cannot be a unit either, since an invertible
+nilpotent would force $1=0$.
+Such scalars therefore give nonformality for $r\geq2$.
+The criterion permits nilpotents elsewhere in the coefficient ring,
+as the positive example over $\mathbb Z/4$ shows.

@@ -1,0 +1,8 @@
+\documentclass{memoir}
+\usepackage{raeez-math-template}
+\mathtoolsset{showonlyrefs=false}
+\begin{document}
+\begingroup\mathtoolsset{showonlyrefs=true}Old text.\par\endgroup
+\begin{equation}x=1\label{eq:probe}\end{equation}
+Reference \eqref{eq:probe}, ordinary \ref{eq:probe}.
+\end{document}

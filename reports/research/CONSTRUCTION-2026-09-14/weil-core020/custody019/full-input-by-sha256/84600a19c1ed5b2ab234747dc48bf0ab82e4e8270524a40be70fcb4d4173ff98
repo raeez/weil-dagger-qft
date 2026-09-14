@@ -1,0 +1,588 @@
+\chapter{Free fields in two holomorphic dimensions}
+\label{chap:two-dimensional-free-fields}
+
+The residue module records which singular coefficients can occur
+near a collision. A field theory must also determine their
+coefficients from its kinetic operator. For a free theory this is
+an inverse problem: construct a homotopy for the field differential,
+then contract observables with its kernel.
+
+The Gaussian calculations of
+Chapter~\ref{chap:gaussian-observables} supply the algebra of
+contractions. Spatial dependence changes the finite covariance
+matrix into a differential kernel. On $\mathbb C^2$, that kernel
+is a one-form on the punctured space. Its residue pairs the
+two-variable jets constructed in
+Proposition~\ref{prop:ocr-residue-dual}.
+This pairing gives a Heisenberg algebra of free modes.
+A separate central three-input operation gives the abelian higher
+current algebra. We construct both, with their different degrees.
+
+\section{Fields and the holomorphic differential}
+
+Write $z_j=x_j+iy_j$, for $j=1,2$, and fix
+\[
+ \Omega=dz_1\wedge dz_2,\qquad
+ dV_4=dx_1\wedge dy_1\wedge dx_2\wedge dy_2.
+\]
+A smooth $(0,q)$-form is a sum of smooth functions multiplied by
+wedge products of $q$ of the symbols $d\bar z_1,d\bar z_2$.
+Write their space as $\Omega^{0,q}$.
+The wedge symbols anticommute.
+The differential
+\[
+ \bar\partial=\sum_{j=1}^2d\bar z_j\wedge\partial_{\bar z_j},
+ \qquad
+ \partial_{\bar z_j}=\tfrac12(\partial_{x_j}+i\partial_{y_j}),
+ \quad
+ \partial_{z_j}=\tfrac12(\partial_{x_j}-i\partial_{y_j}),
+\]
+squares to zero: the scalar derivatives commute, whereas the wedge
+symbols anticommute.
+A smooth function killed by $\bar\partial$ is holomorphic.
+
+Let $V$ be a finite-dimensional complex vector space and let
+$V^\vee=\operatorname{Hom}_{\mathbb C}(V,\mathbb C)$ be its dual.
+The cotangent pair consists of fields
+\[
+ \gamma\in\Omega^{0,\bullet}\otimes V,
+ \qquad
+ \beta\in\Omega^{2,\bullet}\otimes V^\vee[1].
+\]
+Here $\Omega^{2,q}=\Omega^{0,q}\wedge\Omega$.
+The shift is on the coefficient space.
+Thus the field-complex degrees are $q$ for $\gamma^{0,q}$ and
+$q-1$ for $\beta^{2,q}$.
+A component coordinate on a field space has the negative of that
+space's degree. Its ghost number is therefore $-q$ for $\gamma$
+and $1-q$ for $\beta$.
+Total degree in products of superfields means ghost number plus
+the antiholomorphic form degree.
+
+Take compact support whenever an integral uses both fields.
+The action and the odd pairing are
+\[
+ S_{\mathrm{free}}=\int_{\mathbb C^2}
+             \langle\beta,\bar\partial\gamma\rangle,
+ \qquad
+ \omega_{\mathrm{free}}=\int_{\mathbb C^2}
+             \langle\delta\beta,\delta\gamma\rangle.
+\]
+The angle brackets evaluate a covector on a vector, with the
+graded wedge signs. The variation symbol $\delta$ here varies
+fields; it is distinct from the spatial differential $\bar\partial$.
+The action selects $q_\beta+q_\gamma+1=2$.
+Its ghost number is $1-q_\beta-q_\gamma=0$.
+The pairing selects $q_\beta+q_\gamma=2$ and has degree $-1$.
+
+Integration by parts has no boundary term on compact supports.
+Varying the action therefore gives the linear field differential
+$Q=\bar\partial$ through the displayed odd pairing.
+The resulting classical master equation is the identity $Q^2=0$,
+with the pairing invariant under $Q$.
+All these statements concern the quadratic functional and its
+formal Batalin--Vilkovisky operations.
+
+\section{A Green homotopy with fixed metric conventions}
+
+To invert $Q$ up to homotopy, choose the coefficient inner product
+in which $d\bar z_1,d\bar z_2$ are orthogonal with squared norm
+$4$. Contraction $\iota_j$ deletes $d\bar z_j$ from a wedge word,
+with the sign of its position, and gives zero if it is absent.
+It satisfies
+\[
+ (d\bar z_i\wedge)\iota_j+\iota_j(d\bar z_i\wedge)
+ =\delta_{ij}.
+\]
+The formal adjoint of $Q$ is then
+\[
+ Q^{\mathrm{GF}}=-4\sum_j\partial_{z_j}\iota_j.
+\]
+The superscript denotes this chosen operator of degree $-1$.
+Using the contraction identity gives
+\begin{equation}\label{eq:c2-laplacian}
+ QQ^{\mathrm{GF}}+Q^{\mathrm{GF}}Q
+ =-4\sum_j\partial_{z_j}\partial_{\bar z_j}
+ =-\Delta_{\mathbb R^4},
+\end{equation}
+where $\Delta_{\mathbb R^4}$ is the sum of the four real second
+derivatives. Its negative is the positive Laplace operator.
+
+Let $r=|z|$ and define
+\[
+ G_4(z)=\frac1{4\pi^2r^2}.
+\]
+This function is locally integrable at zero: the radial volume
+element contains $r^3dr$, and $r^3r^{-2}$ is integrable.
+For a radial function $g(r)$, differentiating in Cartesian
+coordinates gives
+$\Delta g=g''+3r^{-1}g'$ away from zero.
+Thus $\Delta G_4=0$ there.
+The outward normal flux of $-\nabla G_4$ through the sphere of
+radius $r$ is
+\[
+ \frac1{2\pi^2r^3}\operatorname{area}(S^3_r)=1,
+ \qquad \operatorname{area}(S^3_r)=2\pi^2r^3.
+\]
+The area follows, for example, by evaluating the four-dimensional
+Gaussian integral in polar coordinates.
+Integration by parts outside a ball of radius $\epsilon$, followed
+by $\epsilon\to0$, therefore gives
+$(-\Delta)G_4=\delta_0$.
+Here $\delta_0$ denotes the distribution sending a smooth test
+function to its value at zero.
+
+For a compactly supported smooth form $f$, define convolution
+coefficientwise by
+$(G_4*f)(z)=\int G_4(z-w)f(w)\,dV_4(w)$.
+Distributional differentiation commutes with this convolution.
+Consequently
+\begin{equation}\label{eq:c2-green-homotopy}
+ H=Q^{\mathrm{GF}}(G_4*-),\qquad QH+HQ=1.
+\end{equation}
+The output need not have compact support.
+Equation~\eqref{eq:c2-green-homotopy} is an identity on the full
+Euclidean space with compactly supported inputs.
+
+The positive-time heat kernel is
+\[
+ k_\tau(z)=(4\pi\tau)^{-2}
+               \exp\bigl(-|z|^2/(4\tau)\bigr),\qquad\tau>0.
+\]
+The Gaussian integral gives its integral one.
+Differentiation verifies $\partial_\tau k_\tau=\Delta k_\tau$.
+Substitution $u=r^2/(4\tau)$ in its integral gives
+$\int_0^\infty k_\tau(z)d\tau=G_4(z)$ for $z\ne0$.
+The finite interval $\epsilon\le\tau\le L$ therefore gives a
+smooth homotopy kernel with differential $k_\epsilon-k_L$.
+
+\section{The normalized two-dimensional contraction}
+
+Fix the outward orientation on every sphere and put
+\begin{equation}\label{eq:c2-bm-kernel}
+ B(z)=\frac1{4\pi^2}
+ \frac{\bar z_1\,d\bar z_2-\bar z_2\,d\bar z_1}{|z|^4},
+ \qquad K(z)=B(z)\wedge\Omega.
+\end{equation}
+The numerator has one antiholomorphic differential.
+Thus $B$ has Dolbeault degree one.
+
+\begin{proposition}\label{prop:c2-normalized-kernel}
+The kernel satisfies
+\[
+ \bar\partial B=0\quad(z\ne0),\qquad
+ \int_{S^3_\epsilon}K=1,
+ \qquad \bar\partial K=\delta_0\,dV_4
+\]
+in the last equation as a current.
+\end{proposition}
+
+\begin{proof}
+Set $s=|z|^2$ and
+$A=\bar z_1d\bar z_2-\bar z_2d\bar z_1$.
+Then
+\[
+ \bar\partial A=2d\bar z_1\wedge d\bar z_2,
+ \qquad
+ \bar\partial s\wedge A=s\,d\bar z_1\wedge d\bar z_2.
+\]
+The two terms in $\bar\partial(s^{-2}A)$ cancel.
+
+On the sphere, $A\wedge\Omega$ is invariant under unitary
+coordinate changes. Such a change multiplies $A$ by the conjugate
+determinant and $\Omega$ by the determinant, whose product is one.
+At $(\epsilon,0)$ it equals
+$2\epsilon\,dy_1\wedge dx_2\wedge dy_2$.
+This is $2\epsilon$ times the outward surface measure there,
+and hence everywhere by unitary invariance.
+The area formula gives
+$(4\pi^2\epsilon^4)^{-1}(2\epsilon)(2\pi^2\epsilon^3)=1$.
+
+The coefficients of $K$ have size $O(r^{-3})$, so are locally
+integrable in four dimensions.
+For a test function, apply Stokes' formula outside the ball of
+radius $\epsilon$.
+The integral over its boundary tends to the value at zero.
+Indeed, replacing the test function by that value has error
+$O(\epsilon)$ times a bounded angular integral.
+Since $\partial K=0$ by its holomorphic top degree, this proves
+the stated $\bar\partial$ current identity.
+\end{proof}
+
+The orientation matters: $1/(2\pi i)^2=-1/(4\pi^2)$ would give
+mass $-1$ for the same numerator and outward sphere.
+With the convention~\eqref{eq:c2-bm-kernel}, the heat regularization is
+\[
+ B_{\epsilon,\infty}(z)
+ =B(z)\left[1-\left(1+\frac{|z|^2}{4\epsilon}\right)
+                   e^{-|z|^2/(4\epsilon)}\right].
+\]
+Differentiating the bracketed radial factor and using
+$d\bar z_1\wedge d\bar z_2\wedge\Omega=4dV_4$ gives
+\[
+ \bar\partial(B_{\epsilon,\infty}\wedge\Omega)
+ =k_\epsilon\,dV_4.
+\]
+The difference
+$B_{\epsilon,L}=B_{\epsilon,\infty}-B_{L,\infty}$
+therefore has differential $(k_\epsilon-k_L)dV_4$.
+
+For two points, the full kernel uses
+$d\overline{z_j-w_j}=d\bar z_j-d\bar w_j$.
+The ordered free contraction is normalized by
+\[
+ \beta_\lambda(z)\gamma_v(w)
+ \big|_{\mathrm{contraction}}
+ =\hbar\,\lambda(v)B(z-w),\qquad
+ v\in V,\quad\lambda\in V^\vee.
+\]
+This notation denotes the single paired term in the Wick expansion.
+The coefficient $\hbar$ is the formal loop parameter.
+Difference forms and the graded pairing determine the reversed
+contraction and the descendant components.
+The form degree one combines with the coefficient-field shifts
+to give the propagator total degree zero.
+
+The kernel is smooth at every nonzero point of either coordinate
+axis. Its pullback to the punctured line $z_2=0$ is zero, because
+both $\bar z_2$ and the pullback of $d\bar z_2$ vanish.
+A nonzero one-dimensional singular coefficient therefore requires
+a transverse residue operation such as the derived restriction
+constructed in Chapter~\ref{chap:ordered-collisions-residues}.
+
+\section{Residue derivatives and two-variable modes}
+
+For nonnegative integers $a,b$, define
+\[
+ B_{ab}=\frac{(-1)^{a+b}}{a!b!}
+              \partial_{z_1}^a\partial_{z_2}^bB.
+\]
+For a holomorphic function $f$ near a closed ball containing zero,
+Stokes' formula and Proposition~\ref{prop:c2-normalized-kernel} give
+$\int_{\partial D}f(z)K(z-w)=f(w)$ for $w$ in its interior.
+Differentiate this identity with respect to $w$ while keeping the
+boundary fixed. The kernel is smooth there, so differentiation
+passes under the integral. Since $\partial_wB(z-w)=-\partial_zB(z-w)$,
+\[
+ \int_{\partial D} f B_{ab}\wedge\Omega
+ =\frac1{a!b!}\partial_{z_1}^a\partial_{z_2}^bf(0).
+\]
+This is exactly the Taylor coefficient functional paired with
+$\rho_{ab}$ in Proposition~\ref{prop:ocr-residue-dual}.
+The smooth kernel on the puncture and the algebraic principal part
+therefore give the same normalized residue functional.
+The algebraic class has degree one on the puncture and degree two
+in the support complex.
+
+Let $A_0=\mathbb C[z_1,z_2]$ and let
+$P=\bigoplus_{a,b\ge0}\mathbb C e_{ab}$, where $e_{ab}$ denotes
+the principal part $[z_1^{-a-1}z_2^{-b-1}]$ without its volume symbol.
+Use the pairing
+\[
+ \langle e_{ab},z_1^mz_2^n\rangle
+ =\delta_{am}\delta_{bn}.
+\]
+Assign degree zero to $A_0$ and degree one to $P$.
+No arbitrary infinite sum of principal parts is allowed.
+
+\section{The free Heisenberg algebra and its representation}
+
+For a graded vector space, a Lie bracket of degree zero obeys
+$[u,v]=-(-1)^{|u||v|}[v,u]$ and the graded Jacobi identity
+\[
+ [u,[v,w]]=[[u,v],w]+(-1)^{|u||v|}[v,[u,w]].
+\]
+Introduce symbols $c(a,v)$ and $b(a,\lambda)$, linear in their
+arguments, with $a\in A_0\oplus P$.
+Their degrees are
+\[
+ \begin{array}{c|cccc}
+ \text{symbol}&c(f,v)&c(u,v)&b(f,\lambda)&b(u,\lambda)\\
+ \text{degree}&0&1&-1&0
+ \end{array}
+ \qquad(f\in A_0,\ u\in P).
+\]
+Add a degree-zero symbol $K$.
+An element is central when its bracket with every element is zero.
+Declare $K$ central, set the brackets of two $b$'s or two $c$'s
+to zero, and put
+\begin{equation}\label{eq:c2-heisenberg-bracket}
+ \begin{split}
+ [b(u,\lambda),c(f,v)]&=\lambda(v)\langle u,f\rangle K,\\
+ [b(f,\lambda),c(u,v)]&=\lambda(v)\langle u,f\rangle K.
+ \end{split}
+\end{equation}
+All other mixed brackets are zero, and reversed orders are given
+by graded antisymmetry.
+Every nonzero bracket has degree zero and central output.
+Every nested bracket therefore vanishes, which proves Jacobi.
+These formulas define the free complex-two-dimensional Heisenberg
+mode algebra $\mathsf H_{2,V}$.
+
+For $V=\mathbb C$, its even oscillator relation is
+\[
+ [b(e_{ab}),c(z_1^mz_2^n)]
+ =\delta_{am}\delta_{bn}K.
+\]
+There is one conjugate pair for each two-variable Taylor coefficient.
+The odd pair in~\eqref{eq:c2-heisenberg-bracket} obeys an
+anticommutator, since its two degrees are odd.
+
+Both signs can be realized directly.
+Form the polynomial algebra on even generators indexed by
+$A_0\otimes V$, and tensor it with the exterior algebra on
+degree-minus-one generators indexed by $A_0\otimes V^\vee$.
+An element involves finitely many such generators.
+Let $c(f,v)$ act by even multiplication and $b(f,\lambda)$ by
+odd multiplication. Let $b(u,\lambda)$ act by the corresponding
+even residue derivative, multiplied by $\hbar$.
+Let $c(u,v)$ act by the odd residue derivative, also multiplied by
+$\hbar$.
+An odd derivative deletes the corresponding exterior generator
+with its position sign.
+
+The ordinary derivative-multiplication commutator is evaluation.
+The odd derivative-multiplication anticommutator is evaluation,
+because moving the deleted generator through an exterior word
+cancels every other term.
+Thus the representation satisfies~\eqref{eq:c2-heisenberg-bracket}
+with $K$ acting as $\hbar$.
+Each operator is defined on every polynomial state by a finite sum.
+
+\section{A central operation with three inputs}
+
+The free oscillator pairing is bilinear.
+Abelian currents on a holomorphic surface also admit a central
+operation involving one singular coefficient and two functions.
+The two derivatives of those functions supply the holomorphic
+volume degree required by the residue.
+
+Put $A=\mathbb C[[z_1,z_2]]$ and define
+\[
+ \{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
+          -\partial_{z_2}f\,\partial_{z_1}g.
+\]
+The derivatives and products are formal and coefficientwise.
+A principal part tests only finitely many coefficients of this
+expression, so its residue is defined for all $f,g\in A$.
+
+Use the graded space with $A\oplus\mathbb CK$ in degree zero
+and $P$ in degree one.
+An $L_\infty$ algebra has graded antisymmetric operations
+$\ell_n$ of degree $2-n$.
+To state their identities, let $\operatorname{Sh}(i,n-i)$ consist
+of permutations $\sigma$ for which
+$\sigma(1)<\cdots<\sigma(i)$ and
+$\sigma(i+1)<\cdots<\sigma(n)$.
+For homogeneous inputs $v_1,\ldots,v_n$, let $\chi(\sigma;v)$
+be the sign obtained by exchanging adjacent inputs using the
+factor $-(-1)^{|v_a||v_b|}$ for each exchange.
+The generalized Jacobi identity, for each $n\ge1$, is
+\[
+ \sum_{i+j=n+1}(-1)^{i(j-1)}
+ \sum_{\sigma\in\operatorname{Sh}(i,n-i)}\chi(\sigma;v)
+ \ell_j\bigl(\ell_i(v_{\sigma(1)},\ldots,v_{\sigma(i)}),
+             v_{\sigma(i+1)},\ldots,v_{\sigma(n)}\bigr)=0.
+\]
+In particular, its first operation $\ell_1$ is a differential.
+For a family with only a central $\ell_3$, every such identity
+vanishes term by term: every possible inner operation is either
+zero or central, and a central input kills the outer operation.
+This supplies all identities for the following explicit family.
+
+Fix $\kappa\in\mathbb C$ and define
+\begin{equation}\label{eq:c2-ternary-residue}
+ \ell_3(u,f,g)=\kappa\operatorname{Res}
+                    \bigl(u\{f,g\}\Omega\bigr)K,
+ \qquad u\in P,\quad f,g\in A.
+\end{equation}
+Extend by graded antisymmetry.
+Set every other input degree pattern, every central input, and
+every $\ell_n$ with $n\ne3$ equal to zero.
+The input degree in~\eqref{eq:c2-ternary-residue} is one and its
+output degree is zero, so $\ell_3$ has the required degree $-1$.
+The central-output observation proves all higher identities.
+
+For monomials the operation is
+\begin{equation}\label{eq:c2-ternary-modes}
+ \ell_3(e_{ab},z_1^mz_2^n,z_1^pz_2^q)
+ =\kappa(mq-np)
+       \delta_{a,m+p-1}\delta_{b,n+q-1}K.
+\end{equation}
+Indeed, the determinant of derivatives is
+$(mq-np)z_1^{m+p-1}z_2^{n+q-1}$, and the residue extracts
+exactly the two indicated exponents.
+Terms requiring a negative index vanish.
+In particular,
+\[
+ \ell_3(e_{00},z_1,z_2)=\kappa K,
+ \qquad
+ \ell_3(e_{10},z_1^2,z_2)=2\kappa K.
+\]
+The latter survives even if the singular coefficient module is
+restricted to the annihilator of constant functions.
+
+This abelian higher current algebra has zero binary bracket.
+Its parameter $\kappa$ specifies a central three-input operation.
+Determining $\kappa$ from a quantum field theory requires a
+comparison with its current insertions and their three-point
+contractions. The free residue pairing alone does not specify
+that comparison.
+
+\section{Adding the two topological directions}
+
+The mixed local geometry is
+\[
+ X=\mathbb R_t\times\mathbb R_s\times\mathbb C^2_{z_1,z_2}.
+\]
+Its linear differential treats the real and holomorphic directions
+differently:
+\[
+ Q=dt\wedge\partial_t+ds\wedge\partial_s+\bar\partial.
+\]
+All four one-form symbols anticommute, so $Q^2=0$.
+The same contraction rule as above gives
+\[
+ Q\iota_{dt}+\iota_{dt}Q=\partial_t,\qquad
+ Q\iota_{ds}+\iota_{ds}Q=\partial_s,\qquad
+ Q\iota_{d\bar z_j}+\iota_{d\bar z_j}Q=\partial_{\bar z_j}.
+\]
+Thus real and antiholomorphic translations have explicit
+$Q$-homotopies. A holomorphic derivative need not act trivially
+on cohomology: $\partial_{z_1}$ sends the holomorphic function
+$z_1$ to $1$, and neither is a boundary in degree zero.
+This distinguishes the holomorphic directions in the mixed complex.
+The field coefficients must depend jointly and smoothly on all
+six real coordinates. Define the mixed form complex directly by
+\[
+ \mathcal M(X)=C^\infty(X;\mathbb C)
+      \otimes_{\mathbb C}\Lambda(dt,ds,d\bar z_1,d\bar z_2),
+\]
+with differential $Q$ as displayed above.
+The exterior factor is finite-dimensional, so this tensor product
+contains every jointly smooth mixed form.
+For a finite-dimensional coefficient space $W$, take
+\[
+ \alpha\in\mathcal M(X)\otimes W[1],\qquad
+ \beta\in\mathcal M(X)\otimes W^\vee[2].
+\]
+A component of total form degree $r$ has field-complex degree
+$r-1$ in $\alpha$ and $r-2$ in $\beta$.
+On fields of degree zero, $\alpha$ is a mixed one-form and
+$\beta$ is a mixed two-form.
+The field strength is $F=Q\alpha$.
+Pairing it with the multiplier $\beta$ gives the free BF action
+\[
+ S_{\mathrm{mix}}=\int_X\langle\beta,Q\alpha\rangle\wedge\Omega.
+\]
+Varying $\beta$ imposes the equation $F=0$.
+For a smooth $W$-valued function $\varepsilon$, the change
+$\alpha\mapsto\alpha+Q\varepsilon$ preserves the action because
+$Q^2\varepsilon=0$.
+For a mixed $W^\vee$-valued one-form $\eta$, the change
+$\beta\mapsto\beta+Q\eta$ also preserves it:
+the change is the integral of
+$Q\langle\eta,Q\alpha\rangle\wedge\Omega$, which vanishes
+on compact supports. These are the gauge symmetries of the
+free mixed action.
+The integral selects total mixed form degree four.
+The associated pairing has degree $-1$, and the action has degree
+zero by the same component count as in the holomorphic theory.
+This specifies the free cotangent theory with finite coefficients.
+
+Give $dt,ds$ squared norm one and $d\bar z_j$ squared norm four.
+With contractions defined by deleting these symbols, put
+\[
+ Q^{\mathrm{GF}}=-\partial_t\iota_{dt}-\partial_s\iota_{ds}
+                  -4\sum_j\partial_{z_j}\iota_{d\bar z_j}.
+\]
+The contraction identities give
+$QQ^{\mathrm{GF}}+Q^{\mathrm{GF}}Q=-\Delta_{\mathbb R^6}$.
+Write $R^2=t^2+s^2+|z_1|^2+|z_2|^2$.
+The scalar Green function and heat kernel are
+\[
+ G_6=\frac1{4\pi^3R^4},\qquad
+ k_\tau^{\mathrm{mix}}=(4\pi\tau)^{-3}e^{-R^2/(4\tau)}.
+\]
+The radial Laplacian is $g''+5R^{-1}g'$.
+The sphere area is $\operatorname{area}(S^5_R)=\pi^3R^5$.
+Thus the outward flux of $-\nabla G_6$ is one, proving
+$(-\Delta)G_6=\delta_0$ as before.
+It follows that $H_{\mathrm{mix}}=Q^{\mathrm{GF}}(G_6*-)$ satisfies
+$QH_{\mathrm{mix}}+H_{\mathrm{mix}}Q=1$ on compactly supported
+smooth inputs.
+
+The corresponding normalized fundamental current is explicit.
+Set
+\[
+ \nu=dt\wedge ds\wedge d\bar z_1\wedge d\bar z_2,
+ \qquad
+ W_0=t\partial_t+s\partial_s
+             +2\bar z_1\partial_{\bar z_1}
+             +2\bar z_2\partial_{\bar z_2}.
+\]
+Then
+\begin{equation}\label{eq:c2-mixed-kernel}
+ K_{\mathrm{mix}}=
+       \frac{\iota_{W_0}\nu\wedge\Omega}{4\pi^3R^6},
+ \qquad QK_{\mathrm{mix}}=\delta_0\,dV_6,
+\end{equation}
+where $dV_6=dt\wedge ds\wedge dV_4$.
+Away from zero, differentiating its coefficient gives
+\[
+ \partial_t\frac t{R^6}+\partial_s\frac s{R^6}
+ +\sum_{j=1}^2\partial_{\bar z_j}
+                    \frac{2\bar z_j}{R^6}
+ =\frac6{R^6}-\frac{6R^2}{R^8}=0.
+\]
+The delta normalization is the Green normalization above with
+$\nu\wedge\Omega=4dV_6$.
+The kernel has size $O(R^{-5})$ and is locally integrable.
+Its mixed form degree is three. The two coefficient shifts sum
+to $-3$, so the resulting free propagator has total degree zero.
+
+Replacing the scalar Green integral by
+$\int_\epsilon^L k_\tau^{\mathrm{mix}}d\tau$ gives a smooth
+finite-scale propagator.
+Its differential is the difference of the endpoint heat kernels.
+Contracting polynomial observables with it is the spatial form
+of the Gaussian homotopy: every contraction removes two input
+fields, so the exponential terminates at fixed polynomial degree.
+
+The free kernel determines contractions for the finite-dimensional
+coefficient space $W$ on $X$.
+An interacting Hamiltonian theory requires its nonlinear field
+equations, a coefficient Lie bracket, and a pairing on the coefficient
+spaces used in its action and contractions. For infinite-dimensional coefficients, the domain and
+topology of the pairing must be specified, and its contractions must
+be proved to be defined on the chosen fields.
+
+Write $\mathcal C=A\oplus P\oplus\mathbb CK$ for the graded space
+with operations $\ell_n$ constructed above.
+A possible target for a current map is a graded algebra $\mathcal B$
+with differential $d_{\mathcal B}$ and graded antisymmetric multilinear operations
+$b_n:\mathcal B^{\otimes n}\to\mathcal B$ of degree $2-n$,
+where $b_1=d_{\mathcal B}$ and the $b_n$ satisfy the generalized
+Jacobi identities stated above.
+One sufficient form of comparison is a degree-zero linear map
+$F:\mathcal C\to\mathcal B$ satisfying, for every $n\ge1$,
+\[
+ F\bigl(\ell_n(c_1,\ldots,c_n)\bigr)
+   =b_n\bigl(F(c_1),\ldots,F(c_n)\bigr)
+ \qquad(c_1,\ldots,c_n\in\mathcal C).
+\]
+This is a strict map of the displayed higher current algebras.
+Its equation for $n=1$ preserves the differential; its equation for
+$n=3$ identifies the normalized residue operation with the specified
+three-input operation on $\mathcal B$.
+A comparison permitting these equalities only up to homotopy would
+instead require the corresponding homotopies and the equations they
+must satisfy.
+
+No algebra $\mathcal B$ of boundary observables, and no such comparison,
+has been constructed from the mixed kernel.
+A physical realization must specify the boundary conditions on the
+fields, construct their observable algebra and its operations, and
+derive the residue normalization and the parameter $\kappa$ from
+those operations. The kinetic homotopy alone provides none of
+these additional constructions.

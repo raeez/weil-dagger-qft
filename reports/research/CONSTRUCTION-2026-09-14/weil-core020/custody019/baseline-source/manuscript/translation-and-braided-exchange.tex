@@ -1,0 +1,1337 @@
+\chapter{Translation and braided exchange}
+\label{chap:translation-braided-exchange}
+
+Translated polynomial multiplications commute because their coefficient
+algebra is commutative.
+For a noncommutative algebra, reversing their order requires an exchange relation.
+On the quantum plane, the two monomial degrees determine its scalar coefficient.
+
+Throughout this chapter, $k$ is a field of characteristic zero.
+All vector spaces have cohomological degree zero and even parity.
+Tensor permutations therefore carry no signs.
+All position variables and deformation parameters commute with the
+coefficients and have degree zero.
+They are formal, with no numerical values or analytic convergence conditions.
+
+\section{Multiplication at two positions}
+\label{sec:vertex-polynomial-translation}
+
+For $f,g\in k[t]$, define the position-dependent operator
+\[
+ Y(f,z)g=f(t+z)g(t)\in k[t,z].
+\]
+The variable $t$ belongs to the coefficient algebra, while $z$
+records the position of the first polynomial.
+Applying two operators gives
+\[
+ \begin{aligned}
+ Y(t,z_1)Y(t^2,z_2)1
+   &=(t+z_1)(t+z_2)^2\\
+   &=t^3+t^2(z_1+2z_2)+t(2z_1z_2+z_2^2)+z_1z_2^2.
+ \end{aligned}
+\]
+Reversing their order gives the same polynomial, because the
+coefficient algebra is commutative.
+The constant polynomial $1$ acts as the identity operator.
+
+There is also a composition law for positions.
+For $f,g,c\in k[t]$, direct substitution gives
+\[
+ \begin{aligned}
+ Y(f,z_0+z_2)Y(g,z_2)c
+   &=f(t+z_0+z_2)g(t+z_2)c(t)\\
+   &=Y\bigl(f(t+z_0)g(t),z_2\bigr)c\\
+   &=Y(Y(f,z_0)g,z_2)c.
+ \end{aligned}
+\]
+In the middle expression, the outer operator substitutes $t+z_2$
+for $t$ and leaves the independent variable $z_0$ fixed.
+Thus multiplication at two positions equals an iterated multiplication
+at their relative displacement.
+
+Polynomial differentiation produces this translation.
+For $j\geq0$, the derivative of $t^j$ vanishes after order $j$, and
+\[
+ \sum_{r\geq0}\frac{z^r}{r!}\partial_t^r(t^j)
+   =\sum_{r=0}^j\binom jr t^{j-r}z^r=(t+z)^j.
+\]
+Linearity proves the same identity for every polynomial.
+Differentiation on another coefficient algebra need not have terminating powers.
+Its exponential then requires formal series with vector coefficients.
+
+\section{Formal fields and their products}
+\label{sec:vertex-formal-carriers}
+
+A pole such as $z^{-1}$ requires negative powers.
+Products expanded in different variable orders must then be compared
+in a common space of coefficient arrays.
+For a $k$-vector space $V$, write
+\[
+ V[[z]]=\left\{\sum_{j\geq0}v_jz^j:v_j\in V\right\},\qquad
+ V((z))=\bigcup_{L\geq0}z^{-L}V[[z]].
+\]
+A Laurent series has one finite lower bound on its exponents.
+Its coefficients need not lie in one finite-dimensional subspace.
+
+The notation $V[[z_1,z_2]]$ denotes arrays with both exponents
+nonnegative. Iteration gives $V((z_1))((z_2))$, where the lower
+$z_1$ bound may depend on the $z_2$ coefficient.
+
+A formal distribution in $d$ variables is an arbitrary coefficient
+array $(v_{n_1,\ldots,n_d})_{(n_1,\ldots,n_d)\in\mathbb Z^d}$.
+We write it as $\sum v_{n_1,\ldots,n_d}z_1^{n_1}\cdots z_d^{n_d}$
+and compare distributions coefficientwise.
+Every iterated Laurent series defines such a distribution.
+Multiplication by a polynomial is always defined, since each output
+coefficient is a finite sum.
+For more general products, coefficientwise finiteness must be proved.
+
+A formal field on $V$ is a linear map $a(z):V\to V((z))$.
+Its modes are the linear maps $a_{(n)}:V\to V$ determined by
+\[
+ a(z)v=\sum_{n\in\mathbb Z}(a_{(n)}v)z^{-n-1}.
+\]
+The Laurent condition says that, for every $v$, one has
+$a_{(n)}v=0$ for all sufficiently large $n$.
+This is lower truncation, and its bound may depend on $v$.
+A field is regular when it takes values in $V[[z]]$.
+
+The vectors of $V$ are called states.
+A state-field map assigns a field $Y(u,z)$ linearly to each $u\in V$.
+Thus
+\[
+ \begin{aligned}
+ Y&:V\longrightarrow\operatorname{Hom}_k(V,V((z))),\\
+ Y(z)&:V\otimes_kV\longrightarrow V((z)),\qquad
+ Y(z)(u\otimes v)=Y(u,z)v
+ \end{aligned}
+\]
+are two forms of the same map.
+Here an algebraic tensor is a finite sum of elementary tensors,
+subject to bilinearity.
+For fixed $u,v,c\in V$, coefficientwise application gives
+\[
+ Y(u,z_1)Y(v,z_2)c\in V((z_1))((z_2)),\qquad
+ Y(v,z_2)Y(u,z_1)c\in V((z_2))((z_1)).
+\]
+For example, the first product applies $Y(u,z_1)$ to each coefficient
+of $Y(v,z_2)c$, whose $z_2$ exponents have a lower bound.
+
+The inverse of $z_1-z_2$ has different expansions in the two
+iterated Laurent fields:
+\[
+ G_{12}=\sum_{n\geq0}z_1^{-n-1}z_2^n
+       \in k((z_1))((z_2)),\qquad
+ G_{21}=-\sum_{n\geq0}z_2^{-n-1}z_1^n
+       \in k((z_2))((z_1)).
+\]
+Multiplication by $z_1-z_2$ cancels successive terms in each
+series and leaves constant term one.
+Thus they are the inverses in their respective fields.
+As distributions, their difference is
+\[
+ \delta(z_1,z_2)=G_{12}-G_{21}
+      =\sum_{n\in\mathbb Z}z_1^{-n-1}z_2^n.
+\]
+For $n\leq-1$, putting $j=-n-1$ gives exactly the terms
+$z_1^jz_2^{-j-1}$ contributed by $-G_{21}$.
+
+At coefficient $z_1^p z_2^q$, the distribution
+$z_1\delta(z_1,z_2)$ has value one when $p+q=0$ and zero otherwise.
+The same coefficient rule holds for $z_2\delta(z_1,z_2)$.
+Consequently
+\[
+ (z_1-z_2)\delta(z_1,z_2)=0,
+ \qquad \delta(z_1,z_2)\ne0.
+\]
+The nonzero coefficient at $z_1^{-1}z_2^0$ proves the second assertion.
+A nonzero distribution can therefore vanish after multiplication by
+a power of $z_1-z_2$.
+This permits an exchange condition weaker than equality of the two
+ordered products.
+
+The fields $Y(u,z)$ and $Y(v,z)$ are local if some integer
+$N\geq0$ satisfies
+\begin{equation}\label{eq:vertex-ordinary-locality}
+ (z_1-z_2)^N\bigl(Y(u,z_1)Y(v,z_2)c
+                  -Y(v,z_2)Y(u,z_1)c\bigr)=0
+ \quad\text{for every }c\in V.
+\end{equation}
+The integer $N$ may depend on $u,v$, but not on $c$.
+This equality lies in the space of distributions, so it compares
+the coefficients of both iterated products.
+For regular fields, both products already belong to $V[[z_1,z_2]]$.
+
+Polynomial translation satisfies $Y(1,z)f=f$, while $Y(f,z)1$ has
+constant coefficient $f$.
+Write $[z^j]$ for extraction of the coefficient of $z^j$.
+A vacuum is a vector $\mathbf1\in V$ with
+\[
+ Y(\mathbf1,z)v=v,\qquad
+ Y(v,z)\mathbf1\in V[[z]],\qquad
+ [z^0]Y(v,z)\mathbf1=v.
+\]
+Differentiating a translated polynomial can act either on its input
+or on its position variable.
+Use the commutator $[A,B]=AB-BA$, with coefficientwise action on
+series, and the formal derivative $\partial_z(z^m)=mz^{m-1}$ for
+every integer $m$.
+A translation operator is a linear map $D:V\to V$ satisfying
+\[
+ D\mathbf1=0,\qquad
+ [D,Y(v,z)]=Y(Dv,z)=\partial_zY(v,z).
+\]
+
+For substitutions involving negative powers, use
+\[
+ (z_0+z_2)^m
+   =\sum_{j\geq0}\binom mj z_0^{m-j}z_2^j,
+ \qquad
+ \binom mj=\frac{m(m-1)\cdots(m-j+1)}{j!},
+\]
+where $m\in\mathbb Z$, $j\geq0$, and $\binom m0=1$.
+This is expansion in nonnegative powers of $z_2$.
+Applied to the first ordered product, it defines
+$Y(u,z_0+z_2)Y(v,z_2)c$ in $V((z_0))((z_2))$.
+For a fixed $z_2$ coefficient, lower truncation of $Y(v,z_2)c$
+bounds the number of input coefficients and binomial terms.
+The iterate $Y(Y(u,z_0)v,z_2)c$ belongs to
+$V((z_2))((z_0))$ by coefficientwise linearity.
+
+The polynomial composition law equates an ordered product with an iterate.
+For Laurent fields, weak associativity requires a polynomial multiple
+of their difference to vanish.
+For every $u,v,c$, there must be an integer $\ell\geq0$ such that
+\begin{equation}\label{eq:vertex-weak-associativity}
+ (z_0+z_2)^\ell Y(u,z_0+z_2)Y(v,z_2)c
+  =(z_0+z_2)^\ell Y(Y(u,z_0)v,z_2)c.
+\end{equation}
+The equality compares the resulting distributions with the specified
+expansion on the left.
+A nonlocal vertex algebra is a vector space with a state-field map
+and vacuum satisfying weak associativity.
+A vertex algebra here also satisfies ordinary locality.
+
+\section{A derivation produces regular fields}
+\label{sec:vertex-differential-algebra}
+
+Let $A$ be a unital associative $k$-algebra with unit $1_A$.
+A derivation is a linear map $D:A\to A$ such that
+$D(ab)=(Da)b+a(Db)$.
+Putting $a=b=1_A$ gives $D1_A=2D1_A$, hence $D1_A=0$.
+Define
+\begin{equation}\label{eq:vertex-exponential-field}
+ E_z(a)=\sum_{j\geq0}\frac{z^j}{j!}D^ja,
+ \qquad Y(a,z)b=E_z(a)b,
+ \qquad E_z:A\to A[[z]].
+\end{equation}
+Each coefficient uses one iterate of $D$, so no termination
+condition on those iterates is required.
+
+\begin{lemma}\label{lem:vertex-exponential-identities}
+For every $a,b\in A$,
+\[
+ \begin{aligned}
+ D^j(ab)&=\sum_{i=0}^j\binom ji(D^ia)(D^{j-i}b),\\
+ E_z(ab)&=E_z(a)E_z(b),\qquad E_zE_w(a)=E_{z+w}(a).
+ \end{aligned}
+\]
+The last equality belongs to $A[[z,w]]$, with $E_z$ applied
+coefficientwise to $E_w(a)$.
+Also $\partial_zE_z(a)=E_z(Da)=D(E_z(a))$.
+\end{lemma}
+
+\begin{proof}
+The first identity at $j=0$ is multiplication itself.
+Apply $D$ to its right side at order $j$.
+The derivation rule gives one sum differentiating the first factor
+and one differentiating the second.
+At an interior index $i$, their combined coefficient is
+$\binom j{i-1}+\binom ji=\binom{j+1}i$.
+The endpoint coefficients are one, proving induction.
+
+The coefficient of $z^j$ in $E_z(a)E_z(b)$ is
+$\sum_{i=0}^j(D^ia)(D^{j-i}b)/(i!(j-i)!)$.
+The first identity identifies it with $D^j(ab)/j!$.
+The coefficient of $z^pw^q$ in $E_zE_w(a)$ is
+$D^{p+q}a/(p!q!)$.
+In $E_{z+w}(a)$, only its term of total degree $p+q$ contributes,
+and the binomial coefficient gives the same value.
+These coefficient calculations also prove that the operations are defined.
+
+Termwise differentiation gives coefficient $D^{j+1}a/j!$ at $z^j$.
+This is the coefficient in both $E_z(Da)$ and $D(E_z(a))$.
+\end{proof}
+
+\begin{theorem}\label{thm:vertex-differential-algebra}
+The formula \eqref{eq:vertex-exponential-field}, with vacuum $1_A$,
+makes $A$ a nonlocal vertex algebra with regular fields and
+translation operator $D$.
+Weak associativity holds with $\ell=0$.
+Its fields are ordinarily local for every pair exactly when $A$
+is commutative, in which case $N=0$ suffices.
+\end{theorem}
+
+\begin{proof}
+The definition gives a linear map $Y(a,z):A\to A[[z]]$.
+Its modes are
+\[
+ a_{(-j-1)}b=\frac{D^ja}{j!}b\quad(j\geq0),
+ \qquad a_{(n)}b=0\quad(n\geq0),
+\]
+so lower truncation holds for every input.
+Since $D1_A=0$, one has
+$Y(1_A,z)b=b$ and $Y(a,z)1_A=E_z(a)$ with constant term $a$.
+The coefficient at $z$ in the latter identity is $Da$, so
+$a_{(-2)}1_A=Da$.
+Thus the field map recovers the translation operator.
+
+For translation, use the derivation rule and the lemma:
+\[
+ \begin{aligned}
+ [D,Y(a,z)]b
+   &=D(E_z(a)b)-E_z(a)Db\\
+   &=D(E_z(a))b
+     =E_z(Da)b=\partial_zY(a,z)b.
+ \end{aligned}
+\]
+The last expression is also $Y(Da,z)b$.
+Associativity of $A$ and the two exponential identities give
+\begin{equation}\label{eq:vertex-exact-associativity}
+ \begin{aligned}
+ Y(a,z_0+z_2)Y(b,z_2)c
+   &=E_{z_0+z_2}(a)E_{z_2}(b)c\\
+   &=E_{z_2}\bigl(E_{z_0}(a)b\bigr)c\\
+   &=Y(Y(a,z_0)b,z_2)c.
+ \end{aligned}
+\end{equation}
+All terms belong to $A[[z_0,z_2]]$.
+At a fixed total degree, the substitution $z_1=z_0+z_2$
+uses finitely many coefficients, proving its validity.
+
+If $A$ is commutative, then $E_{z_1}(a)E_{z_2}(b)c$ equals
+$E_{z_2}(b)E_{z_1}(a)c$, giving locality with $N=0$.
+Conversely, multiplication by $(z_1-z_2)^N$ is injective on
+$A[[z_1,z_2]]$.
+Indeed, let $z_2^j$ be the lowest nonzero coefficient of a
+nonzero series $F$, viewed in $A[[z_1]][[z_2]]$.
+The product's $z_2^j$ coefficient is $z_1^N[z_2^j]F$, which is nonzero.
+Cancel the locality factor, apply the equality to $1_A$, and take
+the constant coefficient in both variables.
+This gives $ab=ba$ for every $a,b$.
+\end{proof}
+
+For $A=k[t]$ and $D=\partial_t$, the theorem recovers
+$Y(f,z)g=f(t+z)g(t)$ from Section~\ref{sec:vertex-polynomial-translation}.
+For the Euler derivation $D=t\partial_t$, it instead gives
+\[
+ Y(t^m,z)t^r=e^{mz}t^{m+r},\qquad
+ e^{mz}=\sum_{j\geq0}\frac{m^jz^j}{j!}.
+\]
+For instance, $Y(t,z)1=t+tz+tz^2/2+\cdots$ has infinitely many
+nonzero position coefficients.
+
+The field target in Theorem~\ref{thm:vertex-differential-algebra}
+cannot generally be replaced by $A\otimes_k k((z))$.
+For any vector space $U$, the coefficient map
+\[
+ U\otimes_k k((z))\longrightarrow U((z)),\qquad
+ u\otimes f(z)\longmapsto f(z)u
+\]
+is injective, and its image consists of series whose coefficients
+span a finite-dimensional subspace of $U$.
+To prove injectivity, express a tensor using independent first factors.
+Vanishing of each output coefficient forces every scalar coordinate to vanish.
+Conversely, a basis of the finite coefficient span expresses a series
+as a finite tensor sum, with Laurent coordinate series.
+
+For a strict inclusion, take the polynomial algebra
+$A=k[t_0,t_1,t_2,\ldots]$.
+Its monomials use only finitely many variables and form a basis.
+Define $Dt_i=t_{i+1}$ and extend by the derivation rule.
+Explicitly, on a monomial $\prod_i t_i^{a_i}$ the derivative is
+$\sum_{i:a_i>0}a_i t_{i+1}t_i^{a_i-1}\prod_{j\ne i}t_j^{a_j}$.
+The sum is finite, and addition of exponents proves the derivation
+rule on a product of two monomials.
+Then
+\[
+ Y(t_0,z)1=\sum_{n\geq0}\frac{t_nz^n}{n!}
+      \in A[[z]]\setminus\bigl(A\otimes_k k((z))\bigr),
+\]
+since the basis vectors $t_n$ are linearly independent.
+
+\section{The order of an exchange}
+\label{sec:vertex-exchange-order}
+
+For a state-field map on $V$, exchanging two fields preserves
+the position attached to each input.
+To record both orders, define
+\[
+ \begin{aligned}
+ P_{12}(u\otimes v\otimes c)&=Y(u,z_1)Y(v,z_2)c,\\
+ P_{21}(u\otimes v\otimes c)&=Y(u,z_2)Y(v,z_1)c,\\
+ \tau(u\otimes v)&=v\otimes u.
+ \end{aligned}
+\]
+Their domains are $V^{\otimes3}$ for the first two maps and
+$V^{\otimes2}$ for $\tau$, with tensors over $k$.
+The respective product codomains are the iterated spaces in
+Section~\ref{sec:vertex-formal-carriers}.
+For regular fields, both codomains can be taken as $V[[z_1,z_2]]$.
+
+An unflipped exchange operator is a linear map
+\[
+ S(x):V\otimes V\longrightarrow V\otimes V\otimes k((x)).
+\]
+Its name specifies that the identity exchange is $S=1$, the
+identity map, rather than the permutation $\tau$.
+Each image is a finite tensor sum.
+In particular, write
+\[
+ S(x)(v\otimes u)=\sum_{i=1}^r v_i\otimes u_i\,f_i(x),
+ \qquad f_i(x)\in k((x)).
+\]
+The input here is the reversed ordered pair $v\otimes u$.
+
+For $f\in k((x))$, specify the scalar substitution by
+\[
+ \iota_{21}f(z_2-z_1)
+   =\sum_{j\geq0}\frac{(-z_1)^j}{j!}f^{(j)}(z_2)
+   \in k((z_2))[[z_1]].
+\]
+The derivative is the Laurent derivative defined above.
+At a fixed $z_1$ power, the coefficient is one Laurent series
+in $z_2$, so this substitution is defined.
+On a monomial $f(x)=x^m$, the formula is exactly the binomial
+expansion in nonnegative powers of $z_1$.
+
+The corresponding $S$-locality condition is
+\begin{equation}\label{eq:vertex-s-locality}
+ \begin{aligned}
+ &(z_1-z_2)^N Y(u,z_1)Y(v,z_2)c\\
+ &\qquad=(z_1-z_2)^N\sum_{i=1}^r
+    \iota_{21}f_i(z_2-z_1)Y(v_i,z_2)Y(u_i,z_1)c.
+ \end{aligned}
+\end{equation}
+For every $u,v$, one integer $N\geq0$ must work for all $c$.
+The products on the right belong to $V((z_2))((z_1))$.
+Their scalar multiplication is defined because the scalar has no
+negative $z_1$ powers, while each field product has a lower $z_1$ bound.
+A nonlocal vertex algebra satisfying such finite exchange relations
+is called a weak quantum vertex algebra.
+
+For regular fields, constant $S$, and $N=0$, the exchange equation is
+\begin{equation}\label{eq:vertex-ordered-exchange}
+ P_{12}=P_{21}S^{12}\tau^{12}.
+\end{equation}
+Here a superscript $12$ makes the indicated map act on the first
+two factors and leaves the third fixed.
+The following diagram displays the two ways to evaluate the product:
+\[
+ \begin{tikzcd}[column sep=large,row sep=large]
+ V^{\otimes3} \arrow[r,"S^{12}\tau^{12}"]
+                \arrow[d,"P_{12}"']
+   & V^{\otimes3} \arrow[d,"P_{21}"]\\
+ V[[z_1,z_2]] \arrow[r,equal]
+   & V[[z_1,z_2]].
+ \end{tikzcd}
+\]
+The upper map first sends $u\otimes v$ to $v\otimes u$, then applies $S$.
+If its output is $\sum_i v_i\otimes u_i$, the map $P_{21}$
+places $v_i$ at $z_2$ and $u_i$ at $z_1$.
+
+The polynomial translation example determines why the reversal is needed.
+Take $S=1$, $u=t$, $v=1$, and $c=1$.
+Then
+\[
+ P_{12}(t\otimes1\otimes1)=t+z_1
+   =P_{21}(1\otimes t\otimes1),
+ \qquad P_{21}(t\otimes1\otimes1)=t+z_2.
+\]
+Thus $P_{12}=P_{21}$ fails even in this commutative example.
+Multiplication of the defect by a locality factor gives
+$(z_1-z_2)^{N+1}\ne0$ for every $N\geq0$.
+
+\section{The quantum plane}
+\label{sec:vertex-quantum-plane}
+
+Fix $q\in k^\times$, meaning $q\ne0$.
+We seek an algebra with generators $a,b$, relation $ba=q\,ab$,
+and basis $a^mb^n$ for $m,n\geq0$.
+Moving $b^n$ past $a^r$ makes $nr$ exchanges, so the required
+multiplication coefficient is $q^{nr}$.
+
+On the vector space
+\[
+ A_q=\bigoplus_{m,n\geq0}k e_{m,n},
+\]
+define multiplication bilinearly by
+\begin{equation}\label{eq:vertex-plane-multiplication}
+ e_{m,n}e_{r,s}=q^{nr}e_{m+r,n+s}.
+\end{equation}
+The direct sum requires finite support in each element.
+For three basis elements with indices $(m,n),(r,s),(p,t)$,
+the two parenthesizations have exponents
+\[
+ nr+(n+s)p=sp+n(r+p).
+\]
+They have the same basis vector, so multiplication is associative.
+The element $e_{0,0}$ is its unit.
+
+Put $a=e_{1,0}$ and $b=e_{0,1}$.
+Then $ba=q ab$ and $a^mb^n=e_{m,n}$.
+These equations identify $A_q$ with the quotient
+$k\langle a,b\rangle/(ba-qab)$, where the free algebra has finite
+words as a basis and concatenation as multiplication.
+Indeed, replacing $ba$ by $qab$ reduces the number of inverted
+pairs in a word until all $a$'s precede all $b$'s.
+The resulting ordered words span the quotient, and their images
+are the independent basis vectors $e_{m,n}$.
+The induced surjective map from the quotient to $A_q$ is therefore injective.
+
+The ordinary derivative in $a$ would not preserve the relation
+when $q\ne1$.
+An assignment $Da=1$, $Db=0$ would give
+$D(ba-qab)=(1-q)b$, a nonzero basis multiple in that case.
+The assignment $Da=a$, $Db=b$ sends $ba-qab$ to $2(ba-qab)$.
+It therefore preserves the relation and acts on $a^mb^n$ by
+multiplication by $m+n$.
+
+For $\alpha=(m,n)\in\mathbb N^2$, write $e_\alpha=e_{m,n}$
+and $|\alpha|=m+n$, where $\mathbb N=\{0,1,2,\ldots\}$.
+This grading records monomial exponents and contributes no permutation signs.
+Define $De_\alpha=|\alpha|e_\alpha$.
+Since $|\alpha+\beta|=|\alpha|+|\beta|$, multiplication
+\eqref{eq:vertex-plane-multiplication} makes $D$ a derivation.
+Theorem~\ref{thm:vertex-differential-algebra} gives
+\begin{equation}\label{eq:vertex-plane-field}
+ Y(e_{m,n},z)e_{r,s}
+   =e^{(m+n)z}q^{nr}e_{m+r,n+s}.
+\end{equation}
+
+The generator fields satisfy
+\[
+ Y(a,z_1)Y(b,z_2)1=e^{z_1+z_2}ab,
+ \qquad
+ Y(b,z_2)Y(a,z_1)1=q e^{z_1+z_2}ab.
+\]
+For this reversed generator product, the scalar factor is $q^{-1}$.
+
+Define the scalar function on pairs of degrees
+\[
+ \rho(\alpha,\beta)=q^{ms-nr},
+ \qquad \alpha=(m,n),\quad\beta=(r,s).
+\]
+The exponent is an integer, so the assumption $q\ne0$ defines
+both positive and negative powers.
+For degrees $\alpha,\beta,\gamma\in\mathbb N^2$, direct expansion
+of the exponent gives
+\begin{equation}\label{eq:vertex-bicharacter}
+ \begin{aligned}
+ \rho(\alpha+\beta,\gamma)
+    &=\rho(\alpha,\gamma)\rho(\beta,\gamma),\\
+ \rho(\alpha,\beta+\gamma)
+    &=\rho(\alpha,\beta)\rho(\alpha,\gamma),\\
+ \rho(\beta,\alpha)&=\rho(\alpha,\beta)^{-1}.
+ \end{aligned}
+\end{equation}
+The first two equations define multiplicativity in each argument,
+also called the bicharacter property.
+Comparison with \eqref{eq:vertex-plane-multiplication} gives
+\[
+ e_\alpha e_\beta
+   =\rho(\beta,\alpha)e_\beta e_\alpha.
+\]
+
+Set
+\begin{equation}\label{eq:vertex-plane-s}
+ S(e_\alpha\otimes e_\beta)
+   =\rho(\alpha,\beta)e_\alpha\otimes e_\beta.
+\end{equation}
+This defines a constant unflipped operator on $A_q\otimes A_q$.
+It has an inverse given by replacing $\rho$ by $\rho^{-1}$.
+For arbitrary $c\in A_q$, the commutation rule gives
+\[
+ \begin{aligned}
+ Y(e_\alpha,z_1)Y(e_\beta,z_2)c
+   &=e^{|\alpha|z_1+|\beta|z_2}e_\alpha e_\beta c\\
+   &=\rho(\beta,\alpha)
+       Y(e_\beta,z_2)Y(e_\alpha,z_1)c.
+ \end{aligned}
+\]
+Thus $S$-locality holds with $N=0$, including for finite sums
+of homogeneous inputs.
+
+For $u=a^2b=e_{2,1}$ and $v=ab^2=e_{1,2}$, the products
+are $uv=q e_{3,3}$ and $vu=q^4e_{3,3}$.
+Both have Euler degree three, so
+\[
+ Y(u,z_1)Y(v,z_2)1=q e^{3z_1+3z_2}e_{3,3}
+   =q^{-3}Y(v,z_2)Y(u,z_1)1.
+\]
+Here $S(v\otimes u)=q^{-3}v\otimes u$ supplies exactly that factor.
+
+\section{Compatibility of the exchange operator}
+\label{sec:vertex-exchange-axioms}
+
+Two successive exchanges should restore the original ordered pair.
+For three inputs, the two ways of reversing their order use
+each pair once.
+The unflipped operators record those three pair contributions.
+Exchanging an input with a product should agree with exchanging it
+with each factor before multiplication.
+
+For a map $S:V^{\otimes2}\to V^{\otimes2}$, put
+$S^{21}=\tau S\tau$.
+On $V^{\otimes3}$, put $S^{12}=S\otimes1$ and $S^{23}=1\otimes S$.
+The map $S^{13}$ acts on the first and third factors:
+if $S(u\otimes w)=\sum_i u_i\otimes w_i$, then
+$S^{13}(u\otimes v\otimes w)=\sum_i u_i\otimes v\otimes w_i$.
+All compositions act from right to left.
+
+In the second exchange of a pair, the two inputs have reversed roles.
+This accounts for $S^{21}$ in the unitarity equation.
+For constant $S$, unitarity and the quantum Yang--Baxter equation require
+\begin{equation}\label{eq:vertex-unitarity-yb}
+ SS^{21}=S^{21}S=1,\qquad
+ S^{12}S^{13}S^{23}=S^{23}S^{13}S^{12}.
+\end{equation}
+The second equation compares two orders of the three pair operations,
+with the tensor positions unchanged by the operator notation.
+
+Exchanging a vacuum factor should leave it fixed.
+A constant exchange operator should also commute with translation of an input.
+Reversing two positions changes their relative displacement from $z$ to $-z$.
+Translation by $z$ returns the resulting state to the original position.
+
+A quantum vertex algebra with constant exchange operator will mean
+a weak quantum vertex algebra with such $S$ and the following
+compatibilities with its translation operator $D$.
+Write $E_z=\sum_{j\geq0}z^jD^j/j!$ and
+$Y(-z)(a\otimes b)=Y(a,-z)b$.
+The conditions are
+\begin{align}
+ S(\mathbf1\otimes v)&=\mathbf1\otimes v,
+ & [D\otimes1,S]&=0,
+ \label{eq:vertex-vacuum-shift}\\
+ Y(u,z)v&=E_zY(-z)S(v\otimes u),
+ \label{eq:vertex-s-skew}\\
+ S(Y(x)\otimes1)&=(Y(x)\otimes1)S^{23}S^{13}.
+ \label{eq:vertex-hexagon}
+\end{align}
+In \eqref{eq:vertex-s-skew}, $E_z$ acts on the output of $Y(-z)$.
+Equation~\eqref{eq:vertex-hexagon} is the hexagon identity.
+For regular fields, it is an equality from $V^{\otimes3}$ to
+$(V\otimes V)[[x]]$.
+
+\begin{theorem}\label{thm:vertex-quantum-plane}
+For every $q\in k^\times$, the fields \eqref{eq:vertex-plane-field}
+and exchange operator \eqref{eq:vertex-plane-s} give a quantum vertex
+algebra with constant exchange operator.
+They also satisfy
+\[
+ S(v\otimes1)=v\otimes1,\qquad
+ [1\otimes D,S]=[1\otimes D,S^{-1}]=0,
+\]
+\[
+ S(1\otimes Y(x))=(1\otimes Y(x))S^{12}S^{13}.
+\]
+All field identities hold in joint power-series spaces.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:vertex-differential-algebra} proves the vacuum,
+translation, and weak-associativity conditions.
+The calculation after \eqref{eq:vertex-plane-s} proves $S$-locality.
+It remains to verify the tensor identities, for which basis tensors
+span each algebraic tensor power.
+
+The zero degree has $\rho(0,\alpha)=\rho(\alpha,0)=1$, proving
+both vacuum identities for $S$.
+On $e_\alpha\otimes e_\beta$, each of $S$, $S^{-1}$, $D\otimes1$,
+and $1\otimes D$ acts by a scalar.
+They commute, proving both shift equations.
+The two unitarity composites have scalar
+$\rho(\alpha,\beta)\rho(\beta,\alpha)=1$.
+Both sides of the Yang--Baxter equation have scalar
+\[
+ \rho(\alpha,\beta)\rho(\alpha,\gamma)\rho(\beta,\gamma)
+\]
+on $e_\alpha\otimes e_\beta\otimes e_\gamma$, proving that equation.
+
+For the hexagon, write $\alpha=(m,n)$ and $\beta=(r,s)$.
+The left side of \eqref{eq:vertex-hexagon} sends the basis triple to
+\[
+ e^{|\alpha|x}q^{nr}\rho(\alpha+\beta,\gamma)
+    e_{\alpha+\beta}\otimes e_\gamma.
+\]
+The right side has the same exponential, multiplication coefficient,
+and basis tensor, with exchange coefficient
+$\rho(\beta,\gamma)\rho(\alpha,\gamma)$.
+These coefficients agree by \eqref{eq:vertex-bicharacter}.
+For the second hexagon, the common remaining factor is
+$e^{|\beta|x}q^{sp}e_\alpha\otimes e_{\beta+\gamma}$,
+where $\gamma=(p,t)$.
+Its exchange coefficients are respectively $\rho(\alpha,\beta+\gamma)$
+and $\rho(\alpha,\beta)\rho(\alpha,\gamma)$, which also agree.
+
+Finally, take homogeneous $u=e_\alpha$ and $v=e_\beta$.
+The exponential identities and the commutation rule give
+\[
+ \begin{aligned}
+ E_zY(-z)S(v\otimes u)
+   &=\rho(\beta,\alpha)E_z\bigl(E_{-z}(v)u\bigr)\\
+   &=\rho(\beta,\alpha)vE_z(u)
+     =E_z(u)v=Y(u,z)v.
+ \end{aligned}
+\]
+The identity $E_zE_{-z}=1$ follows from
+Lemma~\ref{lem:vertex-exponential-identities} by the total-degree
+substitution $w=-z$.
+Every series in this calculation is regular, so each coefficient
+uses finitely many terms.
+Bilinearity proves skew symmetry for arbitrary inputs.
+\end{proof}
+
+At $q=1$ the multiplication is commutative and $S=1$.
+Roots of unity require no change in any proof, since only
+multiplicativity and invertibility of powers of $q$ were used.
+
+\section{Unflipped and flipped equations}
+\label{sec:vertex-flipped-operators}
+
+Composing $S$ with $\tau$ in the two orders gives the maps
+\[
+ \begin{aligned}
+ B=\tau S,\qquad
+ B(e_\alpha\otimes e_\beta)
+   &=\rho(\alpha,\beta)e_\beta\otimes e_\alpha,\\
+ C=S\tau,\qquad
+ C(e_\alpha\otimes e_\beta)
+   &=\rho(\beta,\alpha)e_\beta\otimes e_\alpha.
+ \end{aligned}
+\]
+The ordered field equation is $P_{12}=P_{21}C^{12}$.
+Both flipped maps become $\tau$ when $q=1$, whereas $S$ becomes
+the identity.
+
+The maps $B$ and $C$ coincide exactly when $q^2=1$.
+Indeed, their coefficients on $a\otimes b$ are $q$ and $q^{-1}$,
+so equality forces $q^2=1$.
+Conversely, if $q^2=1$, then $q^j=q^{-j}$ for every integer $j$,
+and their displayed basis formulas agree.
+
+Applying $B$ twice gives scalar
+$\rho(\alpha,\beta)\rho(\beta,\alpha)=1$ and restores the pair.
+Hence $B^2=1$, and the same calculation gives $C^2=1$.
+The flipped braid equation is
+\[
+ B^{12}B^{23}B^{12}=B^{23}B^{12}B^{23}.
+\]
+On a triple of degrees $(\alpha,\beta,\gamma)$, the left side
+visits $(\beta,\alpha,\gamma)$, $(\beta,\gamma,\alpha)$,
+and $(\gamma,\beta,\alpha)$.
+Its successive factors are $\rho(\alpha,\beta)$,
+$\rho(\alpha,\gamma)$, and $\rho(\beta,\gamma)$.
+
+The right side visits $(\alpha,\gamma,\beta)$,
+$(\gamma,\alpha,\beta)$, and $(\gamma,\beta,\alpha)$.
+Its factors are the same three scalars in reverse order.
+This proves the braid equation on all basis triples.
+Replacing $\rho$ by $\rho^{-1}$ proves the same equation for $C$.
+
+These flipped identities differ from unflipped unitarity.
+Define $B^{21}=\tau B\tau$ as for $S$.
+For the generators, $B(a\otimes b)=q b\otimes a$ and
+$B^{21}(b\otimes a)=q a\otimes b$.
+Therefore
+\[
+ B^{21}B(a\otimes b)=q^2a\otimes b,
+\]
+which differs from $a\otimes b$ when $q^2\ne1$.
+Thus $B$ satisfies $B^2=1$ but fails the unflipped unitarity
+equation at those parameters.
+
+The unflipped Yang--Baxter equation also distinguishes these operators.
+On $a\otimes b\otimes b$, its two sides with $B$ are
+\[
+ \begin{aligned}
+ B^{12}B^{13}B^{23}(a\otimes b\otimes b)
+   &=q\,b\otimes b\otimes a,\\
+ B^{23}B^{13}B^{12}(a\otimes b\otimes b)
+   &=q^2b\otimes b\otimes a.
+ \end{aligned}
+\]
+For the first composite, $B^{23}$ fixes the two $b$'s,
+$B^{13}$ exchanges $a,b$ with factor $q$, and $B^{12}$ fixes the two $b$'s.
+For the second, $B^{12}$ and $B^{23}$ each exchange $a,b$
+with factor $q$, while the intervening $B^{13}$ fixes the two $b$'s.
+The outputs differ for every $q\ne1$, including $q=-1$.
+
+Unitarity also converts the placement of the constant operator in
+the field equation.
+Since $S\tau S=\tau$, composing
+\eqref{eq:vertex-ordered-exchange} with $S^{12}$ gives
+\begin{equation}\label{eq:vertex-other-placement}
+ P_{12}S^{12}=P_{21}\tau^{12}.
+\end{equation}
+Conversely, $\tau S^{-1}=S\tau$ converts this equation back.
+
+\section{Exchange depending on displacement}
+\label{sec:vertex-spectral-dictionary}
+
+When exchange depends on relative displacement, the three pair
+separations are $x$, $x+y$, and $y$.
+For example, the positions $x+y,y,0$ have exactly those differences.
+This determines the arguments in the spectral Yang--Baxter equation.
+Let $V$ have a state-field map, vacuum, and translation operator $D$, and
+let $S(x):V\otimes V\to V\otimes V\otimes k((x))$.
+The spectral variable $x$ records the relative displacement.
+
+Extend $S(x)$ linearly over $k((x))$ when forming a composite
+in that variable, and set $S^{21}(x)=\tau S(x)\tau$.
+The corresponding unflipped conditions are
+\begin{align}
+ S^{21}(-x)S(x)&=S(x)S^{21}(-x)=1,
+ \label{eq:vertex-spectral-unitarity}\\
+ S^{12}(x)S^{13}(x+y)S^{23}(y)
+   &=S^{23}(y)S^{13}(x+y)S^{12}(x).
+ \label{eq:vertex-spectral-yb}
+\end{align}
+The first equation acts on $V\otimes V\otimes k((x))$.
+In the second, expand every scalar factor $f(x+y)$ in
+nonnegative powers of $y$:
+\[
+ f(x+y)=\sum_{j\geq0}\frac{y^j}{j!}f^{(j)}(x)
+       \in k((x))[[y]].
+\]
+Both composites then map $V^{\otimes3}$ to
+$V^{\otimes3}\otimes k((x))((y))$.
+Each application of $S$ has finitely many tensor terms, and
+the scalar products belong to this common iterated Laurent field.
+
+The vacuum and translation conditions become
+\[
+ \begin{aligned}
+ S(x)(\mathbf1\otimes v)&=\mathbf1\otimes v,
+ &S(x)(v\otimes\mathbf1)&=v\otimes\mathbf1,\\
+ [D\otimes1,S(x)]&=-\partial_xS(x).
+ \end{aligned}
+\]
+Here differentiation acts on each scalar Laurent coefficient of $S$.
+For an independent formal variable $t$, the shift condition is
+equivalent to the translation rule
+\[
+ (E_t\otimes1)S(x)(E_{-t}\otimes1)=S(x-t),
+ \qquad E_t=\sum_{j\geq0}\frac{t^jD^j}{j!}.
+\]
+Put $H=D\otimes1$ and define $\operatorname{ad}_H(T)=[H,T]$.
+Expansion of the exponentials gives coefficient
+\[
+ \sum_{i=0}^j\frac{(-1)^{j-i}H^iS(x)H^{j-i}}{i!(j-i)!}
+   =\frac{\operatorname{ad}_H^j(S(x))}{j!}.
+\]
+The equality follows by induction from $\operatorname{ad}_H(T)=HT-TH$
+and the binomial coefficient identity.
+
+The shift equation identifies this coefficient with
+$(-1)^j\partial_x^jS(x)/j!$, by induction since scalar differentiation
+commutes with $H$.
+This is the Taylor coefficient of $S(x-t)$.
+The exponential products have finite coefficient sums, so this is
+an identity in $(V\otimes V\otimes k((x)))[[t]]$ on each input.
+Conversely, the coefficient of $t$ in the translation rule gives
+the shift condition.
+
+Reversing the displacement and translating the output gives the
+spectral skew-symmetry condition
+\[
+ Y(u,z)v=E_zY(-z)S(-z)(v\otimes u),\qquad
+ E_z=\sum_{j\geq0}\frac{z^jD^j}{j!}.
+\]
+The right side belongs to $V((z))$ because the finite tensor
+image of $S$ gives a common Laurent lower bound before applying $E_z$.
+Each output coefficient of $E_z$ then uses only finitely many derivatives.
+
+Compatibility with multiplication in either factor has the forms
+\begin{align}
+ S(w)(Y(x)\otimes1)
+   &=(Y(x)\otimes1)S^{23}(w)S^{13}(x+w),
+ \label{eq:vertex-spectral-hexagon-one}\\
+ S(w)(1\otimes Y(x))
+   &=(1\otimes Y(x))S^{12}(w-x)S^{13}(w).
+ \label{eq:vertex-spectral-hexagon-two}
+\end{align}
+Expand $f(w\pm x)$ as
+$\sum_{j\geq0}(\pm x)^jf^{(j)}(w)/j!$.
+Thus both equations compare maps from $V^{\otimes3}$ to
+$(V\otimes V)((w))((x))$.
+On the left, applying $Y(x)$ first gives a Laurent lower
+bound in $x$, and $S(w)$ acts on each coefficient.
+On the right, the finite tensor images of $S$ give finitely
+many field inputs with a common Laurent lower bound in $x$.
+The shifted scalar series have nonnegative $x$ powers, so each
+coefficient uses a finite convolution in that variable.
+
+These equations impose conditions on the displacement-dependent operator.
+The constant operator of Theorem~\ref{thm:vertex-quantum-plane}
+satisfies them: its derivative vanishes, and each shifted value is
+the same operator already used in the tensor proofs.
+For this operator, the hexagon outputs lie in the smaller space
+$(A_q\otimes A_q)[[x]]$.
+
+Unitarity also gives an algebraic placement identity for a formal
+displacement variable $t$:
+\begin{equation}\label{eq:vertex-spectral-placement}
+ \tau S(t)^{-1}=S(-t)\tau.
+\end{equation}
+Indeed, \eqref{eq:vertex-spectral-unitarity} gives
+$S(t)^{-1}=\tau S(-t)\tau$, and left multiplication by $\tau$
+proves \eqref{eq:vertex-spectral-placement}.
+For the flipped operators $B(t)=\tau S(t)$ and $C(t)=S(t)\tau$,
+this gives $B(-t)B(t)=C(-t)C(t)=1$.
+For example, $B(-t)B(t)=S^{21}(-t)S(t)$, while the identity
+for $C$ follows from $S(-t)S^{21}(t)=1$.
+
+In a field product, the two displacement choices are $t=z_1-z_2$
+and $-t=z_2-z_1$.
+The first uses the scalar expansion in nonnegative powers of $z_2$,
+and the second uses $\iota_{21}$ from
+Section~\ref{sec:vertex-exchange-order}.
+Equation~\eqref{eq:vertex-spectral-placement} concerns Laurent-valued
+tensor maps before these expansions.
+Using it inside a locality equation still requires the indicated
+expansion spaces and locality factors.
+For constant $S$, both scalar expansions agree and give exactly
+the conversion \eqref{eq:vertex-other-placement}.
+
+\section{The delta identity and regular Jacobi identity}
+\label{sec:vertex-delta}
+
+For regular fields, exact associativity and exact exchange can be
+combined into one distribution identity.
+The required scalar identity has three terms, corresponding to the
+two ordered products and their iterate.
+Write
+$\delta(t)=\sum_{n\in\mathbb Z}t^n$ and define
+\[
+ \begin{aligned}
+ \Delta_1&=z_0^{-1}\delta\left(\frac{z_1-z_2}{z_0}\right),\\
+ \Delta_2&=z_0^{-1}\delta\left(\frac{z_2-z_1}{-z_0}\right),\\
+ \Delta_3&=z_2^{-1}\delta\left(\frac{z_1-z_0}{z_2}\right).
+ \end{aligned}
+\]
+These symbols mean binomial expansions of their numerators in
+nonnegative powers of $z_2,z_1,z_0$, respectively.
+They define scalar distributions in $z_0,z_1,z_2$.
+Every monomial appearing in any $\Delta_i$ has total degree $-1$.
+
+\begin{lemma}\label{lem:vertex-delta-identity}
+With these expansion conventions,
+\begin{equation}\label{eq:vertex-delta-identity}
+ \Delta_1-\Delta_2=\Delta_3.
+\end{equation}
+For every $F\in V[[z_1,z_2]]$, all products in
+\[
+ \Delta_3F(z_1,z_2)=\Delta_3F(z_0+z_2,z_2)
+\]
+are coefficientwise defined, and the equality holds.
+Multiplication of \eqref{eq:vertex-delta-identity} by $F(z_1,z_2)$
+is also coefficientwise defined.
+\end{lemma}
+
+\begin{proof}
+Consider the coefficient of $z_0^{p_0} z_1^{p_1} z_2^{p_2}$, where $p_0,p_1,p_2$
+are integers. All three coefficients vanish unless $p_0+p_1+p_2=-1$.
+Under that relation, direct binomial expansion gives the coefficients
+\[
+ \begin{array}{c|c}
+ \Delta_1&
+   \begin{cases}(-1)^{p_2}\binom{p_1+p_2}{p_2}&p_2\geq0,\\0&p_2<0,
+   \end{cases}\\[4pt]
+ \Delta_2&
+   \begin{cases}(-1)^{p_2}\binom{p_1+p_2}{p_1}&p_1\geq0,\\0&p_1<0,
+   \end{cases}\\[4pt]
+ \Delta_3&
+   \begin{cases}(-1)^{p_0}\binom{-p_2-1}{p_0}&p_0\geq0,\\0&p_0<0.
+   \end{cases}
+ \end{array}
+\]
+For the second row, its sign before simplification is
+$(-1)^{-p_0-1+p_1}$, equal to $(-1)^{p_2}$ by the total-degree relation.
+Each entry arises from one term of the corresponding binomial expansion.
+
+If $p_0<0$, then $p_1+p_2\geq0$.
+When $p_1,p_2\geq0$, the first two binomial coefficients agree.
+If $p_2<0$, then $p_1>p_1+p_2$, so the second binomial coefficient is zero
+and the first row is absent.
+The case $p_1<0$ has the same conclusion with the roles interchanged.
+Thus the first two rows cancel and the third is zero.
+
+Suppose $p_0\geq0$, so $p_1+p_2=-p_0-1<0$.
+If $p_1,p_2<0$, the first two rows vanish and
+$p_0>-p_2-1\geq0$ makes the third vanish.
+If $p_2\geq0$, then $p_1<0$, and the first row equals
+$\binom{p_0+p_2}{p_2}$, equal to the third row $\binom{p_0+p_2}{p_0}$.
+Here the identity $\binom{-a-1}{j}=(-1)^j\binom{a+j}{j}$
+for $a,j\geq0$ follows by extracting a minus sign from each numerator factor.
+
+If $p_1\geq0$, then $p_2<0$ and only the second row occurs on the left.
+Its negative equals
+$(-1)^{p_2+p_1+1}\binom{p_0+p_1}{p_1}=(-1)^{p_0}\binom{p_0+p_1}{p_1}$.
+The third row is $(-1)^{p_0}\binom{p_0+p_1}{p_0}$, which is the same number.
+These cases exhaust all triples and prove \eqref{eq:vertex-delta-identity}.
+
+Multiplication of $\Delta_3$ by $z_1-z_0-z_2$ gives zero.
+Indeed, Pascal's coefficient identity gives
+$(z_1-z_0)(z_1-z_0)^n=(z_1-z_0)^{n+1}$ for every integer $n$.
+In the defining sum for $\Delta_3$, reindexing $n+1$ then identifies
+multiplication by $z_1-z_0$ with multiplication by $z_2$.
+All these operations involve polynomial multipliers, so every coefficient is finite.
+It follows by repeated polynomial multiplication that
+$\Delta_3z_1^az_2^b=\Delta_3(z_0+z_2)^az_2^b$ for $a,b\geq0$.
+
+For a fixed output monomial of total degree $d$, multiplication by
+any $\Delta_i$ uses only the total-degree $d+1$ part of $F$.
+That part is a finite sum, or zero if $d+1<0$.
+The substituted series $F(z_0+z_2,z_2)$ has the same property,
+because substitution preserves total degree.
+Thus all claimed products are defined, and the polynomial identity
+extends to every regular $F$ degree by degree.
+\end{proof}
+
+For constant $S$, write $S(v\otimes u)=\sum_i v_i\otimes u_i$,
+absorbing any scalar coefficients into the vectors.
+The $S$-Jacobi identity in these conventions is the distribution equality
+\begin{equation}\label{eq:vertex-s-jacobi}
+ \begin{aligned}
+ &\Delta_1Y(u,z_1)Y(v,z_2)c
+   -\Delta_2\sum_iY(v_i,z_2)Y(u_i,z_1)c\\
+ &\qquad=\Delta_3Y(Y(u,z_0)v,z_2)c.
+ \end{aligned}
+\end{equation}
+The quantum-plane fields satisfy this identity directly.
+Indeed, put $F(z_1,z_2)=Y(u,z_1)Y(v,z_2)c$.
+Exact $S$-locality identifies the second product with this same regular $F$.
+Lemma~\ref{lem:vertex-delta-identity} then makes the left side
+$\Delta_3F(z_0+z_2,z_2)$.
+Exact associativity \eqref{eq:vertex-exact-associativity} identifies
+the substituted series with the iterate on the right.
+
+For a commutative differential algebra, the same proof with $S=1$
+gives the ordinary Jacobi identity.
+Regularity makes each coefficient sum finite.
+This argument does not establish the corresponding finiteness for singular fields.
+
+\section{A formal deformation of the quantum plane}
+\label{sec:vertex-hadic}
+
+The relation $ba=q\,ab$ becomes commutative at $q=1$.
+A formal deformation about this value uses $q=e^h$, where
+$h$ is a formal parameter and
+\[
+ e^h=1+h+\frac{h^2}{2}+\frac{h^3}{6}+\cdots.
+\]
+Its desired generator relation $ba=e^h ab$ has infinitely many
+parameter coefficients.
+We also impose identity reduction modulo $h$ on the deformed
+exchange operator.
+
+Set $R=k[[h]]$ and let $W=\bigoplus_{m,n\geq0}k e_{m,n}$.
+Define
+\[
+ V=W[[h]]=\left\{\sum_{j\geq0}h^jw_j:w_j\in W\right\}.
+\]
+A module of this form is called topologically free over $R$.
+The submodules $h^NV$, for $N\geq1$, form basic neighborhoods of zero.
+A sequence converges when each coefficient of $h$ eventually equals
+the corresponding coefficient of its limit.
+
+Every $h$ coefficient in $V$ has finite monomial support.
+That support may grow with the coefficient order.
+Put $R_N=R/h^NR$ and $V_N=V/h^NV$ for $N\geq1$.
+Truncation identifies $V_N$ with $W\otimes_kR_N$.
+Define the completed tensor product over $R$ by
+\begin{equation}\label{eq:vertex-hadic-tensor}
+ V\widehat\otimes_RV
+   =\varprojlim_N(V_N\otimes_{R_N}V_N)
+   \cong(W\otimes_kW)[[h]].
+\end{equation}
+The transition maps reduce coefficients from order $N+1$ to order $N$.
+Each inverse limit here consists of families whose coefficients agree
+under all these reductions.
+
+At level $N$, the isomorphism sends
+$(u\otimes r)\otimes(v\otimes s)$ to $(u\otimes v)\otimes rs$.
+Its inverse sends $(u\otimes v)\otimes r$ to
+$(u\otimes1)\otimes(v\otimes r)$.
+Scalar balancing proves both formulas well-defined and mutually inverse.
+Compatible truncated coefficients then prove
+\eqref{eq:vertex-hadic-tensor}.
+This completes with respect to powers of $h$ over the base $R$.
+It specifies a different filtration and scalar base from the
+two-variable tensor completion in Section~\ref{sec:cc-tensor}.
+
+For $r\geq2$, the same construction defines
+\[
+ V^{\widehat\otimes_R r}
+   =\varprojlim_N V_N^{\otimes_{R_N}r}
+   \cong W^{\otimes_k r}[[h]].
+\]
+At level $N$, the isomorphism multiplies the $r$ scalar factors
+and retains the $r$ vector factors.
+Its inverse puts the scalar on the last vector factor and
+puts $1$ on every preceding factor.
+Balancing and compatible coefficients prove the isomorphism as for $r=2$.
+Give these completed tensor powers the topology with basic neighborhoods
+$h^NV^{\widehat\otimes_R r}$.
+
+Define the multiplication and exchange on constant basis elements by
+\begin{equation}\label{eq:vertex-hadic-operations}
+ \begin{aligned}
+ e_{m,n}*_h e_{r,s}&=e^{hnr}e_{m+r,n+s},\\
+ De_{m,n}&=(m+n)e_{m,n},\\
+ S_h(e_{m,n}\otimes e_{r,s})
+   &=e^{h(ms-nr)}e_{m,n}\otimes e_{r,s}.
+ \end{aligned}
+\end{equation}
+Here $e^{hc}=\sum_{j\geq0}c^jh^j/j!$ for every $c\in k$.
+
+In particular, $a*_h b=ab=e_{1,1}$ and $b*_h a=e^h ab$.
+Their difference is
+\[
+ b*_h a-a*_h b
+   =h ab+\frac{h^2}{2}ab+\frac{h^3}{6}ab+\cdots.
+\]
+Also $S_h(a\otimes b)=e^h a\otimes b$, with the same
+first-order scalar coefficient.
+
+Extend the maps $R$-linearly and continuously.
+For multiplication, the coefficient of $h^d$ on general inputs
+$\sum_i h^iu_i$ and $\sum_j h^jv_j$ is
+\[
+ \sum_{i+j+\ell=d}\mu_\ell(u_i,v_j),\qquad
+ \mu_\ell(e_{m,n},e_{r,s})=\frac{(nr)^\ell}{\ell!}e_{m+r,n+s},
+\]
+where $i,j,\ell\geq0$ and $\mu_\ell$ is bilinear.
+There are finitely many such triples, and each $u_i,v_j$ has
+finite support, so the coefficient belongs to $W$.
+The same finite-convolution argument defines $S_h$ on
+$(W\otimes W)[[h]]$ and defines $D$ on $V$.
+
+All these maps preserve parameter order, proving continuity.
+Their formulas on polynomial truncations determine them uniquely, because
+$\bigcap_Nh^NV=0$ and likewise for the completed tensor product.
+For $c,d\in k$, the identity $e^{hc}e^{hd}=e^{h(c+d)}$ follows at coefficient $h^j$
+from the finite binomial sum for $(c+d)^j/j!$.
+Consequently the associativity and bicharacter proofs for $q$ apply
+coefficientwise with $q=e^h$.
+The inverse of $S_h$ replaces $h(ms-nr)$ by its negative.
+In particular, $S_h=1+O(h)$ means $(S_h-1)(V\widehat\otimes_RV)
+\subset h(V\widehat\otimes_RV)$.
+
+Define the field-output space for this topology by
+\[
+ V((z))_h=\varprojlim_N V_N((z)).
+\]
+Equivalently, it consists of distributions $\sum_{j\in\mathbb Z}v_jz^j$
+with $v_j\in V$ and $v_j\to0$ in the $h$-adic topology as
+$j\to-\infty$.
+To prove the description, a compatible family determines each $v_j$
+by its compatible truncated coefficients.
+At every level $N$, its finite Laurent lower bound makes
+$v_j\in h^NV$ for sufficiently negative $j$.
+Conversely, these conditions give a Laurent series modulo every $h^N$
+and hence a compatible family.
+
+Give $V[[z]]$ the $h$-adic topology, with basic neighborhoods
+$h^NV[[z]]$.
+Coefficient reduction identifies it with
+\[
+ V[[z]]=\varprojlim_N V_N[[z]].
+\]
+Indeed, compatible reductions determine each position coefficient in $V$,
+and an arbitrary family of those coefficients gives all the reductions.
+Use the same topology on $V[[z_1,\ldots,z_r]]$ for each finite $r$.
+Give $V((z))_h$ the topology whose basic neighborhoods are kernels
+of its projections to $V_N((z))$.
+The inclusion $V[[z]]\to V((z))_h$ preserves the coefficient
+reductions and is therefore continuous.
+
+The field formula
+\[
+ Y_h(u,z)v=(e^{zD}u)*_h v
+\]
+defines a continuous $R$-linear map
+$Y_h(z):V\widehat\otimes_RV\to V[[z]]\subset V((z))_h$.
+For a fixed $h^dz^r$ coefficient, the multiplication convolution
+has finitely many terms and the exponential contributes $D^r/r!$.
+The map $Y_h(z)$ sends $h^NV^{\widehat\otimes_R2}$ into
+$h^NV[[z]]$, proving continuity with a bound uniform in the position coefficient.
+The scalar target for the exchange map can be taken as
+$(W\otimes W\otimes k((x)))[[h]]$.
+Give it the topology of its powers of $h$ as well.
+The constructed $S_h$ lands in its smaller constant-in-$x$ subspace
+$(W\otimes W)[[h]]$.
+
+Define the two maps from $V^{\widehat\otimes_R3}$ to
+$V[[z_1,z_2]]$ by
+\[
+ \begin{aligned}
+ P_{12,h}(u\otimes v\otimes c)&=Y_h(u,z_1)Y_h(v,z_2)c,\\
+ P_{21,h}(u\otimes v\otimes c)&=Y_h(u,z_2)Y_h(v,z_1)c.
+ \end{aligned}
+\]
+Their uniform parameter bounds extend these formulas continuously
+to the completed tensor cube.
+For unitary $S_h$, exact $S$-locality has the equivalent placement
+$P_{12,h}S_h^{12}=P_{21,h}\tau^{12}$ by
+\eqref{eq:vertex-other-placement}.
+The locality requirement for the formal deformation allows a polynomial
+factor after each parameter reduction:
+\begin{equation}\label{eq:vertex-hadic-locality}
+ (z_1-z_2)^N P_{12,h}S_h^{12}
+   \equiv (z_1-z_2)^N P_{21,h}\tau^{12}\pmod{h^M}.
+\end{equation}
+For each $u,v$ and each $M\geq1$, some $N\geq0$ must make
+the equality hold on $u\otimes v\otimes c$ for all $c$.
+The remaining requirements are the vacuum and translation equations,
+unitarity, the quantum Yang--Baxter equation, shift, and the first hexagon,
+interpreted after every parameter reduction.
+Together with $S_h=1+O(h)$, these define the formal deformation
+convention used here.
+
+\begin{theorem}\label{thm:vertex-hadic-plane}
+The operations \eqref{eq:vertex-hadic-operations} and fields $Y_h$
+satisfy these formal deformation requirements.
+They have exact weak associativity, and
+\eqref{eq:vertex-hadic-locality} holds with $N=0$ for every $M$.
+Reduction modulo $h$ gives the commutative differential algebra
+\[
+ V/hV=k[a,b],\qquad D=a\partial_a+b\partial_b,
+ \qquad S_h\bmod h=1.
+\]
+\end{theorem}
+
+\begin{proof}
+The scalar exponential law preserves the multiplication and bicharacter
+identities under $q^j\mapsto e^{hj}$.
+The vacuum is $e_{0,0}$, and $D$ is a derivation,
+since both depend only on additivity of the degrees.
+The coefficient proof of
+Theorem~\ref{thm:vertex-differential-algebra} therefore proves both
+translation equations and exact weak associativity over $R$.
+
+For $\alpha=(m,n)$ and $\beta=(r,s)$, put
+$\rho_h(\alpha,\beta)=e^{h(ms-nr)}$.
+For $c\in V$, the locality calculation is
+\[
+ \begin{aligned}
+ P_{12,h}S_h^{12}(e_\alpha\otimes e_\beta\otimes c)
+  &=e^{|\alpha|z_1+|\beta|z_2}
+       \rho_h(\alpha,\beta)(e_\alpha*_h e_\beta)*_h c\\
+  &=e^{|\alpha|z_1+|\beta|z_2}
+       (e_\beta*_h e_\alpha)*_h c\\
+  &=P_{21,h}\tau^{12}(e_\alpha\otimes e_\beta\otimes c),
+ \end{aligned}
+\]
+This is an equality in $V[[z_1,z_2]]$.
+The vacuum, shift, unitarity, Yang--Baxter, skew-symmetry, and both
+hexagon calculations use exactly the same scalar identities.
+At any fixed parameter order, arbitrary completed inputs have only
+finitely many relevant basis coefficients.
+Multilinearity and continuity therefore extend all these equalities
+to completed inputs and prove every required reduction.
+
+Modulo $h$, the multiplication coefficient $e^{hnr}$ is one and
+the exchange coefficient is one.
+Thus the ordered basis monomials multiply as those of $k[a,b]$.
+The degree formula for $D$ identifies it with
+$a\partial_a+b\partial_b$, giving the asserted reduction.
+\end{proof}
+
+The regular Jacobi calculation of Section~\ref{sec:vertex-delta}
+also holds coefficientwise in $h$.
+At each parameter coefficient, its total-degree argument again uses
+finitely many position coefficients.
+
+\begin{proposition}\label{prop:vertex-fixed-q-obstruction}
+Fix $q_0\in k^\times$ with $q_0\ne1$.
+Extend the multiplication and Euler fields of $A_{q_0}$ to
+$A_{q_0}[[h]]$ without changing their coefficients.
+No exchange map $S_h=1+O(h)$ can make these fields satisfy
+\eqref{eq:vertex-hadic-locality}.
+\end{proposition}
+
+\begin{proof}
+At $M=1$, reduction of that locality equation gives ordinary
+locality for the fields of $A_{q_0}$.
+For $u=a$, $v=b$, and $c=1$, its commutator is
+\[
+ [Y(a,z_1),Y(b,z_2)]1
+   =(1-q_0)e^{z_1+z_2}ab\ne0.
+\]
+The coefficient at $z_1^0z_2^0$ is the nonzero vector
+$(1-q_0)e_{1,1}$.
+Injectivity of multiplication by $(z_1-z_2)^N$ on regular series,
+proved in Theorem~\ref{thm:vertex-differential-algebra}, excludes every $N$.
+This contradicts the required reduction independently of the proposed
+higher coefficients of $S_h$.
+\end{proof}
+
+\section{Nondegeneracy of field evaluation}
+\label{sec:vertex-nondegeneracy}
+
+An injective evaluation map would allow equality of field products
+on the vacuum to imply equality of their tensor inputs.
+Let $K_n=k((z_1))\cdots((z_n))$ be the scalar iterated Laurent field.
+For a nonlocal vertex algebra $V$, define
+\[
+ \begin{aligned}
+ Z_n:V^{\otimes n}\otimes_k K_n
+   &\longrightarrow V((z_1))\cdots((z_n)),\\
+ (u_1\otimes\cdots\otimes u_n)\otimes f
+   &\longmapsto fY(u_1,z_1)\cdots Y(u_n,z_n)\mathbf1.
+ \end{aligned}
+\]
+Successive coefficientwise field action gives the stated iterated target.
+Scalar multiplication is defined there by iterated Laurent convolution,
+whose lower bounds make each coefficient sum finite at each iteration.
+Nondegeneracy means that $Z_n$ is injective for every $n\geq1$.
+
+For $V=A_q$ with the Euler fields, put
+\[
+ \xi=(a\otimes b-q^{-1}b\otimes a)\otimes1
+       \in A_q^{\otimes2}\otimes_kK_2.
+\]
+Let $\lambda_a,\lambda_b:A_q\to k$ extract the coefficients of
+$a$ and $b$, respectively.
+The scalar extension of $\lambda_a\otimes\lambda_b$ sends $\xi$ to
+$1\in K_2$, proving $\xi\ne0$.
+The field calculation is
+\[
+ \begin{aligned}
+ Z_2((a\otimes b)\otimes1)&=e^{z_1+z_2}ab,\\
+ Z_2((b\otimes a)\otimes1)&=e^{z_1+z_2}ba
+                         =q e^{z_1+z_2}ab.
+ \end{aligned}
+\]
+Hence $Z_2(\xi)=0$, proving failure of nondegeneracy for every
+$q\in k^\times$, including $q=1$.
+
+For the completed example, define
+\[
+ \widehat Z_2:V\widehat\otimes_RV\longrightarrow V[[z_1,z_2]],
+ \qquad u\otimes v\longmapsto Y_h(u,z_1)Y_h(v,z_2)1.
+\]
+The coefficient bounds of Section~\ref{sec:vertex-hadic} extend this
+map continuously from elementary tensors.
+It has the relation $a\otimes b-e^{-h}b\otimes a$ in its domain.
+This tensor is nonzero because its reduction modulo $h$ is the difference
+of two distinct tensor basis vectors.
+Its image under $\widehat Z_2$ vanishes by $b*_h a=e^h ab$.
+
+These evaluation maps have nonzero kernels, so equality of their
+outputs does not determine equality of their tensor inputs.
+The tensor identities for $S$ and $S_h$ follow from the explicit
+degree calculations.

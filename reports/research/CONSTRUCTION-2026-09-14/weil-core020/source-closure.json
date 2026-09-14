@@ -1,0 +1,139 @@
+{
+  "files": [
+    {
+      "path": "manuscript/all-arity-current-actions.tex",
+      "sha256": "8e39887547c6420d3bd5bff9ef988e6ec86b7eab6aa19bee2070a759304f1701",
+      "bytes": 59912
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "sha256": "896ea92682e4056d08773850396e5a6fba53d66c9df666519b6ba399c43b68b8",
+      "bytes": 40642
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "sha256": "b245f5199101de1d8ece53ef9aa823432743aff99b17dd2e55b2589fe604f399",
+      "bytes": 64070
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "sha256": "ae96e7412e00dcc072313c614af0b43137fab6ad682d646639102607aee1a016",
+      "bytes": 55291
+    },
+    {
+      "path": "manuscript/current-products-and-bv.tex",
+      "sha256": "aa4ce0d63aa328f9b03f2bc23344c3e4d2a6c3a36dd683106903566a286a51f6",
+      "bytes": 19422
+    },
+    {
+      "path": "manuscript/figures/gaussian-weights.pdf",
+      "sha256": "a3f770563153c907d3c8f4949521099d08a3e35c0729c81a4f03bd13adf45e5a",
+      "bytes": 48568
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "sha256": "790633515ca6b075d05da10f27f1f088e691a771823ccaee2a4ddba6efdcf6a6",
+      "bytes": 64482
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "sha256": "6a237e381bf91acc7db1e65b4cffd142876f6edd6fdf577aa47e00b406b52754",
+      "bytes": 47587
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "sha256": "816822cac9678fa272c1da948f1d0c1fc246ead750667be679a912ce66f70b0e",
+      "bytes": 31073
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "sha256": "9089174ac872f38354fb8115846ee4ac0651c6126e6165dff628c0882111b369",
+      "bytes": 96408
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "sha256": "ef13514036f14ca6eca3390bb87903e5a5afdd4e03f310e18208f9718ce239e5",
+      "bytes": 41025
+    },
+    {
+      "path": "manuscript/merging-ordered-insertions.tex",
+      "sha256": "56f175689fe5faa04806707411c52c7e568ceec44d8908a64868c868b7c1cf6d",
+      "bytes": 20969
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "sha256": "fa6a407cafddd9a6d7a144bf9c6e50eb677642b1dffc7e39ec3b24824d96fc77",
+      "bytes": 23573
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "sha256": "bd59cfa02aa5210f84cb042ece43e127bc98f3151f5f5b10445dfd82a1371bc0",
+      "bytes": 24860
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "sha256": "d166dc5b88d349294490754c4f85b2d84854b7799ee8c90f7d464b793bb7bda2",
+      "bytes": 22817
+    },
+    {
+      "path": "manuscript/preface.tex",
+      "sha256": "9bba8f6515003a16f2921f80bb09132e78aa5030f53a14cbe8c469df44608c50",
+      "bytes": 23959
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "sha256": "98eeafbd8baf932f8dec027b5e509f86df4523bf3da3f6425988fd46421fb5b3",
+      "bytes": 45721
+    },
+    {
+      "path": "manuscript/programme.tex",
+      "sha256": "0763644b6e9e7a122704f92617c5d609f0a6d9ee24b2ac2488e8932dcb794ab8",
+      "bytes": 1324
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "sha256": "1688504de580b2934d0b9148f0e3961d0ee4e2267afb4aaf2df61b2954d0bdc8",
+      "bytes": 42465
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "sha256": "6c335d080746254600ecd1b0c01ea7ddf68f353b13b18080d66eaf4c4c5875e6",
+      "bytes": 62513
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "sha256": "bf8566164dae6f169aba9acc1b447d6669d4660862c630d73fc042ee1a6889f4",
+      "bytes": 78998
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "sha256": "88f38df2cd933bce98f4dd34230ba6789ce33834693f9ff519b9e9dedafbe498",
+      "bytes": 50437
+    },
+    {
+      "path": "manuscript/two-dimensional-free-fields.tex",
+      "sha256": "84600a19c1ed5b2ab234747dc48bf0ab82e4e8270524a40be70fcb4d4173ff98",
+      "bytes": 22842
+    },
+    {
+      "path": "manuscript/weil-forms-and-domains.tex",
+      "sha256": "aa4e5a679475d0d82c37f75992bc2fef60447bd6d4f83b127f55860656ce66f3",
+      "bytes": 120032
+    },
+    {
+      "path": "raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "bytes": 43118
+    },
+    {
+      "path": "weil-standalone.tex",
+      "sha256": "a846b52039bef7aa8f399361a2eaa94cb7a4e5fc8acc8a5e844b53ec3cd7e635",
+      "bytes": 223
+    }
+  ],
+  "assets": 26,
+  "reader_entrypoint": "manuscript/programme.tex",
+  "standalone_entrypoint": "weil-standalone.tex",
+  "source_aggregate_sha256": "982d1f489a61b0ab4152e34add7803e1be3066394e0d647560379ebd6a18f903",
+  "reader_contains_no_operational_reports_or_build_products": true
+}

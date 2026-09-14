@@ -1,0 +1,2039 @@
+{
+  "pdf_sha256": "ebb2414deec01287094de300cd85f1ef959baba82b59808d9915ee143bd5c0bc",
+  "pages": 356,
+  "new_labels": [
+    {
+      "label": "chap:weil-operator-domains",
+      "number": "20",
+      "aux_page": "321",
+      "actual_page": 321,
+      "destination": "chapter.832",
+      "top": 92.106,
+      "visible_box": [
+        138.92543029785156,
+        130.91604614257812,
+        152.97036743164062,
+        145.2622528076172
+      ],
+      "visible_distance": 45.98314947509766,
+      "source_line": 2
+    },
+    {
+      "label": "eq:test-class",
+      "number": "20.1",
+      "aux_page": "321",
+      "actual_page": 321,
+      "destination": "equation.834",
+      "top": 685.252,
+      "visible_box": [
+        493.63604736328125,
+        690.4536743164062,
+        516.9596557617188,
+        701.36279296875
+      ],
+      "visible_distance": 10.656233642578172,
+      "source_line": 140
+    },
+    {
+      "label": "eq:operations",
+      "number": "20.2",
+      "aux_page": "322",
+      "actual_page": 322,
+      "destination": "equation.835",
+      "top": 132.99900000000002,
+      "visible_box": [
+        491.9833068847656,
+        138.19972229003906,
+        516.9542236328125,
+        149.10882568359375
+      ],
+      "visible_distance": 10.655273986816383,
+      "source_line": 149
+    },
+    {
+      "label": "eq:centered-mellin",
+      "number": "20.3",
+      "aux_page": "322",
+      "actual_page": 322,
+      "destination": "equation.836",
+      "top": 192.81100000000004,
+      "visible_box": [
+        492.7270202636719,
+        198.0127716064453,
+        516.9561157226562,
+        208.921875
+      ],
+      "visible_distance": 10.65632330322262,
+      "source_line": 156
+    },
+    {
+      "label": "eq:target",
+      "number": "20.4",
+      "aux_page": "322",
+      "actual_page": 322,
+      "destination": "equation.837",
+      "top": 336.005,
+      "visible_box": [
+        491.4210205078125,
+        345.19171142578125,
+        516.9591674804688,
+        356.100830078125
+      ],
+      "visible_distance": 14.64127075195313,
+      "source_line": 175
+    },
+    {
+      "label": "sec:complex",
+      "number": "20.2",
+      "aux_page": "322",
+      "actual_page": 322,
+      "destination": "section.838",
+      "top": 454.637,
+      "visible_box": [
+        94.76599884033203,
+        459.73785400390625,
+        115.24526977539062,
+        471.69305419921875
+      ],
+      "visible_distance": 11.0784541015625,
+      "source_line": 183
+    },
+    {
+      "label": "lem:cauchy",
+      "number": "20.2.1",
+      "aux_page": "322",
+      "actual_page": 322,
+      "destination": "lemma.840",
+      "top": 549.723,
+      "visible_box": [
+        132.38058471679688,
+        554.9237060546875,
+        158.59188842773438,
+        565.8328247070312
+      ],
+      "visible_distance": 10.655265380859419,
+      "source_line": 195
+    },
+    {
+      "label": "lem:jensen",
+      "number": "20.2.2",
+      "aux_page": "323",
+      "actual_page": 323,
+      "destination": "lemma.842",
+      "top": 257.01599999999996,
+      "visible_box": [
+        131.85684204101562,
+        262.2166748046875,
+        159.31178283691406,
+        273.12579345703125
+      ],
+      "visible_distance": 10.655234130859412,
+      "source_line": 237
+    },
+    {
+      "label": "lem:local-log",
+      "number": "20.2.3",
+      "aux_page": "323",
+      "actual_page": 323,
+      "destination": "lemma.844",
+      "top": 568.106,
+      "visible_box": [
+        131.9311065673828,
+        573.3077392578125,
+        158.7040252685547,
+        584.2168579101562
+      ],
+      "visible_distance": 10.65629858398438,
+      "source_line": 275
+    },
+    {
+      "label": "sec:tests",
+      "number": "20.3",
+      "aux_page": "324",
+      "actual_page": 324,
+      "destination": "section.845",
+      "top": 321.149,
+      "visible_box": [
+        94.76599884033203,
+        326.2498474121094,
+        114.43231201171875,
+        338.2050476074219
+      ],
+      "visible_distance": 11.078447509765624,
+      "source_line": 320
+    },
+    {
+      "label": "lem:test-bounds",
+      "number": "20.3.1",
+      "aux_page": "324",
+      "actual_page": 324,
+      "destination": "lemma.847",
+      "top": 340.614,
+      "visible_box": [
+        132.4176788330078,
+        345.81573486328125,
+        157.9072723388672,
+        356.7248229980469
+      ],
+      "visible_distance": 10.656278930664087,
+      "source_line": 323
+    },
+    {
+      "label": "eq:strip-decay",
+      "number": "20.5",
+      "aux_page": "324",
+      "actual_page": 324,
+      "destination": "equation.848",
+      "top": 391.287,
+      "visible_box": [
+        492.8692626953125,
+        396.48870849609375,
+        516.95654296875,
+        407.3978271484375
+      ],
+      "visible_distance": 10.656267822265647,
+      "source_line": 330
+    },
+    {
+      "label": "lem:gaussian",
+      "number": "20.3.2",
+      "aux_page": "324",
+      "actual_page": 324,
+      "destination": "lemma.850",
+      "top": 626.735,
+      "visible_box": [
+        132.14285278320312,
+        631.9356689453125,
+        159.07742309570312,
+        642.8447875976562
+      ],
+      "visible_distance": 10.655228271484361,
+      "source_line": 360
+    },
+    {
+      "label": "eq:gaussian",
+      "number": "20.6",
+      "aux_page": "324",
+      "actual_page": 324,
+      "destination": "equation.851",
+      "top": 700.424,
+      "visible_box": [
+        491.4516296386719,
+        705.6256713867188,
+        516.9570922851562,
+        716.5347900390625
+      ],
+      "visible_distance": 10.656230712890647,
+      "source_line": 369
+    },
+    {
+      "label": "eq:inverse",
+      "number": "20.7",
+      "aux_page": "325",
+      "actual_page": 325,
+      "destination": "equation.852",
+      "top": 119.26599999999996,
+      "visible_box": [
+        491.7710266113281,
+        124.46772766113281,
+        516.9600830078125,
+        135.3768310546875
+      ],
+      "visible_distance": 10.656279357910194,
+      "source_line": 374
+    },
+    {
+      "label": "prop:algebra",
+      "number": "20.3.3",
+      "aux_page": "325",
+      "actual_page": 325,
+      "destination": "proposition.854",
+      "top": 584.781,
+      "visible_box": [
+        162.85113525390625,
+        589.981689453125,
+        189.17486572265625,
+        600.8908081054688
+      ],
+      "visible_distance": 10.655248779296926,
+      "source_line": 430
+    },
+    {
+      "label": "eq:star-transform",
+      "number": "20.8",
+      "aux_page": "325",
+      "actual_page": 325,
+      "destination": "equation.855",
+      "top": 628.233,
+      "visible_box": [
+        491.860107421875,
+        633.4346923828125,
+        516.9619140625,
+        644.3438110351562
+      ],
+      "visible_distance": 10.656251708984428,
+      "source_line": 436
+    },
+    {
+      "label": "sec:euler-gamma",
+      "number": "20.4",
+      "aux_page": "326",
+      "actual_page": 326,
+      "destination": "section.856",
+      "top": 229.55899999999997,
+      "visible_box": [
+        94.76599884033203,
+        231.70884704589844,
+        115.86693572998047,
+        243.66404724121094
+      ],
+      "visible_distance": 8.127447143554718,
+      "source_line": 465
+    },
+    {
+      "label": "lem:euler",
+      "number": "20.4.1",
+      "aux_page": "326",
+      "actual_page": 326,
+      "destination": "lemma.858",
+      "top": 279.577,
+      "visible_box": [
+        131.69761657714844,
+        284.77874755859375,
+        157.974853515625,
+        295.6878356933594
+      ],
+      "visible_distance": 10.656291625976564,
+      "source_line": 472
+    },
+    {
+      "label": "eq:euler",
+      "number": "20.9",
+      "aux_page": "326",
+      "actual_page": 326,
+      "destination": "equation.859",
+      "top": 322.083,
+      "visible_box": [
+        491.70391845703125,
+        327.28369140625,
+        516.9584350585938,
+        338.19281005859375
+      ],
+      "visible_distance": 10.655250732421848,
+      "source_line": 478
+    },
+    {
+      "label": "lem:gamma",
+      "number": "20.4.2",
+      "aux_page": "326",
+      "actual_page": 326,
+      "destination": "lemma.861",
+      "top": 569.307,
+      "visible_box": [
+        132.14285278320312,
+        574.5086669921875,
+        160.3865203857422,
+        585.4177856445312
+      ],
+      "visible_distance": 10.656226318359359,
+      "source_line": 510
+    },
+    {
+      "label": "eq:gamma-product",
+      "number": "20.10",
+      "aux_page": "326",
+      "actual_page": 326,
+      "destination": "equation.862",
+      "top": 650.211,
+      "visible_box": [
+        488.10137939453125,
+        655.4116821289062,
+        516.9559326171875,
+        666.32080078125
+      ],
+      "visible_distance": 10.655241455078112,
+      "source_line": 519
+    },
+    {
+      "label": "eq:reciprocal-growth",
+      "number": "20.11",
+      "aux_page": "326",
+      "actual_page": 326,
+      "destination": "equation.863",
+      "top": 704.578,
+      "visible_box": [
+        490.4849853515625,
+        709.7786865234375,
+        516.9613647460938,
+        720.6878051757812
+      ],
+      "visible_distance": 10.6552458496094,
+      "source_line": 526
+    },
+    {
+      "label": "eq:digamma",
+      "number": "20.12",
+      "aux_page": "327",
+      "actual_page": 327,
+      "destination": "equation.864",
+      "top": 116.894,
+      "visible_box": [
+        488.83935546875,
+        122.09474182128906,
+        516.9630126953125,
+        133.00384521484375
+      ],
+      "visible_distance": 10.6552935180664,
+      "source_line": 534
+    },
+    {
+      "label": "eq:gamma-real",
+      "number": "20.13",
+      "aux_page": "327",
+      "actual_page": 327,
+      "destination": "equation.865",
+      "top": 570.406,
+      "visible_box": [
+        489.5802307128906,
+        575.606689453125,
+        516.9620361328125,
+        586.5158081054688
+      ],
+      "visible_distance": 10.655248779296926,
+      "source_line": 589
+    },
+    {
+      "label": "sec:theta",
+      "number": "20.5",
+      "aux_page": "327",
+      "actual_page": 327,
+      "destination": "section.866",
+      "top": 639.808,
+      "visible_box": [
+        94.76599884033203,
+        641.9578247070312,
+        114.27689361572266,
+        653.9130249023438
+      ],
+      "visible_distance": 8.127424804687507,
+      "source_line": 595
+    },
+    {
+      "label": "lem:gaussian-real-transform",
+      "number": "20.5.1",
+      "aux_page": "328",
+      "actual_page": 328,
+      "destination": "lemma.868",
+      "top": 89.13699999999994,
+      "visible_box": [
+        132.14285278320312,
+        94.33772277832031,
+        157.288330078125,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 607
+    },
+    {
+      "label": "lem:theta",
+      "number": "20.5.2",
+      "aux_page": "328",
+      "actual_page": 328,
+      "destination": "lemma.870",
+      "top": 289.065,
+      "visible_box": [
+        132.14285278320312,
+        294.2657470703125,
+        158.93560791015625,
+        305.1748352050781
+      ],
+      "visible_distance": 10.655291137695315,
+      "source_line": 635
+    },
+    {
+      "label": "eq:theta-reflection",
+      "number": "20.14",
+      "aux_page": "328",
+      "actual_page": 328,
+      "destination": "equation.871",
+      "top": 312.056,
+      "visible_box": [
+        488.2722473144531,
+        317.2567138671875,
+        516.963134765625,
+        328.1658020019531
+      ],
+      "visible_distance": 10.65525793457033,
+      "source_line": 640
+    },
+    {
+      "label": "thm:completion",
+      "number": "20.5.3",
+      "aux_page": "328",
+      "actual_page": 328,
+      "destination": "theorem.873",
+      "top": 601.518,
+      "visible_box": [
+        143.4174346923828,
+        606.7186889648438,
+        169.15576171875,
+        617.6278076171875
+      ],
+      "visible_distance": 10.655248291015596,
+      "source_line": 678
+    },
+    {
+      "label": "eq:theta-mellin",
+      "number": "20.15",
+      "aux_page": "328",
+      "actual_page": 328,
+      "destination": "equation.874",
+      "top": 644.11,
+      "visible_box": [
+        489.71856689453125,
+        649.3117065429688,
+        516.9585571289062,
+        660.2208251953125
+      ],
+      "visible_distance": 10.656265869140611,
+      "source_line": 685
+    },
+    {
+      "label": "eq:entire-completion",
+      "number": "20.16",
+      "aux_page": "328",
+      "actual_page": 328,
+      "destination": "equation.875",
+      "top": 702.492,
+      "visible_box": [
+        488.297607421875,
+        707.6926879882812,
+        516.955810546875,
+        718.601806640625
+      ],
+      "visible_distance": 10.655247314453163,
+      "source_line": 693
+    },
+    {
+      "label": "eq:entire-growth",
+      "number": "20.17",
+      "aux_page": "329",
+      "actual_page": 329,
+      "destination": "equation.876",
+      "top": 108.49199999999996,
+      "visible_box": [
+        488.6232604980469,
+        113.69374084472656,
+        516.965087890625,
+        124.60284423828125
+      ],
+      "visible_distance": 10.656292541503944,
+      "source_line": 699
+    },
+    {
+      "label": "lem:boundary-germs",
+      "number": "20.5.4",
+      "aux_page": "329",
+      "actual_page": 329,
+      "destination": "lemma.878",
+      "top": 509.043,
+      "visible_box": [
+        133.1660614013672,
+        514.2446899414062,
+        161.01852416992188,
+        525.15380859375
+      ],
+      "visible_distance": 10.656249267578119,
+      "source_line": 755
+    },
+    {
+      "label": "eq:boundary-pole",
+      "number": "20.18",
+      "aux_page": "329",
+      "actual_page": 329,
+      "destination": "equation.879",
+      "top": 658.312,
+      "visible_box": [
+        488.70977783203125,
+        663.513671875,
+        516.96435546875,
+        674.4227905273438
+      ],
+      "visible_distance": 10.656231201171863,
+      "source_line": 776
+    },
+    {
+      "label": "lem:boundary-prime",
+      "number": "20.5.5",
+      "aux_page": "330",
+      "actual_page": 330,
+      "destination": "lemma.881",
+      "top": 89.13699999999994,
+      "visible_box": [
+        132.14285278320312,
+        94.33772277832031,
+        158.05197143554688,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 785
+    },
+    {
+      "label": "eq:boundary-product",
+      "number": "20.19",
+      "aux_page": "330",
+      "actual_page": 330,
+      "destination": "equation.882",
+      "top": 114.024,
+      "visible_box": [
+        488.5479736328125,
+        119.22572326660156,
+        516.9552612304688,
+        130.13482666015625
+      ],
+      "visible_distance": 10.656274963378905,
+      "source_line": 790
+    },
+    {
+      "label": "thm:strict-strip",
+      "number": "20.5.6",
+      "aux_page": "330",
+      "actual_page": 330,
+      "destination": "theorem.884",
+      "top": 519.5799999999999,
+      "visible_box": [
+        144.44320678710938,
+        524.7807006835938,
+        171.7978515625,
+        535.6898193359375
+      ],
+      "visible_distance": 10.655260009765698,
+      "source_line": 833
+    },
+    {
+      "label": "eq:strict-strip",
+      "number": "20.20",
+      "aux_page": "330",
+      "actual_page": 330,
+      "destination": "equation.885",
+      "top": 560.6,
+      "visible_box": [
+        486.462158203125,
+        565.8007202148438,
+        516.9639892578125,
+        576.7098388671875
+      ],
+      "visible_distance": 10.655279541015602,
+      "source_line": 843
+    },
+    {
+      "label": "cor:zero-count",
+      "number": "20.5.7",
+      "aux_page": "332",
+      "actual_page": 332,
+      "destination": "corollary.887",
+      "top": 89.13699999999994,
+      "visible_box": [
+        153.80929565429688,
+        94.33772277832031,
+        180.49609375,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 959
+    },
+    {
+      "label": "sec:heights",
+      "number": "20.6",
+      "aux_page": "332",
+      "actual_page": 332,
+      "destination": "section.888",
+      "top": 181.83900000000006,
+      "visible_box": [
+        94.76599884033203,
+        183.9888153076172,
+        115.83106994628906,
+        195.9440155029297
+      ],
+      "visible_distance": 8.127415405273382,
+      "source_line": 975
+    },
+    {
+      "label": "eq:log-reflection",
+      "number": "20.21",
+      "aux_page": "332",
+      "actual_page": 332,
+      "destination": "equation.889",
+      "top": 253.76999999999998,
+      "visible_box": [
+        488.831298828125,
+        258.970703125,
+        516.9549560546875,
+        269.87982177734375
+      ],
+      "visible_distance": 10.655262451171893,
+      "source_line": 986
+    },
+    {
+      "label": "lem:heights",
+      "number": "20.6.1",
+      "aux_page": "332",
+      "actual_page": 332,
+      "destination": "lemma.891",
+      "top": 299.847,
+      "visible_box": [
+        131.14793395996094,
+        305.0487060546875,
+        157.39283752441406,
+        315.95782470703125
+      ],
+      "visible_distance": 10.656265380859395,
+      "source_line": 992
+    },
+    {
+      "label": "eq:horizontal-H",
+      "number": "20.22",
+      "aux_page": "332",
+      "actual_page": 332,
+      "destination": "equation.892",
+      "top": 341.633,
+      "visible_box": [
+        487.1900329589844,
+        346.834716796875,
+        516.9609375,
+        357.74383544921875
+      ],
+      "visible_distance": 10.656276123046894,
+      "source_line": 999
+    },
+    {
+      "label": "sec:formula",
+      "number": "20.7",
+      "aux_page": "333",
+      "actual_page": 333,
+      "destination": "section.893",
+      "top": 92.106,
+      "visible_box": [
+        94.76599884033203,
+        93.50083923339844,
+        115.48436737060547,
+        105.45603942871094
+      ],
+      "visible_distance": 7.372439331054693,
+      "source_line": 1055
+    },
+    {
+      "label": "thm:explicit",
+      "number": "20.7.1",
+      "aux_page": "333",
+      "actual_page": 333,
+      "destination": "theorem.895",
+      "top": 107.86500000000001,
+      "visible_box": [
+        143.40664672851562,
+        113.06672668457031,
+        169.33897399902344,
+        123.975830078125
+      ],
+      "visible_distance": 10.656278381347647,
+      "source_line": 1058
+    },
+    {
+      "label": "eq:functional",
+      "number": "20.23",
+      "aux_page": "333",
+      "actual_page": 333,
+      "destination": "equation.896",
+      "top": 142.284,
+      "visible_box": [
+        487.9259338378906,
+        147.4846954345703,
+        516.9550170898438,
+        158.393798828125
+      ],
+      "visible_distance": 10.655247131347664,
+      "source_line": 1065
+    },
+    {
+      "label": "eq:spine-contour",
+      "number": "20.24",
+      "aux_page": "333",
+      "actual_page": 333,
+      "destination": "equation.897",
+      "top": 375.534,
+      "visible_box": [
+        486.6255187988281,
+        380.7357177734375,
+        516.9636840820312,
+        391.64483642578125
+      ],
+      "visible_distance": 10.656277099609383,
+      "source_line": 1099
+    },
+    {
+      "label": "eq:prime-inversion",
+      "number": "20.25",
+      "aux_page": "333",
+      "actual_page": 333,
+      "destination": "equation.898",
+      "top": 458.735,
+      "visible_box": [
+        488.0679931640625,
+        463.93670654296875,
+        516.9552612304688,
+        474.8458251953125
+      ],
+      "visible_distance": 10.656265869140611,
+      "source_line": 1112
+    },
+    {
+      "label": "sec:polynomial-gaussians",
+      "number": "20.8",
+      "aux_page": "334",
+      "actual_page": 334,
+      "destination": "section.899",
+      "top": 159.57600000000002,
+      "visible_box": [
+        94.76599884033203,
+        161.7258758544922,
+        115.38872528076172,
+        173.6810760498047
+      ],
+      "visible_distance": 8.127475952148416,
+      "source_line": 1155
+    },
+    {
+      "label": "eq:gaussian-explicit",
+      "number": "20.26",
+      "aux_page": "334",
+      "actual_page": 334,
+      "destination": "equation.900",
+      "top": 216.38300000000004,
+      "visible_box": [
+        486.6539611816406,
+        225.56971740722656,
+        516.9594116210938,
+        236.47882080078125
+      ],
+      "visible_distance": 14.641269104003868,
+      "source_line": 1168
+    },
+    {
+      "label": "prop:polynomial-gaussian",
+      "number": "20.8.1",
+      "aux_page": "334",
+      "actual_page": 334,
+      "destination": "proposition.902",
+      "top": 296.541,
+      "visible_box": [
+        162.40060424804688,
+        301.74273681640625,
+        188.50827026367188,
+        312.6518249511719
+      ],
+      "visible_distance": 10.656280883789066,
+      "source_line": 1175
+    },
+    {
+      "label": "eq:gaussian-inverse",
+      "number": "20.27",
+      "aux_page": "334",
+      "actual_page": 334,
+      "destination": "equation.903",
+      "top": 324.398,
+      "visible_box": [
+        486.96807861328125,
+        329.5997314453125,
+        516.9571533203125,
+        340.5088195800781
+      ],
+      "visible_distance": 10.656275512695288,
+      "source_line": 1179
+    },
+    {
+      "label": "eq:polynomial-transform",
+      "number": "20.28",
+      "aux_page": "334",
+      "actual_page": 334,
+      "destination": "equation.904",
+      "top": 364.809,
+      "visible_box": [
+        487.0537109375,
+        370.01068115234375,
+        516.95556640625,
+        380.9197692871094
+      ],
+      "visible_distance": 10.656225219726537,
+      "source_line": 1184
+    },
+    {
+      "label": "eq:gaussian-strip",
+      "number": "20.29",
+      "aux_page": "334",
+      "actual_page": 334,
+      "destination": "equation.905",
+      "top": 407.745,
+      "visible_box": [
+        486.9066162109375,
+        412.9466552734375,
+        516.961181640625,
+        423.8557434082031
+      ],
+      "visible_distance": 10.656199340820308,
+      "source_line": 1190
+    },
+    {
+      "label": "sec:positivity",
+      "number": "20.9",
+      "aux_page": "335",
+      "actual_page": 335,
+      "destination": "section.908",
+      "top": 92.106,
+      "visible_box": [
+        94.76599884033203,
+        93.50083923339844,
+        115.55609893798828,
+        105.45603942871094
+      ],
+      "visible_distance": 7.372439331054693,
+      "source_line": 1238
+    },
+    {
+      "label": "thm:positivity",
+      "number": "20.9.1",
+      "aux_page": "335",
+      "actual_page": 335,
+      "destination": "theorem.910",
+      "top": 155.62900000000002,
+      "visible_box": [
+        144.39332580566406,
+        160.82972717285156,
+        170.70606994628906,
+        171.73883056640625
+      ],
+      "visible_distance": 10.655278869628887,
+      "source_line": 1247
+    },
+    {
+      "label": "eq:positivity",
+      "number": "20.30",
+      "aux_page": "335",
+      "actual_page": 335,
+      "destination": "equation.911",
+      "top": 180.51599999999996,
+      "visible_box": [
+        487.1993103027344,
+        185.7177276611328,
+        516.9592895507812,
+        196.6268310546875
+      ],
+      "visible_distance": 10.656279357910194,
+      "source_line": 1251
+    },
+    {
+      "label": "eq:negative-pair",
+      "number": "20.31",
+      "aux_page": "335",
+      "actual_page": 335,
+      "destination": "equation.912",
+      "top": 432.766,
+      "visible_box": [
+        489.5780029296875,
+        437.96771240234375,
+        516.9598388671875,
+        448.8768005371094
+      ],
+      "visible_distance": 10.656256469726543,
+      "source_line": 1290
+    },
+    {
+      "label": "eq:separator-tail",
+      "number": "20.32",
+      "aux_page": "335",
+      "actual_page": 335,
+      "destination": "equation.913",
+      "top": 510.398,
+      "visible_box": [
+        487.9347229003906,
+        515.5997314453125,
+        516.9638061523438,
+        526.5088500976562
+      ],
+      "visible_distance": 10.65629077148435,
+      "source_line": 1303
+    },
+    {
+      "label": "sec:native-form",
+      "number": "20.10",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "section.914",
+      "top": 92.106,
+      "visible_box": [
+        94.76599884033203,
+        93.50083923339844,
+        119.8838882446289,
+        105.45603942871094
+      ],
+      "visible_distance": 7.372439331054693,
+      "source_line": 1323
+    },
+    {
+      "label": "eq:conv",
+      "number": "20.33",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.915",
+      "top": 207.44100000000003,
+      "visible_box": [
+        488.6722717285156,
+        212.64271545410156,
+        516.9595336914062,
+        223.55181884765625
+      ],
+      "visible_distance": 10.656267150878875,
+      "source_line": 1339
+    },
+    {
+      "label": "eq:transform",
+      "number": "20.34",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.916",
+      "top": 266.217,
+      "visible_box": [
+        487.3655700683594,
+        271.418701171875,
+        516.9619140625,
+        282.3277893066406
+      ],
+      "visible_distance": 10.656245239257828,
+      "source_line": 1345
+    },
+    {
+      "label": "eq:fourier",
+      "number": "20.35",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.917",
+      "top": 334.967,
+      "visible_box": [
+        488.8125915527344,
+        340.167724609375,
+        516.9580688476562,
+        351.0768127441406
+      ],
+      "visible_distance": 10.655268676757828,
+      "source_line": 1353
+    },
+    {
+      "label": "eq:square-transform",
+      "number": "20.36",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.918",
+      "top": 391.343,
+      "visible_box": [
+        487.3994140625,
+        396.54473876953125,
+        516.9630737304688,
+        407.4538269042969
+      ],
+      "visible_distance": 10.656282836914045,
+      "source_line": 1358
+    },
+    {
+      "label": "eq:gamma-normalization",
+      "number": "20.37",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.919",
+      "top": 447.666,
+      "visible_box": [
+        487.71307373046875,
+        452.86773681640625,
+        516.9603271484375,
+        463.7768249511719
+      ],
+      "visible_distance": 10.656280883789066,
+      "source_line": 1364
+    },
+    {
+      "label": "eq:mellin",
+      "number": "20.38",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.920",
+      "top": 506.965,
+      "visible_box": [
+        487.8023986816406,
+        512.1666870117188,
+        516.96240234375,
+        523.0758056640625
+      ],
+      "visible_distance": 10.65624633789065,
+      "source_line": 1372
+    },
+    {
+      "label": "eq:weil-functional",
+      "number": "20.39",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.921",
+      "top": 602.513,
+      "visible_box": [
+        487.64703369140625,
+        611.69970703125,
+        516.9597778320312,
+        622.6088256835938
+      ],
+      "visible_distance": 14.641266357421841,
+      "source_line": 1386
+    },
+    {
+      "label": "eq:explicit",
+      "number": "20.40",
+      "aux_page": "336",
+      "actual_page": 336,
+      "destination": "equation.922",
+      "top": 688.952,
+      "visible_box": [
+        485.88531494140625,
+        694.1527099609375,
+        516.9544067382812,
+        705.0618286132812
+      ],
+      "visible_distance": 10.655269287109377,
+      "source_line": 1392
+    },
+    {
+      "label": "eq:hermitian",
+      "number": "20.41",
+      "aux_page": "337",
+      "actual_page": 337,
+      "destination": "equation.923",
+      "top": 180.24,
+      "visible_box": [
+        488.26409912109375,
+        185.4417266845703,
+        516.9550170898438,
+        196.350830078125
+      ],
+      "visible_distance": 10.656278381347647,
+      "source_line": 1404
+    },
+    {
+      "label": "eq:weil-criterion",
+      "number": "20.42",
+      "aux_page": "337",
+      "actual_page": 337,
+      "destination": "equation.924",
+      "top": 225.19000000000005,
+      "visible_box": [
+        486.62677001953125,
+        230.3907012939453,
+        516.9649658203125,
+        241.2998046875
+      ],
+      "visible_distance": 10.655252990722602,
+      "source_line": 1411
+    },
+    {
+      "label": "eq:zero-norm",
+      "number": "20.43",
+      "aux_page": "337",
+      "actual_page": 337,
+      "destination": "equation.925",
+      "top": 276.09000000000003,
+      "visible_box": [
+        487.36456298828125,
+        281.29071044921875,
+        516.9609375,
+        292.1997985839844
+      ],
+      "visible_distance": 10.65525451660153,
+      "source_line": 1417
+    },
+    {
+      "label": "thm:gns",
+      "number": "20.11.1",
+      "aux_page": "338",
+      "actual_page": 338,
+      "destination": "theorem.928",
+      "top": 225.73800000000006,
+      "visible_box": [
+        144.39334106445312,
+        230.93873596191406,
+        172.47335815429688,
+        241.84783935546875
+      ],
+      "visible_distance": 10.65528765869135,
+      "source_line": 1485
+    },
+    {
+      "label": "eq:gns-action",
+      "number": "20.44",
+      "aux_page": "338",
+      "actual_page": 338,
+      "destination": "equation.929",
+      "top": 300.856,
+      "visible_box": [
+        486.051025390625,
+        306.05767822265625,
+        516.9564819335938,
+        316.966796875
+      ],
+      "visible_distance": 10.65623754882813,
+      "source_line": 1498
+    },
+    {
+      "label": "eq:adjoint-inclusion",
+      "number": "20.45",
+      "aux_page": "338",
+      "actual_page": 338,
+      "destination": "equation.930",
+      "top": 358.192,
+      "visible_box": [
+        487.50091552734375,
+        363.39276123046875,
+        516.9554443359375,
+        374.3018493652344
+      ],
+      "visible_distance": 10.655305297851555,
+      "source_line": 1505
+    },
+    {
+      "label": "eq:multiplier-bound",
+      "number": "20.46",
+      "aux_page": "338",
+      "actual_page": 338,
+      "destination": "equation.931",
+      "top": 405.453,
+      "visible_box": [
+        486.0862731933594,
+        410.65478515625,
+        516.958984375,
+        421.5638732910156
+      ],
+      "visible_distance": 10.656329223632838,
+      "source_line": 1512
+    },
+    {
+      "label": "sec:graph-domain",
+      "number": "20.12",
+      "aux_page": "340",
+      "actual_page": 340,
+      "destination": "section.934",
+      "top": 247.33100000000002,
+      "visible_box": [
+        94.76602172851562,
+        249.48081970214844,
+        119.0829086303711,
+        261.43603515625
+      ],
+      "visible_distance": 8.127427429199201,
+      "source_line": 1642
+    },
+    {
+      "label": "ex:maximal-domain",
+      "number": "20.12.1",
+      "aux_page": "340",
+      "actual_page": 340,
+      "destination": "example.936",
+      "top": 395.18,
+      "visible_box": [
+        133.53567504882812,
+        400.3807373046875,
+        160.22833251953125,
+        411.2898254394531
+      ],
+      "visible_distance": 10.655281372070306,
+      "source_line": 1663
+    },
+    {
+      "label": "eq:all-moments",
+      "number": "20.47",
+      "aux_page": "340",
+      "actual_page": 340,
+      "destination": "equation.937",
+      "top": 538.921,
+      "visible_box": [
+        486.4072265625,
+        544.1217041015625,
+        516.9635620117188,
+        555.0308227539062
+      ],
+      "visible_distance": 10.655263427734326,
+      "source_line": 1677
+    },
+    {
+      "label": "thm:graph-domain",
+      "number": "20.12.2",
+      "aux_page": "341",
+      "actual_page": 341,
+      "destination": "theorem.939",
+      "top": 89.13699999999994,
+      "visible_box": [
+        143.81622314453125,
+        94.33772277832031,
+        174.81430053710938,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 1695
+    },
+    {
+      "label": "eq:common-domain",
+      "number": "20.48",
+      "aux_page": "341",
+      "actual_page": 341,
+      "destination": "equation.940",
+      "top": 116.99400000000003,
+      "visible_box": [
+        486.49359130859375,
+        122.19471740722656,
+        516.9627075195312,
+        133.10382080078125
+      ],
+      "visible_distance": 10.655269104003878,
+      "source_line": 1700
+    },
+    {
+      "label": "eq:closed-products",
+      "number": "20.49",
+      "aux_page": "341",
+      "actual_page": 341,
+      "destination": "equation.941",
+      "top": 172.30200000000002,
+      "visible_box": [
+        486.3347473144531,
+        177.5037384033203,
+        516.95654296875,
+        188.412841796875
+      ],
+      "visible_distance": 10.656290100097635,
+      "source_line": 1710
+    },
+    {
+      "label": "eq:graph-control",
+      "number": "20.50",
+      "aux_page": "341",
+      "actual_page": 341,
+      "destination": "equation.942",
+      "top": 355.366,
+      "visible_box": [
+        487.342041015625,
+        360.5677490234375,
+        516.960205078125,
+        371.4768371582031
+      ],
+      "visible_distance": 10.656293090820327,
+      "source_line": 1738
+    },
+    {
+      "label": "sec:cstar-prerequisites",
+      "number": "20.13",
+      "aux_page": "341",
+      "actual_page": 341,
+      "destination": "section.943",
+      "top": 618.421,
+      "visible_box": [
+        94.76599884033203,
+        620.5708618164062,
+        118.26993560791016,
+        632.5260620117188
+      ],
+      "visible_distance": 8.12746191406245,
+      "source_line": 1777
+    },
+    {
+      "label": "lem:cstar-adjoin",
+      "number": "20.13.1",
+      "aux_page": "342",
+      "actual_page": 342,
+      "destination": "lemma.945",
+      "top": 89.13699999999994,
+      "visible_box": [
+        132.00531005859375,
+        94.33772277832031,
+        160.87484741210938,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 1791
+    },
+    {
+      "label": "lem:cstar-calculus",
+      "number": "20.13.2",
+      "aux_page": "342",
+      "actual_page": 342,
+      "destination": "lemma.947",
+      "top": 555.467,
+      "visible_box": [
+        132.71810913085938,
+        560.667724609375,
+        163.87164306640625,
+        571.5768432617188
+      ],
+      "visible_distance": 10.65528393554689,
+      "source_line": 1852
+    },
+    {
+      "label": "lem:cstar-order",
+      "number": "20.13.3",
+      "aux_page": "344",
+      "actual_page": 344,
+      "destination": "lemma.949",
+      "top": 89.13699999999994,
+      "visible_box": [
+        132.95504760742188,
+        94.33772277832031,
+        163.38397216796875,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 1940
+    },
+    {
+      "label": "lem:cstar-approximate",
+      "number": "20.13.4",
+      "aux_page": "344",
+      "actual_page": 344,
+      "destination": "lemma.951",
+      "top": 454.066,
+      "visible_box": [
+        132.93284606933594,
+        459.2667236328125,
+        164.6944122314453,
+        470.1758117675781
+      ],
+      "visible_distance": 10.655267700195338,
+      "source_line": 1988
+    },
+    {
+      "label": "thm:dagger",
+      "number": "20.14.1",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "theorem.954",
+      "top": 107.86500000000001,
+      "visible_box": [
+        143.51443481445312,
+        113.06672668457031,
+        173.4454803466797,
+        123.975830078125
+      ],
+      "visible_distance": 10.656278381347647,
+      "source_line": 2022
+    },
+    {
+      "label": "eq:pullback",
+      "number": "20.51",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.955",
+      "top": 144.55899999999997,
+      "visible_box": [
+        489.7182312011719,
+        149.7606964111328,
+        516.958251953125,
+        160.6697998046875
+      ],
+      "visible_distance": 10.656248107910187,
+      "source_line": 2031
+    },
+    {
+      "label": "eq:gns-map",
+      "number": "20.52",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.956",
+      "top": 181.25300000000004,
+      "visible_box": [
+        488.06707763671875,
+        186.45472717285156,
+        516.954345703125,
+        197.36383056640625
+      ],
+      "visible_distance": 10.656278869628864,
+      "source_line": 2037
+    },
+    {
+      "label": "eq:completion-map",
+      "number": "20.53",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.957",
+      "top": 223.36199999999997,
+      "visible_box": [
+        488.8139953613281,
+        228.56373596191406,
+        516.95947265625,
+        239.47283935546875
+      ],
+      "visible_distance": 10.65628765869144,
+      "source_line": 2042
+    },
+    {
+      "label": "eq:algebraic-intertwining",
+      "number": "20.54",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.958",
+      "top": 268.89300000000003,
+      "visible_box": [
+        487.50360107421875,
+        274.0947265625,
+        516.9581298828125,
+        285.00384521484375
+      ],
+      "visible_distance": 10.656285888671846,
+      "source_line": 2047
+    },
+    {
+      "label": "eq:cstar-bounds",
+      "number": "20.55",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.959",
+      "top": 314.424,
+      "visible_box": [
+        488.9593505859375,
+        319.625732421875,
+        516.9630126953125,
+        330.53485107421875
+      ],
+      "visible_distance": 10.656291748046897,
+      "source_line": 2056
+    },
+    {
+      "label": "eq:bounded-intertwining",
+      "number": "20.56",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.960",
+      "top": 351.118,
+      "visible_box": [
+        487.5367736816406,
+        356.31976318359375,
+        516.9586181640625,
+        367.2288513183594
+      ],
+      "visible_distance": 10.656307250976568,
+      "source_line": 2062
+    },
+    {
+      "label": "prop:graph-transfer",
+      "number": "20.14.2",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "proposition.962",
+      "top": 535.529,
+      "visible_box": [
+        162.84017944335938,
+        540.730712890625,
+        194.94175720214844,
+        551.6398315429688
+      ],
+      "visible_distance": 10.656272216796879,
+      "source_line": 2090
+    },
+    {
+      "label": "eq:graph-transfer",
+      "number": "20.57",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.963",
+      "top": 617.754,
+      "visible_box": [
+        487.8578186035156,
+        622.9556884765625,
+        516.9632568359375,
+        633.8648071289062
+      ],
+      "visible_distance": 10.656247802734356,
+      "source_line": 2101
+    },
+    {
+      "label": "eq:ambient-transfer",
+      "number": "20.58",
+      "aux_page": "345",
+      "actual_page": 345,
+      "destination": "equation.964",
+      "top": 667.883,
+      "visible_box": [
+        487.9462890625,
+        673.084716796875,
+        516.9644775390625,
+        683.9938354492188
+      ],
+      "visible_distance": 10.656276123046837,
+      "source_line": 2111
+    },
+    {
+      "label": "ex:transfer-domain",
+      "number": "20.14.3",
+      "aux_page": "346",
+      "actual_page": 346,
+      "destination": "example.966",
+      "top": 174.12300000000005,
+      "visible_box": [
+        132.65223693847656,
+        179.32472229003906,
+        160.24441528320312,
+        190.23382568359375
+      ],
+      "visible_distance": 10.656273986816359,
+      "source_line": 2134
+    },
+    {
+      "label": "eq:unit-extension",
+      "number": "20.59",
+      "aux_page": "346",
+      "actual_page": 346,
+      "destination": "equation.968",
+      "top": 532.446,
+      "visible_box": [
+        487.78857421875,
+        537.646728515625,
+        516.95947265625,
+        548.5558471679688
+      ],
+      "visible_distance": 10.655287841796849,
+      "source_line": 2178
+    },
+    {
+      "label": "eq:unit-criterion",
+      "number": "20.60",
+      "aux_page": "346",
+      "actual_page": 346,
+      "destination": "equation.969",
+      "top": 651.704,
+      "visible_box": [
+        485.92303466796875,
+        656.9047241210938,
+        516.9594116210938,
+        667.8138427734375
+      ],
+      "visible_distance": 10.655283447265674,
+      "source_line": 2197
+    },
+    {
+      "label": "thm:cstar-unitization",
+      "number": "20.15.1",
+      "aux_page": "347",
+      "actual_page": 347,
+      "destination": "theorem.971",
+      "top": 89.13699999999994,
+      "visible_box": [
+        143.7407684326172,
+        94.33772277832031,
+        172.23831176757812,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 2207
+    },
+    {
+      "label": "eq:minimal-mass",
+      "number": "20.61",
+      "aux_page": "347",
+      "actual_page": 347,
+      "destination": "equation.972",
+      "top": 136.92100000000005,
+      "visible_box": [
+        488.30572509765625,
+        142.12171936035156,
+        516.9639282226562,
+        153.03082275390625
+      ],
+      "visible_distance": 10.655271057128857,
+      "source_line": 2213
+    },
+    {
+      "label": "eq:approx-vector",
+      "number": "20.62",
+      "aux_page": "347",
+      "actual_page": 347,
+      "destination": "equation.973",
+      "top": 184.70500000000004,
+      "visible_box": [
+        486.6547546386719,
+        189.9057159423828,
+        516.960205078125,
+        200.8148193359375
+      ],
+      "visible_distance": 10.655267639160115,
+      "source_line": 2220
+    },
+    {
+      "label": "eq:cyclic-vector",
+      "number": "20.63",
+      "aux_page": "347",
+      "actual_page": 347,
+      "destination": "equation.974",
+      "top": 222.55600000000004,
+      "visible_box": [
+        487.39886474609375,
+        227.75672912597656,
+        516.9625244140625,
+        238.66583251953125
+      ],
+      "visible_distance": 10.655280822753866,
+      "source_line": 2228
+    },
+    {
+      "label": "eq:hilbert-bound",
+      "number": "20.64",
+      "aux_page": "347",
+      "actual_page": 347,
+      "destination": "equation.975",
+      "top": 393.327,
+      "visible_box": [
+        486.0903625488281,
+        398.5277099609375,
+        516.9630737304688,
+        409.43682861328125
+      ],
+      "visible_distance": 10.655269287109377,
+      "source_line": 2254
+    },
+    {
+      "label": "lem:gamma-log-size",
+      "number": "20.15.3",
+      "aux_page": "348",
+      "actual_page": 348,
+      "destination": "lemma.979",
+      "top": 222.08000000000004,
+      "visible_box": [
+        132.14283752441406,
+        227.28077697753906,
+        161.89195251464844,
+        238.18988037109375
+      ],
+      "visible_distance": 10.655328674316365,
+      "source_line": 2322
+    },
+    {
+      "label": "sec:weil-mass",
+      "number": "20.16",
+      "aux_page": "348",
+      "actual_page": 348,
+      "destination": "section.980",
+      "top": 483.796,
+      "visible_box": [
+        94.76599884033203,
+        485.94586181640625,
+        119.66869354248047,
+        497.90106201171875
+      ],
+      "visible_distance": 8.127461914062508,
+      "source_line": 2356
+    },
+    {
+      "label": "eq:gaussian-semigroup",
+      "number": "20.65",
+      "aux_page": "348",
+      "actual_page": 348,
+      "destination": "equation.981",
+      "top": 557.085,
+      "visible_box": [
+        487.54107666015625,
+        562.2866821289062,
+        516.962890625,
+        573.19580078125
+      ],
+      "visible_distance": 10.656241455078089,
+      "source_line": 2366
+    },
+    {
+      "label": "thm:weil-mass",
+      "number": "20.16.1",
+      "aux_page": "348",
+      "actual_page": 348,
+      "destination": "theorem.983",
+      "top": 589.16,
+      "visible_box": [
+        143.27731323242188,
+        594.3607177734375,
+        173.176025390625,
+        605.2698364257812
+      ],
+      "visible_distance": 10.655277099609407,
+      "source_line": 2371
+    },
+    {
+      "label": "eq:weil-gaussian-asymptotic",
+      "number": "20.66",
+      "aux_page": "348",
+      "actual_page": 348,
+      "destination": "equation.984",
+      "top": 624.096,
+      "visible_box": [
+        486.1207580566406,
+        629.2977294921875,
+        516.9607543945312,
+        640.2068481445312
+      ],
+      "visible_distance": 10.656288818359371,
+      "source_line": 2376
+    },
+    {
+      "label": "eq:weil-unitization-divergence",
+      "number": "20.67",
+      "aux_page": "348",
+      "actual_page": 348,
+      "destination": "equation.985",
+      "top": 676.62,
+      "visible_box": [
+        486.4317321777344,
+        681.8206787109375,
+        516.9553833007812,
+        692.7297973632812
+      ],
+      "visible_distance": 10.65523803710937,
+      "source_line": 2383
+    },
+    {
+      "label": "eq:prime-gaussian-bound",
+      "number": "20.68",
+      "aux_page": "349",
+      "actual_page": 349,
+      "destination": "equation.986",
+      "top": 159.837,
+      "visible_box": [
+        486.5201416015625,
+        165.03871154785156,
+        516.95654296875,
+        175.94781494140625
+      ],
+      "visible_distance": 10.656263244628917,
+      "source_line": 2403
+    },
+    {
+      "label": "thm:gaussian-subspaces",
+      "number": "20.16.2",
+      "aux_page": "349",
+      "actual_page": 349,
+      "destination": "theorem.988",
+      "top": 395.373,
+      "visible_box": [
+        148.2342529296875,
+        400.57373046875,
+        180.7176971435547,
+        411.4828186035156
+      ],
+      "visible_distance": 10.655274536132822,
+      "source_line": 2436
+    },
+    {
+      "label": "eq:gaussian-gram-limit",
+      "number": "20.69",
+      "aux_page": "349",
+      "actual_page": 349,
+      "destination": "equation.989",
+      "top": 561.4639999999999,
+      "visible_box": [
+        486.3667297363281,
+        566.6657104492188,
+        516.955810546875,
+        577.5748291015625
+      ],
+      "visible_distance": 10.656269775390683,
+      "source_line": 2458
+    },
+    {
+      "label": "eq:limiting-gaussian-gram",
+      "number": "20.70",
+      "aux_page": "349",
+      "actual_page": 349,
+      "destination": "equation.990",
+      "top": 619.369,
+      "visible_box": [
+        486.2432861328125,
+        624.5697021484375,
+        516.9632568359375,
+        635.4788208007812
+      ],
+      "visible_distance": 10.655261474609347,
+      "source_line": 2464
+    },
+    {
+      "label": "cor:weil-carriers",
+      "number": "20.16.3",
+      "aux_page": "350",
+      "actual_page": 350,
+      "destination": "corollary.992",
+      "top": 204.42499999999995,
+      "visible_box": [
+        154.88796997070312,
+        209.62574768066406,
+        186.05526733398438,
+        220.53485107421875
+      ],
+      "visible_distance": 10.655299377441452,
+      "source_line": 2491
+    },
+    {
+      "label": "eq:indefinite-negative",
+      "number": "20.71",
+      "aux_page": "351",
+      "actual_page": 351,
+      "destination": "equation.994",
+      "top": 341.649,
+      "visible_box": [
+        488.62322998046875,
+        346.8497314453125,
+        516.9650268554688,
+        357.7588195800781
+      ],
+      "visible_distance": 10.655275512695312,
+      "source_line": 2581
+    },
+    {
+      "label": "eq:factorization",
+      "number": "20.72",
+      "aux_page": "351",
+      "actual_page": 351,
+      "destination": "equation.1002",
+      "top": 651.887,
+      "visible_box": [
+        486.96612548828125,
+        657.0877075195312,
+        516.9552001953125,
+        667.996826171875
+      ],
+      "visible_distance": 10.655266845703181,
+      "source_line": 2621
+    },
+    {
+      "label": "sec:weil-formal-kernels",
+      "number": "20.19",
+      "aux_page": "352",
+      "actual_page": 352,
+      "destination": "section.1003",
+      "top": 234.45100000000002,
+      "visible_box": [
+        94.76599884033203,
+        236.60081481933594,
+        119.39372253417969,
+        248.55601501464844
+      ],
+      "visible_distance": 8.127414916992166,
+      "source_line": 2648
+    },
+    {
+      "label": "prop:weil-matrix-trace",
+      "number": "20.19.1",
+      "aux_page": "352",
+      "actual_page": 352,
+      "destination": "proposition.1005",
+      "top": 574.31,
+      "visible_box": [
+        164.6611785888672,
+        579.5107421875,
+        195.21224975585938,
+        590.4198608398438
+      ],
+      "visible_distance": 10.65530151367193,
+      "source_line": 2692
+    },
+    {
+      "label": "prop:weil-formal-adjoint",
+      "number": "20.19.2",
+      "aux_page": "353",
+      "actual_page": 353,
+      "destination": "proposition.1007",
+      "top": 627.822,
+      "visible_box": [
+        163.6497039794922,
+        633.023681640625,
+        195.84613037109375,
+        643.9328002929688
+      ],
+      "visible_distance": 10.656240966796872,
+      "source_line": 2775
+    },
+    {
+      "label": "sec:weil-gaussian-coefficients",
+      "number": "20.20",
+      "aux_page": "354",
+      "actual_page": 354,
+      "destination": "section.1008",
+      "top": 238.313,
+      "visible_box": [
+        94.76599884033203,
+        240.4628143310547,
+        121.68912506103516,
+        252.4180145263672
+      ],
+      "visible_distance": 8.12741442871095,
+      "source_line": 2807
+    },
+    {
+      "label": "prop:weil-gaussian-comparison",
+      "number": "20.20.1",
+      "aux_page": "354",
+      "actual_page": 354,
+      "destination": "proposition.1010",
+      "top": 378.726,
+      "visible_box": [
+        162.53561401367188,
+        383.92669677734375,
+        194.64109802246094,
+        394.8358154296875
+      ],
+      "visible_distance": 10.655256103515626,
+      "source_line": 2826
+    },
+    {
+      "label": "eq:weil-gaussian-moments",
+      "number": "20.73",
+      "aux_page": "354",
+      "actual_page": 354,
+      "destination": "equation.1011",
+      "top": 410.751,
+      "visible_box": [
+        487.70928955078125,
+        415.95269775390625,
+        516.95654296875,
+        426.86181640625
+      ],
+      "visible_distance": 10.656257080078149,
+      "source_line": 2831
+    },
+    {
+      "label": "sec:weil-current-comparison",
+      "number": "20.21",
+      "aux_page": "355",
+      "actual_page": 355,
+      "destination": "section.1012",
+      "top": 407.52,
+      "visible_box": [
+        94.76599884033203,
+        409.6698303222656,
+        119.08289337158203,
+        421.6250305175781
+      ],
+      "visible_distance": 8.127430419921893,
+      "source_line": 2910
+    },
+    {
+      "label": "prop:weil-unital-current",
+      "number": "20.21.1",
+      "aux_page": "356",
+      "actual_page": 356,
+      "destination": "proposition.1014",
+      "top": 89.13699999999994,
+      "visible_box": [
+        161.57479858398438,
+        94.33772277832031,
+        190.94537353515625,
+        105.246826171875
+      ],
+      "visible_distance": 10.655274475097713,
+      "source_line": 2943
+    }
+  ],
+  "discrepancies": []
+}

@@ -1,0 +1,1040 @@
+\chapter{A local anomaly and its nonlocal primitive}
+\label{ch:local-anomaly}
+
+A local change of an action depends on finitely many derivatives
+of its fields at one point. A Green operator instead combines
+field values at different points. This difference can decide
+whether a symmetry variation has a primitive.
+
+We study a specified cubic variation of an abelian background on
+$\mathbb C^2$. Its local cohomology class is nonzero, even when
+local coefficients depend arbitrarily and smoothly on position.
+A normalized inverse of the real Laplacian gives an explicit
+continuous nonlocal primitive. The obstruction to a local
+primitive is visible in a polynomial involving two derivative
+symbols. A six-generator exterior complex then controls every
+possible finite-order local correction.
+
+\section{Background forms and their differential}
+\label{sec:la-background}
+
+Write $X=\mathbb C^2=\mathbb R^4$, with
+\[
+ z_j=x_j+iy_j,\qquad
+ \partial_j=\partial_{z_j}
+   =\tfrac12(\partial_{x_j}-i\partial_{y_j}),\qquad
+ \bar\partial_j=\partial_{\bar z_j}
+   =\tfrac12(\partial_{x_j}+i\partial_{y_j}).
+\]
+Fix the forms and orientation
+\begin{equation}\label{eq:la-volume}
+ \Omega=dz_1\wedge dz_2,\qquad
+ dV_4=dx_1\wedge dy_1\wedge dx_2\wedge dy_2,\qquad
+ \nu=d\bar z_1\wedge d\bar z_2\wedge\Omega=4dV_4.
+\end{equation}
+The last identity follows by expanding $dz_j=dx_j+i\,dy_j$
+and $d\bar z_j=dx_j-i\,dy_j$, with the displayed wedge order.
+All holomorphic volume forms will remain on the right.
+
+A smooth $(0,q)$-form is a sum of smooth scalar coefficients
+times $q$ distinct symbols among $d\bar z_1,d\bar z_2$.
+The symbols anticommute. The space of compactly supported such
+forms is $\Omega_c^{0,q}(X)$, and
+\[
+ \mathfrak g_c=\bigoplus_{q=0}^2\Omega_c^{0,q}(X),\qquad
+ \bar\partial=\sum_{j=1}^2d\bar z_j\wedge\bar\partial_j.
+\]
+The scalar derivatives commute, so $\bar\partial^2=0$.
+Give this graded vector space the zero Lie bracket. It is the
+abelian differential graded Lie algebra used throughout.
+
+To record several inputs and their degrees, use a universal
+background
+\begin{equation}\label{eq:la-universal}
+ A=\sum_{a=1}^m t_a\alpha_a,
+ \qquad \alpha_a\in\Omega_c^{0,p_a}(X),
+ \qquad |t_a|=1-p_a.
+\end{equation}
+The parameters generate a free graded commutative algebra over
+$\mathbb C$: exchanging degrees $r,s$ gives $(-1)^{rs}$.
+In particular, an odd parameter squares to zero. The even
+parameters are formal. Every polynomial identity means equality
+of coefficients for every finite family in
+\eqref{eq:la-universal}. This convention does not require a
+basis of the infinite-dimensional space of smooth forms.
+
+The integer degree of a parameter or component coordinate is
+called its ghost number. Total degree adds the antiholomorphic
+form degree to that number. Put ghost coefficients before forms:
+\begin{equation}\label{eq:la-totalization}
+ (u\alpha)(v\eta)
+ =(-1)^{|\alpha|\operatorname{gh}(v)}
+   uv\,\alpha\wedge\eta.
+\end{equation}
+Here $|\alpha|$ is form degree. The background $A$ has total
+degree one. It can be written
+\begin{equation}\label{eq:la-components}
+ A=c+b_1d\bar z_1+b_2d\bar z_2
+       +h\,d\bar z_1\wedge d\bar z_2,
+ \qquad |c|=1,\quad |b_j|=0,\quad |h|=-1.
+\end{equation}
+Thus $c,h$ are odd and $b_1,b_2$ are even. Their scalar
+coefficients, at each parameter monomial, are smooth and compactly
+supported. The universal odd element satisfies $A^2=0$ over
+$\mathbb C$.
+
+The totalized spatial differential is denoted by $d$:
+\[
+ d(u\alpha)=(-1)^{\operatorname{gh}(u)}
+             u\,\bar\partial\alpha.
+\]
+For a coordinate-dependent coefficient, this rule includes its
+spatial derivatives. The degree-one background differential
+$\delta$ is a left graded derivation specified by
+\begin{equation}\label{eq:la-delta}
+ \delta c=0,\qquad
+ \delta b_j=-\bar\partial_jc,\qquad
+ \delta h=\bar\partial_1b_2-\bar\partial_2b_1.
+\end{equation}
+It commutes with all scalar spatial derivatives. The two terms
+in $\delta^2h$ cancel, and its square on the other components
+vanishes directly. Thus $\delta^2=0$ on every polynomial.
+In totalized notation,
+\begin{equation}\label{eq:la-super-delta}
+ \delta A=dA,\qquad \delta d=-d\delta.
+\end{equation}
+The second sign comes from the increase of ghost number under
+$\delta$. Together, \eqref{eq:la-delta} and
+\eqref{eq:la-totalization} fix every sign used below.
+
+\section{The cubic variation and a concrete component}
+\label{sec:la-cubic}
+
+Set $A_j=\partial_jA$ and define
+\begin{equation}\label{eq:la-anomaly}
+ B(A)=A_1A_2-A_2A_1,\qquad
+ \Theta(A)=-\frac1{24\pi^2}
+       \int_X A\,B(A)\wedge\Omega.
+\end{equation}
+Integration selects antiholomorphic degree two. The three
+background factors have total degree three, so $\Theta$ has
+ghost number one. Equation~\eqref{eq:la-anomaly} is the given
+cubic functional whose primitives we will determine.
+
+There is also a holomorphic exterior notation. Give $dz_j$
+degree one in the product rule and put
+$\partial A=dz_1\,\partial_1A+dz_2\,\partial_2A$.
+Each $\partial_jA$ is odd. Moving the second holomorphic
+one-form across it gives
+\[
+ A\,\partial A\,\partial A
+ =-A(\partial_1A\,\partial_2A-\partial_2A\,\partial_1A)
+       \wedge\Omega.
+\]
+Thus \eqref{eq:la-anomaly} is
+$+(24\pi^2)^{-1}\int_X A\,\partial A\,\partial A$
+in that exterior notation. We retain the even scalar
+derivatives $\partial_j$ and the rightmost $\Omega$ below.
+
+A cochain is closed, or a cocycle, when its $\delta$-differential
+is zero. It is exact when it equals $\delta C$ for a cochain
+$C$ of ghost number one less. Its cohomology class is its class
+among cocycles modulo exact cochains. The admissible cochain
+space is part of each of these definitions.
+
+\begin{proposition}\label{prop:la-closed}
+The functional $\Theta$ is a cubic cocycle of ghost number one.
+\end{proposition}
+\begin{proof}
+The operators $d$ and $\delta$ commute with each $\partial_j$.
+The graded product rule gives $\delta B(A)=dB(A)$. Since $A$
+is odd,
+\[
+ \delta\bigl(A B(A)\bigr)
+   =(dA)B(A)-A\,dB(A)=d\bigl(A B(A)\bigr).
+\]
+Each coefficient of this last expression is a spatial derivative
+of a compactly supported function. Its integral is zero.
+For real derivatives this follows from the fundamental theorem
+of calculus and integration in the other coordinates.
+The complex derivatives are linear combinations of those real
+derivatives. This also justifies the integrations by parts below.
+\end{proof}
+
+The following component will distinguish an exact local cochain
+from the cocycle in \eqref{eq:la-anomaly}. Take compact smooth
+functions $f,g,h$, and ordered odd parameters
+$\theta_1,\theta_2,\theta_3$ of degrees $1,1,-1$.
+Define $\Theta_3(f,g,h\,d\bar z_1d\bar z_2)$ to be the coefficient
+of $\theta_1\theta_2\theta_3$ after setting
+\[
+ A=\theta_1f+\theta_2g
+          +\theta_3h\,d\bar z_1d\bar z_2.
+\]
+The coefficient convention includes every ordering, with no
+factor $1/3!$.
+
+\begin{lemma}\label{lem:la-polarization}
+With $f_j=\partial_jf$ and the same notation for $g,h$,
+\begin{equation}\label{eq:la-polarized}
+ \Theta_3(f,g,h\,d\bar z_1d\bar z_2)
+ =-\frac1{4\pi^2}
+       \int_X h(f_1g_2-f_2g_1)\,\nu.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Each $A_j$ is odd, so $B(A)=2A_1A_2$. The coefficient in
+$A B(A)$, with its remaining top form suppressed, is
+\[
+ 2\bigl(fg_1h_2-fh_1g_2-gf_1h_2
+          +gh_1f_2+hf_1g_2-hg_1f_2\bigr).
+\]
+Move derivatives off $h$ in the first four terms. Their integral
+becomes
+\[
+ \int_X h\bigl[-f_2g_1-fg_{12}+f_1g_2+fg_{12}
+             +g_2f_1+gf_{12}-g_1f_2-gf_{12}\bigr]\nu.
+\]
+The mixed second derivatives cancel. The two remaining terms
+already contain $h$ without derivatives. All six terms together
+therefore give $3h(f_1g_2-f_2g_1)$ inside the factor two.
+Multiplication by $-1/(24\pi^2)$ proves the formula.
+\end{proof}
+
+For a numerical example, let $\psi$ be a nonnegative smooth
+function supported in a ball, with $\int\psi\,dV_4=1$.
+Choose a compact smooth $\chi$ equal to one near that ball, and
+put $f=\chi z_1$, $g=\chi z_2$, and $h=\psi/4$.
+Then the integral in \eqref{eq:la-polarized} equals one, and the
+value is $-1/(4\pi^2)$. This proves that $\Theta$ is a nonzero
+functional. To prove nonexactness, we must also determine what
+every possible local boundary can contain.
+
+\section{All finite-order local cochains}
+\label{sec:la-jets}
+
+For $I,J\in\mathbb N^2$, write
+$\partial_z^I\partial_{\bar z}^J$
+for the indicated product of scalar derivatives. Its order is
+$|I|+|J|$, where $|I|=I_1+I_2$.
+Introduce jet coordinates
+\[
+ c_{I,J},\quad (b_1)_{I,J},\quad (b_2)_{I,J},\quad h_{I,J},
+\]
+representing these derivatives of the four components.
+They retain the ghost numbers in \eqref{eq:la-components}.
+The algebra of constant-coefficient polynomial densities is
+\begin{equation}\label{eq:la-jet-algebra}
+ \begin{split}
+ \mathcal J={}&
+ \operatorname{Sym}\left(
+    \bigoplus_{I,J}\mathbb C(b_1)_{I,J}
+          \oplus\mathbb C(b_2)_{I,J}\right)\\
+ &\otimes
+ \Lambda\left(\bigoplus_{I,J}\mathbb Cc_{I,J}
+                      \oplus\mathbb Ch_{I,J}\right).
+ \end{split}
+\end{equation}
+The symbol $\operatorname{Sym}$ denotes a polynomial algebra on
+the even generators. The exterior algebra $\Lambda$ imposes
+anticommutation and square zero on the odd generators.
+Each element uses finitely many generators and monomials.
+
+Four even total derivatives act on this algebra. For example,
+$D_{z_j}c_{I,J}=c_{I+e_j,J}$ and
+$D_{\bar z_j}c_{I,J}=c_{I,J+e_j}$, where $e_j$ is the $j$th
+unit multi-index. They act identically on the other component
+labels and extend by the Leibniz rule. The differential is
+\begin{equation}\label{eq:la-jet-differential}
+ \begin{aligned}
+ \delta c_{I,J}&=0,&
+ \delta(b_j)_{I,J}&=-c_{I,J+e_j},\\
+ \delta h_{I,J}&=(b_2)_{I,J+e_1}-(b_1)_{I,J+e_2}.
+ \end{aligned}
+\end{equation}
+It commutes with each total derivative.
+
+Polynomial order counts background factors, including
+differentiated factors. Let $\mathcal J_n$ be its order-$n$
+part, for $n\geq1$. Define
+\begin{equation}\label{eq:la-local-tr}
+ \mathcal C_{\mathrm{loc,tr},n}
+ =\mathcal J_n\Big/
+  \left(\sum_{j=1}^2D_{z_j}\mathcal J_n
+             +\sum_{j=1}^2D_{\bar z_j}\mathcal J_n\right).
+\end{equation}
+This is a vector-space quotient by sums of total derivatives.
+It is not a quotient by an ideal of densities. Evaluation is
+\[
+ [P]\longmapsto \int_X P(jA)\,\nu,
+\]
+where $jA$ denotes the collection of component jets.
+Every total derivative has zero integral on compact inputs.
+Since $\delta$ preserves the displayed subspace, it induces a
+differential on the quotient.
+
+All complex multilinear maps of form components occur in
+\eqref{eq:la-jet-algebra}, after polarization. For instance,
+ghost-zero cubic densities may use three $b$ components, or one
+component of each type $c,b,h$, with any derivatives.
+No form-wedge restriction is imposed on these densities.
+Both holomorphic and antiholomorphic jets are included.
+
+Allowing coefficients to depend on position gives the algebra
+of finite sums
+\begin{equation}\label{eq:la-smooth-jets}
+ \mathcal J_{\mathrm{sm}}
+ =\left\{\sum_\mu f_\mu(z,\bar z)M_\mu:
+       f_\mu\in C^\infty(X),\quad M_\mu\in\mathcal J
+       \text{ a monomial}\right\}.
+\end{equation}
+Set $\delta f_\mu=0$. Total derivatives now differentiate the
+coefficients as well as the jets. Define
+\begin{equation}\label{eq:la-local-sm}
+ \mathcal C_{\mathrm{loc,sm},n}
+ = (\mathcal J_{\mathrm{sm}})_n\Big/
+  \left(\sum_jD_{z_j}(\mathcal J_{\mathrm{sm}})_n
+           +\sum_jD_{\bar z_j}(\mathcal J_{\mathrm{sm}})_n\right).
+\end{equation}
+Compact input support makes each integral finite, regardless of
+the growth of the smooth coefficients. A locally bounded
+finite-order density means an expression of this kind on each
+relatively compact coordinate neighborhood, with compatible
+expressions where neighborhoods overlap.
+
+The differential preserves polynomial order. A primitive for
+$\Theta$ would therefore have a cubic ghost-zero component
+that is itself a primitive. We can restrict the proof to $n=3$.
+The same observation applies to the formal product over all
+polynomial orders, with finite jet order at each fixed order.
+
+\section{Polarization and integration by parts}
+\label{sec:la-normal-form}
+
+Polarization replaces a cubic expression by three labeled
+inputs and extracts the coefficient in which each input occurs
+once. Exchanging homogeneous component labels of degrees $r,s$
+gives the sign $(-1)^{rs}$. These are the tensor signs used here.
+The inverse construction identifies the three inputs and divides
+by $3!$. Both operations are valid over $\mathbb C$.
+For odd inputs they are interpreted using independent graded
+parameters, as in Lemma~\ref{lem:la-polarization}.
+
+It is useful first to keep the three labels ordered. Their
+permutations form the group $S_3$. The averaging operator
+\[
+ \operatorname{Av}(v)=\frac16\sum_{\sigma\in S_3}\sigma v
+\]
+projects onto the graded invariant tensors. It commutes with
+$\delta$. It also identifies invariants with the quotient by
+vectors $v-\sigma v$: averaging vanishes on those differences,
+and its class in that quotient is the class of $v$.
+
+Let $\nabla=(\partial_1,\partial_2,
+\bar\partial_1,\bar\partial_2)$, and use four-component
+multi-indices for its powers in this section. Fix one component
+label in each slot. An ordered polarized density has the form
+\[
+ \int_X\sum_{I,J,K}f_{I,J,K}(x)
+       (\nabla^I\phi_1)(\nabla^J\phi_2)
+                         (\nabla^K\phi_3)\,\nu.
+\]
+Every sum is finite. Iterated integration by parts puts it in
+the normal form
+\begin{equation}\label{eq:la-normal-form}
+ \int_X\sum_{I,J}g_{I,J}(x)
+       (\nabla^I\phi_1)(\nabla^J\phi_2)\phi_3\,\nu.
+\end{equation}
+For one derivative on the last slot, the rule is
+\[
+ \int_X fU V(\nabla_a\phi_3)\nu
+ =-\int_X\bigl[(\nabla_af)UV
+               +f(\nabla_aU)V+fU(\nabla_aV)\bigr]\phi_3\nu.
+\]
+Spatial derivatives are even, so this step creates no additional
+ghost sign.
+
+\begin{lemma}\label{lem:la-normal-unique}
+For ordered inputs and fixed component labels, normal form
+\eqref{eq:la-normal-form} is unique. It identifies the density
+quotient with its space of multilinear functionals on compact
+smooth inputs.
+\end{lemma}
+\begin{proof}
+Suppose a normal form evaluates to zero on every three inputs.
+Fix $\phi_1,\phi_2$. Varying the compact test $\phi_3$ shows that
+the smooth function
+\[
+ \sum_{I,J}g_{I,J}(x)
+          (\nabla^I\phi_1)(x)(\nabla^J\phi_2)(x)
+\]
+vanishes pointwise. To justify this implication, a nonzero
+continuous value has a small neighborhood on which an
+appropriate real part has one sign. A nonnegative bump
+function there would give a nonzero integral.
+
+At any point $x$, independently prescribe the finitely many
+jets of $\phi_1$ and $\phi_2$. A Taylor polynomial multiplied
+by a bump function equal to one near $x$ realizes these jets.
+The real and complex derivative bases are related by an
+invertible linear change, so either basis permits arbitrary
+finite jets. Taking one jet at a time proves
+$g_{I,J}(x)=0$ for every pair. This applies independently to
+all component labels. Odd coefficients are tested with distinct
+formal parameters, so their signs impose no further relation
+between ordered slots.
+
+Every reduction to normal form was a sum of integrations by
+parts. A zero functional has zero normal form, and therefore
+already represents zero in the displayed density quotient.
+\end{proof}
+
+For constant coefficients, assign symbols $p_{ij},q_{ij}$ to
+$\partial_j,\bar\partial_j$ in slot $i$. They are commuting
+polynomial variables. Total derivatives act by multiplication
+by the sums of the corresponding slot symbols. Thus the ordered
+symbol ring is
+\begin{equation}\label{eq:la-symbol-ring}
+ R=\mathbb C[p_{ij},q_{ij}:1\leq i\leq3,\ 1\leq j\leq2]
+       \Big/\left(\sum_i p_{ij},\sum_iq_{ij}:j=1,2\right).
+\end{equation}
+Here the module quotient by total momentum is exactly the
+polarized realization of the vector-space quotient
+\eqref{eq:la-local-tr}. Normal-form uniqueness proves that it
+introduces all and only the integration-by-parts relations.
+
+\section{The nonzero local symbol}
+\label{sec:la-symbol-obstruction}
+
+Each ordered slot has component labels $c_i,b_{i1},b_{i2},h_i$.
+Equations~\eqref{eq:la-jet-differential} become
+\begin{equation}\label{eq:la-symbol-differential}
+ \delta c_i=0,\qquad
+ \delta b_{ij}=-q_{ij}c_i,\qquad
+ \delta h_i=q_{i1}b_{i2}-q_{i2}b_{i1}.
+\end{equation}
+On a tensor product, $\delta$ acting in slot $i$ has the sign
+given by the sum of the preceding component degrees.
+
+Set all antiholomorphic symbols to zero:
+\begin{equation}\label{eq:la-qzero}
+ q_{ij}=0\qquad(1\leq i\leq3,\ 1\leq j\leq2).
+\end{equation}
+Every differential in \eqref{eq:la-symbol-differential} then
+vanishes. Therefore specialization \eqref{eq:la-qzero} sends
+every boundary to zero. It respects all relations in
+\eqref{eq:la-symbol-ring} and all permutations of slots.
+
+Lemma~\ref{lem:la-polarization} gives the following component of
+the specialized anomaly, with input form degrees $(0,0,2)$:
+\begin{equation}\label{eq:la-determinant-symbol}
+ -\frac1{4\pi^2}(p_{11}p_{22}-p_{12}p_{21}).
+\end{equation}
+This polynomial is nonzero under the holomorphic momentum
+relations. Indeed, the values
+\[
+ (p_{11},p_{12})=(1,0),\qquad
+ (p_{21},p_{22})=(0,1),\qquad
+ (p_{31},p_{32})=(-1,-1)
+\]
+satisfy those relations and give $-1/(4\pi^2)$.
+They are values in the complex polynomial ring of derivative
+symbols. No compactly supported holomorphic input is required
+for this algebraic test.
+
+\begin{proposition}\label{prop:la-tr-nonexact}
+The class of $\Theta$ is nonzero in
+$H^1(\mathcal C_{\mathrm{loc,tr},3},\delta)$.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{prop:la-closed} proves closedness.
+A boundary would vanish under \eqref{eq:la-qzero}, whereas
+\eqref{eq:la-determinant-symbol} does not. The component is
+taken after graded polarization, so this contradiction holds
+in the invariant subspace as well as in the ordered complex.
+\end{proof}
+
+With position-dependent coefficients, integration by parts
+can differentiate the coefficient and remove a background
+derivative. The next calculation determines whether such
+lower-order terms can supply a primitive.
+
+\section{The complete component complex}
+\label{sec:la-koszul}
+
+An exterior algebra gives a convenient description of all
+component labels. For slot $i$, introduce a one-dimensional
+symbol $\kappa_i$ of degree one and exterior generators
+$e_{i1},e_{i2}$ of degree minus one. Identify
+\begin{equation}\label{eq:la-slot-identification}
+ c_i\longleftrightarrow\kappa_i\otimes1,\qquad
+ b_{ij}\longleftrightarrow\kappa_i\otimes e_{ij},\qquad
+ h_i\longleftrightarrow-\kappa_i\otimes e_{i1}e_{i2}.
+\end{equation}
+For exterior generators, contraction $\iota_q$ is the odd
+derivation defined by $\iota_q(e_{ij})=q_{ij}$.
+For example,
+$\iota_q(e_{i1}e_{i2})=q_{i1}e_{i2}-q_{i2}e_{i1}$.
+Set
+\[
+ d(\kappa_i\otimes\omega)
+       =-\kappa_i\otimes\iota_q\omega.
+\]
+This gives $d b_{ij}=-q_{ij}c_i$ and
+$d h_i=q_{i1}b_{i2}-q_{i2}b_{i1}$, including the sign of the
+two-form component.
+
+In the tensor product of three slots, move the $\kappa_i$'s to
+the front. If the exterior degrees in the slots are $k_i$, the
+permutation sign is $(-1)^{2k_1+k_2}$. Combining it with the
+tensor differential gives the full complex
+\begin{equation}\label{eq:la-koszul-complex}
+ K=R\otimes\Lambda(e_{11},e_{12},e_{21},e_{22},e_{31},e_{32}),
+ \qquad d_K=-\iota_q.
+\end{equation}
+The suppressed factor $\kappa_1\kappa_2\kappa_3$ has degree
+three. Hence exterior degree $k$ in \eqref{eq:la-koszul-complex}
+has ghost degree $3-k$. The operator $d_K$ raises ghost degree
+by one. Its square vanishes because contractions of distinct
+exterior generators anticommute, while their coefficients
+$q_{ij}$ commute. This exterior complex with differential given
+by contraction is called a Koszul complex.
+
+The momentum relations give $q_{3j}=-q_{1j}-q_{2j}$.
+Change the exterior basis to
+\begin{equation}\label{eq:la-redundant-generators}
+ e_{11},e_{12},e_{21},e_{22},\qquad
+ r_j=e_{1j}+e_{2j}+e_{3j}\quad(j=1,2).
+\end{equation}
+The change is invertible, since
+$e_{3j}=r_j-e_{1j}-e_{2j}$. The last two generators have zero
+differential. Call the first four exterior generators active,
+and enumerate their momenta as $q_a$, $1\leq a\leq4$.
+The coefficient ring is
+\[
+ R=\mathbb C[p_{11},p_{12},p_{21},p_{22},
+             q_{11},q_{12},q_{21},q_{22}].
+\]
+
+Define an operator and two counting operators by
+\begin{equation}\label{eq:la-koszul-homotopy}
+ h_K=-\sum_{a=1}^4e_a\frac{\partial}{\partial q_a},
+ \qquad
+ N_q=\sum_aq_a\frac{\partial}{\partial q_a},
+ \qquad N_e=\sum_ae_a\iota_a.
+\end{equation}
+Here $\iota_a$ deletes $e_a$ with the sign of its position in
+an exterior monomial. It annihilates the other basis generators,
+including $r_1,r_2$. In particular,
+\[
+ \iota_a e_b+e_b\iota_a=\delta_{ab},\qquad
+ \frac{\partial}{\partial q_b}q_a
+       =q_a\frac{\partial}{\partial q_b}+\delta_{ab}.
+\]
+Expanding both compositions using these two identities gives
+\begin{equation}\label{eq:la-euler-identity}
+ d_Kh_K+h_Kd_K=N_q+N_e.
+\end{equation}
+More explicitly, $d_Kh_K$ contains
+$\sum_aq_a\partial_{q_a}
+ -\sum_{a,b}q_ae_b\iota_a\partial_{q_b}$.
+The other composition contains
+$\sum_ae_a\iota_a
+ +\sum_{a,b}e_bq_a\partial_{q_b}\iota_a$.
+The double sums cancel.
+
+The nonnegative integer $N=N_q+N_e$ counts active momentum
+degree plus active exterior degree. Both $d_K$ and $h_K$
+preserve $N$. Every polynomial is a finite sum of its
+$N$-homogeneous parts. For $N>0$, division by this integer in
+\eqref{eq:la-euler-identity} gives a contraction $h_K/N$.
+The subspace $N=0$ consists exactly of
+\begin{equation}\label{eq:la-koszul-cohomology}
+ \mathbb C[p_{11},p_{12},p_{21},p_{22}]
+                       \otimes\Lambda(r_1,r_2).
+\end{equation}
+Its differential is zero, and it cannot receive a boundary
+from a positive-$N$ part. Thus \eqref{eq:la-koszul-cohomology}
+is the cohomology of the full ordered complex. Its ghost
+degrees are $3,2,1$.
+
+\begin{lemma}\label{lem:la-order-lowering}
+The cubic constant-coefficient symbol complex has zero
+cohomology in ghost degree zero. A closed homogeneous symbol
+of ghost degree zero and differential order $r$ has a primitive
+of order $r-1$. The same statement holds for graded invariant
+symbols and for smooth families of symbols.
+\end{lemma}
+\begin{proof}
+Ghost degree zero requires exterior degree three. There are
+only two generators $r_1,r_2$, so at least one active exterior
+generator occurs. Every such component has $N>0$.
+For a closed component $v$, equation~\eqref{eq:la-euler-identity}
+therefore gives
+\[
+ d_K\left(\frac{h_Kv}{N}\right)=v.
+\]
+The operator $h_K$ differentiates once in an antiholomorphic
+momentum. It lowers total momentum order by one and lowers
+ghost degree by one. Holomorphic momentum factors remain
+unrestricted. Sum over the finitely many $N$-components.
+If $r=0$, the operator has zero output, so closedness forces
+$v=0$.
+
+For an invariant $v$, average a primitive over $S_3$.
+Since permutations commute with $d_K$, its differential remains
+$v$. Averaging preserves polynomial order. All operations are
+linear on the finite coefficient array of a polynomial.
+Applying them to smooth coefficient functions therefore
+preserves their smooth dependence.
+\end{proof}
+
+\section{Position-dependent local counterterms}
+\label{sec:la-smooth-obstruction}
+
+Filter normal form \eqref{eq:la-normal-form} by
+$|I|+|J|$, the total derivative order on its background slots.
+Derivatives of the coefficient functions are not counted.
+The top homogeneous derivative polynomial is its principal
+symbol. The operator $\delta$ raises the filtration by at most
+one. Its principal differential is
+\eqref{eq:la-symbol-differential} with $q_3=-q_1-q_2$.
+In fact, a derivative introduced on the third slot moves onto
+the first two slots with this minus sign. A term in which it
+instead differentiates a coefficient has lower order.
+
+Permuting slots preserves the filtration: integration by parts
+does not increase the total number of background derivatives.
+Its top action is the permutation action in the symbol ring.
+Consequently a symmetric top symbol can be lifted and then
+averaged without changing that symbol. This permits applying
+Lemma~\ref{lem:la-order-lowering} to actual cubic functionals.
+
+\begin{theorem}\label{thm:la-smooth-nonexact}
+The cocycle $\Theta$ is not exact in
+$\mathcal C_{\mathrm{loc,sm},3}$.
+It also has no primitive with locally bounded finite jet order
+and arbitrary smooth coefficients.
+\end{theorem}
+\begin{proof}
+Suppose $\delta C=\Theta$, where $C$ has ghost degree zero and
+finite derivative order $r$. If $r\geq2$, the order-$(r+1)$
+symbol of $\delta C$ is zero, since $\Theta$ has order two.
+Thus the top symbol $\sigma_r(C)$ is a closed ghost-zero
+symbol.
+
+Lemma~\ref{lem:la-order-lowering}, applied to its smooth
+coefficients, gives a ghost-minus-one symbol $E$ of order
+$r-1$ such that $d_KE=\sigma_r(C)$. Lift $E$ to normal form
+and average it to obtain a cubic functional $\widetilde E$.
+Then
+\[
+ C\longmapsto C-\delta\widetilde E
+\]
+preserves the equation $\delta C=\Theta$ and strictly lowers
+the order of $C$. Coefficient derivatives contribute only at
+that lower order. Repetition terminates because $r$ is a
+nonnegative integer.
+
+The resulting primitive would have order at most one. If its
+order is one, the order-two equation makes the symbol of
+$\Theta$ a boundary in the constant-coefficient symbol
+complex, at every point $x$. Specialization
+\eqref{eq:la-qzero} annihilates that boundary. Its component
+\eqref{eq:la-determinant-symbol} remains nonzero, a
+contradiction. If the order is zero, its differential has
+order at most one and cannot equal the nonzero order-two
+symbol of $\Theta$.
+
+All arguments hold on a nonempty coordinate ball, using
+inputs compactly supported inside it. A locally bounded
+finite-order primitive restricts to a finite-order primitive
+on a smaller such ball. The same contradiction excludes it.
+\end{proof}
+
+The order reduction is needed because a smooth coefficient can
+produce lower-order terms under integration by parts. It proves
+nonexactness in the full smooth local complex, including all
+those terms. An unrestricted inverse differential operator
+requires a different cochain space, which we now define.
+
+\section{Continuous cochains on compact smooth inputs}
+\label{sec:la-continuous}
+
+For a compact set $K\subset X$, forms supported in $K$ have
+seminorms
+\[
+ \|\alpha\|_{K,m}
+ =\sum_{|\mu|\leq m}\sup_{x\in K}
+                      |\partial_{\mathbb R}^{\mu}\alpha(x)|,
+ \qquad m\geq0.
+\]
+The derivatives are real coordinate derivatives, and the norm
+uses the four form coefficients. Their resulting topology is
+the fixed-support smooth topology. Choose an exhaustion by
+compact balls. The usual topology on $\mathfrak g_c$ is the
+locally convex inductive limit of these spaces, denoted the
+LF topology. It is the finest locally convex topology making
+all fixed-support inclusions continuous.
+
+In particular, a seminorm whose restriction to each
+fixed-support space is continuous is continuous in this
+topology. To see this directly, that seminorm defines a
+locally convex topology making every inclusion continuous.
+The defining finest topology is at least as strong.
+
+For an explicit cochain convention, let $s\alpha$ have degree
+$q-1$ when $\alpha\in\Omega_c^{0,q}(X)$.
+This is the underlying graded shift $\mathfrak g_c[1]$ with
+the convention $E[k]^j=E^{j+k}$. On its graded symmetric
+tensors, prescribe the degree-one operator
+\begin{equation}\label{eq:la-cochain-input-differential}
+ q_1(s\alpha)=s\bar\partial\alpha,
+ \qquad
+ q_1(x_1\cdots x_n)
+ =\sum_i(-1)^{\sum_{j<i}|x_j|}
+       x_1\cdots(q_1x_i)\cdots x_n.
+\end{equation}
+The sign in the first formula is part of the convention.
+The relation $q_1^2=0$ follows from $\bar\partial^2=0$ and
+the tensor signs.
+
+A degree-$k$ continuous cochain of polynomial order $n$ is a
+jointly continuous graded symmetric multilinear functional
+on these shifted inputs, with scalar values. It vanishes
+unless $\sum_i(q_i-1)=-k$. Define
+\begin{equation}\label{eq:la-continuous-differential}
+ \delta F=-(-1)^kFq_1.
+\end{equation}
+This differential has degree one and squares to zero.
+On polynomial coordinates it is a left derivation. For a
+component coordinate of ghost number $1-q$, the prefactor in
+\eqref{eq:la-continuous-differential} is $(-1)^q$.
+It therefore reproduces exactly \eqref{eq:la-delta}.
+Equivalently, evaluate every formula on the finite backgrounds
+\eqref{eq:la-universal} and apply those component rules.
+
+Denote this complex by $\mathcal C_{\mathrm{cont},n}$.
+All differentiations of inputs remain continuous, since they
+raise a fixed-support derivative seminorm by one and preserve
+support. In polynomial order three, local finite-order
+cochains with smooth coefficients define continuous cochains
+in this sense. For a finite sum with coefficients $f_\mu$,
+the smooth positive weight $w=1+\sum_\mu|f_\mu|^2$
+dominates every $|f_\mu|$. Weighted supremum seminorms of
+the first input, ordinary derivative suprema of the second,
+and derivative $L^1$ seminorms of the third bound each integral.
+Each of these seminorms is continuous by the LF criterion
+above. This also proves joint continuity rather than only
+continuity for a common fixed support.
+
+\section{A normalized Green homotopy}
+\label{sec:la-green}
+
+Let $r=|z|$ and define
+\begin{equation}\label{eq:la-green-function}
+ G_4(z)=\frac1{4\pi^2r^2}\qquad(r>0).
+\end{equation}
+It is locally integrable, since the radial volume factor in
+four dimensions is $r^3dr$. For a smooth radial function,
+direct differentiation gives
+\[
+ \Delta_{\mathbb R^4}g(r)=g''(r)+3r^{-1}g'(r).
+\]
+Thus $\Delta G_4=0$ away from the origin.
+
+The area of the unit three-sphere is $2\pi^2$. One derivation
+fixes the normalization without an orientation choice left
+implicit. The one-dimensional Gaussian integral $I$ satisfies
+\[
+ I^2=\int_{\mathbb R^2}e^{-(x^2+y^2)}dx\,dy
+       =2\pi\int_0^\infty re^{-r^2}dr=\pi.
+\]
+Positivity gives $I=\sqrt\pi$. Taking four factors and using
+four-dimensional polar coordinates gives
+\[
+ \pi^2=\operatorname{area}(S^3)
+              \int_0^\infty r^3e^{-r^2}dr
+         =\tfrac12\operatorname{area}(S^3).
+\]
+All integrands are positive, so iterated integration and the
+radial change of variables give the displayed equalities.
+
+\begin{lemma}\label{lem:la-green-delta}
+As a distribution on $\mathbb R^4$,
+\begin{equation}\label{eq:la-green-delta}
+ (-\Delta_{\mathbb R^4})G_4=\delta_0,
+\end{equation}
+where $\delta_0(\phi)=\phi(0)$ for a compact smooth test
+function $\phi$.
+\end{lemma}
+\begin{proof}
+A locally integrable function acts on tests by integration.
+Distributional differentiation is defined by moving each
+derivative onto the test with a minus sign. It is therefore
+enough to prove $\int G_4(-\Delta\phi)dV_4=\phi(0)$.
+
+Integrate by parts twice on $\epsilon<r<R$, with $R$ outside
+the support of $\phi$. The outer boundary contributes zero.
+At the inner sphere the outward normal of this region is
+$-\partial_r$. Since $G'_4(r)=-1/(2\pi^2r^3)$, the result is
+\[
+ \int_{\epsilon<r<R}G_4(-\Delta\phi)dV_4
+ =\int_{r=\epsilon}
+     \left[\frac{\phi}{2\pi^2\epsilon^3}
+                  +G_4\partial_r\phi\right]dS.
+\]
+The first term is the spherical average of $\phi$. Its
+difference from $\phi(0)$ is at most
+$\epsilon\sup_{r\leq\epsilon}|\nabla\phi|$.
+The second term has absolute value at most
+$\epsilon\sup|\nabla\phi|/2$.
+Finally,
+\[
+ \int_{r<\epsilon}G_4\,dV_4=\frac{\epsilon^2}{4},
+\]
+so the omitted integral against $\Delta\phi$ tends to zero.
+Letting $\epsilon\to0$ proves \eqref{eq:la-green-delta}.
+\end{proof}
+
+For constant exterior symbols, let $\iota_j$ delete
+$d\bar z_j$ from a wedge monomial, with the sign of its
+position, and annihilate monomials without that symbol.
+It satisfies
+\[
+ (d\bar z_i\wedge)\iota_j
+       +\iota_j(d\bar z_i\wedge)=\delta_{ij}.
+\]
+Define an operator lowering form degree by one,
+\[
+ R=-4\sum_{j=1}^2\partial_j\iota_j.
+\]
+The preceding relation and commuting scalar derivatives give
+\begin{equation}\label{eq:la-laplacian-homotopy}
+ \bar\partial R+R\bar\partial
+ =-4\sum_j\partial_j\bar\partial_j
+ =-\Delta_{\mathbb R^4}.
+\end{equation}
+
+For a compact smooth form $f$, convolve its coefficients with
+$G_4$ using real volume, and set
+\begin{equation}\label{eq:la-hraw}
+ (G_4*f)(z)=\int_XG_4(z-w)f(w)dV_w,
+ \qquad H_{\mathrm{raw}}f=R(G_4*f).
+\end{equation}
+The output is smooth. To justify differentiation, write the
+convolution using $u=z-w$ and move derivatives to $f(z-u)$.
+For $z$ in a fixed compact set, all relevant $u$ lie in a
+fixed compact set. Local integrability of $G_4$ bounds the
+integral of every such derivative. Difference quotients then
+converge under that bound. Distributional differentiation
+agrees with this computation.
+
+Equations~\eqref{eq:la-green-delta} and
+\eqref{eq:la-laplacian-homotopy} now prove
+\begin{equation}\label{eq:la-homotopy-raw}
+ \bar\partial H_{\mathrm{raw}}
+       +H_{\mathrm{raw}}\bar\partial=1
+ \quad\text{on }\Omega_c^{0,\bullet}(X).
+\end{equation}
+This is an identity into all smooth forms. Compact support of
+the output is not required.
+
+Differentiating \eqref{eq:la-green-function} gives the explicit
+integral
+\begin{equation}\label{eq:la-hraw-integral}
+ (H_{\mathrm{raw}}f)(z)
+ =\frac1{\pi^2}\sum_{j=1}^2
+      \int_X\frac{\overline{z_j-w_j}}{|z-w|^4}\,
+                    \iota_jf(w)\,dV_w.
+\end{equation}
+Its kernel has size at most a constant times $|z-w|^{-3}$,
+which is locally integrable in four dimensions. The ordinary
+first derivative of $G_4$ is its distributional first
+derivative: the boundary term on a sphere of radius
+$\epsilon$ is bounded by a constant times $\epsilon$ and
+tends to zero. Thus \eqref{eq:la-hraw-integral} includes the
+entire kernel, with no additional term at the origin.
+
+\section{The nonlocal primitive and its continuity}
+\label{sec:la-primitive}
+
+Extend $H_{\mathrm{raw}}$ to formal coefficients by
+\begin{equation}\label{eq:la-h-total}
+ \mathsf H(u\alpha)
+ =(-1)^{\operatorname{gh}(u)}uH_{\mathrm{raw}}\alpha.
+\end{equation}
+This is the totalization for an odd spatial operator.
+Applying it twice in the two compositions of
+\eqref{eq:la-homotopy-raw} gives
+\begin{equation}\label{eq:la-h-total-identities}
+ d\mathsf H+\mathsf Hd=1,
+ \qquad \delta\mathsf H=-\mathsf H\delta.
+\end{equation}
+For the second identity, $\delta$ increases the ghost number
+of the coefficient by one, reversing the sign in
+\eqref{eq:la-h-total}. Equivalently, the component of
+$\mathsf HA$ of form degree $r$ is
+$(-1)^rH_{\mathrm{raw}}A_{r+1}$. This describes the sign for
+both the one-form and two-form background inputs.
+
+Define
+\begin{equation}\label{eq:la-primitive}
+ \boxed{\displaystyle
+ \Psi(A)=\frac1{24\pi^2}
+       \int_X(\mathsf HA)
+        (\partial_1A\,\partial_2A
+                  -\partial_2A\,\partial_1A)\wedge\Omega.}
+\end{equation}
+The element $\mathsf HA$ has total degree zero. The other
+two factors have total degree two together. Integration
+selects form degree two, so $\Psi$ has ghost degree zero.
+It is a homogeneous cubic expression.
+
+\begin{proposition}\label{prop:la-primitive-identity}
+For every compact smooth universal background,
+\begin{equation}\label{eq:la-primitive-identity}
+ \delta\Psi=\Theta.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use $B(A)$ from \eqref{eq:la-anomaly}.
+Equations~\eqref{eq:la-super-delta} and
+\eqref{eq:la-h-total-identities} give
+\[
+ \delta(\mathsf HA)=-\mathsf HdA,
+ \qquad \delta B(A)=dB(A).
+\]
+Since $\mathsf HA$ is even, the product rule and integration
+by parts give
+\begin{align*}
+ \delta\Psi
+ &=\frac1{24\pi^2}\int_X
+       \bigl[-(\mathsf HdA)B(A)
+                     +(\mathsf HA)dB(A)\bigr]\wedge\Omega\\
+ &=-\frac1{24\pi^2}\int_X
+       \bigl[\mathsf HdA+d\mathsf HA\bigr]B(A)\wedge\Omega\\
+ &=-\frac1{24\pi^2}\int_X A B(A)\wedge\Omega
+ =\Theta(A).
+\end{align*}
+Every coefficient of $B(A)$ has compact support, while
+$\mathsf HA$ is smooth. Thus $(\mathsf HA)B(A)$ has compact
+support, which justifies the integration by parts. In a
+polarized term, the two differentiated inputs have compact
+support independently. Their product still has compact
+support, regardless of the support of the Green output.
+\end{proof}
+
+Continuity must hold when the supports vary. For any compact
+smooth form $f$, split the integral
+\eqref{eq:la-hraw-integral} into $|z-w|\leq1$ and its
+complement. On the first region,
+$\int_{|u|\leq1}|u|^{-3}dV_u=2\pi^2$.
+On the second region, $|u|^{-3}\leq1$. Hence a constant
+independent of both support and $z$ gives
+\begin{equation}\label{eq:la-h-bound}
+ \|H_{\mathrm{raw}}f\|_\infty
+ \leq C\bigl(\|f\|_\infty+\|f\|_{L^1}\bigr).
+\end{equation}
+Define a global seminorm using the real derivatives:
+\begin{equation}\label{eq:la-pone}
+ p_1(f)=\sum_{|\mu|\leq1}
+       \left(\|\partial_{\mathbb R}^{\mu}f\|_\infty
+                  +\|\partial_{\mathbb R}^{\mu}f\|_{L^1}\right).
+\end{equation}
+Its restriction to a fixed-support space is continuous:
+the integral norms are bounded by the support volume times
+the corresponding supremum norms. The LF criterion in
+Section~\ref{sec:la-continuous} proves continuity on the full
+compact-support space.
+
+Each term in the polarization of $\Psi$ is bounded by
+\[
+ C\|H_{\mathrm{raw}}\alpha\|_\infty
+       \|\partial\beta\|_\infty
+       \|\partial\gamma\|_{L^1}.
+\]
+There are finitely many permutations and component terms.
+Using \eqref{eq:la-h-bound} and
+\eqref{eq:la-pone} therefore gives a support-independent
+constant $C'$ such that
+\begin{equation}\label{eq:la-joint-bound}
+ |\Psi_3(\alpha,\beta,\gamma)|
+     \leq C'p_1(\alpha)p_1(\beta)p_1(\gamma).
+\end{equation}
+This product of continuous seminorms proves joint continuity
+at zero. Multilinearity, by expanding increments in each
+argument, proves joint continuity at every triple.
+Thus $\Psi\in\mathcal C_{\mathrm{cont},3}^0$.
+
+The kernel in \eqref{eq:la-hraw-integral} depends on the
+difference $z-w$. Changes of variables prove that $\Psi$
+is translation invariant. Its formula uses one input at
+$w$ and two differentiated inputs at $z$, connected by this
+kernel. All integrals act on smooth inputs; local integrability
+handles the single singular difference. Theorem
+\ref{thm:la-smooth-nonexact} and
+\eqref{eq:la-primitive-identity} also show that this functional
+has no finite-order local representation.
+
+\section{Local cancellation and the choice of cochains}
+\label{sec:la-consequence}
+
+\begin{theorem}\label{thm:la-three-parts}
+For the abelian Dolbeault algebra
+$\Omega_c^{0,\bullet}(\mathbb C^2)$ and the cubic functional
+$\Theta$ of \eqref{eq:la-anomaly}, the following hold.
+\begin{enumerate}
+ \item Its class is nonzero among constant-coefficient
+ finite-order local polynomial cochains, with all form
+ components and all spatial jets allowed.
+ \item Its class remains nonzero with arbitrary smooth
+ local coefficients, including locally bounded finite jet
+ order.
+ \item It is exact among jointly continuous cochains on
+ compact smooth inputs. The translation-invariant nonlocal
+ primitive is \eqref{eq:la-primitive}.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The first part is Proposition~\ref{prop:la-tr-nonexact}.
+The second is Theorem~\ref{thm:la-smooth-nonexact}.
+For the third, Proposition~\ref{prop:la-primitive-identity}
+gives exactness, and \eqref{eq:la-joint-bound} proves the
+required continuity. Polynomial-order preservation extends
+the first two statements to arbitrary local polynomial
+counterterms and to formal completion by polynomial order.
+\end{proof}
+
+In the scalar local complex defined above, a counterterm is
+a ghost-zero local functional added to the scalar action.
+Its change of the cubic variation is a $\delta$-boundary.
+Thus a nonzero multiple of $\Theta$ cannot be canceled by
+such a counterterm. A continuous nonlocal change can cancel
+it by adding the opposite multiple of $\Psi$.
+This consequence concerns the specified scalar background
+complex. A theory with additional fields or nonlinear
+differentials requires its own counterterm complex and a
+comparison with this one.
+
+For $\lambda\in\mathbb C$, the local class of $\lambda\Theta$
+is nonzero exactly when $\lambda\ne0$. Multiplication by a
+nonzero scalar is invertible on these complexes. When
+$\lambda=0$, the functional itself is zero. If independent
+charge contributions are defined to be $q_j^3\Theta$, their
+sum is $(\sum_jq_j^3)\Theta$. Charges $1,-1$ give zero, while
+charges $1,1$ give twice the nonzero local class. These are
+statements about the specified cubic functional and its
+scalar multiples.
+
+The finite-order condition is imposed at each fixed
+polynomial order. A completion admitting infinitely many
+derivatives at that same order is a different space and
+need not act on arbitrary compact smooth inputs. The Green
+primitive also uses the whole Euclidean space and allows
+noncompact output. The proofs above make no assertion for
+unrestricted noncompact inputs, other boundary conditions,
+or a compatible local primitive on every open set. Within
+the stated domains, the same cubic variation has a nonzero
+local class and the explicit continuous primitive
+\eqref{eq:la-primitive}.

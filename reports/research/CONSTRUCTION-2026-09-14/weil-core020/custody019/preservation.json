@@ -1,0 +1,21 @@
+{
+  "native018_manifest_sha256": "693d9ed261e46e6e40f80ef773c70f720a0dd20ee4d5beb4a04ea700a5155107",
+  "native018_files_verified": 687,
+  "programme024_assets_verified": 24,
+  "programme024_build_input_records_preserved": 341,
+  "original_live_input_paths_with_retained_frozen_alternatives": [
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/completion-and-coefficients.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/current-actions-and-local-observables.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/hamiltonian-jets.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/higher-associativity.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/merging-ordered-insertions.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/ordered-coefficient-bar.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/ordered-collisions-and-residues.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/products-and-coefficients.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/programme.tex",
+    "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/manuscript/smooth-fields-and-formal-hamiltonians.tex"
+  ],
+  "direct_inputs_verified": 33,
+  "baseline_input_records_verified": 341,
+  "root_live_sources_read_only": true
+}

@@ -1,0 +1,12 @@
+--- native-normalized-body
++++ chapter-body
+@@ -303,7 +303,8 @@
+ 
+ A complex $*$-algebra is an associative complex algebra with a conjugate-linear
+ map $a\mapsto a^*$ such that $(a^*)^*=a$ and $(ab)^*=b^*a^*$.
+-A unit is a nonzero element $1$ with $1a=a1=a$ for every $a$;
++For the $*$-algebras in this chapter, a unit is a nonzero element $1$
++with $1a=a1=a$ for every $a$;
+ nonunital means that no such element is present.
+ In particular, the zero algebra is nonunital under this convention.
+ 

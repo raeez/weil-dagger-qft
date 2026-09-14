@@ -1,0 +1,1516 @@
+\chapter{Completion and coefficients}
+\label{ch:completion-coefficients}
+
+Let $k$ be a field of characteristic zero, and let $h,x$ be commuting
+indeterminates. The equation $(1-hx)f=1$ has the finite approximations
+\begin{equation}\label{eq:cc-geometric-finite}
+ (1-hx)\sum_{j=0}^{N-1}h^jx^j=1-h^Nx^N,\qquad N\geq1.
+\end{equation}
+
+The parameter $h$ has degree zero in every complex below.
+No numerical value or absolute value is assigned to it.
+The remainder disappears at every fixed parameter order as $N$ increases.
+To obtain an actual solution, the allowed expressions must include the
+resulting series. The same choice also determines which maps extend and
+whether taking cohomology preserves these limits.
+
+\section{Polynomial coefficients and compatible truncations}
+\label{sec:cc-truncations}
+
+The partial sums in \eqref{eq:cc-geometric-finite} have unbounded degree
+in $x$, although their coefficient at each power of $h$ is a polynomial.
+This distinction separates two rings of expressions.
+Use the formal multiplication defined in Chapter~\ref{ch:products-coefficients},
+with $h$ as parameter, and put
+\[
+ R=k[[h]],\qquad C=k[x][[h]].
+\]
+
+An element of $R[x]$ has one finite bound on its $x$-degree.
+An element of $C$ has the form $\sum_{n\geq0}h^np_n(x)$, with
+$p_n\in k[x]$ and no common bound on $\deg p_n$.
+For example, $\sum_{n\geq0}h^nx^{n^2}$ belongs to $C$.
+At order $h^N$, multiplication in $C$ uses only
+$\sum_{i=0}^N p_i(x)q_{N-i}(x)$, which is a polynomial.
+
+The same construction applies to a $k$-vector space $V$. Write
+\[
+ V[[h]]=\prod_{n\geq0}h^nV
+ =\left\{\sum_{n\geq0}h^nv_n:v_n\in V\right\}.
+\]
+The product permits an arbitrary coefficient at each index.
+Scalar multiplication by $R$ uses the finite coefficient convolution.
+The subspace $h^NV[[h]]$ consists of series with zero coefficients below
+order $N$. Equality modulo this subspace means agreement in the first
+$N$ coefficients.
+
+Extending a coefficient formula requires control of its output precision
+in terms of input precision.
+A topology on a set $X$ is a collection of subsets, called open sets,
+containing $X$ and the empty set.
+It must be closed under arbitrary unions and finite intersections.
+A neighborhood of $x\in X$ is a subset containing an open set that
+contains $x$.
+A set with a specified topology is a topological space.
+
+\begin{definition}\label{def:cc-filtered-topology}
+Let $P$ be a module over a commutative ring $S$.
+A decreasing filtration of $P$ is a sequence of submodules
+$F^0P\supseteq F^1P\supseteq\cdots$.
+For $x\in P$, the coset $x+F^NP$ is the set
+$\{x+v:v\in F^NP\}$.
+The filtered topology has the cosets $x+F^NP$, for $N\geq0$, as
+basic neighborhoods of each $x\in P$.
+Explicitly, a subset $O\subseteq P$ is open when each $x\in O$ has
+some $N$ with $x+F^NP\subseteq O$.
+No condition $F^0P=P$ is required here.
+\end{definition}
+
+For $V[[h]]$, take $F^NV[[h]]=h^NV[[h]]$.
+This filtered topology is the $h$-adic topology.
+
+Each coset $x+F^NP$ is open, because $y+F^NP=x+F^NP$ whenever
+$y\in x+F^NP$.
+These open sets form a topology. Unions satisfy the condition at
+each point using any member that contains it.
+For two open sets containing $x$, the larger of their two cutoff
+indices supplies a coset inside their intersection.
+This proves the finite-intersection condition by induction.
+The whole set and the empty set satisfy the defining condition as well.
+
+A sequence $x_j$ converges to $x$ when every neighborhood of $x$
+contains all sufficiently late terms.
+In the filtered topology this means that, for every $N$, eventually
+$x_j-x\in F^NP$.
+For $V[[h]]$, it means that each finite initial list of coefficients
+eventually stabilizes at the corresponding coefficients of the limit.
+
+A map $f:X\to Y$ between topological spaces is continuous at $x$ if
+each neighborhood $O$ of $f(x)$ contains $f(W)$ for some neighborhood
+$W$ of $x$.
+It is continuous if this holds at every point.
+
+For modules $P,Q$ over a common commutative ring $S$, give them
+filtrations $F,G$, respectively.
+An arbitrary map $f:P\to Q$ is therefore continuous at $x$ exactly when
+\begin{equation}\label{eq:cc-continuity-at-point}
+ \text{for every }N\text{ there is }M\text{ such that}\quad
+ f(x+F^MP)\subseteq f(x)+G^NQ.
+\end{equation}
+If $f$ is $S$-linear, the identity $f(x+v)=f(x)+f(v)$ shows that
+continuity at zero is equivalent to continuity everywhere.
+In that case the criterion is
+$f(F^MP)\subseteq G^NQ$ for a suitable $M$ at each $N$.
+Thus preserving each filtration submodule is a sufficient continuity
+condition, but different input and output cutoffs are permitted.
+
+Continuous maps preserve convergent sequences.
+Indeed, for a neighborhood $O$ of $f(x)$, continuity gives a
+neighborhood $W$ of $x$ with $f(W)\subseteq O$.
+If $x_j\to x$, then $x_j\in W$ eventually, so $f(x_j)\in O$
+eventually. This proves $f(x_j)\to f(x)$.
+Composition preserves continuity by applying the neighborhood condition
+successively to the two maps.
+
+The discrete topology on a set declares every subset open.
+Its basic neighborhoods are singletons, so a sequence converges exactly
+when it eventually equals its limit.
+For a module this is the filtered topology with $F^NP=0$ for every $N$.
+
+For a family of topological spaces $(P_i)_{i\in I}$, their product
+topology has the following basic neighborhoods of a point $(x_i)$.
+Choose a finite subset $J\subseteq I$ and an open set $W_i$ containing
+$x_i$ for each $i\in J$.
+The resulting neighborhood consists of all $(y_i)$ with $y_i\in W_i$
+for $i\in J$, with no restriction on the remaining coordinates.
+
+Open sets in the product are unions of these basic neighborhoods.
+The intersection of two basic neighborhoods combines their finite
+coordinate lists and intersects the selected open sets in each factor.
+The empty coordinate list gives the whole product.
+Distributing finite intersections over unions proves the
+finite-intersection axiom for open sets.
+Thus the product construction satisfies the topology axioms.
+
+If the factors are filtered modules, one can take
+$W_i=x_i+F_i^{N_i}P_i$.
+For finitely many factors a common cutoff $M\geq N_i$ suffices in
+every coordinate, since the filtrations decrease.
+A sequence in a product converges exactly when every coordinate
+sequence converges. Necessity follows by restricting one coordinate.
+For sufficiency, a basic neighborhood restricts only finitely many
+coordinates, so one index beyond all their required indices works.
+In particular, the $h$-adic topology on $V[[h]]$ is the product
+topology with discrete coefficient spaces, because every finite set
+of coefficient indices lies in one initial segment.
+
+Addition in a filtered module is continuous: perturbing two inputs
+by elements of $F^NP$ changes their sum by an element of $F^NP$.
+This is the continuity criterion for the product neighborhoods on
+the pair of inputs.
+Negation preserves every $F^NP$, so it is continuous as well.
+It follows that a finite sum of continuous maps into a filtered
+module is continuous, by intersecting their finitely many required
+input neighborhoods at each point.
+
+For a subset $U\subseteq P$, its closure consists of the points
+whose every neighborhood meets $U$.
+Write $U+F^NP=\{u+v:u\in U,\ v\in F^NP\}$.
+Since each $F^NP$ is closed under additive inverses, the closure is
+\[
+ \overline U=\bigcap_{N\geq0}(U+F^NP).
+\]
+The subset $U$ is dense in $P$ when $\overline U=P$.
+Equivalently, every $x\in P$ can be approximated by an element of
+$U$ modulo each $F^NP$.
+These definitions also apply to the finite products above, using the
+common-cutoff submodules $\prod_iF_i^MP_i$.
+
+The polynomial module $V[h]$ consists of finite sums in $h$.
+Its quotient $V[h]/h^NV[h]$ retains the coefficients from $0$ to $N-1$.
+The ring $R$ acts on this quotient through coefficient truncation
+$R\to k[h]/(h^N)$, followed by the finite coefficient convolution.
+Reduction gives maps from level $N+1$ to level $N$.
+The compatibility of all these reductions expresses completion without
+an infinite summation inside $V$.
+
+\begin{definition}\label{def:cc-inverse-limit}
+An inverse system of modules over a commutative ring $S$ consists of
+modules $M_N$, for $N\geq1$, and $S$-linear maps
+$\rho_N:M_{N+1}\to M_N$. Its inverse limit is
+\[
+ \varprojlim_N M_N
+ =\{(m_N)_N\in\prod_{N\geq1}M_N:
+       \rho_N(m_{N+1})=m_N\text{ for every }N\}.
+\]
+Transitions over several levels mean composites of the displayed maps.
+\end{definition}
+
+For an $S$-module $W$, compatible $S$-linear maps $f_N:W\to M_N$
+give the unique $S$-linear map $w\mapsto(f_N(w))_N$ to the inverse limit.
+The module operations in the limit are coordinatewise, so this formula
+proves existence, linearity, and uniqueness. This is its universal property.
+
+\begin{proposition}\label{prop:cc-series-limit}
+Coefficient reduction gives an isomorphism of $R$-modules
+\[
+ V[[h]]\longrightarrow\varprojlim_N V[h]/h^NV[h].
+\]
+For $V=k[x]$, it also identifies the rings
+$C=\varprojlim_N R[x]/h^NR[x]$.
+\end{proposition}
+
+\begin{proof}
+Every series gives compatible reductions. If all reductions vanish,
+every coefficient vanishes, so this map is injective.
+
+For a compatible family, take its coefficient of $h^n$ at any level
+$N>n$. Compatibility makes this independent of the level.
+The resulting sequence $(v_n)$ gives a series with the required reductions.
+This constructs an inverse, which respects addition and scalar multiplication.
+For polynomial coefficients, both rings at level $N$ consist of the
+same finite lists of polynomials, with the same truncated multiplication.
+The isomorphism therefore respects products as well.
+\end{proof}
+
+For decreasing submodules $F^NP\subset P$, the completion is
+$\widehat P=\varprojlim_N P/F^NP$.
+The module $P$ is separated if $\bigcap_N F^NP=0$, and complete if
+the canonical map $P\to\widehat P$ is surjective.
+Thus separatedness and completeness together mean that this map is an
+isomorphism. Proposition~\ref{prop:cc-series-limit} proves both properties
+for $V[[h]]$, without a dimension restriction on $V$.
+
+Separatedness gives uniqueness of limits.
+If $x_j$ converges to both $x$ and $y$, then eventually
+$x_j-x,x_j-y\in F^NP$ for every fixed $N$.
+Subtraction gives $x-y\in F^NP$ for every $N$, hence $x=y$.
+
+For a submodule $U\subseteq P$, its induced topology uses the
+intersections $U\cap F^NP$ as neighborhoods of zero.
+This is precisely the topology obtained by intersecting neighborhoods
+in $P$ with $U$.
+
+Two continuous maps $f,g:P\to Q$ into a separated filtered module
+that agree on a dense subset $U$ agree everywhere.
+Fix $x\in P$ and an output cutoff $N$.
+By \eqref{eq:cc-continuity-at-point}, choose one input cutoff $M$
+that works for both maps at $x$.
+Density gives $u\in U\cap(x+F^MP)$, so
+\[
+ f(x)-g(x)=(f(x)-f(u))+(g(u)-g(x))\in G^NQ.
+\]
+Separatedness of $Q$ now gives $f(x)=g(x)$.
+The same argument applies to finite products of filtered modules,
+using their common-cutoff neighborhoods.
+
+Writing $p_n(x)=\sum_{j\geq0}a_{n,j}x^j$ displays the condition in $C$:
+each fixed row $n$ of $(a_{n,j})$ has finite support in $j$.
+The ring $k[[h,x]]$ instead permits an arbitrary array of coefficients.
+Its coefficient of $h^nx^j$ in a product uses the finite rectangle
+$0\leq a\leq n$, $0\leq b\leq j$, so multiplication is defined.
+The series $\sum_{j\geq0}x^j$ belongs to $k[[h,x]]$ and does not belong
+to $C$. Its row at parameter order zero is infinite.
+
+\section{Localization and the lower bound on parameter order}
+\label{sec:cc-localization}
+
+Allowing finitely many negative powers of $h$ makes it possible to
+evaluate a polynomial at $x=h^{-1}$.
+The number of permitted negative orders must still be bounded for each
+individual expression.
+
+For a commutative ring $S$ and $s\in S$, define $S[1/s]$ using fractions
+$a/s^m$, where $a\in S$ and $m\geq0$.
+The equality rule is
+\[
+ \frac{a}{s^m}=\frac{b}{s^n}
+ \quad\Longleftrightarrow\quad
+ s^\ell(s^na-s^mb)=0\text{ for some }\ell\geq0.
+\]
+
+Addition uses a common denominator, and multiplication multiplies
+numerators and denominators. Multiplying the equality equations by
+further powers of $s$ shows that these operations respect representatives.
+The same multiplication proves transitivity of the equality rule.
+For example, equalities between denominators $s^m,s^n$ and $s^n,s^p$
+give, after adding suitably multiplied equations, an equality between
+denominators $s^m,s^p$, with an extra factor $s^n$.
+The ring laws follow by expressing any finite calculation over a common
+denominator and using the laws in $S$.
+
+The resulting ring is the localization at $s$.
+The map $S\to S[1/s]$ sends $a$ to $a/1$.
+It can have a kernel when $s$ kills a nonzero element.
+
+If $f:S\to T$ is a unital ring map and $f(s)$ is invertible, the unique
+extension sends $a/s^m$ to $f(a)f(s)^{-m}$.
+The equality rule proves that this is well-defined, because $f(s)^\ell$
+can be cancelled. Conversely, preservation of products forces this formula.
+This proves the mapping property of localization, including the case of
+the zero ring, whose identity is zero.
+
+For a nonzero series in $R$, let its order be its first nonzero exponent.
+The first nonzero coefficient of a product is the product of the first
+nonzero coefficients. Thus $R$ has no zero divisors.
+Every nonzero element has the form $h^m v$ with $v$ a unit, by
+Lemma~\ref{lem:pc-units}. Consequently
+\[
+ K=R[1/h]=k((h))
+ =\left\{\sum_{n\geq n_0}a_nh^n:
+          a_n\in k,\ n_0\in\mathbb Z\right\}
+\]
+is a field: the inverse of $h^mv$ is $h^{-m}v^{-1}$.
+
+The two $K$-algebras of interest are
+\[
+ A=K[x],\qquad B=C[1/h]=k[x][[h]][1/h].
+\]
+Both contain $R[x]$, and preserving coefficients gives an inclusion
+$A\hookrightarrow B$. An element of $B$ is a series
+$\sum_{n\geq n_0}h^np_n(x)$ with one lower bound $n_0$ and polynomial
+coefficients at every order.
+
+For a nonzero element of $K$ or $B$, write $\operatorname{val}_h$ for
+its least nonzero parameter exponent, and put
+$\operatorname{val}_h(0)=+\infty$.
+Regrouping by powers of $x$ gives a ring injection $B\hookrightarrow K[[x]]$.
+Indeed, each $x$-coefficient is a Laurent series with the same lower
+bound. Equality and multiplication in the two descriptions agree at
+each pair of exponents.
+
+\begin{proposition}\label{prop:cc-valuation-carrier}
+A series $\sum_{j\geq0}b_j(h)x^j\in K[[x]]$ belongs to $B$ exactly
+when, for every integer $N$, only finitely many $j$ satisfy
+$\operatorname{val}_h b_j<N$.
+It belongs to $A$ exactly when only finitely many $b_j$ are nonzero.
+\end{proposition}
+
+\begin{proof}
+Suppose $b=h^{-m}\sum_{n\geq0}h^np_n(x)$ belongs to $B$.
+Below order $N$, only finitely many polynomials $p_n$ contribute.
+The union of their finite supports is finite, giving the stated condition.
+
+Conversely, the condition at $N=0$ leaves only finitely many nonzero
+coefficients with negative valuation.
+Their valuations together with zero have an integer minimum $n_0$.
+All coefficients therefore have order at least $n_0$.
+Expand them above this common lower bound.
+
+At a fixed order $n\geq n_0$, a nonzero coefficient can occur only for
+$j$ with $\operatorname{val}_h b_j<n+1$.
+There are finitely many such $j$, so this row defines a polynomial
+$p_n(x)$. The expression $\sum_{n\geq n_0}h^np_n(x)$ belongs to $B$
+and gives the prescribed series in $K[[x]]$.
+The characterization of $A$ is precisely the finite-support definition
+of a polynomial over $K$.
+\end{proof}
+
+The inclusions
+\[
+ A\subsetneq B\subsetneq k[[h,x]][1/h]\subsetneq K[[x]]
+\]
+are strict, as shown by the respective elements
+\[
+ \sum_{j\geq0}h^jx^j,\qquad
+ \sum_{j\geq0}x^j,\qquad
+ \sum_{j\geq0}h^{-j}x^j.
+\]
+The middle larger ring requires a common lower parameter bound but
+allows infinite rows: multiplying by a power of $h$ produces precisely
+an arbitrary array with nonnegative exponents in both variables.
+The final series has no such lower bound.
+
+To complete $A$, use the additive neighborhoods $h^NR[x]$, with
+$N\geq0$. On $B$, use $h^NC$.
+These define a lattice topology, meaning the topology specified by
+powers of $h$ times the indicated $R$-submodule.
+They are not ideals of the $K$-algebras: $h^NA=A$ and $h^NB=B$.
+In particular, the ideal quotients $A/h^NA$ are zero and cannot produce
+this completion.
+
+\begin{proposition}\label{prop:cc-lattice-complete}
+The lattice topology on $B$ is separated and complete.
+Its restriction to $A$ has neighborhoods $h^NR[x]$, and $A$ is dense
+in $B$. Thus $B$ is the completion of $A$ for this specified topology.
+\end{proposition}
+
+\begin{proof}
+One has $A\cap h^NC=h^NR[x]$: a polynomial lies in the intersection
+exactly when each of its finitely many coefficients has order at least $N$.
+Also $\bigcap_Nh^NC=0$, because every nonzero series has a least exponent.
+
+A sequence is Cauchy when, for each $N$, sufficiently late differences
+belong to $h^NC$. A Cauchy sequence has a tail in one translate of $C$,
+by taking $N=0$. That tail has a common lower parameter bound.
+At every fixed order its polynomial coefficient eventually stabilizes.
+These stable coefficients define an element of $B$, and the sequence
+converges to it by the Cauchy condition.
+
+Truncating any element of $B$ above parameter order $N-1$ gives a
+finite sum of polynomials, hence an element of $A$.
+The truncation error belongs to $h^NC$, proving density.
+
+For completeness in the inverse-limit sense, truncate a representative
+of each coset in $B/h^NC$ below order $N$.
+This is independent of the representative, since adding an element
+of $h^NC$ leaves all lower coefficients unchanged.
+The truncations of compatible cosets form a Cauchy sequence.
+Its limit has all the specified cosets, proving surjectivity onto
+the inverse limit.
+The intersection calculation proves injectivity.
+Finally, the same truncation gives $A/h^NR[x]\cong B/h^NC$ as additive
+groups, so their inverse limits identify this completion with that of $A$.
+\end{proof}
+
+Addition and multiplication are continuous for these topologies.
+The order of a sum is at least the minimum of the orders of its terms.
+For nonzero factors in $B$, the order of their product is the sum of
+their orders, because the leading polynomial coefficients have nonzero
+product. Addition therefore satisfies
+\eqref{eq:cc-continuity-at-point} with the same input and output cutoff.
+
+For multiplication at $(b,c)$ and output cutoff $N$, choose $M\geq0$
+such that $M+\operatorname{val}_h b\geq N$,
+$M+\operatorname{val}_h c\geq N$, and $2M\geq N$.
+Conditions involving a zero factor impose no restriction because its
+valuation is $+\infty$.
+For $\delta,\epsilon\in h^MC$, the difference
+\[
+ (b+\delta)(c+\epsilon)-bc=b\epsilon+\delta c+\delta\epsilon
+\]
+belongs to $h^NC$ by these three bounds.
+This proves continuity for the product neighborhoods on $B\times B$.
+Intersecting with $A$ proves the same assertion there.
+
+For a linear map $T:M\to N$, its cokernel is the quotient module
+$\operatorname{coker}T=N/T(M)$.
+It measures the output classes modulo outputs attained by $T$.
+
+\begin{proposition}\label{prop:cc-geometric}
+Multiplication by $1-hx$ is an injective $K$-linear map $A\to A$ with
+cokernel $K$. On $B$ it is invertible, with inverse multiplication by
+\[
+ g=\sum_{n\geq0}h^nx^n\in C.
+\]
+Evaluation $f\mapsto f(h^{-1})$ on $A$ has no extension to a unital
+$K$-algebra map $B\to K$.
+\end{proposition}
+
+\begin{proof}
+If $f\in A$ is nonzero of degree $d$, the leading term of $(1-hx)f$
+has degree $d+1$ and nonzero coefficient. This proves injectivity.
+Evaluation at $h^{-1}$ is surjective because it fixes the constants $K$.
+For $a=h^{-1}$, the identity
+\[
+ x^j-a^j=(x-a)\sum_{i=0}^{j-1}x^{j-1-i}a^i\qquad(j\geq1)
+\]
+shows that $f(x)-f(a)$ is a multiple of $x-a$.
+Thus its kernel is $(x-h^{-1})A=(1-hx)A$, since the two generators
+differ by the unit $-h$. Evaluation therefore identifies the cokernel
+$A/(1-hx)A$ with $K$.
+
+The series $g$ belongs to $C$ by its polynomial coefficients.
+Equation~\eqref{eq:cc-geometric-finite} gives $(1-hx)g=1$
+coefficientwise. Commutativity gives a two-sided inverse in $B$.
+An extension of evaluation would send this unit to $1-hh^{-1}=0$.
+Applying the extension to $(1-hx)g=1$ would give $0=1$ in $K$,
+which is impossible.
+\end{proof}
+
+Give $K$ the lattice neighborhoods $h^NR$, for $N\geq0$.
+Evaluation is already discontinuous from $A$ to $K$ with these topologies:
+$h^nx^n\to0$, while every evaluation equals $1$.
+The nonextension assertion is stronger, because it excludes even a
+discontinuous unital algebra extension.
+
+\section{A differential equation and its inverse}
+\label{sec:cc-differential}
+
+The preceding multiplication map loses a cokernel after completion.
+The differential equation $(\partial_x-h)f=0$ instead gains solutions.
+Define polynomial differentiation by $\partial_x(x^j)=jx^{j-1}$ for
+$j\geq1$ and $\partial_x(1)=0$.
+Apply it coefficientwise in $h$ on $C$ and $B$.
+It preserves $h^NC$, so
+$D=\partial_x-h:B\to B$ is continuous and $K$-linear.
+It preserves $A$ as well.
+
+Let $M$ be a module over a commutative ring $S$, and let
+$T:M\to M$ be $S$-linear.
+Write $H^q(M,T)$ for the degree-$q$ cohomology of the two-term complex
+$[M\xrightarrow{T}M]$, concentrated in degrees zero and one.
+Thus
+\[
+ H^0(M,T)=\ker T,\qquad H^1(M,T)=M/T(M).
+\]
+The second group is $\operatorname{coker}T$, and all other cohomology
+groups vanish.
+Proposition~\ref{prop:cc-geometric} consequently gives $H^1=K$ on $A$
+and an acyclic complex on $B$ for $T=1-hx$.
+
+\begin{theorem}\label{thm:cc-differential}
+For $D=\partial_x-h$, one has
+\[
+ H^0(A,D)=H^1(A,D)=0,\qquad
+ H^0(B,D)=K E,\qquad H^1(B,D)=0,
+\]
+where $E=\exp(hx)$ denotes the formal series
+$\sum_{n\geq0}h^nx^n/n!\in C$.
+\end{theorem}
+
+\begin{proof}
+For $q\in A$ of degree at most $d$, define
+\[
+ S(q)=-\sum_{j=0}^d h^{-j-1}\partial_x^jq.
+\]
+The sum is finite, and cancellation gives $DS(q)=q$.
+Increasing $d$ does not change it, because higher derivatives vanish.
+For a nonzero polynomial $f$, the term $-hf$ has its original degree,
+whereas $\partial_xf$ has smaller degree. Thus $Df\ne0$.
+Surjectivity and injectivity prove that $S$ is the inverse of $D$ on $A$.
+
+Given $q=\sum_{n\geq0}h^nq_n(x)\in C$, seek
+$f=\sum_{n\geq0}h^nf_n(x)$ with $Df=q$.
+The coefficient equations are
+\[
+ f_n'=q_n+f_{n-1},\qquad n\geq0,\qquad f_{-1}=0.
+\]
+Every polynomial has an antiderivative over $k$, since every positive
+integer is invertible. At each step choose the antiderivative with zero
+constant term. This constructs $f\in C$ and proves surjectivity there.
+
+For $q\in B$, multiply by a power of $h$ to place it in $C$, solve,
+and divide by the same power. This proves surjectivity on $B$.
+
+Differentiating the coefficients of $E$ gives $\partial_xE=hE$.
+The series $\exp(-hx)$ is its inverse: its product with $E$ has
+coefficient $x^n\sum_{i=0}^n(-1)^i/(i!(n-i)!)$ at order $h^n$.
+This coefficient is zero for $n>0$ by the finite binomial expansion
+of $(1-1)^n$, and it is one for $n=0$.
+
+The polynomial product rule extends at each parameter coefficient.
+It therefore gives
+\[
+ D(Ef)=E\partial_xf\qquad(f\in B).
+\]
+A polynomial over $k$ has zero derivative exactly when it is constant.
+Applied to every parameter coefficient, this proves $\ker\partial_x=K$
+on $B$. Multiplication by the unit $E$ identifies that kernel with
+$\ker D$, giving $K E$.
+\end{proof}
+
+The inverse $S:A\to A$ is discontinuous for the induced lattice topology.
+Indeed, $q_m=h^mx^m\to0$, but
+\[
+ S(q_m)=-\sum_{j=0}^m\frac{m!}{(m-j)!}h^{m-j-1}x^{m-j}
+\]
+has order $-1$ for every $m$. Its constant $x$-coefficient is
+$-m!h^{-1}$, which is nonzero in characteristic zero.
+Thus an algebraic inverse on polynomials need not extend continuously.
+
+The new kernel element also comes from finite approximations.
+With $E_N=\sum_{j=0}^Nh^jx^j/j!$, direct cancellation gives
+$DE_N=-h^{N+1}x^N/N!$. Hence $E_N\to E$ and $DE_N\to0$.
+
+Characteristic zero is essential here. In characteristic $p>0$,
+$\partial_x^p=0$ on $k[x]$ and coefficientwise on $B$.
+Indeed, a nonzero $p$-fold monomial derivative would have a coefficient
+containing $p$ consecutive integer factors, one divisible by $p$.
+Then $-\sum_{j=0}^{p-1}h^{-j-1}\partial_x^j$ is a two-sided inverse
+of $D$ on $B$, by the same finite cancellation.
+The exponential formula in the theorem has undefined denominators in
+that characteristic and cannot produce the asserted kernel.
+
+\section{Solving one coefficient at a time}
+\label{sec:cc-recursion}
+
+The antiderivative construction solves each coefficient equation after
+the preceding coefficients have been chosen.
+A general formal operator has the same form whenever its parameter
+powers are nonnegative.
+Let $S$ be a commutative ring, let $V,W$ be $S$-modules, and let
+$T_i:V\to W$ be $S$-linear maps for $i\geq0$.
+Their formal operator is the map
+\[
+ T(h):V[[h]]\longrightarrow W[[h]],\qquad
+ [h^n]T(h)v=\sum_{i=0}^nT_i(v_{n-i}).
+\]
+
+The series modules and their filtrations have the same coefficient
+definition as above, now over $S$.
+Each displayed sum is finite. Distributing the finite convolutions
+proves that $T(h)$ is $S[[h]]$-linear and preserves the filtration.
+
+\begin{theorem}\label{thm:cc-recursive-inverse}
+If $T_0$ is bijective, then $T(h)$ has a unique inverse.
+The inverse is $S[[h]]$-linear and preserves every submodule
+$h^NW[[h]]$, with its image in $h^NV[[h]]$.
+In particular, it is continuous. No freeness or finite-generation
+assumption on $V,W$ is needed.
+\end{theorem}
+
+\begin{proof}
+For $w=\sum_{n\geq0}h^nw_n$, the equation $T(h)v=w$ forces
+\begin{equation}\label{eq:cc-recursive-inverse}
+ v_0=T_0^{-1}w_0,\qquad
+ v_n=T_0^{-1}\left(w_n-\sum_{i=1}^nT_i(v_{n-i})\right)
+ \quad(n\geq1).
+\end{equation}
+Conversely, these equations construct one coefficient $v_n$ at each
+step, and substitution proves $T(h)v=w$.
+Every solution must have these coefficients, proving uniqueness.
+Since $T(h)$ is $S[[h]]$-linear, uniqueness makes its inverse linear
+over the same ring.
+If $w_n=0$ for $n<N$, induction in
+\eqref{eq:cc-recursive-inverse} gives $v_n=0$ for $n<N$.
+This proves the stated filtration bound and continuity.
+\end{proof}
+
+For an $S$-linear map $L:V\to V$, this theorem gives
+\[
+ (1-hL)^{-1}=\sum_{j\geq0}h^jL^j
+ \quad\text{on }V[[h]].
+\]
+At order $n$ only $j\leq n$ contributes.
+On the polynomial module $V[h]$, the operator $1-hL$ is bijective
+exactly when $L$ is locally nilpotent: for each $v\in V$, some
+power $L^m(v)$ is zero.
+Under that condition the inverse series terminates on every polynomial
+input, since it has only finitely many input coefficients.
+Conversely, a polynomial solution to $(1-hL)f=v$ for a constant input
+$v$ must have coefficients $f_j=L^jv$.
+Its finite support forces these powers to vanish eventually.
+
+Under the hypotheses of Theorem~\ref{thm:cc-recursive-inverse},
+write $U=T(h)^{-1}$.
+Define $V((h))=V[[h]][1/h]$ as coefficient series with one finite
+lower parameter bound, and define $W((h))$ similarly.
+The localized maps have opposite domains:
+\[
+ \begin{aligned}
+ T_{\mathrm{loc}}&:V((h))\longrightarrow W((h)),\\
+ T_{\mathrm{loc}}(h^{-m}v)&=h^{-m}T(h)v,\\
+ U_{\mathrm{loc}}&:W((h))\longrightarrow V((h)),\\
+ U_{\mathrm{loc}}(h^{-m}w)&=h^{-m}U(w),
+ \end{aligned}
+\]
+where $m\geq0$, $v\in V[[h]]$, and $w\in W[[h]]$.
+
+If two representations of a Laurent input agree, multiplication by
+a common power of $h$ makes them equal as coefficient series.
+Both $T(h)$ and $U$ commute with this multiplication, so the
+displayed values are independent of the representations.
+The identities $UT(h)=1$ and $T(h)U=1$ give both localized inverse
+identities after clearing that same common power.
+These maps preserve the respective lattice neighborhoods
+$h^NV[[h]]$ and $h^NW[[h]]$.
+For the polynomial inverse $S$ in Theorem~\ref{thm:cc-differential},
+the negative parameter orders instead grow without bound with the input degree.
+
+The sign of the parameter powers is essential to the recursive theorem.
+For example, on $k((h))^2$ the matrix
+\[
+ \begin{pmatrix}1&h\\h^{-1}&1\end{pmatrix}
+\]
+has identity constant coefficient and annihilates the nonzero vector
+$(-h,1)$. It is not a formal operator with only nonnegative powers.
+Thus an invertible coefficient at order zero alone gives no inverse
+when negative operator powers are also permitted.
+
+\begin{proposition}\label{prop:cc-recursive-right-inverse}
+Suppose $T_0$ has a specified $S$-linear right inverse $J:W\to V$,
+so $T_0J=1_W$. Then $T(h)$ is surjective and has a continuous
+$S[[h]]$-linear right inverse.
+For any $w=\sum h^nw_n$ and any sequence $a_n\in\ker T_0$, all
+solutions are given uniquely by the recursion
+\[
+ v_n=J\left(w_n-\sum_{i=1}^nT_i(v_{n-i})\right)+a_n,
+ \qquad n\geq0.
+\]
+The sum is empty when $n=0$.
+\end{proposition}
+
+\begin{proof}
+Applying $T_0$ proves the coefficient equation at order $n$.
+Induction therefore constructs a solution for each sequence $(a_n)$.
+For an arbitrary solution, subtracting the displayed $J$-term defines
+the unique possible $a_n$. The equation at order $n$ gives $T_0a_n=0$.
+This proves the parameterization.
+
+Choose $a_n=0$ for every $n$ and denote the resulting solution map by
+$U:W[[h]]\to V[[h]]$.
+The recursion makes $U$ additive and $S$-linear.
+It commutes with multiplication by $h$, since shifting the input
+coefficients shifts the recursion, with zero constant coefficient.
+It preserves every $h^N$ submodule by induction.
+Hence it is continuous and commutes with multiplication by a general
+series in $S[[h]]$, by taking the limits of its polynomial truncations.
+The construction gives $T(h)U=1$.
+\end{proof}
+
+For $T_0=\partial_x$ on $k[x]$,
+$J(x^j)=x^{j+1}/(j+1)$ is a right inverse.
+Here $a_n\in k$ records the integration constant at order $n$
+in the equation $Df=q$.
+
+\section{Length restrictions and continuous operations}
+\label{sec:cc-length}
+
+The polynomial restriction can also occur in a word length or another
+nonnegative index. Let $V_\ell$ be a $k$-vector space for each
+$\ell\geq0$. The direct sum $V=\bigoplus_{\ell\geq0}V_\ell$ permits
+only finitely many nonzero components in each element.
+Its parameter series form the middle term in
+\[
+ \bigoplus_{\ell\geq0}V_\ell[[h]]
+ \ \subseteq\
+ \left(\bigoplus_{\ell\geq0}V_\ell\right)[[h]]
+ \ \subseteq\
+ \prod_{\ell\geq0}V_\ell[[h]].
+\]
+
+The first space has one finite support over all parameter orders.
+The middle space has finite support at each order.
+The last space permits arbitrary support.
+In the middle space, an equivalent condition on components
+$v_\ell(h)\in V_\ell[[h]]$ is
+\[
+ \text{for each }N\geq1,\quad
+ \#\{\ell:v_\ell(h)\notin h^NV_\ell[[h]]\}<\infty.
+\]
+Indeed, the union of the finite supports in rows $0,\ldots,N-1$ is
+finite. Conversely, this condition at $N=n+1$ makes row $n$ finite.
+
+For $V_\ell=k e_\ell$, the family with components $h^\ell e_\ell$
+belongs to the middle space and not the first.
+The family with components $e_\ell$ belongs to the last space and
+not the middle. Both inclusions are therefore strict in this example.
+
+A finite multilinear operation respects parameter order without any
+uniform bound on word length.
+Let $r\geq1$ be an integer and let
+$m:V_1\times\cdots\times V_r\to W$ be a $k$-multilinear map.
+Here multilinear means linear in each separate input.
+
+\begin{proposition}\label{prop:cc-multilinear-extension}
+There is a unique continuous $R$-multilinear map
+\[
+ \widehat m:V_1[[h]]\times\cdots\times V_r[[h]]\to W[[h]]
+\]
+that agrees with $m$ on constant inputs.
+Continuity uses the product of the $h$-adic input topologies.
+The extension is
+\[
+ [h^n]\widehat m(v_1,\ldots,v_r)
+ =\sum_{n_1+\cdots+n_r=n}
+       m(v_{1,n_1},\ldots,v_{r,n_r}),
+ \qquad n_i\geq0.
+\]
+\end{proposition}
+
+\begin{proof}
+For fixed $n$, there are only finitely many tuples of nonnegative
+integers with sum $n$. Thus the coefficient belongs to $W$.
+The linearity identities follow by distributing these finite sums.
+In particular, multiplication of an input by an element of $R$ gives
+the same scalar convolution in the output.
+If one input changes by an element of $h^NV_i[[h]]$, the output
+changes by an element of $h^NW[[h]]$.
+Replacing the inputs one at a time proves the same conclusion when
+all inputs change in this way, and proves joint continuity.
+
+An $R$-multilinear extension has the specified values on polynomial
+inputs, by expansion into constants and powers of $h$.
+Their simultaneous truncations converge to arbitrary series inputs.
+Continuity and separatedness of $W[[h]]$ therefore force the displayed
+values on all inputs, proving uniqueness.
+\end{proof}
+
+If $W$ is itself a direct sum over lengths, each value of $m$ has
+finite support by its specified codomain.
+Every coefficient of $\widehat m$ is a finite sum of such values,
+so this support condition persists.
+
+Finite multilinear identities formed from finite sums and compositions
+also persist. At any fixed parameter order, expansion gives a finite
+sum of the original identities.
+
+For a graded space $V=\bigoplus_qV^q$, completion here means
+$(V[[h]])^q=\prod_{n\geq0}h^nV^q$, with a direct sum over total degrees
+$q$ as the underlying graded space.
+For such spaces, each operation has its specified degree and uses
+the original grading signs. The degree-zero parameter introduces no
+additional signs.
+
+For an ungraded vector space $W$, a bound on parameter order suffices
+to sum infinitely many operations.
+Suppose $X$ is a set and maps $f_j:X\to W[[h]]$, for $j\geq0$,
+satisfy $f_j(X)\subseteq h^{a_j}W[[h]]$.
+Here the integers $a_j\geq0$ tend to infinity, meaning that for
+each $N$ only finitely many $j$ satisfy $a_j<N$.
+At every coefficient only finitely many summands contribute, so their
+sum defines a map $f=\sum_jf_j:X\to W[[h]]$.
+
+Give $W[[h]]$ its $h$-adic topology and suppose $X$ is topological.
+If every $f_j$ is continuous, so is $f$.
+For an output cutoff $N$, put $J_N=\{j:a_j<N\}$.
+Then $f(x)-\sum_{j\in J_N}f_j(x)$ belongs to $h^NW[[h]]$ for every $x$.
+Continuity of the finite sum gives a neighborhood $O$ of $x$ on
+which its difference from its value at $x$ lies in $h^NW[[h]]$.
+For $y\in O$, the two discarded tails lie in this same submodule,
+so $f(y)-f(x)\in h^NW[[h]]$, proving continuity.
+
+For a graded target $W=\bigoplus_qW^q$, parameter order must be
+combined with finite support in total degree. Put
+\[
+ G_W=\bigoplus_{q\in\mathbb Z}W^q[[h]],\qquad
+ F^NG_W=\bigoplus_{q\in\mathbb Z}h^NW^q[[h]],
+\]
+and give $G_W$ this filtered topology.
+Its restriction to $W^q[[h]]$ is the usual $h$-adic topology.
+For $w\in G_W$, its degree support is the finite set of $q$ for
+which its component in $W^q[[h]]$ is nonzero.
+The parameter $h$ still has degree zero.
+
+Suppose maps $f_j:X\to G_W$ satisfy $f_j(X)\subseteq F^{a_j}G_W$,
+where $a_j\geq0$ and $a_j\to\infty$.
+Assume that, for each $x$, there is a finite set $D_x\subset\mathbb Z$
+containing the degree support of every $f_j(x)$.
+No uniform bound on $D_x$ as $x$ varies is required.
+The coefficient sum has support contained in $D_x$, so it belongs
+to $G_W$.
+
+If the maps are continuous, the same finite-sum argument modulo
+$F^NG_W$ proves their sum continuous.
+The finite degree condition ensures membership in the target, while
+the uniform parameter-order bound supplies the continuity estimate.
+
+In particular, let $X=\bigoplus_pX^p$ be a graded vector space with
+a specified topology, and let every $f_j:X\to G_W$ be continuous
+and $k$-linear of one fixed degree $d\in\mathbb Z$.
+This degree condition means $f_j(X^p)\subseteq W^{p+d}[[h]]$.
+Write $x=\sum_{p\in E_x}x_p$ for its finitely many nonzero homogeneous
+components, with $x_p\in X^p$.
+Linearity gives support contained in the finite set
+$E_x+d=\{p+d:p\in E_x\}$ for every $f_j(x)$.
+Thus the uniform parameter-order hypothesis defines a continuous
+sum of degree $d$ with values in $G_W$.
+It is linear because addition and scalar multiplication commute with
+each finite coefficient sum.
+
+The parameter-order condition alone does not ensure that the sum belongs to $G_W$.
+Take $X=k$ with the discrete topology in degree zero and
+$W=\bigoplus_{j\geq0}ke_j$ with $|e_j|=j$.
+The maps $f_j(\lambda)=\lambda h^je_j$ are continuous and have
+parameter order $j$.
+Their coefficient sum at $1$ is $\sum_{j\geq0}h^je_j$.
+Its component in every nonnegative total degree is nonzero, so it
+does not belong to $G_W$.
+It belongs to the coefficient-series module obtained by forgetting
+the grading, which gives a larger module.
+
+The unrestricted length product can destroy continuity even for a
+linear operation. Define
+\[
+ b:\bigoplus_{\ell\geq0}k e_\ell\to k f,\qquad b(e_\ell)=f,
+\]
+where $f$ is a nonzero basis vector.
+Give each coordinate space the discrete topology and the full product
+the topology of agreement in each fixed finite set of coordinates.
+Then $e_\ell\to0$ in that product, while $b(e_\ell)=f$ for every
+$\ell$. Hence $b$ has no continuous extension from the product to
+the discrete space $k f$.
+
+Its parameter extension is defined, and satisfies
+\[
+ \widehat b\left(\sum_{\ell\geq0}h^\ell e_\ell\right)
+       =\sum_{\ell\geq0}h^\ell f\in(k f)[[h]].
+\]
+The target completion and the finite support at each input order make
+every coefficient a finite calculation.
+
+\section{The algebraic tensor product and its completion}
+\label{sec:cc-tensor}
+
+The series $\sum_{n\geq0}x^ny^n$ is a limit of finite sums of products
+in separate variables. An algebraic tensor product requires one finite
+sum for the entire expression.
+To compare these requirements, put $M=k[[x]]$ and $N=k[[y]]$.
+Here $x,y$ are independent commuting variables of degree zero.
+
+The bilinear map $(f,g)\mapsto f(x)g(y)$ induces
+\[
+ \alpha:M\otimes_kN\longrightarrow k[[x,y]],\qquad
+       f\otimes g\longmapsto f(x)g(y).
+\]
+Its coefficient at $x^iy^j$ is $([x^i]f)([y^j]g)$.
+The tensor product is the algebraic one from
+Chapter~\ref{chap:relations-homotopies}: each element is a finite sum
+of elementary tensors.
+
+\begin{proposition}\label{prop:cc-algebraic-tensor}
+The map $\alpha$ is injective.
+Its image consists exactly of the coefficient arrays whose columns
+span a finite-dimensional $k$-subspace of $k[[x]]$.
+In particular, $\sum_{n\geq0}x^ny^n$ does not belong to its image.
+\end{proposition}
+
+\begin{proof}
+Write a tensor as $\sum_{s=1}^r f_s\otimes g_s$.
+Replacing the $f_s$ by a basis of their finite span and collecting
+the second factors makes the $f_s$ linearly independent.
+If its image is zero, its coefficient at $y^j$ gives
+$\sum_s([y^j]g_s)f_s=0$ in $k[[x]]$ for every $j$.
+Independence forces every coefficient of every $g_s$ to vanish.
+Thus the tensor is zero, proving injectivity.
+
+For any image element, its $j$th column belongs to the span of the
+finitely many series $f_s$.
+Conversely, choose a basis $f_1,\ldots,f_r$ of the column span of
+an array. Write column $j$ as $\sum_s c_{s,j}f_s$ and define
+$g_s(y)=\sum_{j\geq0}c_{s,j}y^j$.
+Then $\sum_s f_s\otimes g_s$ maps to the array.
+
+The columns of $\sum_nx^ny^n$ are $1,x,x^2,\ldots$, which are
+linearly independent. Its column span is infinite-dimensional.
+\end{proof}
+
+To admit such limits, specify which tensor coefficients must stabilize.
+For decreasing subspaces $F^iM\subset M$, $G^jN\subset N$ with
+$F^0M=M$, $G^0N=N$, define
+\[
+ T^n=\sum_{\substack{i,j\geq0\\i+j=n}}
+       \operatorname{im}(F^iM\otimes_kG^jN\to M\otimes_kN),
+ \qquad
+ M\widehat\otimes_kN=\varprojlim_{n\geq1}(M\otimes_kN)/T^n.
+\]
+The image maps come from the two subspace inclusions.
+The subspaces $T^n$ decrease: in a summand with $i+j=n+1$, decrease
+a positive index by one and use the corresponding input inclusion.
+This specifies both the scalar base and the filtration of the
+completed tensor product.
+For the present $M,N$, take $F^iM=x^iM$ and $G^jN=y^jN$.
+
+For $n\geq1$, the rectangular subspaces
+\[
+ U_n=x^nM\otimes_kN+M\otimes_ky^nN
+ \quad\subset M\otimes_kN
+\]
+use the images of those tensor maps as well.
+They satisfy $T^{2n-1}\subset U_n\subset T^n$.
+For the first containment, if $i+j=2n-1$, either $i\geq n$ or
+$j\geq n$. The second follows from the terms $(i,j)=(n,0),(0,n)$.
+
+Put $Q=M\otimes_kN$.
+The containments give the quotient maps
+\[
+ a_n:Q/T^{2n-1}\longrightarrow Q/U_n,\qquad
+ b_n:Q/U_n\longrightarrow Q/T^n,
+\]
+each sending the class of $q\in Q$ to the class of the same element.
+These maps are well-defined because a change by the source subspace
+is also a change by the target subspace.
+
+Define maps between the two inverse limits by
+\[
+ \begin{aligned}
+ \Phi&:\varprojlim_mQ/T^m\longrightarrow\varprojlim_nQ/U_n,\\
+ \Phi((\xi_m)_m)_n&=a_n(\xi_{2n-1}),\\
+ \Psi&:\varprojlim_nQ/U_n\longrightarrow\varprojlim_mQ/T^m,\\
+ \Psi((\eta_n)_n)_m&=b_m(\eta_m).
+ \end{aligned}
+\]
+For $\Phi$, reducing coordinate $n+1$ to $n$ amounts to reducing
+$\xi_{2n+1}$ modulo $U_n$.
+Compatibility of $\xi$ makes this the same as reducing $\xi_{2n-1}$
+modulo $U_n$, giving its required coordinate $n$.
+For $\Psi$, reduction from $m+1$ to $m$ gives the class of $\eta_{m+1}$
+modulo $T^m$, which equals that of $\eta_m$ by compatibility.
+Thus both formulas produce compatible families.
+
+The coordinate $(\Psi\Phi(\xi))_n$ is the reduction of $\xi_{2n-1}$
+modulo $T^n$, hence equals $\xi_n$.
+The coordinate $(\Phi\Psi(\eta))_n$ is the reduction of $\eta_{2n-1}$
+first modulo $T^{2n-1}$ and then modulo $U_n$.
+This is the direct reduction from $Q/U_{2n-1}$ to $Q/U_n$, and
+compatibility gives $\eta_n$.
+Both composites are identities, so the two inverse limits are isomorphic.
+
+The coordinate projection at index $n$ sends a limit element to its
+component at that index.
+Give the limits the filtrations formed by the kernels of their
+coordinate projections.
+Output cutoff $n$ for $\Phi$ uses input cutoff $2n-1$, while output
+cutoff $m$ for $\Psi$ uses input cutoff $m$, proving both maps continuous.
+
+Write $k\{v_1,\ldots,v_r\}$ for the span of the listed vectors.
+The decompositions
+$M=k\{1,x,\ldots,x^{n-1}\}\oplus x^nM$ and
+$N=k\{1,y,\ldots,y^{n-1}\}\oplus y^nN$
+identify $(M\otimes_kN)/U_n$ with
+$(M/x^nM)\otimes_k(N/y^nN)$.
+Each quotient has basis $x^iy^j$ for $0\leq i,j<n$.
+Compatible rectangles therefore give every coefficient array uniquely.
+
+It follows that
+\begin{equation}\label{eq:cc-completed-tensor}
+ k[[x]]\widehat\otimes_k k[[y]]
+ \cong\varprojlim_n k[x,y]/(x^n,y^n)
+ \cong k[[x,y]].
+\end{equation}
+The maps take every elementary tensor to its coefficient product.
+Finite rectangular polynomials are dense on the right and come from
+the algebraic tensor product, so the completion map has dense image.
+The topology also equals the topology of powers of $(x,y)$, since
+\[
+ (x,y)^{2n-1}\subseteq(x^n,y^n)\subseteq(x,y)^n.
+\]
+These ideal containments follow from the same exponent calculation.
+
+The completed tensor has a useful mapping property with uniform input
+precision. Let $P$ be a $k$-vector space, separated and complete for
+decreasing subspaces $F^rP$, $r\geq1$.
+Let $\beta:M\times N\to P$ be bilinear.
+Suppose that for every $r$ there are $a,b\geq1$ such that
+\[
+ \beta(x^aM,N)\subset F^rP,
+ \qquad \beta(M,y^bN)\subset F^rP.
+\]
+The bounds are independent of the other input.
+Then $\beta$ induces a unique continuous linear map from the completed
+tensor in \eqref{eq:cc-completed-tensor} to $P$.
+
+To prove this, reduce the output modulo $F^rP$.
+The displayed bounds make the bilinear map factor through
+$(M/x^aM)\times(N/y^bN)$ and hence through its tensor product.
+Any two sufficient pairs of bounds agree after reduction from a
+larger rectangle. The induced maps from the completed tensor to
+$P/F^rP$ are therefore well-defined and compatible as $r$ varies.
+They give a map to $\varprojlim_rP/F^rP=P$.
+
+Each reduction uses a finite rectangle, proving continuity.
+Agreement on the dense algebraic tensor and separatedness of $P$
+prove uniqueness.
+
+Continuity can require different input and output cutoffs.
+Differentiation on $k[[x]]$ is continuous because
+$\partial_x(x^{n+1}k[[x]])\subset x^nk[[x]]$.
+It does not define an endomorphism of $k[[x]]/(x^n)$ for $n\geq1$
+in characteristic zero: the representative $x^n$ of zero has derivative
+$nx^{n-1}$, which is nonzero in that quotient.
+The correct finite map takes input modulo $x^{n+1}$ and output modulo
+$x^n$.
+
+\section{Scalar extension before and after a limit}
+\label{sec:cc-scalar-limit}
+
+Extending coefficients at every finite order supplies all coefficients
+in the larger field. An algebraic scalar extension of a whole series
+can still impose a finite-dimensional restriction on its coefficients.
+Let $z$ be an indeterminate independent of $h$.
+The rational function field $L=k(z)$ consists of fractions $a(z)/b(z)$
+of polynomials, with $b\ne0$, identified by cross multiplication.
+The polynomial ring has no zero divisors, so this equality is transitive.
+The common-denominator operations respect equality and give a field:
+a nonzero fraction $a/b$ has inverse $b/a$.
+
+The coefficient extension map is
+\[
+ \gamma:L\otimes_k k[[h]]\longrightarrow L[[h]],\qquad
+ a\otimes\sum_{n\geq0}c_nh^n\longmapsto\sum_{n\geq0}ac_nh^n.
+\]
+At each finite order the same formula gives the isomorphism
+\[
+ L\otimes_k\bigl(k[h]/h^Nk[h]\bigr)
+       \cong L[h]/h^NL[h].
+\]
+Its inverse expands the finite list of coefficients as
+$\sum_{n=0}^{N-1}a_n\otimes h^n$.
+Proposition~\ref{prop:cc-series-limit} identifies the limit of these
+finite targets with $L[[h]]$.
+
+\begin{proposition}\label{prop:cc-scalar-extension}
+The map $\gamma$ is injective. Its image consists exactly of series
+whose coefficients belong to a fixed finite-dimensional $k$-subspace
+of $L$. In particular, $\sum_{n\geq0}z^nh^n$ is not in its image.
+\end{proposition}
+
+\begin{proof}
+Write an input as $\sum_{j=1}^r a_j\otimes f_j(h)$.
+Choose a basis of the span of the $a_j$ and collect the second
+factors, so that the $a_j$ are linearly independent.
+If the image is zero, its coefficient at $h^n$ gives
+$\sum_j([h^n]f_j)a_j=0$ for every $n$.
+Independence forces all $f_j$ to vanish, proving injectivity.
+
+Every coefficient of the image belongs to the span of the $a_j$.
+Conversely, choose a basis $a_1,\ldots,a_r$ of a finite-dimensional
+subspace containing all coefficients of a given series.
+The coordinates of its successive coefficients define series
+$f_1,\ldots,f_r\in k[[h]]$.
+Their finite tensor sum maps to the given series.
+Finally, $1,z,z^2,\ldots$ are linearly independent over $k$:
+a finite relation would be a zero polynomial in the indeterminate $z$.
+Their infinite span excludes $\sum_nz^nh^n$.
+\end{proof}
+
+To preserve a short exact sequence under scalar extension, it suffices
+to express its middle space as a direct sum of its kernel and
+another subspace. For unrestricted dimensions, constructing this
+decomposition uses a choice principle.
+
+Order a collection $\mathcal P$ of subsets of a fixed set by inclusion.
+A chain in $\mathcal P$ is a subcollection in which any two members
+are comparable: one is contained in the other.
+An upper bound for a chain is a member of $\mathcal P$ containing
+every set in the chain.
+A member is maximal if no strictly larger member belongs to
+$\mathcal P$.
+We assume the following maximality form of the axiom of choice:
+every nonempty such $\mathcal P$ in which every chain has an upper
+bound has a maximal member.
+
+For a subspace $U\subseteq V$, a complement is a subspace $L$ such
+that $V=U\oplus L$, meaning that every $v\in V$ has a unique
+expression $v=u+\ell$ with $u\in U$ and $\ell\in L$.
+
+\begin{lemma}\label{lem:cc-basis-extension}
+Under the stated maximality principle, every independent subset of a
+$k$-vector space extends to a basis.
+Every subspace has a complement.
+These choices can be made simultaneously for a family indexed by a set.
+\end{lemma}
+
+\begin{proof}
+Let $I$ be an independent subset of a vector space $V$.
+Take $\mathcal P$ to be the collection of independent subsets of
+$V$ containing $I$, ordered by inclusion.
+It is nonempty because $I\in\mathcal P$.
+For a nonempty chain, its union contains $I$ and is independent.
+A finite relation with at least one term uses vectors from finitely
+many chain members.
+
+Repeated comparison selects one of these finitely many members that
+contains all the others.
+Independence in that member forces every coefficient to vanish.
+The union is therefore an upper bound in $\mathcal P$.
+The empty chain has upper bound $I$.
+The assumed principle gives a maximal member $B$.
+
+If $v\notin\operatorname{span}B$, a relation
+$av+\sum_{j=1}^r a_jb_j=0$, with distinct $b_j\in B$, forces $a=0$.
+Otherwise division by $a$ would place $v$ in the span of $B$.
+Independence of $B$ then forces every $a_j=0$.
+
+Thus $B\cup\{v\}$ would be a strictly larger independent set,
+contradicting maximality.
+Every vector consequently belongs to the span of $B$, so $B$ is a basis.
+Taking $I$ empty proves basis existence, including the zero space.
+
+For a subspace $U\subseteq V$, first choose a basis $I$ of $U$,
+then extend it to a basis $B$ of $V$.
+Let $L$ be the span of $B\setminus I$.
+Splitting each finite basis expansion gives $V=U+L$.
+
+An element of $U\cap L$ would give a finite relation among the
+disjoint subsets $I$ and $B\setminus I$ of the basis $B$.
+Independence forces it to be zero.
+If $u+\ell=u'+\ell'$, then $u-u'=\ell'-\ell\in U\cap L$, so
+both differences vanish.
+This proves the required unique decomposition.
+
+For simultaneous choices, let $(V_j,I_j)_{j\in J}$ be a family of
+spaces with specified independent subsets, where $J$ is a set.
+Use subsets of the set of labeled pairs $(j,v)$, with $j\in J$
+and $v\in V_j$.
+Require each subset to contain all $(j,v)$ with $v\in I_j$ and
+require its vectors with each fixed label $j$ to be independent in $V_j$.
+The set of all prescribed labeled pairs satisfies these conditions,
+so the collection is nonempty.
+
+Unions of chains satisfy these conditions by the same finite-relation
+argument. A maximal subset spans every $V_j$, since a missing vector
+in any one space could otherwise be adjoined with its label.
+This gives bases extending all $I_j$ simultaneously.
+
+For a family of inclusions $U_j\subseteq V_j$, first apply this
+construction to the spaces $U_j$ with empty independent subsets.
+Then extend the resulting bases simultaneously in the spaces $V_j$.
+Taking the spans of the complementary basis subsets gives all the
+required complements, by the preceding argument for a single inclusion.
+\end{proof}
+
+The extension $k\subseteq k(z)$ is flat, in the sense of preserving short exact
+sequences under tensoring, as defined in
+Section~\ref{sec:rel-coefficient-change}.
+Consider a short exact sequence of vector spaces
+$0\to U\xrightarrow{j}V\xrightarrow{q}W\to0$.
+Lemma~\ref{lem:cc-basis-extension} gives a complement $V_0$ to $j(U)$
+in $V$.
+The restriction $q|_{V_0}:V_0\to W$ is injective because
+\[
+ V_0\cap\ker q=V_0\cap j(U)=0.
+\]
+It is surjective because, for any $v=j(u)+\ell$, one has $q(v)=q(\ell)$,
+and $q$ itself is surjective.
+
+The inverse of $q|_{V_0}$ is linear and defines a section $s:W\to V$
+with $qs=1_W$.
+The map $(u,w)\mapsto j(u)+s(w)$ is an isomorphism $U\oplus W\to V$:
+the direct-sum decomposition proves both existence and uniqueness of
+these coordinates.
+Tensoring preserves this decomposition, its inclusion, and its
+projection. Hence the resulting sequence is again short exact.
+
+Thus flatness does not make scalar extension commute with the inverse
+limit above. Since $k[[h]]$ is also the product of its coefficient
+spaces $k$, the same map gives a failure to commute with an infinite
+product.
+
+A finite free tensor factor has a different result.
+For a commutative ring $S$, an $S$-module $P$ is finite free when
+it has a finite basis $e_1,\ldots,e_d$, including $d=0$.
+The basis expresses every element uniquely as $\sum_i a_i e_i$.
+
+\begin{theorem}\label{thm:cc-finite-free-limit}
+For a finite free $S$-module $P$ and any inverse system $(M_N,\rho_N)$
+of $S$-modules, the map
+\[
+ \lambda:P\otimes_S\varprojlim_N M_N
+       \longrightarrow\varprojlim_N(P\otimes_S M_N),\qquad
+ p\otimes(m_N)_N\longmapsto(p\otimes m_N)_N
+\]
+is an isomorphism. The target transitions are $1_P\otimes\rho_N$.
+No surjectivity condition on $\rho_N$ is required.
+\end{theorem}
+
+\begin{proof}
+Scalar balancing and additivity make $\lambda$ well-defined.
+Using the fixed basis of $P$, write a compatible target element at
+level $N$ uniquely as $\sum_{i=1}^d e_i\otimes m_{i,N}$.
+Compatibility of these expressions gives
+$\rho_N(m_{i,N+1})=m_{i,N}$ for every $i$.
+Hence each $(m_{i,N})_N$ belongs to $\varprojlim_NM_N$.
+
+Send the target element to $\sum_{i=1}^de_i\otimes(m_{i,N})_N$.
+This is a finite tensor sum and defines a map inverse to $\lambda$:
+both composites preserve all basis coordinates at all levels.
+For $d=0$ both sides are zero, giving the same conclusion.
+\end{proof}
+
+The same conclusion holds when $P$ is a direct summand of a finite
+free module, the definition of a finite projective module here.
+Write $P\oplus Q\cong S^d$ and apply the theorem to this direct sum.
+Tensoring and taking compatible pairs both preserve the two summands.
+The resulting isomorphism is the direct sum of the two comparison maps,
+so each comparison map is an isomorphism.
+The infinite-dimensional factor $L$ in
+Proposition~\ref{prop:cc-scalar-extension} shows why flatness alone
+cannot replace the finiteness hypothesis.
+
+\section{Localization commutes with quotients}
+\label{sec:cc-localization-limit}
+
+Inverting $h$ in a quotient where a power of $h$ is zero forces
+every element to vanish, while localizing the limit can leave a
+nonzero field. At a single quotient, localization commutes with
+forming that quotient by an explicit isomorphism.
+
+Let $S$ be a commutative ring, let $s\in S$, and let $I\subset S$
+be an ideal. Write $I[1/s]$ for the ideal of $S[1/s]$ consisting
+of fractions with numerator in $I$.
+It is an ideal because addition uses a common denominator and a
+product with any fraction still has numerator in $I$.
+
+\begin{proposition}\label{prop:cc-localization-quotient}
+There is an isomorphism of rings
+\[
+ (S/I)[1/\bar s]\longrightarrow S[1/s]/I[1/s],\qquad
+ \frac{\bar a}{\bar s^m}\longmapsto
+       \left[\frac{a}{s^m}\right],
+\]
+where bars denote classes in $S/I$.
+It includes the zero-ring case when a power of $s$ belongs to $I$.
+\end{proposition}
+
+\begin{proof}
+Replacing $a$ by $a+i$, with $i\in I$, changes the proposed image
+by a fraction in $I[1/s]$.
+If two fractions agree in $(S/I)[1/\bar s]$, the localization equality
+gives $s^\ell(s^na-s^mb)\in I$ for some $\ell$.
+Their difference in $S[1/s]$ therefore has a representative with
+numerator in $I$, so the proposed images agree.
+The map preserves ring operations by the fraction formulas.
+
+In the other direction, the map $a/s^m\mapsto\bar a/\bar s^m$
+is well-defined by the same equality rule and kills $I[1/s]$.
+It thus induces a map on the quotient. Applying either composite
+to a represented fraction returns that fraction, proving the isomorphism.
+If $s^N\in I$, then $1=s^N/s^N$ belongs to $I[1/s]$.
+Both rings in the asserted isomorphism are consequently zero.
+\end{proof}
+
+For $R=k[[h]]$, the system $R/h^NR$, $N\geq1$, uses coefficient
+reduction as its transitions.
+Proposition~\ref{prop:cc-series-limit} gives
+\begin{equation}\label{eq:cc-localization-limit}
+ \left(\varprojlim_N R/h^NR\right)[1/h]=K,
+ \qquad
+ \varprojlim_N\bigl((R/h^NR)[1/\bar h]\bigr)=0.
+\end{equation}
+Indeed, $\bar h^N=0$ at level $N$, so that localized ring is zero
+by Proposition~\ref{prop:cc-localization-quotient}.
+The projections from the unlocalized limit induce the comparison
+map $K\to0$. Its kernel is all of the nonzero field $K$.
+This is the explicit failure of localization to commute with this
+inverse limit, even though it commutes with each quotient.
+
+\section{Limits of complexes and compatible primitives}
+\label{sec:cc-cohomology}
+
+A cycle can be a boundary at every finite order while having no
+single primitive with all those reductions.
+This question concerns actual elements of complexes, in addition to
+the scalar identities in \eqref{eq:cc-localization-limit}.
+An inverse system of cochain complexes $Q_N$ has transitions
+$\rho_N:Q_{N+1}\to Q_N$ which preserve degree and satisfy
+$d_N\rho_N=\rho_Nd_{N+1}$ as an equality.
+Define its limit degree by degree:
+\[
+ Q^q=\varprojlim_NQ_N^q,\qquad
+ d((v_N)_N)=(d_Nv_N)_N.
+\]
+
+Commutation with the transitions makes this differential well-defined,
+and $d^2=0$ holds at every coordinate.
+The underlying graded module is $\bigoplus_{q\in\mathbb Z}Q^q$.
+All cohomology here is algebraic cohomology, with the ordinary image
+of the differential as its boundary submodule.
+
+The projections of complexes induce the comparison
+\[
+ \eta^q:H^q\left(\varprojlim_NQ_N\right)
+       \longrightarrow\varprojlim_NH^q(Q_N),\qquad
+ [(v_N)_N]\longmapsto([v_N])_N.
+\]
+A compatible cycle has compatible classes. A compatible boundary
+maps to zero in every coordinate, proving that $\eta^q$ is well-defined.
+
+Finite free terms with specified compatible bases do reconstruct a
+complex before this cohomology question is considered.
+Fix integers $a\leq b$. Suppose $R=k[[h]]$ and
+$P_N^q=(R/h^NR)^{d_q}$ for $a\leq q\leq b$,
+with fixed finite ranks $d_q$, and zero terms outside this interval.
+Assume each transition is coordinate reduction in the chosen bases,
+and the matrices $D_N^q$ of the differentials reduce compatibly.
+Each matrix entry then specifies a unique scalar series in $R$.
+Write $D^q$ for the resulting matrix.
+
+Coefficient reduction identifies $\varprojlim_NP_N^q$ with $R^{d_q}$.
+Every entry of $D^{q+1}D^q$ reduces to zero at every level, so it
+is zero by $\bigcap_Nh^NR=0$.
+Thus the limit is the finite free complex with these terms and
+differentials. Its reduction modulo $h^N$ recovers exactly $P_N$.
+A cohomology comparison remains a separate question.
+
+\begin{example}\label{ex:cc-cohomology-failure}
+For $N\geq1$, take
+\[
+ Q_N=[k[x]\xrightarrow{\ \pi_N\ }k[x]/(x^N)]
+\]
+in degrees zero and one, with $\pi_N$ the quotient map.
+The transition is the identity on degree zero and reduction on
+degree one. They commute with $\pi_N$ because both composites take
+a polynomial to its class modulo $x^N$.
+Both transition maps are surjective.
+
+Each differential is surjective, so
+$H^1(Q_N)=0$, while $H^0(Q_N)=x^Nk[x]$.
+The induced transition on $H^0$ is the inclusion
+$x^{N+1}k[x]\hookrightarrow x^Nk[x]$.
+The degree-zero limit is $k[x]$, since compatibility in a constant
+system with identity transitions requires a single fixed polynomial.
+The degree-one limit is $k[[x]]$, by its compatible coefficients.
+The limit differential is the inclusion sending a polynomial to the
+same formal series. Consequently
+\[
+ \varprojlim_NQ_N=[k[x]\hookrightarrow k[[x]]],\qquad
+ H^1(\varprojlim_NQ_N)=k[[x]]/k[x]\ne0,
+ \qquad\varprojlim_NH^1(Q_N)=0.
+\]
+
+The nonzero class of $z(x)=\sum_{j\geq0}x^j$ lies in the kernel of
+$\eta^1$. It is nonzero because no polynomial has coefficient one
+at every power of $x$.
+
+At level $N$ a primitive is $p_N=\sum_{j=0}^{N-1}x^j$.
+These choices satisfy $p_{N+1}-p_N=x^N$ and are not compatible in
+degree zero, whose transition is the identity.
+Any compatible family of primitives would be a single polynomial
+$p$ with $p\equiv z(x)\pmod{x^N}$ for every $N$.
+Choose $d\geq0$ such that $p$ has no terms of degree greater than $d$.
+At level $N=d+2$, the coefficients of $x^{d+1}$ in $p$ and $z(x)$ differ.
+Thus no alternative choice supplies compatible primitives.
+
+This example proves that degreewise surjectivity of the transitions
+does not make $\eta^1$ injective.
+The complexes $Q_N$ are not acyclic, since their degree-zero
+cohomology is nonzero. The example concerns ordinary cohomology:
+the image $k[x]$ is dense in $k[[x]]$ for the $x$-adic topology,
+so quotienting by the closure of that image would give a different result.
+\end{example}
+
+A compatible homotopy supplies primitives at every order simultaneously.
+Let $S$ be a commutative ring, let $Q$ be a cochain complex of
+$S$-modules, and let $H$ be a graded $S$-module with zero differential.
+A contraction of $Q$ onto $H$ consists of degree-zero chain maps
+$i:H\to Q$, $p:Q\to H$, and $S$-linear maps
+$s^q:Q^q\to Q^{q-1}$ such that
+\begin{equation}\label{eq:cc-contraction}
+ pi=1_H,\qquad di=0,\qquad pd=0,\qquad
+ ds+sd=1_Q-ip.
+\end{equation}
+For a cycle $v$, this gives $v-ipv=d(sv)$.
+If $i(a)=db$, applying $p$ gives $a=0$.
+Therefore the map $a\mapsto[i(a)]$ identifies $H^q$ with $H^q(Q)$.
+
+\begin{proposition}\label{prop:cc-compatible-contractions}
+Suppose an inverse system $Q_N$ has contractions $(i_N,p_N,s_N)$
+onto zero-differential graded modules $H_N$.
+Let their transitions be $\rho_N:Q_{N+1}\to Q_N$ and
+$\sigma_N:H_{N+1}\to H_N$.
+If
+\[
+ \rho_Ni_{N+1}=i_N\sigma_N,\qquad
+ \sigma_Np_{N+1}=p_N\rho_N,\qquad
+ \rho_Ns_{N+1}=s_N\rho_N,
+\]
+then the contractions induce a contraction of $\varprojlim_NQ_N$
+onto $\varprojlim_NH_N$, with every limit taken degreewise.
+In particular, every cohomology comparison $\eta^q$ is an isomorphism.
+\end{proposition}
+
+\begin{proof}
+The three compatibility equations ensure that the coordinate maps
+$(i_N)$, $(p_N)$, and $(s_N)$ send compatible families to compatible
+families of the stated degrees.
+Equation~\eqref{eq:cc-contraction} holds at each coordinate and thus
+on these limits. Its cycle and boundary argument identifies the
+limit cohomology with $(\varprojlim_NH_N)^q$.
+At every finite level it also identifies $H_N^q$ with $H^q(Q_N)$.
+These identifications commute with transitions by the equation for
+$i_N$. Evaluation on a compatible element shows that $\eta^q$ is
+exactly the resulting isomorphism between the two descriptions.
+\end{proof}
+
+For a cochain complex $Q$, its parameter completion always means
+\[
+ (Q[[h]])^q=\prod_{n\geq0}h^nQ^q,\qquad
+ d\left(\sum_{n\geq0}h^nv_n\right)
+       =\sum_{n\geq0}h^ndv_n.
+\]
+The underlying graded module is the direct sum of these spaces over
+$q$. There is no additional product over cochain degrees.
+Since $|h|=0$, each coefficient differential has degree one.
+
+\begin{theorem}\label{thm:cc-contraction-completion}
+A contraction $(i,p,s)$ of $Q$ onto $H$ extends coefficientwise to
+a contraction of $Q[[h]]$ onto $H[[h]]$.
+All extended maps are continuous for the degreewise $h$-adic topologies.
+Consequently
+\[
+ H^q(Q[[h]])\cong H^q[[h]]
+\]
+via $[v]\mapsto p(v)$, where the $H^q$ on the right is the degree-$q$
+component of the specified zero-differential module $H$.
+\end{theorem}
+
+\begin{proof}
+Apply $i,p,s$ to each coefficient, preserving their degrees.
+The maps preserve the $h^N$ submodules, so they are continuous.
+Every identity in \eqref{eq:cc-contraction} holds at every coefficient
+and therefore on the series modules.
+For a cycle $v$, the same identity gives $v-ipv=d(sv)$.
+For $i(a)=db$, applying $p$ gives $a=0$.
+These prove the asserted mutually inverse cohomology maps directly.
+
+The truncations of the maps also satisfy the compatibility conditions
+of Proposition~\ref{prop:cc-compatible-contractions}.
+\end{proof}
+
+Over a field, such a contraction exists for every cochain complex.
+To construct it, write $Z^q=\ker(d:Q^q\to Q^{q+1})$ and
+$B^q=\operatorname{im}(d:Q^{q-1}\to Q^q)$.
+Lemma~\ref{lem:cc-basis-extension} supplies simultaneous vector-space
+complements in every degree:
+\[
+ Z^q=B^q\oplus H_0^q,\qquad Q^q=Z^q\oplus L^q.
+\]
+The map $d:L^q\to B^{q+1}$ is injective, since $L^q\cap Z^q=0$.
+It is surjective because decomposing a primitive into its $Z^q$ and
+$L^q$ parts does not change its differential.
+
+Let $H=H^*(Q)$ with zero differential.
+The quotient map identifies $H_0^q$ with $H^q(Q)$, so its inverse
+defines $i$. Define $p$ by that quotient on $H_0^q$ and by zero on
+$B^q\oplus L^q$.
+Define $s$ on $B^q$ by the inverse of $d:L^{q-1}\to B^q$, and
+set $s=0$ on $H_0^q\oplus L^q$.
+On these three summands, $ds+sd$ equals the identity, zero, and
+the identity, respectively. Thus it equals $1-ip$, and the remaining
+identities in \eqref{eq:cc-contraction} follow from the definitions.
+
+It follows that, for every complex of $k$-vector spaces with this
+degreewise parameter completion, the coefficient map is an isomorphism
+\[
+ H^q(Q[[h]])\longrightarrow H^q(Q)[[h]],\qquad
+ \left[\sum_{n\geq0}h^nv_n\right]\longmapsto
+       \sum_{n\geq0}h^n[v_n].
+\]
+The map itself does not depend on the chosen complements.
+The contraction proves its surjectivity by representatives and its
+injectivity by coefficientwise primitives.
+The varying quotients in Example~\ref{ex:cc-cohomology-failure} do not
+have this common coefficient construction, as their incompatible
+primitives demonstrate.

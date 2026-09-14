@@ -1,0 +1,128 @@
+{
+  "matrix_unit_identities": {
+    "dimension": 4,
+    "product_checks": 256,
+    "adjoint_checks": 16
+  },
+  "symbolic_trace_norm": {
+    "trace_square": "a0**2 + a1**2 + a2**2 + a3**2 + b0**2 + b1**2 + b2**2 + b3**2",
+    "operator_norm_squared": "sqrt(5) + 3",
+    "left_action_norm_squared": "sqrt(5) + 3"
+  },
+  "finite_corner_obstruction": [
+    {
+      "rank": 1,
+      "unit_complement_mass": "c - 1",
+      "mass_bound_ratio": 1
+    },
+    {
+      "rank": 2,
+      "unit_complement_mass": "c - 2",
+      "mass_bound_ratio": 2
+    },
+    {
+      "rank": 3,
+      "unit_complement_mass": "c - 3",
+      "mass_bound_ratio": 3
+    },
+    {
+      "rank": 4,
+      "unit_complement_mass": "c - 4",
+      "mass_bound_ratio": 4
+    },
+    {
+      "rank": 5,
+      "unit_complement_mass": "c - 5",
+      "mass_bound_ratio": 5
+    },
+    {
+      "rank": 6,
+      "unit_complement_mass": "c - 6",
+      "mass_bound_ratio": 6
+    },
+    {
+      "rank": 7,
+      "unit_complement_mass": "c - 7",
+      "mass_bound_ratio": 7
+    },
+    {
+      "rank": 8,
+      "unit_complement_mass": "c - 8",
+      "mass_bound_ratio": 8
+    }
+  ],
+  "general_scope": "The manuscript uses every positive integer n, so c >= n has no finite solution. The finite computations do not prove this quantifier by themselves.",
+  "gaussian_moments": [
+    {
+      "degree": 0,
+      "moment": "1"
+    },
+    {
+      "degree": 1,
+      "moment": "0"
+    },
+    {
+      "degree": 2,
+      "moment": "hp"
+    },
+    {
+      "degree": 3,
+      "moment": "0"
+    },
+    {
+      "degree": 4,
+      "moment": "3*hp**2"
+    },
+    {
+      "degree": 5,
+      "moment": "0"
+    },
+    {
+      "degree": 6,
+      "moment": "15*hp**3"
+    },
+    {
+      "degree": 7,
+      "moment": "0"
+    },
+    {
+      "degree": 8,
+      "moment": "105*hp**4"
+    },
+    {
+      "degree": 9,
+      "moment": "0"
+    },
+    {
+      "degree": 10,
+      "moment": "945*hp**5"
+    }
+  ],
+  "formal_module_linearity_polynomial_residual": "0",
+  "formal_inverse_residual_through_order9": "0",
+  "formal_specialization_scope": "For nonzero v, 1-hbar/v is a unit in the full formal ring. A unital C-algebra homomorphism cannot send this unit to zero. Evaluation at zero exists.",
+  "gaussian_map_obstructions": {
+    "involution": "J(u)^* = -J(u)",
+    "product": "g_a star g_a = g_2a != g_a"
+  },
+  "hamiltonian_representation": {
+    "monomials_each_input": 14,
+    "coefficient_checks": 392,
+    "row_domain": "Output through degree N uses only input monomials through N+1 in each nonconstant input."
+  },
+  "inherited_decisive_constants": {
+    "boundary_trig_residual": "0",
+    "minimal_zero_exponent": 1,
+    "gaussian_gram_determinant": "1/20",
+    "weil_mass_ratio_coefficient": "sqrt(2)/(4*sqrt(pi))",
+    "half_line_deficiency_generators": [
+      "exp(-x) square integrable",
+      "exp(x) not square integrable"
+    ]
+  },
+  "versions": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "sympy": "1.14.0"
+  },
+  "error_bounds": "Exact symbolic arithmetic. No approximate numerical conclusions."
+}

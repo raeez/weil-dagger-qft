@@ -1,0 +1,52 @@
+[
+  {
+    "attempt": 1,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-g",
+      "-pdf",
+      "-recorder",
+      "-pdflatex=pdflatex -no-shell-escape %O %S",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-outdir=/Users/raeez/mathematics/worktrees/frontier-resume-weil-020-20260914/reports/research/CONSTRUCTION-2026-09-14/weil-core020/build-standalone",
+      "weil-standalone.tex"
+    ],
+    "cwd": "/Users/raeez/mathematics/worktrees/frontier-resume-weil-020-20260914/research-candidates/weil-core020",
+    "environment": {
+      "SOURCE_DATE_EPOCH": "1789344000",
+      "FORCE_SOURCE_DATE": "1",
+      "TZ": "UTC"
+    },
+    "returncode": 0,
+    "log": "build-standalone-pass1.log",
+    "log_sha256": "36421cac071f4f9460359b1dbc645f9735b9fc1700c0c7bb4898934fd35528b4",
+    "pdf_sha256": "d810a0a97435a76936c5e086e17fa44a148ba0fd1696f570a51c3b120c650ef9"
+  },
+  {
+    "attempt": 2,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-g",
+      "-pdf",
+      "-recorder",
+      "-pdflatex=pdflatex -no-shell-escape %O %S",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-outdir=/Users/raeez/mathematics/worktrees/frontier-resume-weil-020-20260914/reports/research/CONSTRUCTION-2026-09-14/weil-core020/build-standalone",
+      "weil-standalone.tex"
+    ],
+    "cwd": "/Users/raeez/mathematics/worktrees/frontier-resume-weil-020-20260914/research-candidates/weil-core020",
+    "environment": {
+      "SOURCE_DATE_EPOCH": "1789344000",
+      "FORCE_SOURCE_DATE": "1",
+      "TZ": "UTC"
+    },
+    "returncode": 0,
+    "log": "build-standalone-pass2.log",
+    "log_sha256": "5c3571d400777dadf8080300b1d08825654fc3d3acb43f8e41b8f534b257bac2",
+    "pdf_sha256": "d810a0a97435a76936c5e086e17fa44a148ba0fd1696f570a51c3b120c650ef9"
+  }
+]

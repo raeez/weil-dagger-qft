@@ -1,0 +1,577 @@
+\chapter{Operator kernels and traces}
+\label{chap:operator-kernels}
+
+The identity on an infinite-dimensional field space cannot be a finite sum
+of rank-one operators. A completed kernel can represent it, but this does
+not ensure that its trace exists. For formal Hamiltonian fields, these
+questions have different answers. Evaluation and composition extend to
+the completed kernels. The finite-rank trace does not extend continuously,
+and no nonzero cyclic trace exists on the full operator algebra.
+
+The adjoint action gives a concrete infinite-dimensional matter candidate.
+Its operator kernels must retain all formal Hamiltonians, including
+translations. The first task is therefore to complete the kernels without
+replacing the symmetry algebra by finite Lie quotients.
+
+\section{A kernel for each finite output}
+
+Fix a discrete field $k$ of characteristic zero. Let
+\[
+ H=k[[x,y]]/k=\prod_{d\geq1}H_d,
+ \qquad U_N=\prod_{d>N}H_d,\qquad H_N=H/U_N,
+\]
+where $H_d$ is the space of homogeneous polynomials of degree $d$.
+The topology on $H$ has the $U_N$ as neighborhoods of zero. These
+quotients are finite-dimensional vector spaces. Their use here does not
+require quotient Lie brackets.
+
+Index the nonconstant monomials by a countable set $\mathcal I$,
+writing $e_I=x^ay^b$ when $I=(a,b)$ and $a+b\geq1$.
+Their coefficient functionals form the continuous dual
+\[
+ D=\operatorname{Hom}_{\mathrm{cont}}(H,k)
+   =\bigoplus_{I\in\mathcal I}k\epsilon^I.
+\]
+Give $D$ the discrete topology. A functional is continuous precisely
+when it uses finitely many coefficients: its kernel must contain some
+$U_N$, and this condition is also sufficient.
+
+An elementary tensor $v\otimes\lambda$ acts by
+$h\mapsto\lambda(h)v$. A finite sum of these tensors has finite-dimensional
+image. To represent more operators, allow the finite set of input
+functionals to depend on the output coefficients being retained.
+
+Let $V$ be a complete Hausdorff vector space with a decreasing countable
+basis of open linear subspaces $V_N^0$. Assume that
+$V_N=V/V_N^0$ is finite-dimensional. Completeness here means that
+compatible elements of all the quotients determine a unique element
+of $V$. To form coefficients on $H$, introduce a commuting symbol $u_I$
+for each monomial $e_I$. Both $H$ and the coefficient algebra
+\[
+ A=\prod_\alpha ku^\alpha
+\]
+have this form. In $A$, the index $\alpha$ ranges over finitely supported
+families of nonnegative integers on $\mathcal I$. One can retain all
+monomials of polynomial degree at most $N$ whose labels have degree
+at most $N$. These finite sets exhaust the coefficient indices.
+
+Give $V\otimes_kD$ the topology with neighborhoods $V_N^0\otimes_kD$.
+Define
+\begin{equation}
+ K(V,D)=\varprojlim_N(V_N\otimes_kD)
+       =\varprojlim_N\varinjlim_M(V_N\otimes_kH_M^\vee).
+ \label{eq:op-completion}
+\end{equation}
+Each $V_N\otimes D$ is discrete. It need not be finite-dimensional.
+
+\begin{proposition}
+The space $K(V,D)$ is the complete Hausdorff completion of the stated
+topology on $V\otimes D$. The algebraic tensor product embeds densely.
+\end{proposition}
+\begin{proof}
+Write a tensor as $t=\sum_{j=1}^r v_j\otimes\lambda_j$ with the
+$\lambda_j$ linearly independent. If every quotient image of $t$
+vanishes, linear independence forces $v_j\in V_N^0$ for every $N$.
+Separation gives $v_j=0$. This proves injectivity.
+
+The quotient map onto $V_N\otimes D$ is surjective and has kernel
+$V_N^0\otimes D$. Every neighborhood in the inverse limit can be
+specified at one sufficiently large $N$. Surjectivity therefore proves
+density and identifies the induced topology. Finally, compatible
+sequences form a closed subspace of the product of discrete complete
+spaces $V_N\otimes D$. Their inverse limit is complete and Hausdorff.
+\end{proof}
+
+\section{Continuous operators and the order of limits}
+
+Write $\mathcal L(H,V)$ for continuous $k$-linear maps $H\to V$.
+For the quotient map $q_N:V\to V_N$, give this space neighborhoods
+\[
+ \mathcal N_N=\{T:q_NT=0\}
+             =\{T:T(H)\subset V_N^0\}.
+\]
+Thus two nearby operators agree on their entire output in a prescribed
+finite quotient, for every input.
+
+\begin{proposition}
+Evaluation of tensors induces a topological isomorphism
+\begin{equation}
+ K(V,D)\xrightarrow{\ \sim\ }\mathcal L(H,V).
+ \label{eq:op-hom}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Choose a basis $v_1,\ldots,v_r$ of $V_N$. Every continuous map to
+this discrete finite-dimensional space has the form
+\[
+ T_N(h)=\sum_{j=1}^r\lambda_j(h)v_j,
+ \qquad \lambda_j\in D.
+\]
+Conversely, this formula defines a continuous map. Uniqueness of its
+coordinate functionals gives
+$V_N\otimes D=\operatorname{Hom}_{\mathrm{cont}}(H,V_N)$.
+Compatible maps $T_N$ determine $T:H\to V$ by completeness of $V$.
+The map $T$ is continuous because every $q_NT$ is continuous.
+Its quotient kernels are exactly the prescribed operator neighborhoods.
+\end{proof}
+
+Enumerate the monomials in increasing total degree as $e_0,e_1,\ldots$.
+Then $H\cong k^{\mathbb N}$, and an endomorphism has a matrix
+\begin{equation}
+ (Th)_i=\sum_jT_{ij}h_j,
+ \qquad \#\{j:T_{ij}\ne0\}<\infty\quad\text{for each }i.
+ \label{eq:op-rows}
+\end{equation}
+Such a matrix is called row-finite. Each output coefficient is a
+continuous functional, so this condition is necessary and sufficient.
+The operator topology makes each entire row discrete. It permits
+different finite input supports in different rows.
+
+As an identity of vector spaces,
+\[
+ V\otimes D
+   =\varinjlim_M\varprojlim_N(V_N\otimes H_M^\vee).
+\]
+These maps factor through one common input quotient $H_M$.
+Reversing the limits gives~\eqref{eq:op-completion}, where the required
+$M$ can increase with $N$. The displayed equality concerns vector spaces.
+One can instead give this union the final linear topology: a linear
+subspace is open when its intersection with each finite-$M$ stage is open.
+The trace below distinguishes that topology from the tensor topology.
+
+The identity operator belongs to the latter completion:
+\begin{equation}
+ \mathbf1_H=\sum_{i\geq0}e_i\otimes\epsilon^i.
+ \label{eq:op-identity}
+\end{equation}
+Its image in $H_N\otimes D$ is a finite sum. These images are
+compatible, which is exactly what the completed expression means.
+
+\section{Which bilinear contractions extend}
+
+The topology used for kernels is stronger than the condition that a
+bilinear map be jointly continuous. This distinction decides whether
+closing an operator kernel to a scalar is possible.
+
+\begin{proposition}
+Let $W$ be a complete Hausdorff linearly topologized vector space,
+meaning that its topology has a basis of open linear subspaces.
+Continuous linear maps $K(V,D)\to W$ correspond to bilinear maps
+$b:V\times D\to W$ satisfying
+\begin{equation}
+ \text{for every open linear }W^0\subset W,\quad
+ \text{some }N\text{ has }b(V_N^0,D)\subset W^0.
+ \label{eq:op-uniform}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The linearization of $b$ on $V\otimes D$ is continuous exactly when
+\eqref{eq:op-uniform} holds. Modulo $W^0$, it then factors through
+$V_N\otimes D$. Apply this quotient map to the $N$-th component of
+an element of $K(V,D)$. Increasing $N$ gives the same answer.
+The answers for different $W^0$ are compatible. Completeness and
+separation of $W$ give a unique element of $W$. This construction
+defines a continuous extension. Density gives uniqueness. Conversely,
+the inverse image of $W^0$ under a continuous linear extension contains
+one of the defining kernel neighborhoods, giving~\eqref{eq:op-uniform}.
+\end{proof}
+
+Condition~\eqref{eq:op-uniform} is uniform over the entire second
+argument. It implies joint continuity: near $(v,\lambda)$, keep
+$\lambda$ fixed using discreteness of $D$, and vary $v$ in $V_N^0$.
+Joint continuity alone does not imply this condition. For example,
+\[
+ H\times D\longrightarrow k,\qquad(h,\lambda)\longmapsto\lambda(h)
+\]
+is jointly continuous. For each fixed $\lambda$, its kernel in $H$
+is open. Uniformity would instead require an open $U\subset H$
+annihilated by every element of $D$. Since the coefficient functionals
+separate points, $U$ would be zero. The zero subspace is not open in $H$.
+
+\section{Evaluation, composition, and Hamiltonian symmetry}
+
+Evaluation $\mathcal L(H,V)\times H\to V$ is jointly continuous.
+Fix $(T_0,h_0)$ and an open output subspace $V^0$. Require
+\[
+ \Delta T(H)\subset V^0,\qquad
+ \Delta h\in T_0^{-1}(V^0).
+\]
+Then
+\[
+ (T_0+\Delta T)(h_0+\Delta h)-T_0h_0
+   =T_0\Delta h+\Delta T(h_0+\Delta h)\in V^0.
+\]
+
+Composition is jointly continuous as well. Give each continuous Hom
+space the topology of agreement in output quotients. For
+$S_0:V\to W$, choose an open $V^0$ with $S_0(V^0)\subset W^0$.
+The conditions
+\[
+ \Delta S(V)\subset W^0,\qquad\Delta T(H)\subset V^0
+\]
+make every term of
+\[
+ (S_0+\Delta S)(T_0+\Delta T)-S_0T_0
+ =S_0\Delta T+\Delta S\,T_0+\Delta S\,\Delta T
+\]
+map $H$ into $W^0$. In particular,
+$K(H,D)=\operatorname{End}_{\mathrm{cont}}(H)$ is a complete
+topological associative algebra. On elementary kernels,
+\[
+ (v\otimes\lambda)(w\otimes\mu)
+       =\lambda(w)v\otimes\mu.
+\]
+
+Keeping whole rows fixed is necessary for this continuity statement.
+In the weaker topology of entrywise matrix convergence, both
+\[
+ A_n=e_0\otimes\epsilon^n,\qquad
+ B_n=e_n\otimes\epsilon^0
+\]
+tend to zero, but $A_nB_n=e_0\otimes\epsilon^0$.
+In the operator topology used here, $A_n$ does not tend to zero.
+
+The Hamiltonian bracket on $H$ is $[f,g]=f_xg_y-f_yg_x$ modulo constants.
+Let $a_f=\operatorname{ad}_f$. The map
+$f\mapsto a_f$ is continuous into $\operatorname{End}_{\mathrm{cont}}(H)$:
+an entire bracket output through degree $N$ uses $f$ only through
+degree $N+1$, uniformly over the other input.
+
+For $V=A$, let $\rho_A(f)$ be the coefficient action
+$\rho_A(f)O_g=O_{[f,g]}$, where $O_g=\sum_Ig_Iu_I$.
+It is also continuous as a map into the operator space. For a fixed
+output monomial $u^\alpha$, the action replaces a variable $u_J$
+by $u_K$, with $K$ in the finite support of $\alpha$. Its coefficient
+requires $|I|+|J|=|K|+2$. Only finitely many $I,J,K$ and predecessor
+monomials $u^{\alpha-\mathbf e_K+\mathbf e_J}$ can occur.
+Thus each entire output row depends on finitely many coefficients of $f$.
+
+For $V=H$, put $\rho_V(f)=a_f$. The diagonal tensor action is
+\[
+ f\cdot(v\otimes\lambda)
+  =\rho_V(f)v\otimes\lambda+v\otimes(f\cdot\lambda),
+ \qquad(f\cdot\lambda)(g)=-\lambda([f,g]).
+\]
+Under~\eqref{eq:op-hom}, this action becomes
+\begin{equation}
+ f\cdot T=\rho_V(f)T-Ta_f.
+ \label{eq:op-diagonal}
+\end{equation}
+The formula follows by evaluating an elementary tensor. It extends
+jointly continuously by the proved composition and representation
+properties. Expanding two actions and using Jacobi gives
+$[f,g]\cdot T=f\cdot(g\cdot T)-g\cdot(f\cdot T)$.
+No finite output quotient needs to carry a Hamiltonian action.
+
+\section{Derivations and the Euler kernel}
+
+For the coefficient algebra $A$, the kernel space is precisely
+\[
+ K(A,D)=\prod_\alpha u^\alpha D=B^1.
+\]
+Each $D$-valued coefficient is discrete, as in the continuous cochain
+construction. Let $T:H\to A$ have coefficients
+$T(e_i)=\sum_\beta t_{\beta i}u^\beta$.
+For each $\beta$, only finitely many $t_{\beta i}$ are nonzero.
+Define
+\begin{equation}
+ \delta_TF=\sum_iT(e_i)\partial_{u_i}F.
+ \label{eq:op-derivation}
+\end{equation}
+For an output coefficient $\alpha$, this means the finite sum
+\[
+ (\delta_TF)_\alpha
+  =\sum_{\beta+\gamma=\alpha}\sum_i
+       t_{\beta i}(\gamma_i+1)F_{\gamma+\mathbf e_i}.
+\]
+It proves that $\delta_T$ is defined and continuous. The product rule
+holds on coordinate polynomials, and continuity extends it to $A$.
+Conversely, a continuous derivation restricts to a continuous map $H\to A$.
+Formula~\eqref{eq:op-derivation} agrees with it on polynomials, hence
+everywhere by density. Thus
+\[
+ \mathcal L(H,A)\cong\operatorname{Der}_{\mathrm{cont}}(A).
+\]
+This is a topological isomorphism when derivations inherit the operator
+topology. Fixing the finitely many rows $T_\beta$ with $\beta\leq\alpha$ componentwise
+fixes the entire $\alpha$-th row of $\delta_T$. Restriction is continuous
+in the opposite direction.
+
+An endomorphism of $H$ gives a derivation with coefficients linear in $u$.
+On this subspace,
+\[
+ [\delta_S,\delta_T]=\delta_{ST-TS},
+\]
+because both sides agree on the linear functions $O_f$.
+The identity kernel~\eqref{eq:op-identity} becomes
+\[
+ \mathcal E=\sum_i u_ic^i,\qquad
+ \mathcal E(u^\alpha)=w(\alpha)u^\alpha,
+ \qquad w(\alpha)=\sum_i\alpha_i.
+\]
+It is the Euler derivation. It acts as the identity on $H\subset A$,
+while $\mathcal E(1)=0$.
+
+Its operator degree on $H$ is zero. As a cochain it has coefficient
+weight one and degree one. Before the cotangent regrading, $u_i$ has
+degree two and $c^i$ has degree one, so $\mathcal E$ has degree three.
+The contraction bracket has degree $-3$ and weight $-1$ before
+regrading, and degree $-1$ afterwards.
+
+Equation~\eqref{eq:op-diagonal} fixes the identity and hence fixes
+$\mathcal E$. This invariance is different from cochain closedness.
+The Chevalley--Eilenberg differential gives
+\[
+ (d\mathcal E)(f,g)
+   =f\cdot O_g-g\cdot O_f-O_{[f,g]}=O_{[f,g]}.
+\]
+With the bivector $\Pi$ constructed in
+Chapter~\ref{chap:hamiltonian-symmetry-cochains}, this is $d\mathcal E=\Pi$.
+An arbitrary map $H\to A$ has no associative composition with another
+such map. The derivation realization supplies a commutator instead.
+Even the composition $\mathcal E^2$ is not a derivation: on weight $r$
+it acts by $r^2$.
+
+\section{Finite-rank trace and a disappearing boundary}
+
+Let $\mathcal F(H)$ consist of continuous endomorphisms with
+finite-dimensional image. Then
+\[
+ \mathcal F(H)=H\otimes D.
+\]
+To prove the nontrivial inclusion, let $W=T(H)$ be finite-dimensional.
+The descending spaces $W\cap U_N$ eventually vanish: their dimensions
+stabilize, and their intersection is zero. Some projection $W\to H_N$
+is therefore injective. It follows that
+$\ker T=\ker(q_NT)$ is open. In a basis of $W$, the coordinate
+functionals of $T$ belong to $D$, giving its finite tensor expression.
+
+The trace is
+\begin{equation}
+ \operatorname{tr}\!\left(\sum_{j=1}^r v_j\otimes\lambda_j\right)
+       =\sum_{j=1}^r\lambda_j(v_j).
+ \label{eq:op-finite-trace}
+\end{equation}
+It is independent of the expression. Restrict the operator to any
+finite-dimensional subspace containing its image. The usual matrix trace
+gives~\eqref{eq:op-finite-trace}; enlarging the subspace adds a zero
+diagonal block. Finite-rank operators form a two-sided ideal, and the
+rank-one formula proves
+\[
+ \operatorname{tr}(TF)=\operatorname{tr}(FT)
+ \qquad(F\in\mathcal F(H),\ T\in\operatorname{End}_{\mathrm{cont}}(H)).
+\]
+
+The trace is not continuous in the inherited topology. Indeed,
+\[
+ P_n=e_n\otimes\epsilon^n\longrightarrow0,
+ \qquad\operatorname{tr}(P_n)=1.
+\]
+Every fixed output row eventually vanishes, but the scalar does not
+converge to zero in the discrete field. Therefore no continuous linear
+extension of this trace to the completion exists. The same obstruction
+is expressed by the failed uniformity condition for the evaluation
+pairing in~\eqref{eq:op-uniform}.
+
+On each stage $H\otimes H_M^\vee$, the trace uses only finitely
+many coordinates of finitely many vectors in $H$, so it is continuous.
+It is therefore continuous for the final linear topology of the union.
+Its failure above proves that this topology differs from the tensor
+topology whose completion represents all continuous operators.
+
+Cyclicity fails for a stronger algebraic reason. Define the left and
+right shifts by
+\[
+ L(e_0)=0,\quad L(e_n)=e_{n-1}\ (n\geq1),\qquad R(e_n)=e_{n+1}.
+\]
+Their row-finite matrices give continuous operators, and
+\begin{equation}
+ LR=1,\qquad RL=1-P_0,\qquad[L,R]=P_0.
+ \label{eq:op-shift}
+\end{equation}
+A cyclic linear functional has $\tau(ST)=\tau(TS)$ and hence
+$\tau(P_0)=0$. Extension of the finite-rank trace would give one.
+
+On the finite space spanned by $e_0,\ldots,e_{m-1}$, the truncated
+shifts instead satisfy
+\[
+ [L_m,R_m]=P_0-P_{m-1}.
+\]
+Their trace is zero. Passing to the infinite operator topology removes
+$P_{m-1}$, whose trace remains one. The boundary term explains why
+the finite-dimensional trace identity cannot pass to this completion.
+
+\begin{proposition}
+Every continuous endomorphism of $H$ is a commutator with the same
+left shift $L$. Consequently every cyclic scalar linear functional
+on $\operatorname{End}_{\mathrm{cont}}(H)$ is zero.
+\end{proposition}
+\begin{proof}
+For a row-finite matrix $T$, define
+\[
+ X_{0j}=0,\qquad X_{i+1,j}=T_{ij}+X_{i,j-1},\qquad X_{i,-1}=0.
+\]
+Every row is finite by induction: it is a row of $T$ plus a shifted
+preceding row of $X$. Thus $X$ is continuous. Matrix multiplication gives
+$(LX)_{ij}=X_{i+1,j}$ and $(XL)_{ij}=X_{i,j-1}$.
+The recurrence proves $[L,X]=T$, and cyclicity kills this commutator.
+\end{proof}
+
+A Hamiltonian translation can supply one side of the obstruction.
+On the closed pure-$y$ subspace, use the basis
+$y^{n+1}/(n+1)!$, $n\geq0$. Let $S$ shift this basis upward and
+vanish on monomials containing $x$. The operator $a_x$ shifts the
+displayed basis downward and preserves its complement. Hence
+\[
+ [a_x,S]=P_y,
+\]
+where $P_y$ projects onto $ky$. Any algebra containing these operators
+has the same obstruction to a cyclic extension of finite-rank trace.
+
+\section{A restricted algebra with an algebraic trace}
+
+The trace obstruction depends on the operator algebra. A proper algebra
+can retain every Hamiltonian vector field and still admit an algebraic
+trace. Its topology remains a separate issue.
+
+Put $R_0=k[[x,y]]$. Let $\mathcal D_0$ consist of finite-order
+formal differential operators
+\[
+ P=\sum_{|\alpha|\leq m}a_\alpha(x,y)\partial^\alpha,
+ \qquad P(1)\in k.
+\]
+Here $\alpha=(a,b)$ and $\partial^\alpha=\partial_x^a\partial_y^b$.
+The last condition says that the zeroth-order coefficient is constant.
+Such operators preserve constants and descend to $H$. They are continuous
+in the formal topology. They form a unital algebra, since
+$P(1)=c$, $Q(1)=d$ imply $PQ(1)=cd$.
+Every Hamiltonian vector field $-f_y\partial_x+f_x\partial_y$ belongs
+to this algebra.
+
+\begin{lemma}
+If a finite-order formal differential operator $Q$ annihilates
+$\mathfrak m^N$, then $Q=0$.
+\end{lemma}
+\begin{proof}
+For order zero, its coefficient $b$ satisfies $bx^N=0$ and vanishes
+because $R_0$ is an integral domain. For positive order, $[Q,x]$ and
+$[Q,y]$ annihilate the same ideal and have smaller order. Induction applies.
+In normal form,
+\[
+ [Q,x]=\sum_\alpha\alpha_xb_\alpha
+                   \partial^{\alpha-\mathbf e_x},
+\]
+and the analogous formula holds for $y$. Characteristic zero forces
+every positive-order coefficient to vanish. The order-zero argument
+then finishes the proof. This induction also proves uniqueness of a
+normal-form expression as an operator.
+\end{proof}
+
+Suppose the descent of $P\in\mathcal D_0$ has finite rank. Its open
+kernel gives $P(\mathfrak m^N)\subset k$ for some $N$. Thus
+$\partial_xP$ annihilates $\mathfrak m^N$ and is zero by the lemma.
+This forces $P=0$. Indeed, if $P$ has order $m$, form its highest-order
+polynomial
+\[
+ \sigma_m(P)=\sum_{|\alpha|=m}a_\alpha\xi^\alpha
+             \in R_0[\xi_x,\xi_y].
+\]
+The order-$(m+1)$ polynomial of $\partial_xP$ is
+$\xi_x\sigma_m(P)$, nonzero in this integral domain.
+Consequently descent is faithful and
+$\mathcal D_0\cap\mathcal F(H)=0$.
+
+The vector-space direct sum
+\[
+ \mathcal R=\mathcal D_0\oplus\mathcal F(H)
+         \subset\operatorname{End}_{\mathrm{cont}}(H)
+\]
+is an associative algebra, because $\mathcal F(H)$ is an ideal.
+The map $\chi(P)=P(1)$ is a scalar algebra homomorphism. For each $c\in k$,
+define
+\begin{equation}
+ \tau_c(P+F)=c\chi(P)+\operatorname{tr}(F).
+ \label{eq:op-restricted-trace}
+\end{equation}
+The direct decomposition makes this well-defined. It is cyclic:
+$\chi([P,Q])=0$, and every mixed or finite-rank commutator has trace
+zero by~\eqref{eq:op-finite-trace}. It extends finite-rank trace and
+assigns $\tau_c(1)=c$.
+
+This algebra contains all Hamiltonian vector fields but excludes the
+operator $S$ above. Otherwise cyclicity would imply
+$0=\tau_c([a_x,S])=\tau_c(P_y)=1$.
+It is dense in the full operator algebra because it contains the dense
+finite-rank ideal. Its trace is discontinuous, as the sequence $P_n$
+still shows, and it has no cyclic extension to the completion.
+Every positive-length product of Hamiltonian vector fields annihilates
+the constant function. Formula~\eqref{eq:op-restricted-trace} therefore
+assigns zero to all such products.
+
+\section{Continuous invariant coefficients and quantum matter}
+
+There is an additional obstruction even before choosing a trace.
+Call a scalar multilinear form $\Phi:H^r\to k$ invariant if
+\[
+ \sum_{j=1}^r
+ \Phi(f_1,\ldots,[a,f_j],\ldots,f_r)=0
+ \qquad(a,f_1,\ldots,f_r\in H).
+\]
+
+\begin{proposition}
+Every jointly continuous invariant scalar multilinear form on $H^r$
+vanishes when $r\geq1$. Symmetry of the form is not required.
+\end{proposition}
+\begin{proof}
+A continuous scalar multilinear form factors through finite coefficient
+quotients in every argument. To see this directly, proceed by induction
+on arity. At arity one, the kernel is open. At larger arity, continuity
+at zero gives open subspaces whose product is annihilated. Choose
+finite-dimensional complements. Fixing a basis vector in one complement
+leaves a continuous form of smaller arity. Induction gives finite
+coefficient bounds for each of these finitely many forms. Intersect their
+bounds with the original open subspaces, and expand every argument into
+its open and complementary parts. Each sufficiently small subspace then
+annihilates the form in its individual slot.
+
+The first-slot annihilator
+\[
+ J=\{f:\Phi(f,f_2,\ldots,f_r)=0\text{ for all }f_2,\ldots,f_r\}
+\]
+is therefore open. Invariance makes it a Lie ideal. If it contains
+$\mathfrak m^N$, the formal antiderivative
+\[
+ I_y^Nf=\sum_{a+b\geq1}\frac{b!}{(b+N)!}f_{ab}x^ay^{b+N}
+\]
+belongs to $J$ and satisfies $(\operatorname{ad}_x)^NI_y^Nf=f$.
+The ideal property gives $f\in J$ for every $f$, so $J=H$ and $\Phi=0$.
+\end{proof}
+
+Suppose a representation $\rho$ and a cyclic trace define
+\[
+ \Phi(f_1,\ldots,f_r)
+       =\tau\bigl(\rho(f_1)\cdots\rho(f_r)\bigr).
+\]
+Expanding the trace of the commutator with $\rho(a)$ proves invariance.
+If this scalar coefficient is jointly continuous for the formal topology,
+the proposition forces it to vanish. In particular, these assumptions
+exclude a nonzero continuous cubic trace polynomial.
+
+The completed identity kernel supplies an actual operator realization.
+An infinite-dimensional quantum current theory still needs a matter
+space and paired space, contraction tensors, and a trace or regularization
+on all the operator products that occur. Their continuity and convergence
+must hold together with the spatial propagator integrals. The adjoint
+choice does not reduce those products to finite rank:
+$(a_x)^r I_y^r f=f$ makes every positive power of $a_x$ surjective.
+The restricted trace above supplies
+an algebraic choice, while its discontinuity prevents it from closing
+completed kernels by a continuous scalar contraction. A quantum
+construction must resolve these precise trace and contraction conditions.
+
+Positive representations require an involution and a positive functional
+in addition to a cyclic scalar contraction.
+For finite matrix kernels, the positive trace gives a Hilbert space
+completion but has no positive extension of finite mass to the unitization.
+Chapter~\ref{chap:weil-operator-domains} proves this comparison and
+formulates the arithmetic domain question using the zeta explicit formula.

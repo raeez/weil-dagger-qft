@@ -1,0 +1,49 @@
+{
+  "status": "Source and diagnostic checks passed; root acceptance remains required",
+  "pdfs": [
+    {
+      "kind": "full",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/weil-core020/build-full/programme.pdf",
+      "sha256": "ebb2414deec01287094de300cd85f1ef959baba82b59808d9915ee143bd5c0bc",
+      "pages": 356,
+      "fls_sha256": "505542e09387ae8e6cf8846fd5a89fcd316dc25ed60b3f26c4a25856116fee22",
+      "log_sha256": "448f33fe061c17e6f852ede4d83ff5dfa660e4ab541cc6881db3adca34bf8182",
+      "build_inputs": 342,
+      "warnings": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ],
+      "all_fonts_embedded_subset_unicode": true
+    },
+    {
+      "kind": "standalone",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/weil-core020/build-standalone/weil-standalone.pdf",
+      "sha256": "d810a0a97435a76936c5e086e17fa44a148ba0fd1696f570a51c3b120c650ef9",
+      "pages": 37,
+      "fls_sha256": "d474cb2942196c844dce3cbbb7c8a890c9956794525f834ff7a0bc0720b86d03",
+      "log_sha256": "be944664fa12b5e539beb64edc632369e4637f58c02ee9d3ffa6ee4f3a6fa89c",
+      "build_inputs": 301,
+      "warnings": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ],
+      "all_fonts_embedded_subset_unicode": true
+    },
+    {
+      "kind": "baseline",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/weil-core020/build-baseline/programme.pdf",
+      "sha256": "01f6ff1e9ad827370511d7ddbbff45a42ff939f040832093bbfa5a34eabe2e46",
+      "pages": 320,
+      "fls_sha256": "cb89dd2d6aaac9f4f513200cb9501a8c6132194f5c6e6222fe1d8a7c99382441",
+      "log_sha256": "f4399afddd65d4a7f66b69709e68b8873eaa39a6d6b394a9814596b76979b261",
+      "build_inputs": 341,
+      "warnings": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ],
+      "all_fonts_embedded_subset_unicode": true
+    }
+  ],
+  "source_labels": 799,
+  "source_and_pdf_firewall": true,
+  "native_proofs_retained": 33,
+  "core_proofs_exact": 138,
+  "new_proofs": 4
+}

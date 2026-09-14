@@ -1,0 +1,1631 @@
+\chapter{Relations and compatible homotopies}
+\label{chap:relations-homotopies}
+
+\section{A differential for a scalar relation}
+
+An abelian group is a set with an associative,
+commutative addition, an additive identity $0$, and an additive inverse
+$-a$ for every element $a$. A ring is an abelian group with an associative
+multiplication and a multiplicative identity $1$, satisfying
+$a(b+c)=ab+ac$ and $(a+b)c=ac+bc$.
+A ring is commutative when $ab=ba$ for every $a,b$.
+All rings and ring homomorphisms here have identities, and the
+homomorphisms preserve addition, multiplication, and $1$.
+
+Let $k$ be a field: a commutative ring with $1\ne0$ in which every
+nonzero element has a multiplicative inverse. Assume that $k$ has
+characteristic zero, meaning that $n\cdot1\ne0$ for every positive
+integer $n$. In particular, $2$ is invertible in $k$.
+
+Let $R=k[t]$ consist of finite sums $\sum_{j\geq0}a_jt^j$ with $a_j\in k$.
+Two such sums agree when every coefficient agrees.
+Addition adds coefficients, and multiplication distributes the rule
+$t^it^j=t^{i+j}$ over finite sums.
+These operations give a commutative ring, called the polynomial ring.
+The symbol $t$ is an indeterminate because it satisfies no further relation.
+Fix an integer $r\geq1$ and consider the relation $t^r=0$.
+
+Put $s=t^r$. The quotient $R/(s)$ identifies polynomials $f,g$ when
+$f-g$ is a multiple of $s$. Write $[f]$ for the class of $f$.
+The operations are $[f]+[g]=[f+g]$ and $[f][g]=[fg]$.
+Replacing $f,g$ by $f+sa,g+sb$ changes their sum by $s(a+b)$
+and their product by $s(ag+fb+sab)$.
+Thus these operations do not depend on the representatives.
+Multiplication by $s$ is the zero map on this quotient.
+
+
+The product of two nonzero polynomials is nonzero: its highest
+coefficient is the product of their highest nonzero coefficients in $k$.
+The same argument applies after adjoining another polynomial variable.
+Thus $k[t,u]=k[t][u]$ also has no zero divisors, meaning that a product
+of two nonzero elements cannot be zero.
+
+An $R$-module is an abelian group with a scalar action of $R$.
+The action satisfies $a(m+n)=am+an$, $(a+b)m=am+bm$,
+$(ab)m=a(bm)$, and $1m=m$.
+A free module with basis $v_i$ consists of the finite sums $\sum_i a_i v_i$,
+with uniquely determined coefficients $a_i\in R$.
+A map of $R$-modules is $R$-linear if it preserves sums and scalar
+multiplication.
+Its kernel is the set of inputs sent to zero, and its image is the set of
+all outputs. Both are submodules: subsets containing zero and closed under
+addition, additive inverses, and scalar multiplication.
+
+An associative unital $R$-algebra is an $R$-module with an associative
+product, an identity element, and an $R$-bilinear multiplication:
+the product distributes over sums and satisfies $(ra)b=r(ab)=a(rb)$.
+The scalar map $R\to A$ sends $r$ to $r1$.
+It preserves ring operations, and its image is central because
+$(r1)a=ra=a(r1)$.
+
+A graded $R$-module is a family of $R$-modules $A^n$, indexed by
+integers, with underlying module $A=\bigoplus_n A^n$.
+The direct sum consists of elements with finitely many nonzero components.
+An element of $A^n$ is homogeneous of degree $n$, written $|a|=n$.
+
+A graded $R$-algebra is such an algebra
+$A=\bigoplus_{n\in\mathbb Z}A^n$ whose product satisfies
+$A^p A^q\subset A^{p+q}$. Scalars lie in degree zero and commute with
+every element. The direct sum requires each element to have finitely many
+nonzero homogeneous components.
+
+A linear map $F:V\to W$ between graded modules has degree $n$ if
+$F(V^j)\subset W^{j+n}$ for every integer $j$.
+\begin{definition}\label{def:rel-dga}
+A differential graded $R$-algebra is a graded $R$-algebra with an
+$R$-linear differential $d$ of degree one such that $d^2=0$, $d1=0$, and
+\begin{equation}\label{eq:rel-leibniz}
+ d(ab)=(da)b+(-1)^{|a|}a\,db
+\end{equation}
+for homogeneous elements $a,b$. This identity is the graded Leibniz rule.
+\end{definition}
+
+
+The sign depends only on the parity of $|a|$, namely its remainder modulo
+two. In particular, the sign is negative when $|a|=-1$.
+The rule makes the two middle terms in $d^2(ab)$ cancel.
+An element $h$ of degree $n-1$ satisfying $dh=v$ is a primitive of
+an element $v$ of degree $n$.
+In a differential graded $R$-algebra $A$, multiplication by $s$ is
+the degree-zero map $x\mapsto sx$.
+A null-homotopy for this map is an $R$-linear map $H:A\to A$ of
+degree minus one satisfying
+\[
+ dH(x)+H(dx)=sx\qquad(x\in A).
+\]
+This asks for an equation between maps on $A$, while the quotient
+$R/(s)$ makes scalar multiplication by $s$ identically zero.
+If $dx=0$, this equation gives the primitive $H(x)$ of $sx$.
+A primitive $\tau\in A^{-1}$ of $s1$ defines left multiplication
+$L_\tau(x)=\tau x$, which supplies such a map:
+the graded Leibniz rule gives
+\[
+ d(\tau x)+\tau\,dx=sx.
+\]
+Thus a primitive of the scalar relation supplies a null-homotopy
+on the whole algebra.
+
+We ask whether the null-homotopy can also respect left and right
+multiplication. A homogeneous map $h$ of degree $-1$ compatible with left and
+right multiplication must satisfy
+\begin{equation}\label{eq:rel-homotopy-linearity}
+ h(amb)=(-1)^{|a|}a\,h(m)b
+\end{equation}
+for homogeneous $a,m,b$. The right action contributes no sign in this
+convention. The left sign accounts for moving a degree-minus-one map past
+the left input. We will derive this convention from a single algebra
+action below.
+
+For $h=L_\tau$, right multiplication satisfies this equation because
+$\tau(mb)=(\tau m)b$.
+The left multiplication condition at $a=\tau$, $m=b=1$ requires
+$\tau^2=-\tau^2$.
+Hence $L_\tau$ can respect both actions only if $\tau^2=0$,
+since $2$ is invertible.
+The equation $d\tau=s$ alone does not impose this additional relation.
+We must determine the square of a primitive before claiming that its
+null-homotopy respects multiplication.
+
+\section{Freely adjoining a primitive}
+\label{sec:rel-algebra}
+
+To retain every product permitted by $d\tau=s$, impose no additional
+equation on $\tau$.
+Let $E=R\langle\tau\rangle$ be the free associative $R$-algebra on one
+generator of degree $-1$. Its $R$-basis is
+\[
+ 1,\tau,\tau^2,\tau^3,\ldots,
+ \qquad \tau^i\tau^j=\tau^{i+j},\qquad |\tau^i|=-i.
+\]
+Define
+\begin{equation}\label{eq:rel-state-witness}
+ dt=0,\qquad d\tau=t^r,\qquad |\tau|=-1,
+\end{equation}
+and extend by the graded Leibniz rule.
+
+Repeated application of that rule gives
+\begin{equation}\label{eq:rel-word-differential}
+ d(\tau^n)
+ =s\sum_{i=0}^{n-1}(-1)^i\tau^{n-1}
+ =\begin{cases}
+ 0,&n\text{ even},\\
+ s\tau^{n-1},&n\text{ odd}.
+ \end{cases}
+\end{equation}
+For $n=0$ the sum is empty and equals zero.
+The formula proves $d^2=0$ on each basis element.
+
+Put $u=\tau^2$, so $|u|=-2$ and $du=0$.
+The basis shows $u\ne0$, so the map $L_\tau$ fails the left
+multiplication condition.
+Every element of $E$ has a unique expression $a(u)+\tau b(u)$ with
+$a,b\in R[u]$. Equation~\eqref{eq:rel-word-differential} becomes
+\[
+ E=R[u]\oplus\tau R[u],\qquad
+ d\bigl(a(u)+\tau b(u)\bigr)=s b(u).
+\]
+The two summands consist of even and odd degrees, respectively.
+
+The failure of left compatibility can itself have a primitive after
+multiplying the scalar relation by another polynomial.
+To compute when this happens, let $\lambda\in R$ and choose a
+primitive $h\in E^{-1}$ with $dh=\lambda$.
+The map $L_h(x)=hx$ respects right multiplication.
+It is a null-homotopy for multiplication by $\lambda$, by the graded
+Leibniz rule.
+Its left defect on the generator $\tau$ is $\tau h+h\tau$.
+We ask for a primitive $b\in E^{-3}$ of that defect:
+\[
+ dh=\lambda,\qquad db=\tau h+h\tau.
+\]
+The degree conditions give $h=A\tau$ and $b=B\tau u$ for
+polynomials $A,B\in R$.
+Since $d(\tau u)=su$, the two equations become
+\[
+ sA=\lambda,\qquad sB=2A.
+\]
+They imply $\lambda=s^2B/2$.
+Conversely, if $\lambda=s^2c$ with $c\in R$, take
+$A=sc$ and $B=2c$.
+Thus the two primitive equations have a solution precisely when the
+scalar is a multiple of $s^2=t^{2r}$.
+This asks the multiplication defect to have a primitive.
+Strict compatibility would require the defect itself to be zero.
+In particular, $t^2$ has a primitive when $r=2$, but this correction
+requires a multiple of $t^4$.
+
+\section{A complex for a polynomial relation}
+\label{sec:rel-complexes}
+
+For a submodule $U\subset M$, the quotient $M/U$ identifies $m$ with $m'$
+when $m-m'\in U$. Write $[m]$ for the resulting class.
+Define $[m]+[n]=[m+n]$ and $a[m]=[am]$.
+Replacing $m,n$ by $m+u,n+v$ changes these expressions by $u+v$ and $au$,
+which belong to $U$. The operations are therefore well-defined.
+They satisfy the module laws because the original operations do.
+
+An additive subgroup is a subset containing zero and closed under
+addition and additive inverses.
+In a ring $A$, a two-sided ideal is an additive subgroup $I$ such that
+$ax,xa\in I$ whenever $a\in A$ and $x\in I$.
+The quotient $A/I$ also has multiplication $[a][b]=[ab]$:
+replacing $a,b$ by $a+x,b+y$ changes $ab$ by $ay+xb+xy\in I$.
+The ideal generated by elements $x_i$ consists of finite sums $a x_i b$.
+For a commutative ring these are finite sums $a x_i$.
+In particular, $(t^r)\subset R$ consists of the multiples of $t^r$,
+and $R/(t^r)$ imposes the relation $t^r=0$.
+
+Division by $t^r$ gives each class a unique representative
+\[
+ a_0+a_1t+\cdots+a_{r-1}t^{r-1},\qquad a_i\in k.
+\]
+The quotient records which polynomials agree after imposing the relation.
+The two-term sequence
+\[
+ R\tau\xrightarrow{\ d\ }R,
+ \qquad d(a\tau)=at^r,
+\]
+retains an element $a\tau$ mapped to each multiple $at^r$ of the relation.
+We place $R\tau$ in degree $-1$ and $R$ in degree zero.
+All other degrees are zero.
+
+\begin{definition}\label{def:rel-complex}
+A cochain complex of $R$-modules consists of modules $V^n$, for integers
+$n$, and $R$-linear maps $d:V^n\to V^{n+1}$ with $d^2=0$.
+Write $V=\bigoplus_{n\in\mathbb Z}V^n$: each element is a sum of
+finitely many components in the indicated modules.
+An element of $V^n$ is homogeneous of degree $n$, written $|v|=n$.
+The cycles, boundaries, and cohomology in degree $n$ are
+\[
+ \begin{split}
+ Z^n(V)&=\ker(d:V^n\longrightarrow V^{n+1}),\\
+ B^n(V)&=\operatorname{im}(d:V^{n-1}\longrightarrow V^n),\\
+ H^n(V)&=Z^n(V)/B^n(V).
+ \end{split}
+\]
+
+We write $[v]$ for the cohomology class of a cycle $v$.
+The notation $H^*(V)$ means the graded module $\bigoplus_n H^n(V)$.
+A complex is acyclic if all its cohomology groups are zero.
+An element $h\in V^{n-1}$ with $dh=v$ is a primitive of $v\in V^n$.
+Thus a cycle has a primitive precisely when its cohomology class is zero.
+\end{definition}
+
+The equation $d^2=0$ places every boundary among the cycles, so the quotient
+is defined. The two-term complex above has $H^0=R/(t^r)$.
+Its degree $-1$ cohomology is zero because $at^r=0$ forces $a=0$ in $R$.
+The element $\tau$ is a primitive of $t^r$ in this complex.
+For a differential graded algebra, the graded Leibniz rule makes
+cohomology an associative graded algebra.
+Indeed, cycles multiply to cycles, while $(dx)b=d(xb)$ for a cycle $b$.
+For a cycle $a$, the other order satisfies $a(dx)=(-1)^{|a|}d(ax)$.
+
+The scalar cohomology map is $R\to H^0(A)$, $a\mapsto[a1]$.
+It is defined because $d(a1)=a\,d1=0$.
+
+\begin{proposition}\label{prop:rel-state-cohomology}
+The cohomology algebra of $E$ is
+\[
+ H^*(E)=k[t,u]/(t^r),\qquad |t|=0,\quad |u|=-2.
+\]
+Thus $H^{-2j}(E)=R/(t^r)\,[u^j]$ for $j\geq0$, and every other
+cohomology group is zero. The kernel of $R\to H^0(E)$ is $(t^r)$.
+\end{proposition}
+
+\begin{proof}
+Every element of $R[u]$ is a cycle. If $\tau b(u)$ is a cycle, then
+$s b(u)=0$. The polynomial ring $k[t,u]$ has no zero divisors, so $b=0$.
+The boundaries in the even part are exactly $sR[u]$.
+Multiplication of the surviving even words gives the stated algebra.
+In degree zero this quotient is $R/(s)$, with the indicated scalar kernel.
+\end{proof}
+
+For example, the part in degrees $-3$ through zero is
+\[
+ R\tau^3\xrightarrow{\ s\ }Ru
+ \xrightarrow{\ 0\ }R\tau\xrightarrow{\ s\ }R.
+\]
+Each odd word is a primitive of $s$ times the next even word.
+The class $[u]$ is nonzero for every $r\geq1$.
+
+\section{A homotopy and its multiplication defect}
+\label{sec:rel-state-homotopy}
+
+A map of complexes, also called a chain map, is a degree-zero linear map
+$F:V\to W$ satisfying $d_WF=Fd_V$.
+It sends a cycle $v$ to a cycle because $d_WF(v)=F(d_Vv)=0$.
+It sends a boundary $d_Vx$ to the boundary $d_WF(x)$.
+Consequently
+\[
+ H^n(F):H^n(V)\longrightarrow H^n(W),\qquad [v]\longmapsto[F(v)]
+\]
+is well-defined: changing $v$ by a boundary changes $F(v)$ by a boundary.
+The formula preserves identities and composition, since evaluation on
+a representative gives $H^n(1)[v]=[v]$ and
+$H^n(GF)[v]=[G(F(v))]=H^n(G)H^n(F)[v]$.
+
+Two chain maps $F,G$ are homotopic if a degree-minus-one linear map
+$h:V\to W$ satisfies
+\[
+ F-G=d_Wh+hd_V.
+\]
+They then induce the same cohomology map: for a cycle $v$, the difference
+$F(v)-G(v)$ is the boundary $d_W(hv)$.
+A map homotopic to zero is null-homotopic, agreeing with the scalar
+definition above.
+
+Left multiplication by $\tau$ defines a degree-minus-one $R$-linear map
+$L_\tau:E\to E$. For homogeneous $a$, the Leibniz rule gives
+\begin{equation}\label{eq:rel-left-homotopy}
+ d(\tau a)+\tau\,da=s a.
+\end{equation}
+Thus $L_\tau$ is a null-homotopy for scalar multiplication by $s$.
+This proves directly that $s$ annihilates every cohomology class of $E$.
+The scalar $t^{r-1}$ does not annihilate the unit class, by
+Proposition~\ref{prop:rel-state-cohomology}.
+
+The map $L_\tau$ respects the right action, since $\tau(mb)=(\tau m)b$.
+Its left compatibility fails at $a=\tau$, $m=b=1$:
+\[
+ L_\tau(\tau)=u,\qquad
+ (-1)^{|\tau|}\tau L_\tau(1)=-u.
+\]
+The difference is $2u$. Its cohomology class is nonzero because $2$ is
+invertible in $k$ and $[u]\ne0$.
+Thus the null-homotopy $L_\tau$ fails the left multiplication identity
+by the nonzero cohomology class $2[u]$.
+
+There is also no alternative strict two-sided null-homotopy for $s$ on
+$E$. Any such map $h$ would satisfy $d(h(1))=s$.
+Since $E^{-1}=R\tau$, write $h(1)=a(t)\tau$.
+Then $a(t)s=s$ forces $a(t)=1$.
+Right compatibility gives $h(\tau)=u$, while left compatibility gives
+$h(\tau)=-u$. These equations contradict $2u\ne0$ in $E$.
+
+The earlier equations $dh=\lambda$ and $db=\tau h+h\tau$ use elements
+$h\in E^{-1}$ and $b\in E^{-3}$.
+The second gives a primitive of the left defect of $L_h$.
+It does not make $L_h$ strictly compatible with both actions on $E$.
+To incorporate the correction into a homotopy, we will construct a
+complex mapping to $E$ with both multiplication actions.
+An additional generator will have differential equal to the difference
+of the two actions of $\tau$.
+On that complex, a scalar null-homotopy respecting both actions will
+exist precisely when the two displayed equations have a solution.
+
+\section{Maps from the free algebra}
+
+A morphism of unital differential graded $R$-algebras is an $R$-linear
+map that preserves degree, multiplication, and the unit, and commutes
+with the differentials.
+
+To compare descriptions of the same algebra, we need inverse maps.
+An injective map sends distinct inputs to distinct outputs.
+A surjective map attains every output.
+A bijection has both properties, so each output has a unique input.
+Assigning that input to the output defines its inverse function.
+
+A bijective module map is a module isomorphism because its inverse
+preserves sums and scalars: apply the original map to either proposed
+identity and use injectivity.
+A differential graded algebra isomorphism is a morphism with an inverse
+morphism.
+For a bijective morphism, decompose an inverse image into homogeneous
+components. Injectivity forces every component of the wrong degree to vanish.
+Its inverse also preserves products, the unit, and the differential:
+apply the original morphism to each required identity and use injectivity.
+
+\begin{proposition}[The universal property of adjoining a primitive]
+\label{prop:rel-witness-mapping}
+For every unital differential graded $R$-algebra $A$, evaluation at
+$\tau$ gives a bijection from its set of unital differential graded
+$R$-algebra morphisms $E\to A$ to
+\[
+ \{h\in A^{-1}:dh=t^r1\}.
+\]
+Thus specifying a morphism from $E$ is equivalent to choosing a primitive
+of $t^r1$, with no additional equation on that primitive.
+\end{proposition}
+
+\begin{proof}
+Such a morphism sends $\tau$ to an element $h$ of degree $-1$.
+Commutation with the differentials gives $dh=t^r1$.
+Multiplicativity and $R$-linearity force its value on every element:
+\[
+ \sum_{i\geq0}a_i\tau^i\longmapsto\sum_{i\geq0}a_i h^i.
+\]
+All sums are finite, so this formula is defined in $A$.
+
+Conversely, for any such $h$ the displayed formula is $R$-linear,
+preserves degree and the unit, and preserves multiplication.
+The Leibniz rule gives
+\[
+ d(h^n)=t^r\sum_{i=0}^{n-1}(-1)^i h^{n-1}.
+\]
+This agrees with the image of
+\eqref{eq:rel-word-differential}, proving that the map commutes with
+the differentials. The two constructions are inverse.
+\end{proof}
+
+The correspondence respects maps of target algebras.
+If $F:A\to B$ is a morphism and $dh=t^r1_A$, then
+$dF(h)=F(dh)=t^r1_B$. Composing the evaluation map at $h$ with $F$
+therefore gives the evaluation map at $F(h)$.
+This compatibility is the meaning of naturality here. Both the algebra map and the induced map on primitives go from
+$A$ to $B$.
+
+It also characterizes the universal pair $(E,\tau)$ uniquely.
+If another pair $(E',\tau')$ has the same property, evaluation provides
+unique morphisms $v:E\to E'$ and $w:E'\to E$ carrying the specified
+primitive of each pair to that of the other. Both $wv$ and the identity carry $\tau$ to $\tau$, so
+uniqueness gives $wv=1_E$. Likewise $vw=1_{E'}$.
+Thus the pair is unique up to the unique isomorphism preserving its
+specified primitive.
+
+Imposing $\tau^2=0$ would change this mapping property.
+If an ideal $I$ is a sum of homogeneous parts and $dI\subset I$, its
+quotient inherits a grading and differential $d[a]=[da]$.
+The containment makes the latter independent of the representative,
+and the differential identities pass to classes.
+For $I=(\tau^2)$, the Leibniz rule and $d(\tau^2)=0$ give $dI\subset I$.
+Thus $E/(\tau^2)$ is a differential graded algebra.
+
+Its morphisms to $A$ correspond exactly to primitives
+$h$ with both $dh=t^r1$ and $h^2=0$.
+Indeed, the word evaluation map factors through that quotient precisely
+when it kills $\tau^2$ and hence every multiple of $\tau^2$.
+
+An associative graded algebra need not be graded commutative.
+The latter condition would require $ab=(-1)^{|a||b|}ba$ for homogeneous
+elements. Applied to $a=b=\tau$, it would give $2\tau^2=0$.
+Our algebra imposes no such relation. Although its single-generator
+multiplication commutes in the ordinary sense, it is not graded
+commutative.
+
+
+\section{Two actions as one algebra action}
+\label{sec:rel-bimodules}
+
+A differential graded left $E$-module is a complex $M$ with a unital
+associative left action that adds degrees and satisfies
+$d(am)=(da)m+(-1)^{|a|}a\,dm$.
+A right module has an action satisfying
+$d(ma)=(dm)a+(-1)^{|m|}m\,da$.
+An $E$-bimodule has both actions, with $(am)b=a(mb)$.
+The left and right actions of each scalar in $R$ agree.
+Together the differential rules give
+\begin{equation}\label{eq:rel-bimodule-leibniz}
+ d(amb)=(da)mb+(-1)^{|a|}a(dm)b
+       +(-1)^{|a|+|m|}am(db).
+\end{equation}
+The algebra $E$ with its multiplication actions is the diagonal $E$-bimodule.
+
+The tensor product $M\otimes_R N$ of $R$-modules consists of finite sums
+of symbols $m\otimes n$, subject to additivity and scalar balancing:
+\[
+ (am)\otimes n=m\otimes(an)=a(m\otimes n),\qquad a\in R.
+\]
+For graded modules the degree of $m\otimes n$ is $|m|+|n|$.
+For complexes its differential is
+\begin{equation}\label{eq:rel-tensor-differential}
+ d(m\otimes n)=dm\otimes n+(-1)^{|m|}m\otimes dn.
+\end{equation}
+Applying $d$ twice cancels the two terms containing $dm\otimes dn$.
+
+For homogeneous linear maps $F,G$, define
+\[
+ (F\otimes G)(x\otimes y)=(-1)^{|G||x|}F(x)\otimes G(y).
+\]
+Additivity and scalar balancing make this a map of degree $|F|+|G|$.
+For degree-zero chain maps, the two terms of the tensor differential
+show directly that $F\otimes G$ is a chain map.
+
+Repeated tensor products have the reassociation isomorphism
+\[
+ (M\otimes_R N)\otimes_R Q\longrightarrow
+ M\otimes_R(N\otimes_R Q),\qquad
+ (m\otimes n)\otimes q\longmapsto m\otimes(n\otimes q).
+\]
+The formula in reverse defines its inverse. Both respect the defining
+additivity and balancing relations. The differential in either grouping
+is the sum with differentiated entries $m,n,q$ and respective signs
+$1,(-1)^{|m|},(-1)^{|m|+|n|}$.
+We therefore omit parentheses when writing three tensor factors.
+
+For graded algebras the product is
+\[
+ (a\otimes b)(c\otimes e)=(-1)^{|b||c|}ac\otimes be.
+\]
+This sign records the interchange of $b$ and $c$ in the two tensor factors.
+
+When $M$ is a right $E$-module and $N$ is a left $E$-module, define
+$M\otimes_E N$ by the additional relations
+\[
+ (ma)\otimes n=m\otimes(an).
+\]
+There is no sign in this balancing relation, which does not interchange
+the two inputs. Formula~\eqref{eq:rel-tensor-differential} respects the
+relation. In fact, its two sides have the same three terms containing
+$dm$, $da$, and $dn$, by the module Leibniz rules.
+If both inputs are bimodules, the remaining outer actions make this tensor
+product a bimodule.
+
+Reassociation is defined by the same formula for balanced tensor products
+over $E$, since moving an element of $E$ between adjacent factors gives
+the same relation in either grouping.
+For bimodule maps, the tensor-map formula also respects this balancing:
+the values on $(xa)\otimes y$ and $x\otimes ay$ both have sign
+$(-1)^{|G|(|x|+|a|)}$ after graded left linearity of $G$ is applied.
+Here graded left linearity means
+$G(ay)=(-1)^{|G||a|}aG(y)$, whereas right linearity means
+$F(xa)=F(x)a$. These are precisely the compatibility conventions we will
+derive from the enveloping action.
+
+The action map $E\otimes_E M\to M$ sends $a\otimes m$ to $am$.
+Its inverse is $m\mapsto1\otimes m$, because balancing gives
+$1\otimes am=a\otimes m$.
+Similarly, $M\otimes_E E\to M$, $m\otimes a\mapsto ma$, has inverse
+$m\mapsto m\otimes1$.
+The module differential rules show that these are chain maps.
+
+Define the graded opposite algebra $E^{\mathrm{op}}$ to have the same
+complex as $E$, with multiplication
+\[
+ a^{\mathrm{op}}b^{\mathrm{op}}
+   =(-1)^{|a||b|}(ba)^{\mathrm{op}}.
+\]
+The sign ensures the graded Leibniz rule: both
+$d(a^{\mathrm{op}}b^{\mathrm{op}})$ and
+$(da)^{\mathrm{op}}b^{\mathrm{op}}
+ +(-1)^{|a|}a^{\mathrm{op}}(db)^{\mathrm{op}}$ equal
+\[
+ (-1)^{|a||b|}\bigl((db)a\bigr)^{\mathrm{op}}
+ +(-1)^{|a||b|+|b|}\bigl(b(da)\bigr)^{\mathrm{op}}.
+\]
+The enveloping algebra is
+\[
+ E^e=E\otimes_R E^{\mathrm{op}}.
+\]
+An $E$-bimodule becomes a left $E^e$-module by
+\begin{equation}\label{eq:rel-envelope-action}
+ (a\otimes b^{\mathrm{op}})m=(-1)^{|b||m|}amb.
+\end{equation}
+
+To check associativity, let $a,b,c,e,m$ be homogeneous.
+Acting first by $c\otimes e^{\mathrm{op}}$ and then by
+$a\otimes b^{\mathrm{op}}$ gives the word $acmeb$ with sign exponent
+\[
+ |e||m|+|b|(|c|+|m|+|e|).
+\]
+Multiplying inside $E^e$ first gives the same word with exponent
+\[
+ |b||c|+|b||e|+(|b|+|e|)|m|.
+\]
+These exponents agree.
+
+For $x=a\otimes b^{\mathrm{op}}$, both
+$d(xm)$ and $(dx)m+(-1)^{|x|}x(dm)$ expand to
+\[
+ (-1)^{|b||m|}\bigl((da)mb+(-1)^{|a|}a(dm)b
+                +(-1)^{|a|+|m|}am(db)\bigr).
+\]
+This proves differential compatibility.
+The actions of $a\otimes1$ and $1\otimes b^{\mathrm{op}}$ recover the
+original two actions, so no action data have been discarded.
+
+A homogeneous linear map of degree $n$ between graded left modules is
+graded module-linear when it additionally satisfies
+$F(xm)=(-1)^{n|x|}xF(m)$ for homogeneous $x$.
+Using \eqref{eq:rel-envelope-action}, this is equivalent for bimodules to
+\begin{equation}\label{eq:rel-graded-bimodule-map}
+ F(amb)=(-1)^{n|a|}aF(m)b.
+\end{equation}
+For the right action, the signs $(-1)^{|b||m|}$ on the input and
+$(-1)^{|b|(|m|+n)}$ on the output cancel the graded map sign.
+For the left action only $(-1)^{n|a|}$ remains.
+This proves the convention used in
+\eqref{eq:rel-homotopy-linearity}.
+
+Write $\operatorname{Hom}_{E-E}(M,N)^n$ for the $R$-module of additive
+$R$-linear maps of degree $n$ satisfying
+\eqref{eq:rel-graded-bimodule-map}, with pointwise addition and scalar
+multiplication. A map may have nonzero values in
+infinitely many input degrees. Its output on each individual element is
+an element of the algebraic module $N$.
+The Hom differential is
+\begin{equation}\label{eq:rel-hom-differential}
+ \partial F=d_NF-(-1)^nFd_M.
+\end{equation}
+
+The bimodule Leibniz rule cancels the terms containing $da$ and $db$ in
+the Hom differential, giving
+\[
+ (\partial F)(amb)=(-1)^{(n+1)|a|}a(\partial F)(m)b.
+\]
+Thus $\partial F$ has the required linearity in degree $n+1$.
+Expanding twice gives $\partial^2F=0$.
+The degree-zero cycles are bimodule chain maps, and their boundaries are
+the bimodule maps null-homotopic through compatible maps.
+
+An ordinary degree-zero bimodule endomorphism $F:E\to E$ is determined
+by $c=F(1)$. Its two action identities give $F(a)=ac=ca$.
+If it is a chain map, then $dc=0$ as well.
+The ordinary center therefore imposes commutation as an equality.
+The derived center will instead use a free bimodule resolution of the
+diagonal, with additional generators whose differentials impose the
+action relations.
+
+\section{An explicit two-cell resolution}
+\label{sec:rel-resolution}
+
+A quasi-isomorphism is a chain map inducing an isomorphism on every
+cohomology group. We now construct one from a free graded bimodule to $E$.
+Put
+\[
+ P=Ee_0E\oplus Ee_1E,
+ \qquad Ee_cE=E\otimes_R Re_c\otimes_R E,
+ \qquad |e_0|=0,\quad |e_1|=-2.
+\]
+The notation $ae_cb$ denotes $a\otimes e_c\otimes b$.
+There are two free generators, or cells, in these specified degrees.
+
+A graded bimodule map $F:P\to N$ of degree $n$ is determined by its
+values on these generators, through
+\[
+ F(ae_cb)=(-1)^{n|a|}aF(e_c)b.
+\]
+Conversely, any values of degrees $n$ and $n-2$ extend by this formula
+and additivity to such a map. Balancing over $R$ makes the extension
+well-defined.
+
+Define
+\begin{equation}\label{eq:rel-resolution-differential}
+ d_Pe_0=0,\qquad d_Pe_1=\tau e_0-e_0\tau,
+\end{equation}
+and extend using \eqref{eq:rel-bimodule-leibniz}.
+The output on $e_1$ has degree $-1$, as required.
+Its next differential is $s e_0-e_0s=0$, since the tensor products are
+over $R$. The graded Leibniz rule then gives $d_P^2=0$ everywhere.
+
+Define the augmentation and its $R$-linear section by
+\[
+ \begin{split}
+ q:P\longrightarrow E,&\qquad q(ae_0b)=ab,\quad q(ae_1b)=0,\\
+ \iota:E\longrightarrow P,&\qquad \iota(a)=e_0a.
+ \end{split}
+\]
+Both are chain maps, and $q\iota=\operatorname{id}_E$.
+The map $q$ is a bimodule map. The section $\iota$ is right $E$-linear
+but need not be left $E$-linear.
+
+\begin{proposition}\label{prop:rel-contraction}
+The augmentation $q$ is a quasi-isomorphism. More precisely, the degree
+minus one $R$-linear map
+\begin{equation}\label{eq:rel-contraction}
+ \begin{split}
+ h(\tau^i e_0\tau^j)
+ &=\sum_{\ell=0}^{i-1}(-1)^\ell
+       \tau^\ell e_1\tau^{i+j-1-\ell},\\
+ h(\tau^i e_1\tau^j)&=0
+ \end{split}
+\end{equation}
+satisfies $d_Ph+hd_P=\operatorname{id}_P-\iota q$ for all $i,j\geq0$.
+\end{proposition}
+
+\begin{proof}
+An empty sum is zero. Each term in the first formula has degree
+$-(i+j+1)$, so $h$ lowers degree by one.
+Write $X_{ij}=\tau^i e_0\tau^j$ and $Y_{ij}=\tau^i e_1\tau^j$.
+Set $\epsilon_i=0$ for even $i$ and $\epsilon_i=1$ for odd $i$.
+
+We split $d_P=s\delta+\rho$, where
+\[
+ \begin{split}
+ \delta X_{ij}&=\epsilon_iX_{i-1,j}
+                       +(-1)^i\epsilon_jX_{i,j-1},\\
+ \delta Y_{ij}&=\epsilon_iY_{i-1,j}
+                       +(-1)^i\epsilon_jY_{i,j-1},\\
+ \rho X_{ij}&=0,\\
+ \rho Y_{ij}&=(-1)^i(X_{i+1,j}-X_{i,j+1}).
+ \end{split}
+\]
+A term with a negative index and zero coefficient is omitted.
+The factor $(-1)^i$ in $\rho$ comes from passing the differential across
+the left word $\tau^i$.
+
+On $X_{ij}$ the relation terms telescope:
+\[
+ \rho hX_{ij}
+ =\sum_{\ell=0}^{i-1}
+     \bigl(X_{\ell+1,i+j-1-\ell}-X_{\ell,i+j-\ell}\bigr)
+ =X_{ij}-X_{0,i+j}.
+\]
+On $Y_{ij}$ they give
+\[
+ h\rho Y_{ij}
+ =(-1)^i\bigl(hX_{i+1,j}-hX_{i,j+1}\bigr)=Y_{ij}.
+\]
+The two sums in parentheses have the same first $i$ terms.
+Their remaining term is $(-1)^iY_{ij}$.
+Thus $\rho h+h\rho=\operatorname{id}_P-\iota q$.
+
+It remains to prove $\delta h+h\delta=0$.
+Both summands vanish on every $Y_{ij}$.
+They also vanish on $X_{0j}$, since $hX_{0j}=0$ and $h\delta X_{0j}=0$.
+
+For $i\geq1$, put $N=i+j-1$. For $0\leq p\leq i-2$, the coefficient
+of $Y_{p,N-1-p}$ in $(\delta h+h\delta)X_{ij}$ is
+\[
+ \epsilon_{N-p}
+ +(-1)^p\bigl(-\epsilon_{p+1}+\epsilon_i+(-1)^i\epsilon_j\bigr).
+\]
+Use the identities
+\[
+ \epsilon_{a+b}=\epsilon_a+(-1)^a\epsilon_b,
+ \qquad \epsilon_{p+1}+(-1)^{p+1}\epsilon_{N-p}
+       =\epsilon_{i+j}.
+\]
+The coefficient is zero because
+$\epsilon_i+(-1)^i\epsilon_j=\epsilon_{i+j}$.
+
+If $j\geq1$, the last possible coefficient, at $p=i-1$, is
+\[
+ \epsilon_j+(-1)^i\epsilon_j(-1)^{i-1}=0.
+\]
+For $j=0$ this last basis term does not occur.
+These are all terms, proving the required cancellation.
+
+The two identities for $\rho$ and $\delta$ prove the contraction formula.
+It implies that $q$ and $\iota$ induce inverse cohomology maps.
+Consequently $q$ is a quasi-isomorphism.
+\end{proof}
+
+The contraction has a direct interpretation in its first cases:
+\[
+ h(\tau e_0)=e_1,
+ \qquad h(\tau^2e_0)=e_1\tau-\tau e_1.
+\]
+For the first word, $d_Ph(\tau e_0)=\tau e_0-e_0\tau$.
+For the second, differentiating the two terms gives opposite scalar
+contributions $s e_1$ and $-s e_1$.
+Their remaining terms equal $\tau^2e_0-e_0\tau^2$.
+The general formula extends these two cancellations to every word.
+
+\section{Why this resolution computes derived maps}
+\label{sec:rel-derived-maps}
+
+To compute maps from a resolution, we need its Hom complex to preserve
+quasi-isomorphisms in the target.
+A bimodule $Q$ is homotopically projective if
+$\operatorname{Hom}_{E-E}(Q,N)$ is acyclic for every acyclic bimodule $N$.
+A bimodule quasi-isomorphism $q:Q\to E$ from such a $Q$ is a
+homotopically projective resolution of the diagonal.
+
+\begin{lemma}\label{lem:rel-hom-acyclic}
+If the bimodule $N$ is acyclic, then
+$\operatorname{Hom}_{E-E}(P,N)$ is acyclic.
+\end{lemma}
+
+\begin{proof}
+A degree-$n$ map $F:P\to N$ is determined by
+\[
+ F(e_0)=a\in N^n,\qquad F(e_1)=b\in N^{n-2}.
+\]
+Its differential, evaluated on the two generators, is
+\begin{equation}\label{eq:rel-pair-differential}
+ \partial(a,b)=\bigl(da,\,db-\tau a+(-1)^n a\tau\bigr).
+\end{equation}
+For the second component, graded left linearity gives
+$F(\tau e_0)=(-1)^n\tau a$, while right linearity gives
+$F(e_0\tau)=a\tau$. Substitution into
+\eqref{eq:rel-hom-differential} proves the formula.
+
+Suppose $(a,b)$ is a cycle. Since $da=0$, acyclicity supplies
+$\alpha\in N^{n-1}$ with $d\alpha=a$.
+Subtracting $\partial(\alpha,0)$ leaves a cycle $(0,\beta)$.
+Its second component satisfies $d\beta=0$ by
+\eqref{eq:rel-pair-differential}.
+
+Choose $\gamma\in N^{n-3}$ with $d\gamma=\beta$.
+Then $(0,\beta)=\partial(0,\gamma)$, so
+$(a,b)=\partial(\alpha,\gamma)$.
+Every cycle is a boundary.
+\end{proof}
+
+The cone construction relates acyclic targets to quasi-isomorphisms.
+For a chain map $f:V\to W$, its cone is the
+complex with
+\[
+ \operatorname{Cone}(f)^n=W^n\oplus V^{n+1},\qquad
+ d(b,a)=(db+f(a),-da).
+\]
+The second component has had its degree decreased by one.
+The chain map equation implies that the displayed differential squares to
+zero.
+
+For a degree-zero bimodule chain map $f:V\to W$, postcomposition gives
+\[
+ \operatorname{Hom}_{E-E}(Q,f):
+ \operatorname{Hom}_{E-E}(Q,V)\longrightarrow
+ \operatorname{Hom}_{E-E}(Q,W),\qquad F\longmapsto f\circ F.
+\]
+For a map $F$ of degree $n$, the chain map equation for $f$ gives
+\[
+ \partial(fF)=d_WfF-(-1)^n fF d_Q
+ =f\bigl(d_VF-(-1)^nF d_Q\bigr)=f\,\partial F.
+\]
+Thus postcomposition is a chain map between the two Hom complexes.
+
+\begin{lemma}\label{lem:rel-cone}
+The cone of $f$ is acyclic if and only if $f$ is a quasi-isomorphism.
+If $Q$ has the acyclic-target property in the definition above, then
+$\operatorname{Hom}_{E-E}(Q,f)$ is a quasi-isomorphism for every bimodule
+quasi-isomorphism $f$.
+\end{lemma}
+
+\begin{proof}
+First suppose $f$ induces cohomology isomorphisms.
+A cone cycle $(b,a)$ satisfies $da=0$ and $f(a)=-db$.
+Injectivity gives $a=dx$ for some $x$.
+Then $b+f(x)$ is a cycle, so surjectivity supplies a cycle $c$ and an
+element $y$ with $b+f(x)=f(c)+dy$.
+It follows that $(b,a)=d(y,c-x)$.
+
+Conversely, suppose the cone is acyclic.
+For a cycle $b\in W^n$, write $(b,0)=d(y,x)$.
+Then $dx=0$ and $b=dy+f(x)$, proving surjectivity on cohomology.
+If $a\in V^n$ is a cycle with $f(a)=db$, then $(-b,a)$ is a cone cycle.
+A cone primitive has second component $x$ with $a=-dx$.
+This proves injectivity.
+
+For bimodules, give the cone the actions
+\[
+ \alpha(b,a)\beta
+ =\bigl(\alpha b\beta,(-1)^{|\alpha|}\alpha a\beta\bigr).
+\]
+The left sign compensates for the degree decrease in the second component.
+Expanding the differential on these two components verifies
+\eqref{eq:rel-bimodule-leibniz}.
+
+A degree-$n$ map into this cone is a pair $(F,G)$ of bimodule maps
+of degrees $n,n+1$ into $W,V$.
+Its differential is $(\partial F+fG,-\partial G)$.
+Thus there is an equality of complexes under component evaluation:
+\[
+ \operatorname{Hom}_{E-E}(Q,\operatorname{Cone}(f))
+ =\operatorname{Cone}\bigl(\operatorname{Hom}_{E-E}(Q,f)\bigr).
+\]
+
+The first part makes $\operatorname{Cone}(f)$ acyclic.
+The acyclic-target property makes the left side acyclic.
+The first part applied again proves the second assertion.
+\end{proof}
+
+Proposition~\ref{prop:rel-contraction} and
+Lemma~\ref{lem:rel-hom-acyclic} show that $q:P\to E$ is a
+homotopically projective resolution.
+For any bimodule $N$, the groups
+$H^n\operatorname{Hom}_{E-E}(P,N)$ are the derived bimodule maps from the
+diagonal to $N$. The word derived specifies that we compute from such a
+resolution. Lemma~\ref{lem:rel-cone} proves that these groups respect
+quasi-isomorphisms in the target.
+
+The resolution choice also does not affect the resulting maps or their
+composition algebra. To see this, let $q':Q\to E$ be another
+homotopically projective resolution. The quasi-isomorphism
+\[
+ \operatorname{Hom}_{E-E}(P,Q)\xrightarrow{\ q'\circ(-)\ }
+ \operatorname{Hom}_{E-E}(P,E)
+\]
+provides a degree-zero chain map $f:P\to Q$ with $q'f$ homotopic to $q$.
+Interchanging $P,Q$ provides $g:Q\to P$ with $qg$ homotopic to $q'$.
+
+The maps $q(gf)$ and $q$ are homotopic.
+Injectivity on degree-zero cohomology of $\operatorname{Hom}(P,q)$ gives
+$gf\simeq\operatorname{id}_P$.
+The same argument gives $fg\simeq\operatorname{id}_Q$.
+
+Here and below composition is written $FG=F\circ G$, so $G$ acts first.
+Write $\operatorname{End}_{E-E}(M)=\operatorname{Hom}_{E-E}(M,M)$
+for maps from a bimodule to itself.
+For homogeneous maps the Hom differential satisfies
+\[
+ \partial(FG)=(\partial F)G+(-1)^{|F|}F(\partial G).
+\]
+This follows by expanding both sides using
+\eqref{eq:rel-hom-differential}.
+It proves that composition descends to cohomology.
+
+The maps
+\[
+ [F]\longmapsto[fFg],\qquad [G]\longmapsto[gGf]
+\]
+then give inverse graded algebra isomorphisms between
+$H^*\operatorname{End}_{E-E}(P)$ and
+$H^*\operatorname{End}_{E-E}(Q)$.
+Indeed, in cohomology $[gf]=[\operatorname{id}_P]$ and
+$[fg]=[\operatorname{id}_Q]$.
+These two identities prove both preservation of products and the inverse
+property. Different lifts $f,g$ are homotopic by the same injectivity
+argument, so the induced isomorphism is independent of those lifts.
+
+We define the relative Hochschild cohomology, or cohomology of the
+relative derived center, by
+\[
+ \operatorname{HH}_R^*(E)
+   =H^*\operatorname{End}_{E-E}(P).
+\]
+The endomorphism complex has composition as product and identity map as
+unit. The subscript $R$ records the common scalar action in the two tensor
+factors of $E^e$. The preceding argument makes this definition independent
+of the homotopically projective resolution.
+
+The scalar relation now gives a precise comparison problem.
+Multiplication by $t^r$ is null-homotopic as an $R$-linear map on $E$.
+We ask which powers of $t$ admit a bimodule null-homotopy on $P$.
+Equivalently, we must compute the kernel of
+$R\to\operatorname{HH}_R^0(E)$.
+The calculation below gives $(t^{2r})$, whereas the kernel of
+$R\to H^0(E)$ is $(t^r)$.
+For $r=2$, the first bimodule null-homotopy therefore occurs at $t^4$.
+
+Tensoring over $R$ with $E$ preserves quasi-isomorphisms.
+As an $R$-complex, $E$ is a direct sum, for $j\geq0$, of
+\[
+ R\tau u^j\xrightarrow{\ s\ }Ru^j
+\]
+in degrees $-2j-1,-2j$.
+
+We prove this first for acyclic targets.
+A subcomplex $U\subset V$ consists of submodules $U^n\subset V^n$
+with $d(U^n)\subset U^{n+1}$.
+The quotient modules $V^n/U^n$ form a complex with differential
+$[v]\mapsto[dv]$, well-defined by this containment.
+
+Tensor one displayed summand with an acyclic $R$-complex $N$.
+Its subcomplex $Ru^j\otimes_R N$ is a copy of $N$ with degrees translated
+by $-2j$. The quotient is a copy of $N$ with degrees translated by
+$-2j-1$ and differential $-d_N$.
+Both are acyclic.
+
+Here a short exact sequence of complexes is degreewise an injection,
+followed by a surjection whose kernel is the image of that injection.
+In such a sequence with acyclic subcomplex and quotient, the middle
+complex is acyclic.
+For a proof, send a middle cycle to the quotient and choose a primitive
+there. Subtract the differential of a lift of that primitive.
+The remaining cycle belongs to the subcomplex and has a primitive there.
+
+This proves the assertion for each two-term tensor summand.
+Their direct sum is acyclic because every element has finite support.
+Thus tensoring with $E$ preserves acyclicity.
+
+To apply the cone criterion, for an $R$-complex $A$ use the isomorphism
+\[
+ A\otimes_R\operatorname{Cone}(f)\longrightarrow
+ \operatorname{Cone}(1_A\otimes f),\qquad
+ a\otimes(w,v)\longmapsto
+ \bigl(a\otimes w,(-1)^{|a|}a\otimes v\bigr).
+\]
+It is its own inverse on components. Under either route through the
+differentials, the first component is
+\[
+ da\otimes w+(-1)^{|a|}a\otimes dw+(-1)^{|a|}a\otimes f(v),
+\]
+and the second is $(-1)^{|a|+1}da\otimes v-a\otimes dv$.
+It is therefore an isomorphism of complexes.
+Taking $A=E$ and applying the cone criterion proves preservation of
+quasi-isomorphisms by $E\otimes_R(-)$.
+
+The interchange map $a\otimes v\mapsto(-1)^{|a||v|}v\otimes a$
+is an isomorphism of $R$-complexes: applying it twice gives the identity,
+and the tensor differentials agree, with signs
+$(-1)^{(|a|+1)|v|}$ on $v\otimes da$ and
+$(-1)^{|a||v|}$ on $dv\otimes a$.
+Hence tensoring on the other side preserves quasi-isomorphisms as well.
+The same statement holds for $E^{\mathrm{op}}$, whose underlying complex
+is unchanged. Hence any quasi-isomorphism $V\to E$ of $R$-complexes
+induces a quasi-isomorphism
+\[
+ V\otimes_R E^{\mathrm{op}}\longrightarrow
+ E\otimes_R E^{\mathrm{op}}.
+\]
+The corresponding assertion holds with the first factor fixed.
+This is the tensor invariance required to use the ordinary enveloping
+algebra in this relative calculation.
+
+\section{The central complex and its product}
+\label{sec:rel-central-complex}
+
+The complex $C=\operatorname{Hom}_{E-E}(P,E)$ is smaller than the
+endomorphism complex of $P$. We first compute its differential and then
+give it the composition product through an explicit comparison.
+A degree-$n$ element is a pair $(a,b)$ with
+\[
+ a\in E^n,\qquad b\in E^{n-2}.
+\]
+In particular, the second component has total degree $|b|+2$ as an
+element of $C$. Formula~\eqref{eq:rel-pair-differential} gives
+\begin{equation}\label{eq:rel-central-pair}
+ D(a,b)=\bigl(da,\,db-\tau a+(-1)^n a\tau\bigr).
+\end{equation}
+Here $D$ denotes the Hom differential, while $d$ remains the differential
+on $E$.
+
+The commutation term cancels in $D^2$ as follows.
+For $a\in E^n$, write $K_n(a)=-\tau a+(-1)^n a\tau$.
+Expansion with $d\tau=s$ gives
+\[
+ dK_n(a)+K_{n+1}(da)=-sa+as=0.
+\]
+The first component of $D^2$ is $d^2a=0$.
+The second is $d^2b+dK_n(a)+K_{n+1}(da)=0$.
+The final equality uses the common scalar action of $s$.
+
+Define a degree-zero bimodule map
+\[
+ \Delta:P\longrightarrow P\otimes_E P,
+ \qquad
+ \Delta(e_0)=e_0\otimes e_0,
+ \qquad
+ \Delta(e_1)=e_1\otimes e_0+e_0\otimes e_1.
+\]
+The tensor product uses the right action on the first $P$ and the left
+action on the second $P$. Its outer actions extend the displayed formulas
+uniquely to a bimodule map.
+
+\begin{lemma}\label{lem:rel-diagonal}
+The map $\Delta$ is a chain map. It is coassociative and has counit $q$:
+\[
+ (\Delta\otimes1)\Delta=(1\otimes\Delta)\Delta,
+ \qquad (q\otimes1)\Delta=(1\otimes q)\Delta=\operatorname{id}_P,
+\]
+using the action identifications $E\otimes_E P=P=P\otimes_E E$.
+\end{lemma}
+
+\begin{proof}
+Both sides of the chain map equation vanish on $e_0$.
+On $e_1$, the differential of its image is
+\[
+ \begin{split}
+ d\Delta(e_1)
+  ={}&\tau e_0\otimes e_0-e_0\tau\otimes e_0\\
+    &+e_0\otimes\tau e_0-e_0\otimes e_0\tau\\
+  ={}&\tau e_0\otimes e_0-e_0\otimes e_0\tau
+   =\Delta(d_Pe_1).
+ \end{split}
+\]
+The middle terms cancel by balancing.
+
+Both iterated diagonals send $e_0$ to $e_0\otimes e_0\otimes e_0$.
+Both send $e_1$ to the sum of three tensors with $e_1$ in one position
+and $e_0$ in the other two positions.
+This proves coassociativity on the generators and hence on $P$.
+Finally, $q(e_0)=1$ and $q(e_1)=0$ give both counit identities on the
+generators.
+\end{proof}
+
+Let $\mu:E\otimes_E E\to E$ be multiplication.
+Define the cup product by
+\[
+ F\smile G=\mu(F\otimes G)\Delta.
+\]
+Both $e_0$ and $e_1$ have even degree. Thus evaluation on the generators
+introduces no further tensor signs, and the formula is
+\begin{equation}\label{eq:rel-cup-product}
+ (a,b)\smile(c,e)=(ac,bc+ae).
+\end{equation}
+This formula is associative by direct multiplication of three pairs.
+Its unit is $(1,0)$, which is the augmentation $q$ as an element of $C$.
+
+Introduce $z=(0,1)$, a homogeneous element of degree two.
+Formula~\eqref{eq:rel-cup-product} gives $z^2=0$ and
+$z(a,0)=(a,0)z=(0,a)$.
+Consequently the graded cup algebra is
+\[
+ C=E[z]/(z^2),\qquad a+bz\longleftrightarrow(a,b),\qquad |z|=2,
+\]
+where $z$ commutes with every element of $E$.
+The notation is a quotient of an associative graded algebra, and still
+retains $u=\tau^2$.
+
+Formula~\eqref{eq:rel-central-pair} now reads
+\begin{equation}\label{eq:rel-central-model}
+ Dt=0,\qquad Dz=0,\qquad Du=0,\qquad D\tau=s-2uz.
+\end{equation}
+For $\tau$ the second component is
+$-\tau\tau-\tau\tau=-2u$.
+For $u$ it is $-\tau u+u\tau=0$.
+Thus the coefficient $2$ has been determined by graded linearity and the
+specified generator $e_1$.
+
+These formulas define a derivation of the cup product.
+For an explicit check, the even subalgebra $R[u,z]/(z^2)$ is killed by
+$D$, and each element of $C$ is a sum of an even element and $\tau$
+times an even element. Set $f=s-2uz$.
+The Leibniz rule holds for products with an even factor because $f$ is
+central. For two odd factors $\tau a,\tau b$, with $a,b$ even, it gives
+$fa\tau b-\tau afb=0$, agreeing with $D(uab)=0$.
+This checks all products by bilinearity.
+
+\begin{proposition}\label{prop:rel-composition}
+The differential graded algebra $C$ computes the composition product on
+the relative derived center. More precisely, there is a unital
+multiplicative quasi-isomorphism
+\[
+ T:C\longrightarrow\operatorname{End}_{E-E}(P)
+\]
+defined, for $F=(a,b)$ of degree $n$, by
+\[
+ T_F(e_0)=e_0a,\qquad T_F(e_1)=e_1a+e_0b.
+\]
+\end{proposition}
+
+\begin{proof}
+Both displayed values have the required degrees.
+Extend them to $P$ by graded bimodule linearity.
+For $G=(c,e)$, right linearity gives
+\[
+ \begin{split}
+ T_FT_G(e_0)&=e_0ac,\\
+ T_FT_G(e_1)&=e_1ac+e_0(bc+ae).
+ \end{split}
+\]
+These are $T_{F\smile G}$ by
+\eqref{eq:rel-cup-product}. Also $T_{(1,0)}=\operatorname{id}_P$.
+
+The endomorphism differential evaluated on $e_0$ is $e_0da$.
+On $e_1$ it is
+\[
+ \begin{split}
+ (\partial T_F)(e_1)
+  ={}&(\tau e_0-e_0\tau)a+e_1da+e_0db\\
+     &-(-1)^n\bigl((-1)^n\tau e_0a-e_0a\tau\bigr)\\
+  ={}&e_1da+e_0\bigl(db-\tau a+(-1)^n a\tau\bigr).
+ \end{split}
+\]
+The sign on $T_F(\tau e_0)$ is $(-1)^n$.
+The resulting expression proves $\partial T_F=T_{DF}$ on both cells.
+
+Postcomposition with $q$ defines a chain map
+\[
+ q_*:\operatorname{End}_{E-E}(P)\longrightarrow
+           \operatorname{Hom}_{E-E}(P,E)=C.
+\]
+Since $q$ is a quasi-isomorphism, Lemmas~\ref{lem:rel-hom-acyclic}
+and~\ref{lem:rel-cone} make $q_*$ a quasi-isomorphism.
+
+Evaluation on the two cells gives $q_*T_F=F$.
+On cohomology, $H(q_*)H(T)$ is therefore the identity.
+Since $H(q_*)$ is an isomorphism, so is $H(T)$.
+The product identity already proved makes this an isomorphism of graded
+algebras. No multiplicativity of $q_*$ is needed.
+\end{proof}
+
+The comparison identifies the scalar $a\in R$ in $C$ with the scalar
+endomorphism $a\operatorname{id}_P$.
+Consequently the scalar calculation in $C$ determines the vanishing of
+the corresponding derived central operation.
+
+\section{The exact scalar exponent and the full cohomology ring}
+\label{sec:rel-center-cohomology}
+
+Let
+\[
+ S=R[u,z]/(z^2),\qquad |u|=-2,\quad |z|=2,
+ \qquad f=s-2uz.
+\]
+All elements of $S$ have even degree, and $f$ has degree zero.
+The unique even--odd decomposition of the central complex is
+\[
+ C=S\oplus\tau S,\qquad D(a+\tau b)=fb.
+\]
+
+The differential thus reduces to multiplication by one element of $S$.
+Although $z$ is a zero divisor in $S$, the element $f$ is not.
+Indeed, write $b=b_0+zb_1$ with $b_0,b_1\in R[u]$.
+Then
+\begin{equation}\label{eq:rel-injectivity}
+ fb=s b_0+z(s b_1-2u b_0).
+\end{equation}
+If this is zero, its first coefficient gives $b_0=0$, since $s$ is not
+a zero divisor in $R[u]$. The second then gives $b_1=0$.
+
+The ring quotient will follow from this injectivity. To record its
+individual degrees, we also need coordinates for linear maps.
+An $R$-linear map between finite free modules with bases
+$v_1,\ldots,v_m$ and $w_1,\ldots,w_n$ is represented by its matrix
+$A=(a_{ij})$, where
+\[
+ F(v_j)=\sum_{i=1}^n a_{ij}w_i.
+\]
+Thus column $j$ records the image of the $j$th basis element.
+If another map has matrix $B=(b_{ki})$, their composite has matrix
+$BA$, since the coefficient of its $k$th output basis element on $v_j$
+is $\sum_i b_{ki}a_{ij}$.
+
+The identity matrix has entries $1$ on its diagonal and $0$ elsewhere.
+A square matrix is invertible when another matrix multiplies with it
+in either order to give the identity. The corresponding linear maps
+are then inverse.
+
+When the scalar ring is a field, its modules are called vector spaces.
+The span of vectors is the set of their finite linear combinations.
+They are linearly independent when a finite linear combination is zero
+only if all its coefficients are zero.
+A basis is an independent spanning family, equivalently a family giving
+each vector a unique finite coordinate expression.
+The span is a subspace, meaning a submodule over the field.
+
+For a space with a finite basis, the number of basis vectors is its
+dimension. This number does not depend on the basis.
+Indeed, start with a spanning list of $n$ vectors and an independent list
+$v_1,\ldots,v_m$. Express $v_1$ in the spanning list and replace an entry
+with nonzero coefficient by $v_1$. Division by that coefficient shows
+that the new list still spans.
+
+After inserting $v_1,\ldots,v_j$, the expression for $v_{j+1}$ has a
+nonzero coefficient on an entry not yet replaced, since otherwise the
+$v_i$ would be dependent. Replacing that entry continues the process.
+There can be at most $n$ replacements, so $m\leq n$.
+Applying this inequality to two finite bases in both orders proves
+equality of their lengths. A finite spanning list always contains a
+basis: repeatedly remove an entry expressible in the others until the
+remaining list is independent.
+
+\begin{theorem}\label{thm:rel-full-center}
+For the differential graded algebra
+$E=k[t]\langle\tau\rangle$ with $|\tau|=-1$ and $d\tau=t^r$,
+the relative derived center has cohomology
+\begin{equation}\label{eq:rel-center-ring}
+ \operatorname{HH}_R^*(E)
+  =\frac{k[t,u,z]}{(z^2,t^r-2uz)},
+ \qquad |t|=0,\quad |u|=-2,\quad |z|=2.
+\end{equation}
+Its homogeneous groups are
+\[
+ \begin{split}
+ \operatorname{HH}_R^{-2j}(E)&=R/(t^{2r})\,[u^j],\qquad j\geq0,\\
+ \operatorname{HH}_R^2(E)&=R/(t^r)\,[z].
+ \end{split}
+\]
+All other groups vanish. The kernel of $R\to\operatorname{HH}_R^0(E)$
+is exactly $(t^{2r})$.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:rel-injectivity} proves that the odd part has no
+cycles. The even part consists of cycles, with boundaries $fS$.
+Thus $H^*(C)=S/(f)$ as an algebra.
+Proposition~\ref{prop:rel-composition} identifies it with the stated
+relative derived center.
+
+To determine the homogeneous groups and the scalar kernel, note that
+$u^a z^b$ has degree $-2a+2b$, with $a\geq0$ and $b=0,1$.
+For $j\geq0$, an $R$-basis of $C^{-2j}$ is
+$u^j,u^{j+1}z$. An $R$-basis of $C^{-2j-1}$ is
+$\tau u^j,\tau u^{j+1}z$.
+The differential between them has matrix
+\begin{equation}\label{eq:rel-scalar-matrix}
+ \begin{pmatrix}s&0\\-2&s\end{pmatrix}.
+\end{equation}
+For example, the second column follows from
+$D(\tau u^{j+1}z)=(s-2uz)u^{j+1}z=su^{j+1}z$.
+
+Let $v=[u^j]$ and $w=[u^{j+1}z]$.
+The two columns impose $sv-2w=0$ and $sw=0$.
+Since $2$ is invertible, every class is a multiple of $v$, and these
+relations imply $s^2v=0$.
+
+There are no further relations: if $(g,0)$ lies in the matrix image, then
+for some $A,B\in R$,
+\[
+ g=sA,\qquad 0=-2A+sB.
+\]
+Hence $A=sB/2$ and $g=s^2B/2$.
+Conversely, every multiple of $s^2$ occurs by choosing $A=sB/2$.
+The quotient is therefore exactly $R/(s^2)$ on $v$.
+For $j=0$ the generator is the unit, proving the scalar kernel assertion.
+
+In degree two, the only basis element is $z$.
+Its boundaries are the multiples of $D(\tau z)=sz$, giving $R/(s)$.
+There are no even elements in degrees greater than two.
+The odd groups already vanished by injectivity.
+\end{proof}
+
+For a unital graded algebra $B$ with an $R$-action, the kernel of
+$R\to B^0$ is also the scalar annihilator of all of $B$.
+If a scalar kills every element it kills the unit.
+If it kills the unit, multiplication shows that it kills every element.
+
+Define the scalar annihilator ideals of $H^*(E)$ and
+$\operatorname{HH}_R^*(E)$ by
+\[
+ I_{\mathrm{st}}=\ker\bigl(R\longrightarrow H^0(E)\bigr),\qquad
+ I_{\mathrm{cen}}=\ker\bigl(R\longrightarrow
+                                  \operatorname{HH}_R^0(E)\bigr).
+\]
+For ideals $I,J\subset R$, their product $IJ$ consists of finite sums
+of products $ab$ with $a\in I$ and $b\in J$. Write $I^2=II$.
+The preceding computations give
+\[
+ I_{\mathrm{st}}=(t^r),\qquad
+ I_{\mathrm{cen}}=(t^{2r})=I_{\mathrm{st}}^2
+                  \subsetneq I_{\mathrm{st}}.
+\]
+The containment is strict since $r\geq1$.
+It concerns the specified parameter ring $R$ and the relative center
+computed over that ring.
+
+The central boundary $s^2$ has an explicit primitive:
+\begin{equation}\label{eq:rel-central-square}
+ \begin{split}
+ D\bigl(\tau(s+2uz)\bigr)
+  &=(s-2uz)(s+2uz)\\
+  &=s^2-4u^2z^2=s^2.
+ \end{split}
+\end{equation}
+The correction has total degree $-1$, since $uz$ has degree zero.
+In pair notation the primitive is $(s\tau,2\tau u)$.
+Its differential is $(s^2,0)$: the two contributions to the second
+component are $-2su$ and $2su$.
+The first component is a primitive of $s^2$ in $E$.
+The second cancels its commutation term in the differential of $C$.
+Under $T$, this pair gives a bimodule null-homotopy for
+$s^2\operatorname{id}_P$.
+For $s$ itself, the matrix equations would require $A=1$ and $sB=2$,
+which has no polynomial solution.
+
+The square $u$ has two distinct mathematical roles in the calculation.
+Its class in $H^{-2}(E)$ is nonzero.
+Its product with $z$ represents the nonzero scalar $t^r/2$ in central
+degree zero. The identity $t^r=2uz$ records the obstruction to extending
+the relation $t^r=0$ in $H^*(E)$ to the relative derived center.
+
+\section{The first two relations}
+\label{sec:rel-examples}
+
+\begin{example}[The relation $t=0$]\label{ex:rel-r1}
+Let $r=1$. The free differential graded algebra $E$ has $d\tau=t$ and
+$H^*(E)=k[u]$, with the parameter $t$ acting as zero.
+The cohomology classes are $1,u,u^2,\ldots$ in degrees $0,-2,-4,\ldots$.
+For each $j$, the equation $d(\tau u^j)=tu^j$ identifies a primitive of $tu^j$.
+
+In the central complex, $D\tau=t-2uz$ and $D(\tau z)=tz$.
+For every $j\geq0$, the differential from degree $-2j-1$ to $-2j$ is
+\[
+ \begin{pmatrix}t&0\\-2&t\end{pmatrix}.
+\]
+Consequently each nonpositive even degree has the $k$-basis
+$[u^j],[tu^j]$, while degree two has basis $[z]$.
+The relations are $t^2=0$, $tz=0$, and $uz=t/2$.
+In particular, the scalar $t$ is nonzero in central degree zero, despite
+vanishing on $H^*(E)$.
+
+The equation $t=2uz$ eliminates $t$ from the cohomology presentation and
+gives a graded $k$-algebra isomorphism
+\[
+ \operatorname{HH}_R^*(E)\cong k[u,z]/(z^2).
+\]
+The retained $R$-action sends $t$ to $2uz$ in this presentation.
+Indeed, substitution in either direction respects both defining
+relations, so the two polynomial maps are inverse.
+A primitive of the central scalar $t^2$ is given by
+\[
+ D\bigl(t\tau+2\tau uz\bigr)=t^2.
+\]
+Its first term has differential $t^2-2tuz$.
+Its second has differential $2tuz$, which removes the defect.
+\end{example}
+
+\begin{example}[The relation $t^2=0$]\label{ex:rel-r2}
+Let $r=2$. The cohomology algebra of $E$ is $k[t,u]/(t^2)$.
+Each nonpositive even degree has basis $[u^j],[tu^j]$ over $k$.
+The equations $d\tau=t^2$ and $d(t\tau)=t^3$ exhibit $t^2$ and $t^3$
+as boundaries in degree zero.
+
+The central differential is $D\tau=t^2-2uz$.
+Its matrix in each nonpositive even degree is
+\[
+ \begin{pmatrix}t^2&0\\-2&t^2\end{pmatrix}.
+\]
+Thus each such degree has the four independent classes
+\[
+ [u^j],\quad[tu^j],\quad[t^2u^j],\quad[t^3u^j].
+\]
+Degree two has the two classes $[z],[tz]$.
+
+The product satisfies
+\[
+ uz=\tfrac12t^2,\qquad u(tz)=\tfrac12t^3,\qquad t^2z=0.
+\]
+These relations and $z^2=0$ determine the products together with the
+polynomial products of $t$ and $u$.
+
+The scalar $t^3$ is nonzero centrally, and $t^4$ is zero.
+The primitive is
+\[
+ D\bigl(t^2\tau+2\tau uz\bigr)=t^4.
+\]
+The term $2\tau uz$ contributes $2t^2uz$, cancelling the defect from
+$t^2\tau$. Its coefficient is the same as for $r=1$, because it comes
+from the graded sign associated with the odd generator $\tau$.
+\end{example}
+
+\section{The square of a primitive}
+\label{sec:rel-square-invariant}
+
+The class $[\tau^2]$ uses the product of two primitives of $t^r$.
+We will prove that this class is independent of the primitive and is
+preserved by algebra quasi-isomorphisms that fix the scalar action.
+It will distinguish $E$ from its cohomology algebra even when the
+comparison uses a sequence of such maps in either direction.
+
+A morphism of unital differential graded $R$-algebras is a
+quasi-isomorphism when its underlying chain map is one.
+The zero-differential algebra $H^*(A)$ has the induced product and
+the scalar action $a\mapsto[a1]$.
+
+\begin{definition}\label{def:rel-formality}
+A differential graded $R$-algebra $A$ is formal over $R$ if it can be
+joined to $H^*(A)$ by a finite sequence of quasi-isomorphisms of unital
+differential graded $R$-algebras, each arrow allowed in either direction.
+Such a sequence is called a quasi-isomorphism zigzag.
+\end{definition}
+
+To exclude such a zigzag, we seek an invariant that vanishes at one
+endpoint and not the other. Its vanishing must be preserved by
+quasi-isomorphisms in either direction.
+
+\begin{lemma}\label{lem:rel-square-invariant}
+Let $A$ be a unital differential graded $R$-algebra with $H^{-1}(A)=0$.
+Suppose $a\in R$ satisfies $[a1]=0$ in $H^0(A)$.
+For any $h\in A^{-1}$ with $dh=a1$, the element $h^2$ is a cycle.
+The class
+\[
+ \sigma_a(A)=[h^2]\in H^{-2}(A)
+\]
+is independent of $h$.
+Every morphism of such $R$-algebras preserves this class whenever both
+algebras satisfy the stated hypotheses.
+\end{lemma}
+
+\begin{proof}
+The hypothesis $[a1]=0$ provides a primitive $h$ of degree minus one.
+Since $a$ is a scalar, the Leibniz rule gives
+\[
+ d(h^2)=(dh)h-h(dh)=ah-ha=0.
+\]
+
+If $h'$ is another primitive of $a1$, then $h'-h$ is a degree-minus-one cycle.
+The vanishing of $H^{-1}(A)$ gives $x\in A^{-2}$ with $h'=h+dx$.
+Expansion yields
+\[
+ h'^2-h^2=(dx)h+h(dx)+(dx)^2.
+\]
+Its explicit primitive is
+\begin{equation}\label{eq:rel-square-independence}
+ h'^2-h^2=d\bigl(xh-hx+x\,dx\bigr).
+\end{equation}
+
+In fact,
+\[
+ \begin{split}
+ d(xh)&=(dx)h+xa,\\
+ d(hx)&=ax-h(dx),\\
+ d(x\,dx)&=(dx)^2.
+ \end{split}
+\]
+The scalar terms cancel because $xa=ax$.
+This proves independence of the chosen primitive.
+
+For a unital $R$-algebra morphism $F:A\to B$, the element $F(h)$
+satisfies $dF(h)=a1$ and $F(h^2)=F(h)^2$.
+It follows that $H^{-2}(F)(\sigma_a(A))=\sigma_a(B)$.
+\end{proof}
+
+\begin{theorem}\label{thm:rel-nonformality}
+For every $r\geq1$, the algebra
+$E=k[t]\langle\tau\rangle$ with $d\tau=t^r$ is not formal over $R=k[t]$.
+\end{theorem}
+
+\begin{proof}
+Proposition~\ref{prop:rel-state-cohomology} gives $H^{-1}(E)=0$.
+Take the scalar $a=t^r$ and its primitive $h=\tau$.
+The invariant is
+\[
+ \sigma_{t^r}(E)=[\tau^2]=[u]\ne0.
+\]
+In the zero-differential algebra $H^*(E)$, the scalar $t^r$ is already
+the zero element. It therefore has the primitive $h=0$, giving
+$\sigma_{t^r}(H^*(E))=0$.
+
+Suppose a quasi-isomorphism zigzag joined these algebras.
+Every intermediate algebra would have $H^{-1}=0$, because
+quasi-isomorphisms induce cohomology isomorphisms.
+The scalar $t^r$ would also be a boundary in every intermediate algebra.
+For a forward arrow this follows from preserving the scalar and its zero
+class. For a backward arrow it follows from injectivity of the induced
+map on $H^0$ and preservation of the unit.
+
+Thus Lemma~\ref{lem:rel-square-invariant} applies at every step.
+Along each arrow the induced isomorphism on $H^{-2}$ sends the scalar
+square invariant to the scalar square invariant.
+In either direction an isomorphism preserves whether that class is zero.
+The nonzero class at $E$ cannot become the zero class at $H^*(E)$.
+This contradiction excludes every such zigzag.
+\end{proof}
+
+The specified $R$-action is essential to the statement: it identifies
+the same scalar $t^r$ in every algebra and every arrow.
+The central exponent and the scalar square invariant use this fixed
+action in different ways. The former tests whether a scalar map admits
+a compatible null-homotopy on the resolved diagonal.
+The latter tests whether the square of a primitive can survive a
+multiplicative comparison with a zero-differential algebra.
+For $E$, both calculations use the class of $u=\tau^2$.
+
+\section{Changing the coefficients}
+\label{sec:rel-coefficient-change}
+
+Adjoining a primitive uses a specified scalar ring.
+Changing that ring gives two questions: whether the universal property
+persists, and whether cohomology commutes with the change of coefficients.
+Let $R'$ be a commutative $R$-algebra, with scalar map
+$\alpha:R\to R'$, and put $a=\alpha(t)$.
+The element $a$ may be zero or may multiply nonzero elements to zero.
+
+Extending coefficients gives the differential graded $R'$-algebra
+\[
+ E_{R'}=R'\otimes_R E=R'\langle\tau\rangle,
+ \qquad d\tau=a^r.
+\]
+Its basis is still $1,\tau,\tau^2,\ldots$.
+
+For a differential graded $R'$-algebra $A$, a morphism $f:E\to A$
+over $R$ extends uniquely by
+\[
+ R'\otimes_R E\longrightarrow A,\qquad b\otimes x\longmapsto b f(x).
+\]
+Scalar balancing makes the formula well-defined, and centrality of the
+scalars makes it multiplicative. Its degree and differential conditions
+follow directly from those of $f$.
+Restricting to $1\otimes E$ reverses the construction.
+Consequently $E_{R'}$ represents primitives $h$ satisfying $dh=a^r1$
+over the new scalar ring, with no restriction on $\alpha$.
+
+The cohomology is a different question. Define the annihilator
+\[
+ \operatorname{ann}_{R'}(a^r)=\{b\in R':a^rb=0\}.
+\]
+It measures the possible failure of multiplication by $a^r$ to be
+injective.
+
+\begin{proposition}\label{prop:rel-specialization}
+For every $j\geq0$, coefficient extension gives
+\[
+ \begin{split}
+ H^{-2j}(E_{R'})&=R'/(a^r)\,[u^j],\\
+ H^{-2j-1}(E_{R'})&=\operatorname{ann}_{R'}(a^r)\,\tau u^j,
+ \qquad u=\tau^2.
+ \end{split}
+\]
+All positive-degree cohomology groups vanish.
+The comparison
+\[
+ H^*(E)\otimes_R R'\longrightarrow H^*(E_{R'}),
+ \qquad [x]\otimes b\longmapsto[b\otimes x],
+\]
+is an isomorphism in every degree exactly when
+$\operatorname{ann}_{R'}(a^r)=0$.
+\end{proposition}
+
+\begin{proof}
+The word differential remains
+$d(\tau^{2j})=0$ and $d(\tau^{2j+1})=a^r\tau^{2j}$.
+Every even word is a cycle, and its boundaries have coefficients in
+$(a^r)$. An odd element $b\tau u^j$ is a cycle exactly when $a^rb=0$.
+There are no odd boundaries because the differential vanishes on the
+even part. This proves the displayed groups.
+
+The comparison is well-defined: replacing a cycle $x$ by $x+dy$
+changes its image by the boundary $d(b\otimes y)$, and the scalar
+balancing relations hold in the target.
+In every nonpositive even degree it is the map
+\[
+ (R/(t^r))\otimes_R R'\longrightarrow R'/(a^r),
+ \qquad [c]\otimes b\longmapsto[\alpha(c)b].
+\]
+Its inverse sends $[b]$ to $[1]\otimes b$.
+This is independent of the representative because
+$[1]\otimes a^r b=[t^r]\otimes b=0$.
+The two composites are identities by balancing.
+
+The source has no odd degrees, while the target's odd groups are copies
+of $\operatorname{ann}_{R'}(a^r)$.
+Hence the comparison is an isomorphism precisely under the stated
+annihilator condition.
+\end{proof}
+
+An $R$-module $R'$ is flat if tensoring with it preserves every short
+exact sequence of $R$-modules. Short exact has the same injection,
+kernel, and surjection meaning as for complexes degree by degree.
+Flatness is sufficient for the condition above.
+Indeed, applying coefficient extension to
+\[
+ 0\longrightarrow R\xrightarrow{\ t^r\ }R
+ \longrightarrow R/(t^r)\longrightarrow0
+\]
+keeps multiplication by $a^r$ injective.
+The proposition identifies the exact condition needed for this particular
+complex, even when flatness of the entire coefficient module is unknown.
+
+For $R'=k=R/(t)$, the image $a$ is zero.
+Every word then survives, so
+\[
+ H^*(E_{k})=k\langle\tau\rangle,
+ \qquad H^*(E)\otimes_R k=k[u].
+\]
+The comparison sends $u$ to $\tau^2$ and misses every odd word.
+The equation defining the primitive extends to $d\tau=0$.
+The zero differential produces the additional odd cohomology classes.

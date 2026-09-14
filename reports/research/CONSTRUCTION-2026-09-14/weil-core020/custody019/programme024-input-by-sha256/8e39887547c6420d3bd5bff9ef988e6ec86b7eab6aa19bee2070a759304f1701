@@ -1,0 +1,1623 @@
+\chapter{Quantum currents at every arity}
+\label{chap:all-arity-current-actions}
+
+A quantum symmetry must act on every finite collection of local
+sources. Its identities relate different numbers of insertions.
+The local triangle anomaly fixes one term in those identities.
+Higher wheels also contribute at a positive heat scale. Their
+variations contain collapsed wheels, which must cancel with
+the Lie brackets of adjacent sources.
+
+For the free theory on a holomorphic surface, every connected
+matter graph is a path or a cycle. This restriction makes a
+complete construction possible. Paths give the classical current
+maps. Cycles give their scalar quantum corrections. A uniform
+Gaussian estimate controls every partial collision, and the
+remaining local curvature defines a central extension of the
+source algebra.
+
+\section{Compact sources and the meaning of the series}
+
+Set $X=\mathbb C^2$, with $z_j=x_j+iy_j$, and fix
+\[
+ \Omega=dz_1\wedge dz_2,\qquad
+ dV_4=dx_1\wedge dy_1\wedge dx_2\wedge dy_2,\qquad
+ d\bar z_1d\bar z_2\Omega=4dV_4.
+\]
+Products of differential forms mean wedge products.
+Let $\mathfrak g$ be an ordinary finite-dimensional complex Lie
+algebra and let $\rho:\mathfrak g\to\operatorname{End}_{\mathbb C}(V)$
+be a representation on an ordinary finite-dimensional complex
+vector space. The compactly supported parameter algebra is
+\[
+ \mathfrak g_c=\Omega_c^{0,\bullet}(X,\mathfrak g),\qquad
+ d=\bar\partial,\qquad
+ [\alpha X_0,\eta Y_0]=(\alpha\wedge\eta)[X_0,Y_0].
+\]
+The degree of a parameter is its antiholomorphic form degree.
+
+Write the full second matter field as
+$\beta_{\mathrm{full}}=\beta\wedge\Omega$. Thus the coefficient
+fields are
+\[
+ \gamma\in\Omega^{0,\bullet}(X)\otimes V,\qquad
+ \beta\in\Omega^{0,\bullet}(X)\otimes V^\vee[1].
+\]
+The shift acts on the coefficient space, with
+$E[k]^j=E^{j+k}$. Component coordinates of form degree $q$
+have ghost numbers $-q$ for $\gamma$ and $1-q$ for $\beta$.
+Holomorphic volume forms always stand on the right.
+
+A finite collection of source insertions requires only a finite
+family of compact smooth forms. For homogeneous
+$\alpha_j\in\mathfrak g_c^{p_j}$, introduce independent formal
+parameters and put
+\[
+ A=\sum_{j=1}^m t_j\alpha_j,\qquad |t_j|=1-p_j.
+\]
+The coefficient algebra $B$ is freely graded commutative on the
+$t_j$. Odd parameters square to zero. The total degrees of
+$\beta,A,\gamma$ are $1,1,0$, respectively, where total degree
+adds ghost number to antiholomorphic form degree. The product is
+\[
+ (u\alpha)(v\eta)
+   =(-1)^{|\alpha|\operatorname{gh}(v)}uv\,\alpha\wedge\eta.
+\]
+Odd coordinate derivatives act from the left.
+The totalized spatial differential satisfies
+$d(u\alpha)=(-1)^{\operatorname{gh}(u)}u\,d\alpha$ for formal
+coefficients. The same sign applies to spatial differentiation
+of coordinate-dependent components. Holomorphic derivatives
+$\partial_i=\partial_{z_i}$ have degree zero.
+
+On observables, the free differential $Q$ is the graded dual
+of the field differential. In these conventions,
+$Q\beta=d\beta$ and $Q\gamma=d\gamma$.
+The Chevalley--Eilenberg differential on backgrounds is
+\[
+ d_{\mathrm{CE}}A=dA-A^2,\qquad
+ d_{\mathrm{CE}}=d_{\mathrm{CE},1}+d_{\mathrm{CE},2}.
+\]
+The subscripts denote its linear and quadratic parts.
+In a matrix product, $A$ denotes $\rho(A)$.
+The source interaction
+\[
+ I(A)=\int_X\beta A\gamma\wedge\Omega
+\]
+has ghost degree zero and satisfies
+\begin{equation}\label{eq:aac-bare-cme}
+ (Q+d_{\mathrm{CE}})I+\frac12\{I,I\}_0=0,\qquad
+ \frac12\{I,I\}_0=-\int_X\beta A^2\gamma\wedge\Omega.
+\end{equation}
+These are the local identities of
+Chapter~\ref{chap:quantum-current-anomaly}. The bracket at zero
+in this equation is the displayed local contraction, whose
+diagonal evaluation exists.
+
+The currents produced by these contractions need distribution
+kernels. Use the observable space
+\[
+ \mathcal O_{\mathrm{dist}}
+ =\bigoplus_{r\geq0}
+ \mathcal E'_c\bigl(X^r;(E^\vee)^{\boxtimes r}
+                     \otimes\operatorname{Dens}\bigr)_{S_r},
+\]
+Here $E$ is the graded bundle of matter components, and
+$\operatorname{Dens}$ is the density bundle on $X^r$.
+The summand $r=0$ is $\mathbb C$. A compact distribution is a
+linear functional on smooth tests with an estimate
+\[
+ |T(\phi)|\leq C
+       \max_{|\nu|\leq M}\sup_K|\partial^\nu\phi|
+\]
+for some compact $K$, finite $M$, and constant $C$.
+Derivatives use real coordinates and a finite component basis.
+The strong topology is uniform convergence on bounded families
+of smooth tests. Such a family bounds every derivative on
+each fixed compact set.
+
+Multiplication uses external tensor products followed by graded
+symmetrization. A smooth kernel contracts two selected slots by
+\[
+ (\mathcal C_{ij}T)(\psi)
+       =T[P_{ij}\pi_{ij}^*\psi],
+\]
+where $\pi_{ij}$ forgets those slots and $P_{ij}$ includes their
+pairing bivector, inserted with its graded permutation sign.
+The finite-order estimate proves that the result is a compact
+distribution. This construction, and the external-product
+proof in Chapter~\ref{chap:quantum-current-anomaly}, apply to
+joint kernels which need not split into linear measurements.
+
+Fix a compact set $K\subset X$ containing the supports of the
+chosen backgrounds. All continuity assertions below concern
+bounded smooth families with this fixed support. On these
+sectors, the displayed seminorm bounds control both background
+coefficients and observable tests. No joint continuity on the
+unrestricted global inductive-limit products is asserted.
+
+Introduce an even variable $a$ of degree zero to record the
+number of background insertions. The formal algebra is
+\begin{equation}\label{eq:aac-formal-carrier}
+ \bigl(\mathcal O_{\mathrm{dist}}\otimes B\bigr)
+       [\hbar,\hbar^{-1}][[a]].
+\end{equation}
+Each coefficient of $a$ has finite matter degree and finite
+Laurent support in the loop parameter $\hbar$.
+The lower Laurent bound may depend on background order.
+The topology means coefficientwise agreement below each fixed
+power of $a$. There is no assertion of numerical convergence
+of the background series.
+In this notation the background differential is
+\[
+ d_{\mathrm{CE}}^{(a)}
+       =d_{\mathrm{CE},1}+a\,d_{\mathrm{CE},2}.
+\]
+To evaluate an identity, one may enlarge the finite family by
+the finitely many $d\alpha_i$ and $[\alpha_i,\alpha_j]$ that occur.
+Its linear span need not be closed under either operation.
+
+\section{Paths and cycles with their coefficients}
+
+The regulated kernels are
+\[
+ \begin{split}
+ N(u)&=\bar u_1d\bar u_2-\bar u_2d\bar u_1,\\
+ p_t(u)&=\frac{e^{-|u|^2/(4t)}}{64\pi^2t^3}N(u),\\
+ H_t(u)&=\frac{e^{-|u|^2/(4t)}}{64\pi^2t^2}
+                           d\bar u_1d\bar u_2,\\
+ P_{\epsilon,L}(u)&=\int_\epsilon^L p_t(u)\,dt,
+                         \qquad 0<\epsilon<L.
+ \end{split}
+\]
+They use full differences, including their differentials.
+Thus $P_{\epsilon,L}(-u)=P_{\epsilon,L}(u)$ under pullback.
+Their normalizations give
+$dP_{\epsilon,L}=H_\epsilon-H_L$ and
+$H_t\Omega=k_t\,dV_4$, where
+$k_t=(4\pi t)^{-2}e^{-|u|^2/(4t)}$.
+
+Write $\mathcal C_{\epsilon,L}=\partial_{P_{\epsilon,L}}$
+for the even propagator contraction and
+$\Delta_t=-\partial_{K_t}$ for the Batalin--Vilkovisky (BV)
+heat contraction. The heat tensor $K_t$ includes the matter
+pairing. On the algebra of joint distribution kernels,
+\begin{equation}\label{eq:aac-contraction-identities}
+ [Q,\mathcal C_{\epsilon,L}]=\Delta_\epsilon-\Delta_L,\qquad
+ [\mathcal C_{\epsilon,L},\Delta_t]=0,\qquad
+ Q\Delta_t+\Delta_tQ=\Delta_t^2=0.
+\end{equation}
+Transposition onto a smooth test proves the first equation.
+Differentiation of the remaining test cancels, leaving
+$-dP=-H_\epsilon+H_L$.
+In two successive contractions, the selected pairs of slots
+are disjoint. Their graded interchange proves the second
+equation and the heat-square identity. The identity $dH_t=0$
+proves compatibility with $Q$. These arguments use smooth
+positive-cutoff kernels throughout.
+
+The connected effective interaction is the formal expression
+\begin{equation}\label{eq:aac-connected}
+ I_{\epsilon,L}
+ =\hbar\log\left(
+    e^{\hbar\mathcal C_{\epsilon,L}}e^{aI/\hbar}\right).
+\end{equation}
+At background order $n$, the input has $2n$ matter legs, so
+at most $n$ contractions act. The logarithm exists since its
+argument equals $1+O(a)$.
+Expanding a graph into its connected components proves the
+exponential formula: the factorial for their unordered
+collection exponentiates the sum of connected graphs.
+Consequently the logarithm retains exactly those connected
+graphs.
+
+Every vertex has one $\beta$ leg and one $\gamma$ leg.
+Following either leg therefore gives a directed path or a
+directed cycle. A connected graph with $n$ vertices and $e$
+edges has power $\hbar^{e-n+1}$.
+Paths have two uncontracted matter legs and power zero.
+Cycles have no matter legs and power one.
+
+Set
+\[
+ s_n=(-1)^{(n-1)(n-2)/2},\qquad s_1=1.
+\]
+For $P=P_{\epsilon,L}$, define the ordered path functional
+\begin{equation}
+ \begin{split}
+ T_n^{\epsilon,L}(A)
+ =s_n\int_{X^n}
+ &P(z_1-z_2)\cdots P(z_{n-1}-z_n)\\
+ &{}\cdot\beta(z_1)A(z_1)\cdots A(z_n)\gamma(z_n)
+                         \,\Omega_1\cdots\Omega_n.
+ \end{split}
+\end{equation}
+The empty edge product for $n=1$ is one.
+For $n\geq3$, define
+\begin{equation}
+ \begin{split}
+ W_n^{\epsilon,L}(A)
+ =\frac{s_n}{n}\int_{X^n}
+ &P(z_1-z_2)\cdots P(z_n-z_1)\\
+ &{}\cdot\operatorname{Tr}_V(A(z_1)\cdots A(z_n))
+                         \,\Omega_1\cdots\Omega_n.
+ \end{split}
+\end{equation}
+Put $W_1=W_2=0$. These are kernel integrals.
+No infinite-dimensional operator trace is used.
+
+The coefficients follow from left odd differentiation.
+Start with $\prod_{j=1}^n(\beta_jA_j\gamma_j)$ and successively
+pair $\gamma_i$ with $\beta_{i+1}$.
+At step $i$, the left $\beta_{i+1}$ derivative crosses the
+$i-1$ previous propagators, $\beta_1$, and $i$ backgrounds.
+These are $2i$ odd factors, so their sign is positive.
+The propagators accumulate in reverse order. Reversing the
+$n-1$ odd propagators gives $s_n$.
+
+There are $n!$ directed paths on $n$ labeled vertices.
+Their $(n-1)!$ contraction orders cancel the denominator
+$n!(n-1)!$ from the two exponentials.
+Thus the path coefficient is $s_n$.
+Closing the path crosses $n-1$ propagators with the odd
+derivative. Moving the new propagator into edge order crosses
+them again. The two signs cancel.
+There are $(n-1)!$ directed cycles and $n!$ contraction orders.
+Division by $n!n!$ leaves $s_n/n$.
+
+Cyclic relabeling moves an odd propagator and an odd background
+together, so it introduces no further sign.
+The one-vertex loop is zero because $P(0)=0$.
+The two-vertex loop contains $P(z-w)^2=0$.
+Therefore
+\begin{equation}
+ I_{\epsilon,L}
+   =\sum_{n\geq1}a^n
+                  \bigl(T_n^{\epsilon,L}+\hbar W_n^{\epsilon,L}\bigr).
+\end{equation}
+There are no connected powers $\hbar^j$ with $j\geq2$
+for these bilinear source vertices.
+
+The same expressions can be written with interleaved kernels:
+\[
+ \begin{split}
+ T_n&=\int\beta_1A_1P_{12}A_2\cdots
+                      P_{n-1,n}A_n\gamma_n\,\Omega_1\cdots\Omega_n,\\
+ W_n&=-\frac1n\int\operatorname{Tr}_V
+       (A_1P_{12}A_2P_{23}\cdots A_nP_{n1})
+                                      \,\Omega_1\cdots\Omega_n.
+ \end{split}
+\]
+Moving the propagators left crosses
+$\sum_{i=1}^{n-1}(i+1)$ odd factors for the path and
+$\sum_{i=1}^n i$ for the cycle.
+These parities reproduce $s_n$ and $s_n/n$, respectively.
+
+\section{Every path has a compact observable kernel}
+
+The edge differences
+$u_i=z_i-z_{i+1}$ for $1\leq i<n$, together with $z_n$,
+are independent coordinates. Their real Jacobian has absolute
+value one. Each path propagator depends on one edge coordinate.
+Use the Euclidean coefficient norm in the basis
+$d\bar u_1,d\bar u_2$, so $|N(u)|=|u|$.
+Polar coordinates give
+\[
+ \begin{split}
+ \|p_t\|_{L^1}
+ &=\frac{2\pi^2}{64\pi^2t^3}
+        \int_0^\infty r^4e^{-r^2/(4t)}\,dr\\
+ &=\frac{3\sqrt\pi}{8}t^{-1/2}.
+ \end{split}
+\]
+The last integral follows by $r=2\sqrt t\,v$ and two
+integrations by parts in the ordinary Gaussian integral.
+Hence, for a constant $C$ independent of the cutoffs,
+\begin{equation}\label{eq:aac-path-l1}
+ \|P_{0,L}\|_{L^1}\leq C\sqrt L,\qquad
+ \|P_{0,L}-P_{\epsilon,L}\|_{L^1}\leq C\sqrt\epsilon.
+\end{equation}
+Here $P_{0,L}=\int_0^L p_t\,dt$ has locally integrable
+coefficients of order $|u|^{-3}$ near zero.
+
+For $n\geq2$, telescope the difference of the $n-1$ edge
+products, replacing one edge at a time.
+Fubini's theorem and \eqref{eq:aac-path-l1} give
+\begin{equation}
+ \left\|
+   \bigotimes_{i=1}^{n-1}P_{0,L}
+   -\bigotimes_{i=1}^{n-1}P_{\epsilon,L}
+ \right\|_{L^1}
+ \leq C_n\sqrt\epsilon\,L^{(n-2)/2}.
+\end{equation}
+The bound is valid at all partial spatial collisions because
+the edge coordinates are independent.
+
+The background at $z_n$ restricts the base point to $K$.
+Multiply by the other smooth background coefficients and push
+forward the internal vertices. The result is a quadratic
+matter kernel supported in $K\times K$.
+The pushforward preserves the total-variation estimate.
+Thus $T_n^{\epsilon,L}$ converges to a compact distribution
+$T_n^L$ in total variation, uniformly on bounded background
+families in this support sector.
+Its size is bounded by
+$C_{n,K}L^{(n-1)/2}\|\Phi\|_{C^0}$, where $\Phi$ includes
+the backgrounds and the smooth test for the two remaining
+matter slots. The difference obeys
+\[
+ |(T_n^L-T_n^{\epsilon,L})(\Phi)|
+ \leq C_{n,K}\sqrt\epsilon\,L^{(n-2)/2}\|\Phi\|_{C^0}.
+\]
+A fixed compact cutoff may be inserted before taking this
+seminorm. The term $T_1=I$ is independent of the cutoff.
+Every tree limit has therefore been constructed from integrable
+coefficients, without applying a singular kernel to an
+arbitrary distribution.
+
+\section{A Gaussian bound for all wheels}
+
+For a cycle with $n\geq3$ edges, assign positive times
+$t_1,\ldots,t_n$, and set
+\[
+ u_i=z_i-z_{i+1}\quad(i<n),\qquad
+ u_n=-\sum_{i<n}u_i,\qquad T=\sum_{i=1}^n t_i.
+\]
+Use $u_1,\ldots,u_{n-1}$ as independent relative coordinates
+and $z_n$ as the base point. Put
+$D=\operatorname{diag}(t_1,\ldots,t_{n-1})$ and
+$t=(t_1,\ldots,t_{n-1})^{\mathsf T}$.
+For either complex coordinate, the Gaussian precision matrix is
+\[
+ M=\frac14\left(D^{-1}
+                +t_n^{-1}\mathbf1\mathbf1^{\mathsf T}\right).
+\]
+The covariance is
+\begin{equation}\label{eq:aac-covariance}
+ C=M^{-1}=4\left(D-\frac{tt^{\mathsf T}}T\right).
+\end{equation}
+Indeed, $D^{-1}t=\mathbf1$ and $\mathbf1^{\mathsf T}t=T-t_n$.
+Multiplying the two displayed matrices leaves the rank-one
+coefficient
+$-1/T+1/t_n-(T-t_n)/(t_nT)=0$.
+
+Expand the determinant in its columns. Two columns taken from
+the rank-one term are proportional, so their contribution is
+zero. The remaining terms give
+\[
+ \det C
+ =4^{n-1}\det D\left(1-\frac{\sum_{i<n}t_i}{T}\right)
+ =4^{n-1}\frac{\prod_i t_i}{T}.
+\]
+There are two independent complex coordinate directions.
+The relative Gaussian integral is consequently
+\begin{equation}
+ Z_n=(4\pi)^{2(n-1)}
+                   \frac{(\prod_i t_i)^2}{T^2}.
+\end{equation}
+This follows by diagonalizing the positive matrix $M$ and
+using $\int_{\mathbb C}e^{-\lambda|w|^2}dV_w=\pi/\lambda$
+in each coordinate.
+
+Let $\mathbb E_{\mathbf t}$ denote normalized Gaussian
+expectation in the relative variables. Integration by parts
+against a smooth compact coefficient gives, for $\mu=1,2$,
+\[
+ \begin{aligned}
+ \mathbb E_{\mathbf t}[\bar u_{i,\mu}\Phi]
+   &=\sum_{j<n}C_{ji}\,
+                  \mathbb E_{\mathbf t}[\partial_{u_{j,\mu}}\Phi],
+                                      &&i<n,\\
+ \mathbb E_{\mathbf t}[\bar u_{n,\mu}\Phi]
+   &=-\sum_{j<n}\frac{4t_nt_j}{T}\,
+                  \mathbb E_{\mathbf t}[\partial_{u_{j,\mu}}\Phi].
+ \end{aligned}
+\]
+For the second formula, substitute $u_n=-\sum_{i<n}u_i$
+and sum the columns of \eqref{eq:aac-covariance}.
+Their absolute sums satisfy
+\begin{equation}\label{eq:aac-covariance-bounds}
+ \sum_{j<n}|C_{ji}|\leq8t_i,\qquad
+ \sum_{j<n}\frac{4t_nt_j}{T}\leq4t_n.
+\end{equation}
+For the first inequality, bound the diagonal contribution by
+$4t_i$ and the sum of the off-diagonal contributions by
+$4t_i\sum_{j<n}t_j/T$.
+No ratio between different times enters these bounds.
+
+Expand $N(u_1)\cdots N(u_n)$ in a relative exterior basis.
+Every coefficient contains one antiholomorphic linear coordinate
+from each edge. Apply the integration-by-parts formulas to all
+$n$ factors. Holomorphic derivatives annihilate the remaining
+antiholomorphic numerators. All derivatives therefore fall on
+the smooth external coefficient.
+Equation~\eqref{eq:aac-covariance-bounds} supplies
+$C_n\prod_i t_i$ times its $C^n$ seminorm.
+
+The absolute scalar prefactor, including the relative volume
+conversion, is
+\[
+ \frac{4^{n-1}Z_n}{(64\pi^2)^n\prod_i t_i^3}
+       =\frac1{64\pi^2}\frac1{T^2\prod_i t_i}.
+\]
+The numerator factors cancel every individual $t_i$ denominator.
+For each component of the wheel distribution this proves
+\begin{equation}\label{eq:aac-wheel-estimate}
+ |\mathcal W_{\mathbf t}(\Phi)|
+       \leq \frac{C_{n,K}}{(t_1+\cdots+t_n)^2}
+                                    \|\Phi\|_{C^n}.
+\end{equation}
+The constant includes the finite exterior expansion, color
+contraction, and volume of the compact base projection.
+It may depend on $n$.
+
+The estimate holds throughout the positive time orthant.
+It controls faces where only some times vanish, as well as
+the common time origin. The slice of the positive simplex
+$\sum_i t_i=\tau$ has measure $\tau^{n-1}/(n-1)!$.
+Since the time cube lies in $\sum_i t_i\leq nL$,
+\begin{equation}\label{eq:aac-wheel-time-bound}
+ \int_{[0,L]^n}\frac{d^nt}{(\sum_i t_i)^2}
+ \leq\frac1{(n-1)!}\int_0^{nL}\tau^{n-3}\,d\tau
+ =\frac{(nL)^{n-2}}{(n-1)!(n-2)}.
+\end{equation}
+This proves the lower-cutoff limit of every wheel.
+
+The excluded region is $\{\min_i t_i<\epsilon\}$.
+It lies in the union of $n$ slabs.
+For $n\geq4$, integrate the other $n-1$ times first and
+apply \eqref{eq:aac-wheel-time-bound} in that dimension.
+The error is bounded by $C_n\epsilon L^{n-3}$.
+For $n=3$, the integral over the other two times is
+\[
+ \int_0^L\!\int_0^L\frac{ds\,dt}{(u+s+t)^2}
+       =\log\frac{(u+L)^2}{u(u+2L)}.
+\]
+Its integral over $0<u<\epsilon$ is bounded by
+$C\epsilon(1+\log(L/\epsilon))$.
+Together with \eqref{eq:aac-wheel-estimate}, these estimates
+give strong convergence on bounded compact test families.
+The limiting wheel obeys
+\[
+ |W_n^L(\Phi)|\leq C_{n,K}L^{n-2}\|\Phi\|_{C^n}.
+\]
+
+The universal kernel is a distribution on $X^n$, generally
+with noncompact support because of translation invariance.
+Its scalar components belong to $\mathcal D'(X^n)$, the
+linear functionals on compactly supported smooth tests with
+a finite-order estimate on each fixed compact support.
+Multiplication by fixed compact background cutoffs gives
+compact distributions. Evaluation on the chosen backgrounds
+gives a scalar matter observable $W_n^L(A)$.
+The proof constructs the regulated distributional limit.
+It does not require absolute integrability of the unregularized
+product of singular propagators.
+
+Applying $d_{\mathrm{CE},1}$ costs one more spatial derivative
+in the seminorm. A derivative in a finite background parameter
+replaces an insertion, so it gives finitely many terms with
+the same majorant. The quadratic differential multiplies or
+brackets two smooth insertions. The finite Leibniz expansion
+controls all derivatives of that product.
+Thus every differential used below preserves these
+support-sector bounds.
+
+\section{Heat edges and collapsed insertions}
+
+The local source identity uses a diagonal contraction, whereas
+the effective bracket uses a heat kernel. Their difference
+places one distinguished edge $H_\epsilon-H_0$ in a graph.
+Here $H_0\Omega=\delta_0dV_4$ is the normalized diagonal current.
+For paths and sufficiently long cycles, the two parts have
+the same limit.
+
+In a marked path, choose the marked difference $v$ as one
+independent edge coordinate. After its top form has selected
+the external component, the heat-minus-diagonal term is
+\[
+ \int k_\epsilon(v)
+             \bigl(\Phi(v,u)-\Phi(0,u)\bigr)\,dV_v.
+\]
+The Gaussian first moment is at most $C\sqrt\epsilon$.
+The mean-value theorem and the $n-2$ remaining path estimates
+give
+\begin{equation}\label{eq:aac-marked-path}
+ |\mathcal M_{\mathrm{path},\epsilon}(\Phi)
+                 -\mathcal M_{\mathrm{path},0}(\Phi)|
+ \leq C_{n,K}\sqrt\epsilon\,
+                  L^{(n-2)/2}\|\Phi\|_{C^1}.
+\end{equation}
+This proves strong convergence to zero of every marked path
+difference.
+
+For a cycle, put the heat edge in the closing position, with
+time $r>0$. The other $n-1$ edges carry propagators.
+Its heat denominator is $r^2$, and there are only $n-1$
+antiholomorphic numerator factors.
+Repeat the covariance calculation with $t_n=r$.
+Before integration by parts, the scalar prefactor is
+\[
+ \frac1{64\pi^2}
+ \frac1{(r+\sum_{i<n}t_i)^2\prod_{i<n}t_i}.
+\]
+The $n-1$ numerator integrations by parts cancel the product
+in the denominator. Hence
+\begin{equation}\label{eq:aac-marked-wheel}
+ |\mathcal M_{r;\mathbf t}(\Phi)|
+ \leq \frac{C_{n,K}}{(r+\sum_{i<n}t_i)^2}
+                                      \|\Phi\|_{C^{n-1}}.
+\end{equation}
+For $n\geq4$, this bound is integrable uniformly as $r\downarrow0$:
+\[
+ \int_{[0,L]^{n-1}}\frac{d^{n-1}t}{(\sum_{i<n}t_i)^2}
+ \leq\frac{((n-1)L)^{n-3}}{(n-2)!(n-3)}.
+\]
+
+At fixed positive propagator times, the heat approximate
+identity collapses the marked edge with coefficient $+1$.
+The adjacent backgrounds are multiplied in their existing
+order, with the original labels and graded signs retained.
+The result is an unmarked $(n-1)$-cycle with one composite
+insertion.
+
+Strong convergence requires uniformity on the test family.
+Split the time cube into $[\delta,L]^{n-1}$ and its complement.
+On the first region, the propagators and all required
+derivatives are uniformly bounded, so the heat error tends
+uniformly to zero. On the complement, the integrable bound
+in \eqref{eq:aac-marked-wheel} is uniformly small as
+$\delta\downarrow0$.
+The collapsed term has the same bound by its fixed-time limit.
+Consequently
+\begin{equation}\label{eq:aac-collapsed-difference}
+ \mathcal M_{\epsilon;[\epsilon,L]^{n-1}}
+       -\mathcal M_{0;[\epsilon,L]^{n-1}}
+       \longrightarrow0,\qquad n\geq4.
+\end{equation}
+This is the difference of the two marked terms.
+The individual heat-marked limit can be nonzero and nonlocal
+at fixed $L$.
+
+For a four-cycle, collapse edge $41$ and set
+$x=z_1-z_3$ and $y=z_2-z_3$.
+The remaining numerator is $N(x-y)N(y)N(x)$.
+Its coefficient of $d\bar x_1d\bar x_2d\bar y_1$ equals
+\[
+ \bar y_2(\bar x_1\bar y_2-\bar x_2\bar y_1).
+\]
+It equals one at $x=(1,0)$ and $y=(0,1)$.
+The scalar heat-time factors there are positive.
+A complementary $d\bar y_2$ component and a base $(0,2)$-form
+therefore give a nonzero smooth coefficient off every remaining
+edge diagonal. Compact bumps in sufficiently small neighborhoods
+give a nonzero value. Take $\mathfrak g=\mathfrak{gl}_4$ and
+$V=\mathbb C^4$ with its defining representation.
+The ordered color matrices $E_{12},E_{23},E_{34},E_{41}$
+have trace product one.
+They isolate the corresponding directed color cycle.
+Thus vanishing of an individual higher heat-marked wheel
+would contradict an explicit compact evaluation.
+
+The one-vertex heat contraction vanishes under diagonal
+pullback of the full difference form.
+The two-vertex marked cycle has relative antiholomorphic
+degree three in two relative complex coordinates, so it
+vanishes.
+The three-vertex cycle is exceptional because
+$(s+t)^{-2}$ is not integrable at the origin of its two
+propagator times. Its exterior determinant supplies a local
+term instead of the collapsed limit.
+
+\section{The exact finite-scale Ward identity}
+
+Define the bare mismatch
+\[
+ B_\epsilon(A)=\frac12
+                  \bigl(\{I,I\}_\epsilon-\{I,I\}_0\bigr).
+\]
+The first bracket is a smooth heat contraction, and the second
+is the explicit local bracket in \eqref{eq:aac-bare-cme}.
+The heat tadpole $\Delta_\epsilon I$ is zero.
+For
+$D_\sigma=Q+d_{\mathrm{CE}}^{(a)}+\hbar\Delta_\sigma$,
+the second-order product rule therefore gives
+\[
+ D_\epsilon e^{aI/\hbar}
+        =\frac{a^2}{\hbar}B_\epsilon e^{aI/\hbar}.
+\]
+The background differential commutes with the propagator
+contraction. Equation~\eqref{eq:aac-contraction-identities}
+and commutation of the contraction operators give
+\[
+ D_L e^{\hbar\mathcal C_{\epsilon,L}}
+       =e^{\hbar\mathcal C_{\epsilon,L}}D_\epsilon.
+\]
+To verify this directly, expand the exponential.
+For $C=\mathcal C_{\epsilon,L}$, its commutator is
+$[Q,C^j]=jC^{j-1}(\Delta_\epsilon-\Delta_L)$.
+The resulting finite coefficient sums give the displayed
+identity.
+
+Let the quantum master equation (QME) defect be
+\[
+ \mathcal R_{\epsilon,L}
+ =(Q+d_{\mathrm{CE}}^{(a)})I_{\epsilon,L}
+   +\frac12\{I_{\epsilon,L},I_{\epsilon,L}\}_L
+   +\hbar\Delta_LI_{\epsilon,L}.
+\]
+Apply $D_L$ to \eqref{eq:aac-connected} in exponential form
+and divide by that exponential. The exact identity is
+\begin{equation}\label{eq:aac-regulated-defect}
+ \mathcal R_{\epsilon,L}
+ =a^2e^{-I_{\epsilon,L}/\hbar}
+       e^{\hbar\mathcal C_{\epsilon,L}}
+                  \bigl(B_\epsilon e^{aI/\hbar}\bigr).
+\end{equation}
+No assertion that the positive-cutoff bare mismatch vanishes
+is needed.
+
+Normalization by $e^{-I_{\epsilon,L}/\hbar}$ removes connected
+components disjoint from the distinguished insertion.
+The remaining component is a path or cycle containing the
+edge $H_\epsilon-H_0$.
+Its coefficients can be fixed before any edge is collapsed.
+Keep all $n$ original vertex labels. Symmetrizing the
+distinguished two-vertex insertion gives
+\begin{equation}\label{eq:aac-marked-count}
+ \frac1{2(n-2)!}\Delta_{12}(I_1I_2)
+             \prod_{j=3}^n I_j
+ \quad\longmapsto\quad
+ \frac1{n!}\sum_{i<j}\Delta_{ij}\prod_{k=1}^n I_k.
+\end{equation}
+Here $\Delta_{ij}$ denotes the distinguished cross-contraction,
+with either endpoint kernel and the BV minus sign.
+It includes both directed matter pairings.
+The equality after symmetrization follows from
+$\binom n2/n!=1/[2(n-2)!]$.
+
+There are $n(n-1)!=n!$ labeled directed cycles with a chosen
+marked edge. The remaining $(n-1)!$ contraction orders cancel
+their exponential denominator. The marked-cycle coefficient
+therefore has magnitude one.
+To find its sign, close the ordered path with
+$-H_{n1}\partial_{\beta_1}\partial_{\gamma_n}$ and place
+$H_{n1}$ first. The derivative crosses $n-1$ odd propagators,
+and the heat form has even degree. Thus the sign is
+\[
+ m_n=-(-1)^{n-1}s_n
+       =(-1)^{n(n-1)/2+1}.
+\]
+In particular, $m_3=+1$, while $m_4=m_5=-1$.
+
+The $H_\epsilon$ and $H_0$ terms in
+\eqref{eq:aac-marked-count} have identical labels and
+derivative orders. Diagonal collapse changes neither their
+coefficient nor their inherited sign.
+Its local ordered insertion is exactly
+$-\int\beta A^2\gamma\wedge\Omega$.
+Equations~\eqref{eq:aac-marked-path} and
+\eqref{eq:aac-collapsed-difference} therefore cancel every
+marked path difference and every marked cycle difference of
+arity at least four.
+
+For the triangle, use the relative coordinates and orientation
+of Lemma~\ref{lem:qca-localization}. Its marked geometric
+distribution is
+\[
+ -\frac1{4\pi^2}\int_\epsilon^L\!\int_\epsilon^L
+    \frac{\epsilon\,ds\,dt}{(\epsilon+s+t)^3}
+    \int_X\mathbb E[
+       (\partial_{x_1}\partial_{y_2}
+        -\partial_{x_2}\partial_{y_1})\Phi]\,
+                                  d\bar z_1d\bar z_2\Omega_z.
+\]
+The exterior numerator is
+$\bar x_2\bar y_1-\bar x_1\bar y_2$.
+Its Gaussian integration-by-parts factor is
+$-16\epsilon st/(\epsilon+s+t)$.
+Together with the Gaussian mass and relative volume factor
+$16$, this gives the displayed coefficient.
+The time mass equals
+\[
+ \int_\epsilon^L\!\int_\epsilon^L
+ \frac{\epsilon\,ds\,dt}{(\epsilon+s+t)^3}
+ =\frac16-\frac{\epsilon}{L+2\epsilon}
+                  +\frac{\epsilon}{2(2L+\epsilon)}.
+\]
+It tends to $1/6$ at every fixed $L>0$.
+The covariance first moment gives localization error
+$C_\Phi\sqrt\epsilon+C'_\Phi\epsilon/L$.
+The collapsed two-wheel is zero because it contains $P(u)^2$.
+
+With the marked sign $m_3=+1$ and the color trace, the
+surviving scalar polynomial is
+\begin{equation}\label{eq:aac-theta}
+ \Theta_\rho(A)=-\frac1{24\pi^2}
+  \int_X\operatorname{Tr}_V
+     \left[A(\partial_1A\,\partial_2A
+                         -\partial_2A\,\partial_1A)\right]\wedge\Omega.
+\end{equation}
+This is a fixed-$L$ lower-cutoff limit.
+The scalar triangle has no remaining matter leg to which
+another source vertex could attach.
+
+The left side of \eqref{eq:aac-regulated-defect} also converges
+in the specified topology on the distribution kernels.
+Transposition onto differentiated smooth tests makes $Q$
+continuous in each support sector.
+For a fixed positive-scale contraction and a bounded output
+test family $B_0$, the inserted tests
+$\{H_L\pi^*\psi:\psi\in B_0\}$ form a bounded family on
+every required compact input support.
+Thus the contraction commutes with the strong limits.
+
+Products of the convergent tree kernels also converge.
+Their supports are fixed and their total variations are
+uniformly bounded. Apply
+\[
+ S_\epsilon\boxtimes T_\epsilon-S\boxtimes T
+   =(S_\epsilon-S)\boxtimes T_\epsilon
+                  +S\boxtimes(T_\epsilon-T)
+\]
+and the total-variation estimates to each term.
+The same argument with the finite-order bounds controls the
+bounded test families after differentiation.
+Evaluated wheels are scalar in matter, so their brackets and
+matter BV Laplacians vanish.
+
+\begin{theorem}\label{thm:aac-fixed-scale}
+For every $L>0$, the series
+\[
+ I_L=\sum_{n\geq1}a^n(T_n^L+\hbar W_n^L)
+\]
+is defined in \eqref{eq:aac-formal-carrier} on every finite
+family of compact smooth backgrounds. It satisfies
+\begin{equation}\label{eq:aac-all-order-qme}
+ (Q+d_{\mathrm{CE}}^{(a)})I_L
+       +\frac12\{I_L,I_L\}_L+\hbar\Delta_LI_L
+       =\hbar a^3\Theta_\rho(A).
+\end{equation}
+The limits and operations obey the stated bounded-family
+estimates in each fixed compact support sector.
+\end{theorem}
+
+\begin{proof}
+The path and wheel estimates construct each coefficient.
+The continuity arguments pass every term on the left of
+\eqref{eq:aac-regulated-defect} to the limit.
+The labeled marked-graph calculation cancels all terms on
+its right except the scalar triangle.
+Its limit is \eqref{eq:aac-theta}.
+
+At background order $N$, every exponential or logarithmic
+coefficient is a finite sum. The bracket uses only the
+finitely many pairs $i+j=N$, and the quadratic background
+differential uses order $N-1$.
+Laurent support in $\hbar$ is finite at each such order.
+Thus the coefficientwise limits require no interchange with
+an infinite numerical series.
+\end{proof}
+
+Separate the quadratic and scalar matter terms, with
+$T_0=W_0=0$. The theorem gives all identities
+\begin{equation}\label{eq:aac-tree-identities}
+ (Q+d_{\mathrm{CE},1})T_n^L
+       +d_{\mathrm{CE},2}T_{n-1}^L
+       +\frac12\sum_{\substack{i+j=n\\i,j\geq1}}
+                             \{T_i^L,T_j^L\}_L=0,
+\end{equation}
+and
+\begin{equation}
+ d_{\mathrm{CE},1}W_n^L+d_{\mathrm{CE},2}W_{n-1}^L
+          +\Delta_LT_n^L
+  =\begin{cases}
+      \Theta_\rho,&n=3,\\
+      0,&n\ne3.
+    \end{cases}
+\end{equation}
+The higher scalar corrections are part of the finite-scale
+quantum symmetry, even though its local curvature is cubic.
+
+\section{Transport between positive heat scales}
+
+For $0<L_1<L_2$, the interval propagator $P_{L_1,L_2}$ is
+smooth. It therefore acts on the constructed distribution
+observables. The interactions satisfy
+\begin{equation}\label{eq:aac-scale-transport}
+ I_{L_2}
+ =\hbar\log\left(
+       e^{\hbar\mathcal C_{L_1,L_2}}e^{I_{L_1}/\hbar}\right).
+\end{equation}
+Keep a lower cutoff $\delta<L_1$ first.
+The identity
+$P_{\delta,L_2}=P_{\delta,L_1}+P_{L_1,L_2}$
+and commutation of the even contractions prove
+\eqref{eq:aac-scale-transport} before taking $\delta\to0$.
+The path and wheel bounds, followed by smooth contraction,
+justify that limit at each background order.
+
+The curvature is scalar in matter. Smooth propagator
+contraction fixes it, so transport preserves
+$\hbar\Theta_\rho$.
+Smooth dependence on $L$ follows on each compact interval of
+positive scales. Choose $L_*>0$ below that interval and use
+\eqref{eq:aac-scale-transport} from $L_*$.
+All derivatives of $P_{L_*,L}$ are bounded on the required
+compact supports. At fixed background order the contractions
+and logarithm have finitely many terms.
+Every scale derivative therefore passes through the
+construction in the stated support sectors.
+No derivative at the singular lower endpoint is needed.
+
+\section{Suspension and the source differential}
+
+The identities \eqref{eq:aac-tree-identities} have a multilinear
+meaning: the current map preserves the parameter bracket up
+to specified higher homotopies. Their signs depend on the
+suspension convention. Fix that convention before extracting
+the maps.
+
+Let $\mathcal U=\mathfrak g_c[1]$, and write
+$s:\mathfrak g_c\to\mathcal U$ for the degree-minus-one shift.
+For $\alpha_i$ of degree $p_i$, put
+$x_i=s\alpha_i$ and $r_i=|x_i|=p_i-1$.
+All coalgebras below are over $\mathbb C$.
+For a graded complex vector space $W$, put
+\[
+ S^c(W)=\bigoplus_{n\geq0}S^n(W),
+ \qquad xy=(-1)^{|x||y|}yx.
+\]
+Its product is graded symmetric multiplication.
+The empty word $1$ is the unit, the coaugmentation sends
+$\lambda$ to $\lambda1$, and the counit
+$\varepsilon:S^c(W)\to\mathbb C$ projects to length zero.
+An $(i_1,\ldots,i_k)$-unshuffle is a permutation preserving the
+order inside each successive block of those lengths.
+Write $\operatorname{Sh}(i_1,\ldots,i_k)$ for this set.
+For homogeneous $w_i\in W$, let $\epsilon_s(\sigma;w)$
+be the Koszul sign obtained by swapping adjacent $w_i,w_j$
+with factor $(-1)^{|w_i||w_j|}$.
+When $w_i=x_i$, abbreviate this sign to $\epsilon_s(\sigma)$.
+The unshuffle coproduct is
+\[
+ \Delta(w_1\cdots w_n)
+ =\sum_{i=0}^n\ \sum_{\sigma\in\operatorname{Sh}(i,n-i)}
+   \epsilon_s(\sigma;w)\,
+   (w_{\sigma(1)}\cdots w_{\sigma(i)})
+       \otimes(w_{\sigma(i+1)}\cdots w_{\sigma(n)}).
+\]
+In particular, $\Delta1=1\otimes1$.
+Splitting a word into three ordered subsequences describes
+both iterated coproducts with the same Koszul sign, proving
+coassociativity. The two empty-block terms give the counit
+identities.
+
+On $\overline S^c(W)=\ker\varepsilon$, the reduced coproduct is
+$\overline\Delta z=\Delta z-1\otimes z-z\otimes1$.
+Its $n$fold iteration into $n+1$ nonempty blocks vanishes on
+every word of length at most $n$.
+This finite-length property is the conilpotence used here.
+All the following statements concern finite words; formal
+coefficients are treated coefficientwise.
+
+\begin{lemma}\label{lem:aac-symmetric-coderivations}
+The primitive elements of $S^c(W)$ are exactly $W$.
+Let $f:S^c(W)\to S^c(Z)$ be a degree-zero coalgebra map
+preserving the coaugmentation and counit.
+A homogeneous coderivation along $f$ is a linear map $D$
+satisfying $D1=0$ and
+\[
+ \Delta D=(D\otimes f+f\otimes D)\Delta.
+\]
+Here graded tensor products of maps mean
+$(A\otimes B)(v\otimes z)=(-1)^{|B||v|}Av\otimes Bz$.
+Such a coderivation is determined by its corestriction
+$\pi_ZD$, where $\pi_Z:S^c(Z)\to Z$ projects to length one.
+\end{lemma}
+
+\begin{proof}
+An element $z$ is primitive if
+$\Delta z=z\otimes1+1\otimes z$.
+For $m\geq2$, denote by $\Delta_{1,m-1}$ the component
+$S^m(W)\to W\otimes S^{m-1}(W)$ of the coproduct, and by
+$\mu$ graded symmetric multiplication. Then
+\[
+ \mu\Delta_{1,m-1}(w_1\cdots w_m)=m\,w_1\cdots w_m.
+\]
+There are $m$ choices of the first output.
+Each summand's unshuffle sign is repeated when multiplication
+reorders its factors to $w_1\cdots w_m$.
+The two signs cancel, so every summand is the original word.
+Since $m$ is invertible in $\mathbb C$, $\Delta_{1,m-1}$ is
+injective. This identity also holds when the word vanishes
+by graded symmetry.
+
+Decompose a primitive into its finitely many length components.
+Projection to bidegree $(1,m-1)$ kills its component of
+length $m\geq2$ by that injectivity.
+Its scalar component $\lambda1$ must also vanish:
+$\Delta(\lambda1)=\lambda1\otimes1$, whereas primitivity
+requires $2\lambda1\otimes1$.
+Every element of $W$ is primitive by the coproduct formula.
+This proves the first assertion.
+
+For the second, subtract two coderivations with the same
+corestriction. It suffices to suppose $\pi_ZD=0$ and prove
+$D=0$. The empty word is killed by hypothesis.
+Suppose $D$ kills words of length less than $n$.
+For a word $v$ of length $n$, every nonempty proper split
+in $\Delta v$ has both lengths less than $n$.
+The coderivation identity and the induction hypothesis give
+\[
+ \Delta D(v)=D(v)\otimes1+1\otimes D(v).
+\]
+Thus $D(v)$ is primitive. It lies in $Z$, where
+$\pi_ZD(v)=0$ forces $D(v)=0$.
+Induction proves the assertion on every finite word.
+\end{proof}
+
+For completeness, homogeneous maps
+$a_j:S^j(W)\to W$ of a common degree $h$, with $j\geq1$,
+extend to a coderivation along the identity by
+\[
+ D_a(w_1\cdots w_n)
+ =\sum_{j=1}^n\ \sum_{\sigma\in\operatorname{Sh}(j,n-j)}
+   \epsilon_s(\sigma;w)\,
+   a_j(w_{\sigma(1)}\cdots w_{\sigma(j)})
+          w_{\sigma(j+1)}\cdots w_{\sigma(n)},
+ \qquad D_a1=0.
+\]
+To check its coproduct identity, choose the block on which
+$a_j$ acts and then split the remaining inputs into left
+and right blocks. Its output must lie on one of those sides.
+An output on the left gives exactly
+$(D_a\otimes1)\Delta$.
+For an output on the right, let $b$ be the degree of the
+chosen input block and $\ell$ the degree of the left block.
+Moving the output past the left block gives
+$(-1)^{(b+h)\ell}$; moving the chosen inputs past that block
+in the other order gives $(-1)^{b\ell}$.
+The quotient is $(-1)^{h\ell}$, exactly the tensor sign in
+$(1\otimes D_a)\Delta$.
+These choices exhaust both sides with equal multiplicities.
+Hence the displayed extension is a coderivation, and its
+corestrictions are the $a_j$.
+
+Two consequences will be used repeatedly.
+An odd coderivation $q$ along the identity has a square
+which is again a coderivation, since
+\[
+ (q\otimes1+1\otimes q)^2=q^2\otimes1+1\otimes q^2.
+\]
+The mixed products are $q\otimes q$ and $-q\otimes q$.
+Also, if $q,q'$ are coderivations on source and target,
+then $q'f$ and $fq$ are coderivations along $f$:
+substitute $\Delta f=(f\otimes f)\Delta$ into their
+coproducts. Their difference is therefore a coderivation
+along $f$ as well.
+The lemma proves that a zero corestriction kills each of
+these maps in full.
+
+Specify the degree-one coderivation $q$ by its components
+to $\mathcal U$:
+\begin{equation}\label{eq:aac-source-q}
+ q_1(s\alpha)=s(d\alpha),\qquad
+ q_2(s\alpha\,s\eta)=(-1)^p s[\alpha,\eta],
+       \qquad |\alpha|=p.
+\end{equation}
+There are no higher source components yet.
+A component $q_j$ acts on a word by summing over
+$(j,n-j)$-unshuffles, applying $q_j$ to the first block and
+multiplying its output by the remaining block.
+This defines the full coderivation.
+
+The binary formula is graded symmetric on $\mathcal U$:
+interchanging $\alpha,\eta$ combines graded antisymmetry of
+their Lie bracket with the shift sign.
+The unary square is zero because $d^2=0$.
+At arity two, the three terms are
+\[
+ \begin{split}
+ q_1q_2(s\alpha,s\eta)
+    &=(-1)^p s[d\alpha,\eta]+s[\alpha,d\eta],\\
+ q_2(q_1s\alpha,s\eta)
+    &=(-1)^{p+1}s[d\alpha,\eta],\\
+ (-1)^{p-1}q_2(s\alpha,q_1s\eta)
+    &=-s[\alpha,d\eta].
+ \end{split}
+\]
+They cancel. At arity three, the corestriction of $q^2$ is
+the graded Jacobi sum, which vanishes.
+These exhaust its possible corestrictions.
+The square is a coderivation, so
+Lemma~\ref{lem:aac-symmetric-coderivations} gives $q^2=0$.
+In particular, the chosen unary operation is $+sd$.
+It is not the canonical differential $-sd$ on the shifted
+complex considered in isolation.
+
+Chevalley--Eilenberg cochains are graded multilinear functions
+on these finite tensors, completed in background weight when
+needed. Their differential and product are
+\begin{equation}\label{eq:aac-dual-conventions}
+ \begin{split}
+ (d_{\mathrm{CE}}\phi)(v)
+    &=-(-1)^{|\phi|}\phi(qv),\\
+ (\phi\psi)(v)
+    &=\sum_{\Delta v}
+       (-1)^{|\psi||v_{(1)}|}
+                    \phi(v_{(1)})\psi(v_{(2)}).
+ \end{split}
+\end{equation}
+The coproduct sign is included in $\Delta v$.
+These formulas apply to labeled input positions even when
+their images in $\mathfrak g_c$ are linearly dependent.
+
+They induce the background differential used above.
+For the linear term, the coordinate corresponding to
+$d\alpha$ has degree $-p$. Thus
+\[
+ (d_{\mathrm{CE}}t_{d\alpha})(s\alpha)
+       =(-1)^{p+1},
+\]
+which is the coefficient of the totalized $dA$.
+For the quadratic term, ghost-first multiplication gives
+\[
+ [t_\alpha t_\eta](-A^2)
+           =(-1)^{1+p+pq}[\alpha,\eta].
+\]
+Evaluating the two coordinate factors on
+$s\alpha\,s\eta$ adds $(-1)^{(p-1)(q-1)}$.
+The result is $(-1)^q[\alpha,\eta]$.
+Dualizing the second formula in \eqref{eq:aac-source-q}
+gives the same sign, since the bracket coordinate has degree
+$1-p-q$. Therefore these conventions give
+$d_{\mathrm{CE}}A=dA-A^2$ in both its linear and quadratic
+parts.
+
+For the quantum target, put
+\[
+ \mathcal L_L=\mathcal O_{\mathrm{dist}}[[\hbar]][-1],
+ \qquad |uF|=|F|+1,\qquad D_L=Q+\hbar\Delta_L.
+\]
+Its differential and bracket are
+\[
+ d_{\mathcal L_L}(uF)=-uD_LF,\qquad
+ [uF,uG]_L=u\{F,G\}_L.
+\]
+The BV bracket has degree one on observables, so this is a
+degree-zero Lie bracket on $\mathcal L_L$.
+Identify the suspension by $s'(uF)=F$.
+The target coderivation has components
+\begin{equation}\label{eq:aac-target-q}
+ q'_1(F)=-D_LF,\qquad
+ q'_2(F,G)=(-1)^{|F|+1}\{F,G\}_L.
+\end{equation}
+The equations $D_L^2=0$, the odd-bracket differential
+identity, and the odd Jacobi identity kill the corestrictions
+of $(q')^2$ at arities one, two, and three.
+There are no others. Its square is a coderivation, so
+Lemma~\ref{lem:aac-symmetric-coderivations} gives $(q')^2=0$.
+For the classical target, replace $D_L$ by $Q$.
+All these operations use positive-scale contractions.
+
+\section{The Taylor components in every degree}
+
+For homogeneous compact inputs define the ordered kernels
+\[
+ \begin{split}
+ K_{n,L}(\alpha_1,\ldots,\alpha_n)
+ =\int_{X^n}
+ &P_{0,L,12}\cdots P_{0,L,n-1,n}\\
+ &{}\cdot\beta_1\rho(\alpha_1)_1\cdots
+             \rho(\alpha_n)_n\gamma_n\,\Omega_1\cdots\Omega_n,
+ \end{split}
+\]
+and, for $n\geq3$,
+\[
+ \begin{split}
+ C_{n,L}(\alpha_1,\ldots,\alpha_n)
+ =\lim_{\epsilon\to0}\int_{X^n}
+ &P_{\epsilon,L,12}\cdots P_{\epsilon,L,n1}\\
+ &{}\cdot\operatorname{Tr}_V
+     \bigl(\rho(\alpha_1)_1\cdots\rho(\alpha_n)_n\bigr)
+                                      \,\Omega_1\cdots\Omega_n.
+ \end{split}
+\]
+Set $C_{1,L}=C_{2,L}=0$.
+The preceding estimates define these integrals and limits.
+The first is a compact quadratic matter kernel after
+background evaluation. The second is scalar in matter.
+
+For degrees $p_i=|\alpha_i|$, let $\epsilon(\sigma;p)$ be
+the Koszul sign for permuting the unshifted inputs.
+Define the unnormalized graded antisymmetrization by
+\[
+ \operatorname{Alt}K(\alpha_1,\ldots,\alpha_n)
+ =\sum_{\sigma\in S_n}\operatorname{sgn}(\sigma)
+      \epsilon(\sigma;p)\,
+        K(\alpha_{\sigma(1)},\ldots,\alpha_{\sigma(n)}).
+\]
+There is no $1/n!$ in this definition.
+The classical and quantum component formulas are
+\begin{equation}\label{eq:aac-current-components}
+ \begin{split}
+ F_n^{\mathrm{cl}}(\alpha_1,\ldots,\alpha_n)
+    &=(-1)^{\sum_i p_i+1}\,
+                         u\,\operatorname{Alt}K_{n,L},\\
+ F_n^q(\alpha_1,\ldots,\alpha_n)
+    &=(-1)^{\sum_i p_i+1}\,
+       u\left(\operatorname{Alt}K_{n,L}
+                      +\frac{\hbar}{n}\operatorname{Alt}C_{n,L}\right).
+ \end{split}
+\end{equation}
+These are algebraic multilinear maps on compact smooth inputs.
+Their support-sector continuity is exactly that of the kernel
+estimates above.
+
+The tree kernel has observable degree $\sum_i p_i-n$.
+Indeed, integration selects
+\[
+ q_\beta+q_\gamma+\sum_i p_i+(n-1)=2n,
+\]
+and the matter ghost degree is $1-q_\beta-q_\gamma$.
+A scalar wheel can survive only when $\sum_i p_i=n$.
+The shift $u$ therefore makes both parts of $F_n^q$ have
+degree $1-n$. The target contains only nonnegative powers
+of $\hbar$, even though the exponential construction used
+finite Laurent polynomials.
+
+The precise passage from universal polynomials to these maps
+accounts for both parameter ordering and graded duality.
+Put
+\[
+ E_n(p)=\sum_{i<j}(p_i-1)(p_j-1),\qquad
+ B_n(p)=\sum_i(n-i)p_i,\qquad
+ \delta_n(p)=B_n(p)+E_n(p).
+\]
+For $A=\sum_{i=1}^n t_i\alpha_i$, the ordered coefficient
+prescription is
+\begin{equation}
+ F_n^q(\alpha_1,\ldots,\alpha_n)
+ =(-1)^{\delta_n(p)}u\,
+       [t_1\cdots t_n](T_n^L+\hbar W_n^L)(A).
+\end{equation}
+The coefficient has the parameters in exactly the indicated
+order. The product convention \eqref{eq:aac-dual-conventions}
+gives
+\[
+ (t_1\cdots t_n)(x_1\cdots x_n)=(-1)^{E_n(p)}
+\]
+on the corresponding labeled inputs.
+This is the second sign in $\delta_n$.
+
+For an ordered tree, moving the parameters left crosses the
+$n-1$ propagators and $\beta$, followed by the preceding
+background forms. Its exponent is
+\[
+ M_n(p)=n\sum_i(1-p_i)+\sum_{i<j}p_i(1-p_j).
+\]
+For a wheel, $n$ propagators replace those $n$ odd factors,
+so the exponent is unchanged.
+Let $S_n=(n-1)(n-2)/2$ and $P_n=\sum_{i<j}p_ip_j$.
+Modulo two,
+\[
+ \begin{split}
+ M_n&\equiv n+n\sum_i p_i+B_n+P_n,\\
+ E_n&\equiv P_n+(n-1)\sum_i p_i+\binom n2.
+ \end{split}
+\]
+Since $S_n+\binom n2=(n-1)^2$, their sum gives
+\[
+ S_n+M_n+\delta_n\equiv\sum_i p_i+1\pmod2.
+\]
+This proves the common sign in
+\eqref{eq:aac-current-components}.
+
+An adjacent interchange of degrees $p,q$ changes $M_n$
+by $p+q$. Reordering the corresponding parameters contributes
+$(1-p)(1-q)$. Their sum is $1+pq$, which is precisely
+the graded antisymmetrization sign.
+Adjacent interchanges generate every permutation, so the
+argument proves the formula for every arity and parity.
+The cycle retains its factor $1/n$.
+
+Define degree-zero suspended maps by
+\begin{equation}\label{eq:aac-suspended-components}
+ f_n(x_1\cdots x_n)
+   =(-1)^{B_n(p)}s'F_n(\alpha_1,\ldots,\alpha_n)
+   =(-1)^{E_n(p)}
+       [t_1\cdots t_n](T_n^L+\hbar W_n^L)(A).
+\end{equation}
+The classical version omits $W_n$.
+The signs just proved make $f_n$ graded symmetric on
+$S^n(\mathcal U)$.
+
+These maps determine a coalgebra map $\mathbf f$.
+Its projection to the $k$th symmetric power of the target is
+\[
+ \frac1{k!}
+ \sum_{\substack{i_1+\cdots+i_k=n\\i_j\geq1}}
+ \ \sum_{\sigma\in\operatorname{Sh}(i_1,\ldots,i_k)}
+ \epsilon_s(\sigma)\,
+       f_{i_1}(x_{\sigma(1)}\cdots)
+          \cdots f_{i_k}(\cdots x_{\sigma(n)}).
+\]
+Set $\mathbf f(1)=1$.
+The scalar component vanishes on nonempty words, so the
+map preserves the counit as well as the coaugmentation.
+The factor $1/k!$ removes the order of the output blocks.
+Splitting those blocks between two tensor factors verifies
+the coalgebra identity term by term.
+Every sum is finite on a finite input tensor.
+
+\section{From the master equation to all higher identities}
+
+Replace the variable $a$ by the assigned background weight.
+In this completion, $\sum_{n\geq1}J_n$ denotes the collection
+of homogeneous coefficients $J_n$ of weight $n$.
+The coefficients of $d_{\mathrm{CE}}$ then equal those of
+$d_{\mathrm{CE}}^{(a)}$ before this reindexing.
+No evaluation of a formal series at $a=1$ occurs.
+
+A vanishing formal curvature must imply every signed
+coalgebra identity, including mixed input degrees.
+Let $h_P$ denote plain graded-dual evaluation of a
+coefficient-valued cochain $P$, using
+\eqref{eq:aac-dual-conventions}.
+Write coefficients before observables.
+For a degree-zero interaction $J$ and
+$v\in S^n(\mathcal U)$ of degree $r$, put $f(v)=h_J(v)$.
+Then
+\[
+ h_{D_LJ}(v)=(-1)^rD_Lf(v),\qquad
+ h_{d_{\mathrm{CE}}J}(v)=(-1)^r f(qv).
+\]
+For the first identity, the tensor-product differential
+crosses a coefficient of degree $-r$.
+For the second, the relevant coefficient before
+differentiation has degree $-r-1$.
+Its graded-dual sign is
+$-(-1)^{-r-1}=(-1)^r$.
+
+The bracket extended across the coefficients is
+\[
+ \{\phi F,\psi G\}
+     =(-1)^{(|F|+1)|\psi|}\phi\psi\{F,G\}.
+\]
+For a split of $v$ into blocks of degrees $r_1,r_2$,
+evaluation requires $|F|=r_1$ and $|\psi|=-r_2$.
+The extension sign and the dual-product sign combine to
+\[
+ (-1)^{(r_1+1)r_2+r_1r_2}=(-1)^{r_2}.
+\]
+Consequently, for
+$\mathcal R=(D_L+d_{\mathrm{CE}})J+\frac12\{J,J\}_L$,
+\[
+ h_{\mathcal R}(v)
+ =(-1)^r\left(
+   D_Lf(v)+f(qv)
+   +\frac12\sum_{\mathrm{unshuffles}}\epsilon_s
+       (-1)^{r_1}\{f(v_{(1)}),f(v_{(2)})\}_L\right).
+\]
+The unshuffles use two nonempty blocks.
+Comparing with \eqref{eq:aac-target-q} gives the exact
+corestriction identity
+\begin{equation}\label{eq:aac-morphism-defect}
+ \boxed{\displaystyle
+ (q'\mathbf f-\mathbf f q)_{\mathrm{corestr}}(v)
+          =(-1)^{r+1}h_{\mathcal R}(v).}
+\end{equation}
+Corestriction means projection to the first symmetric power
+of the target.
+Both $q'\mathbf f$ and $\mathbf f q$ are coderivations
+along $\mathbf f$, as proved above.
+Their difference kills the empty word.
+Lemma~\ref{lem:aac-symmetric-coderivations} therefore makes
+zero corestriction equivalent to the complete
+coalgebra-morphism equation.
+
+Apply this identity to the tree series, with $D_L=Q$.
+Equation~\eqref{eq:aac-tree-identities} gives zero curvature.
+The maps $F_n^{\mathrm{cl}}$ therefore form an
+$L_\infty$ morphism from $\mathfrak g_c$ to the classical
+shifted observable Lie algebra.
+Here an $L_\infty$ morphism means the degree-zero coalgebra
+map intertwining the specified square-zero coderivations.
+
+In explicit components, the equation in every arity is
+\begin{equation}
+ \begin{split}
+ q'_1f_n(x_1,\ldots,x_n)
+ &+\frac12\sum_{\substack{i+j=n\\i,j\geq1}}
+       \sum_{\sigma\in\operatorname{Sh}(i,j)}
+       \epsilon_s(\sigma)\,
+       q'_2\bigl(f_i(x_{\sigma(1)},\ldots,x_{\sigma(i)}),
+                 f_j(x_{\sigma(i+1)},\ldots,x_{\sigma(n)})\bigr)\\
+ &=\sum_{k=1}^n(-1)^{r_1+\cdots+r_{k-1}}
+       f_n(x_1,\ldots,q_1x_k,\ldots,x_n)\\
+ &\quad+\sum_{\sigma\in\operatorname{Sh}(2,n-2)}
+       \epsilon_s(\sigma)\,
+       f_{n-1}\bigl(q_2(x_{\sigma(1)},x_{\sigma(2)}),
+                      x_{\sigma(3)},\ldots,x_{\sigma(n)}\bigr).
+ \end{split}
+\end{equation}
+The final sum is absent for $n=1$.
+Its terms respectively differentiate a source, collapse a
+source edge, or join two output blocks by a heat bracket.
+The general derivation \eqref{eq:aac-morphism-defect} fixes
+their signs and their factor $1/2$.
+
+At the first two arities, the quantum wheels vanish.
+Writing $J(\alpha)=K_{1,L}(\alpha)$, the formulas give
+\[
+ \begin{split}
+ F_1^q(\alpha)&=(-1)^{p+1}uJ(\alpha),\\
+ F_2^q(\alpha,\eta)
+   &=(-1)^{p+q+1}u\bigl(K_{2,L}(\alpha,\eta)
+                            -(-1)^{pq}K_{2,L}(\eta,\alpha)\bigr).
+ \end{split}
+\]
+These are exactly \eqref{eq:qca-noether-components}.
+At arity one, $f_1(s\alpha)=(-1)^{p+1}J(\alpha)$ and
+$-D_Lf_1(s\alpha)=f_1(sd\alpha)$.
+At arity two, unsuspending the equation
+\[
+ q'_1f_2+q'_2(f_1,f_1)
+   =f_2(q_1-,-)+(-1)^{p-1}f_2(-,q_1-)+f_1q_2
+\]
+gives
+\[
+ \begin{split}
+ d_{\mathcal L_L}F_1(\alpha)&=F_1(d\alpha),\\
+ d_{\mathcal L_L}F_2(\alpha,\eta)
+   +F_2(d\alpha,\eta)+(-1)^pF_2(\alpha,d\eta)
+   &=F_1([\alpha,\eta])-[F_1(\alpha),F_1(\eta)]_L.
+ \end{split}
+\]
+No parity restriction has entered these checks.
+
+For the unextended quantum source,
+\eqref{eq:aac-all-order-qme} gives the curvature
+$\hbar\Theta_\rho$. At arity three its sign can be seen
+without suppressing the unshuffle terms.
+For $x,y,z$ of degrees $r,s,t$, the left side is
+\[
+ \begin{split}
+ -D_Lf_3(x,y,z)
+ &+(-1)^{r+1}\{f_1x,f_2(y,z)\}_L\\
+ &+(-1)^{rs+s+1}\{f_1y,f_2(x,z)\}_L\\
+ &+(-1)^{t(r+s)+t+1}\{f_1z,f_2(x,y)\}_L.
+ \end{split}
+\]
+The unextended right side is
+\[
+ \begin{split}
+ &f_3(q_1x,y,z)+(-1)^rf_3(x,q_1y,z)
+                         +(-1)^{r+s}f_3(x,y,q_1z)\\
+ &\quad+f_2(q_2(x,y),z)+(-1)^{st}f_2(q_2(x,z),y)
+                       +(-1)^{r(s+t)}f_2(q_2(y,z),x).
+ \end{split}
+\]
+Their difference is the cubic value prescribed by
+\eqref{eq:aac-morphism-defect}. A central source operation
+will supply exactly this value.
+
+\section{The central extension and the quantum current map}
+
+The cubic functional is closed for the full background
+differential. This consistency condition is what permits a
+central extension.
+Write $A_i=\partial_iA$ and
+$B_0=A_1A_2-A_2A_1$.
+The linear differential sends the trace integrand in
+\eqref{eq:aac-theta} to $d\operatorname{Tr}(AB_0)$.
+Its integral vanishes by compact support.
+For the quadratic differential,
+$d_{\mathrm{CE},2}A=-A^2$ and
+$d_{\mathrm{CE},2}A_i=-(A_iA+AA_i)$.
+The graded product rule and trace cyclicity give
+\[
+ d_{\mathrm{CE},2}\operatorname{Tr}(AA_1A_2)
+       =\operatorname{Tr}(A^2A_1A_2).
+\]
+For example, expand the three differentiated factors.
+The internal $AA_1AA_2$ terms cancel, and cyclically moving
+the final odd $A$ gives
+$\operatorname{Tr}(AA_1A_2A)=-\operatorname{Tr}(A^2A_1A_2)$.
+Subtract the expression with indices exchanged.
+Its integral is zero because
+\[
+ 2\operatorname{Tr}(A^2B_0)
+  =\partial_1\operatorname{Tr}(A^3A_2)
+                    -\partial_2\operatorname{Tr}(A^3A_1).
+\]
+Expanding the derivatives cancels their mixed second
+derivatives and pairs the remaining terms by graded cyclicity.
+Both holomorphic divergences integrate to zero on compact
+support. Therefore $d_{\mathrm{CE}}\Theta_\rho=0$.
+
+Add a central generator $k$ of cohomological degree one.
+Its suspended element $sk$ has degree zero.
+Let $c$ be its degree-zero Chevalley--Eilenberg coordinate,
+normalized by $c(sk)=1$.
+Define the extension by
+\begin{equation}\label{eq:aac-central-ce}
+ d_{\mathrm{CE}}c=-\Theta_\rho(A).
+\end{equation}
+Its square vanishes by the cocycle identity.
+There are no nonzero operations with a central input.
+
+The actual ternary operation follows from dualization.
+For homogeneous inputs put
+\[
+ \theta(\alpha_1,\alpha_2,\alpha_3)
+       =[t_1t_2t_3]\Theta_\rho\left(\sum_i t_i\alpha_i\right).
+\]
+Since $|c|=0$, equation \eqref{eq:aac-dual-conventions}
+gives $d_{\mathrm{CE}}c=-c\,q$.
+Equations \eqref{eq:aac-central-ce} and
+\eqref{eq:aac-suspended-components} therefore require
+\begin{equation}\label{eq:aac-central-q}
+ q_3(x_1x_2x_3)=(-1)^{E_3(p)}
+            \theta(\alpha_1,\alpha_2,\alpha_3)\,sk.
+\end{equation}
+In unshifted graded antisymmetric notation this is
+\begin{equation}
+ \ell_3(\alpha_1,\alpha_2,\alpha_3)
+       =(-1)^{\delta_3(p)}
+            \theta(\alpha_1,\alpha_2,\alpha_3)\,k.
+\end{equation}
+There is no additional factorial.
+The polynomial coefficient and its ordered third derivative
+were distinguished in \eqref{eq:qca-polarized}.
+A nonzero coefficient has $\sum_i p_i=2$, so $\ell_3$
+has degree $-1$.
+
+The extension has operations $\ell_1=d$, $\ell_2=[-,-]$,
+and the displayed central $\ell_3$, with all higher
+operations zero.
+The corestrictions of its square at arities three and four
+are the linear and quadratic cocycle identities just proved.
+Those at arities one and two are unchanged.
+The only possible arity-five term is a nested ternary
+operation, which vanishes because its inner output is central.
+There are no higher corestrictions.
+The extended coderivation is odd; its square is a
+coderivation with zero corestriction.
+Lemma~\ref{lem:aac-symmetric-coderivations} proves that the
+extended source is square-zero.
+
+For a concrete normalization, take compact smooth functions
+$f,g$, a compact smooth $(0,2)$-form $h$, and $X_0,Y_0,Z_0\in\mathfrak g$.
+Put $(X_1,X_2,X_3)=(X_0,Y_0,Z_0)$ and define
+\[
+ T_\rho(X_0,Y_0,Z_0)
+  =\frac16\sum_{\sigma\in S_3}
+   \operatorname{Tr}_V
+    \bigl(\rho(X_{\sigma(1)})\rho(X_{\sigma(2)})
+                                    \rho(X_{\sigma(3)})\bigr).
+\]
+The degree pattern is $(0,0,2)$, so $E_3=\delta_3=1$
+modulo two. Polarizing \eqref{eq:aac-theta} and integrating
+derivatives of $h$ by parts gives
+\[
+ \theta(fX_0,gY_0,hZ_0)
+   =-\frac1{4\pi^2}T_\rho(X_0,Y_0,Z_0)
+      \int_Xh(\partial_1f\,\partial_2g
+                         -\partial_2f\,\partial_1g)\wedge\Omega.
+\]
+The six ordered parameter terms give the factor $3!$.
+Their mixed second derivatives cancel in pairs.
+Thus the central operation in this degree pattern is
+\[
+ \ell_3(fX_0,gY_0,hZ_0)
+   =\frac1{4\pi^2}T_\rho(X_0,Y_0,Z_0)
+      \int_Xh(\partial_1f\,\partial_2g
+                         -\partial_2f\,\partial_1g)\wedge\Omega\,k.
+\]
+Its positive coefficient is the consequence of the declared
+central and suspension conventions.
+
+Complete by background weight, assigning weight one to $A$
+and weight three to $c$.
+Write $I_L$ with its $n$th summand assigned weight $n$,
+omitting the factor $a^n$.
+The differential is continuous for this filtration:
+its linear part preserves weight, its quadratic part
+increases it, and \eqref{eq:aac-central-ce} preserves weight
+three. In this completion put
+\[
+ \widehat I_L=I_L+\hbar c.
+\]
+The constant matter observable $1$ satisfies
+$D_L1=0$ and $\{1,-\}_L=0$.
+Equation~\eqref{eq:aac-all-order-qme} and
+\eqref{eq:aac-central-ce} give
+\[
+ (Q+d_{\mathrm{CE}})\widehat I_L
+       +\frac12\{\widehat I_L,\widehat I_L\}_L
+       +\hbar\Delta_L\widehat I_L=0.
+\]
+
+\begin{theorem}\label{thm:aac-quantum-map}
+At each positive heat scale $L$, the maps $F_n^q$ in
+\eqref{eq:aac-current-components} extend to an algebraic
+$L_\infty$ morphism from the central extension
+\eqref{eq:aac-central-ce} to $\mathcal L_L$, with
+\[
+ F_1^q(k)=\hbar\,u1,\qquad
+ F_n^q(\ldots,k,\ldots)=0\quad(n\geq2).
+\]
+They obey the proved bounded-family continuity estimates
+on every fixed compact support sector.
+\end{theorem}
+
+\begin{proof}
+Apply \eqref{eq:aac-morphism-defect} to $\widehat I_L$.
+Its curvature is zero, so the coalgebra map intertwines
+the two coderivations.
+The linear term $\hbar c$ gives $f_1(sk)=\hbar1$ and
+has no higher Taylor coefficient with a central input.
+This proves the stated formulas.
+
+The sign can also be checked against the unextended cubic
+defect. A nonzero coefficient of $\Theta_\rho$ has
+$r=\sum_i(p_i-1)=-1$.
+Equation~\eqref{eq:aac-morphism-defect} gives
+$\hbar(-1)^{E_3(p)}\theta$.
+The additional source contribution $f_1q_3$ from
+\eqref{eq:aac-central-q} is exactly the same value.
+It cancels the defect in the extended equation.
+For the degree pattern $(0,0,2)$, both values are
+$-\hbar\theta$.
+Every identity with a central input follows from $D_L1=0$,
+centrality of $1$, and vanishing of the higher central
+components.
+\end{proof}
+
+If $T_\rho=0$, then $\Theta_\rho=0$, and the quantum
+maps already define a morphism from the unextended
+$\mathfrak g_c$.
+For an abelian representation with charges $q_j$, this
+condition is $\sum_jq_j^3=0$.
+For general $\rho$, removing the local central cocycle by
+a local correction requires a Chevalley--Eilenberg primitive
+with the specified locality and support conditions.
+The construction does not assume such a primitive.
+
+A presentation with the canonical unary suspension $-sd$
+is obtained by simultaneous conjugation.
+Define
+\[
+ U(s\alpha)=(-1)^p s\alpha,\qquad
+ U'(F)=(-1)^{|F|+1}F.
+\]
+Conjugate both coderivations and the coalgebra map.
+The degrees of their components give
+\[
+ \bar q_n=(-1)^nq_n,\qquad
+ \bar q'_n=(-1)^nq'_n,\qquad
+ \bar f_n=(-1)^{n+1}f_n.
+\]
+For example, $q_n$ has input degree $\sum_i(p_i-1)$
+and output degree one greater. Comparing the signs of
+$U$ on its output and on its $n$ inputs gives $(-1)^n$.
+The same calculation gives the target and map factors.
+The coordinate pullback is
+$t_\alpha\mapsto(-1)^pt_\alpha$ and $c\mapsto-c$.
+In particular, this presentation has
+$\bar F_2=-F_2$.
+Changing only the unary sign would not preserve the
+displayed current identities.
+
+The resulting action concerns compact smooth currents of
+the finite-dimensional free theory on $\mathbb C^2$.
+The all-arity maps require no contraction of arbitrary
+distributions by $P_{0,L}$.
+An identification with punctured or radial current modes
+still requires the corresponding chain comparison and its
+central normalization. Infinite-dimensional matter requires
+its own trace and analytic estimates. Interacting vertices
+change the connected graphs and require further
+renormalization and master-equation arguments.

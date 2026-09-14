@@ -1,0 +1,293 @@
+\section{Finite matrix kernels and positive trace}
+\label{sec:weil-formal-kernels}
+
+A scalar obtained by closing an operator kernel need not define a
+positive pairing.  This distinction can already be seen on finite
+matrices inside the formal operator algebra.
+For this comparison, use the underlying field $\C$ with the discrete
+topology and put
+\[
+ H_{\mathrm{for}}=\C[[x,y]]/\C.
+\]
+Enumerate the nonconstant monomials as $e_0,e_1,\ldots$ in increasing
+total degree.  The formal topology makes $H_{\mathrm{for}}$ the product
+$\C^{\mathbb N}$ of discrete coefficient spaces.  Write
+$\epsilon^j(h)=h_j$ for its coefficient functionals.
+A continuous endomorphism has a matrix with finitely many nonzero entries
+in each row.  Indeed, every output coefficient must depend on finitely
+many input coefficients.  Conversely, this condition makes every finite
+output projection continuous.  Denote this algebra by $\mathscr E$.
+Its operator topology requires agreement of each entire row in a fixed
+finite set of output rows.
+
+Put $E_{ij}=e_i\otimes\epsilon^j$ and let $\mathscr F_0$ be their
+finite complex span.  These are the matrices with finitely many nonzero
+entries in total.  They satisfy
+\[
+ E_{ij}E_{k\ell}=\delta_{jk}E_{i\ell},\qquad
+ E_{ij}^*=E_{ji}.
+\]
+Conjugating coefficients defines the displayed involution on
+$\mathscr F_0$.  This algebra has no unit, since each of its elements
+annihilates all but finitely many basis vectors.
+It is dense in $\mathscr E$: retaining finitely many whole rows of a
+row-finite matrix gives a matrix in $\mathscr F_0$ with those rows unchanged.
+
+The same matrix units act on $D_0=\C^{(\mathbb N)}$, the finite sequences,
+inside the Hilbert space $\ell^2(\mathbb N)$ over the usual complex field.
+Its inner product is $\langle v,w\rangle=\sum_jv_j\overline{w_j}$.
+Every finite matrix preserves $D_0$, and conjugate transpose is its
+Hilbert adjoint restricted to $D_0$.  Thus this comparison preserves the
+algebra and involution on $\mathscr F_0$.  It does not identify the two
+topologies or their completions.
+
+\begin{proposition}[The positive finite-matrix trace]
+\label{prop:weil-matrix-trace}
+Define $\tau(B)=\sum_i B_{ii}$ on $\mathscr F_0$.
+It is a positive linear functional with zero GNS null space.
+Its GNS completion is $\ell^2(\mathbb N\times\mathbb N)$, with $[B]$
+identified with its coefficient array $(B_{ij})$.
+The GNS action is left matrix multiplication, and
+\[
+ \|\pi_\tau(A)\|=\|A\|_{\ell^2\to\ell^2}
+ \qquad(A\in\mathscr F_0).
+\]
+Nevertheless, $\tau$ has no positive extension of finite mass to
+$\mathscr F_0^+=\C I+\mathscr F_0$.
+\end{proposition}
+\begin{proof}
+All sums in the algebraic calculation are finite, and
+\[
+ \tau(C^*B)=\sum_{i,j}B_{ij}\overline{C_{ij}},\qquad
+ \tau(B^*B)=\sum_{i,j}|B_{ij}|^2.
+\]
+The second expression vanishes exactly when $B=0$.
+Finite arrays are dense in the space of square-summable arrays by
+truncation of their convergent sum of squared absolute values.
+This identifies the quotient and completion.
+Multiplication by $A$ acts separately on each column, so
+\[
+ \|AB\|^2=\sum_j\|A B_{\bullet j}\|_{\ell^2}^2
+       \leq\|A\|_{\ell^2\to\ell^2}^2\sum_j\|B_{\bullet j}\|_{\ell^2}^2.
+\]
+The operator norm on the right is finite.  The entrywise
+Cauchy--Schwarz inequality bounds it by
+$(\sum_{i,j}|A_{ij}|^2)^{1/2}$.
+Conversely, take a matrix $B$ whose only nonzero column is a finite
+vector $v$.  The ratio $\|AB\|/\|B\|$ is $\|Av\|/\|v\|$.
+Since $A$ uses only finitely many input coordinates, such vectors
+compute its full operator norm.  This proves equality.
+
+For $n\geq1$, let $Q_n=\sum_{i=0}^{n-1}E_{ii}$.
+It is a self-adjoint projection with $\tau(Q_n)=n$.
+If a positive extension had value $c$ on $I$, then $c$ would be real
+and nonnegative, while
+\[
+ 0\leq\tau^+((I-Q_n)^*(I-Q_n))=c-n
+\]
+for every $n$.  No finite $c$ satisfies these inequalities.
+Equivalently,
+$|\tau(Q_n)|^2/\tau(Q_n^*Q_n)=n$ is unbounded.
+\end{proof}
+
+The map $(\lambda,B)\mapsto\lambda I+B$ identifies the algebraic
+unitization with the displayed subalgebra of $\mathscr E$.
+It is injective because a scalar multiple of the infinite identity is
+a finite matrix only when that scalar is zero.
+On this subalgebra, any linear extension of finite-matrix trace has the
+form
+\[
+ \tau_c(\lambda I+B)=c\lambda+\operatorname{tr}(B).
+\]
+It is cyclic, as finite matrix multiplication shows, but the proposition
+excludes positivity for every $c$.  In particular, any cyclic trace on
+a larger formal differential-operator algebra that restricts to this
+formula cannot be positive for an involution restricting to the one above.
+This conclusion needs no choice of an involution on the larger algebra.
+
+The finite-dimensional corners $Q_n\mathscr F_0Q_n$ do have positive
+traces, and the traces agree under their inclusions.  Their units are
+$Q_n$, with masses $n$.  Compatibility of these finite traces supplies
+$\tau$ on their union, but supplies no uniform mass bound on a unitization.
+The common GNS domain and a vector representing the functional are
+therefore separate constructions even in this explicit matrix example.
+
+\begin{proposition}[Formal completion and Hilbert adjoints]
+\label{prop:weil-formal-adjoint}
+Conjugate transpose on $\mathscr F_0$ does not extend to a continuous
+involution on $\mathscr E$ with its operator topology.
+The finite-matrix action on $D_0$ also does not extend by the same
+coefficient formula to an action of all $\mathscr E$ on
+$\ell^2(\mathbb N)$.
+\end{proposition}
+\begin{proof}
+Let $T_n=\sum_{i=0}^nE_{i0}$.
+Every fixed row stabilizes, so $T_n$ converges in $\mathscr E$ to
+\[
+ T(h)=h_0(1,1,1,\ldots).
+\]
+The matrices $T_n^*=\sum_{i=0}^nE_{0i}$ do not converge in
+$\mathscr E$.  Their zeroth rows do not stabilize, and an entire output
+row is discrete in the operator topology.  Continuity of a proposed
+involution would send the convergent sequence $T_n$ to a convergent
+sequence, which is impossible.
+For the second assertion, $e_0\in\ell^2$ but
+$T(e_0)=(1,1,\ldots)\notin\ell^2$.
+\end{proof}
+
+There is also a direct norm obstruction.
+The projections $E_{nn}$ tend to zero in the formal operator topology,
+but each has Hilbert operator norm one and GNS vector norm one for
+$\tau$.  Thus the formal completion, operator-norm completion and
+GNS completion are different constructions on the same finite matrices.
+For the Weil algebra, Theorem~\ref{thm:graph-domain} specifies a fourth
+topology when its multipliers are unbounded: the common graph topology.
+None of these completions is selected by cyclicity alone.
+
+\section{Gaussian averages and formal coefficients}
+\label{sec:weil-gaussian-coefficients}
+
+The Gaussian in the explicit formula also permits an exact comparison
+between a numerical integral and formal polynomial elimination.
+It is necessary to specify both the observable algebra and the parameter.
+For a positive real number $h$, set
+\[
+ \mathbb E_h(p)=\frac1{\sqrt{2\pi h}}
+       \int_{\R}p(u)e^{-u^2/(2h)}\,du
+       =\int_{\R}p(u)g_{h/2}(u)\,du,
+ \qquad p\in\C[u].
+\]
+The polynomial algebra here uses pointwise multiplication and
+$p^*(u)=\overline{p(u)}$ for real $u$.
+Its involution fixes $u$.  Polynomial growth and Gaussian decay make
+every displayed integral absolutely convergent.
+
+\begin{proposition}[Numerical and formal Gaussian elimination]
+\label{prop:weil-gaussian-comparison}
+For every polynomial $p$ and real $h>0$,
+\begin{equation}
+ \mathbb E_h(p)
+ =\sum_{m\geq0}\frac{h^m}{2^m m!}\,p^{(2m)}(0).
+ \label{eq:weil-gaussian-moments}
+\end{equation}
+The sum is finite.  In particular, $\mathbb E_h$ is positive,
+$\mathbb E_h(u)=0$ and $\mathbb E_h(u^2)=h$.
+
+Let $\hbar$ instead be a formal central variable of degree zero.
+The same finite derivative formula on each polynomial gives a continuous
+$\C[[\hbar]]$-linear map
+\[
+ \mathsf G:\C[u][[\hbar]]\longrightarrow\C[[\hbar]],\qquad
+ \mathsf G\!\left(\sum_{j\geq0}p_j(u)\hbar^j\right)
+  =\sum_{j,m\geq0}\frac{p_j^{(2m)}(0)}{2^m m!}\hbar^{j+m}.
+\]
+Continuity refers to the $\hbar$-adic topologies.
+On $\C[u,\hbar]$, evaluating this result at $\hbar=h>0$ agrees
+with the numerical Gaussian average of the specialized polynomial.
+There is no unital $\C$-algebra homomorphism
+$\C[[\hbar]]\to\C$ that sends $\hbar$ to a nonzero number $h$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:gaussian} gives $\mathbb E_h(1)=1$.
+Reflection makes every odd moment zero.
+For $n\geq2$, integrate the derivative of
+$u^{n-1}e^{-u^2/(2h)}$ over $\R$.
+Its values at both ends are zero, and its derivative is integrable.
+It follows that
+\[
+ \mathbb E_h(u^n)=(n-1)h\,\mathbb E_h(u^{n-2}).
+\]
+Thus
+$\mathbb E_h(u^{2m})=(2m)!h^m/(2^m m!)$.
+Expansion of $p$ proves \eqref{eq:weil-gaussian-moments}.
+The positive integral of $|p|^2$ proves positivity, and the moments
+of $u$ and $u^2$ have the stated values.
+
+In the formal formula, the coefficient of $\hbar^N$ uses only
+$j,m\geq0$ with $j+m=N$.  There are finitely many such pairs.
+Each derivative is a derivative of a polynomial, so this defines every
+coefficient without a convergence assumption.
+The map preserves every power of $\hbar$, proving continuity.
+Reindexing these finite coefficient sums proves
+$\C[[\hbar]]$-linearity.  For a polynomial in $u,\hbar$, all sums are
+finite, so numerical specialization commutes with the proved moment formula.
+
+For $h\ne0$, the formal series
+\[
+ (1-\hbar/h)^{-1}=\sum_{n\geq0}(\hbar/h)^n
+\]
+is an inverse in $\C[[\hbar]]$.
+A unital homomorphism sending $\hbar$ to $h$ would send the unit
+$1-\hbar/h$ to zero, which is impossible.
+At $h=0$, the constant-coefficient homomorphism does exist.
+\end{proof}
+
+The comparison at positive $h$ therefore holds on the polynomial
+subalgebra.  Extension to a selected class of infinite series requires
+an additional summability rule and its compatibility with the operations.
+Formal coefficientwise existence alone gives no such rule.
+
+The Gaussian average is not multiplicative:
+$\mathbb E_h(u)^2=0$ while $\mathbb E_h(u^2)=h$.
+Nor does inserting a Gaussian turn pointwise polynomial multiplication
+into convolution.  For $A>0$, the linear map
+\[
+ J_A:\C[u]\longrightarrow\A_\zeta,\qquad J_A(p)(u)=p(u)g_A(u)
+\]
+is well-defined, since every derivative is a polynomial times a Gaussian.
+But
+\[
+ J_A(1)\star J_A(1)=g_{2A}\ne g_A=J_A(1),
+ \qquad J_A(u)^*=-J_A(u)\ne J_A(u^*).
+\]
+The first inequality follows already from the values at zero.
+The second uses the reflection in the convolution involution.
+Thus $J_A$ is neither an algebra homomorphism nor an involution-preserving
+map.  Positivity of the numerical Gaussian average cannot pass through
+it by Theorem~\ref{thm:dagger}.
+
+\section{The remaining comparison with quantum currents}
+\label{sec:weil-current-comparison}
+
+The formal Hamiltonian bracket on $H_{\mathrm{for}}$ is
+$[f,g]=f_xg_y-f_yg_x$ modulo constants.
+Its continuous adjoint operators provide symmetry actions on formal
+coefficient kernels.  A numerical positive representation needs further
+data: a complex Hilbert space, a common invariant dense domain, and
+operators whose restricted adjoints realize the chosen involution.
+Proposition~\ref{prop:weil-formal-adjoint} prevents obtaining these data
+by completing all finite matrix kernels in the formal operator topology.
+Proposition~\ref{prop:weil-gaussian-comparison} also prevents specializing
+an arbitrary formal parameter at a positive numerical value.
+These are restrictions on the stated carriers and maps.
+
+For a positive arithmetic interpretation, the first missing comparison
+is an involution-preserving algebra map
+\[
+ T:\A_\zeta\longrightarrow\mathfrak B
+\]
+into a specified algebra of current observables, together with a positive
+linear functional $\omega$ on $\mathfrak B$ satisfying
+$L_\zeta=\omega\circ T$.
+The algebra, involution, domain and positivity of $\omega$ must be
+constructed independently of the zeta zero locations.
+Theorem~\ref{thm:dagger} would give the isometry
+$U:[f]\mapsto[T(f)]$ onto the closed subspace
+$K=\overline{[T(\A_\zeta)]}\subset\mathcal H_\omega$.
+Proposition~\ref{prop:graph-transfer} identifies the transported common
+graph domain with that of the restricted multipliers on
+$E=[T(\A_\zeta)]\subset K$, with every closure taken in $K$.
+Equality with the full ambient common domain requires a further
+hypothesis, such as surjectivity of $T$.
+The finite-mass obstruction in Theorem~\ref{thm:weil-mass} still applies:
+a finite-norm vector representing this functional, or a positive
+functional on a $C^*$-algebra as target, cannot supply this factorization.
+A positive functional on a proper nonunital algebra remains a possible
+carrier, as the finite-matrix trace demonstrates.
+
+Any current-field construction must also specify its operator products,
+contraction tensors and the scalar trace or weight on those products.
+Their convergence with the spatial propagators is an additional analytic
+condition.  Neither the strict zero strip nor the equality of the
+Gaussian moment formulas constructs this comparison or proves the
+positivity of the full Weil form.

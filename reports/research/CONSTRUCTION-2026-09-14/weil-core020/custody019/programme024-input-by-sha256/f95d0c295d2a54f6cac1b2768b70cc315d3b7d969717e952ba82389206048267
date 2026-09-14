@@ -1,0 +1,1793 @@
+\relax 
+\providecommand*{\memsetcounter}[2]{}
+\@ifundefined{amsrefs@bibcite}{}{\let\bibcite\amsrefs@bibcite}
+\bibstyle{amsrn}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand\BKM@entry[2]{}
+\BKM@entry{id=1,open,dest={636861707465722A2E31},srcline={2}}{50726566616365}
+\@writefile{toc}{\contentsline {chapter}{Preface}{2}{chapter*.1}\protected@file@percent }
+\BKM@entry{id=2,open,dest={636861707465722E33},srcline={1}}{315C30343052656C6174696F6E735C303430616E645C303430636F6D70617469626C655C303430686F6D6F746F70696573}
+\BKM@entry{id=3,open,dest={73656374696F6E2E34},srcline={4}}{312E315C303430415C303430646966666572656E7469616C5C303430666F725C303430615C3034307363616C61725C30343072656C6174696F6E}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {1}Relations and compatible homotopies}{16}{chapter.3}\protected@file@percent }
+\newlabel{chap:relations-homotopies}{{1}{16}{Relations and compatible homotopies}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}A differential for a scalar relation}{16}{section.4}\protected@file@percent }
+\BKM@entry{id=4,open,dest={73656374696F6E2E38},srcline={129}}{312E325C303430467265656C795C30343061646A6F696E696E675C303430615C3034307072696D6974697665}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~1.1.1\else \numberline {1.1.1}Definition\fi }{17}{definition.6}\protected@file@percent }
+\newlabel{def:rel-dga}{{1.1.1}{17}{}{definition.6}{}}
+\newlabel{eq:rel-leibniz}{{1.1.1}{17}{}{definition.6}{}}
+\newlabel{eq:rel-homotopy-linearity}{{1.1}{17}{A differential for a scalar relation}{equation.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Freely adjoining a primitive}{17}{section.8}\protected@file@percent }
+\newlabel{sec:rel-algebra}{{1.2}{17}{Freely adjoining a primitive}{section.8}{}}
+\newlabel{eq:rel-state-witness}{{1.2}{17}{Freely adjoining a primitive}{section.8}{}}
+\BKM@entry{id=5,open,dest={73656374696F6E2E3130},srcline={197}}{312E335C303430415C303430636F6D706C65785C303430666F725C303430615C303430706F6C796E6F6D69616C5C30343072656C6174696F6E}
+\newlabel{eq:rel-word-differential}{{1.2}{18}{Freely adjoining a primitive}{equation.9}{}}
+\MT@newlabel{eq:rel-word-differential}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}A complex for a polynomial relation}{18}{section.10}\protected@file@percent }
+\newlabel{sec:rel-complexes}{{1.3}{18}{A complex for a polynomial relation}{section.10}{}}
+\BKM@entry{id=6,open,dest={73656374696F6E2E3135},srcline={291}}{312E345C303430415C303430686F6D6F746F70795C303430616E645C3034306974735C3034306D756C7469706C69636174696F6E5C303430646566656374}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~1.3.1\else \numberline {1.3.1}Definition\fi }{19}{definition.12}\protected@file@percent }
+\newlabel{def:rel-complex}{{1.3.1}{19}{}{definition.12}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~1.3.2\else \numberline {1.3.2}Proposition\fi }{19}{proposition.14}\protected@file@percent }
+\newlabel{prop:rel-state-cohomology}{{1.3.2}{19}{}{proposition.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}A homotopy and its multiplication defect}{19}{section.15}\protected@file@percent }
+\newlabel{sec:rel-state-homotopy}{{1.4}{19}{A homotopy and its multiplication defect}{section.15}{}}
+\BKM@entry{id=7,open,dest={73656374696F6E2E3136},srcline={356}}{312E355C3034304D6170735C30343066726F6D5C3034307468655C303430667265655C303430616C6765627261}
+\newlabel{eq:rel-left-homotopy}{{1.4}{20}{A homotopy and its multiplication defect}{section.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Maps from the free algebra}{20}{section.16}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~1.5.1\else \numberline {1.5.1}Proposition\fi \thmtformatoptarg {The universal property of adjoining a primitive}}{20}{proposition.18}\protected@file@percent }
+\newlabel{prop:rel-witness-mapping}{{1.5.1}{20}{The universal property of adjoining a primitive}{proposition.18}{}}
+\BKM@entry{id=8,open,dest={73656374696F6E2E3139},srcline={446}}{312E365C30343054776F5C303430616374696F6E735C30343061735C3034306F6E655C303430616C67656272615C303430616374696F6E}
+\MT@newlabel{eq:rel-word-differential}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Two actions as one algebra action}{21}{section.19}\protected@file@percent }
+\newlabel{sec:rel-bimodules}{{1.6}{21}{Two actions as one algebra action}{section.19}{}}
+\newlabel{eq:rel-bimodule-leibniz}{{1.3}{21}{Two actions as one algebra action}{equation.20}{}}
+\newlabel{eq:rel-tensor-differential}{{1.4}{22}{Two actions as one algebra action}{equation.21}{}}
+\MT@newlabel{eq:rel-tensor-differential}
+\BKM@entry{id=9,open,dest={73656374696F6E2E3235},srcline={618}}{312E375C303430416E5C3034306578706C696369745C30343074776F2D63656C6C5C3034307265736F6C7574696F6E}
+\newlabel{eq:rel-envelope-action}{{1.5}{23}{Two actions as one algebra action}{equation.22}{}}
+\MT@newlabel{eq:rel-envelope-action}
+\newlabel{eq:rel-graded-bimodule-map}{{1.6}{23}{Two actions as one algebra action}{equation.23}{}}
+\MT@newlabel{eq:rel-homotopy-linearity}
+\MT@newlabel{eq:rel-graded-bimodule-map}
+\newlabel{eq:rel-hom-differential}{{1.7}{23}{Two actions as one algebra action}{equation.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.7}An explicit two-cell resolution}{24}{section.25}\protected@file@percent }
+\newlabel{sec:rel-resolution}{{1.7}{24}{An explicit two-cell resolution}{section.25}{}}
+\newlabel{eq:rel-resolution-differential}{{1.7}{24}{An explicit two-cell resolution}{section.25}{}}
+\MT@newlabel{eq:rel-bimodule-leibniz}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~1.7.1\else \numberline {1.7.1}Proposition\fi }{24}{proposition.27}\protected@file@percent }
+\newlabel{prop:rel-contraction}{{1.7.1}{24}{}{proposition.27}{}}
+\newlabel{eq:rel-contraction}{{1.7.1}{24}{}{proposition.27}{}}
+\BKM@entry{id=10,open,dest={73656374696F6E2E3238},srcline={754}}{312E385C3034305768795C303430746869735C3034307265736F6C7574696F6E5C303430636F6D70757465735C303430646572697665645C3034306D617073}
+\@writefile{toc}{\contentsline {section}{\numberline {1.8}Why this resolution computes derived maps}{25}{section.28}\protected@file@percent }
+\newlabel{sec:rel-derived-maps}{{1.8}{25}{Why this resolution computes derived maps}{section.28}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~1.8.1\else \numberline {1.8.1}Lemma\fi }{25}{lemma.30}\protected@file@percent }
+\newlabel{lem:rel-hom-acyclic}{{1.8.1}{25}{}{lemma.30}{}}
+\newlabel{eq:rel-pair-differential}{{1.8}{25}{Why this resolution computes derived maps}{equation.31}{}}
+\MT@newlabel{eq:rel-hom-differential}
+\MT@newlabel{eq:rel-pair-differential}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~1.8.2\else \numberline {1.8.2}Lemma\fi }{26}{lemma.33}\protected@file@percent }
+\newlabel{lem:rel-cone}{{1.8.2}{26}{}{lemma.33}{}}
+\MT@newlabel{eq:rel-bimodule-leibniz}
+\MT@newlabel{eq:rel-hom-differential}
+\BKM@entry{id=11,open,dest={73656374696F6E2E3334},srcline={997}}{312E395C3034305468655C30343063656E7472616C5C303430636F6D706C65785C303430616E645C3034306974735C30343070726F64756374}
+\@writefile{toc}{\contentsline {section}{\numberline {1.9}The central complex and its product}{28}{section.34}\protected@file@percent }
+\newlabel{sec:rel-central-complex}{{1.9}{28}{The central complex and its product}{section.34}{}}
+\MT@newlabel{eq:rel-pair-differential}
+\newlabel{eq:rel-central-pair}{{1.9}{28}{The central complex and its product}{equation.35}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~1.9.1\else \numberline {1.9.1}Lemma\fi }{29}{lemma.37}\protected@file@percent }
+\newlabel{lem:rel-diagonal}{{1.9.1}{29}{}{lemma.37}{}}
+\newlabel{eq:rel-cup-product}{{1.10}{29}{The central complex and its product}{equation.38}{}}
+\MT@newlabel{eq:rel-cup-product}
+\MT@newlabel{eq:rel-central-pair}
+\newlabel{eq:rel-central-model}{{1.9}{29}{The central complex and its product}{equation.38}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~1.9.2\else \numberline {1.9.2}Proposition\fi }{29}{proposition.40}\protected@file@percent }
+\newlabel{prop:rel-composition}{{1.9.2}{29}{}{proposition.40}{}}
+\BKM@entry{id=12,open,dest={73656374696F6E2E3431},srcline={1170}}{312E31305C3034305468655C30343065786163745C3034307363616C61725C3034306578706F6E656E745C303430616E645C3034307468655C30343066756C6C5C303430636F686F6D6F6C6F67795C30343072696E67}
+\MT@newlabel{eq:rel-cup-product}
+\@writefile{toc}{\contentsline {section}{\numberline {1.10}The exact scalar exponent and the full cohomology ring}{30}{section.41}\protected@file@percent }
+\newlabel{sec:rel-center-cohomology}{{1.10}{30}{The exact scalar exponent and the full cohomology ring}{section.41}{}}
+\newlabel{eq:rel-injectivity}{{1.11}{30}{The exact scalar exponent and the full cohomology ring}{equation.42}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~1.10.1\else \numberline {1.10.1}Theorem\fi }{31}{theorem.44}\protected@file@percent }
+\newlabel{thm:rel-full-center}{{1.10.1}{31}{}{theorem.44}{}}
+\newlabel{eq:rel-center-ring}{{1.10.1}{31}{}{theorem.44}{}}
+\MT@newlabel{eq:rel-injectivity}
+\newlabel{eq:rel-scalar-matrix}{{1.10}{31}{The exact scalar exponent and the full cohomology ring}{theorem.44}{}}
+\BKM@entry{id=13,open,dest={73656374696F6E2E3435},srcline={1345}}{312E31315C3034305468655C30343066697273745C30343074776F5C30343072656C6174696F6E73}
+\newlabel{eq:rel-central-square}{{1.10}{32}{The exact scalar exponent and the full cohomology ring}{theorem.44}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.11}The first two relations}{32}{section.45}\protected@file@percent }
+\newlabel{sec:rel-examples}{{1.11}{32}{The first two relations}{section.45}{}}
+\@writefile{loe}{\contentsline {example}{\ifthmt@listswap Example~1.11.1\else \numberline {1.11.1}Example\fi \thmtformatoptarg {The relation $t=0$}}{32}{example.47}\protected@file@percent }
+\newlabel{ex:rel-r1}{{1.11.1}{32}{The relation $t=0$}{example.47}{}}
+\BKM@entry{id=14,open,dest={73656374696F6E2E3530},srcline={1415}}{312E31325C3034305468655C3034307371756172655C3034306F665C303430615C3034307072696D6974697665}
+\@writefile{loe}{\contentsline {example}{\ifthmt@listswap Example~1.11.2\else \numberline {1.11.2}Example\fi \thmtformatoptarg {The relation $t^2=0$}}{33}{example.49}\protected@file@percent }
+\newlabel{ex:rel-r2}{{1.11.2}{33}{The relation $t^2=0$}{example.49}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.12}The square of a primitive}{33}{section.50}\protected@file@percent }
+\newlabel{sec:rel-square-invariant}{{1.12}{33}{The square of a primitive}{section.50}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~1.12.1\else \numberline {1.12.1}Definition\fi }{33}{definition.52}\protected@file@percent }
+\newlabel{def:rel-formality}{{1.12.1}{33}{}{definition.52}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~1.12.2\else \numberline {1.12.2}Lemma\fi }{34}{lemma.54}\protected@file@percent }
+\newlabel{lem:rel-square-invariant}{{1.12.2}{34}{}{lemma.54}{}}
+\newlabel{eq:rel-square-independence}{{1.12}{34}{The square of a primitive}{lemma.54}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~1.12.3\else \numberline {1.12.3}Theorem\fi }{34}{theorem.56}\protected@file@percent }
+\newlabel{thm:rel-nonformality}{{1.12.3}{34}{}{theorem.56}{}}
+\BKM@entry{id=15,open,dest={73656374696F6E2E3537},srcline={1528}}{312E31335C3034304368616E67696E675C3034307468655C303430636F656666696369656E7473}
+\@writefile{toc}{\contentsline {section}{\numberline {1.13}Changing the coefficients}{35}{section.57}\protected@file@percent }
+\newlabel{sec:rel-coefficient-change}{{1.13}{35}{Changing the coefficients}{section.57}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~1.13.1\else \numberline {1.13.1}Proposition\fi }{35}{proposition.59}\protected@file@percent }
+\newlabel{prop:rel-specialization}{{1.13.1}{35}{}{proposition.59}{}}
+\BKM@entry{id=16,open,dest={636861707465722E3630},srcline={1}}{325C30343050726F64756374735C303430616E645C303430636F656666696369656E7473}
+\BKM@entry{id=17,open,dest={73656374696F6E2E3631},srcline={8}}{322E315C303430436F756E74696E675C3034306D6F6E6F6D69616C73}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {2}Products and coefficients}{37}{chapter.60}\protected@file@percent }
+\newlabel{ch:products-coefficients}{{2}{37}{Products and coefficients}{chapter.60}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Counting monomials}{37}{section.61}\protected@file@percent }
+\BKM@entry{id=18,open,dest={73656374696F6E2E3633},srcline={112}}{322E325C303430466F726D616C5C3034306D756C7469706C69636174696F6E5C303430616E645C303430696E74656765725C303430706F77657273}
+\newlabel{eq:pc-count-example}{{2.1}{38}{Counting monomials}{equation.62}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Formal multiplication and integer powers}{38}{section.63}\protected@file@percent }
+\BKM@entry{id=19,open,dest={73656374696F6E2E3639},srcline={229}}{322E335C3034304C6F63616C6C795C30343066696E6974655C30343070726F64756374735C303430616E645C30343077656967687465645C303430636F756E7473}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~2.2.1\else \numberline {2.2.1}Lemma\fi \thmtformatoptarg {Formal units}}{39}{lemma.65}\protected@file@percent }
+\newlabel{lem:pc-units}{{2.2.1}{39}{Formal units}{lemma.65}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~2.2.2\else \numberline {2.2.2}Lemma\fi \thmtformatoptarg {Binomial factors}}{39}{lemma.67}\protected@file@percent }
+\newlabel{lem:pc-binomial}{{2.2.2}{39}{Binomial factors}{lemma.67}{}}
+\MT@newlabel{eq:pc-count-example}
+\newlabel{eq:pc-rational-example}{{2.2}{39}{Formal multiplication and integer powers}{equation.68}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Locally finite products and weighted counts}{40}{section.69}\protected@file@percent }
+\newlabel{eq:pc-local-finiteness}{{2.3}{40}{Locally finite products and weighted counts}{equation.70}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~2.3.1\else \numberline {2.3.1}Proposition\fi \thmtformatoptarg {Coefficientwise product}}{40}{proposition.72}\protected@file@percent }
+\newlabel{prop:pc-product}{{2.3.1}{40}{Coefficientwise product}{proposition.72}{}}
+\MT@newlabel{eq:pc-local-finiteness}
+\newlabel{eq:pc-product}{{2.4}{40}{Coefficientwise product}{equation.73}{}}
+\MT@newlabel{eq:pc-product}
+\BKM@entry{id=20,open,dest={73656374696F6E2E3736},srcline={363}}{322E345C3034304C6F6761726974686D69635C303430636F656666696369656E74735C303430616E645C3034307468655C303430726563757272656E6365}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~2.3.2\else \numberline {2.3.2}Proposition\fi \thmtformatoptarg {Signed monomial realization}}{41}{proposition.75}\protected@file@percent }
+\newlabel{prop:pc-realization}{{2.3.2}{41}{Signed monomial realization}{proposition.75}{}}
+\MT@newlabel{eq:pc-local-finiteness}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Logarithmic coefficients and the recurrence}{41}{section.76}\protected@file@percent }
+\newlabel{eq:pc-ghost-definition}{{2.5}{41}{Logarithmic coefficients and the recurrence}{equation.77}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~2.4.1\else \numberline {2.4.1}Theorem\fi \thmtformatoptarg {Product recurrence}}{42}{theorem.79}\protected@file@percent }
+\newlabel{thm:pc-recurrence}{{2.4.1}{42}{Product recurrence}{theorem.79}{}}
+\MT@newlabel{eq:pc-product}
+\newlabel{eq:pc-ghost-product}{{2.6}{42}{Product recurrence}{equation.80}{}}
+\newlabel{eq:pc-recurrence}{{2.7}{42}{Product recurrence}{equation.81}{}}
+\MT@newlabel{eq:pc-ghost-product}
+\MT@newlabel{eq:pc-ghost-product}
+\MT@newlabel{eq:pc-ghost-definition}
+\MT@newlabel{eq:pc-recurrence}
+\MT@newlabel{eq:pc-recurrence}
+\newlabel{eq:pc-exponential}{{2.8}{42}{Logarithmic coefficients and the recurrence}{equation.82}{}}
+\MT@newlabel{eq:pc-ghost-definition}
+\BKM@entry{id=21,open,dest={73656374696F6E2E3833},srcline={471}}{322E355C303430496E74656765725C303430636F656666696369656E74735C303430616E645C303430666163746F72735C3034306F665C3034307765696768745C3034306F6E65}
+\MT@newlabel{eq:pc-recurrence}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Integer coefficients and factors of weight one}{43}{section.83}\protected@file@percent }
+\MT@newlabel{eq:pc-exponential}
+\newlabel{eq:pc-mobius-sum}{{2.9}{44}{Integer coefficients and factors of weight one}{equation.84}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~2.5.1\else \numberline {2.5.1}Lemma\fi \thmtformatoptarg {Divisor inversion}}{44}{lemma.86}\protected@file@percent }
+\newlabel{lem:pc-inversion}{{2.5.1}{44}{Divisor inversion}{lemma.86}{}}
+\MT@newlabel{eq:pc-mobius-sum}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~2.5.2\else \numberline {2.5.2}Theorem\fi \thmtformatoptarg {Integral factorization}}{44}{theorem.88}\protected@file@percent }
+\newlabel{thm:pc-integrality}{{2.5.2}{44}{Integral factorization}{theorem.88}{}}
+\MT@newlabel{eq:pc-exponential}
+\newlabel{eq:pc-integrality-criterion}{{2.10}{44}{Integral factorization}{equation.89}{}}
+\MT@newlabel{eq:pc-ghost-product}
+\BKM@entry{id=22,open,dest={73656374696F6E2E3930},srcline={621}}{322E365C303430486F775C3034306D616E795C303430636F656666696369656E74735C30343064657465726D696E655C303430615C3034307365726965733F}
+\MT@newlabel{eq:pc-integrality-criterion}
+\MT@newlabel{eq:pc-integrality-criterion}
+\MT@newlabel{eq:pc-integrality-criterion}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}How many coefficients determine a series?}{45}{section.90}\protected@file@percent }
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~2.6.1\else \numberline {2.6.1}Theorem\fi \thmtformatoptarg {Finite determination of rational functions}}{45}{theorem.92}\protected@file@percent }
+\newlabel{thm:pc-rational-determination}{{2.6.1}{45}{Finite determination of rational functions}{theorem.92}{}}
+\BKM@entry{id=23,open,dest={73656374696F6E2E3933},srcline={719}}{322E375C3034305468655C30343074687265652D67656E657261746F725C3034306578616D706C655C303430726576697369746564}
+\MT@newlabel{eq:pc-product}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}The three-generator example revisited}{46}{section.93}\protected@file@percent }
+\MT@newlabel{eq:pc-rational-example}
+\MT@newlabel{eq:pc-ghost-product}
+\BKM@entry{id=24,open,dest={73656374696F6E2E3934},srcline={773}}{322E385C3034304C6174746963655C3034306C6162656C735C30343061745C303430615C30343066697865645C3034306672616D65}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Lattice labels at a fixed frame}{47}{section.94}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.1}Numerical exponential weights}{47}{subsection.95}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}Period coordinates and the finite product}{50}{subsection.96}\protected@file@percent }
+\BKM@entry{id=25,open,dest={73656374696F6E2E3937},srcline={1135}}{322E395C303430496E666F726D6174696F6E5C3034306C6F73745C30343062795C303430615C3034307363616C61725C303430736572696573}
+\@writefile{toc}{\contentsline {section}{\numberline {2.9}Information lost by a scalar series}{51}{section.97}\protected@file@percent }
+\BKM@entry{id=26,open,dest={636861707465722E3938},srcline={1}}{335C303430436F6D706C6574696F6E5C303430616E645C303430636F656666696369656E7473}
+\BKM@entry{id=27,open,dest={73656374696F6E2E313030},srcline={17}}{332E315C303430506F6C796E6F6D69616C5C303430636F656666696369656E74735C303430616E645C303430636F6D70617469626C655C3034307472756E636174696F6E73}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {3}Completion and coefficients}{53}{chapter.98}\protected@file@percent }
+\newlabel{ch:completion-coefficients}{{3}{53}{Completion and coefficients}{chapter.98}{}}
+\newlabel{eq:cc-geometric-finite}{{3.1}{53}{Completion and coefficients}{equation.99}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Polynomial coefficients and compatible truncations}{53}{section.100}\protected@file@percent }
+\newlabel{sec:cc-truncations}{{3.1}{53}{Polynomial coefficients and compatible truncations}{section.100}{}}
+\MT@newlabel{eq:cc-geometric-finite}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~3.1.1\else \numberline {3.1.1}Definition\fi }{53}{definition.102}\protected@file@percent }
+\newlabel{def:cc-filtered-topology}{{3.1.1}{53}{}{definition.102}{}}
+\newlabel{eq:cc-continuity-at-point}{{3.2}{54}{Polynomial coefficients and compatible truncations}{equation.103}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~3.1.2\else \numberline {3.1.2}Definition\fi }{55}{definition.105}\protected@file@percent }
+\newlabel{def:cc-inverse-limit}{{3.1.2}{55}{}{definition.105}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.1.3\else \numberline {3.1.3}Proposition\fi }{55}{proposition.107}\protected@file@percent }
+\newlabel{prop:cc-series-limit}{{3.1.3}{55}{}{proposition.107}{}}
+\BKM@entry{id=28,open,dest={73656374696F6E2E313038},srcline={255}}{332E325C3034304C6F63616C697A6174696F6E5C303430616E645C3034307468655C3034306C6F7765725C303430626F756E645C3034306F6E5C303430706172616D657465725C3034306F72646572}
+\MT@newlabel{eq:cc-continuity-at-point}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Localization and the lower bound on parameter order}{56}{section.108}\protected@file@percent }
+\newlabel{sec:cc-localization}{{3.2}{56}{Localization and the lower bound on parameter order}{section.108}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.2.1\else \numberline {3.2.1}Proposition\fi }{57}{proposition.110}\protected@file@percent }
+\newlabel{prop:cc-valuation-carrier}{{3.2.1}{57}{}{proposition.110}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.2.2\else \numberline {3.2.2}Proposition\fi }{57}{proposition.112}\protected@file@percent }
+\newlabel{prop:cc-lattice-complete}{{3.2.2}{57}{}{proposition.112}{}}
+\BKM@entry{id=29,open,dest={73656374696F6E2E313135},srcline={467}}{332E335C303430415C303430646966666572656E7469616C5C3034306571756174696F6E5C303430616E645C3034306974735C303430696E7665727365}
+\MT@newlabel{eq:cc-continuity-at-point}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.2.3\else \numberline {3.2.3}Proposition\fi }{58}{proposition.114}\protected@file@percent }
+\newlabel{prop:cc-geometric}{{3.2.3}{58}{}{proposition.114}{}}
+\MT@newlabel{eq:cc-geometric-finite}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}A differential equation and its inverse}{59}{section.115}\protected@file@percent }
+\newlabel{sec:cc-differential}{{3.3}{59}{A differential equation and its inverse}{section.115}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~3.3.1\else \numberline {3.3.1}Theorem\fi }{59}{theorem.117}\protected@file@percent }
+\newlabel{thm:cc-differential}{{3.3.1}{59}{}{theorem.117}{}}
+\BKM@entry{id=30,open,dest={73656374696F6E2E313138},srcline={565}}{332E345C303430536F6C76696E675C3034306F6E655C303430636F656666696369656E745C30343061745C303430615C30343074696D65}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Solving one coefficient at a time}{60}{section.118}\protected@file@percent }
+\newlabel{sec:cc-recursion}{{3.4}{60}{Solving one coefficient at a time}{section.118}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~3.4.1\else \numberline {3.4.1}Theorem\fi }{60}{theorem.120}\protected@file@percent }
+\newlabel{thm:cc-recursive-inverse}{{3.4.1}{60}{}{theorem.120}{}}
+\newlabel{eq:cc-recursive-inverse}{{3.3}{60}{Solving one coefficient at a time}{equation.121}{}}
+\MT@newlabel{eq:cc-recursive-inverse}
+\BKM@entry{id=31,open,dest={73656374696F6E2E313234},srcline={697}}{332E355C3034304C656E6774685C3034307265737472696374696F6E735C303430616E645C303430636F6E74696E756F75735C3034306F7065726174696F6E73}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.4.2\else \numberline {3.4.2}Proposition\fi }{61}{proposition.123}\protected@file@percent }
+\newlabel{prop:cc-recursive-right-inverse}{{3.4.2}{61}{}{proposition.123}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Length restrictions and continuous operations}{62}{section.124}\protected@file@percent }
+\newlabel{sec:cc-length}{{3.5}{62}{Length restrictions and continuous operations}{section.124}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.5.1\else \numberline {3.5.1}Proposition\fi }{62}{proposition.126}\protected@file@percent }
+\newlabel{prop:cc-multilinear-extension}{{3.5.1}{62}{}{proposition.126}{}}
+\BKM@entry{id=32,open,dest={73656374696F6E2E313237},srcline={873}}{332E365C3034305468655C303430616C676562726169635C30343074656E736F725C30343070726F647563745C303430616E645C3034306974735C303430636F6D706C6574696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}The algebraic tensor product and its completion}{64}{section.127}\protected@file@percent }
+\newlabel{sec:cc-tensor}{{3.6}{64}{The algebraic tensor product and its completion}{section.127}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.6.1\else \numberline {3.6.1}Proposition\fi }{64}{proposition.129}\protected@file@percent }
+\newlabel{prop:cc-algebraic-tensor}{{3.6.1}{64}{}{proposition.129}{}}
+\newlabel{eq:cc-completed-tensor}{{3.4}{65}{The algebraic tensor product and its completion}{equation.130}{}}
+\MT@newlabel{eq:cc-completed-tensor}
+\BKM@entry{id=33,open,dest={73656374696F6E2E313331},srcline={1045}}{332E375C3034305363616C61725C303430657874656E73696F6E5C3034306265666F72655C303430616E645C30343061667465725C303430615C3034306C696D6974}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Scalar extension before and after a limit}{66}{section.131}\protected@file@percent }
+\newlabel{sec:cc-scalar-limit}{{3.7}{66}{Scalar extension before and after a limit}{section.131}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.7.1\else \numberline {3.7.1}Proposition\fi }{66}{proposition.133}\protected@file@percent }
+\newlabel{prop:cc-scalar-extension}{{3.7.1}{66}{}{proposition.133}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~3.7.2\else \numberline {3.7.2}Lemma\fi }{67}{lemma.135}\protected@file@percent }
+\newlabel{lem:cc-basis-extension}{{3.7.2}{67}{}{lemma.135}{}}
+\BKM@entry{id=34,open,dest={73656374696F6E2E313338},srcline={1252}}{332E385C3034304C6F63616C697A6174696F6E5C303430636F6D6D757465735C303430776974685C30343071756F7469656E7473}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~3.7.3\else \numberline {3.7.3}Theorem\fi }{68}{theorem.137}\protected@file@percent }
+\newlabel{thm:cc-finite-free-limit}{{3.7.3}{68}{}{theorem.137}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Localization commutes with quotients}{68}{section.138}\protected@file@percent }
+\newlabel{sec:cc-localization-limit}{{3.8}{68}{Localization commutes with quotients}{section.138}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.8.1\else \numberline {3.8.1}Proposition\fi }{68}{proposition.140}\protected@file@percent }
+\newlabel{prop:cc-localization-quotient}{{3.8.1}{68}{}{proposition.140}{}}
+\BKM@entry{id=35,open,dest={73656374696F6E2E313432},srcline={1309}}{332E395C3034304C696D6974735C3034306F665C303430636F6D706C657865735C303430616E645C303430636F6D70617469626C655C3034307072696D697469766573}
+\newlabel{eq:cc-localization-limit}{{3.5}{69}{Localization commutes with quotients}{equation.141}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.9}Limits of complexes and compatible primitives}{69}{section.142}\protected@file@percent }
+\newlabel{sec:cc-cohomology}{{3.9}{69}{Limits of complexes and compatible primitives}{section.142}{}}
+\MT@newlabel{eq:cc-localization-limit}
+\@writefile{loe}{\contentsline {example}{\ifthmt@listswap Example~3.9.1\else \numberline {3.9.1}Example\fi }{69}{example.144}\protected@file@percent }
+\newlabel{ex:cc-cohomology-failure}{{3.9.1}{69}{}{example.144}{}}
+\newlabel{eq:cc-contraction}{{3.6}{70}{Limits of complexes and compatible primitives}{equation.145}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~3.9.2\else \numberline {3.9.2}Proposition\fi }{70}{proposition.147}\protected@file@percent }
+\newlabel{prop:cc-compatible-contractions}{{3.9.2}{70}{}{proposition.147}{}}
+\MT@newlabel{eq:cc-contraction}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~3.9.3\else \numberline {3.9.3}Theorem\fi }{71}{theorem.149}\protected@file@percent }
+\newlabel{thm:cc-contraction-completion}{{3.9.3}{71}{}{theorem.149}{}}
+\MT@newlabel{eq:cc-contraction}
+\MT@newlabel{eq:cc-contraction}
+\BKM@entry{id=36,open,dest={636861707465722E313530},srcline={1}}{345C303430436F6D70617469626C655C303430666F726D616C5C3034306C69667473}
+\BKM@entry{id=37,open,dest={73656374696F6E2E313531},srcline={16}}{342E315C3034305468655C3034306571756174696F6E5C303430666F725C303430615C3034306C696674}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {4}Compatible formal lifts}{72}{chapter.150}\protected@file@percent }
+\newlabel{chap:compatible-formal-lifts}{{4}{72}{Compatible formal lifts}{chapter.150}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}The equation for a lift}{72}{section.151}\protected@file@percent }
+\newlabel{sec:lift-equation}{{4.1}{72}{The equation for a lift}{section.151}{}}
+\newlabel{eq:lift-mixed-identities}{{4.1}{72}{The equation for a lift}{equation.152}{}}
+\MT@newlabel{eq:lift-mixed-identities}
+\newlabel{eq:lift-product-carrier}{{4.2}{73}{The equation for a lift}{equation.153}{}}
+\MT@newlabel{eq:lift-product-carrier}
+\newlabel{eq:lift-differential}{{4.3}{73}{The equation for a lift}{equation.154}{}}
+\MT@newlabel{eq:lift-product-carrier}
+\MT@newlabel{eq:lift-differential}
+\newlabel{eq:lift-recurrence}{{4.4}{73}{The equation for a lift}{equation.155}{}}
+\BKM@entry{id=38,open,dest={73656374696F6E2E313538},srcline={159}}{342E325C303430415C3034306C617465725C3034306F62737472756374696F6E5C303430616E645C3034306974735C303430746F7273696F6E}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~4.1.1\else \numberline {4.1.1}Proposition\fi }{74}{proposition.157}\protected@file@percent }
+\newlabel{prop:lift-successive-obstruction}{{4.1.1}{74}{}{proposition.157}{}}
+\MT@newlabel{eq:lift-recurrence}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}A later obstruction and its torsion}{74}{section.158}\protected@file@percent }
+\newlabel{sec:lift-finite-obstructions}{{4.2}{74}{A later obstruction and its torsion}{section.158}{}}
+\newlabel{eq:lift-delayed-series}{{4.2}{75}{A later obstruction and its torsion}{section.158}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~4.2.1\else \numberline {4.2.1}Proposition\fi }{75}{proposition.160}\protected@file@percent }
+\newlabel{prop:lift-delayed-torsion}{{4.2.1}{75}{}{proposition.160}{}}
+\BKM@entry{id=39,open,dest={73656374696F6E2E313631},srcline={295}}{342E335C303430415C303430636F6E7472616374696F6E5C30343063686F6F7365735C3034307468655C303430636F7272656374696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}A contraction chooses the corrections}{76}{section.161}\protected@file@percent }
+\newlabel{sec:lift-contraction}{{4.3}{76}{A contraction chooses the corrections}{section.161}{}}
+\newlabel{eq:lift-contraction}{{4.5}{76}{A contraction chooses the corrections}{equation.162}{}}
+\MT@newlabel{eq:lift-contraction}
+\newlabel{eq:lift-cycle-decomposition}{{4.6}{76}{A contraction chooses the corrections}{equation.163}{}}
+\newlabel{eq:lift-chosen-series}{{4.3}{77}{A contraction chooses the corrections}{equation.163}{}}
+\MT@newlabel{eq:lift-cycle-decomposition}
+\newlabel{eq:lift-obstruction-maps}{{4.7}{77}{A contraction chooses the corrections}{equation.164}{}}
+\newlabel{eq:lift-coefficient-extension}{{4.8}{77}{A contraction chooses the corrections}{equation.165}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~4.3.1\else \numberline {4.3.1}Theorem\fi }{77}{theorem.167}\protected@file@percent }
+\newlabel{thm:lift-completed-quasi-isomorphism}{{4.3.1}{77}{}{theorem.167}{}}
+\MT@newlabel{eq:lift-coefficient-extension}
+\newlabel{eq:lift-all-obstructions-vanish}{{4.9}{77}{}{equation.168}{}}
+\newlabel{eq:lift-homology-product}{{4.3.1}{77}{}{equation.168}{}}
+\MT@newlabel{eq:lift-all-obstructions-vanish}
+\MT@newlabel{eq:lift-all-obstructions-vanish}
+\BKM@entry{id=40,open,dest={73656374696F6E2E313731},srcline={501}}{342E345C303430415C303430686F6D6F746F70795C303430636F6D70617469626C655C303430776974685C303430626F74685C303430646966666572656E7469616C73}
+\MT@newlabel{eq:lift-cycle-decomposition}
+\MT@newlabel{eq:lift-cycle-decomposition}
+\MT@newlabel{eq:lift-coefficient-extension}
+\@writefile{loe}{\contentsline {corollary}{\ifthmt@listswap Corollary~4.3.2\else \numberline {4.3.2}Corollary\fi }{78}{corollary.170}\protected@file@percent }
+\newlabel{cor:lift-pure-parity}{{4.3.2}{78}{}{corollary.170}{}}
+\MT@newlabel{eq:lift-obstruction-maps}
+\BKM@entry{id=41,open,dest={73656374696F6E2E313735},srcline={572}}{342E355C303430415C3034306C6966745C303430746861745C30343072657175697265735C303430696E66696E6974656C795C3034306D616E795C303430636F656666696369656E7473}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}A homotopy compatible with both differentials}{79}{section.171}\protected@file@percent }
+\newlabel{sec:lift-common-contraction}{{4.4}{79}{A homotopy compatible with both differentials}{section.171}{}}
+\newlabel{eq:lift-common-contraction}{{4.10}{79}{A homotopy compatible with both differentials}{equation.172}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~4.4.1\else \numberline {4.4.1}Proposition\fi }{79}{proposition.174}\protected@file@percent }
+\newlabel{prop:lift-common-contraction}{{4.4.1}{79}{}{proposition.174}{}}
+\MT@newlabel{eq:lift-contraction}
+\MT@newlabel{eq:lift-common-contraction}
+\BKM@entry{id=42,open,dest={73656374696F6E2E313736},srcline={644}}{342E365C303430526564756374696F6E2C5C303430756E697175656E6573732C5C303430616E645C30343063686F69636573}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}A lift that requires infinitely many coefficients}{80}{section.175}\protected@file@percent }
+\newlabel{sec:lift-infinite-series}{{4.5}{80}{A lift that requires infinitely many coefficients}{section.175}{}}
+\MT@newlabel{eq:lift-product-carrier}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Reduction, uniqueness, and choices}{80}{section.176}\protected@file@percent }
+\newlabel{sec:lift-choices}{{4.6}{80}{Reduction, uniqueness, and choices}{section.176}{}}
+\newlabel{eq:lift-reduction-kernel}{{4.11}{80}{Reduction, uniqueness, and choices}{equation.177}{}}
+\newlabel{eq:lift-short-exact}{{4.6}{81}{Reduction, uniqueness, and choices}{equation.177}{}}
+\MT@newlabel{eq:lift-reduction-kernel}
+\MT@newlabel{eq:lift-reduction-kernel}
+\BKM@entry{id=43,open,dest={73656374696F6E2E313738},srcline={797}}{342E375C3034304D756C7469706C69636174696F6E5C303430616E645C30343070616972696E67735C303430696D706F73655C303430667572746865725C3034306571756174696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Multiplication and pairings impose further equations}{82}{section.178}\protected@file@percent }
+\newlabel{sec:lift-additional-structures}{{4.7}{82}{Multiplication and pairings impose further equations}{section.178}{}}
+\BKM@entry{id=44,open,dest={73656374696F6E2E313739},srcline={919}}{342E385C303430466F726D616C5C303430646966666572656E7469616C735C303430776974685C3034306869676865725C303430636F7272656374696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Formal differentials with higher corrections}{84}{section.179}\protected@file@percent }
+\newlabel{sec:lift-higher-perturbations}{{4.8}{84}{Formal differentials with higher corrections}{section.179}{}}
+\newlabel{eq:lift-higher-square-zero}{{4.12}{84}{Formal differentials with higher corrections}{equation.180}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~4.8.1\else \numberline {4.8.1}Proposition\fi }{85}{proposition.182}\protected@file@percent }
+\newlabel{prop:lift-general-obstruction}{{4.8.1}{85}{}{proposition.182}{}}
+\MT@newlabel{eq:lift-higher-square-zero}
+\BKM@entry{id=45,open,dest={636861707465722E313833},srcline={1}}{355C3034304869676865725C3034306173736F6369617469766974795C303430616E645C303430666F726D616C697479}
+\BKM@entry{id=46,open,dest={73656374696F6E2E313834},srcline={38}}{352E315C3034304E6F726D616C5C303430666F726D735C303430616E645C3034307468655C30343066697273745C3034306D756C7469706C69636174696F6E5C303430646566656374}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Higher associativity and formality}{87}{chapter.183}\protected@file@percent }
+\newlabel{chap:higher-associativity}{{5}{87}{Higher associativity and formality}{chapter.183}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Normal forms and the first multiplication defect}{87}{section.184}\protected@file@percent }
+\newlabel{sec:ha-normal-forms}{{5.1}{87}{Normal forms and the first multiplication defect}{section.184}{}}
+\newlabel{eq:ha-two-summands}{{5.1}{87}{Normal forms and the first multiplication defect}{section.184}{}}
+\newlabel{eq:ha-contraction}{{5.1}{88}{Normal forms and the first multiplication defect}{equation.185}{}}
+\newlabel{eq:ha-F-definition}{{5.2}{88}{Normal forms and the first multiplication defect}{equation.186}{}}
+\BKM@entry{id=47,open,dest={73656374696F6E2E313837},srcline={169}}{352E325C303430456E636F64696E675C3034306D756C7469706C69636174696F6E5C303430616E645C3034306974735C303430737563636573736976655C303430686F6D6F746F70696573}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Encoding multiplication and its successive homotopies}{89}{section.187}\protected@file@percent }
+\newlabel{sec:ha-coalgebra}{{5.2}{89}{Encoding multiplication and its successive homotopies}{section.187}{}}
+\newlabel{eq:ha-primitives}{{5.3}{89}{Encoding multiplication and its successive homotopies}{equation.188}{}}
+\newlabel{eq:ha-coderivation-extension}{{5.2}{90}{Encoding multiplication and its successive homotopies}{equation.188}{}}
+\MT@newlabel{eq:ha-primitives}
+\newlabel{eq:ha-coalgebra-map}{{5.2}{90}{Encoding multiplication and its successive homotopies}{equation.188}{}}
+\MT@newlabel{eq:ha-primitives}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~5.2.1\else \numberline {5.2.1}Definition\fi }{90}{definition.190}\protected@file@percent }
+\newlabel{def:ha-ainfinity}{{5.2.1}{90}{}{definition.190}{}}
+\BKM@entry{id=48,open,dest={73656374696F6E2E313934},srcline={373}}{352E335C3034305472616E7366657272696E675C3034307468655C30343070726F647563745C303430746F5C303430636F686F6D6F6C6F6779}
+\newlabel{eq:ha-stasheff}{{5.4}{91}{Encoding multiplication and its successive homotopies}{equation.191}{}}
+\MT@newlabel{eq:ha-stasheff}
+\newlabel{eq:ha-morphism}{{5.5}{91}{Encoding multiplication and its successive homotopies}{equation.193}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Transferring the product to cohomology}{92}{section.194}\protected@file@percent }
+\newlabel{sec:ha-transfer}{{5.3}{92}{Transferring the product to cohomology}{section.194}{}}
+\MT@newlabel{eq:ha-contraction}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~5.3.1\else \numberline {5.3.1}Proposition\fi }{92}{proposition.196}\protected@file@percent }
+\newlabel{prop:ha-transfer}{{5.3.1}{92}{}{proposition.196}{}}
+\newlabel{eq:ha-transfer-recursion}{{5.6}{92}{}{equation.197}{}}
+\MT@newlabel{eq:ha-primitives}
+\MT@newlabel{eq:ha-morphism}
+\MT@newlabel{eq:ha-transfer-recursion}
+\BKM@entry{id=49,open,dest={73656374696F6E2E313939},srcline={511}}{352E345C303430415C3034307072696D69746976655C303430666F725C3034307468655C303430666F757274685C3034306F7065726174696F6E}
+\newlabel{eq:ha-m4}{{5.3}{93}{Transferring the product to cohomology}{equation.197}{}}
+\newlabel{eq:ha-m6}{{5.7}{93}{Transferring the product to cohomology}{equation.198}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}A primitive for the fourth operation}{93}{section.199}\protected@file@percent }
+\newlabel{sec:ha-hochschild}{{5.4}{93}{A primitive for the fourth operation}{section.199}{}}
+\newlabel{eq:ha-hochschild-differential}{{5.8}{93}{A primitive for the fourth operation}{equation.201}{}}
+\MT@newlabel{eq:ha-morphism}
+\MT@newlabel{eq:ha-hochschild-differential}
+\MT@newlabel{eq:ha-F-definition}
+\newlabel{eq:ha-FG-cocycles}{{5.4}{94}{A primitive for the fourth operation}{equation.201}{}}
+\newlabel{eq:ha-derivative-defects}{{5.9}{95}{A primitive for the fourth operation}{equation.202}{}}
+\MT@newlabel{eq:ha-derivative-defects}
+\newlabel{eq:ha-insertion-FG}{{5.10}{95}{A primitive for the fourth operation}{equation.203}{}}
+\BKM@entry{id=50,open,dest={73656374696F6E2E323035},srcline={730}}{352E355C3034305468655C30343073697874685C3034306F7065726174696F6E5C30343061667465725C3034306368616E67696E675C303430636F6F7264696E61746573}
+\MT@newlabel{eq:ha-insertion-FG}
+\newlabel{eq:ha-g-definition}{{5.11}{96}{A primitive for the fourth operation}{equation.204}{}}
+\MT@newlabel{eq:ha-derivative-defects}
+\MT@newlabel{eq:ha-insertion-FG}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}The sixth operation after changing coordinates}{96}{section.205}\protected@file@percent }
+\newlabel{sec:ha-coordinate-change}{{5.5}{96}{The sixth operation after changing coordinates}{section.205}{}}
+\MT@newlabel{eq:ha-morphism}
+\BKM@entry{id=51,open,dest={73656374696F6E2E323036},srcline={789}}{352E365C303430415C3034306261725C3034306379636C655C303430646574656374735C3034307468655C30343073697874685C3034306F7065726174696F6E}
+\newlabel{eq:ha-six-coordinate}{{5.5}{97}{The sixth operation after changing coordinates}{section.205}{}}
+\MT@newlabel{eq:ha-m6}
+\newlabel{eq:ha-six-augmentation}{{5.5}{97}{The sixth operation after changing coordinates}{section.205}{}}
+\MT@newlabel{eq:ha-stasheff}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}A bar cycle detects the sixth operation}{97}{section.206}\protected@file@percent }
+\newlabel{sec:ha-bar-pairing}{{5.6}{97}{A bar cycle detects the sixth operation}{section.206}{}}
+\newlabel{eq:ha-bar-differential}{{5.12}{97}{A bar cycle detects the sixth operation}{equation.207}{}}
+\newlabel{eq:ha-detecting-chain}{{5.6}{97}{A bar cycle detects the sixth operation}{equation.207}{}}
+\MT@newlabel{eq:ha-g-definition}
+\BKM@entry{id=52,open,dest={73656374696F6E2E323130},srcline={948}}{352E375C3034305472616E73706F72745C3034307468726F7567685C3034306172626974726172795C30343071756173692D69736F6D6F72706869736D73}
+\newlabel{eq:ha-nonzero-pairing}{{5.13}{99}{A bar cycle detects the sixth operation}{equation.208}{}}
+\MT@newlabel{eq:ha-hochschild-differential}
+\MT@newlabel{eq:ha-bar-differential}
+\MT@newlabel{eq:ha-nonzero-pairing}
+\newlabel{eq:ha-nonzero-class}{{5.14}{99}{A bar cycle detects the sixth operation}{equation.209}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Transport through arbitrary quasi-isomorphisms}{99}{section.210}\protected@file@percent }
+\newlabel{sec:ha-transport}{{5.7}{99}{Transport through arbitrary quasi-isomorphisms}{section.210}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~5.7.1\else \numberline {5.7.1}Lemma\fi }{100}{lemma.212}\protected@file@percent }
+\newlabel{lem:ha-surjective-lifting}{{5.7.1}{100}{}{lemma.212}{}}
+\MT@newlabel{eq:ha-primitives}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~5.7.2\else \numberline {5.7.2}Proposition\fi }{104}{proposition.214}\protected@file@percent }
+\newlabel{prop:ha-zigzag-transport}{{5.7.2}{104}{}{proposition.214}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~5.7.3\else \numberline {5.7.3}Theorem\fi }{104}{theorem.216}\protected@file@percent }
+\newlabel{thm:ha-formality-dichotomy}{{5.7.3}{104}{}{theorem.216}{}}
+\MT@newlabel{eq:ha-morphism}
+\newlabel{eq:ha-formality-comparison}{{5.15}{104}{Transport through arbitrary quasi-isomorphisms}{equation.217}{}}
+\BKM@entry{id=53,open,dest={73656374696F6E2E323138},srcline={1449}}{352E385C3034305468655C303430666F757274685C3034306F7065726174696F6E5C3034306F7665725C303430616E5C3034306172626974726172795C3034306669656C64}
+\MT@newlabel{eq:ha-formality-comparison}
+\MT@newlabel{eq:ha-nonzero-class}
+\MT@newlabel{eq:ha-nonzero-class}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}The fourth operation over an arbitrary field}{105}{section.218}\protected@file@percent }
+\newlabel{sec:ha-arbitrary-field}{{5.8}{105}{The fourth operation over an arbitrary field}{section.218}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~5.8.1\else \numberline {5.8.1}Theorem\fi }{106}{theorem.220}\protected@file@percent }
+\newlabel{thm:ha-common-model-formality}{{5.8.1}{106}{}{theorem.220}{}}
+\MT@newlabel{eq:ha-transfer-recursion}
+\BKM@entry{id=54,open,dest={73656374696F6E2E323233},srcline={1658}}{352E395C303430466F726D616C6974795C3034306F665C3034307468655C3034306E6F6E706F7369746976655C3034307472756E636174696F6E}
+\@writefile{loe}{\contentsline {corollary}{\ifthmt@listswap Corollary~5.8.2\else \numberline {5.8.2}Corollary\fi }{108}{corollary.222}\protected@file@percent }
+\newlabel{prop:ha-witness-k-formality}{{5.8.2}{108}{}{corollary.222}{}}
+\MT@newlabel{eq:ha-g-definition}
+\MT@newlabel{eq:ha-nonzero-class}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Formality of the nonpositive truncation}{108}{section.223}\protected@file@percent }
+\newlabel{sec:ha-truncation}{{5.9}{108}{Formality of the nonpositive truncation}{section.223}{}}
+\newlabel{eq:ha-semifree-algebra}{{5.16}{108}{Formality of the nonpositive truncation}{equation.224}{}}
+\newlabel{eq:ha-positive-zigzag}{{5.17}{109}{Formality of the nonpositive truncation}{equation.225}{}}
+\MT@newlabel{eq:ha-positive-zigzag}
+\BKM@entry{id=55,open,dest={73656374696F6E2E323238},srcline={1947}}{352E31305C3034304C6F63616C697A696E675C30343061745C303430616E5C3034306576656E5C3034306379636C65}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~5.9.1\else \numberline {5.9.1}Theorem\fi }{111}{theorem.227}\protected@file@percent }
+\newlabel{thm:ha-truncation-formal}{{5.9.1}{111}{}{theorem.227}{}}
+\MT@newlabel{eq:ha-positive-zigzag}
+\BKM@entry{id=56,open,dest={73656374696F6E2E323239},srcline={2039}}{352E31315C30343043686172616374657269737469635C30343074776F5C303430616E645C3034307468655C30343066697865645C303430636F656666696369656E745C303430616374696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {5.10}Localizing at an even cycle}{112}{section.228}\protected@file@percent }
+\newlabel{sec:ha-localization}{{5.10}{112}{Localizing at an even cycle}{section.228}{}}
+\MT@newlabel{eq:ha-positive-zigzag}
+\BKM@entry{id=57,open,dest={73656374696F6E2E323332},srcline={2119}}{352E31325C303430436F686F6D6F6C6F67795C303430756E6465725C303430726564756374696F6E5C3034306F665C303430636F656666696369656E7473}
+\@writefile{toc}{\contentsline {section}{\numberline {5.11}Characteristic two and the fixed coefficient action}{113}{section.229}\protected@file@percent }
+\newlabel{sec:ha-characteristic-two}{{5.11}{113}{Characteristic two and the fixed coefficient action}{section.229}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~5.11.1\else \numberline {5.11.1}Theorem\fi }{113}{theorem.231}\protected@file@percent }
+\newlabel{thm:ha-characteristic-two}{{5.11.1}{113}{}{theorem.231}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.12}Cohomology under reduction of coefficients}{114}{section.232}\protected@file@percent }
+\newlabel{sec:ha-integral-reduction}{{5.12}{114}{Cohomology under reduction of coefficients}{section.232}{}}
+\BKM@entry{id=58,open,dest={73656374696F6E2E323335},srcline={2270}}{352E31335C3034305468655C30343065786163745C303430636F656666696369656E742D72696E675C303430626F756E64617279}
+\@writefile{loe}{\contentsline {corollary}{\ifthmt@listswap Corollary~5.12.1\else \numberline {5.12.1}Corollary\fi }{115}{corollary.234}\protected@file@percent }
+\newlabel{cor:ha-formality-under-reduction}{{5.12.1}{115}{}{corollary.234}{}}
+\MT@newlabel{eq:ha-semifree-algebra}
+\MT@newlabel{eq:ha-positive-zigzag}
+\@writefile{toc}{\contentsline {section}{\numberline {5.13}The exact coefficient-ring boundary}{115}{section.235}\protected@file@percent }
+\newlabel{sec:ha-ring-formality}{{5.13}{115}{The exact coefficient-ring boundary}{section.235}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~5.13.1\else \numberline {5.13.1}Theorem\fi }{116}{theorem.237}\protected@file@percent }
+\newlabel{thm:ha-ring-truncation-formality}{{5.13.1}{116}{}{theorem.237}{}}
+\MT@newlabel{eq:ha-transfer-recursion}
+\BKM@entry{id=59,open,dest={636861707465722E323338},srcline={1}}{365C3034305472616E736C6174696F6E5C303430616E645C303430627261696465645C30343065786368616E6765}
+\BKM@entry{id=60,open,dest={73656374696F6E2E323339},srcline={16}}{362E315C3034304D756C7469706C69636174696F6E5C30343061745C30343074776F5C303430706F736974696F6E73}
+\BKM@entry{id=61,open,dest={73656374696F6E2E323430},srcline={62}}{362E325C303430466F726D616C5C3034306669656C64735C303430616E645C30343074686569725C30343070726F6475637473}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {6}Translation and braided exchange}{122}{chapter.238}\protected@file@percent }
+\newlabel{chap:translation-braided-exchange}{{6}{122}{Translation and braided exchange}{chapter.238}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Multiplication at two positions}{122}{section.239}\protected@file@percent }
+\newlabel{sec:vertex-polynomial-translation}{{6.1}{122}{Multiplication at two positions}{section.239}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Formal fields and their products}{123}{section.240}\protected@file@percent }
+\newlabel{sec:vertex-formal-carriers}{{6.2}{123}{Formal fields and their products}{section.240}{}}
+\BKM@entry{id=62,open,dest={73656374696F6E2E323431},srcline={215}}{362E335C303430415C30343064657269766174696F6E5C30343070726F64756365735C303430726567756C61725C3034306669656C6473}
+\newlabel{eq:vertex-ordinary-locality}{{6.2}{124}{Formal fields and their products}{section.240}{}}
+\newlabel{eq:vertex-weak-associativity}{{6.2}{124}{Formal fields and their products}{section.240}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}A derivation produces regular fields}{124}{section.241}\protected@file@percent }
+\newlabel{sec:vertex-differential-algebra}{{6.3}{124}{A derivation produces regular fields}{section.241}{}}
+\newlabel{eq:vertex-exponential-field}{{6.1}{124}{A derivation produces regular fields}{equation.242}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~6.3.1\else \numberline {6.3.1}Lemma\fi }{125}{lemma.244}\protected@file@percent }
+\newlabel{lem:vertex-exponential-identities}{{6.3.1}{125}{}{lemma.244}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~6.3.2\else \numberline {6.3.2}Theorem\fi }{125}{theorem.246}\protected@file@percent }
+\newlabel{thm:vertex-differential-algebra}{{6.3.2}{125}{}{theorem.246}{}}
+\MT@newlabel{eq:vertex-exponential-field}
+\newlabel{eq:vertex-exact-associativity}{{6.2}{125}{A derivation produces regular fields}{equation.247}{}}
+\BKM@entry{id=63,open,dest={73656374696F6E2E323438},srcline={363}}{362E345C3034305468655C3034306F726465725C3034306F665C303430616E5C30343065786368616E6765}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}The order of an exchange}{126}{section.248}\protected@file@percent }
+\newlabel{sec:vertex-exchange-order}{{6.4}{126}{The order of an exchange}{section.248}{}}
+\BKM@entry{id=64,open,dest={73656374696F6E2E323530},srcline={455}}{362E355C3034305468655C3034307175616E74756D5C303430706C616E65}
+\newlabel{eq:vertex-s-locality}{{6.4}{127}{The order of an exchange}{section.248}{}}
+\newlabel{eq:vertex-ordered-exchange}{{6.3}{127}{The order of an exchange}{equation.249}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}The quantum plane}{127}{section.250}\protected@file@percent }
+\newlabel{sec:vertex-quantum-plane}{{6.5}{127}{The quantum plane}{section.250}{}}
+\newlabel{eq:vertex-plane-multiplication}{{6.4}{128}{The quantum plane}{equation.251}{}}
+\MT@newlabel{eq:vertex-plane-multiplication}
+\newlabel{eq:vertex-plane-field}{{6.5}{128}{The quantum plane}{equation.252}{}}
+\newlabel{eq:vertex-bicharacter}{{6.6}{128}{The quantum plane}{equation.253}{}}
+\MT@newlabel{eq:vertex-plane-multiplication}
+\newlabel{eq:vertex-plane-s}{{6.7}{128}{The quantum plane}{equation.254}{}}
+\BKM@entry{id=65,open,dest={73656374696F6E2E323535},srcline={574}}{362E365C303430436F6D7061746962696C6974795C3034306F665C3034307468655C30343065786368616E67655C3034306F70657261746F72}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Compatibility of the exchange operator}{129}{section.255}\protected@file@percent }
+\newlabel{sec:vertex-exchange-axioms}{{6.6}{129}{Compatibility of the exchange operator}{section.255}{}}
+\newlabel{eq:vertex-unitarity-yb}{{6.6}{129}{Compatibility of the exchange operator}{section.255}{}}
+\newlabel{eq:vertex-vacuum-shift}{{6.6}{129}{Compatibility of the exchange operator}{section.255}{}}
+\newlabel{eq:vertex-s-skew}{{6.8}{129}{Compatibility of the exchange operator}{equation.256}{}}
+\newlabel{eq:vertex-hexagon}{{6.9}{129}{Compatibility of the exchange operator}{equation.257}{}}
+\MT@newlabel{eq:vertex-s-skew}
+\MT@newlabel{eq:vertex-hexagon}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~6.6.1\else \numberline {6.6.1}Theorem\fi }{129}{theorem.259}\protected@file@percent }
+\newlabel{thm:vertex-quantum-plane}{{6.6.1}{129}{}{theorem.259}{}}
+\MT@newlabel{eq:vertex-plane-field}
+\MT@newlabel{eq:vertex-plane-s}
+\BKM@entry{id=66,open,dest={73656374696F6E2E323630},srcline={700}}{362E375C303430556E666C69707065645C303430616E645C303430666C69707065645C3034306571756174696F6E73}
+\MT@newlabel{eq:vertex-plane-s}
+\MT@newlabel{eq:vertex-hexagon}
+\MT@newlabel{eq:vertex-bicharacter}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Unflipped and flipped equations}{130}{section.260}\protected@file@percent }
+\newlabel{sec:vertex-flipped-operators}{{6.7}{130}{Unflipped and flipped equations}{section.260}{}}
+\BKM@entry{id=67,open,dest={73656374696F6E2E323632},srcline={780}}{362E385C30343045786368616E67655C303430646570656E64696E675C3034306F6E5C303430646973706C6163656D656E74}
+\MT@newlabel{eq:vertex-ordered-exchange}
+\newlabel{eq:vertex-other-placement}{{6.10}{131}{Unflipped and flipped equations}{equation.261}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Exchange depending on displacement}{131}{section.262}\protected@file@percent }
+\newlabel{sec:vertex-spectral-dictionary}{{6.8}{131}{Exchange depending on displacement}{section.262}{}}
+\newlabel{eq:vertex-spectral-unitarity}{{6.11}{131}{Exchange depending on displacement}{equation.263}{}}
+\newlabel{eq:vertex-spectral-yb}{{6.8}{131}{Exchange depending on displacement}{equation.263}{}}
+\BKM@entry{id=68,open,dest={73656374696F6E2E323635},srcline={908}}{362E395C3034305468655C30343064656C74615C3034306964656E746974795C303430616E645C303430726567756C61725C3034304A61636F62695C3034306964656E74697479}
+\newlabel{eq:vertex-spectral-hexagon-one}{{6.8}{132}{Exchange depending on displacement}{equation.263}{}}
+\newlabel{eq:vertex-spectral-hexagon-two}{{6.8}{132}{Exchange depending on displacement}{equation.263}{}}
+\newlabel{eq:vertex-spectral-placement}{{6.12}{132}{Exchange depending on displacement}{equation.264}{}}
+\MT@newlabel{eq:vertex-spectral-unitarity}
+\MT@newlabel{eq:vertex-spectral-placement}
+\MT@newlabel{eq:vertex-spectral-placement}
+\MT@newlabel{eq:vertex-other-placement}
+\@writefile{toc}{\contentsline {section}{\numberline {6.9}The delta identity and regular Jacobi identity}{133}{section.265}\protected@file@percent }
+\newlabel{sec:vertex-delta}{{6.9}{133}{The delta identity and regular Jacobi identity}{section.265}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~6.9.1\else \numberline {6.9.1}Lemma\fi }{133}{lemma.267}\protected@file@percent }
+\newlabel{lem:vertex-delta-identity}{{6.9.1}{133}{}{lemma.267}{}}
+\newlabel{eq:vertex-delta-identity}{{6.13}{133}{}{equation.268}{}}
+\MT@newlabel{eq:vertex-delta-identity}
+\BKM@entry{id=69,open,dest={73656374696F6E2E323639},srcline={1026}}{362E31305C303430415C303430666F726D616C5C3034306465666F726D6174696F6E5C3034306F665C3034307468655C3034307175616E74756D5C303430706C616E65}
+\MT@newlabel{eq:vertex-delta-identity}
+\newlabel{eq:vertex-s-jacobi}{{6.9}{134}{The delta identity and regular Jacobi identity}{equation.268}{}}
+\MT@newlabel{eq:vertex-exact-associativity}
+\@writefile{toc}{\contentsline {section}{\numberline {6.10}A formal deformation of the quantum plane}{134}{section.269}\protected@file@percent }
+\newlabel{sec:vertex-hadic}{{6.10}{134}{A formal deformation of the quantum plane}{section.269}{}}
+\newlabel{eq:vertex-hadic-tensor}{{6.14}{134}{A formal deformation of the quantum plane}{equation.270}{}}
+\MT@newlabel{eq:vertex-hadic-tensor}
+\newlabel{eq:vertex-hadic-operations}{{6.15}{135}{A formal deformation of the quantum plane}{equation.271}{}}
+\MT@newlabel{eq:vertex-other-placement}
+\newlabel{eq:vertex-hadic-locality}{{6.16}{136}{A formal deformation of the quantum plane}{equation.272}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~6.10.1\else \numberline {6.10.1}Theorem\fi }{136}{theorem.274}\protected@file@percent }
+\newlabel{thm:vertex-hadic-plane}{{6.10.1}{136}{}{theorem.274}{}}
+\MT@newlabel{eq:vertex-hadic-operations}
+\MT@newlabel{eq:vertex-hadic-locality}
+\BKM@entry{id=70,open,dest={73656374696F6E2E323737},srcline={1282}}{362E31315C3034304E6F6E646567656E65726163795C3034306F665C3034306669656C645C3034306576616C756174696F6E}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~6.10.2\else \numberline {6.10.2}Proposition\fi }{137}{proposition.276}\protected@file@percent }
+\newlabel{prop:vertex-fixed-q-obstruction}{{6.10.2}{137}{}{proposition.276}{}}
+\MT@newlabel{eq:vertex-hadic-locality}
+\@writefile{toc}{\contentsline {section}{\numberline {6.11}Nondegeneracy of field evaluation}{137}{section.277}\protected@file@percent }
+\newlabel{sec:vertex-nondegeneracy}{{6.11}{137}{Nondegeneracy of field evaluation}{section.277}{}}
+\BKM@entry{id=71,open,dest={636861707465722E323738},srcline={1}}{375C303430476175737369616E5C303430656C696D696E6174696F6E5C303430616E645C3034307175616E74756D5C3034306F627365727661626C6573}
+\BKM@entry{id=72,open,dest={73656374696F6E2E323739},srcline={12}}{372E315C3034305468655C3034306F6E652D7661726961626C655C303430476175737369616E5C303430636F6D706C6578}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {7}Gaussian elimination and quantum observables}{139}{chapter.278}\protected@file@percent }
+\newlabel{chap:gaussian-observables}{{7}{139}{Gaussian elimination and quantum observables}{chapter.278}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}The one-variable Gaussian complex}{139}{section.279}\protected@file@percent }
+\newlabel{sec:gaussian-one-variable}{{7.1}{139}{The one-variable Gaussian complex}{section.279}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}The real Gaussian average}{139}{subsection.280}\protected@file@percent }
+\newlabel{eq:gaussian-exponential-remainder}{{7.1}{140}{The real Gaussian average}{equation.281}{}}
+\newlabel{eq:gaussian-polynomial-tail}{{7.2}{141}{The real Gaussian average}{equation.282}{}}
+\newlabel{eq:gaussian-real-average}{{7.1.1}{142}{The real Gaussian average}{equation.282}{}}
+\MT@newlabel{eq:gaussian-exponential-remainder}
+\newlabel{eq:gaussian-weighted-increment}{{7.3}{143}{The real Gaussian average}{equation.283}{}}
+\MT@newlabel{eq:gaussian-weighted-increment}
+\MT@newlabel{eq:gaussian-polynomial-tail}
+\newlabel{eq:gaussian-real-ward}{{7.1.1}{143}{The real Gaussian average}{equation.283}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces The Gaussian weight at $h=1$ and its first two polynomial integrands. The negative and positive contributions of $xw_1(x)$ cancel. The integrand $x^2w_1(x)$ is positive away from zero. Dividing their whole-line integrals by the same positive normalization gives $\vvmathbb  E_1(x)=0$ and $\vvmathbb  E_1(x^2)=1$.}}{144}{figure.284}\protected@file@percent }
+\newlabel{fig:gaussian-moment-integrands}{{7.1}{144}{The Gaussian weight at $h=1$ and its first two polynomial integrands. The negative and positive contributions of $xw_1(x)$ cancel. The integrand $x^2w_1(x)$ is positive away from zero. Dividing their whole-line integrals by the same positive normalization gives $\mathbb E_1(x)=0$ and $\mathbb E_1(x^2)=1$}{figure.284}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}The algebraic Gaussian complex}{144}{subsection.285}\protected@file@percent }
+\newlabel{eq:gaussian-differential}{{7.4}{144}{The algebraic Gaussian complex}{equation.286}{}}
+\newlabel{eq:gaussian-functional}{{7.1.2}{145}{The algebraic Gaussian complex}{equation.286}{}}
+\newlabel{eq:gaussian-ward}{{7.5}{145}{The algebraic Gaussian complex}{equation.287}{}}
+\MT@newlabel{eq:gaussian-ward}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~7.1.1\else \numberline {7.1.1}Proposition\fi }{145}{proposition.289}\protected@file@percent }
+\newlabel{prop:gaussian-cohomology}{{7.1.1}{145}{}{proposition.289}{}}
+\BKM@entry{id=73,open,dest={73656374696F6E2E323930},srcline={537}}{372E325C3034305468655C303430627261636B65745C3034306F665C303430615C3034307365636F6E642D6F726465725C3034306F70657261746F72}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}The bracket of a second-order operator}{146}{section.290}\protected@file@percent }
+\newlabel{sec:gaussian-bv-algebra}{{7.2}{146}{The bracket of a second-order operator}{section.290}{}}
+\newlabel{eq:gaussian-derived-bracket}{{7.6}{146}{The bracket of a second-order operator}{equation.291}{}}
+\newlabel{eq:gaussian-coordinate-bracket}{{7.7}{146}{The bracket of a second-order operator}{equation.292}{}}
+\newlabel{eq:gaussian-bracket-skew-leibniz}{{7.8}{147}{The bracket of a second-order operator}{equation.294}{}}
+\MT@newlabel{eq:gaussian-bracket-skew-leibniz}
+\MT@newlabel{eq:gaussian-coordinate-bracket}
+\newlabel{eq:gaussian-seven-term}{{7.9}{147}{The bracket of a second-order operator}{equation.296}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~7.2.1\else \numberline {7.2.1}Definition\fi }{147}{definition.298}\protected@file@percent }
+\newlabel{def:gaussian-bv}{{7.2.1}{147}{}{definition.298}{}}
+\MT@newlabel{eq:gaussian-seven-term}
+\MT@newlabel{eq:gaussian-derived-bracket}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~7.2.2\else \numberline {7.2.2}Proposition\fi }{147}{proposition.300}\protected@file@percent }
+\newlabel{prop:gaussian-bv-identities}{{7.2.2}{147}{}{proposition.300}{}}
+\MT@newlabel{eq:gaussian-bracket-skew-leibniz}
+\newlabel{eq:gaussian-delta-bracket}{{7.10}{147}{}{equation.301}{}}
+\newlabel{eq:gaussian-jacobi}{{7.11}{147}{}{equation.302}{}}
+\MT@newlabel{eq:gaussian-derived-bracket}
+\MT@newlabel{eq:gaussian-bracket-skew-leibniz}
+\MT@newlabel{eq:gaussian-seven-term}
+\newlabel{eq:gaussian-multiplication-commutators}{{7.12}{147}{The bracket of a second-order operator}{equation.303}{}}
+\MT@newlabel{eq:gaussian-multiplication-commutators}
+\MT@newlabel{eq:gaussian-delta-bracket}
+\BKM@entry{id=74,open,dest={73656374696F6E2E333034},srcline={715}}{372E335C303430416374696F6E735C303430616E645C3034307468655C3034306D61737465725C3034306571756174696F6E}
+\MT@newlabel{eq:gaussian-delta-bracket}
+\MT@newlabel{eq:gaussian-jacobi}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Actions and the master equation}{148}{section.304}\protected@file@percent }
+\newlabel{sec:gaussian-master-equation}{{7.3}{148}{Actions and the master equation}{section.304}{}}
+\newlabel{eq:gaussian-q-bracket}{{7.13}{148}{Actions and the master equation}{equation.305}{}}
+\MT@newlabel{eq:gaussian-multiplication-commutators}
+\MT@newlabel{eq:gaussian-q-bracket}
+\newlabel{eq:gaussian-curvature}{{7.3}{148}{Actions and the master equation}{equation.305}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~7.3.1\else \numberline {7.3.1}Proposition\fi }{148}{proposition.307}\protected@file@percent }
+\newlabel{prop:gaussian-master-square}{{7.3.1}{148}{}{proposition.307}{}}
+\newlabel{eq:gaussian-master-square}{{7.3.1}{148}{}{proposition.307}{}}
+\BKM@entry{id=75,open,dest={73656374696F6E2E333038},srcline={812}}{372E345C303430415C30343066696E6974655C303430686561745C303430686F6D6F746F70795C303430616E645C3034306974735C303430726573696475616C5C3034307661726961626C6573}
+\MT@newlabel{eq:gaussian-differential}
+\newlabel{eq:gaussian-observable-product}{{7.3}{149}{Actions and the master equation}{proposition.307}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}A finite heat homotopy and its residual variables}{149}{section.308}\protected@file@percent }
+\newlabel{sec:gaussian-heat}{{7.4}{149}{A finite heat homotopy and its residual variables}{section.308}{}}
+\MT@newlabel{eq:gaussian-exponential-remainder}
+\newlabel{eq:gaussian-heat-homotopy}{{7.4}{150}{A finite heat homotopy and its residual variables}{section.308}{}}
+\newlabel{eq:gaussian-scale-operators}{{7.14}{151}{A finite heat homotopy and its residual variables}{equation.309}{}}
+\newlabel{eq:gaussian-scale-commutators}{{7.15}{151}{A finite heat homotopy and its residual variables}{equation.310}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~7.4.1\else \numberline {7.4.1}Proposition\fi }{151}{proposition.312}\protected@file@percent }
+\newlabel{prop:gaussian-intertwining}{{7.4.1}{151}{}{proposition.312}{}}
+\newlabel{eq:gaussian-intertwining}{{7.16}{151}{}{equation.313}{}}
+\MT@newlabel{eq:gaussian-scale-commutators}
+\newlabel{eq:gaussian-residual-map}{{7.4}{151}{A finite heat homotopy and its residual variables}{equation.313}{}}
+\BKM@entry{id=76,open,dest={73656374696F6E2E333134},srcline={1097}}{372E355C3034305468655C3034306566666563746976655C303430696E746572616374696F6E5C303430616E645C3034307468655C3034306C696E6561725C3034306F627365727661626C655C3034306D6170}
+\MT@newlabel{eq:gaussian-scale-commutators}
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}The effective interaction and the linear observable map}{152}{section.314}\protected@file@percent }
+\newlabel{sec:gaussian-effective}{{7.5}{152}{The effective interaction and the linear observable map}{section.314}{}}
+\newlabel{eq:gaussian-effective-action}{{7.5}{153}{The effective interaction and the linear observable map}{section.314}{}}
+\newlabel{eq:gaussian-second-connected}{{7.17}{153}{The effective interaction and the linear observable map}{equation.315}{}}
+\newlabel{eq:gaussian-connected-coefficients}{{7.18}{153}{The effective interaction and the linear observable map}{equation.316}{}}
+\MT@newlabel{eq:gaussian-connected-coefficients}
+\newlabel{eq:gaussian-labeled-contraction}{{7.5}{154}{The effective interaction and the linear observable map}{equation.316}{}}
+\newlabel{eq:gaussian-edge-factorization}{{7.19}{154}{The effective interaction and the linear observable map}{equation.317}{}}
+\MT@newlabel{eq:gaussian-edge-factorization}
+\newlabel{eq:gaussian-graph-weight}{{7.20}{154}{The effective interaction and the linear observable map}{equation.318}{}}
+\MT@newlabel{eq:gaussian-graph-weight}
+\newlabel{eq:gaussian-component-partition}{{7.21}{155}{The effective interaction and the linear observable map}{equation.319}{}}
+\MT@newlabel{eq:gaussian-component-partition}
+\MT@newlabel{eq:gaussian-connected-coefficients}
+\MT@newlabel{eq:gaussian-second-connected}
+\MT@newlabel{eq:gaussian-derived-bracket}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~7.5.1\else \numberline {7.5.1}Proposition\fi }{156}{proposition.321}\protected@file@percent }
+\newlabel{prop:gaussian-qme-transport}{{7.5.1}{156}{}{proposition.321}{}}
+\newlabel{eq:gaussian-exponential-qme}{{7.22}{156}{The effective interaction and the linear observable map}{equation.322}{}}
+\MT@newlabel{eq:gaussian-intertwining}
+\MT@newlabel{eq:gaussian-exponential-qme}
+\newlabel{eq:gaussian-observable-map}{{7.5}{157}{The effective interaction and the linear observable map}{equation.322}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~7.5.2\else \numberline {7.5.2}Proposition\fi }{157}{proposition.324}\protected@file@percent }
+\newlabel{prop:gaussian-observable-transport}{{7.5.2}{157}{}{proposition.324}{}}
+\MT@newlabel{eq:gaussian-exponential-qme}
+\BKM@entry{id=77,open,dest={73656374696F6E2E333235},srcline={1539}}{372E365C30343054776F5C30343073697465735C303430616E645C3034307468655C303430737570706F72745C3034306F665C3034307468655C3034306566666563746976655C303430696E746572616374696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Two sites and the support of the effective interaction}{158}{section.325}\protected@file@percent }
+\newlabel{sec:gaussian-two-sites}{{7.6}{158}{Two sites and the support of the effective interaction}{section.325}{}}
+\newlabel{eq:gaussian-covariance}{{7.6}{158}{Two sites and the support of the effective interaction}{section.325}{}}
+\BKM@entry{id=78,open,dest={73656374696F6E2E333237},srcline={1687}}{372E375C3034305468655C30343066697273745C3034307175616E74756D5C3034306F62737472756374696F6E}
+\newlabel{eq:gaussian-two-site-effective}{{7.23}{159}{Two sites and the support of the effective interaction}{equation.326}{}}
+\MT@newlabel{eq:gaussian-two-site-effective}
+\@writefile{toc}{\contentsline {section}{\numberline {7.7}The first quantum obstruction}{160}{section.327}\protected@file@percent }
+\newlabel{sec:gaussian-obstruction}{{7.7}{160}{The first quantum obstruction}{section.327}{}}
+\newlabel{eq:gaussian-first-obstruction}{{7.24}{160}{The first quantum obstruction}{equation.328}{}}
+\MT@newlabel{eq:gaussian-delta-bracket}
+\MT@newlabel{eq:gaussian-first-obstruction}
+\newlabel{eq:gaussian-completed-action}{{7.7}{161}{The first quantum obstruction}{equation.328}{}}
+\MT@newlabel{eq:gaussian-delta-bracket}
+\MT@newlabel{eq:gaussian-q-bracket}
+\BKM@entry{id=79,open,dest={636861707465722E333239},srcline={1}}{385C3034304F7264657265645C303430636F6C6C6973696F6E735C303430616E645C30343074776F5C303430686F6C6F6D6F72706869635C303430646972656374696F6E73}
+\BKM@entry{id=80,open,dest={73656374696F6E2E333330},srcline={25}}{382E315C30343054776F5C3034306F72646572735C303430616E645C30343074686569725C303430636F6D6D6F6E5C303430726567696F6E}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {8}Ordered collisions and two holomorphic directions}{163}{chapter.329}\protected@file@percent }
+\newlabel{chap:ordered-collisions-residues}{{8}{163}{Ordered collisions and two holomorphic directions}{chapter.329}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Two orders and their common region}{163}{section.330}\protected@file@percent }
+\newlabel{eq:ocr-ordered-cup}{{8.1}{163}{Two orders and their common region}{equation.332}{}}
+\BKM@entry{id=81,open,dest={73656374696F6E2E333335},srcline={85}}{382E325C303430415C30343070756E63747572655C303430696E5C3034307468655C303430636F6D706C65785C303430706C616E655C3034306F665C30343064696D656E73696F6E5C30343074776F}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~8.1.1\else \numberline {8.1.1}Proposition\fi }{164}{proposition.334}\protected@file@percent }
+\newlabel{prop:ocr-line-algebra}{{8.1.1}{164}{}{proposition.334}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}A puncture in the complex plane of dimension two}{164}{section.335}\protected@file@percent }
+\newlabel{eq:ocr-puncture-complex}{{8.2}{164}{A puncture in the complex plane of dimension two}{section.335}{}}
+\MT@newlabel{eq:ocr-ordered-cup}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~8.2.1\else \numberline {8.2.1}Proposition\fi }{164}{proposition.337}\protected@file@percent }
+\newlabel{prop:ocr-two-dimensional-puncture}{{8.2.1}{164}{}{proposition.337}{}}
+\BKM@entry{id=82,open,dest={73656374696F6E2E333339},srcline={157}}{382E335C3034304B656570696E675C3034307468655C30343074776F5C303430636F6C6C6973696F6E5C3034306272616E63686573}
+\newlabel{eq:ocr-support-complex}{{8.2}{165}{A puncture in the complex plane of dimension two}{equation.338}{}}
+\MT@newlabel{eq:ocr-support-complex}
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Keeping the two collision branches}{165}{section.339}\protected@file@percent }
+\newlabel{eq:ocr-surface-gluing}{{8.3}{165}{Keeping the two collision branches}{section.339}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~8.3.1\else \numberline {8.3.1}Proposition\fi }{165}{proposition.341}\protected@file@percent }
+\newlabel{prop:ocr-surface-algebra}{{8.3.1}{165}{}{proposition.341}{}}
+\BKM@entry{id=83,open,dest={73656374696F6E2E333432},srcline={237}}{382E345C3034305370656369616C697A696E675C303430746F5C303430636F696E636964656E63655C3034307072657365727665735C3034306D756C7469706C69636174696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Specializing to coincidence preserves multiplication}{166}{section.342}\protected@file@percent }
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~8.4.1\else \numberline {8.4.1}Lemma\fi }{166}{lemma.344}\protected@file@percent }
+\newlabel{lem:ocr-residue-resolution}{{8.4.1}{166}{}{lemma.344}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~8.4.2\else \numberline {8.4.2}Theorem\fi }{167}{theorem.346}\protected@file@percent }
+\newlabel{thm:ocr-relative-nonformality}{{8.4.2}{167}{}{theorem.346}{}}
+\BKM@entry{id=84,open,dest={73656374696F6E2E333438},srcline={379}}{382E355C30343052657369647565735C303430706169725C30343073696E67756C61725C303430636F656666696369656E74735C303430776974685C303430666F726D616C5C3034306A657473}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.1}{\ignorespaces At coincidence, two independent order branches and a square-zero class have the same vector-space dimension. Their products distinguish the two derived fibres.}}{168}{figure.347}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Residues pair singular coefficients with formal jets}{168}{section.348}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~8.5.1\else \numberline {8.5.1}Proposition\fi }{168}{proposition.350}\protected@file@percent }
+\newlabel{prop:ocr-residue-dual}{{8.5.1}{168}{}{proposition.350}{}}
+\BKM@entry{id=85,open,dest={73656374696F6E2E333531},srcline={474}}{382E365C303430446572697665645C3034307265737472696374696F6E5C303430746F5C303430615C303430636F6F7264696E6174655C3034306C696E65}
+\BKM@entry{id=86,open,dest={73656374696F6E2E333532},srcline={509}}{382E375C303430436F6D6D7574696E675C3034306D617472696365735C303430616E645C30343074686569725C3034304B6F737A756C5C303430636F6D706C6578}
+\@writefile{toc}{\contentsline {section}{\numberline {8.6}Derived restriction to a coordinate line}{169}{section.351}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.7}Commuting matrices and their Koszul complex}{169}{section.352}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~8.7.1\else \numberline {8.7.1}Proposition\fi }{170}{proposition.354}\protected@file@percent }
+\newlabel{prop:ocr-scalar-brane-class}{{8.7.1}{170}{}{proposition.354}{}}
+\BKM@entry{id=87,open,dest={636861707465722E333535},srcline={1}}{395C3034304261725C3034306475616C6974795C303430776974685C3034306F7264657265645C303430636F6C6C6973696F6E5C303430636F656666696369656E7473}
+\BKM@entry{id=88,open,dest={73656374696F6E2E333536},srcline={25}}{392E315C303430436F656666696369656E74735C3034306F6E5C303430616C6C5C3034306F726465725C303430636861727473}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {9}Bar duality with ordered collision coefficients}{171}{chapter.355}\protected@file@percent }
+\newlabel{chap:ordered-coefficient-bar}{{9}{171}{Bar duality with ordered collision coefficients}{chapter.355}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Coefficients on all order charts}{171}{section.356}\protected@file@percent }
+\BKM@entry{id=89,open,dest={73656374696F6E2E333537},srcline={97}}{392E325C303430415C3034306E6F6E7A65726F5C303430636F6C6C6973696F6E5C303430636C617373}
+\BKM@entry{id=90,open,dest={73656374696F6E2E333630},srcline={148}}{392E335C303430416E5C3034306173736F636961746976655C3034306D756C7469706C69636174696F6E5C303430776974685C303430615C303430636F6C6C6973696F6E5C303430636F656666696369656E74}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}A nonzero collision class}{172}{section.357}\protected@file@percent }
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~9.2.1\else \numberline {9.2.1}Proposition\fi }{172}{proposition.359}\protected@file@percent }
+\newlabel{prop:ocb-nonzero-coefficient}{{9.2.1}{172}{}{proposition.359}{}}
+\BKM@entry{id=91,open,dest={73656374696F6E2E333634},srcline={196}}{392E345C3034305468655C3034306F7264657265645C303430776F72645C303430646966666572656E7469616C}
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}An associative multiplication with a collision coefficient}{173}{section.360}\protected@file@percent }
+\newlabel{eq:ocb-multiplication}{{9.1}{173}{An associative multiplication with a collision coefficient}{equation.361}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~9.3.1\else \numberline {9.3.1}Proposition\fi }{173}{proposition.363}\protected@file@percent }
+\newlabel{prop:ocb-coefficient-algebra}{{9.3.1}{173}{}{proposition.363}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.4}The ordered word differential}{173}{section.364}\protected@file@percent }
+\newlabel{eq:ocb-bar-faces}{{9.2}{173}{The ordered word differential}{equation.365}{}}
+\BKM@entry{id=92,open,dest={73656374696F6E2E333638},srcline={273}}{392E355C3034305468655C3034306475616C5C303430646966666572656E7469616C5C3034307265636F7264735C3034307468655C30343073616D655C303430636F6C6C6973696F6E}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~9.4.1\else \numberline {9.4.1}Proposition\fi }{174}{proposition.367}\protected@file@percent }
+\newlabel{prop:ocb-bar-square}{{9.4.1}{174}{}{proposition.367}{}}
+\MT@newlabel{eq:ocb-multiplication}
+\@writefile{toc}{\contentsline {section}{\numberline {9.5}The dual differential records the same collision}{174}{section.368}\protected@file@percent }
+\BKM@entry{id=93,open,dest={73656374696F6E2E333732},srcline={366}}{392E365C3034305768795C3034307468655C3034306175676D656E746174696F6E5C3034306475616C5C303430636F6D70757465735C303430646572697665645C303430656E646F6D6F72706869736D73}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~9.5.1\else \numberline {9.5.1}Proposition\fi }{175}{proposition.370}\protected@file@percent }
+\newlabel{prop:ocb-dual-differential}{{9.5.1}{175}{}{proposition.370}{}}
+\newlabel{eq:ocb-dual-differential}{{9.3}{175}{}{equation.371}{}}
+\MT@newlabel{eq:ocb-dual-differential}
+\@writefile{toc}{\contentsline {section}{\numberline {9.6}Why the augmentation dual computes derived endomorphisms}{175}{section.372}\protected@file@percent }
+\BKM@entry{id=94,open,dest={73656374696F6E2E333733},srcline={460}}{392E375C3034305265636F766572696E675C3034307468655C303430616C67656272615C30343066726F6D5C3034306974735C3034306261725C303430636F616C6765627261}
+\@writefile{toc}{\contentsline {section}{\numberline {9.7}Recovering the algebra from its bar coalgebra}{176}{section.373}\protected@file@percent }
+\BKM@entry{id=95,open,dest={73656374696F6E2E333736},srcline={540}}{392E385C3034304E65737465645C303430706F736974696F6E735C303430616E645C303430615C303430636F6D6D6F6E5C303430657870616E73696F6E5C30343072696E67}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~9.7.1\else \numberline {9.7.1}Theorem\fi }{177}{theorem.375}\protected@file@percent }
+\newlabel{thm:ocb-reconstruction}{{9.7.1}{177}{}{theorem.375}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.8}Nested positions and a common expansion ring}{177}{section.376}\protected@file@percent }
+\MT@newlabel{eq:ocb-bar-faces}
+\BKM@entry{id=96,open,dest={636861707465722E333737},srcline={1}}{31305C3034304D657267696E675C3034306F7264657265645C303430696E73657274696F6E73}
+\BKM@entry{id=97,open,dest={73656374696F6E2E333738},srcline={23}}{31302E315C30343057686963685C3034306368617274735C303430737572766976655C303430615C303430636F6C6C6973696F6E3F}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {10}Merging ordered insertions}{179}{chapter.377}\protected@file@percent }
+\newlabel{chap:merging-ordered-insertions}{{10}{179}{Merging ordered insertions}{chapter.377}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.1}Which charts survive a collision?}{179}{section.378}\protected@file@percent }
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~10.1.1\else \numberline {10.1.1}Proposition\fi }{179}{proposition.380}\protected@file@percent }
+\newlabel{prop:moi-coefficient-map}{{10.1.1}{179}{}{proposition.380}{}}
+\BKM@entry{id=98,open,dest={73656374696F6E2E333831},srcline={118}}{31302E325C3034305468655C3034304B6F737A756C5C303430636F6D706C65785C3034306F665C303430615C303430646961676F6E616C}
+\newlabel{eq:moi-omega-image}{{10.1}{180}{Which charts survive a collision?}{proposition.380}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.2}The Koszul complex of a diagonal}{180}{section.381}\protected@file@percent }
+\BKM@entry{id=99,open,dest={73656374696F6E2E333834},srcline={224}}{31302E335C3034305472616E736C6174696F6E5C303430616E645C303430636F6D706F736974655C303430737461746573}
+\newlabel{eq:moi-derived-coefficient}{{10.1}{181}{The Koszul complex of a diagonal}{equation.382}{}}
+\newlabel{eq:moi-koszul-composition}{{10.2}{181}{The Koszul complex of a diagonal}{equation.383}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.3}Translation and composite states}{181}{section.384}\protected@file@percent }
+\BKM@entry{id=100,open,dest={73656374696F6E2E333836},srcline={302}}{31302E345C3034304261725C303430776F7264735C303430666F6C6C6F775C3034307468655C3034306D65726765645C303430737461746573}
+\newlabel{eq:moi-connection}{{10.3}{182}{Translation and composite states}{equation.385}{}}
+\MT@newlabel{eq:moi-derived-coefficient}
+\@writefile{toc}{\contentsline {section}{\numberline {10.4}Bar words follow the merged states}{182}{section.386}\protected@file@percent }
+\BKM@entry{id=101,open,dest={73656374696F6E2E333837},srcline={382}}{31302E355C3034305768795C3034306475616C5C303430636F6C6C6973696F6E5C3034306368616E6765735C3034307468655C303430636F656666696369656E7473}
+\MT@newlabel{eq:moi-connection}
+\MT@newlabel{eq:moi-koszul-composition}
+\@writefile{toc}{\contentsline {section}{\numberline {10.5}Why dual collision changes the coefficients}{183}{section.387}\protected@file@percent }
+\newlabel{eq:moi-dual-collision}{{10.4}{183}{Why dual collision changes the coefficients}{equation.388}{}}
+\BKM@entry{id=102,open,dest={73656374696F6E2E333839},srcline={485}}{31302E365C303430576861745C3034306F726465725C30343072657461696E735C30343061745C3034307468655C303430646961676F6E616C}
+\MT@newlabel{eq:moi-dual-collision}
+\@writefile{toc}{\contentsline {section}{\numberline {10.6}What order retains at the diagonal}{185}{section.389}\protected@file@percent }
+\BKM@entry{id=103,open,dest={636861707465722E333930},srcline={1}}{31315C303430467265655C3034306669656C64735C303430696E5C30343074776F5C303430686F6C6F6D6F72706869635C30343064696D656E73696F6E73}
+\BKM@entry{id=104,open,dest={73656374696F6E2E333931},srcline={21}}{31312E315C3034304669656C64735C303430616E645C3034307468655C303430686F6C6F6D6F72706869635C303430646966666572656E7469616C}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {11}Free fields in two holomorphic dimensions}{186}{chapter.390}\protected@file@percent }
+\newlabel{chap:two-dimensional-free-fields}{{11}{186}{Free fields in two holomorphic dimensions}{chapter.390}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.1}Fields and the holomorphic differential}{186}{section.391}\protected@file@percent }
+\BKM@entry{id=105,open,dest={73656374696F6E2E333932},srcline={86}}{31312E325C303430415C303430477265656E5C303430686F6D6F746F70795C303430776974685C30343066697865645C3034306D65747269635C303430636F6E76656E74696F6E73}
+\BKM@entry{id=106,open,dest={73656374696F6E2E333934},srcline={159}}{31312E335C3034305468655C3034306E6F726D616C697A65645C30343074776F2D64696D656E73696F6E616C5C303430636F6E7472616374696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {11.2}A Green homotopy with fixed metric conventions}{187}{section.392}\protected@file@percent }
+\newlabel{eq:c2-laplacian}{{11.2}{187}{A Green homotopy with fixed metric conventions}{section.392}{}}
+\newlabel{eq:c2-green-homotopy}{{11.1}{187}{A Green homotopy with fixed metric conventions}{equation.393}{}}
+\MT@newlabel{eq:c2-green-homotopy}
+\BKM@entry{id=107,open,dest={73656374696F6E2E333938},srcline={253}}{31312E345C303430526573696475655C30343064657269766174697665735C303430616E645C30343074776F2D7661726961626C655C3034306D6F646573}
+\@writefile{toc}{\contentsline {section}{\numberline {11.3}The normalized two-dimensional contraction}{188}{section.394}\protected@file@percent }
+\newlabel{eq:c2-bm-kernel}{{11.2}{188}{The normalized two-dimensional contraction}{equation.395}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~11.3.1\else \numberline {11.3.1}Proposition\fi }{188}{proposition.397}\protected@file@percent }
+\newlabel{prop:c2-normalized-kernel}{{11.3.1}{188}{}{proposition.397}{}}
+\MT@newlabel{eq:c2-bm-kernel}
+\BKM@entry{id=108,open,dest={73656374696F6E2E333939},srcline={288}}{31312E355C3034305468655C303430667265655C30343048656973656E626572675C303430616C67656272615C303430616E645C3034306974735C303430726570726573656E746174696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {11.4}Residue derivatives and two-variable modes}{189}{section.398}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.5}The free Heisenberg algebra and its representation}{189}{section.399}\protected@file@percent }
+\newlabel{eq:c2-heisenberg-bracket}{{11.3}{189}{The free Heisenberg algebra and its representation}{equation.401}{}}
+\MT@newlabel{eq:c2-heisenberg-bracket}
+\BKM@entry{id=109,open,dest={73656374696F6E2E343032},srcline={352}}{31312E365C303430415C30343063656E7472616C5C3034306F7065726174696F6E5C303430776974685C30343074687265655C303430696E70757473}
+\MT@newlabel{eq:c2-heisenberg-bracket}
+\@writefile{toc}{\contentsline {section}{\numberline {11.6}A central operation with three inputs}{190}{section.402}\protected@file@percent }
+\newlabel{eq:c2-ternary-residue}{{11.4}{190}{A central operation with three inputs}{equation.403}{}}
+\MT@newlabel{eq:c2-ternary-residue}
+\newlabel{eq:c2-ternary-modes}{{11.6}{190}{A central operation with three inputs}{equation.403}{}}
+\BKM@entry{id=110,open,dest={73656374696F6E2E343034},srcline={432}}{31312E375C303430416464696E675C3034307468655C30343074776F5C303430746F706F6C6F676963616C5C303430646972656374696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {11.7}Adding the two topological directions}{191}{section.404}\protected@file@percent }
+\newlabel{eq:c2-mixed-kernel}{{11.7}{192}{Adding the two topological directions}{section.404}{}}
+\BKM@entry{id=111,open,dest={636861707465722E343035},srcline={1}}{31325C3034304C6F63616C5C3034306F627365727661626C65735C303430616E645C303430726567756C61725C30343063757272656E745C303430616374696F6E73}
+\BKM@entry{id=112,open,dest={73656374696F6E2E343036},srcline={21}}{31322E315C3034304D6561737572656D656E74735C303430776974685C3034307365766572616C5C303430706F736974696F6E73}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {12}Local observables and regular current actions}{193}{chapter.405}\protected@file@percent }
+\newlabel{chap:current-actions-local-observables}{{12}{193}{Local observables and regular current actions}{chapter.405}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.1}Measurements with several positions}{193}{section.406}\protected@file@percent }
+\newlabel{sec:clo-smooth-kernels}{{12.1}{193}{Measurements with several positions}{section.406}{}}
+\BKM@entry{id=113,open,dest={73656374696F6E2E343038},srcline={108}}{31322E325C3034305468655C303430667265655C303430646966666572656E7469616C5C3034306F6E5C3034306D6561737572656D656E745C3034306B65726E656C73}
+\newlabel{eq:clo-kernel-space}{{12.1}{194}{Measurements with several positions}{equation.407}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.2}The free differential on measurement kernels}{194}{section.408}\protected@file@percent }
+\newlabel{sec:clo-free-differential}{{12.2}{194}{The free differential on measurement kernels}{section.408}{}}
+\newlabel{eq:clo-contraction-sign}{{12.2}{195}{The free differential on measurement kernels}{equation.409}{}}
+\MT@newlabel{eq:clo-contraction-sign}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~12.2.1\else \numberline {12.2.1}Proposition\fi }{195}{proposition.411}\protected@file@percent }
+\newlabel{prop:clo-bv-identities}{{12.2.1}{195}{}{proposition.411}{}}
+\MT@newlabel{eq:clo-contraction-sign}
+\BKM@entry{id=114,open,dest={73656374696F6E2E343132},srcline={246}}{31322E335C303430536D6F6F74685C303430657374696D617465735C303430616E645C303430737570706F72745C303430626F756E6473}
+\newlabel{eq:clo-quantum-differential}{{12.2}{196}{The free differential on measurement kernels}{proposition.411}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.3}Smooth estimates and support bounds}{196}{section.412}\protected@file@percent }
+\newlabel{sec:clo-support-estimates}{{12.3}{196}{Smooth estimates and support bounds}{section.412}{}}
+\newlabel{eq:clo-fixed-support-estimate}{{12.3}{196}{Smooth estimates and support bounds}{equation.413}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~12.3.1\else \numberline {12.3.1}Proposition\fi }{197}{proposition.415}\protected@file@percent }
+\newlabel{prop:clo-bounded-multiplication}{{12.3.1}{197}{}{proposition.415}{}}
+\MT@newlabel{eq:clo-fixed-support-estimate}
+\BKM@entry{id=115,open,dest={73656374696F6E2E343136},srcline={407}}{31322E345C30343054776F5C303430636F6D706C6574696F6E735C303430616E645C3034307468655C3034307365726965735C303430746865795C3034307065726D6974}
+\@writefile{toc}{\contentsline {section}{\numberline {12.4}Two completions and the series they permit}{198}{section.416}\protected@file@percent }
+\newlabel{sec:clo-completions}{{12.4}{198}{Two completions and the series they permit}{section.416}{}}
+\newlabel{eq:clo-hbar-completion}{{12.4}{198}{Two completions and the series they permit}{section.416}{}}
+\BKM@entry{id=116,open,dest={73656374696F6E2E343137},srcline={506}}{31322E355C3034304D756C7469706C69636174696F6E5C303430696E5C3034306469736A6F696E745C303430726567696F6E73}
+\MT@newlabel{eq:clo-fixed-support-estimate}
+\@writefile{toc}{\contentsline {section}{\numberline {12.5}Multiplication in disjoint regions}{199}{section.417}\protected@file@percent }
+\newlabel{sec:clo-disjoint-products}{{12.5}{199}{Multiplication in disjoint regions}{section.417}{}}
+\newlabel{eq:clo-kernel-tensor}{{12.5}{199}{Multiplication in disjoint regions}{section.417}{}}
+\newlabel{eq:clo-factorization-product}{{12.5}{199}{Multiplication in disjoint regions}{section.417}{}}
+\BKM@entry{id=117,open,dest={73656374696F6E2E343139},srcline={601}}{31322E365C3034305768795C303430615C303430636F7665725C3034306D7573745C303430636F6E7461696E5C30343065766572795C30343066696E6974655C303430636F6E66696775726174696F6E}
+\@writefile{lof}{\contentsline {figure}{\numberline {12.1}{\ignorespaces Combining the first two detector regions before adjoining the third gives the same extended kernel as the direct three-region product. Disjointness removes every contraction between the outer groups.}}{200}{figure.418}\protected@file@percent }
+\newlabel{fig:clo-nesting}{{12.1}{200}{Combining the first two detector regions before adjoining the third gives the same extended kernel as the direct three-region product. Disjointness removes every contraction between the outer groups}{figure.418}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.6}Why a cover must contain every finite configuration}{200}{section.419}\protected@file@percent }
+\newlabel{sec:clo-cover}{{12.6}{200}{Why a cover must contain every finite configuration}{section.419}{}}
+\BKM@entry{id=118,open,dest={73656374696F6E2E343231},srcline={668}}{31322E375C303430436F6D706163745C303430737570706F7274735C303430676976655C303430616E5C30343065786163745C3034306F7665726C61705C30343063616C63756C6174696F6E}
+\newlabel{eq:clo-cech-total}{{12.4}{201}{Why a cover must contain every finite configuration}{equation.420}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.7}Compact supports give an exact overlap calculation}{201}{section.421}\protected@file@percent }
+\newlabel{sec:clo-finite-descent}{{12.7}{201}{Compact supports give an exact overlap calculation}{section.421}{}}
+\newlabel{eq:clo-partition-homotopy}{{12.7}{201}{Compact supports give an exact overlap calculation}{section.421}{}}
+\newlabel{eq:clo-horizontal-contraction}{{12.5}{201}{Compact supports give an exact overlap calculation}{equation.422}{}}
+\BKM@entry{id=119,open,dest={73656374696F6E2E343235},srcline={782}}{31322E385C30343044657363656E745C30343061745C30343065766572795C303430706F7765725C3034306F665C3034307468655C3034307175616E74756D5C303430706172616D65746572}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~12.7.1\else \numberline {12.7.1}Lemma\fi }{202}{lemma.424}\protected@file@percent }
+\newlabel{lem:clo-bounded-descent}{{12.7.1}{202}{}{lemma.424}{}}
+\MT@newlabel{eq:clo-cech-total}
+\MT@newlabel{eq:clo-horizontal-contraction}
+\@writefile{toc}{\contentsline {section}{\numberline {12.8}Descent at every power of the quantum parameter}{202}{section.425}\protected@file@percent }
+\newlabel{sec:clo-completed-descent}{{12.8}{202}{Descent at every power of the quantum parameter}{section.425}{}}
+\newlabel{eq:clo-completed-cech}{{12.6}{202}{Descent at every power of the quantum parameter}{equation.426}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~12.8.1\else \numberline {12.8.1}Theorem\fi }{203}{theorem.428}\protected@file@percent }
+\newlabel{thm:clo-completed-descent}{{12.8.1}{203}{}{theorem.428}{}}
+\newlabel{eq:clo-descent-theorem}{{12.8.1}{203}{}{theorem.428}{}}
+\MT@newlabel{eq:clo-completed-cech}
+\BKM@entry{id=120,open,dest={73656374696F6E2E343239},srcline={900}}{31322E395C303430506F6C796E6F6D69616C5C30343073796D6D6574726965735C3034306F665C3034307468655C303430667265655C303430616374696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {12.9}Polynomial symmetries of the free action}{204}{section.429}\protected@file@percent }
+\newlabel{sec:clo-kernel-symmetries}{{12.9}{204}{Polynomial symmetries of the free action}{section.429}{}}
+\BKM@entry{id=121,open,dest={73656374696F6E2E343332},srcline={978}}{31322E31305C3034304E6F65746865725C3034306F70657261746F72735C3034306F6E5C30343074776F2D7661726961626C655C303430706F6C796E6F6D69616C5C303430737461746573}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~12.9.1\else \numberline {12.9.1}Proposition\fi }{205}{proposition.431}\protected@file@percent }
+\newlabel{prop:clo-observable-symmetry}{{12.9.1}{205}{}{proposition.431}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.10}Noether operators on two-variable polynomial states}{205}{section.432}\protected@file@percent }
+\newlabel{sec:clo-fock-action}{{12.10}{205}{Noether operators on two-variable polynomial states}{section.432}{}}
+\newlabel{eq:clo-noether-operator}{{12.7}{205}{Noether operators on two-variable polynomial states}{equation.433}{}}
+\BKM@entry{id=122,open,dest={73656374696F6E2E343336},srcline={1085}}{31322E31315C3034305175616472617469635C3034306E6F726D616C5C3034306F72646572696E675C303430616E645C303430615C30343066696E6974655C303430726573696475655C303430666F726D756C61}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~12.10.1\else \numberline {12.10.1}Theorem\fi }{206}{theorem.435}\protected@file@percent }
+\newlabel{thm:clo-noether-lie}{{12.10.1}{206}{}{theorem.435}{}}
+\newlabel{eq:clo-noether-bracket}{{12.10.1}{206}{}{theorem.435}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.11}Quadratic normal ordering and a finite residue formula}{206}{section.436}\protected@file@percent }
+\newlabel{sec:clo-quadratic-residue}{{12.11}{206}{Quadratic normal ordering and a finite residue formula}{section.436}{}}
+\MT@newlabel{eq:clo-noether-operator}
+\BKM@entry{id=123,open,dest={73656374696F6E2E343338},srcline={1160}}{31322E31325C3034305468655C30343062696C6F63616C5C3034305769636B5C30343065787072657373696F6E5C30343072657461696E735C30343074776F5C303430706F736974696F6E73}
+\newlabel{eq:clo-scaled-current}{{12.11}{207}{Quadratic normal ordering and a finite residue formula}{section.436}{}}
+\newlabel{eq:clo-finite-current-residue}{{12.8}{207}{Quadratic normal ordering and a finite residue formula}{equation.437}{}}
+\MT@newlabel{eq:clo-finite-current-residue}
+\@writefile{toc}{\contentsline {section}{\numberline {12.12}The bilocal Wick expression retains two positions}{207}{section.438}\protected@file@percent }
+\newlabel{sec:clo-bilocal-wick}{{12.12}{207}{The bilocal Wick expression retains two positions}{section.438}{}}
+\MT@newlabel{eq:c2-bm-kernel}
+\BKM@entry{id=124,open,dest={73656374696F6E2E343430},srcline={1237}}{31322E31335C3034305468655C303430636F6D70617269736F6E5C30343072657175697265645C30343062795C30343073696E67756C61725C30343063757272656E7473}
+\newlabel{eq:clo-raw-wick}{{12.9}{208}{The bilocal Wick expression retains two positions}{equation.439}{}}
+\MT@newlabel{eq:clo-raw-wick}
+\@writefile{toc}{\contentsline {section}{\numberline {12.13}The comparison required by singular currents}{208}{section.440}\protected@file@percent }
+\newlabel{sec:clo-singular-comparison}{{12.13}{208}{The comparison required by singular currents}{section.440}{}}
+\MT@newlabel{eq:clo-kernel-space}
+\MT@newlabel{eq:clo-noether-operator}
+\BKM@entry{id=125,open,dest={636861707465722E343431},srcline={1}}{31335C3034305468655C3034307175616E74756D5C3034306F62737472756374696F6E5C303430746F5C3034306C6F63616C5C30343073796D6D65747279}
+\BKM@entry{id=126,open,dest={73656374696F6E2E343432},srcline={18}}{31332E315C3034304C6F63616C5C30343073796D6D6574726965735C303430616E645C30343074686569725C303430736F7572636573}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {13}The quantum obstruction to local symmetry}{210}{chapter.441}\protected@file@percent }
+\newlabel{chap:quantum-current-anomaly}{{13}{210}{The quantum obstruction to local symmetry}{chapter.441}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {13.1}Local symmetries and their sources}{210}{section.442}\protected@file@percent }
+\BKM@entry{id=127,open,dest={73656374696F6E2E343435},srcline={145}}{31332E325C30343057686963685C303430636F6E7472616374696F6E735C3034306172655C303430646566696E6564}
+\newlabel{eq:qca-totalization}{{13.1}{211}{Local symmetries and their sources}{equation.443}{}}
+\newlabel{eq:qca-ce}{{13.2}{211}{Local symmetries and their sources}{equation.444}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {13.2}Which contractions are defined}{211}{section.445}\protected@file@percent }
+\newlabel{eq:qca-operators}{{13.3}{213}{Which contractions are defined}{equation.446}{}}
+\MT@newlabel{eq:gaussian-scale-operators}
+\MT@newlabel{eq:qca-operators}
+\MT@newlabel{eq:qca-operators}
+\BKM@entry{id=128,open,dest={73656374696F6E2E343437},srcline={340}}{31332E335C3034305468655C303430636C6173736963616C5C3034306964656E746974795C303430616E645C3034307468655C30343066697273745C30343074776F5C30343063757272656E7473}
+\@writefile{toc}{\contentsline {section}{\numberline {13.3}The classical identity and the first two currents}{214}{section.447}\protected@file@percent }
+\MT@newlabel{eq:qca-ce}
+\MT@newlabel{eq:qca-operators}
+\newlabel{eq:qca-cme}{{13.4}{214}{The classical identity and the first two currents}{equation.448}{}}
+\MT@newlabel{eq:qca-cme}
+\MT@newlabel{eq:qca-operators}
+\BKM@entry{id=129,open,dest={73656374696F6E2E343533},srcline={482}}{31332E345C303430436F6E6E65637465645C303430636F6E7472616374696F6E735C303430616E645C3034307468655C3034307175616E74756D5C3034306571756174696F6E}
+\newlabel{eq:qca-noether-components}{{13.5}{215}{The classical identity and the first two currents}{equation.450}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~13.3.1\else \numberline {13.3.1}Proposition\fi }{215}{proposition.452}\protected@file@percent }
+\newlabel{prop:qca-noether-two}{{13.3.1}{215}{}{proposition.452}{}}
+\MT@newlabel{eq:qca-noether-components}
+\MT@newlabel{eq:qca-noether-components}
+\BKM@entry{id=130,open,dest={73656374696F6E2E343536},srcline={563}}{31332E355C3034305468655C3034306D61726B65645C303430747269616E676C65}
+\@writefile{toc}{\contentsline {section}{\numberline {13.4}Connected contractions and the quantum equation}{216}{section.453}\protected@file@percent }
+\newlabel{eq:qca-qme-defect}{{13.6}{216}{Connected contractions and the quantum equation}{equation.454}{}}
+\newlabel{eq:qca-scalar-component}{{13.7}{216}{Connected contractions and the quantum equation}{equation.455}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {13.5}The marked triangle}{217}{section.456}\protected@file@percent }
+\newlabel{eq:qca-exterior-numerator}{{13.8}{217}{The marked triangle}{equation.458}{}}
+\newlabel{eq:qca-covariance}{{13.9}{217}{The marked triangle}{equation.459}{}}
+\MT@newlabel{eq:qca-exterior-numerator}
+\BKM@entry{id=131,open,dest={73656374696F6E2E343635},srcline={737}}{31332E365C3034304F64645C303430636F6E7472616374696F6E735C303430616E645C3034307468655C30343074726163655C303430636F656666696369656E74}
+\MT@newlabel{eq:qca-exterior-numerator}
+\newlabel{eq:qca-marked-distribution}{{13.10}{218}{The marked triangle}{equation.460}{}}
+\newlabel{eq:qca-time-mass}{{13.11}{218}{The marked triangle}{equation.462}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~13.5.1\else \numberline {13.5.1}Lemma\fi }{218}{lemma.464}\protected@file@percent }
+\newlabel{lem:qca-localization}{{13.5.1}{218}{}{lemma.464}{}}
+\MT@newlabel{eq:qca-time-mass}
+\MT@newlabel{eq:qca-scalar-component}
+\BKM@entry{id=132,open,dest={73656374696F6E2E343637},srcline={830}}{31332E375C303430436F6E76657267656E63655C3034306F665C3034307468655C303430756E6D61726B65645C3034306C6F6F70}
+\@writefile{toc}{\contentsline {section}{\numberline {13.6}Odd contractions and the trace coefficient}{219}{section.465}\protected@file@percent }
+\MT@newlabel{eq:qca-totalization}
+\MT@newlabel{eq:qca-marked-distribution}
+\newlabel{eq:qca-anomaly}{{13.12}{219}{Odd contractions and the trace coefficient}{equation.466}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {13.7}Convergence of the unmarked loop}{220}{section.467}\protected@file@percent }
+\MT@newlabel{eq:qca-qme-defect}
+\MT@newlabel{eq:qca-covariance}
+\newlabel{eq:qca-loop-bound}{{13.13}{220}{Convergence of the unmarked loop}{equation.468}{}}
+\MT@newlabel{eq:qca-scalar-component}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~13.7.1\else \numberline {13.7.1}Theorem\fi }{220}{theorem.470}\protected@file@percent }
+\newlabel{thm:qca-cubic-qme}{{13.7.1}{220}{}{theorem.470}{}}
+\MT@newlabel{eq:qca-anomaly}
+\MT@newlabel{eq:qca-scalar-component}
+\MT@newlabel{eq:qca-loop-bound}
+\MT@newlabel{eq:qca-anomaly}
+\MT@newlabel{eq:qca-scalar-component}
+\BKM@entry{id=133,open,dest={73656374696F6E2E343731},srcline={928}}{31332E385C3034305468655C303430636F6379636C655C303430616E645C3034306368617267655C30343063616E63656C6C6174696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {13.8}The cocycle and charge cancellation}{221}{section.471}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~13.8.1\else \numberline {13.8.1}Proposition\fi }{221}{proposition.473}\protected@file@percent }
+\newlabel{prop:qca-cocycle}{{13.8.1}{221}{}{proposition.473}{}}
+\newlabel{eq:qca-polarized}{{13.14}{221}{The cocycle and charge cancellation}{equation.474}{}}
+\MT@newlabel{eq:qca-polarized}
+\BKM@entry{id=134,open,dest={73656374696F6E2E343735},srcline={1040}}{31332E395C303430415C303430726573696475655C30343076616C75655C303430616E645C3034307468655C303430636F6D70617269736F6E5C30343069745C3034307265717569726573}
+\@writefile{toc}{\contentsline {section}{\numberline {13.9}A residue value and the comparison it requires}{222}{section.475}\protected@file@percent }
+\MT@newlabel{eq:qca-polarized}
+\MT@newlabel{eq:c2-ternary-residue}
+\BKM@entry{id=135,open,dest={636861707465722E343736},srcline={1}}{31345C30343048616D696C746F6E69616E5C30343073796D6D657472795C303430616E645C303430636F6E74696E756F75735C303430636F636861696E73}
+\BKM@entry{id=136,open,dest={73656374696F6E2E343737},srcline={13}}{31342E315C303430417265612D70726573657276696E675C3034306368616E6765735C3034306F665C303430666F726D616C5C303430636F6F7264696E61746573}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {14}Hamiltonian symmetry and continuous cochains}{223}{chapter.476}\protected@file@percent }
+\newlabel{chap:hamiltonian-symmetry-cochains}{{14}{223}{Hamiltonian symmetry and continuous cochains}{chapter.476}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {14.1}Area-preserving changes of formal coordinates}{223}{section.477}\protected@file@percent }
+\BKM@entry{id=137,open,dest={73656374696F6E2E343738},srcline={106}}{31342E325C3034305768795C303430615C3034305461796C6F725C30343077696E646F775C30343069735C3034306E6F745C303430615C3034304C69655C30343071756F7469656E74}
+\@writefile{toc}{\contentsline {section}{\numberline {14.2}Why a Taylor window is not a Lie quotient}{224}{section.478}\protected@file@percent }
+\newlabel{eq:ham-core-translation-window}{{14.2}{224}{Why a Taylor window is not a Lie quotient}{section.478}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~14.2.1\else \numberline {14.2.1}Proposition\fi }{224}{proposition.480}\protected@file@percent }
+\newlabel{prop:ham-core-no-finite-quotient}{{14.2.1}{224}{}{proposition.480}{}}
+\BKM@entry{id=138,open,dest={73656374696F6E2E343831},srcline={177}}{31342E335C303430436F656666696369656E74735C303430616E645C303430636F6E74696E756F75735C30343073796D6D657472795C303430706172616D6574657273}
+\@writefile{toc}{\contentsline {section}{\numberline {14.3}Coefficients and continuous symmetry parameters}{225}{section.481}\protected@file@percent }
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~14.3.1\else \numberline {14.3.1}Lemma\fi }{226}{lemma.483}\protected@file@percent }
+\newlabel{lem:ham-core-finite-ghost-support}{{14.3.1}{226}{}{lemma.483}{}}
+\newlabel{eq:ham-core-cochains}{{14.1}{226}{}{equation.484}{}}
+\MT@newlabel{eq:ham-core-cochains}
+\BKM@entry{id=139,open,dest={73656374696F6E2E343835},srcline={292}}{31342E345C3034305468655C303430646966666572656E7469616C5C30343065787072657373696E675C3034307468655C30343073796D6D657472795C30343072656C6174696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {14.4}The differential expressing the symmetry relations}{227}{section.485}\protected@file@percent }
+\newlabel{eq:ham-core-structure-constants}{{14.2}{227}{The differential expressing the symmetry relations}{equation.486}{}}
+\newlabel{eq:ham-core-ce-differential}{{14.3}{227}{The differential expressing the symmetry relations}{equation.487}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~14.4.1\else \numberline {14.4.1}Proposition\fi }{227}{proposition.489}\protected@file@percent }
+\newlabel{prop:ham-core-ce-square}{{14.4.1}{227}{}{proposition.489}{}}
+\BKM@entry{id=140,open,dest={73656374696F6E2E343930},srcline={365}}{31342E355C303430436F74616E67656E745C303430636F6F7264696E617465735C303430616E645C30343074686569725C30343064656772656573}
+\@writefile{toc}{\contentsline {section}{\numberline {14.5}Cotangent coordinates and their degrees}{228}{section.490}\protected@file@percent }
+\MT@newlabel{eq:ham-core-ce-differential}
+\BKM@entry{id=141,open,dest={73656374696F6E2E343931},srcline={441}}{31342E365C3034305468655C303430636F6E7472616374696F6E5C303430627261636B6574}
+\@writefile{toc}{\contentsline {section}{\numberline {14.6}The contraction bracket}{229}{section.491}\protected@file@percent }
+\MT@newlabel{eq:ham-core-cochains}
+\newlabel{eq:ham-core-schouten}{{14.4}{229}{The contraction bracket}{equation.492}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~14.6.1\else \numberline {14.6.1}Proposition\fi }{229}{proposition.494}\protected@file@percent }
+\newlabel{prop:ham-core-schouten-continuity}{{14.6.1}{229}{}{proposition.494}{}}
+\MT@newlabel{eq:ham-core-schouten}
+\BKM@entry{id=142,open,dest={73656374696F6E2E343935},srcline={548}}{31342E375C303430416E5C303430696E76657273655C3034306C696D69745C303430746861745C3034307072657365727665735C3034307468655C303430646966666572656E7469616C}
+\newlabel{eq:ham-core-pi}{{14.6}{230}{The contraction bracket}{proposition.494}{}}
+\MT@newlabel{eq:ham-core-ce-differential}
+\MT@newlabel{eq:ham-core-structure-constants}
+\@writefile{toc}{\contentsline {section}{\numberline {14.7}An inverse limit that preserves the differential}{230}{section.495}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~14.7.1\else \numberline {14.7.1}Proposition\fi }{230}{proposition.497}\protected@file@percent }
+\newlabel{prop:ham-core-cochain-tower}{{14.7.1}{230}{}{proposition.497}{}}
+\BKM@entry{id=143,open,dest={73656374696F6E2E343938},srcline={607}}{31342E385C3034304368616E67696E675C3034307468655C303430636F6D706C6574696F6E5C3034306368616E6765735C3034307468655C3034306F7065726174696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {14.8}Changing the completion changes the operations}{231}{section.498}\protected@file@percent }
+\BKM@entry{id=144,open,dest={73656374696F6E2E343939},srcline={671}}{31342E395C3034304F70657261746F72732C5C30343074656E736F725C3034306B65726E656C732C5C303430616E645C3034306D61747465725C303430726570726573656E746174696F6E73}
+\@writefile{toc}{\contentsline {section}{\numberline {14.9}Operators, tensor kernels, and matter representations}{232}{section.499}\protected@file@percent }
+\BKM@entry{id=145,open,dest={636861707465722E353030},srcline={1}}{31355C303430536D6F6F74685C3034306669656C64735C303430616E645C303430666F726D616C5C30343048616D696C746F6E69616E73}
+\BKM@entry{id=146,open,dest={73656374696F6E2E353031},srcline={4}}{31352E315C303430486F6C6F6D6F72706869635C3034306669656C64735C303430616E645C30343048616D696C746F6E69616E5C303430706172616D6574657273}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {15}Smooth fields and formal Hamiltonians}{233}{chapter.500}\protected@file@percent }
+\newlabel{chap:smooth-formal-hamiltonians}{{15}{233}{Smooth fields and formal Hamiltonians}{chapter.500}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {15.1}Holomorphic fields and Hamiltonian parameters}{233}{section.501}\protected@file@percent }
+\newlabel{sec:tb-fields}{{15.1}{233}{Holomorphic fields and Hamiltonian parameters}{section.501}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.1.1\else \numberline {15.1.1}Definition\fi \thmtformatoptarg {The Dolbeault algebra}}{233}{definition.503}\protected@file@percent }
+\newlabel{def:tb-dolbeault}{{15.1.1}{233}{The Dolbeault algebra}{definition.503}{}}
+\newlabel{eq:tb-form-bracket}{{15.1}{234}{Holomorphic fields and Hamiltonian parameters}{equation.504}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.1.2\else \numberline {15.1.2}Definition\fi \thmtformatoptarg {Differential graded Lie and Poisson algebras}}{234}{definition.506}\protected@file@percent }
+\newlabel{def:tb-dglie}{{15.1.2}{234}{Differential graded Lie and Poisson algebras}{definition.506}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.1.3\else \numberline {15.1.3}Lemma\fi \thmtformatoptarg {The coefficient bracket}}{234}{lemma.508}\protected@file@percent }
+\newlabel{lem:tb-poisson}{{15.1.3}{234}{The coefficient bracket}{lemma.508}{}}
+\newlabel{eq:tb-translations}{{15.1}{235}{Holomorphic fields and Hamiltonian parameters}{lemma.508}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.1.4\else \numberline {15.1.4}Definition\fi \thmtformatoptarg {Pure holomorphic Taylor extraction}}{235}{definition.510}\protected@file@percent }
+\newlabel{def:tb-taylor}{{15.1.4}{235}{Pure holomorphic Taylor extraction}{definition.510}{}}
+\newlabel{eq:tb-taylor}{{15.1.4}{235}{Pure holomorphic Taylor extraction}{definition.510}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.1.5\else \numberline {15.1.5}Proposition\fi \thmtformatoptarg {Taylor extraction and scalar Hamiltonians}}{235}{proposition.512}\protected@file@percent }
+\newlabel{prop:tb-one}{{15.1.5}{235}{Taylor extraction and scalar Hamiltonians}{proposition.512}{}}
+\BKM@entry{id=147,open,dest={73656374696F6E2E353133},srcline={259}}{31352E325C303430536D6F6F74685C3034307265616C697A6174696F6E5C303430616E645C303430686F6C6F6D6F72706869635C303430636F6E76657267656E6365}
+\@writefile{toc}{\contentsline {section}{\numberline {15.2}Smooth realization and holomorphic convergence}{236}{section.513}\protected@file@percent }
+\newlabel{sec:tb-realization}{{15.2}{236}{Smooth realization and holomorphic convergence}{section.513}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.2.1\else \numberline {15.2.1}Lemma\fi \thmtformatoptarg {Limits of smooth derivatives}}{236}{lemma.515}\protected@file@percent }
+\newlabel{lem:tb-smooth-limits}{{15.2.1}{236}{Limits of smooth derivatives}{lemma.515}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.2.2\else \numberline {15.2.2}Proposition\fi \thmtformatoptarg {Realization of arbitrary formal jets}}{236}{proposition.517}\protected@file@percent }
+\newlabel{prop:tb-two}{{15.2.2}{236}{Realization of arbitrary formal jets}{proposition.517}{}}
+\newlabel{eq:tb-exact-jets}{{15.2}{236}{Realization of arbitrary formal jets}{equation.518}{}}
+\newlabel{eq:tb-cutoff-estimate}{{15.2}{237}{Smooth realization and holomorphic convergence}{equation.518}{}}
+\MT@newlabel{eq:tb-exact-jets}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.2.1}Cauchy integration and holomorphicity}{237}{subsection.519}\protected@file@percent }
+\newlabel{sec:tb-cauchy}{{15.2.1}{237}{Cauchy integration and holomorphicity}{subsection.519}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.2.3\else \numberline {15.2.3}Definition\fi \thmtformatoptarg {Holomorphic functions}}{237}{definition.521}\protected@file@percent }
+\newlabel{def:tb-holomorphic}{{15.2.3}{237}{Holomorphic functions}{definition.521}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.2.4\else \numberline {15.2.4}Lemma\fi \thmtformatoptarg {Cauchy--Pompeiu formula}}{238}{lemma.523}\protected@file@percent }
+\newlabel{lem:tb-cauchy-pompeiu}{{15.2.4}{238}{Cauchy--Pompeiu formula}{lemma.523}{}}
+\newlabel{eq:tb-cauchy-pompeiu}{{15.3}{238}{Cauchy--Pompeiu formula}{equation.524}{}}
+\newlabel{eq:tb-test-identity}{{15.4}{238}{Cauchy--Pompeiu formula}{equation.525}{}}
+\MT@newlabel{eq:tb-cauchy-pompeiu}
+\MT@newlabel{eq:tb-test-identity}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.2.5\else \numberline {15.2.5}Lemma\fi \thmtformatoptarg {Cauchy--Riemann equations and convergent expansions}}{239}{lemma.527}\protected@file@percent }
+\newlabel{lem:tb-cr-expansion}{{15.2.5}{239}{Cauchy--Riemann equations and convergent expansions}{lemma.527}{}}
+\newlabel{eq:tb-bidisc-cauchy}{{15.5}{239}{Cauchy--Riemann equations and convergent expansions}{equation.528}{}}
+\newlabel{eq:tb-cauchy-coefficients}{{15.6}{239}{Cauchy--Riemann equations and convergent expansions}{equation.529}{}}
+\MT@newlabel{eq:tb-cauchy-pompeiu}
+\MT@newlabel{eq:tb-bidisc-cauchy}
+\MT@newlabel{eq:tb-cauchy-coefficients}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.2.6\else \numberline {15.2.6}Definition\fi \thmtformatoptarg {Series converging on the specified polydisc}}{239}{definition.531}\protected@file@percent }
+\newlabel{def:tb-convergent}{{15.2.6}{239}{Series converging on the specified polydisc}{definition.531}{}}
+\newlabel{eq:tb-convergence}{{15.7}{239}{Series converging on the specified polydisc}{equation.532}{}}
+\BKM@entry{id=148,open,dest={73656374696F6E2E353335},srcline={613}}{31352E335C3034305468655C303430446F6C626561756C745C303430636F6D706C65785C303430616E645C3034306974735C3034305461796C6F725C3034306B65726E656C}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.2.7\else \numberline {15.2.7}Proposition\fi \thmtformatoptarg {The holomorphic image}}{240}{proposition.534}\protected@file@percent }
+\newlabel{prop:tb-three}{{15.2.7}{240}{The holomorphic image}{proposition.534}{}}
+\MT@newlabel{eq:tb-convergence}
+\MT@newlabel{eq:tb-bidisc-cauchy}
+\MT@newlabel{eq:tb-convergence}
+\MT@newlabel{eq:tb-convergence}
+\@writefile{toc}{\contentsline {section}{\numberline {15.3}The Dolbeault complex and its Taylor kernel}{240}{section.535}\protected@file@percent }
+\newlabel{sec:tb-cohomology}{{15.3}{240}{The Dolbeault complex and its Taylor kernel}{section.535}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.3.1\else \numberline {15.3.1}Lemma\fi \thmtformatoptarg {A one-variable primitive with parameters}}{240}{lemma.537}\protected@file@percent }
+\newlabel{lem:tb-parametric}{{15.3.1}{240}{A one-variable primitive with parameters}{lemma.537}{}}
+\newlabel{eq:tb-cauchy-transform}{{15.3}{240}{The Dolbeault complex and its Taylor kernel}{lemma.537}{}}
+\MT@newlabel{eq:tb-test-identity}
+\newlabel{eq:tb-annular-estimate}{{15.8}{241}{The Dolbeault complex and its Taylor kernel}{equation.538}{}}
+\MT@newlabel{eq:tb-annular-estimate}
+\MT@newlabel{eq:tb-annular-estimate}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.3.2\else \numberline {15.3.2}Definition\fi \thmtformatoptarg {Cohomology and comparison maps}}{241}{definition.540}\protected@file@percent }
+\newlabel{def:tb-cohomology}{{15.3.2}{241}{Cohomology and comparison maps}{definition.540}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.3.3\else \numberline {15.3.3}Proposition\fi \thmtformatoptarg {Global polydisc exactness}}{242}{proposition.542}\protected@file@percent }
+\newlabel{prop:tb-four}{{15.3.3}{242}{Global polydisc exactness}{proposition.542}{}}
+\@writefile{loe}{\contentsline {corollary}{\ifthmt@listswap Corollary~15.3.4\else \numberline {15.3.4}Corollary\fi \thmtformatoptarg {The Taylor defect}}{242}{corollary.544}\protected@file@percent }
+\newlabel{prop:tb-five}{{15.3.4}{242}{The Taylor defect}{corollary.544}{}}
+\newlabel{eq:tb-kernel-cohomology}{{15.9}{242}{The Taylor defect}{equation.545}{}}
+\newlabel{eq:tb-connecting}{{15.3}{242}{The Dolbeault complex and its Taylor kernel}{equation.545}{}}
+\MT@newlabel{eq:tb-kernel-cohomology}
+\MT@newlabel{eq:tb-kernel-cohomology}
+\BKM@entry{id=149,open,dest={73656374696F6E2E353438},srcline={840}}{31352E345C30343054776F5C303430666F726D616C5C303430746F706F6C6F67696573}
+\@writefile{loe}{\contentsline {corollary}{\ifthmt@listswap Corollary~15.3.5\else \numberline {15.3.5}Corollary\fi \thmtformatoptarg {No section as a complex}}{243}{corollary.547}\protected@file@percent }
+\newlabel{cor:tb-no-chain-section}{{15.3.5}{243}{No section as a complex}{corollary.547}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {15.4}Two formal topologies}{243}{section.548}\protected@file@percent }
+\newlabel{sec:tb-topologies}{{15.4}{243}{Two formal topologies}{section.548}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.4.1\else \numberline {15.4.1}Definition\fi \thmtformatoptarg {Seminorm topologies}}{243}{definition.550}\protected@file@percent }
+\newlabel{def:tb-seminorms}{{15.4.1}{243}{Seminorm topologies}{definition.550}{}}
+\@writefile{loe}{\contentsline {definition}{\ifthmt@listswap Definition~15.4.2\else \numberline {15.4.2}Definition\fi \thmtformatoptarg {Smooth, coefficient, and adic topologies}}{243}{definition.552}\protected@file@percent }
+\newlabel{def:tb-topologies}{{15.4.2}{243}{Smooth, coefficient, and adic topologies}{definition.552}{}}
+\newlabel{eq:tb-normalization}{{15.10}{244}{Two formal topologies}{equation.553}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.4.3\else \numberline {15.4.3}Proposition\fi \thmtformatoptarg {Continuity of the Taylor map}}{244}{proposition.555}\protected@file@percent }
+\newlabel{prop:tb-six}{{15.4.3}{244}{Continuity of the Taylor map}{proposition.555}{}}
+\MT@newlabel{eq:tb-normalization}
+\newlabel{eq:tb-order-estimate}{{15.11}{244}{Two formal topologies}{equation.556}{}}
+\MT@newlabel{eq:tb-form-bracket}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.4.4\else \numberline {15.4.4}Proposition\fi \thmtformatoptarg {No continuous linear section}}{244}{proposition.558}\protected@file@percent }
+\newlabel{prop:tb-no-linear-section}{{15.4.4}{244}{No continuous linear section}{proposition.558}{}}
+\MT@newlabel{eq:tb-normalization}
+\BKM@entry{id=150,open,dest={73656374696F6E2E353539},srcline={992}}{31352E355C303430436F6E74696E756F75735C3034307363616C61725C303430636F636861696E735C303430616E645C30343074686569725C303430636F6D706C6574696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {15.5}Continuous scalar cochains and their completion}{245}{section.559}\protected@file@percent }
+\newlabel{sec:tb-cochains}{{15.5}{245}{Continuous scalar cochains and their completion}{section.559}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.5.1\else \numberline {15.5.1}Proposition\fi \thmtformatoptarg {Finite jet support}}{245}{proposition.561}\protected@file@percent }
+\newlabel{prop:tb-seven}{{15.5.1}{245}{Finite jet support}{proposition.561}{}}
+\newlabel{eq:tb-finite-support}{{15.12}{245}{Finite jet support}{equation.562}{}}
+\MT@newlabel{eq:tb-finite-support}
+\MT@newlabel{eq:tb-finite-support}
+\newlabel{eq:tb-ordinary-ce}{{15.13}{245}{Continuous scalar cochains and their completion}{equation.563}{}}
+\MT@newlabel{eq:tb-order-estimate}
+\newlabel{eq:tb-sharp-loss}{{15.14}{246}{Continuous scalar cochains and their completion}{equation.564}{}}
+\MT@newlabel{eq:tb-sharp-loss}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.5.1}Suspension and signs}{246}{subsection.565}\protected@file@percent }
+\newlabel{sec:tb-signs}{{15.5.1}{246}{Suspension and signs}{subsection.565}{}}
+\newlabel{eq:tb-coalgebra-coproduct}{{15.15}{246}{Suspension and signs}{equation.566}{}}
+\newlabel{eq:tb-tensor-sign}{{15.16}{246}{Suspension and signs}{equation.567}{}}
+\MT@newlabel{eq:tb-coalgebra-coproduct}
+\MT@newlabel{eq:tb-tensor-sign}
+\MT@newlabel{eq:tb-tensor-sign}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.5.2\else \numberline {15.5.2}Lemma\fi \thmtformatoptarg {Primitives and uniqueness of coderivations}}{247}{lemma.569}\protected@file@percent }
+\newlabel{lem:tb-coderivation-uniqueness}{{15.5.2}{247}{Primitives and uniqueness of coderivations}{lemma.569}{}}
+\newlabel{eq:tb-q-conventions}{{15.17}{247}{Suspension and signs}{equation.570}{}}
+\MT@newlabel{eq:tb-tensor-sign}
+\MT@newlabel{eq:tb-q-conventions}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.5.3\else \numberline {15.5.3}Lemma\fi \thmtformatoptarg {The square-zero identity}}{247}{lemma.572}\protected@file@percent }
+\newlabel{lem:tb-q-square}{{15.5.3}{247}{The square-zero identity}{lemma.572}{}}
+\MT@newlabel{eq:tb-q-conventions}
+\newlabel{eq:tb-arity-completion}{{15.18}{248}{Suspension and signs}{equation.573}{}}
+\newlabel{eq:tb-ce-differential}{{15.19}{248}{Suspension and signs}{equation.574}{}}
+\newlabel{eq:tb-shuffle-product}{{15.20}{248}{Suspension and signs}{equation.575}{}}
+\MT@newlabel{eq:tb-shuffle-product}
+\MT@newlabel{eq:tb-ce-differential}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.5.4\else \numberline {15.5.4}Lemma\fi \thmtformatoptarg {Ordinary alternating forms}}{248}{lemma.577}\protected@file@percent }
+\newlabel{lem:tb-unsuspension}{{15.5.4}{248}{Ordinary alternating forms}{lemma.577}{}}
+\newlabel{eq:tb-unsuspension}{{15.21}{248}{Ordinary alternating forms}{equation.578}{}}
+\MT@newlabel{eq:tb-ordinary-ce}
+\MT@newlabel{eq:tb-ordinary-ce}
+\MT@newlabel{eq:tb-shuffle-product}
+\MT@newlabel{eq:tb-unsuspension}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.5.2}Bounded products and degreewise completeness}{249}{subsection.579}\protected@file@percent }
+\newlabel{sec:tb-completeness}{{15.5.2}{249}{Bounded products and degreewise completeness}{subsection.579}{}}
+\newlabel{eq:tb-bounded-topology}{{15.22}{249}{Bounded products and degreewise completeness}{equation.580}{}}
+\MT@newlabel{eq:tb-arity-completion}
+\MT@newlabel{eq:tb-bounded-topology}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~15.5.5\else \numberline {15.5.5}Lemma\fi \thmtformatoptarg {Completeness of continuous multilinear forms}}{249}{lemma.582}\protected@file@percent }
+\newlabel{lem:tb-bounded-complete}{{15.5.5}{249}{Completeness of continuous multilinear forms}{lemma.582}{}}
+\MT@newlabel{eq:tb-bounded-topology}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.5.6\else \numberline {15.5.6}Proposition\fi \thmtformatoptarg {The two degreewise completions}}{250}{proposition.584}\protected@file@percent }
+\newlabel{prop:tb-complete}{{15.5.6}{250}{The two degreewise completions}{proposition.584}{}}
+\MT@newlabel{eq:tb-bounded-topology}
+\BKM@entry{id=151,open,dest={73656374696F6E2E353835},srcline={1477}}{31352E365C3034305461796C6F725C30343070756C6C6261636B5C3034306F665C3034307363616C61725C303430636F636861696E73}
+\MT@newlabel{eq:tb-arity-completion}
+\@writefile{toc}{\contentsline {section}{\numberline {15.6}Taylor pullback of scalar cochains}{251}{section.585}\protected@file@percent }
+\newlabel{sec:tb-pullback}{{15.6}{251}{Taylor pullback of scalar cochains}{section.585}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.6.1\else \numberline {15.6.1}Proposition\fi \thmtformatoptarg {The scalar cochain map}}{251}{proposition.587}\protected@file@percent }
+\newlabel{prop:tb-eight}{{15.6.1}{251}{The scalar cochain map}{proposition.587}{}}
+\newlabel{eq:tb-ce-pullback}{{15.23}{251}{The scalar cochain map}{equation.588}{}}
+\MT@newlabel{eq:tb-ce-differential}
+\MT@newlabel{eq:tb-shuffle-product}
+\BKM@entry{id=152,open,dest={73656374696F6E2E353839},srcline={1571}}{31352E375C3034305472616E736C6174696F6E732C5C303430726570726573656E746174696F6E732C5C303430616E645C3034306475616C5C303430636F6E7472616374696F6E}
+\MT@newlabel{eq:tb-ordinary-ce}
+\MT@newlabel{eq:tb-ce-pullback}
+\MT@newlabel{eq:tb-ce-pullback}
+\@writefile{toc}{\contentsline {section}{\numberline {15.7}Translations, representations, and dual contraction}{252}{section.589}\protected@file@percent }
+\newlabel{sec:tb-duality}{{15.7}{252}{Translations, representations, and dual contraction}{section.589}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.7.1\else \numberline {15.7.1}Proposition\fi \thmtformatoptarg {Finite-dimensional representations of the full algebra}}{252}{proposition.591}\protected@file@percent }
+\newlabel{prop:tb-nine}{{15.7.1}{252}{Finite-dimensional representations of the full algebra}{proposition.591}{}}
+\newlabel{eq:tb-antiderivative}{{15.24}{252}{Translations, representations, and dual contraction}{equation.592}{}}
+\@writefile{loe}{\contentsline {example}{\ifthmt@listswap Example~15.7.2\else \numberline {15.7.2}Example\fi \thmtformatoptarg {The origin-preserving algebra}}{252}{example.594}\protected@file@percent }
+\newlabel{ex:tb-origin}{{15.7.2}{252}{The origin-preserving algebra}{example.594}{}}
+\MT@newlabel{eq:tb-order-estimate}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.7.1}The continuous dual}{253}{subsection.595}\protected@file@percent }
+\newlabel{sec:tb-dual}{{15.7.1}{253}{The continuous dual}{subsection.595}{}}
+\newlabel{eq:tb-dual-seminorms}{{15.25}{253}{The continuous dual}{equation.596}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.7.3\else \numberline {15.7.3}Proposition\fi \thmtformatoptarg {Evaluation in the two categories}}{253}{proposition.598}\protected@file@percent }
+\newlabel{prop:tb-ten}{{15.7.3}{253}{Evaluation in the two categories}{proposition.598}{}}
+\MT@newlabel{eq:tb-dual-seminorms}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~15.7.4\else \numberline {15.7.4}Proposition\fi \thmtformatoptarg {The coadjoint continuity obstruction}}{254}{proposition.600}\protected@file@percent }
+\newlabel{prop:tb-coadjoint}{{15.7.4}{254}{The coadjoint continuity obstruction}{proposition.600}{}}
+\MT@newlabel{eq:tb-order-estimate}
+\MT@newlabel{eq:tb-antiderivative}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.7.2}The cotangent boundary of the scalar comparison}{255}{subsection.601}\protected@file@percent }
+\newlabel{sec:tb-cotangent-boundary}{{15.7.2}{255}{The cotangent boundary of the scalar comparison}{subsection.601}{}}
+\MT@newlabel{eq:tb-q-conventions}
+\MT@newlabel{eq:tb-ce-pullback}
+\MT@newlabel{eq:tb-kernel-cohomology}
+\BKM@entry{id=153,open,dest={636861707465722E363032},srcline={1}}{31365C3034304F70657261746F725C3034306B65726E656C735C303430616E645C303430747261636573}
+\BKM@entry{id=154,open,dest={73656374696F6E2E363033},srcline={16}}{31362E315C303430415C3034306B65726E656C5C303430666F725C303430656163685C30343066696E6974655C3034306F7574707574}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {16}Operator kernels and traces}{256}{chapter.602}\protected@file@percent }
+\newlabel{chap:operator-kernels}{{16}{256}{Operator kernels and traces}{chapter.602}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {16.1}A kernel for each finite output}{256}{section.603}\protected@file@percent }
+\BKM@entry{id=155,open,dest={73656374696F6E2E363037},srcline={85}}{31362E325C303430436F6E74696E756F75735C3034306F70657261746F72735C303430616E645C3034307468655C3034306F726465725C3034306F665C3034306C696D697473}
+\newlabel{eq:op-completion}{{16.1}{257}{A kernel for each finite output}{equation.604}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~16.1.1\else \numberline {16.1.1}Proposition\fi }{257}{proposition.606}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {16.2}Continuous operators and the order of limits}{257}{section.607}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~16.2.1\else \numberline {16.2.1}Proposition\fi }{257}{proposition.609}\protected@file@percent }
+\newlabel{eq:op-hom}{{16.2}{257}{}{equation.610}{}}
+\newlabel{eq:op-rows}{{16.2}{257}{Continuous operators and the order of limits}{equation.610}{}}
+\BKM@entry{id=156,open,dest={73656374696F6E2E363132},srcline={150}}{31362E335C30343057686963685C30343062696C696E6561725C303430636F6E7472616374696F6E735C303430657874656E64}
+\BKM@entry{id=157,open,dest={73656374696F6E2E363136},srcline={191}}{31362E345C3034304576616C756174696F6E2C5C303430636F6D706F736974696F6E2C5C303430616E645C30343048616D696C746F6E69616E5C30343073796D6D65747279}
+\MT@newlabel{eq:op-completion}
+\newlabel{eq:op-identity}{{16.3}{258}{Continuous operators and the order of limits}{equation.611}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {16.3}Which bilinear contractions extend}{258}{section.612}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~16.3.1\else \numberline {16.3.1}Proposition\fi }{258}{proposition.614}\protected@file@percent }
+\newlabel{eq:op-uniform}{{16.4}{258}{}{equation.615}{}}
+\MT@newlabel{eq:op-uniform}
+\MT@newlabel{eq:op-uniform}
+\MT@newlabel{eq:op-uniform}
+\@writefile{toc}{\contentsline {section}{\numberline {16.4}Evaluation, composition, and Hamiltonian symmetry}{258}{section.616}\protected@file@percent }
+\BKM@entry{id=158,open,dest={73656374696F6E2E363138},srcline={266}}{31362E355C30343044657269766174696F6E735C303430616E645C3034307468655C30343045756C65725C3034306B65726E656C}
+\MT@newlabel{eq:op-hom}
+\newlabel{eq:op-diagonal}{{16.5}{259}{Evaluation, composition, and Hamiltonian symmetry}{equation.617}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {16.5}Derivations and the Euler kernel}{259}{section.618}\protected@file@percent }
+\newlabel{eq:op-derivation}{{16.6}{259}{Derivations and the Euler kernel}{equation.619}{}}
+\BKM@entry{id=159,open,dest={73656374696F6E2E363230},srcline={335}}{31362E365C30343046696E6974652D72616E6B5C30343074726163655C303430616E645C303430615C303430646973617070656172696E675C303430626F756E64617279}
+\MT@newlabel{eq:op-derivation}
+\MT@newlabel{eq:op-identity}
+\MT@newlabel{eq:op-diagonal}
+\@writefile{toc}{\contentsline {section}{\numberline {16.6}Finite-rank trace and a disappearing boundary}{260}{section.620}\protected@file@percent }
+\newlabel{eq:op-finite-trace}{{16.7}{260}{Finite-rank trace and a disappearing boundary}{equation.621}{}}
+\MT@newlabel{eq:op-finite-trace}
+\BKM@entry{id=160,open,dest={73656374696F6E2E363234},srcline={431}}{31362E375C303430415C303430726573747269637465645C303430616C67656272615C303430776974685C303430616E5C303430616C676562726169635C3034307472616365}
+\MT@newlabel{eq:op-uniform}
+\newlabel{eq:op-shift}{{16.6}{261}{Finite-rank trace and a disappearing boundary}{equation.621}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~16.6.1\else \numberline {16.6.1}Proposition\fi }{261}{proposition.623}\protected@file@percent }
+\BKM@entry{id=161,open,dest={73656374696F6E2E363238},srcline={511}}{31362E385C303430436F6E74696E756F75735C303430696E76617269616E745C303430636F656666696369656E74735C303430616E645C3034307175616E74756D5C3034306D6174746572}
+\@writefile{toc}{\contentsline {section}{\numberline {16.7}A restricted algebra with an algebraic trace}{262}{section.624}\protected@file@percent }
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~16.7.1\else \numberline {16.7.1}Lemma\fi }{262}{lemma.626}\protected@file@percent }
+\newlabel{eq:op-restricted-trace}{{16.8}{262}{A restricted algebra with an algebraic trace}{equation.627}{}}
+\MT@newlabel{eq:op-finite-trace}
+\MT@newlabel{eq:op-restricted-trace}
+\@writefile{toc}{\contentsline {section}{\numberline {16.8}Continuous invariant coefficients and quantum matter}{263}{section.628}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~16.8.1\else \numberline {16.8.1}Proposition\fi }{263}{proposition.630}\protected@file@percent }
+\BKM@entry{id=162,open,dest={636861707465722E363331},srcline={1}}{31375C3034305175616E74756D5C30343063757272656E74735C30343061745C30343065766572795C3034306172697479}
+\BKM@entry{id=163,open,dest={73656374696F6E2E363332},srcline={19}}{31372E315C303430436F6D706163745C303430736F75726365735C303430616E645C3034307468655C3034306D65616E696E675C3034306F665C3034307468655C303430736572696573}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {17}Quantum currents at every arity}{264}{chapter.631}\protected@file@percent }
+\newlabel{chap:all-arity-current-actions}{{17}{264}{Quantum currents at every arity}{chapter.631}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.1}Compact sources and the meaning of the series}{264}{section.632}\protected@file@percent }
+\newlabel{eq:aac-bare-cme}{{17.1}{265}{Compact sources and the meaning of the series}{equation.633}{}}
+\newlabel{eq:aac-formal-carrier}{{17.2}{265}{Compact sources and the meaning of the series}{equation.634}{}}
+\BKM@entry{id=164,open,dest={73656374696F6E2E363335},srcline={160}}{31372E325C30343050617468735C303430616E645C3034306379636C65735C303430776974685C30343074686569725C303430636F656666696369656E7473}
+\@writefile{toc}{\contentsline {section}{\numberline {17.2}Paths and cycles with their coefficients}{266}{section.635}\protected@file@percent }
+\newlabel{eq:aac-contraction-identities}{{17.3}{266}{Paths and cycles with their coefficients}{equation.636}{}}
+\newlabel{eq:aac-connected}{{17.4}{266}{Paths and cycles with their coefficients}{equation.637}{}}
+\BKM@entry{id=165,open,dest={73656374696F6E2E363338},srcline={296}}{31372E335C30343045766572795C303430706174685C3034306861735C303430615C303430636F6D706163745C3034306F627365727661626C655C3034306B65726E656C}
+\@writefile{toc}{\contentsline {section}{\numberline {17.3}Every path has a compact observable kernel}{267}{section.638}\protected@file@percent }
+\BKM@entry{id=166,open,dest={73656374696F6E2E363430},srcline={358}}{31372E345C303430415C303430476175737369616E5C303430626F756E645C303430666F725C303430616C6C5C303430776865656C73}
+\newlabel{eq:aac-path-l1}{{17.5}{268}{Every path has a compact observable kernel}{equation.639}{}}
+\MT@newlabel{eq:aac-path-l1}
+\@writefile{toc}{\contentsline {section}{\numberline {17.4}A Gaussian bound for all wheels}{268}{section.640}\protected@file@percent }
+\newlabel{eq:aac-covariance}{{17.6}{268}{A Gaussian bound for all wheels}{equation.641}{}}
+\MT@newlabel{eq:aac-covariance}
+\newlabel{eq:aac-covariance-bounds}{{17.7}{269}{A Gaussian bound for all wheels}{equation.642}{}}
+\MT@newlabel{eq:aac-covariance-bounds}
+\newlabel{eq:aac-wheel-estimate}{{17.8}{269}{A Gaussian bound for all wheels}{equation.643}{}}
+\newlabel{eq:aac-wheel-time-bound}{{17.9}{269}{A Gaussian bound for all wheels}{equation.644}{}}
+\MT@newlabel{eq:aac-wheel-time-bound}
+\BKM@entry{id=167,open,dest={73656374696F6E2E363435},srcline={506}}{31372E355C303430486561745C30343065646765735C303430616E645C303430636F6C6C61707365645C303430696E73657274696F6E73}
+\MT@newlabel{eq:aac-wheel-estimate}
+\@writefile{toc}{\contentsline {section}{\numberline {17.5}Heat edges and collapsed insertions}{270}{section.645}\protected@file@percent }
+\newlabel{eq:aac-marked-path}{{17.10}{270}{Heat edges and collapsed insertions}{equation.646}{}}
+\newlabel{eq:aac-marked-wheel}{{17.11}{270}{Heat edges and collapsed insertions}{equation.647}{}}
+\BKM@entry{id=168,open,dest={73656374696F6E2E363439},srcline={612}}{31372E365C3034305468655C30343065786163745C30343066696E6974652D7363616C655C303430576172645C3034306964656E74697479}
+\MT@newlabel{eq:aac-marked-wheel}
+\newlabel{eq:aac-collapsed-difference}{{17.12}{271}{Heat edges and collapsed insertions}{equation.648}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.6}The exact finite-scale Ward identity}{271}{section.649}\protected@file@percent }
+\MT@newlabel{eq:aac-bare-cme}
+\MT@newlabel{eq:aac-contraction-identities}
+\MT@newlabel{eq:aac-connected}
+\newlabel{eq:aac-regulated-defect}{{17.13}{271}{The exact finite-scale Ward identity}{equation.650}{}}
+\newlabel{eq:aac-marked-count}{{17.14}{272}{The exact finite-scale Ward identity}{equation.651}{}}
+\MT@newlabel{eq:aac-marked-count}
+\MT@newlabel{eq:aac-marked-path}
+\MT@newlabel{eq:aac-collapsed-difference}
+\newlabel{eq:aac-theta}{{17.15}{272}{The exact finite-scale Ward identity}{equation.652}{}}
+\MT@newlabel{eq:aac-regulated-defect}
+\BKM@entry{id=169,open,dest={73656374696F6E2E363537},srcline={822}}{31372E375C3034305472616E73706F72745C3034306265747765656E5C303430706F7369746976655C303430686561745C3034307363616C6573}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~17.6.1\else \numberline {17.6.1}Theorem\fi }{273}{theorem.654}\protected@file@percent }
+\newlabel{thm:aac-fixed-scale}{{17.6.1}{273}{}{theorem.654}{}}
+\MT@newlabel{eq:aac-formal-carrier}
+\newlabel{eq:aac-all-order-qme}{{17.16}{273}{}{equation.655}{}}
+\MT@newlabel{eq:aac-regulated-defect}
+\MT@newlabel{eq:aac-theta}
+\newlabel{eq:aac-tree-identities}{{17.17}{273}{The exact finite-scale Ward identity}{equation.656}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.7}Transport between positive heat scales}{273}{section.657}\protected@file@percent }
+\newlabel{eq:aac-scale-transport}{{17.18}{273}{Transport between positive heat scales}{equation.658}{}}
+\MT@newlabel{eq:aac-scale-transport}
+\BKM@entry{id=170,open,dest={73656374696F6E2E363539},srcline={853}}{31372E385C30343053757370656E73696F6E5C303430616E645C3034307468655C303430736F757263655C303430646966666572656E7469616C}
+\MT@newlabel{eq:aac-scale-transport}
+\@writefile{toc}{\contentsline {section}{\numberline {17.8}Suspension and the source differential}{274}{section.659}\protected@file@percent }
+\MT@newlabel{eq:aac-tree-identities}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~17.8.1\else \numberline {17.8.1}Lemma\fi }{274}{lemma.661}\protected@file@percent }
+\newlabel{lem:aac-symmetric-coderivations}{{17.8.1}{274}{}{lemma.661}{}}
+\newlabel{eq:aac-source-q}{{17.19}{275}{Suspension and the source differential}{equation.662}{}}
+\BKM@entry{id=171,open,dest={73656374696F6E2E363636},srcline={1104}}{31372E395C3034305468655C3034305461796C6F725C303430636F6D706F6E656E74735C303430696E5C30343065766572795C303430646567726565}
+\newlabel{eq:aac-dual-conventions}{{17.20}{276}{Suspension and the source differential}{equation.664}{}}
+\MT@newlabel{eq:aac-source-q}
+\newlabel{eq:aac-target-q}{{17.21}{276}{Suspension and the source differential}{equation.665}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.9}The Taylor components in every degree}{277}{section.666}\protected@file@percent }
+\newlabel{eq:aac-current-components}{{17.22}{277}{The Taylor components in every degree}{equation.668}{}}
+\MT@newlabel{eq:aac-dual-conventions}
+\BKM@entry{id=172,open,dest={73656374696F6E2E363730},srcline={1254}}{31372E31305C30343046726F6D5C3034307468655C3034306D61737465725C3034306571756174696F6E5C303430746F5C303430616C6C5C3034306869676865725C3034306964656E746974696573}
+\MT@newlabel{eq:aac-current-components}
+\newlabel{eq:aac-suspended-components}{{17.23}{278}{The Taylor components in every degree}{equation.669}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.10}From the master equation to all higher identities}{278}{section.670}\protected@file@percent }
+\MT@newlabel{eq:aac-dual-conventions}
+\MT@newlabel{eq:aac-target-q}
+\newlabel{eq:aac-morphism-defect}{{17.24}{279}{From the master equation to all higher identities}{equation.671}{}}
+\MT@newlabel{eq:aac-tree-identities}
+\MT@newlabel{eq:aac-morphism-defect}
+\BKM@entry{id=173,open,dest={73656374696F6E2E363732},srcline={1406}}{31372E31315C3034305468655C30343063656E7472616C5C303430657874656E73696F6E5C303430616E645C3034307468655C3034307175616E74756D5C30343063757272656E745C3034306D6170}
+\MT@newlabel{eq:qca-noether-components}
+\MT@newlabel{eq:aac-all-order-qme}
+\MT@newlabel{eq:aac-morphism-defect}
+\@writefile{toc}{\contentsline {section}{\numberline {17.11}The central extension and the quantum current map}{280}{section.672}\protected@file@percent }
+\MT@newlabel{eq:aac-theta}
+\newlabel{eq:aac-central-ce}{{17.25}{280}{The central extension and the quantum current map}{equation.673}{}}
+\MT@newlabel{eq:aac-dual-conventions}
+\MT@newlabel{eq:aac-central-ce}
+\MT@newlabel{eq:aac-suspended-components}
+\newlabel{eq:aac-central-q}{{17.26}{281}{The central extension and the quantum current map}{equation.674}{}}
+\MT@newlabel{eq:qca-polarized}
+\MT@newlabel{eq:aac-theta}
+\MT@newlabel{eq:aac-central-ce}
+\MT@newlabel{eq:aac-all-order-qme}
+\MT@newlabel{eq:aac-central-ce}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~17.11.1\else \numberline {17.11.1}Theorem\fi }{282}{theorem.676}\protected@file@percent }
+\newlabel{thm:aac-quantum-map}{{17.11.1}{282}{}{theorem.676}{}}
+\MT@newlabel{eq:aac-current-components}
+\MT@newlabel{eq:aac-central-ce}
+\MT@newlabel{eq:aac-morphism-defect}
+\MT@newlabel{eq:aac-morphism-defect}
+\MT@newlabel{eq:aac-central-q}
+\BKM@entry{id=174,open,dest={636861707465722E363737},srcline={1}}{31385C303430415C3034306C6F63616C5C303430616E6F6D616C795C303430616E645C3034306974735C3034306E6F6E6C6F63616C5C3034307072696D6974697665}
+\BKM@entry{id=175,open,dest={73656374696F6E2E363738},srcline={18}}{31382E315C3034304261636B67726F756E645C303430666F726D735C303430616E645C30343074686569725C303430646966666572656E7469616C}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {18}A local anomaly and its nonlocal primitive}{283}{chapter.677}\protected@file@percent }
+\newlabel{ch:local-anomaly}{{18}{283}{A local anomaly and its nonlocal primitive}{chapter.677}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {18.1}Background forms and their differential}{283}{section.678}\protected@file@percent }
+\newlabel{sec:la-background}{{18.1}{283}{Background forms and their differential}{section.678}{}}
+\newlabel{eq:la-volume}{{18.1}{283}{Background forms and their differential}{section.678}{}}
+\newlabel{eq:la-universal}{{18.1}{283}{Background forms and their differential}{equation.679}{}}
+\MT@newlabel{eq:la-universal}
+\BKM@entry{id=176,open,dest={73656374696F6E2E363834},srcline={110}}{31382E325C3034305468655C30343063756269635C303430766172696174696F6E5C303430616E645C303430615C303430636F6E63726574655C303430636F6D706F6E656E74}
+\newlabel{eq:la-totalization}{{18.2}{284}{Background forms and their differential}{equation.680}{}}
+\newlabel{eq:la-components}{{18.3}{284}{Background forms and their differential}{equation.681}{}}
+\newlabel{eq:la-delta}{{18.4}{284}{Background forms and their differential}{equation.682}{}}
+\newlabel{eq:la-super-delta}{{18.5}{284}{Background forms and their differential}{equation.683}{}}
+\MT@newlabel{eq:la-delta}
+\MT@newlabel{eq:la-totalization}
+\@writefile{toc}{\contentsline {section}{\numberline {18.2}The cubic variation and a concrete component}{284}{section.684}\protected@file@percent }
+\newlabel{sec:la-cubic}{{18.2}{284}{The cubic variation and a concrete component}{section.684}{}}
+\newlabel{eq:la-anomaly}{{18.6}{284}{The cubic variation and a concrete component}{equation.685}{}}
+\MT@newlabel{eq:la-anomaly}
+\MT@newlabel{eq:la-anomaly}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~18.2.1\else \numberline {18.2.1}Proposition\fi }{284}{proposition.687}\protected@file@percent }
+\newlabel{prop:la-closed}{{18.2.1}{284}{}{proposition.687}{}}
+\BKM@entry{id=177,open,dest={73656374696F6E2E363931},srcline={213}}{31382E335C303430416C6C5C30343066696E6974652D6F726465725C3034306C6F63616C5C303430636F636861696E73}
+\MT@newlabel{eq:la-anomaly}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~18.2.2\else \numberline {18.2.2}Lemma\fi }{285}{lemma.689}\protected@file@percent }
+\newlabel{lem:la-polarization}{{18.2.2}{285}{}{lemma.689}{}}
+\newlabel{eq:la-polarized}{{18.7}{285}{}{equation.690}{}}
+\MT@newlabel{eq:la-polarized}
+\@writefile{toc}{\contentsline {section}{\numberline {18.3}All finite-order local cochains}{285}{section.691}\protected@file@percent }
+\newlabel{sec:la-jets}{{18.3}{285}{All finite-order local cochains}{section.691}{}}
+\MT@newlabel{eq:la-components}
+\newlabel{eq:la-jet-algebra}{{18.8}{286}{All finite-order local cochains}{equation.693}{}}
+\newlabel{eq:la-jet-differential}{{18.9}{286}{All finite-order local cochains}{equation.694}{}}
+\newlabel{eq:la-local-tr}{{18.10}{286}{All finite-order local cochains}{equation.695}{}}
+\MT@newlabel{eq:la-jet-algebra}
+\newlabel{eq:la-smooth-jets}{{18.3}{286}{All finite-order local cochains}{equation.695}{}}
+\newlabel{eq:la-local-sm}{{18.3}{286}{All finite-order local cochains}{equation.695}{}}
+\BKM@entry{id=178,open,dest={73656374696F6E2E363936},srcline={311}}{31382E345C303430506F6C6172697A6174696F6E5C303430616E645C303430696E746567726174696F6E5C30343062795C3034307061727473}
+\@writefile{toc}{\contentsline {section}{\numberline {18.4}Polarization and integration by parts}{287}{section.696}\protected@file@percent }
+\newlabel{sec:la-normal-form}{{18.4}{287}{Polarization and integration by parts}{section.696}{}}
+\newlabel{eq:la-normal-form}{{18.11}{287}{Polarization and integration by parts}{equation.697}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~18.4.1\else \numberline {18.4.1}Lemma\fi }{287}{lemma.699}\protected@file@percent }
+\newlabel{lem:la-normal-unique}{{18.4.1}{287}{}{lemma.699}{}}
+\MT@newlabel{eq:la-normal-form}
+\BKM@entry{id=179,open,dest={73656374696F6E2E373031},srcline={406}}{31382E355C3034305468655C3034306E6F6E7A65726F5C3034306C6F63616C5C30343073796D626F6C}
+\BKM@entry{id=180,open,dest={73656374696F6E2E373037},srcline={462}}{31382E365C3034305468655C303430636F6D706C6574655C303430636F6D706F6E656E745C303430636F6D706C6578}
+\newlabel{eq:la-symbol-ring}{{18.12}{288}{Polarization and integration by parts}{equation.700}{}}
+\MT@newlabel{eq:la-local-tr}
+\@writefile{toc}{\contentsline {section}{\numberline {18.5}The nonzero local symbol}{288}{section.701}\protected@file@percent }
+\newlabel{sec:la-symbol-obstruction}{{18.5}{288}{The nonzero local symbol}{section.701}{}}
+\MT@newlabel{eq:la-jet-differential}
+\newlabel{eq:la-symbol-differential}{{18.13}{288}{The nonzero local symbol}{equation.702}{}}
+\newlabel{eq:la-qzero}{{18.14}{288}{The nonzero local symbol}{equation.703}{}}
+\MT@newlabel{eq:la-symbol-differential}
+\MT@newlabel{eq:la-qzero}
+\MT@newlabel{eq:la-symbol-ring}
+\newlabel{eq:la-determinant-symbol}{{18.15}{288}{The nonzero local symbol}{equation.704}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~18.5.1\else \numberline {18.5.1}Proposition\fi }{288}{proposition.706}\protected@file@percent }
+\newlabel{prop:la-tr-nonexact}{{18.5.1}{288}{}{proposition.706}{}}
+\MT@newlabel{eq:la-qzero}
+\MT@newlabel{eq:la-determinant-symbol}
+\@writefile{toc}{\contentsline {section}{\numberline {18.6}The complete component complex}{289}{section.707}\protected@file@percent }
+\newlabel{sec:la-koszul}{{18.6}{289}{The complete component complex}{section.707}{}}
+\newlabel{eq:la-slot-identification}{{18.6}{289}{The complete component complex}{section.707}{}}
+\newlabel{eq:la-koszul-complex}{{18.16}{289}{The complete component complex}{equation.708}{}}
+\MT@newlabel{eq:la-koszul-complex}
+\newlabel{eq:la-redundant-generators}{{18.6}{289}{The complete component complex}{equation.708}{}}
+\newlabel{eq:la-koszul-homotopy}{{18.6}{289}{The complete component complex}{equation.708}{}}
+\newlabel{eq:la-euler-identity}{{18.17}{289}{The complete component complex}{equation.709}{}}
+\MT@newlabel{eq:la-euler-identity}
+\newlabel{eq:la-koszul-cohomology}{{18.18}{289}{The complete component complex}{equation.710}{}}
+\MT@newlabel{eq:la-koszul-cohomology}
+\BKM@entry{id=181,open,dest={73656374696F6E2E373133},srcline={592}}{31382E375C303430506F736974696F6E2D646570656E64656E745C3034306C6F63616C5C303430636F756E7465727465726D73}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~18.6.1\else \numberline {18.6.1}Lemma\fi }{290}{lemma.712}\protected@file@percent }
+\newlabel{lem:la-order-lowering}{{18.6.1}{290}{}{lemma.712}{}}
+\MT@newlabel{eq:la-euler-identity}
+\@writefile{toc}{\contentsline {section}{\numberline {18.7}Position-dependent local counterterms}{290}{section.713}\protected@file@percent }
+\newlabel{sec:la-smooth-obstruction}{{18.7}{290}{Position-dependent local counterterms}{section.713}{}}
+\MT@newlabel{eq:la-normal-form}
+\MT@newlabel{eq:la-symbol-differential}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~18.7.1\else \numberline {18.7.1}Theorem\fi }{290}{theorem.715}\protected@file@percent }
+\newlabel{thm:la-smooth-nonexact}{{18.7.1}{290}{}{theorem.715}{}}
+\MT@newlabel{eq:la-qzero}
+\MT@newlabel{eq:la-determinant-symbol}
+\BKM@entry{id=182,open,dest={73656374696F6E2E373136},srcline={661}}{31382E385C303430436F6E74696E756F75735C303430636F636861696E735C3034306F6E5C303430636F6D706163745C303430736D6F6F74685C303430696E70757473}
+\BKM@entry{id=183,open,dest={73656374696F6E2E373138},srcline={731}}{31382E395C303430415C3034306E6F726D616C697A65645C303430477265656E5C303430686F6D6F746F7079}
+\@writefile{toc}{\contentsline {section}{\numberline {18.8}Continuous cochains on compact smooth inputs}{291}{section.716}\protected@file@percent }
+\newlabel{sec:la-continuous}{{18.8}{291}{Continuous cochains on compact smooth inputs}{section.716}{}}
+\newlabel{eq:la-cochain-input-differential}{{18.8}{291}{Continuous cochains on compact smooth inputs}{section.716}{}}
+\newlabel{eq:la-continuous-differential}{{18.19}{291}{Continuous cochains on compact smooth inputs}{equation.717}{}}
+\MT@newlabel{eq:la-continuous-differential}
+\MT@newlabel{eq:la-delta}
+\MT@newlabel{eq:la-universal}
+\@writefile{toc}{\contentsline {section}{\numberline {18.9}A normalized Green homotopy}{292}{section.718}\protected@file@percent }
+\newlabel{sec:la-green}{{18.9}{292}{A normalized Green homotopy}{section.718}{}}
+\newlabel{eq:la-green-function}{{18.20}{292}{A normalized Green homotopy}{equation.719}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~18.9.1\else \numberline {18.9.1}Lemma\fi }{292}{lemma.721}\protected@file@percent }
+\newlabel{lem:la-green-delta}{{18.9.1}{292}{}{lemma.721}{}}
+\newlabel{eq:la-green-delta}{{18.21}{292}{}{equation.722}{}}
+\MT@newlabel{eq:la-green-delta}
+\BKM@entry{id=184,open,dest={73656374696F6E2E373236},srcline={859}}{31382E31305C3034305468655C3034306E6F6E6C6F63616C5C3034307072696D69746976655C303430616E645C3034306974735C303430636F6E74696E75697479}
+\newlabel{eq:la-laplacian-homotopy}{{18.22}{293}{A normalized Green homotopy}{equation.723}{}}
+\newlabel{eq:la-hraw}{{18.9}{293}{A normalized Green homotopy}{equation.723}{}}
+\MT@newlabel{eq:la-green-delta}
+\MT@newlabel{eq:la-laplacian-homotopy}
+\newlabel{eq:la-homotopy-raw}{{18.23}{293}{A normalized Green homotopy}{equation.724}{}}
+\MT@newlabel{eq:la-green-function}
+\newlabel{eq:la-hraw-integral}{{18.24}{293}{A normalized Green homotopy}{equation.725}{}}
+\MT@newlabel{eq:la-hraw-integral}
+\@writefile{toc}{\contentsline {section}{\numberline {18.10}The nonlocal primitive and its continuity}{293}{section.726}\protected@file@percent }
+\newlabel{sec:la-primitive}{{18.10}{293}{The nonlocal primitive and its continuity}{section.726}{}}
+\newlabel{eq:la-h-total}{{18.25}{293}{The nonlocal primitive and its continuity}{equation.727}{}}
+\MT@newlabel{eq:la-homotopy-raw}
+\newlabel{eq:la-h-total-identities}{{18.26}{293}{The nonlocal primitive and its continuity}{equation.728}{}}
+\MT@newlabel{eq:la-h-total}
+\newlabel{eq:la-primitive}{{18.27}{293}{The nonlocal primitive and its continuity}{equation.729}{}}
+\BKM@entry{id=185,open,dest={73656374696F6E2E373336},srcline={980}}{31382E31315C3034304C6F63616C5C30343063616E63656C6C6174696F6E5C303430616E645C3034307468655C30343063686F6963655C3034306F665C303430636F636861696E73}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~18.10.1\else \numberline {18.10.1}Proposition\fi }{294}{proposition.731}\protected@file@percent }
+\newlabel{prop:la-primitive-identity}{{18.10.1}{294}{}{proposition.731}{}}
+\newlabel{eq:la-primitive-identity}{{18.28}{294}{}{equation.732}{}}
+\MT@newlabel{eq:la-anomaly}
+\MT@newlabel{eq:la-super-delta}
+\MT@newlabel{eq:la-h-total-identities}
+\MT@newlabel{eq:la-hraw-integral}
+\newlabel{eq:la-h-bound}{{18.29}{294}{The nonlocal primitive and its continuity}{equation.733}{}}
+\newlabel{eq:la-pone}{{18.30}{294}{The nonlocal primitive and its continuity}{equation.734}{}}
+\MT@newlabel{eq:la-h-bound}
+\MT@newlabel{eq:la-pone}
+\newlabel{eq:la-joint-bound}{{18.31}{294}{The nonlocal primitive and its continuity}{equation.735}{}}
+\MT@newlabel{eq:la-hraw-integral}
+\MT@newlabel{eq:la-primitive-identity}
+\@writefile{toc}{\contentsline {section}{\numberline {18.11}Local cancellation and the choice of cochains}{295}{section.736}\protected@file@percent }
+\newlabel{sec:la-consequence}{{18.11}{295}{Local cancellation and the choice of cochains}{section.736}{}}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~18.11.1\else \numberline {18.11.1}Theorem\fi }{295}{theorem.738}\protected@file@percent }
+\newlabel{thm:la-three-parts}{{18.11.1}{295}{}{theorem.738}{}}
+\MT@newlabel{eq:la-anomaly}
+\MT@newlabel{eq:la-primitive}
+\MT@newlabel{eq:la-joint-bound}
+\MT@newlabel{eq:la-primitive}
+\BKM@entry{id=186,open,dest={636861707465722E373432},srcline={1}}{31395C30343048616D696C746F6E69616E5C3034306A6574735C303430616E645C3034307175616E74756D5C30343063757272656E7473}
+\BKM@entry{id=187,open,dest={73656374696F6E2E373433},srcline={27}}{31392E315C303430415C30343066696E6974655C3034305461796C6F725C3034306D6F64756C655C303430746861745C30343072657461696E735C3034307468655C303430616374696F6E}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {19}Hamiltonian jets and quantum currents}{296}{chapter.742}\protected@file@percent }
+\newlabel{chap:hamiltonian-jets}{{19}{296}{Hamiltonian jets and quantum currents}{chapter.742}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.1}A finite Taylor module that retains the action}{296}{section.743}\protected@file@percent }
+\newlabel{eq:hj-1}{{19.1}{296}{A finite Taylor module that retains the action}{section.743}{}}
+\newlabel{eq:hj-2}{{19.1}{296}{A finite Taylor module that retains the action}{equation.744}{}}
+\@writefile{loe}{\addvspace {10\p@ }}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~19.1.1\else \numberline {19.1.1}Proposition\fi }{296}{proposition.746}\protected@file@percent }
+\newlabel{prop:hj-faithful}{{19.1.1}{296}{}{proposition.746}{}}
+\MT@newlabel{eq:hj-2}
+\newlabel{eq:hj-3}{{19.1}{296}{A finite Taylor module that retains the action}{proposition.746}{}}
+\BKM@entry{id=188,open,dest={73656374696F6E2E373438},srcline={113}}{31392E325C3034305468655C30343066697273745C30343074776F5C3034306A657473}
+\newlabel{eq:hj-4}{{19.1}{297}{A finite Taylor module that retains the action}{proposition.746}{}}
+\newlabel{eq:hj-5}{{19.1}{297}{A finite Taylor module that retains the action}{proposition.746}{}}
+\newlabel{eq:hj-6}{{19.2}{297}{A finite Taylor module that retains the action}{equation.747}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.2}The first two jets}{297}{section.748}\protected@file@percent }
+\newlabel{eq:hj-8}{{19.2}{297}{The first two jets}{section.748}{}}
+\BKM@entry{id=189,open,dest={73656374696F6E2E373439},srcline={203}}{31392E335C3034305768795C3034306F6E6C795C3034307175616472617469635C30343048616D696C746F6E69616E735C303430656E7465725C303430615C3034307472616365}
+\newlabel{eq:hj-24}{{19.2}{298}{The first two jets}{section.748}{}}
+\newlabel{eq:hj-25}{{19.2}{298}{The first two jets}{section.748}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.3}Why only quadratic Hamiltonians enter a trace}{298}{section.749}\protected@file@percent }
+\BKM@entry{id=190,open,dest={73656374696F6E2E373534},srcline={286}}{31392E345C3034305468655C30343063756269635C303430696E76617269616E745C303430616E645C3034306F7264657265645C303430636F6C6F725C303430666163746F7273}
+\MT@newlabel{eq:hj-6}
+\newlabel{eq:hj-7}{{19.3}{299}{Why only quadratic Hamiltonians enter a trace}{equation.750}{}}
+\newlabel{eq:hj-9}{{19.4}{299}{Why only quadratic Hamiltonians enter a trace}{equation.751}{}}
+\newlabel{eq:hj-10}{{19.5}{299}{Why only quadratic Hamiltonians enter a trace}{equation.752}{}}
+\MT@newlabel{eq:hj-9}
+\newlabel{eq:hj-11}{{19.3}{299}{Why only quadratic Hamiltonians enter a trace}{equation.752}{}}
+\MT@newlabel{eq:hj-10}
+\MT@newlabel{eq:hj-9}
+\MT@newlabel{eq:hj-7}
+\newlabel{eq:hj-12}{{19.6}{299}{Why only quadratic Hamiltonians enter a trace}{equation.753}{}}
+\MT@newlabel{eq:hj-10}
+\BKM@entry{id=191,open,dest={73656374696F6E2E373539},srcline={324}}{31392E355C30343043617274616E5C3034306D6F6D656E74735C30343061735C3034307468655C3034306A65745C3034306F726465725C303430696E63726561736573}
+\@writefile{toc}{\contentsline {section}{\numberline {19.4}The cubic invariant and ordered color factors}{300}{section.754}\protected@file@percent }
+\newlabel{eq:hj-13}{{19.7}{300}{The cubic invariant and ordered color factors}{equation.755}{}}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~19.4.1\else \numberline {19.4.1}Proposition\fi }{300}{proposition.757}\protected@file@percent }
+\newlabel{prop:hj-cubic}{{19.4.1}{300}{}{proposition.757}{}}
+\newlabel{eq:hj-14}{{19.8}{300}{}{equation.758}{}}
+\MT@newlabel{eq:hj-13}
+\MT@newlabel{eq:hj-12}
+\MT@newlabel{eq:hj-12}
+\newlabel{eq:hj-15}{{19.4}{300}{The cubic invariant and ordered color factors}{equation.758}{}}
+\MT@newlabel{eq:hj-14}
+\@writefile{toc}{\contentsline {section}{\numberline {19.5}Cartan moments as the jet order increases}{300}{section.759}\protected@file@percent }
+\newlabel{eq:hj-16}{{19.5}{300}{Cartan moments as the jet order increases}{section.759}{}}
+\newlabel{eq:hj-17}{{19.9}{300}{Cartan moments as the jet order increases}{equation.760}{}}
+\newlabel{eq:hj-18}{{19.10}{300}{Cartan moments as the jet order increases}{equation.761}{}}
+\BKM@entry{id=192,open,dest={73656374696F6E2E373634},srcline={412}}{31392E365C303430496E7465726E616C5C30343048616D696C746F6E69616E735C303430616E645C303430636F6D706163745C3034307370617469616C5C303430736F7572636573}
+\MT@newlabel{eq:hj-17}
+\MT@newlabel{eq:hj-18}
+\MT@newlabel{eq:hj-17}
+\MT@newlabel{eq:hj-18}
+\newlabel{eq:hj-19}{{19.11}{301}{Cartan moments as the jet order increases}{equation.762}{}}
+\newlabel{eq:hj-20}{{19.5}{301}{Cartan moments as the jet order increases}{equation.762}{}}
+\newlabel{eq:hj-21}{{19.12}{301}{Cartan moments as the jet order increases}{equation.763}{}}
+\MT@newlabel{eq:hj-17}
+\MT@newlabel{eq:hj-18}
+\newlabel{eq:hj-22}{{19.5}{301}{Cartan moments as the jet order increases}{equation.763}{}}
+\newlabel{eq:hj-23}{{19.5}{301}{Cartan moments as the jet order increases}{equation.763}{}}
+\MT@newlabel{eq:hj-9}
+\@writefile{toc}{\contentsline {section}{\numberline {19.6}Internal Hamiltonians and compact spatial sources}{301}{section.764}\protected@file@percent }
+\newlabel{eq:hj-26}{{19.6}{301}{Internal Hamiltonians and compact spatial sources}{section.764}{}}
+\newlabel{eq:hj-27}{{19.13}{301}{Internal Hamiltonians and compact spatial sources}{equation.765}{}}
+\BKM@entry{id=193,open,dest={73656374696F6E2E373638},srcline={468}}{31392E375C3034305468655C30343066696E6974655C3034306D61747465725C3034307468656F72795C303430616E645C3034306974735C303430706174685C3034306B65726E656C73}
+\newlabel{eq:hj-28}{{19.14}{302}{Internal Hamiltonians and compact spatial sources}{equation.766}{}}
+\MT@newlabel{eq:hj-28}
+\newlabel{eq:hj-29}{{19.15}{302}{Internal Hamiltonians and compact spatial sources}{equation.767}{}}
+\MT@newlabel{eq:hj-29}
+\MT@newlabel{eq:hj-27}
+\MT@newlabel{eq:hj-29}
+\@writefile{toc}{\contentsline {section}{\numberline {19.7}The finite matter theory and its path kernels}{302}{section.768}\protected@file@percent }
+\newlabel{eq:hj-30}{{19.16}{302}{The finite matter theory and its path kernels}{equation.769}{}}
+\newlabel{eq:hj-31}{{19.7}{302}{The finite matter theory and its path kernels}{equation.769}{}}
+\newlabel{eq:hj-32}{{19.17}{303}{The finite matter theory and its path kernels}{equation.770}{}}
+\newlabel{eq:hj-33}{{19.7}{303}{The finite matter theory and its path kernels}{equation.770}{}}
+\newlabel{eq:hj-34}{{19.18}{303}{The finite matter theory and its path kernels}{equation.771}{}}
+\BKM@entry{id=194,open,dest={73656374696F6E2E373733},srcline={630}}{31392E385C303430526576657273616C5C30343063616E63656C735C3034307468655C303430636F6D706C6574655C303430776865656C73}
+\newlabel{eq:hj-35}{{19.19}{304}{The finite matter theory and its path kernels}{equation.772}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.8}Reversal cancels the complete wheels}{304}{section.773}\protected@file@percent }
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~19.8.1\else \numberline {19.8.1}Proposition\fi }{304}{proposition.775}\protected@file@percent }
+\newlabel{prop:hj-wheel}{{19.8.1}{304}{}{proposition.775}{}}
+\MT@newlabel{eq:hj-12}
+\newlabel{eq:hj-36}{{19.20}{304}{Reversal cancels the complete wheels}{equation.776}{}}
+\MT@newlabel{eq:hj-35}
+\MT@newlabel{eq:hj-32}
+\MT@newlabel{eq:hj-36}
+\newlabel{eq:hj-37}{{19.21}{304}{Reversal cancels the complete wheels}{equation.777}{}}
+\BKM@entry{id=195,open,dest={73656374696F6E2E373833},srcline={740}}{31392E395C3034305175616E74756D5C30343063757272656E74735C303430616E645C30343065766572795C3034306869676865725C3034306964656E74697479}
+\newlabel{eq:hj-38}{{19.22}{305}{Reversal cancels the complete wheels}{equation.778}{}}
+\MT@newlabel{eq:hj-36}
+\MT@newlabel{eq:hj-38}
+\newlabel{eq:hj-39}{{19.23}{305}{Reversal cancels the complete wheels}{equation.779}{}}
+\MT@newlabel{eq:hj-14}
+\MT@newlabel{eq:hj-35}
+\newlabel{eq:hj-40}{{19.24}{305}{Reversal cancels the complete wheels}{equation.780}{}}
+\MT@newlabel{eq:hj-40}
+\newlabel{eq:hj-41}{{19.25}{305}{Reversal cancels the complete wheels}{equation.781}{}}
+\MT@newlabel{eq:hj-37}
+\MT@newlabel{eq:hj-39}
+\newlabel{eq:hj-42}{{19.26}{305}{Reversal cancels the complete wheels}{equation.782}{}}
+\newlabel{eq:hj-43}{{19.8}{305}{Reversal cancels the complete wheels}{equation.782}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.9}Quantum currents and every higher identity}{305}{section.783}\protected@file@percent }
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~19.9.1\else \numberline {19.9.1}Theorem\fi }{305}{theorem.785}\protected@file@percent }
+\newlabel{thm:hj-finite-current}{{19.9.1}{305}{}{theorem.785}{}}
+\MT@newlabel{eq:hj-46}
+\MT@newlabel{eq:hj-27}
+\MT@newlabel{eq:hj-29}
+\newlabel{eq:hj-44}{{19.27}{306}{Quantum currents and every higher identity}{equation.786}{}}
+\newlabel{eq:hj-45}{{19.28}{306}{Quantum currents and every higher identity}{equation.787}{}}
+\newlabel{eq:hj-46}{{19.29}{306}{Quantum currents and every higher identity}{equation.788}{}}
+\MT@newlabel{eq:hj-37}
+\newlabel{eq:hj-47}{{19.9}{306}{Quantum currents and every higher identity}{equation.788}{}}
+\newlabel{eq:hj-48}{{19.30}{306}{Quantum currents and every higher identity}{equation.789}{}}
+\MT@newlabel{eq:hj-48}
+\newlabel{eq:hj-49}{{19.9}{307}{Quantum currents and every higher identity}{equation.789}{}}
+\newlabel{eq:hj-50}{{19.31}{307}{Quantum currents and every higher identity}{equation.790}{}}
+\MT@newlabel{eq:hj-46}
+\MT@newlabel{eq:hj-50}
+\newlabel{eq:hj-51}{{19.32}{307}{Quantum currents and every higher identity}{equation.791}{}}
+\MT@newlabel{eq:hj-41}
+\MT@newlabel{eq:hj-30}
+\newlabel{eq:hj-52}{{19.33}{307}{Quantum currents and every higher identity}{equation.792}{}}
+\BKM@entry{id=196,open,dest={73656374696F6E2E373934},srcline={994}}{31392E31305C303430576861745C303430615C3034306D61747465725C30343070726F6A656374696F6E5C3034306661696C735C303430746F5C3034307072657365727665}
+\newlabel{eq:hj-53}{{19.34}{308}{Quantum currents and every higher identity}{equation.793}{}}
+\MT@newlabel{eq:hj-41}
+\MT@newlabel{eq:hj-41}
+\MT@newlabel{eq:hj-51}
+\MT@newlabel{eq:hj-52}
+\MT@newlabel{eq:hj-46}
+\MT@newlabel{eq:hj-53}
+\MT@newlabel{eq:hj-27}
+\MT@newlabel{eq:hj-29}
+\MT@newlabel{eq:hj-34}
+\@writefile{toc}{\contentsline {section}{\numberline {19.10}What a matter projection fails to preserve}{308}{section.794}\protected@file@percent }
+\newlabel{eq:hj-54}{{19.10}{308}{What a matter projection fails to preserve}{section.794}{}}
+\BKM@entry{id=197,open,dest={73656374696F6E2E373937},srcline={1062}}{31392E31315C303430416E5C303430696E76657273655C30343073797374656D5C3034306F665C30343063757272656E745C3034304C69655C303430616C676562726173}
+\newlabel{eq:hj-55}{{19.35}{309}{What a matter projection fails to preserve}{equation.795}{}}
+\newlabel{eq:hj-56}{{19.10}{309}{What a matter projection fails to preserve}{equation.795}{}}
+\MT@newlabel{eq:hj-55}
+\newlabel{eq:hj-57}{{19.36}{309}{What a matter projection fails to preserve}{equation.796}{}}
+\newlabel{eq:hj-58}{{19.10}{309}{What a matter projection fails to preserve}{equation.796}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.11}An inverse system of current Lie algebras}{309}{section.797}\protected@file@percent }
+\MT@newlabel{eq:hj-57}
+\newlabel{eq:hj-59}{{19.37}{310}{An inverse system of current Lie algebras}{equation.798}{}}
+\MT@newlabel{eq:hj-45}
+\MT@newlabel{eq:hj-6}
+\newlabel{eq:hj-60}{{19.38}{310}{An inverse system of current Lie algebras}{equation.799}{}}
+\newlabel{eq:hj-61}{{19.39}{310}{An inverse system of current Lie algebras}{equation.800}{}}
+\MT@newlabel{eq:hj-59}
+\MT@newlabel{eq:hj-42}
+\newlabel{eq:hj-62}{{19.40}{310}{An inverse system of current Lie algebras}{equation.803}{}}
+\newlabel{eq:hj-63}{{19.11}{310}{An inverse system of current Lie algebras}{equation.803}{}}
+\MT@newlabel{eq:hj-44}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~19.11.1\else \numberline {19.11.1}Theorem\fi }{310}{theorem.805}\protected@file@percent }
+\newlabel{thm:hj-current-limit}{{19.11.1}{310}{}{theorem.805}{}}
+\MT@newlabel{eq:hj-68}
+\BKM@entry{id=198,open,dest={73656374696F6E2E383039},srcline={1}}{31392E31325C30343050726F64756374735C3034306F665C30343063757272656E74735C303430616E645C3034307468655C30343042565C3034306F70657261746F72}
+\MT@newlabel{eq:hj-45}
+\newlabel{eq:hj-64}{{19.41}{311}{An inverse system of current Lie algebras}{equation.806}{}}
+\MT@newlabel{eq:hj-60}
+\MT@newlabel{eq:hj-61}
+\MT@newlabel{eq:hj-62}
+\newlabel{eq:hj-65}{{19.11}{311}{An inverse system of current Lie algebras}{equation.806}{}}
+\MT@newlabel{eq:hj-64}
+\newlabel{eq:hj-66}{{19.11}{311}{An inverse system of current Lie algebras}{equation.806}{}}
+\newlabel{eq:hj-67}{{19.42}{311}{An inverse system of current Lie algebras}{equation.807}{}}
+\MT@newlabel{eq:hj-64}
+\MT@newlabel{eq:hj-67}
+\newlabel{eq:hj-68}{{19.43}{311}{An inverse system of current Lie algebras}{equation.808}{}}
+\MT@newlabel{eq:hj-57}
+\@writefile{toc}{\contentsline {section}{\numberline {19.12}Products of currents and the BV operator}{311}{section.809}\protected@file@percent }
+\newlabel{sec:hj-bv-products}{{19.12}{311}{Products of currents and the BV operator}{section.809}{}}
+\BKM@entry{id=199,open,dest={73656374696F6E2E383132},srcline={77}}{31392E31335C3034305468655C303430616C67656272615C30343067656E6572617465645C30343062795C30343061637475616C5C30343063757272656E745C3034306B65726E656C73}
+\newlabel{eq:hj-bv-bracket}{{19.44}{312}{Products of currents and the BV operator}{equation.810}{}}
+\newlabel{eq:hj-bv-pair}{{19.45}{312}{Products of currents and the BV operator}{equation.811}{}}
+\MT@newlabel{eq:hj-bv-bracket}
+\newlabel{eq:hj-bv-triple}{{19.12}{312}{Products of currents and the BV operator}{equation.811}{}}
+\newlabel{eq:hj-bv-triple-square}{{19.12}{312}{Products of currents and the BV operator}{equation.811}{}}
+\newlabel{eq:hj-bv-coordinate}{{19.12}{312}{Products of currents and the BV operator}{equation.811}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.13}The algebra generated by actual current kernels}{312}{section.812}\protected@file@percent }
+\newlabel{sec:hj-bv-algebra}{{19.13}{312}{The algebra generated by actual current kernels}{section.812}{}}
+\newlabel{eq:hj-bv-current-space}{{19.13}{312}{The algebra generated by actual current kernels}{section.812}{}}
+\newlabel{eq:hj-bv-current-closure}{{19.46}{313}{The algebra generated by actual current kernels}{equation.813}{}}
+\MT@newlabel{eq:hj-59}
+\newlabel{eq:hj-bv-image}{{19.13}{313}{The algebra generated by actual current kernels}{equation.813}{}}
+\newlabel{eq:hj-bv-relations}{{19.13}{313}{The algebra generated by actual current kernels}{equation.813}{}}
+\newlabel{eq:hj-bv-factor-grading}{{19.47}{313}{The algebra generated by actual current kernels}{equation.814}{}}
+\MT@newlabel{eq:hj-bv-factor-grading}
+\MT@newlabel{eq:hj-bv-bracket}
+\@writefile{loe}{\contentsline {theorem}{\ifthmt@listswap Theorem~19.13.1\else \numberline {19.13.1}Theorem\fi }{313}{theorem.816}\protected@file@percent }
+\newlabel{thm:hj-bv-finite}{{19.13.1}{313}{}{theorem.816}{}}
+\MT@newlabel{eq:hj-bv-current-closure}
+\newlabel{eq:hj-bv-bracket-grading}{{19.13}{313}{The algebra generated by actual current kernels}{theorem.816}{}}
+\BKM@entry{id=200,open,dest={73656374696F6E2E383138},srcline={225}}{31392E31345C3034305768795C3034307265737472696374696F6E5C3034307072657365727665735C30343074686573655C30343070726F6475637473}
+\newlabel{eq:hj-bv-pair-sign}{{19.13}{314}{The algebra generated by actual current kernels}{theorem.816}{}}
+\newlabel{eq:hj-bv-all-products}{{19.48}{314}{The algebra generated by actual current kernels}{equation.817}{}}
+\MT@newlabel{eq:hj-bv-pair}
+\MT@newlabel{eq:hj-bv-bracket}
+\MT@newlabel{eq:hj-bv-current-closure}
+\newlabel{eq:hj-bv-lowering}{{19.13}{314}{The algebra generated by actual current kernels}{equation.817}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.14}Why restriction preserves these products}{314}{section.818}\protected@file@percent }
+\newlabel{sec:hj-bv-restriction}{{19.14}{314}{Why restriction preserves these products}{section.818}{}}
+\newlabel{eq:hj-bv-algebra-restriction}{{19.49}{314}{Why restriction preserves these products}{equation.819}{}}
+\MT@newlabel{eq:hj-57}
+\MT@newlabel{eq:hj-61}
+\MT@newlabel{eq:hj-bv-current-closure}
+\BKM@entry{id=201,open,dest={73656374696F6E2E383232},srcline={297}}{31392E31355C303430415C3034306E6F6E7A65726F5C303430636F6E7472616374696F6E5C3034306F665C30343061637475616C5C30343063757272656E745C30343070726F6475637473}
+\@writefile{loe}{\contentsline {proposition}{\ifthmt@listswap Proposition~19.14.1\else \numberline {19.14.1}Proposition\fi }{315}{proposition.821}\protected@file@percent }
+\newlabel{prop:hj-bv-restriction}{{19.14.1}{315}{}{proposition.821}{}}
+\MT@newlabel{eq:hj-bv-algebra-restriction}
+\MT@newlabel{eq:hj-bv-all-products}
+\newlabel{eq:hj-bv-delta-restriction}{{19.14}{315}{Why restriction preserves these products}{proposition.821}{}}
+\newlabel{eq:hj-bv-hbar}{{19.14}{315}{Why restriction preserves these products}{proposition.821}{}}
+\newlabel{eq:hj-bv-formal-restriction}{{19.14}{315}{Why restriction preserves these products}{proposition.821}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.15}A nonzero contraction of actual current products}{315}{section.822}\protected@file@percent }
+\newlabel{sec:hj-bv-nonzero-product}{{19.15}{315}{A nonzero contraction of actual current products}{section.822}{}}
+\newlabel{eq:hj-bv-quantum-product}{{19.15}{315}{A nonzero contraction of actual current products}{section.822}{}}
+\MT@newlabel{eq:hj-bv-bracket}
+\newlabel{eq:hj-bv-current-bracket}{{19.50}{315}{A nonzero contraction of actual current products}{equation.823}{}}
+\MT@newlabel{eq:hj-45}
+\BKM@entry{id=202,open,dest={73656374696F6E2E383235},srcline={369}}{31392E31365C3034305468655C303430616C676562726169635C30343042565C3034306C696D69745C303430616E645C3034306974735C303430646973747269627574696F6E5C303430746F706F6C6F6779}
+\newlabel{eq:hj-bv-positive-integral}{{19.15}{316}{A nonzero contraction of actual current products}{equation.823}{}}
+\MT@newlabel{eq:hj-bv-pair}
+\MT@newlabel{eq:hj-bv-current-bracket}
+\newlabel{eq:hj-bv-nonzero-product}{{19.51}{316}{A nonzero contraction of actual current products}{equation.824}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.16}The algebraic BV limit and its distribution topology}{316}{section.825}\protected@file@percent }
+\newlabel{sec:hj-bv-limit}{{19.16}{316}{The algebraic BV limit and its distribution topology}{section.825}{}}
+\newlabel{eq:hj-bv-limit}{{19.16}{316}{The algebraic BV limit and its distribution topology}{section.825}{}}
+\newlabel{eq:hj-bv-limit-operations}{{19.16}{316}{The algebraic BV limit and its distribution topology}{section.825}{}}
+\BKM@entry{id=203,open,dest={73656374696F6E2E383236},srcline={445}}{31392E31375C30343043757272656E745C3034306D6170735C303430696E746F5C3034307468655C30343042565C303430616C6765627261}
+\BKM@entry{id=204,open,dest={73656374696F6E2E383238},srcline={1188}}{31392E31385C303430436F6D70617469626C655C30343063757272656E74735C303430616E645C303430696E636F6D70617469626C655C303430747261636573}
+\newlabel{eq:hj-bv-seminorms}{{19.16}{317}{The algebraic BV limit and its distribution topology}{section.825}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.17}Current maps into the BV algebra}{317}{section.826}\protected@file@percent }
+\newlabel{sec:hj-bv-current-inclusion}{{19.17}{317}{Current maps into the BV algebra}{section.826}{}}
+\MT@newlabel{eq:hj-64}
+\newlabel{eq:hj-bv-current-map}{{19.52}{317}{Current maps into the BV algebra}{equation.827}{}}
+\MT@newlabel{eq:hj-67}
+\BKM@entry{id=205,open,dest={73656374696F6E2E383239},srcline={1225}}{31392E31395C3034305472616E736C6174696F6E735C303430616E645C30343067656F6D65747269635C3034306A65745C30343070726F6C6F6E676174696F6E}
+\@writefile{toc}{\contentsline {section}{\numberline {19.18}Compatible currents and incompatible traces}{318}{section.828}\protected@file@percent }
+\MT@newlabel{eq:hj-68}
+\MT@newlabel{eq:hj-bv-current-map}
+\newlabel{eq:hj-69}{{19.18}{318}{Compatible currents and incompatible traces}{section.828}{}}
+\MT@newlabel{eq:hj-19}
+\MT@newlabel{eq:hj-21}
+\MT@newlabel{eq:hj-bv-nonzero-product}
+\MT@newlabel{eq:hj-37}
+\@writefile{toc}{\contentsline {section}{\numberline {19.19}Translations and geometric jet prolongation}{318}{section.829}\protected@file@percent }
+\MT@newlabel{eq:hj-2}
+\newlabel{eq:hj-70}{{19.53}{319}{Translations and geometric jet prolongation}{equation.830}{}}
+\MT@newlabel{eq:hj-70}
+\newlabel{eq:hj-71}{{19.54}{319}{Translations and geometric jet prolongation}{equation.831}{}}
+\MT@newlabel{eq:hj-70}
+\MT@newlabel{eq:hj-71}
+\MT@newlabel{eq:hj-71}
+\MT@newlabel{eq:hj-70}
+\memsetcounter{lastsheet}{320}
+\memsetcounter{lastpage}{320}
+\gdef \@abspage@last{320}

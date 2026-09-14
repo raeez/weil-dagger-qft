@@ -1,0 +1,578 @@
+{
+  "native_source_sha256": "1212702973c5ff9c51bd23f8a4a186d3d4f76c3f3d3c6b57f39c3da42afb703d",
+  "new_source_sha256": "aa4e5a679475d0d82c37f75992bc2fef60447bd6d4f83b127f55860656ce66f3",
+  "native_proofs": [
+    {
+      "proof": 1,
+      "old_start_line": 142,
+      "old_end_line": 158,
+      "new_start_line": 209,
+      "new_end_line": 225,
+      "old_sha256": "170d70e373db0b3126799242a96915d157563d12dccf11e76c51173783377280",
+      "new_sha256": "170d70e373db0b3126799242a96915d157563d12dccf11e76c51173783377280",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 2,
+      "old_start_line": 179,
+      "old_end_line": 200,
+      "new_start_line": 247,
+      "new_end_line": 268,
+      "old_sha256": "bb0b429a4cd03cdffaed77c592e77d10a27ef0e7cb72b9147ade698cbfdf942f",
+      "new_sha256": "bb0b429a4cd03cdffaed77c592e77d10a27ef0e7cb72b9147ade698cbfdf942f",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 3,
+      "old_start_line": 222,
+      "old_end_line": 247,
+      "new_start_line": 291,
+      "new_end_line": 316,
+      "old_sha256": "53f80b03de9be9fe9beda9d1160690a91ecf1442d6cee36562df2c7a15793de7",
+      "new_sha256": "53f80b03de9be9fe9beda9d1160690a91ecf1442d6cee36562df2c7a15793de7",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 4,
+      "old_start_line": 267,
+      "old_end_line": 286,
+      "new_start_line": 337,
+      "new_end_line": 356,
+      "old_sha256": "47267f72582df96507c0e7c6364d444e06d009e71b159cd21b53c17abb45b65b",
+      "new_sha256": "47267f72582df96507c0e7c6364d444e06d009e71b159cd21b53c17abb45b65b",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 5,
+      "old_start_line": 309,
+      "old_end_line": 336,
+      "new_start_line": 380,
+      "new_end_line": 407,
+      "old_sha256": "abdbfd37a690a51f9ac263d1e2437f4f440259714cfae58132c2783137dd4c26",
+      "new_sha256": "abdbfd37a690a51f9ac263d1e2437f4f440259714cfae58132c2783137dd4c26",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 6,
+      "old_start_line": 371,
+      "old_end_line": 389,
+      "new_start_line": 444,
+      "new_end_line": 462,
+      "old_sha256": "0d9129d02dc83ad0934a1bf8df218adc6c2896970f1ddd4a440ae8c51229aae7",
+      "new_sha256": "0d9129d02dc83ad0934a1bf8df218adc6c2896970f1ddd4a440ae8c51229aae7",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 7,
+      "old_start_line": 410,
+      "old_end_line": 432,
+      "new_start_line": 484,
+      "new_end_line": 506,
+      "old_sha256": "097b3dc4eaeceabd3c0369a153b8a5d79fc97e241bab68a421bf94848b308460",
+      "new_sha256": "097b3dc4eaeceabd3c0369a153b8a5d79fc97e241bab68a421bf94848b308460",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 8,
+      "old_start_line": 464,
+      "old_end_line": 507,
+      "new_start_line": 539,
+      "new_end_line": 582,
+      "old_sha256": "fb95051674d40c705f7338b99103b362aed3bf8b186a9e966de09864f4687b13",
+      "new_sha256": "fb95051674d40c705f7338b99103b362aed3bf8b186a9e966de09864f4687b13",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 9,
+      "old_start_line": 538,
+      "old_end_line": 555,
+      "new_start_line": 614,
+      "new_end_line": 631,
+      "old_sha256": "0b1d3cf55a023c529d1edbc38f04f5c20b92c6d14cf30f41d01cbcdb23d9e895",
+      "new_sha256": "0b1d3cf55a023c529d1edbc38f04f5c20b92c6d14cf30f41d01cbcdb23d9e895",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 10,
+      "old_start_line": 568,
+      "old_end_line": 597,
+      "new_start_line": 645,
+      "new_end_line": 674,
+      "old_sha256": "1aafbfab393adef242333c2add20d784e6b39d17694ea4a176ec55c3c7f36c3c",
+      "new_sha256": "1aafbfab393adef242333c2add20d784e6b39d17694ea4a176ec55c3c7f36c3c",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 11,
+      "old_start_line": 626,
+      "old_end_line": 659,
+      "new_start_line": 704,
+      "new_end_line": 737,
+      "old_sha256": "33052e68ad9a51b7d01f3fa712180f0c065c37f49fdb9c0f3a0f9faa97a11b8c",
+      "new_sha256": "33052e68ad9a51b7d01f3fa712180f0c065c37f49fdb9c0f3a0f9faa97a11b8c",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 12,
+      "old_start_line": 683,
+      "old_end_line": 702,
+      "new_start_line": 762,
+      "new_end_line": 781,
+      "old_sha256": "9cfe5683640ed60ce0bafc104a18c33f7fd6825a3798e2188f9150e99dc08b35",
+      "new_sha256": "9cfe5683640ed60ce0bafc104a18c33f7fd6825a3798e2188f9150e99dc08b35",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 13,
+      "old_start_line": 713,
+      "old_end_line": 744,
+      "new_start_line": 793,
+      "new_end_line": 824,
+      "old_sha256": "c5ddcf9235c6382a6a4816497b7bf7bbfb8d72ade7a7869a5f7d732b07e5413c",
+      "new_sha256": "c5ddcf9235c6382a6a4816497b7bf7bbfb8d72ade7a7869a5f7d732b07e5413c",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 14,
+      "old_start_line": 768,
+      "old_end_line": 845,
+      "new_start_line": 849,
+      "new_end_line": 926,
+      "old_sha256": "5505956008044108970e48a62ee61f4f67b09b700d3b727004d3c8609f1ba4bf",
+      "new_sha256": "5505956008044108970e48a62ee61f4f67b09b700d3b727004d3c8609f1ba4bf",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 15,
+      "old_start_line": 883,
+      "old_end_line": 890,
+      "new_start_line": 965,
+      "new_end_line": 972,
+      "old_sha256": "fc9a840377a6a6d45c361d07e2109e7ddcf8921bb495454595eca16952fcc3fa",
+      "new_sha256": "fc9a840377a6a6d45c361d07e2109e7ddcf8921bb495454595eca16952fcc3fa",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 16,
+      "old_start_line": 922,
+      "old_end_line": 964,
+      "new_start_line": 1005,
+      "new_end_line": 1047,
+      "old_sha256": "2ee6b4124d1c8f96aa832528ffb7b0b9a02b239b4410d8d5f46774662fbcea00",
+      "new_sha256": "2ee6b4124d1c8f96aa832528ffb7b0b9a02b239b4410d8d5f46774662fbcea00",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 17,
+      "old_start_line": 985,
+      "old_end_line": 1061,
+      "new_start_line": 1069,
+      "new_end_line": 1145,
+      "old_sha256": "e1448fafbffe01660a09cca8c8183a2636279c6ab51e8ba341bc117f1abcc9d3",
+      "new_sha256": "e7627944d263a76f8015c7663f76e0cd6476bc234098f55fa17e48716d774807",
+      "byte_identical": false,
+      "sole_normalization": "legacy von Mangoldt subscript rm vM to mathrm{vM}"
+    },
+    {
+      "proof": 18,
+      "old_start_line": 1112,
+      "old_end_line": 1130,
+      "new_start_line": 1197,
+      "new_end_line": 1215,
+      "old_sha256": "d7163f68d281e49e2b78454180f147331288cc9be71be00a4597735f847e46e8",
+      "new_sha256": "d7163f68d281e49e2b78454180f147331288cc9be71be00a4597735f847e46e8",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 19,
+      "old_start_line": 1172,
+      "old_end_line": 1225,
+      "new_start_line": 1259,
+      "new_end_line": 1312,
+      "old_sha256": "66898d951acc152aa61f150c19842487eddeaa34dd0c79165bb2f1628f21d668",
+      "new_sha256": "66898d951acc152aa61f150c19842487eddeaa34dd0c79165bb2f1628f21d668",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 20,
+      "old_start_line": 1429,
+      "old_end_line": 1449,
+      "new_start_line": 1517,
+      "new_end_line": 1537,
+      "old_sha256": "f73c55b12960c24581ee6d2a823f2611638905b30df1a0e571d899ac5e61945c",
+      "new_sha256": "f73c55b12960c24581ee6d2a823f2611638905b30df1a0e571d899ac5e61945c",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 21,
+      "old_start_line": 1632,
+      "old_end_line": 1677,
+      "new_start_line": 1723,
+      "new_end_line": 1768,
+      "old_sha256": "46679f1196af3f41ce74fa365f44570fb5338e3e5ebe56c8b3d2e5536b71ed3b",
+      "new_sha256": "46679f1196af3f41ce74fa365f44570fb5338e3e5ebe56c8b3d2e5536b71ed3b",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 22,
+      "old_start_line": 1712,
+      "old_end_line": 1745,
+      "new_start_line": 1804,
+      "new_end_line": 1837,
+      "old_sha256": "a8e482254e790ee29eb4ec0e6644b7eb37ec30bee973e027caa920ab81026c03",
+      "new_sha256": "a8e482254e790ee29eb4ec0e6644b7eb37ec30bee973e027caa920ab81026c03",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 23,
+      "old_start_line": 1776,
+      "old_end_line": 1843,
+      "new_start_line": 1869,
+      "new_end_line": 1936,
+      "old_sha256": "6b3034c3d508dd4ca2b6c730ccd50aeddcad3fed5a7fcb5cbe0aa151ae57a282",
+      "new_sha256": "6b3034c3d508dd4ca2b6c730ccd50aeddcad3fed5a7fcb5cbe0aa151ae57a282",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 24,
+      "old_start_line": 1857,
+      "old_end_line": 1890,
+      "new_start_line": 1951,
+      "new_end_line": 1984,
+      "old_sha256": "132186ba4339ba0abb40311dca57b7f7175a06dadf9a82fc14f19587620c2edc",
+      "new_sha256": "132186ba4339ba0abb40311dca57b7f7175a06dadf9a82fc14f19587620c2edc",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 25,
+      "old_start_line": 1899,
+      "old_end_line": 1920,
+      "new_start_line": 1994,
+      "new_end_line": 2015,
+      "old_sha256": "de200d78d7326e263540d4906e07aefae3122df9e4567db51688d152ea1aff09",
+      "new_sha256": "de200d78d7326e263540d4906e07aefae3122df9e4567db51688d152ea1aff09",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 26,
+      "old_start_line": 1970,
+      "old_end_line": 1990,
+      "new_start_line": 2066,
+      "new_end_line": 2086,
+      "old_sha256": "93c61303e567e14fc473249b56ad7a04b00dfa2f83301aa7acc891f3be926eda",
+      "new_sha256": "93c61303e567e14fc473249b56ad7a04b00dfa2f83301aa7acc891f3be926eda",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 27,
+      "old_start_line": 2022,
+      "old_end_line": 2033,
+      "new_start_line": 2119,
+      "new_end_line": 2130,
+      "old_sha256": "2ae586600d8ea0d8198b7f0cbac75fef5487c5293072ddc44f6fd884c7d37ecb",
+      "new_sha256": "2ae586600d8ea0d8198b7f0cbac75fef5487c5293072ddc44f6fd884c7d37ecb",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 28,
+      "old_start_line": 2135,
+      "old_end_line": 2192,
+      "new_start_line": 2234,
+      "new_end_line": 2291,
+      "old_sha256": "6b7eb93b81689b833dc56bb6734bb1a1e34d0232e8bf7dda38ed472f806146a3",
+      "new_sha256": "6b7eb93b81689b833dc56bb6734bb1a1e34d0232e8bf7dda38ed472f806146a3",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 29,
+      "old_start_line": 2231,
+      "old_end_line": 2252,
+      "new_start_line": 2332,
+      "new_end_line": 2353,
+      "old_sha256": "ed38040c24f3e969635567b6bbf1a760c9cf8efe1f2cda6695848cd66f778801",
+      "new_sha256": "ed38040c24f3e969635567b6bbf1a760c9cf8efe1f2cda6695848cd66f778801",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 30,
+      "old_start_line": 2287,
+      "old_end_line": 2330,
+      "new_start_line": 2389,
+      "new_end_line": 2432,
+      "old_sha256": "3ad3bd5c31e9d752dff2e5ba1967692fb171e548c480f660f6ce04037351a961",
+      "new_sha256": "3ad3bd5c31e9d752dff2e5ba1967692fb171e548c480f660f6ce04037351a961",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 31,
+      "old_start_line": 2344,
+      "old_end_line": 2374,
+      "new_start_line": 2447,
+      "new_end_line": 2477,
+      "old_sha256": "82ef635c1993671486caa827ef4bfc25f4e0688f5681f4c0a73f123b0ac69f2c",
+      "new_sha256": "82ef635c1993671486caa827ef4bfc25f4e0688f5681f4c0a73f123b0ac69f2c",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 32,
+      "old_start_line": 2399,
+      "old_end_line": 2411,
+      "new_start_line": 2503,
+      "new_end_line": 2515,
+      "old_sha256": "9aab3f90a990546b6c5865254d0843da07983abe6a33d7fdce28070ea8beb957",
+      "new_sha256": "9aab3f90a990546b6c5865254d0843da07983abe6a33d7fdce28070ea8beb957",
+      "byte_identical": true,
+      "sole_normalization": null
+    },
+    {
+      "proof": 33,
+      "old_start_line": 2499,
+      "old_end_line": 2502,
+      "new_start_line": 2604,
+      "new_end_line": 2607,
+      "old_sha256": "cf7fbcd14fdcc2490155b19654caa287e532b222292b1d139e03805990f785fc",
+      "new_sha256": "cf7fbcd14fdcc2490155b19654caa287e532b222292b1d139e03805990f785fc",
+      "byte_identical": true,
+      "sole_normalization": null
+    }
+  ],
+  "new_proofs": [
+    {
+      "start_line": 2705,
+      "end_line": 2743,
+      "sha256": "da1f31cd2704b33a6c943e115ae635f995160ff361e6685e8d50d3aab12b0de3"
+    },
+    {
+      "start_line": 2782,
+      "end_line": 2795,
+      "sha256": "8520e9db9dcbfb227023aa835cc3d26e8bd909b04411665d17dec11d3c1d683e"
+    },
+    {
+      "start_line": 2850,
+      "end_line": 2883,
+      "sha256": "3d64c8d372c89328b182c4d4647310cb95939744645cf0ed2ea28b5b3c81d1bb"
+    },
+    {
+      "start_line": 2949,
+      "end_line": 2967,
+      "sha256": "096c56ca9045d188a3789f70b70a65d859ef4dfe346df36bf9e8f04ac7ad9db7"
+    }
+  ],
+  "core_sources": [
+    {
+      "path": "manuscript/all-arity-current-actions.tex",
+      "baseline_sha256": "8e39887547c6420d3bd5bff9ef988e6ec86b7eab6aa19bee2070a759304f1701",
+      "new_sha256": "8e39887547c6420d3bd5bff9ef988e6ec86b7eab6aa19bee2070a759304f1701",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 3
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "baseline_sha256": "896ea92682e4056d08773850396e5a6fba53d66c9df666519b6ba399c43b68b8",
+      "new_sha256": "896ea92682e4056d08773850396e5a6fba53d66c9df666519b6ba399c43b68b8",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 6
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "baseline_sha256": "b245f5199101de1d8ece53ef9aa823432743aff99b17dd2e55b2589fe604f399",
+      "new_sha256": "b245f5199101de1d8ece53ef9aa823432743aff99b17dd2e55b2589fe604f399",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 15
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "baseline_sha256": "ae96e7412e00dcc072313c614af0b43137fab6ad682d646639102607aee1a016",
+      "new_sha256": "ae96e7412e00dcc072313c614af0b43137fab6ad682d646639102607aee1a016",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 6
+    },
+    {
+      "path": "manuscript/current-products-and-bv.tex",
+      "baseline_sha256": "aa4ce0d63aa328f9b03f2bc23344c3e4d2a6c3a36dd683106903566a286a51f6",
+      "new_sha256": "aa4ce0d63aa328f9b03f2bc23344c3e4d2a6c3a36dd683106903566a286a51f6",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 2
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "baseline_sha256": "790633515ca6b075d05da10f27f1f088e691a771823ccaee2a4ddba6efdcf6a6",
+      "new_sha256": "790633515ca6b075d05da10f27f1f088e691a771823ccaee2a4ddba6efdcf6a6",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 6
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "baseline_sha256": "6a237e381bf91acc7db1e65b4cffd142876f6edd6fdf577aa47e00b406b52754",
+      "new_sha256": "6a237e381bf91acc7db1e65b4cffd142876f6edd6fdf577aa47e00b406b52754",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 5
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "baseline_sha256": "816822cac9678fa272c1da948f1d0c1fc246ead750667be679a912ce66f70b0e",
+      "new_sha256": "816822cac9678fa272c1da948f1d0c1fc246ead750667be679a912ce66f70b0e",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 5
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "baseline_sha256": "9089174ac872f38354fb8115846ee4ac0651c6126e6165dff628c0882111b369",
+      "new_sha256": "9089174ac872f38354fb8115846ee4ac0651c6126e6165dff628c0882111b369",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 9
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "baseline_sha256": "ef13514036f14ca6eca3390bb87903e5a5afdd4e03f310e18208f9718ce239e5",
+      "new_sha256": "ef13514036f14ca6eca3390bb87903e5a5afdd4e03f310e18208f9718ce239e5",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 9
+    },
+    {
+      "path": "manuscript/merging-ordered-insertions.tex",
+      "baseline_sha256": "56f175689fe5faa04806707411c52c7e568ceec44d8908a64868c868b7c1cf6d",
+      "new_sha256": "56f175689fe5faa04806707411c52c7e568ceec44d8908a64868c868b7c1cf6d",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 1
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "baseline_sha256": "815c3f0994a74028cd81fc4aba0b8d2d9a238ad2fc0ffdfddffb04660148ad3d",
+      "new_sha256": "fa6a407cafddd9a6d7a144bf9c6e50eb677642b1dffc7e39ec3b24824d96fc77",
+      "byte_identical": false,
+      "all_prior_proofs_exact": true,
+      "proof_count": 6
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "baseline_sha256": "bd59cfa02aa5210f84cb042ece43e127bc98f3151f5f5b10445dfd82a1371bc0",
+      "new_sha256": "bd59cfa02aa5210f84cb042ece43e127bc98f3151f5f5b10445dfd82a1371bc0",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 5
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "baseline_sha256": "d166dc5b88d349294490754c4f85b2d84854b7799ee8c90f7d464b793bb7bda2",
+      "new_sha256": "d166dc5b88d349294490754c4f85b2d84854b7799ee8c90f7d464b793bb7bda2",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 7
+    },
+    {
+      "path": "manuscript/preface.tex",
+      "baseline_sha256": "9bba8f6515003a16f2921f80bb09132e78aa5030f53a14cbe8c469df44608c50",
+      "new_sha256": "9bba8f6515003a16f2921f80bb09132e78aa5030f53a14cbe8c469df44608c50",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 0
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "baseline_sha256": "98eeafbd8baf932f8dec027b5e509f86df4523bf3da3f6425988fd46421fb5b3",
+      "new_sha256": "98eeafbd8baf932f8dec027b5e509f86df4523bf3da3f6425988fd46421fb5b3",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 8
+    },
+    {
+      "path": "manuscript/programme.tex",
+      "baseline_sha256": "9e3f4b08e510c96fed7b2c9028b7d716d0256d642fa52de865db98eb4ff009b5",
+      "new_sha256": "0763644b6e9e7a122704f92617c5d609f0a6d9ee24b2ac2488e8932dcb794ab8",
+      "byte_identical": false,
+      "all_prior_proofs_exact": true,
+      "proof_count": 0
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "baseline_sha256": "1688504de580b2934d0b9148f0e3961d0ee4e2267afb4aaf2df61b2954d0bdc8",
+      "new_sha256": "1688504de580b2934d0b9148f0e3961d0ee4e2267afb4aaf2df61b2954d0bdc8",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 4
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "baseline_sha256": "6c335d080746254600ecd1b0c01ea7ddf68f353b13b18080d66eaf4c4c5875e6",
+      "new_sha256": "6c335d080746254600ecd1b0c01ea7ddf68f353b13b18080d66eaf4c4c5875e6",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 11
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "baseline_sha256": "bf8566164dae6f169aba9acc1b447d6669d4660862c630d73fc042ee1a6889f4",
+      "new_sha256": "bf8566164dae6f169aba9acc1b447d6669d4660862c630d73fc042ee1a6889f4",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 23
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "baseline_sha256": "88f38df2cd933bce98f4dd34230ba6789ce33834693f9ff519b9e9dedafbe498",
+      "new_sha256": "88f38df2cd933bce98f4dd34230ba6789ce33834693f9ff519b9e9dedafbe498",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 6
+    },
+    {
+      "path": "manuscript/two-dimensional-free-fields.tex",
+      "baseline_sha256": "84600a19c1ed5b2ab234747dc48bf0ab82e4e8270524a40be70fcb4d4173ff98",
+      "new_sha256": "84600a19c1ed5b2ab234747dc48bf0ab82e4e8270524a40be70fcb4d4173ff98",
+      "byte_identical": true,
+      "all_prior_proofs_exact": true,
+      "proof_count": 1
+    }
+  ],
+  "all_core_proofs_exact": 138,
+  "native_transport": {
+    "all33_retained": true,
+    "byte_identical": 32,
+    "notation_only_migration": 1,
+    "all_focused_boundary_proofs_exact": true,
+    "legacy_font_occurrences": 8,
+    "heading_space_commands": 39
+  }
+}

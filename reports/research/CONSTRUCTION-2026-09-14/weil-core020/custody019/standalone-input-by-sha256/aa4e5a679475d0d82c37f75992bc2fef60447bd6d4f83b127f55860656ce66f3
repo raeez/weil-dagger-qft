@@ -1,0 +1,3003 @@
+\chapter{Arithmetic forms and operator domains}
+\label{chap:weil-operator-domains}
+\begingroup
+\noeqref{eq:test-class,
+eq:operations,
+eq:centered-mellin,
+eq:target,
+eq:strip-decay,
+eq:gaussian,
+eq:inverse,
+eq:star-transform,
+eq:euler,
+eq:gamma-product,
+eq:reciprocal-growth,
+eq:digamma,
+eq:gamma-real,
+eq:theta-reflection,
+eq:theta-mellin,
+eq:entire-completion,
+eq:entire-growth,
+eq:boundary-pole,
+eq:boundary-product,
+eq:strict-strip,
+eq:log-reflection,
+eq:horizontal-H,
+eq:functional,
+eq:spine-contour,
+eq:prime-inversion,
+eq:gaussian-explicit,
+eq:gaussian-inverse,
+eq:polynomial-transform,
+eq:gaussian-strip,
+eq:positivity,
+eq:negative-pair,
+eq:separator-tail,
+eq:conv,
+eq:transform,
+eq:fourier,
+eq:square-transform,
+eq:gamma-normalization,
+eq:mellin,
+eq:weil-functional,
+eq:explicit,
+eq:hermitian,
+eq:weil-criterion,
+eq:zero-norm,
+eq:gns-action,
+eq:adjoint-inclusion,
+eq:multiplier-bound,
+eq:all-moments,
+eq:common-domain,
+eq:closed-products,
+eq:graph-control,
+eq:pullback,
+eq:gns-map,
+eq:completion-map,
+eq:algebraic-intertwining,
+eq:cstar-bounds,
+eq:bounded-intertwining,
+eq:graph-transfer,
+eq:ambient-transfer,
+eq:unit-extension,
+eq:unit-criterion,
+eq:minimal-mass,
+eq:approx-vector,
+eq:cyclic-vector,
+eq:hilbert-bound,
+eq:gaussian-semigroup,
+eq:weil-gaussian-asymptotic,
+eq:weil-unitization-divergence,
+eq:prime-gaussian-bound,
+eq:gaussian-gram-limit,
+eq:limiting-gaussian-gram,
+eq:indefinite-negative,
+eq:factorization,
+eq:weil-gaussian-moments}
+\newcommand{\A}{\mathcal A}
+
+Closing an operator kernel to a scalar and giving states positive norms
+are separate requirements in a field theory.
+A cyclic trace controls an operator contraction.  An involution and a
+positive functional instead produce a Hilbert space and operators on a
+common domain.  Arithmetic supplies a concrete test of the second
+construction: can its prime, archimedean and polar terms define a positive
+pairing without prescribing the spectrum in advance?
+
+The arithmetic terms of the zeta explicit formula define a Hermitian
+pairing on a nonunital convolution algebra.  Gaussian reflection and a
+contour integral derive the full formula on this algebra.  A separate
+polynomial--Gaussian argument identifies its positivity with the Riemann
+hypothesis.  A local Gaussian calculation proves a further
+restriction: the full Weil functional admits no positive unitization of
+finite mass and no realization by a finite-norm vector on an invariant
+$*$-representation domain.  The same calculation gives positive Gaussian
+subspaces of every finite dimension at sufficiently small scales.
+We construct the common graph completion of
+nonunital GNS multipliers and prove its exact domain and transfer
+properties.  Closed quadratic forms for individual multipliers need not
+have invariant domains.  Their common domain over the whole algebra does.
+An independent positive arithmetic functional remains open, with its
+possible representation constrained by the Gaussian divergence.
+
+
+The decisive question is whether the arithmetic expression is a squared
+norm for a reason independent of the location of the zeros.
+Such a norm would construct a Hilbert space from test functions.
+It need not come from a distinguished vector representing the functional.
+The Gaussian calculation in Section~\ref{sec:weil-mass} excludes that
+stronger realization.  We first derive the arithmetic expression and its
+positivity criterion; then we construct the representation and its domain
+under a stated positivity hypothesis.
+
+\section{The arithmetic identity and its variables}
+
+The Dirichlet series $\sum_{n\geq1}n^{-s}$ has two useful descriptions.
+Prime factorization gives a product when $\operatorname{Re}s>1$.
+A Gaussian sum gives a continuation and a reflection in $s=1/2$.
+Taking a logarithmic derivative changes prime factors into weighted prime
+powers and changes zeros into simple poles.  A contour integral can then
+compare them.  The test function must control that contour before it can
+define an identity.
+
+All vector spaces are complex, and all real integrals use Lebesgue measure.
+The starting language is calculus, absolutely convergent integrals and
+series, and the complete fields $\R$ and $\C$.
+We use the usual limit rules for absolutely integrable functions: an
+integrable common bound permits passage through an integral.
+Every infinite sum and parameter integral below has an explicit such bound.
+The elementary complex-variable tools needed for the contour are recorded
+in Section~\ref{sec:complex}.
+
+For $a>0$, define
+\begin{equation}
+ \begin{aligned}
+ \A_a&=\left\{g\in C^\infty(\R):
+   p_{a,k}(g):=\int_{\R}e^{a|u|}|g^{(k)}(u)|\,du<\infty
+                     \text{ for every }k\geq0\right\},\\
+ \A&=\bigcup_{a>1/2}\A_a.
+ \end{aligned}
+ \label{eq:test-class}
+\end{equation}
+Here $C^\infty$ means that every real derivative exists and is continuous.
+The functions may be complex-valued and need not be even.
+Define convolution, involution, and Fourier transform by
+\begin{equation}
+ (f\star g)(u)=\int_{\R}f(v)g(u-v)\,dv,
+ \qquad g^*(u)=\overline{g(-u)},
+ \qquad \widehat g(z)=\int_{\R}g(u)e^{izu}\,du.
+ \label{eq:operations}
+\end{equation}
+The complex variable suited to the Dirichlet series is
+\begin{equation}
+ F_g(s)=\widehat g\bigl(-i(s-1/2)\bigr)
+       =\int_{\R}g(u)e^{(s-1/2)u}\,du
+       =\int_0^\infty g(\log x)x^{s-1/2}\,\frac{dx}{x}.
+ \label{eq:centered-mellin}
+\end{equation}
+The last equality is the change of variable $x=e^u$.
+In particular $F_g(1/2+it)=\widehat g(t)$.
+The half in this substitution determines the weights of all prime terms.
+
+Write $\Lambda_{\mathrm{vM}}(n)=\log p$ if $n=p^m$ with $p$ prime and $m\geq1$,
+and write $\Lambda_{\mathrm{vM}}(n)=0$ otherwise.
+The gamma function and the meromorphic continuation of $\zeta$ will be
+constructed below.  Put $\psi=\Gamma'/\Gamma$.
+The identity to be proved is
+\begin{equation}
+\begin{split}
+ \sum_\rho F_g(\rho)={}&F_g(0)+F_g(1)\\
+ &+\frac1{2\pi}\int_{\R}\widehat g(t)
+ \left[\operatorname{Re}\psi\left(\frac14+\frac{it}{2}\right)-\log\pi\right]dt\\
+ &-\sum_{n\geq2}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                      \bigl(g(\log n)+g(-\log n)\bigr).
+\end{split}
+\label{eq:target}
+\end{equation}
+Zeros $\rho$ are counted with multiplicity.  Their precise definition will
+exclude the canceled gamma poles and the poles at zero and one.
+Theorem~\ref{thm:explicit} proves \eqref{eq:target} for every $g\in\A$.
+The proof uses no positivity statement.
+
+\section{Elementary complex estimates}
+\label{sec:complex}
+
+A holomorphic function is a complex-differentiable function on an open set.
+The functions used below are locally given by convergent power series,
+or by uniformly convergent limits of such functions.
+A meromorphic function is locally a quotient of holomorphic functions.
+A zero or pole has order $m$ if its local expression contains a factor
+$(z-z_0)^m$ or $(z-z_0)^{-m}$ with nonzero remaining factor.
+The residue is the coefficient of $(z-z_0)^{-1}$.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Contour formulas]
+\label{lem:cauchy}
+Let a function be holomorphic on a neighborhood of a closed disc.
+For any interior point $z$,
+\[
+ h(z)=\frac1{2\pi i}\int_{|w-z_0|=R}\frac{h(w)}{w-z}\,dw,
+ \qquad
+ |h^{(k)}(z_0)|\leq \frac{k!}{R^k}\max_{|w-z_0|=R}|h(w)|.
+\]
+The contour has counterclockwise orientation.
+For a meromorphic function on a rectangle with no boundary poles, its
+boundary integral is $2\pi i$ times the sum of its interior residues.
+Locally uniform limits of holomorphic functions are holomorphic.
+\end{lemma}
+
+\begin{proof}
+For a continuously differentiable function, the real two-variable
+integration formula gives
+$\int_{\partial U}h(w)\,dw=2i\int_U\partial_{\bar w}h\,dx\,dy$.
+The right side vanishes for a holomorphic function.
+Apply this identity after removing a small disc around $z$ to
+$h(w)/(w-z)$.  On that small circle, write
+$h(w)=h(z)+O(|w-z|)$ and let its radius tend to zero.
+This gives the first formula.
+Expansion of $(w-z)^{-1}$ as a geometric series gives the derivative formula
+and the displayed estimate.  Removing small discs around all poles gives
+the residue statement by their Laurent expansions.
+For a locally uniform limit, pass to the limit in the circle formula.
+The resulting expression is differentiable in the interior point and gives
+its convergent power series.  These arguments also justify the formulas
+on discs and rectangles with finitely many small discs removed.
+\end{proof}
+
+The circle formula implies the identity theorem: a nonzero holomorphic
+function has isolated zeros, since its first nonzero Taylor coefficient
+factors out the entire order of a zero.  It also implies the maximum
+modulus principle.  If an interior modulus is maximal, equality in the
+circle average forces constant argument and modulus on a small circle.
+Its Taylor coefficients of positive degree then vanish, and the function
+is constant on the connected domain.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Logarithms and counting zeros]
+\label{lem:jensen}
+A zero-free holomorphic function on a disc has a holomorphic logarithm.
+If an entire function $h$ satisfies $h(0)\ne0$ and
+\[
+ \log\max_{|z|\leq R}|h(z)|\leq C R\log(R+2)\qquad(R\geq2),
+\]
+then the number $n_h(R)$ of its zeros in $|z|\leq R$, with multiplicity,
+satisfies $n_h(R)=O(R\log(R+2))$.
+\end{lemma}
+
+\begin{proof}
+For a zero-free function, the integral of $h'/h$ around any closed contour
+in the disc is zero by Lemma~\ref{lem:cauchy}.  Its path integral is thus a
+primitive $\ell$.  Differentiation shows that $e^{-\ell}h$ is constant.
+Choosing the additive constant gives $h=e^\ell$.
+
+Choose $r>R$ so that $h$ has no zero on $|z|=r$.
+Factor out its finitely many zeros $a_j$ inside that circle.
+The remaining nonzero factor has a logarithm whose real part has its value
+at zero equal to its circle average.
+For $|a|<r$, the power series of $\log(1-ae^{-i\theta}/r)$ gives
+the circle average $\log|re^{i\theta}-a|=\log r$.
+Subtracting the value at zero gives
+\[
+ \sum_{|a_j|<r}\log\frac r{|a_j|}
+ =\frac1{2\pi}\int_0^{2\pi}\log|h(re^{i\theta})|\,d\theta
+       -\log|h(0)|.
+\]
+Take $2R<r<2R+1$, avoiding the isolated radii of zeros.
+Each zero in $|z|\leq R$ contributes at least $\log2$.
+The asserted growth bound proves the count.
+\end{proof}
+
+The contour will need a logarithmic derivative estimate, not only a count.
+The next lemma supplies that extra information locally.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[A local logarithmic derivative bound]
+\label{lem:local-log}
+Let $h$ be holomorphic on a neighborhood of $|z|\leq R$, where
+$5\leq R\leq6$, and suppose $h(0)\ne0$ and $h$ has no boundary zero.
+Suppose
+\[
+ |h(z)|\leq e^M\quad(|z|\leq R),\qquad |h(0)|\geq e^{-M},\qquad M\geq1.
+\]
+If $h$ has $N$ zeros in the disc and $|z|\leq3$ is at distance at least
+$\delta>0$ from each zero, then
+\[
+ \left|\frac{h'(z)}{h(z)}\right|
+ \leq C M+N(\delta^{-1}+1/2),
+\]
+where $C$ is an absolute constant.
+\end{lemma}
+
+\begin{proof}
+For each zero $a$, including multiplicities, use the factor
+$b_a(z)=R(z-a)/(R^2-\bar a z)$.
+It has modulus one on $|z|=R$ and no denominator zero in the disc.
+Divide $h$ by their product and remove the canceled singularities.
+The quotient $v$ is holomorphic and zero-free.
+The maximum principle gives $|v|\leq e^M$.
+Since $|b_a(0)|<1$, also $|v(0)|\geq|h(0)|\geq e^{-M}$.
+Choose $\ell=\log v$ with $\ell(0)$ real after multiplying $v$ by a constant
+of modulus one.  The function $p=M+1-\ell$ has positive real part and
+$1\leq p(0)\leq2M+1$.
+
+The function $q=(p-p(0))/(p+p(0))$ maps the disc into the unit disc and
+vanishes at zero.  Applying the maximum principle to $q(z)/z$ on smaller
+circles and increasing their radii to $R$ gives $|q(z)|\leq|z|/R$.
+Hence $|p(z)|\leq9p(0)$ on $|z|\leq4$.
+The derivative estimate on radius-one circles about $|z|\leq3$ yields
+$|\ell'(z)|=|p'(z)|\leq9p(0)\leq27M$.
+Finally
+\[
+ \frac{h'}h=\ell'+\sum_a
+ \left(\frac1{z-a}+\frac{\bar a}{R^2-\bar a z}\right).
+\]
+For $|z|\leq3$, the second fraction has modulus at most $1/(R-3)\leq1/2$.
+The assumed distance bound controls the first.
+\end{proof}
+
+\Needspace{7\baselineskip}
+\section{The test algebra and Gaussian Fourier inversion}
+\label{sec:tests}
+
+\begin{lemma}[Decay, boundary values, and transforms]
+\label{lem:test-bounds}
+If $g\in\A_a$, then $e^{a|u|}g^{(k)}(u)\to0$ at both ends of $\R$,
+and $|g^{(k)}(u)|\leq C_k e^{-a|u|}$.
+The transform $\widehat g$ is holomorphic for $|\operatorname{Im}z|<a$.
+For every $0<b<a$ and every integer $N\geq0$,
+\begin{equation}
+ \sup_{|\operatorname{Im}z|\leq b}(1+|z|)^N|\widehat g(z)|<\infty.
+ \label{eq:strip-decay}
+\end{equation}
+Equivalently, $F_g$ is holomorphic for $1/2-a<\operatorname{Re}s<1/2+a$
+and decreases faster than any inverse power of $|\operatorname{Im}s|$
+on every smaller closed vertical strip.
+\end{lemma}
+
+\begin{proof}
+On $u\geq0$, the function $h(u)=e^{au}g^{(k)}(u)$ and its derivative
+$e^{au}(ag^{(k)}+g^{(k+1)})$ are integrable.
+The integral of the derivative makes $h$ have a finite limit at infinity.
+Integrability of $h$ forces that limit to be zero.
+Moreover $|h(u)|\leq\int_u^\infty|h'(v)|\,dv$.
+The negative half-line has the same proof after reflection.
+
+For $b<a$, the functions $|u|^m e^{b|u|}|g(u)|$ are integrable for every
+$m$, because $|u|^m e^{-(a-b)|u|}$ is bounded.
+These bounds permit termwise complex differentiation of the integral.
+Repeated integration by parts has zero boundary terms by the first assertion
+and gives
+\[
+ (-iz)^N\widehat g(z)=\int_{\R}g^{(N)}(u)e^{izu}\,du.
+\]
+Its right side is bounded on $|\operatorname{Im}z|\leq b$.
+Combining this with the bound for $N=0$ proves \eqref{eq:strip-decay}.
+Substitution in \eqref{eq:centered-mellin} proves the last assertion.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{lemma}[The normalized Gaussian]
+\label{lem:gaussian}
+For $A>0$, put
+\[
+ g_A(u)=(4\pi A)^{-1/2}e^{-u^2/(4A)}.
+\]
+Then $g_A\in\A_a$ for every $a>0$, and
+\begin{equation}
+ \widehat g_A(z)=e^{-Az^2},\qquad
+ g_A\star g_B=g_{A+B},\qquad \int_{\R}g_A(u)\,du=1.
+ \label{eq:gaussian}
+\end{equation}
+For $g\in\A$ one has the inverse formula
+\begin{equation}
+ g(u)=\frac1{2\pi}\int_{\R}\widehat g(t)e^{-itu}\,dt.
+ \label{eq:inverse}
+\end{equation}
+The same inverse formula holds for a smooth function $g$ with
+$g,g',g''\in L^1(\R)$.
+\end{lemma}
+
+\begin{proof}
+Squaring $\int e^{-x^2}\,dx$ and using polar coordinates gives its value
+$\sqrt\pi$.  Scaling proves the mass assertion.
+Every derivative of $g_A$ is a polynomial times this Gaussian, proving
+membership and vanishing of every exponential-weighted boundary value.
+For real $t$, differentiate $J(t)=\widehat g_A(t)$ under the integral.
+Since $u g_A=-2A g_A'$, integration by parts gives
+$J'(t)=-2AtJ(t)$.  The initial value $J(0)=1$ gives $J(t)=e^{-At^2}$.
+Both sides are entire, so the identity theorem extends the formula to $z\in\C$.
+Completing the square in the convolution integral gives $g_{A+B}$.
+
+For inversion, insert the factor $e^{-At^2}$ on the right of
+\eqref{eq:inverse}.  Absolute integrability permits reversing the integrals.
+The Gaussian transform just proved gives
+\[
+ \frac1{2\pi}\int_{\R}e^{-At^2}\widehat g(t)e^{-itu}\,dt
+       =(g_A\star g)(u).
+\]
+The left side tends to the proposed inverse by \eqref{eq:strip-decay}.
+On the right, continuity of $g$ controls $|v|<\eta$ in the convolution
+difference, and the Gaussian mass outside $|v|<\eta$ tends to zero.
+Boundedness of $g$ controls that tail.  Thus $(g_A\star g)(u)\to g(u)$.
+For the stated larger class, integrability of $g,g',g''$ makes $g,g'$
+bounded with zero limits at infinity, by the half-line argument of
+Lemma~\ref{lem:test-bounds} with zero weight.
+Two integrations by parts give an integrable bound for $\widehat g$.
+The same proof then applies.
+\end{proof}
+
+The parameter $A$ is also a heat parameter.  Direct differentiation gives
+\[
+ \partial_A g_A(u)=\left(-\frac1{2A}+\frac{u^2}{4A^2}\right)g_A(u)
+                  =\partial_u^2g_A(u).
+\]
+Thus convolution by $g_A$ solves heat evolution on the real line for the
+smooth integrable initial functions considered here.
+The factor $e^{-At^2}$ damps high Fourier frequencies, and
+$g_A\star g_B=g_{A+B}$ expresses addition of elapsed heat times.
+This supplies an explicit analytic regularization for the inverse transform
+and for the arithmetic identities below.
+
+A complex $*$-algebra is an associative complex algebra with a conjugate-linear
+map $a\mapsto a^*$ such that $(a^*)^*=a$ and $(ab)^*=b^*a^*$.
+For the $*$-algebras in this chapter, a unit is a nonzero element $1$
+with $1a=a1=a$ for every $a$;
+nonunital means that no such element is present.
+In particular, the zero algebra is nonunital under this convention.
+
+\Needspace{5\baselineskip}
+\begin{proposition}[Algebra and change of exponential convention]
+\label{prop:algebra}
+Each $\A_a$ for $a>0$, and also $\A$, is a commutative nonunital
+$*$-algebra under \eqref{eq:operations}, and
+\begin{equation}
+ \widehat{f\star g}(z)=\widehat f(z)\widehat g(z),\qquad
+ \widehat{f^*}(z)=\overline{\widehat f(\bar z)}.
+ \label{eq:star-transform}
+\end{equation}
+These equations hold on every common strip of holomorphy.
+The union in \eqref{eq:test-class} is unchanged if weighted $L^1$ bounds
+are replaced by weighted supremum bounds, with the exponential rate allowed
+to decrease strictly.
+\end{proposition}
+
+\begin{proof}
+For $a>0$ and $f,g\in\A_a$, use
+$e^{a|u|}\leq e^{a|v|}e^{a|u-v|}$ to obtain
+$p_{a,k}(f\star g)\leq p_{a,k}(f)p_{a,0}(g)$.
+If $f,g\in\A$, they admit a common $a>1/2$.
+Differentiation, reassociation, and exchange of factors are justified by
+these absolute integral bounds.  Reflection proves the involution rule,
+and reversing the absolutely convergent double integral proves the first
+transform equation.  The second follows from $u\mapsto-u$ and conjugation.
+If an identity $e$ existed in any one of these algebras, convolution with
+$g_A$ would imply $\widehat e(t)=1$, contradicting \eqref{eq:strip-decay}.
+
+Lemma~\ref{lem:test-bounds} changes weighted $L^1$ bounds into weighted
+supremum bounds at the same rate.  Conversely, if
+$|g^{(k)}(u)|\leq C_k e^{-a|u|}$, then for $1/2<b<a$,
+$p_{b,k}(g)\leq2C_k/(a-b)$.
+This proves the union equality without identifying its individual fixed-rate
+spaces or silently removing the loss in the rate.
+\end{proof}
+
+\section{Prime factors and the gamma factor}
+\label{sec:euler-gamma}
+
+For positive $x$ and complex $s$, write $x^s=\exp(s\log x)$ with the real
+logarithm of $x$.  This convention fixes every power used below.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[The convergent prime product]
+\label{lem:euler}
+The series $\zeta(s)=\sum_{n\geq1}n^{-s}$ defines a holomorphic nonzero
+function for $\operatorname{Re}s>1$.  In that half-plane,
+\begin{equation}
+ \zeta(s)=\prod_p(1-p^{-s})^{-1},\qquad
+ \frac{\zeta'}{\zeta}(s)=-\sum_{n\geq2}\Lambda_{\mathrm{vM}}(n)n^{-s}.
+ \label{eq:euler}
+\end{equation}
+Both the logarithmic series and its derivative converge absolutely on every
+smaller closed half-plane.  On $s=2+it$, $|\zeta(s)|\geq\zeta(2)^{-1}$.
+\end{lemma}
+
+\begin{proof}
+Existence and uniqueness of prime factorization follow by induction from
+the fact that a prime dividing a product divides a factor.  The latter
+follows from the integer Euclidean algorithm and its identity for the
+greatest common divisor.
+Expanding a finite prime product into geometric series therefore gives the
+sum over integers supported on those primes.
+For $\sigma>1$, the integral comparison
+$\sum n^{-\sigma}\leq1+\int_1^\infty x^{-\sigma}\,dx$ is finite.
+It bounds the omitted tails and proves the product identity.
+
+The series
+$\sum_p\sum_{m\geq1}p^{-ms}/m$ and its derivative are locally uniformly
+absolutely convergent: their absolute values are bounded by constants times
+$\sum_{n\geq2}(1+\log n)n^{-\sigma}$.
+Exponentiating that series gives the product, so the product is nonzero.
+Differentiation gives \eqref{eq:euler}.
+Finally
+\[
+ |\zeta(2+it)|^{-1}
+ \leq\prod_p(1+p^{-2})\leq\prod_p(1-p^{-2})^{-1}=\zeta(2).
+\]
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Gamma product and vertical bounds]
+\label{lem:gamma}
+For $\operatorname{Re}z>0$, the integral
+\[
+ \Gamma(z)=\int_0^\infty e^{-x}x^{z-1}\,dx
+\]
+is holomorphic and nonzero.  Its reciprocal extends to the entire function
+\begin{equation}
+ E(z)=\frac1{\Gamma(z)}
+ =z e^{\gamma z}\prod_{n\geq1}(1+z/n)e^{-z/n},
+ \label{eq:gamma-product}
+\end{equation}
+where $\gamma=\lim_{N\to\infty}(\sum_{n=1}^N1/n-\log N)$.
+Its zeros are simple and are exactly $0,-1,-2,\ldots$.
+For $R\geq2$,
+\begin{equation}
+ |E(z)|\leq\exp(CR\log(R+2))\quad(|z|\leq R).
+ \label{eq:reciprocal-growth}
+\end{equation}
+The logarithmic derivative satisfies
+\begin{equation}
+ \psi(z)=-\gamma+\sum_{n\geq0}
+           \left(\frac1{n+1}-\frac1{n+z}\right),
+ \qquad
+ \psi(\sigma+it)=O_{\alpha,\beta}(\log(2+|t|))
+ \label{eq:digamma}
+\end{equation}
+uniformly for $0<\alpha\leq\sigma\leq\beta$.
+\end{lemma}
+
+\begin{proof}
+The integral and its derivatives have integrable majorants on compact
+subsets of $\operatorname{Re}z>0$.
+Repeated real integration by parts gives
+\[
+ \int_0^1 x^{z-1}(1-x)^N\,dx
+       =\frac{N!}{z(z+1)\cdots(z+N)}.
+\]
+After multiplying by $N^z$ and substituting $u=Nx$, the integrand tends to
+$u^{z-1}e^{-u}$.  The inequality $(1-u/N)^N\leq e^{-u}$ for $0\leq u<N$
+is an integrable bound, also after any fixed number of $z$ derivatives
+on compact subsets.  Thus
+\[
+ \Gamma(z)=\lim_{N\to\infty}
+        \frac{N^zN!}{z(z+1)\cdots(z+N)}.
+\]
+The sequence $\sum_{n=1}^N1/n-\log N$ decreases and is bounded below
+by the comparison of $1/x$ with its left and right rectangle sums.
+Taking reciprocals of the finite expressions gives the finite products
+in \eqref{eq:gamma-product}.
+For $|w|\leq1/2$, the power series of the logarithm gives
+$|\log(1+w)-w|\leq C|w|^2$.
+Hence their tails converge uniformly on compact sets to a nonzero factor.
+The finite initial factors identify the zeros and their orders.
+Multiplication of the two limits gives $\Gamma E=1$ on the right half-plane,
+proving nonvanishing and the reciprocal formula.
+
+For $|z|\leq R$, split the product at $n=\lceil2R\rceil$.
+The logarithms of absolute values of the initial factors are bounded above by
+\[
+ \sum_{n\leq\lceil2R\rceil}
+       \bigl(\log(1+R/n)+R/n\bigr)=O(R\log(R+2)).
+\]
+The remaining logarithmic tail is $O(R^2\sum_{n>2R}n^{-2})=O(R)$.
+Including $z e^{\gamma z}$ proves \eqref{eq:reciprocal-growth}.
+
+Logarithmic differentiation gives the series in \eqref{eq:digamma}.
+For $|t|\geq1$, split that series at $n=\lceil2(|t|+\beta+1)\rceil$.
+The sum of $1/(n+1)$ before that point is $O(\log(2+|t|))$,
+and the sum of $|n+z|^{-1}$ is $O(1)$ because $|n+z|\geq|t|$.
+After that point, each difference is bounded by $C|z-1|/(n+1)^2$,
+whose sum is $O(1)$.
+The compact part with $|t|\leq1$ has no pole and is bounded.
+\end{proof}
+
+Define
+\begin{equation}
+ \Gamma_{\R}(s)=\pi^{-s/2}\Gamma(s/2),\qquad
+ H_\Gamma(s)=\frac{\Gamma_{\R}'}{\Gamma_{\R}}(s)
+          =-\frac12\log\pi+\frac12\psi(s/2).
+ \label{eq:gamma-real}
+\end{equation}
+The half in $s/2$ and the real factor $\pi^{-s/2}$ will produce respectively
+the argument $1/4+it/2$ and the term $-\log\pi$ in \eqref{eq:target}.
+
+\section{Gaussian reflection and the completed function}
+\label{sec:theta}
+
+The completion of the Dirichlet series will come from a lattice sum.
+The identity needed for that sum is a direct consequence of the Gaussian
+Fourier transform, with its normalization kept explicit.
+
+The normalization in Lemma~\ref{lem:gaussian} also gives the Fourier
+integral used by periodization.  The substitution
+$A=1/(4\pi x)$ and $z=-2\pi t$ relates the two conventions.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Gaussian Fourier transform]
+\label{lem:gaussian-real-transform}
+For $x>0$ and real $t$,
+\[
+ \int_{\R}e^{-\pi xv^2}e^{-2\pi itv}\,dv
+       =x^{-1/2}e^{-\pi t^2/x}.
+\]
+\end{lemma}
+\begin{proof}
+Squaring $I=\int_{\R}e^{-u^2}\,du$ and using polar coordinates gives
+$I^2=2\pi\int_0^\infty re^{-r^2}\,dr=\pi$.
+The integrand is positive, so $I=\sqrt\pi$.
+Scaling gives $\int_{\R}e^{-\pi xv^2}\,dv=x^{-1/2}$.
+Let $J(t)$ denote the integral in the statement.
+Every fixed power of $|v|$ times $e^{-\pi xv^2}$ is integrable.
+This bound permits differentiation in $t$ and integration by parts in $v$.
+Using $\partial_v e^{-\pi xv^2}=-2\pi xv e^{-\pi xv^2}$ gives
+\[
+ J'(t)=\frac{i}{x}\int_{\R}
+       \partial_v(e^{-\pi xv^2})e^{-2\pi itv}\,dv
+       =-\frac{2\pi t}{x}J(t).
+\]
+The boundary terms vanish because of Gaussian decay.
+The initial value $J(0)=x^{-1/2}$ solves this differential equation
+and proves the formula.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Periodization of a Gaussian]
+\label{lem:theta}
+For $x>0$, put $\theta(x)=\sum_{n\in\Z}e^{-\pi n^2x}$.
+Then
+\begin{equation}
+ \theta(x)=x^{-1/2}\theta(1/x).
+ \label{eq:theta-reflection}
+\end{equation}
+For $x\geq1$, one has $0<\theta(x)-1\leq C e^{-\pi x}$.
+\end{lemma}
+
+\begin{proof}
+The periodized function
+$P_x(u)=\sum_{n\in\Z}e^{-\pi x(u+n)^2}$ and all its derivatives converge
+uniformly for $0\leq u\leq1$.
+Its $k$th Fourier coefficient, with period one, is
+\[
+ \int_0^1P_x(u)e^{-2\pi iku}\,du
+ =\int_{\R}e^{-\pi xv^2}e^{-2\pi ikv}\,dv
+ =x^{-1/2}e^{-\pi k^2/x},
+\]
+by Lemma~\ref{lem:gaussian}.
+These coefficients are absolutely summable and define a continuous
+periodic Fourier series.
+
+For completeness, a continuous periodic function with all Fourier
+coefficients zero is zero.  Indeed, the kernel
+\[
+ K_N(u)=\frac1N\left|\sum_{j=0}^{N-1}e^{2\pi iju}\right|^2
+\]
+is nonnegative, has integral one over a period, and is a finite Fourier sum.
+Away from the integers it is at most $1/(N\sin^2\pi u)$.
+Uniform continuity and this bound show that convolution with $K_N$ converges
+uniformly to any continuous periodic function.
+When all coefficients vanish, each convolution is zero.
+Apply this uniqueness statement to $P_x$ minus its displayed Fourier series,
+then set $u=0$ to obtain \eqref{eq:theta-reflection}.
+Finally
+$\theta(x)-1=2e^{-\pi x}\sum_{n\geq1}e^{-\pi(n^2-1)x}$,
+and the last sum is bounded by its value at $x=1$.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{theorem}[Continuation and reflection]
+\label{thm:completion}
+The function $\mathcal L(s)=\Gamma_{\R}(s)\zeta(s)$, initially defined for
+$\operatorname{Re}s>1$, extends meromorphically to $\C$ by
+\begin{equation}
+ \mathcal L(s)=-\frac1s+\frac1{s-1}
+   +\frac12\int_1^\infty(\theta(x)-1)
+                   \left(x^{s/2}+x^{(1-s)/2}\right)\frac{dx}{x}.
+ \label{eq:theta-mellin}
+\end{equation}
+It has simple poles at zero and one, with residues $-1$ and $1$.
+It satisfies $\mathcal L(s)=\mathcal L(1-s)$ and
+$\mathcal L(\bar s)=\overline{\mathcal L(s)}$.
+The function
+\begin{equation}
+ X(s)=\frac12 s(s-1)\mathcal L(s)
+ \label{eq:entire-completion}
+\end{equation}
+is entire, obeys the same symmetries, and satisfies
+$X(0)=X(1)=1/2$ and
+\begin{equation}
+ \log\max_{|s|\leq R}|X(s)|\leq C R\log(R+2)\qquad(R\geq2).
+ \label{eq:entire-growth}
+\end{equation}
+Every zero of $X$ lies in $0\leq\operatorname{Re}s\leq1$.
+\end{theorem}
+
+\begin{proof}
+For $\operatorname{Re}s>1$, absolute convergence gives
+\[
+ \frac12\int_0^\infty(\theta(x)-1)x^{s/2}\frac{dx}{x}
+ =\sum_{n\geq1}\int_0^\infty e^{-\pi n^2x}x^{s/2}\frac{dx}{x}
+ =\Gamma_{\R}(s)\zeta(s).
+\]
+For the integral from zero to one, use
+$\theta(x)-1=x^{-1/2}-1+x^{-1/2}(\theta(1/x)-1)$.
+The first two terms integrate to $1/(s-1)-1/s$ after the factor $1/2$.
+Substitution $y=1/x$ in the third gives the second term in the integral
+of \eqref{eq:theta-mellin}.
+
+The exponential bound in Lemma~\ref{lem:theta} makes that integral entire:
+on every compact set, powers of $x$ and any fixed powers of $\log x$ are
+bounded by an integrable exponential majorant.
+The pole, residue, and symmetry assertions now follow directly.
+In particular
+\[
+ X(s)=\frac12+\frac{s(s-1)}4
+       \int_1^\infty(\theta(x)-1)
+             \left(x^{s/2}+x^{(1-s)/2}\right)\frac{dx}{x}.
+\]
+For $|s|\leq R$, the integral is bounded by a constant times
+$\int_1^\infty e^{-\pi x}x^{(R+1)/2}\,dx$.
+If $r=(R+1)/2$, then
+$x^r e^{-\pi x/2}\leq(2r/(\pi e))^r$, by maximizing its logarithm.
+The remaining exponential is integrable.  This proves
+\eqref{eq:entire-growth}, including the polynomial prefactor.
+
+For $\operatorname{Re}s>1$, the gamma factor and the prime product are
+nonzero, so $X$ is nonzero there.  Reflection excludes zeros for
+$\operatorname{Re}s<0$.
+\end{proof}
+
+The continuation of the original Dirichlet series is now the specific
+meromorphic function $\zeta(s)=\pi^{s/2}E(s/2)\mathcal L(s)$.
+It has a simple pole at one.  At zero the zero of $E(s/2)$ cancels the
+pole of $\mathcal L$ and gives $\zeta(0)=-1/2$.
+At each negative even integer, $E(s/2)$ has a simple zero and
+$\mathcal L(s)=\mathcal L(1-s)\ne0$.
+These are its trivial zeros.  Its other zeros are precisely the zeros of
+$X$, with the same multiplicities.  We call them the nontrivial zeros.
+No assertion about their real parts inside the closed strip has been used.
+
+The closed strip can be sharpened by a positive trigonometric identity.
+The argument uses the pole of $\zeta$ at one and holomorphy at every
+other point of the line $\operatorname{Re}s=1$.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[The pole and the boundary germs]
+\label{lem:boundary-germs}
+The continuation
+$\zeta(s)=\pi^{s/2}E(s/2)\mathcal L(s)$ is holomorphic on
+$\C\setminus\{1\}$ and has a simple pole of residue one at $s=1$.
+For every nonzero real $t$, it is holomorphic on neighborhoods of
+$1+it$ and $1+2it$.
+\end{lemma}
+\begin{proof}
+Theorem~\ref{thm:completion} makes $\mathcal L$ holomorphic away from
+zero and one.  Lemma~\ref{lem:gamma} makes $E$ entire, with
+$E(z)=z+O(z^2)$ at zero.
+Thus $\pi^{s/2}E(s/2)\mathcal L(s)=-1/2+O(s)$ there, and its
+singularity at zero is removable.
+The Gaussian integral gives
+\[
+ \Gamma(1/2)=2\int_0^\infty e^{-u^2}\,du=\sqrt\pi.
+\]
+Consequently $\pi^{1/2}E(1/2)=1$.
+The residue of $\mathcal L$ at one is one, so
+\begin{equation}
+ \zeta(s)=\frac1{s-1}+H(s)
+ \label{eq:boundary-pole}
+\end{equation}
+on a neighborhood of one, with $H$ holomorphic.
+The asserted local holomorphy follows because $t\ne0$ places both
+$1+it$ and $1+2it$ away from the only pole.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{lemma}[A positive prime sum]
+\label{lem:boundary-prime}
+For every real $\sigma>1$ and real $t$,
+\begin{equation}
+ \zeta(\sigma)^3
+ |\zeta(\sigma+it)|^4|\zeta(\sigma+2it)|\geq1.
+ \label{eq:boundary-product}
+\end{equation}
+\end{lemma}
+\begin{proof}
+On $\operatorname{Re}s>1$, define the holomorphic function
+\[
+ B(s)=\sum_p\sum_{r\geq1}\frac{p^{-rs}}r.
+\]
+Here $p$ runs over positive primes and $p^{-rs}=e^{-rs\log p}$.
+For every $\delta>0$, its series converges absolutely and uniformly on
+$\operatorname{Re}s\geq1+\delta$, since
+\[
+ \sum_p\sum_{r\geq1}\frac{p^{-r(1+\delta)}}r
+ \leq\frac1{1-2^{-1-\delta}}\sum_{n\geq2}n^{-1-\delta}<\infty.
+\]
+Lemma~\ref{lem:euler} gives $e^{B(s)}=\zeta(s)$.
+Taking absolute values yields $\operatorname{Re}B(s)=\log|\zeta(s)|$,
+with the real logarithm of a positive number.
+This operation needs no choice of a logarithm at a boundary point.
+Absolute convergence permits the three series to be combined.
+The identity
+\[
+ 3+4\cos\theta+\cos(2\theta)=2(1+\cos\theta)^2\geq0
+ \qquad(\theta\in\R)
+\]
+therefore gives
+\begin{align*}
+ &3\log\zeta(\sigma)+4\log|\zeta(\sigma+it)|
+                      +\log|\zeta(\sigma+2it)|\\
+ &\quad=\sum_p\sum_{r\geq1}\frac{p^{-r\sigma}}r
+       \bigl(3+4\cos(rt\log p)+\cos(2rt\log p)\bigr)\geq0.
+\end{align*}
+The Dirichlet series makes $\zeta(\sigma)>0$.
+Exponentiation proves \eqref{eq:boundary-product}.
+\end{proof}
+
+The exponents in \eqref{eq:boundary-product} decide the boundary case.
+A simple pole contributes order $-3$, while even a simple zero in the
+middle factor contributes order $4$.
+The third factor is bounded at the limiting point whenever $t\ne0$.
+
+\Needspace{5\baselineskip}
+\begin{theorem}[Nonvanishing on the boundary and the strict strip]
+\label{thm:strict-strip}
+For every real $t\ne0$, one has $\zeta(1+it)\ne0$.
+At $s=1$, the function $\zeta$ has a simple pole of residue one.
+Every zero $\rho$ of $X$ satisfies
+\begin{equation}
+ 0<\operatorname{Re}\rho<1,
+ \qquad
+ z_\rho=-i(\rho-1/2),
+ \qquad
+ |\operatorname{Im}z_\rho|<\frac12.
+ \label{eq:strict-strip}
+\end{equation}
+The zeros of $X$ are exactly the nontrivial zeros of $\zeta$, with
+the same multiplicities.
+Reflection and complex conjugation preserve these multiplicities.
+\end{theorem}
+\begin{proof}
+Fix $t\in\R\setminus\{0\}$ and suppose $\zeta(1+it)=0$.
+By Lemma~\ref{lem:boundary-germs}, this is a zero of a holomorphic
+function.  It has some finite order $m\geq1$.
+Indeed, a zero of infinite order would make the function vanish on a
+disc, contrary to its nonzero Euler product in the same disc's
+intersection with $\operatorname{Re}s>1$.
+Taylor expansion gives a holomorphic function $a$, with $a(0)\ne0$,
+such that
+\[
+ \zeta(1+it+w)=w^m a(w)
+\]
+for sufficiently small complex $w$.
+For positive real $h$ tending to zero, the pole expansion and local
+holomorphy at $1+2it$ give constants $C_0,C_1,C_2>0$ such that
+\[
+ 0<\zeta(1+h)\leq C_0h^{-1},\qquad
+ |\zeta(1+h+it)|\leq C_1h^m,\qquad
+ |\zeta(1+h+2it)|\leq C_2.
+\]
+The constants can depend on $t$ and on the chosen neighborhoods.
+In particular, boundedness of the third factor allows a zero at $1+2it$.
+Lemma~\ref{lem:boundary-prime} now implies
+\[
+ 1\leq\zeta(1+h)^3|\zeta(1+h+it)|^4|\zeta(1+h+2it)|
+ \leq C_0^3C_1^4C_2 h^{4m-3}\longrightarrow0.
+\]
+This contradiction proves nonvanishing for $t\ne0$.
+When $t=0$, Lemma~\ref{lem:boundary-germs} gives the pole directly.
+Thus the preceding limiting argument never treats the pole as a
+holomorphic value of $\zeta$.
+
+For $s=1+it$ with $t\ne0$, the factors $s$, $s-1$, and
+$\Gamma_{\R}(s)=\pi^{-s/2}\Gamma(s/2)$ are finite and nonzero.
+The nonvanishing just proved therefore gives $X(1+it)\ne0$.
+The value $X(1)=1/2$ handles $t=0$.
+On the other boundary, the exact reflection identity gives
+$X(it)=X(1-it)\ne0$ for every real $t$, including $X(0)=1/2$.
+The closed-strip statement in Theorem~\ref{thm:completion} now yields
+$0<\operatorname{Re}\rho<1$ for every zero $\rho$ of $X$.
+
+On this open strip, $s(s-1)\Gamma_{\R}(s)/2$ is holomorphic and
+nonzero.  Multiplication by it preserves each zero order, so the zeros
+of $X$ and $\zeta$ there have the same multiplicities.
+At $s=0$, one has $\zeta(0)=-1/2$.
+For $\operatorname{Re}s<0$, reflection gives
+$\mathcal L(s)=\mathcal L(1-s)\ne0$.
+The reciprocal gamma factor has simple zeros exactly at
+$s=0,-2,-4,\ldots$.
+It follows that the zeros of $\zeta$ in $\operatorname{Re}s<0$ are
+exactly the simple zeros at $s=-2,-4,\ldots$.
+These are the trivial zeros.
+On $\operatorname{Re}s=0$ with $s\ne0$, both $E(s/2)$ and
+$\mathcal L(s)$ are nonzero.  The Euler product excludes zeros for
+$\operatorname{Re}s>1$.
+This proves the stated classification of all other zeros.
+
+If $\rho=\beta+i\gamma$ with $\beta,\gamma\in\R$, then
+\[
+ z_\rho=\gamma+i(1/2-\beta).
+\]
+Thus $0<\beta<1$ is exactly the strict bound in
+\eqref{eq:strict-strip}.
+The affine map $s\mapsto-i(s-1/2)$ has nonzero derivative.
+Consequently a zero of order $m$ at $s=\rho$ is a zero of order $m$
+of $z\mapsto X(1/2+iz)$ at $z=z_\rho$.
+Finally the identities $X(s)=X(1-s)$ and
+$X(\bar s)=\overline{X(s)}$ preserve orders in the local power series.
+In centered variables their images are
+\[
+ z_{1-\rho}=-z_\rho,\qquad
+ z_{\bar\rho}=-\overline{z_\rho},\qquad
+ z_{1-\bar\rho}=\overline{z_\rho}.
+\]
+All three parameters therefore occur with the same multiplicity as
+$z_\rho$, with coincident parameters counted only according to their
+actual zero order.
+\end{proof}
+
+Lemma~\ref{lem:test-bounds} supplies exponential decay for every test in $\A$.
+The same centered coordinate specifies where the Weil transform is
+evaluated.  Suppose $a>1/2$ and $g:\R\to\C$ is continuous with
+$|g(u)|\leq C e^{-a|u|}$.
+Define
+\[
+ \widehat g(z)=\int_{\R}g(u)e^{izu}\,du,
+ \qquad
+ F_g(s)=\widehat g(-i(s-1/2))
+       =\int_{\R}g(u)e^{(s-1/2)u}\,du.
+\]
+For each $0\leq b<a$ and integer $k\geq0$, the absolute value of the
+$k$th derivative integrand is bounded on $|\operatorname{Im}z|\leq b$ by
+\[
+ C|u|^k e^{-(a-b)|u|}.
+\]
+This is integrable on $\R$.
+Termwise differentiation therefore makes $\widehat g$ holomorphic on
+$|\operatorname{Im}z|<a$.
+It makes $F_g$ holomorphic on
+$1/2-a<\operatorname{Re}s<1/2+a$.
+Every nontrivial zero lies in this domain, and
+$F_g(\rho)=\widehat g(z_\rho)$ uses the same multiplicity under the
+invertible affine change of variable.
+
+The strict strip permits zeros with $\operatorname{Re}\rho\ne1/2$.
+The assertion that all $z_\rho$ are real is the Riemann hypothesis.
+It remains an additional assertion beyond boundary nonvanishing.
+
+\Needspace{5\baselineskip}
+\begin{corollary}[Zero count and absolute test sums]
+\label{cor:zero-count}
+The number of nontrivial zeros with $|\rho|\leq R$, counted with multiplicity,
+is $O(R\log(R+2))$.
+For every $g\in\A$, the series $\sum_\rho|F_g(\rho)|$ converges.
+\end{corollary}
+
+\begin{proof}
+Apply Lemma~\ref{lem:jensen} to $X$, using $X(0)=1/2$.
+Since $0\leq\operatorname{Re}\rho\leq1$, Lemma~\ref{lem:test-bounds}
+gives $|F_g(\rho)|\leq C_N(1+|\operatorname{Im}\rho|)^{-N}$ for every $N$.
+The zeros in $2^j\leq|\operatorname{Im}\rho|<2^{j+1}$ contribute at most
+$C(j+1)2^{j(1-N)}$.  Taking $N=3$ gives a convergent series.
+The bounded region has only finitely many zeros.
+\end{proof}
+
+\section{Heights at which the horizontal integrals vanish}
+\label{sec:heights}
+
+Write $H(s)=\mathcal L'(s)/\mathcal L(s)$.
+It has residue equal to the multiplicity at each nontrivial zero.
+Its residue at each of zero and one is $-1$.
+These signs follow by differentiating the logarithm of a local factor
+$(s-s_0)^m$ or $(s-s_0)^{-1}$.
+The identity
+\begin{equation}
+ H(s)=\frac{X'(s)}{X(s)}-\frac1s-\frac1{s-1},
+ \qquad H(1-s)=-H(s)
+ \label{eq:log-reflection}
+\end{equation}
+will control both the poles and the left vertical line.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Admissible rectangle heights]
+There are heights\label{lem:heights} $T_m\in[m,m+1]$, for all sufficiently large integers $m$,
+such that no zero lies on either horizontal segment
+$-1/2\leq\operatorname{Re}s\leq3/2$, $\operatorname{Im}s=\pm T_m$,
+and
+\begin{equation}
+ \sup_{-1/2\leq\sigma\leq3/2}|H(\sigma\pm iT_m)|
+       =O(T_m^2\log^2(T_m+2)).
+ \label{eq:horizontal-H}
+\end{equation}
+For $g\in\A_a$ and $1<c<\min(a+1/2,3/2)$, both horizontal integrals
+of $H(s)F_g(s)$ between the lines $1-c$ and $c$ tend to zero at these heights.
+\end{lemma}
+
+\begin{proof}
+Let $N_m$ count all zeros in $|s|\leq m+8$, with multiplicity, and set
+$\delta_m=1/(8(N_m+1))$.
+Remove from $[m,m+1]$ the intervals of radius $\delta_m$ about the absolute
+values of their imaginary parts.
+The removed length is at most $2\delta_mN_m<1/4$, so a remaining $T_m$ exists.
+Zeros outside this disc have $|\operatorname{Im}\rho|>m+1+\delta_m$
+for large $m$, because $0\leq\operatorname{Re}\rho\leq1$.
+Thus both heights have distance at least $\delta_m$ from every zero ordinate.
+Corollary~\ref{cor:zero-count} gives
+$\delta_m^{-1}=O(m\log(m+2))$.
+
+Fix $T=T_m$ and center a disc at $s_0=2+iT$.
+By \eqref{eq:entire-growth},
+$|X(s_0+z)|\leq\exp(C(T+8)\log(T+8))$ for $|z|\leq6$.
+At its center, the prime-product lower bound and
+\eqref{eq:reciprocal-growth} give
+\[
+ |X(2+iT)|
+ =\frac{|(2+iT)(1+iT)|}{2\pi}
+       |\Gamma(1+iT/2)|\,|\zeta(2+iT)|
+ \geq\exp(-C(T+8)\log(T+8)).
+\]
+Choose $R\in[5,6]$ with no zero on the circle.
+The number of zeros in it is $O(T\log(T+2))$ by the global count.
+Every point of the desired horizontal segment has $|s-s_0|\leq5/2$,
+and its distance from every zero is at least $\delta_m$.
+Lemma~\ref{lem:local-log} now gives
+\[
+ |X'(s)/X(s)|
+ \leq C T\log(T+2)(1+\delta_m^{-1})
+ =O(T^2\log^2(T+2)).
+\]
+The two rational terms in \eqref{eq:log-reflection} are bounded at these
+heights.  Conjugation gives the same estimate on the bottom segment.
+
+The chosen vertical strip lies strictly inside
+$1/2-a<\operatorname{Re}s<1/2+a$.
+Its test transform is $O(T^{-4})$ uniformly by
+Lemma~\ref{lem:test-bounds}.
+The horizontal lengths are bounded, so their integrals are
+$O(T^{-2}\log^2(T+2))$, which tends to zero.
+\end{proof}
+
+The proof uses a polynomial bound, which suffices for every test in $\A$.
+It does not require a sharper local zero count, a product over all zeros,
+or an asymptotic formula for the number of zeros.
+
+\Needspace{7\baselineskip}
+\section{The normalized explicit formula}
+\label{sec:formula}
+
+\begin{theorem}[The full arithmetic functional]
+\label{thm:explicit}
+For every $g\in\A$, equation~\eqref{eq:target} holds, with all sums and
+integrals absolutely convergent.
+Its right side defines a linear functional $L:\A\to\C$ satisfying
+\begin{equation}
+ L(g^*)=\overline{L(g)},\qquad
+ L(g)=\sum_\rho\widehat g\bigl(-i(\rho-1/2)\bigr).
+ \label{eq:functional}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Choose $g\in\A_a$ and $1<c<\min(a+1/2,3/2)$.
+The prime terms converge because Lemma~\ref{lem:test-bounds} gives
+\[
+ \sum_{n\geq2}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                    (|g(\log n)|+|g(-\log n)|)
+ \leq C\sum_{n\geq2}(\log n)n^{-a-1/2}<\infty.
+\]
+The gamma integral converges by \eqref{eq:digamma} and
+\eqref{eq:strip-decay}.  The polar values are inside the transform strip,
+and the zero sum converges by Corollary~\ref{cor:zero-count}.
+
+Integrate $H(s)F_g(s)$ around the rectangle with vertical sides $1-c,c$
+and heights $\pm T_m$, counterclockwise.  Its right side is traversed upward.
+There are no poles on the vertical sides, since the zeros lie in the
+closed critical strip.
+The residue formula gives the zero sum inside the rectangle minus
+$F_g(0)+F_g(1)$.
+Lemma~\ref{lem:heights} eliminates the horizontal integrals.
+On $\operatorname{Re}s=c$, equations~\eqref{eq:euler} and
+\eqref{eq:digamma} give $H(c+it)=O(\log(2+|t|))$.
+Reflection gives the same bound on $1-c$, so both vertical integrals
+converge absolutely.
+In the left integral, substitute $s=1-w$ and use $H(1-w)=-H(w)$.
+Both vertical-line integrals in the resulting expression are oriented upward.
+The outcome is
+\begin{equation}
+ \sum_\rho F_g(\rho)-F_g(0)-F_g(1)
+ =\frac1{2\pi i}\int_{\operatorname{Re}s=c}
+           H(s)\bigl(F_g(s)+F_g(1-s)\bigr)\,ds.
+ \label{eq:spine-contour}
+\end{equation}
+
+On this line, split $H=H_\Gamma+\zeta'/\zeta$.
+The series for $\zeta'/\zeta$ can pass through the integral because
+$\sum\Lambda_{\mathrm{vM}}(n)n^{-c}<\infty$ and both test factors are integrable
+on the vertical line.
+For the first factor, Fourier inversion applied to
+$u\mapsto e^{(c-1/2)u}g(u)$ gives
+\begin{equation}
+ \frac1{2\pi i}\int_{\operatorname{Re}s=c}n^{-s}F_g(s)\,ds
+ =n^{-c}e^{(c-1/2)\log n}g(\log n)
+ =n^{-1/2}g(\log n).
+ \label{eq:prime-inversion}
+\end{equation}
+This weighted function has exponential decay with all derivatives, since
+$c-1/2<a$.  The proof of Lemma~\ref{lem:gaussian} therefore applies to it.
+For $F_g(1-s)$, use $u\mapsto e^{(c-1/2)u}g(-u)$ instead.
+It gives $n^{-1/2}g(-\log n)$.
+The minus sign in \eqref{eq:euler} proves exactly the prime-power term in
+\eqref{eq:target}.
+
+It remains to evaluate the gamma contribution.
+The function $H_\Gamma$ is holomorphic for $\operatorname{Re}s>0$.
+Shift each gamma integral from $c$ to $1/2$.
+There is no pole between these lines, and the logarithmic bound
+\eqref{eq:digamma} times the rapid test decay eliminates the horizontal sides.
+Set $s=1/2+it$.  The two factors are $\widehat g(t)$ and $\widehat g(-t)$.
+Changing $t$ to $-t$ in the second term gives
+\begin{align*}
+ &\frac1{2\pi}\int_{\R}\widehat g(t)
+         \bigl(H_\Gamma(1/2+it)+H_\Gamma(1/2-it)\bigr)\,dt\\
+ &\hspace{1cm}=\frac1{2\pi}\int_{\R}\widehat g(t)
+     \left[\operatorname{Re}\psi(1/4+it/2)-\log\pi\right]dt.
+\end{align*}
+Here conjugation of $\Gamma$ follows from its defining real integral and
+analytic continuation.  Together with \eqref{eq:spine-contour}, this proves
+\eqref{eq:target}.
+
+Finally the gamma bracket is real and even.
+For real $t$, \eqref{eq:star-transform} gives
+$\widehat{g^*}(t)=\overline{\widehat g(t)}$.
+The involution interchanges the two polar values and the two values at
+$\pm\log n$, followed by conjugation.
+Thus all three local terms obey the Hermitian identity in
+\eqref{eq:functional}.
+\end{proof}
+
+The proof explains the normalization directly.
+The poles of $\mathcal L$ each contribute residue $-1$ to its logarithmic
+derivative, giving the two positive polar values after rearrangement.
+The logarithmic derivative of each Euler factor gives the negative prime
+term.  The reflection combines the two gamma factors at $1/2\pm it$.
+These operations preserve the original complex test function throughout.
+
+\section{Gaussian tests and their boundary terms}
+\label{sec:polynomial-gaussians}
+
+For $g_A$ from Lemma~\ref{lem:gaussian}, substitution in the formula gives
+\begin{equation}
+\begin{split}
+ \sum_\rho e^{A(\rho-1/2)^2}
+ ={}&2e^{A/4}
+   +\frac1{2\pi}\int_{\R}e^{-At^2}
+      \left[\operatorname{Re}\psi(1/4+it/2)-\log\pi\right]dt\\
+ &-\frac1{\sqrt{\pi A}}\sum_{n\geq2}
+       \frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                       e^{-(\log n)^2/(4A)}.
+\end{split}
+\label{eq:gaussian-explicit}
+\end{equation}
+If every nontrivial zero has real part $1/2$, each term in this Gaussian
+zero sum is positive.  The identity itself is unconditional.
+
+\Needspace{5\baselineskip}
+\begin{proposition}[Polynomial--Gaussian compatibility]
+\label{prop:polynomial-gaussian}
+Let $A>0$, $\tau\in\R$, and $P\in\C[w]$.  The function
+\begin{equation}
+ f(u)=e^{-i\tau u}P(i\partial_u)g_A(u)
+ \label{eq:gaussian-inverse}
+\end{equation}
+belongs to $\A_a$ for every $a>0$, and
+\begin{equation}
+ \widehat f(z)=P(z-\tau)e^{-A(z-\tau)^2}.
+ \label{eq:polynomial-transform}
+\end{equation}
+For every fixed $b>0$ and $z=t+iy$ with $|y|\leq b$,
+\begin{equation}
+ |\widehat f(z)|\leq C_{P,A,b,\tau}(1+|t|)^{\deg P}
+                             e^{-A(t-\tau)^2+A b^2}.
+ \label{eq:gaussian-strip}
+\end{equation}
+Consequently every real integration-by-parts boundary value and every
+horizontal contour term used in Theorem~\ref{thm:explicit} vanishes for
+$f$ and $f^*\star f$.
+\end{proposition}
+
+\begin{proof}
+Each derivative in \eqref{eq:gaussian-inverse} is a polynomial in $u$ times
+$e^{-u^2/(4A)}$, multiplied by $e^{-i\tau u}$.
+This description holds after any further derivative.
+Multiplication by $e^{a|u|}$ still leaves an integrable function tending
+to zero at both infinities, for every $a>0$.
+Integration by parts gives
+$\widehat{i\partial_u h}(z)=z\widehat h(z)$, and modulation gives
+$\widehat{e^{-i\tau u}h}(z)=\widehat h(z-\tau)$.
+Together these prove \eqref{eq:polynomial-transform}.
+The exact Gaussian modulus is
+$|e^{-A(t-\tau+iy)^2}|=e^{-A(t-\tau)^2+Ay^2}$,
+which proves \eqref{eq:gaussian-strip}.
+This bound times \eqref{eq:horizontal-H} tends to zero at both heights.
+The convolution square lies in every $\A_a$ by
+Proposition~\ref{prop:algebra}; its transform is the product in
+\eqref{eq:star-transform}, with Gaussian decay of twice the exponent.
+Thus it has the same boundary properties.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{example}[The first polynomial and a missing conjugation]
+For $P(w)=w$, the function and its transform are
+\[
+ \begin{aligned}
+ f(u)&=-iu\,e^{-i\tau u}g_A(u)/(2A),\\
+ \widehat f(z)&=(z-\tau)e^{-A(z-\tau)^2}.
+ \end{aligned}
+\]
+Its convolution square has transform
+\[
+ \widehat{f^*\star f}(z)=(z-\tau)^2e^{-2A(z-\tau)^2}.
+\]
+At $z=\tau+ib$, this value is $-b^2e^{2Ab^2}$.
+The correct analytic expression is
+$\overline{\widehat f(\bar z)}\widehat f(z)$.
+Replacing it by $|\widehat f(z)|^2$ would erase the negative sign and would
+not give a holomorphic function of $z$.
+\end{example}
+
+\section{A separate positivity argument}
+\label{sec:positivity}
+
+The explicit formula compares linear functionals.
+Positivity concerns its value on every convolution square and requires a
+different argument.  Define the Riemann hypothesis to mean that every
+nontrivial zero $\rho$ satisfies $\operatorname{Re}\rho=1/2$.
+
+\Needspace{5\baselineskip}
+\begin{theorem}[Positivity on the exact test algebra]
+\label{thm:positivity}
+The Riemann hypothesis is equivalent to
+\begin{equation}
+ L(f^*\star f)\geq0\qquad\text{for every }f\in\A.
+ \label{eq:positivity}
+\end{equation}
+Under the Riemann hypothesis, writing $\rho=1/2+i\gamma_\rho$ gives
+$L(f^*\star f)=\sum_\rho|\widehat f(\gamma_\rho)|^2$.
+If there is a zero off the critical line, a function of the form
+\eqref{eq:gaussian-inverse} has strictly negative convolution-square value.
+\end{theorem}
+
+\begin{proof}
+Put $z_\rho=-i(\rho-1/2)$.
+Theorem~\ref{thm:completion} gives $|\operatorname{Im}z_\rho|\leq1/2$.
+Its reflection and conjugation symmetries show that $z_\rho$ and
+$\bar z_\rho$ occur with equal multiplicity.
+Under the Riemann hypothesis all these parameters are real.
+Then Theorem~\ref{thm:explicit} and \eqref{eq:star-transform} give the
+asserted nonnegative sum.
+
+For the converse, suppose $z_0=\tau+ib$ occurs, where $b\ne0$.
+Its conjugate has the same multiplicity $m$.
+Center the parameter by $w=z-\tau$.
+There are finitely many distinct centered zero parameters with
+$|\operatorname{Re}w|\leq2$.
+This follows from the global zero count and the bound on their imaginary
+parts.  Form the monic polynomial $Q$ whose roots are these distinct points
+except $ib$ and $-ib$.  If there are none, set $Q=1$.
+This root set is invariant under conjugation, so $Q$ has real coefficients
+and $Q(ib)Q(-ib)=|Q(ib)|^2\ne0$.
+Set
+\[
+ P(w)=wQ(w)Q(-w),\qquad
+ \widehat f_A(z)=P(z-\tau)e^{-A(z-\tau)^2},\qquad A\geq1.
+\]
+The polynomial $P$ is real and odd.
+Proposition~\ref{prop:polynomial-gaussian} constructs $f_A\in\A$ exactly.
+Since $\tau$ and the coefficients are real,
+$\overline{\widehat f_A(\bar z)}=\widehat f_A(z)$.
+The two selected zero parameters therefore contribute
+\begin{equation}
+ -2m b^2|Q(ib)|^4e^{2Ab^2}
+ \label{eq:negative-pair}
+\end{equation}
+to $L(f_A^*\star f_A)$.
+All other centered zero parameters with $|\operatorname{Re}w|\leq2$
+give zero because $Q$ vanishes there.
+
+For a remaining parameter $w=x+iy$, one has $|x|>2$, $|y|\leq1/2$,
+and $D=x^2-y^2\geq15/4$.
+For $A\geq1$, $2AD\geq15A/4+(x^2-1/4)$.
+Thus the absolute value of the remaining sum is bounded by
+\begin{equation}
+ e^{-15A/4}
+ \sum_{|\operatorname{Re}w|>2}|P(w)|^2e^{-(x^2-1/4)}.
+ \label{eq:separator-tail}
+\end{equation}
+The final series is finite by the polynomial growth of $P$ and the zero
+count.  It is independent of $A$.
+Expression~\eqref{eq:negative-pair} tends to minus infinity while
+\eqref{eq:separator-tail} tends to zero.
+The Hermitian identity in \eqref{eq:functional} makes the full value real,
+so it is strictly negative for sufficiently large $A$.
+This contradicts \eqref{eq:positivity} and proves the converse.
+\end{proof}
+
+The conclusion is a criterion, not a proof of the Riemann hypothesis.
+The transform estimates, the continuation, and the contour formula were
+proved before invoking any sign condition.
+Their exact comparison identifies the remaining arithmetic question:
+whether the full local expression is nonnegative on every convolution square.
+The negative separator describes what any off-line zero would force.
+
+
+\section{The form on the nonunital test algebra}
+\label{sec:native-form}
+
+For the representation theory, write
+$\cA_\zeta=\A$ and $L_\zeta=L$.
+These are identical sets, algebra operations, and functional values.
+This identification takes no completion.  Membership in $\A$ means that there is
+$a>1/2$ with every $p_{a,k}$ finite.  Setting $\epsilon=a-1/2$ says precisely
+that $e^{(1/2+\epsilon)|u|}g^{(k)}(u)$ is integrable for every $k$.
+The involution is the reflection and conjugation in
+\eqref{eq:operations}; its square transform is the analytic product
+\eqref{eq:star-transform}.
+
+The operations on this algebra are
+\begin{equation}
+ (f\star g)(u)=\int_{\R}f(v)g(u-v)\,dv,
+ \qquad f^*(u)=\overline{f(-u)}.
+ \label{eq:conv}
+\end{equation}
+On each common holomorphic strip their transforms obey
+\begin{equation}
+ \widehat{f\star g}(z)=\widehat f(z)\widehat g(z),
+ \qquad\widehat{f^*}(z)=\overline{\widehat f(\bar z)}.
+ \label{eq:transform}
+\end{equation}
+These are the operations and identities already proved in
+\eqref{eq:operations} and Proposition~\ref{prop:algebra}.
+For real $u$, the same Fourier convention and Lemma~\ref{lem:gaussian} give
+\begin{equation}
+ \widehat f(z)=\int_{\R}f(u)e^{izu}\,du,
+ \qquad f(u)=\frac1{2\pi}\int_{\R}\widehat f(t)e^{-itu}\,dt.
+ \label{eq:fourier}
+\end{equation}
+In particular, the product identity on the real Fourier axis is
+\begin{equation}
+ \widehat{f^*\star f}(t)=|\widehat f(t)|^2\qquad(t\in\R).
+ \label{eq:square-transform}
+\end{equation}
+The derivative of the gamma normalization in \eqref{eq:gamma-real} reads
+\begin{equation}
+ 2\operatorname{Re}\frac{\Gamma_{\R}'}{\Gamma_{\R}}(1/2+it)
+ =\operatorname{Re}\psi(1/4+it/2)-\log\pi.
+ \label{eq:gamma-normalization}
+\end{equation}
+
+The multiplicative variable $x=e^u$ gives the identity
+\begin{equation}
+ \widehat g\bigl(-i(s-1/2)\bigr)
+ =\int_0^\infty g(\log x)x^{s-1/2}\,\frac{dx}{x},
+ \qquad 1/2-a<\operatorname{Re}s<1/2+a
+ \label{eq:mellin}
+\end{equation}
+for $g\in\A_a$.
+The centered Mellin convention gives
+$F_g(0)=\widehat g(i/2)$ and $F_g(1)=\widehat g(-i/2)$.
+Thus the functional constructed in Theorem~\ref{thm:explicit} is exactly
+\begin{equation}
+\begin{split}
+ L_\zeta(g)={}&\widehat g(i/2)+\widehat g(-i/2)\\
+ &+\frac1{2\pi}\int_{\R}\widehat g(t)
+   \left[\operatorname{Re}\psi(1/4+it/2)-\log\pi\right]dt\\
+ &-\sum_{n\geq2}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n}
+                 \bigl(g(\log n)+g(-\log n)\bigr).
+\end{split}
+\label{eq:weil-functional}
+\end{equation}
+All sums and integrals converge absolutely on this algebra.
+Theorem~\ref{thm:explicit} also gives the exact zero expression
+\begin{equation}
+ L_\zeta(g)=\sum_\rho\widehat g\bigl(-i(\rho-1/2)\bigr).
+ \label{eq:explicit}
+\end{equation}
+A sesquilinear form is linear in its first argument and conjugate-linear in
+its second.  It is Hermitian when reversing the arguments conjugates the
+value, and positive when its diagonal values are nonnegative real numbers.
+Define the sesquilinear form by
+\[
+ B_\zeta(f,g)=L_\zeta(g^*\star f).
+\]
+The identity
+\begin{equation}
+ L_\zeta(g^*)=\overline{L_\zeta(g)}
+ \label{eq:hermitian}
+\end{equation}
+from Theorem~\ref{thm:explicit} makes $B_\zeta$ Hermitian.
+Theorem~\ref{thm:positivity} states
+\begin{equation}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ L_\zeta(f^*\star f)\geq0\quad\hbox{for every }f\in\cA_\zeta.
+ \label{eq:weil-criterion}
+\end{equation}
+Under RH, the same theorem gives
+\begin{equation}
+ L_\zeta(f^*\star f)=\sum_\rho|\widehat f(\gamma_\rho)|^2,
+ \qquad \rho=1/2+i\gamma_\rho.
+ \label{eq:zero-norm}
+\end{equation}
+The right side explains positivity conditional on RH.  Both the reality
+of the parameters $\gamma_\rho$ and their occurrence in this expression
+use the stated zero placement.  They do not construct positivity from the
+arithmetic local terms independently.
+
+Theorem~\ref{thm:strict-strip} proves
+$0<\operatorname{Re}\rho<1$ and $|\operatorname{Im}z_\rho|<1/2$,
+with the same zero multiplicities in both coordinates.
+The closed bounds used in the contour and separator follow from these
+strict bounds.  Nonreal $z_\rho$ are still permitted, so boundary
+nonvanishing supplies no independent positivity of $B_\zeta$.
+
+\section{Positive functionals and their representations}
+
+A $*$-homomorphism preserves addition, complex scalar multiplication,
+products, and this involution; no preservation of a unit is imposed here.
+For a positive form, expansion of the diagonal at $x+\lambda y$ gives
+Hermitian symmetry and
+\[
+ |\langle x,y\rangle|^2\leq\langle x,x\rangle\langle y,y\rangle.
+\]
+Indeed, when $\langle y,y\rangle>0$, minimize that quadratic expression in
+$\lambda$; if it is zero, arbitrarily large multiples force the cross term
+to vanish.  A positive definite form gives a norm
+$\|x\|=\sqrt{\langle x,x\rangle}$.  Its space is a pre-Hilbert space.
+Completing Cauchy sequences modulo sequences tending to zero gives a
+Hilbert space; continuity extends the inner product to that completion.
+An isometry preserves this inner product, and a surjective isometry is
+unitary.  An operator is bounded if $\|Sx\|\leq C\|x\|$ on its domain;
+the least such constant is its operator norm.
+
+An operator on a Hilbert space $H$ means a linear map $S:D\to H$ on a
+specified dense linear subspace.  Its graph is $\{(x,Sx):x\in D\}$.
+It is closed when its graph is closed in $H\oplus H$, and closable when
+the graph closure is again a graph.  Equivalently, $x_n\to0$ and
+$Sx_n\to y$ must imply $y=0$; this equivalence follows by subtracting two
+possible limiting graph values at the same vector.
+The graph norm is $(\|x\|^2+\|Sx\|^2)^{1/2}$.  A core for a closable
+operator is a subspace of its domain dense in this norm.
+The adjoint has domain
+\[
+ \mathcal D(S^*)=\{y\in H:\text{there is }z\in H\text{ with }
+           \langle Sx,y\rangle=\langle x,z\rangle\text{ for all }x\in D\},
+ \qquad S^*y=z.
+\]
+Density makes $z$ unique.  Passing to limits in this identity shows that
+the adjoint is closed.  If this adjoint domain is dense, the preceding
+sequence test proves closability: a proposed $y$ pairs to zero with every
+adjoint-domain vector.  A symmetric operator satisfies $S\subseteq S^*$;
+a self-adjoint operator satisfies equality, including its domain.
+
+A representation on $D$ is an algebra homomorphism into linear maps
+$D\to D$.  It is a $*$-representation when
+$\langle\pi(a)x,y\rangle=\langle x,\pi(a^*)y\rangle$ for $x,y\in D$.
+Thus the algebraic domain must be invariant before the adjoint identity
+can be used in repeated products.  We now construct such a representation
+from a positive functional; this is the nonunital GNS construction.
+
+Let $\mathfrak A$ be a complex $*$-algebra, with no norm or unit assumed,
+and let $W:\mathfrak A\to\C$ be positive:
+\[
+ W(a^*a)\geq0\qquad(a\in\mathfrak A).
+\]
+
+\Needspace{5\baselineskip}
+\begin{theorem}[Nonunital algebraic GNS]
+\label{thm:gns}
+Put
+\[
+ \langle a,b\rangle_W=W(b^*a),
+ \qquad
+ \cN_W=\{a:W(a^*a)=0\}.
+\]
+Then $\cN_W$ is a left ideal, meaning a linear subspace preserved by
+left multiplication by every algebra element, and
+\begin{equation}
+ D_W=\mathfrak A/\cN_W,
+ \qquad
+ \pi_W(a)[b]=[ab],
+ \label{eq:gns-action}
+\end{equation}
+is a $*$-representation on a pre-Hilbert space.  Regard $D_W$ as a
+common invariant dense domain in its Hilbert completion $\mathcal H_W$.
+For every $a\in\mathfrak A$,
+\begin{equation}
+ \pi_W(a^*)\subseteq\pi_W(a)^*,
+ \label{eq:adjoint-inclusion}
+\end{equation}
+so $\pi_W(a)$ is closable.  It extends boundedly to $\mathcal H_W$ if
+and only if there is a constant $C_a$ such that
+\begin{equation}
+ W(b^*a^*ab)\leq C_a^2W(b^*b)
+ \qquad(b\in\mathfrak A).
+ \label{eq:multiplier-bound}
+\end{equation}
+The least such $C_a$ is the norm of the extension.
+\end{theorem}
+
+\begin{proof}
+Positivity and polarization make $\langle\ ,\ \rangle_W$ Hermitian and
+give Cauchy--Schwarz.  If $b\in\cN_W$, then
+\[
+ W((ab)^*ab)=\langle a^*ab,b\rangle_W=0,
+\]
+so $\cN_W$ is a left ideal and \eqref{eq:gns-action} is well defined.
+For classes in $D_W$,
+\[
+ \langle\pi_W(a)[b],[c]\rangle_W
+ =W(c^*ab)
+ =\langle[b],\pi_W(a^*)[c]\rangle_W.
+\]
+This proves \eqref{eq:adjoint-inclusion}.  The adjoint domain contains
+the dense subspace $D_W$, so $\pi_W(a)$ is closable.  Finally,
+\[
+ \|\pi_W(a)[b]\|^2=W(b^*a^*ab),
+\]
+so the bounded-operator criterion is exactly
+\eqref{eq:multiplier-bound}.
+\end{proof}
+
+For $a=a^*$, the operator $\pi_W(a)$ is symmetric and closable.
+The closure need not be self-adjoint or admit a self-adjoint extension.
+The obstruction can be checked directly.  For a closed symmetric operator
+$S$, expansion gives
+$\|(S\pm i)x\|^2=\|Sx\|^2+\|x\|^2$.
+Consequently both ranges are closed, and
+\[
+ V:(S+i)x\longmapsto(S-i)x
+\]
+is an isometry from $\operatorname{ran}(S+i)$ onto
+$\operatorname{ran}(S-i)$.  Their orthogonal complements are respectively
+$\ker(S^*-i)$ and $\ker(S^*+i)$, by the definition of the adjoint.
+If a self-adjoint $T$ extends $S$, each $T\pm i$ has closed dense range:
+its orthogonal complement is $\ker(T\mp i)=0$ by the norm identity.
+Thus $(T-i)(T+i)^{-1}$ is a unitary extension of $V$.
+Its restrictions to the two range complements must be unitary too, so
+these complements must have the same dimension.
+
+For example,
+\[
+ P=-i\frac{d}{dx},\qquad \mathcal D(P)=C_c^\infty(0,\infty)
+ \subset L^2(0,\infty),
+\]
+Here $C_c^\infty(0,\infty)$ consists of smooth functions with compact
+support inside the half-line.  It is dense in $L^2$: truncate the support
+and size of an $L^2$ function, approximate by step functions, and replace interval endpoints
+by smooth ramps on sets of arbitrarily small length.  The operator is
+symmetric by integration by parts, and hence closable by the dense
+adjoint-domain criterion.  The adjoint equations, tested against compactly
+supported smooth functions, say weakly that $u'=-u$ and $u'=u$.
+Multiplication by the integrating factors $e^x$ and $e^{-x}$ gives a weak
+zero derivative.  A locally integrable function with weak zero derivative
+is constant: every compact test function of integral zero is the derivative
+of another compact test function, so the resulting distribution depends
+only on the integral of its test.  The solutions are therefore $ce^{-x}$
+and $ce^x$, respectively.  Only the first belongs to $L^2(0,\infty)$.
+Passing to the closure does not change the adjoint, since its defining
+identity passes through graph limits.  Its two range complements thus
+have dimensions one and zero, which excludes a self-adjoint extension.
+
+This operator is itself a GNS multiplier.  Put $D=\mathcal D(P)$ and use
+on $L^2(0,\infty)$ the inner product linear in its first argument.
+For $f,g\in D$, define the rank-one operator
+\[
+ R_{f,g}x=\langle x,g\rangle f\qquad(x\in D).
+\]
+Let $\mathfrak A_D$ be the unital algebra of operators $D\to D$
+generated by $P$ and all $R_{f,g}$.  Every generator preserves $D$;
+integration by parts and the inner product identity give adjoints on $D$
+by $I^*=I$, $P^*=P$, and $R_{f,g}^*=R_{g,f}$.  For a finite linear combination of
+words, conjugate the coefficients and reverse each word with these
+adjoints.  The resulting operator $B^*$ satisfies
+$\langle Bx,y\rangle=\langle x,B^*y\rangle$ for $x,y\in D$.
+If two expressions define the same operator $B$, this identity and density
+of $D$ make their adjoint operators equal.  Thus the involution is
+well-defined on $\mathfrak A_D$, and is the restriction of the Hilbert
+adjoint to $D$.  It makes $\mathfrak A_D$ a $*$-algebra with invariant
+domain $D$.
+
+Choose $\Omega\in D$ with $\|\Omega\|=1$ and put
+$W(B)=\langle B\Omega,\Omega\rangle$ for $B\in\mathfrak A_D$.
+Then
+\[
+ W(B^*B)=\|B\Omega\|^2,\qquad
+ \mathcal N_W=\{B:B\Omega=0\}.
+\]
+The map $U_0:[B]\mapsto B\Omega$ from its GNS quotient to $D$ is an
+isometry, since
+$W(C^*B)=\langle B\Omega,C\Omega\rangle$.
+It is onto: $R_{f,\Omega}\Omega=f$ for every $f\in D$.
+Its Hilbert completion is therefore all of $L^2(0,\infty)$, and
+\[
+ U_0\pi_W(C)[B]=CB\Omega=C U_0[B]
+ \qquad(B,C\in\mathfrak A_D).
+\]
+In particular, the symmetric algebra element $P$ acts in this GNS
+representation as exactly the operator $P$ with domain $D$.
+The domain is invariant under the entire algebra and is a core for
+$\overline P$ by the definition of graph closure.  The preceding
+range-complement calculation therefore gives a symmetric GNS multiplier
+whose closure has no self-adjoint extension.
+
+Products of closures require a separate common-domain construction.
+We give that construction in Section~\ref{sec:graph-domain}.
+
+\Needspace{5\baselineskip}
+\begin{example}[An unbounded positive GNS multiplier]
+Let $\mathfrak A=\C[x]$, let $x^*=x$, and set
+\[
+ W(p)=\frac1{\sqrt\pi}\int_{\R}p(t)e^{-t^2}\,dt.
+\]
+Then $W$ is positive, but multiplication by $x$ is unbounded, since
+\[
+ \frac{\|\pi_W(x)[x^n]\|^2}{\|[x^n]\|^2}
+ =\frac{\int_{\R}t^{2n+2}e^{-t^2}\,dt}
+        {\int_{\R}t^{2n}e^{-t^2}\,dt}
+ =n+\frac12.
+\]
+The last equality follows by integrating the derivative of
+$t^{2n+1}e^{-t^2}$; its boundary values vanish.
+\end{example}
+
+\section{Closed forms and the common invariant domain}
+\label{sec:graph-domain}
+
+For a linear operator $S$ on a dense subspace $D\subset H$, the quadratic
+form $q(x)=\|Sx\|^2$ is nonnegative.  Its form norm is
+$(\|x\|^2+q(x))^{1/2}$.  Such a form is closable if $x_n\to0$ in $H$ and
+$q(x_n-x_m)\to0$ imply $q(x_n)\to0$; the implication follows from
+closability of $S$.  A closed form has a complete form norm, and the closure
+is obtained by completing this norm and identifying the Hilbert limits.
+A finite form value permits one operator application.  Repeated products
+require control of every algebra element.
+
+For sequence examples, $\ell^2(\mathbb N,w)$ consists of complex sequences
+with $\sum_{n\geq1}w_n|x_n|^2<\infty$, for strictly positive weights $w_n$.
+Its inner product is $\sum_n w_nx_n\bar y_n$.  Finite sequences, denoted
+$c_{00}(\mathbb N)$, are dense by coordinate truncation; $e_n$ denotes the
+$n$th coordinate vector.  Unspecified weights are one.
+The distinction between a single form and all products already occurs for
+a diagonal operator.
+
+\Needspace{5\baselineskip}
+\begin{example}[A maximal form domain need not be invariant]
+\label{ex:maximal-domain}
+On $\ell^2(\mathbb N)$, let $Ne_n=ne_n$, initially on $c_{00}(\mathbb N)$.
+Its closure and the closed form $q(v)=\|Nv\|^2$ have domain
+\[
+ V=\left\{v:\sum_{n\geq1}n^2|v_n|^2<\infty\right\}.
+\]
+Coordinate convergence proves that the maximal diagonal operator is closed.
+Finite coordinate truncations approximate every vector in its graph norm,
+so they prove the asserted closure.  The vector $v_n=n^{-2}$ belongs to $V$,
+but $Nv\notin V$, since $\sum n^4|v_n|^2=\infty$.
+For the polynomial algebra generated by $N$, the common domain is instead
+\begin{equation}
+ V_\infty=\bigcap_{k\geq0}
+ \left\{v:\sum_{n\geq1}n^{2k}|v_n|^2<\infty\right\}.
+ \label{eq:all-moments}
+\end{equation}
+Multiplication by each polynomial preserves $V_\infty$.
+Truncations converge in every displayed seminorm.
+\end{example}
+
+Return to Theorem~\ref{thm:gns}.  Write $D=D_W$, $H=\mathcal H_W$,
+and $A_a=\overline{\pi_W(a)}$ for $a\in\mathfrak A$.
+The graph topology on $D$ is generated by $\|\xi\|$ and
+$\|\pi_W(a)\xi\|$, for all $a\in\mathfrak A$.
+A neighborhood bounds finitely many of these seminorms, so the topology
+is locally convex.  A representation is called closed when its domain is
+complete for this topology.  Completion can require nets, namely families
+indexed by a directed set, when there is no countable family of controlling
+seminorms.  A net is Cauchy here when it is Cauchy in every graph seminorm.
+
+\Needspace{5\baselineskip}
+\begin{theorem}[The exact common graph domain]
+\label{thm:graph-domain}
+The completion of $D$ in its graph topology identifies with
+\begin{equation}
+ D_W^{\mathrm{cl}}=\bigcap_{a\in\mathfrak A}\mathcal D(A_a)
+ \subset H.
+ \label{eq:common-domain}
+\end{equation}
+On this domain, the maps $\pi_W^{\mathrm{cl}}(a)=A_a|_{D_W^{\mathrm{cl}}}$
+form an invariant $*$-representation.  In particular,
+\begin{equation}
+ \pi_W^{\mathrm{cl}}(a)\pi_W^{\mathrm{cl}}(b)\xi
+ =\pi_W^{\mathrm{cl}}(ab)\xi,
+ \qquad
+ \langle\pi_W^{\mathrm{cl}}(a)\xi,\eta\rangle
+ =\langle\xi,\pi_W^{\mathrm{cl}}(a^*)\eta\rangle.
+ \label{eq:closed-products}
+\end{equation}
+Each action is continuous in the graph topology.
+For each $a$, the nonnegative form
+\[
+ q_a([b])=W(b^*a^*ab)=\|\pi_W(a)[b]\|^2
+\]
+is closable on $H$.  Its closure is $\overline q_a(\xi)=\|A_a\xi\|^2$
+on $\mathcal D(A_a)$.  Thus \eqref{eq:common-domain} is exactly the
+intersection of these closed form domains.
+Each $\pi_W^{\mathrm{cl}}(a)$ has closure $A_a$.
+\end{theorem}
+
+\begin{proof}
+A graph Cauchy net $(\xi_i)$ has a Hilbert limit $\xi$ and limits
+$\eta_a=\lim_i\pi_W(a)\xi_i$.  Closedness of $A_a$ gives
+$\xi\in\mathcal D(A_a)$ and $A_a\xi=\eta_a$.
+If $\xi=0$, closability gives $\eta_a=0$ for every $a$.
+Hence the graph completion injects into the right side of
+\eqref{eq:common-domain}.
+
+To prove the reverse inclusion, fix $\xi$ in that intersection and a finite
+set $F\subset\mathfrak A$.  Set $c=\sum_{a\in F}a^*a$.
+For $u\in D$, the adjoint identity gives the estimate
+\begin{equation}
+ \sum_{a\in F}\|\pi_W(a)u\|^2
+ =\langle\pi_W(c)u,u\rangle
+ \leq\|\pi_W(c)u\|\,\|u\|.
+ \label{eq:graph-control}
+\end{equation}
+Since $\xi\in\mathcal D(A_c)$, choose $u_j\in D$ with
+$u_j\to\xi$ and $\pi_W(c)u_j\to A_c\xi$.
+Apply \eqref{eq:graph-control} to $u_j-u_k$.
+Every $\pi_W(a)u_j$, $a\in F$, is Cauchy.  Closedness identifies its
+limit with $A_a\xi$.  Thus $D$ approximates $\xi$ in any prescribed
+finite collection of graph seminorms.
+Directing these approximations by finite sets and positive tolerances
+produces one net converging in all graph seminorms.
+
+Let this net be $(\xi_i)$ and fix $b\in\mathfrak A$.
+Then $\pi_W(b)\xi_i\to A_b\xi$ and
+$\pi_W(a)\pi_W(b)\xi_i=\pi_W(ab)\xi_i\to A_{ab}\xi$ for every $a$.
+Closedness gives $A_b\xi\in D_W^{\mathrm{cl}}$ and
+$A_aA_b\xi=A_{ab}\xi$.
+Linearity follows by the same approximation.
+Approximating both vectors in the algebraic adjoint identity proves
+the second equality in \eqref{eq:closed-products}.
+Continuity follows from
+$\|A_aA_b\xi\|=\|A_{ab}\xi\|$ and $\|A_b\xi\|$ itself.
+
+The form norm for $q_a$ is
+$(\|\xi\|^2+\|\pi_W(a)\xi\|^2)^{1/2}$.
+Its completion is the graph of $A_a$, which proves the form assertion.
+Finally $\pi_W(a)\subseteq\pi_W^{\mathrm{cl}}(a)\subseteq A_a$,
+so taking closures proves the last statement.
+Any closed $*$-representation extending $\pi_W$ contains the limits of
+these graph Cauchy nets and agrees with their multiplier limits.
+Thus it extends $\pi_W^{\mathrm{cl}}$, which proves minimality.
+\end{proof}
+
+The word ``closed'' refers to completeness in the common graph topology.
+It does not assert that each restriction to
+$D_W^{\mathrm{cl}}$ is a closed operator or is self-adjoint.
+Example~\ref{ex:maximal-domain} separates the common domain from the
+maximal domain of one multiplier.
+
+\section{Norm and order in a complete involutive algebra}
+\label{sec:cstar-prerequisites}
+
+Bounded target algebras impose estimates which an arbitrary algebraic
+representation need not satisfy.  We derive those estimates from the norm
+before using them in transfer or unitization.
+A Banach space is a complete normed vector space.
+A $C^*$-algebra is a complex $*$-algebra complete in a norm satisfying
+$\|ab\|\leq\|a\|\|b\|$ and $\|a^*a\|=\|a\|^2$.
+The involution is isometric: the latter identity first gives
+$\|a\|\leq\|a^*\|$, and application to $a^*$ gives equality.
+No representation by bounded operators is assumed in this definition.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Adjoining a unit with its norm]
+For\label{lem:cstar-adjoin} a nonunital $C^*$-algebra $A$, the algebra $A^+=A\oplus\C1$ with
+\[
+ (a+\lambda1)(b+\mu1)=ab+\lambda b+\mu a+\lambda\mu1,
+ \qquad (a+\lambda1)^*=a^*+\bar\lambda1
+\]
+has a complete $C^*$-norm extending the norm of $A$.
+If $A\ne\{0\}$, that norm is
+\[
+ \|a+\lambda1\|_+=\sup_{\|b\|\leq1}\|ab+\lambda b\|.
+\]
+For $A=\{0\}$ take $A^+=\C$ with the absolute value.
+\end{lemma}
+
+\begin{proof}
+For $A=\{0\}$ the assertion is the usual $C^*$-norm on $\C$.
+Assume henceforth that $A\ne\{0\}$.
+Write $L_xb=xb$ for $x\in A^+$ and $b\in A$.
+These are bounded maps on the Banach space $A$.
+For $a\in A$, the choice $b=a^*/\|a\|$ shows
+$\|L_a\|=\|a\|$ when $a\ne0$.
+If $L_{a+\lambda1}=0$ with $\lambda\ne0$, then $-a/\lambda$ is a left
+identity.  Its adjoint is a right identity; multiplying the two identities
+shows that they agree and give a unit in $A$, a contradiction.
+Thus $x\mapsto L_x$ is injective and the displayed expression is a norm.
+
+For $b\in A$,
+\[
+ \|xb\|^2=\|b^*x^*xb\|
+ \leq\|b\|\|x^*xb\|\leq\|L_{x^*x}\|\|b\|^2.
+\]
+Taking suprema gives
+$\|L_x\|^2\leq\|L_{x^*x}\|\leq\|L_{x^*}\|\|L_x\|$.
+Applying this also to $x^*$ proves equality of the two adjoint norms and
+then the $C^*$-identity.
+
+To check completeness directly, one has $|\lambda|\leq\|L_{a+\lambda1}\|$.
+Otherwise $L_a=L_{a+\lambda1}-\lambda I$ would be invertible by the
+convergent geometric series.  Choose $e\in A$ with $ae=a$.
+Then $L_aL_e=L_a$ forces $L_e=I$, again giving a unit in $A$.
+It follows that
+\[
+ \|a+\lambda1\|_+\leq\|a\|+|\lambda|
+ \leq3\|a+\lambda1\|_+.
+\]
+A Cauchy sequence therefore has Cauchy components in $A$ and $\C$, whose
+limits supply its limit in $A^+$.
+\end{proof}
+
+For an element $h$ of a nonzero unital Banach algebra, its spectrum $\sigma(h)$
+is the set of complex $\lambda$ for which $\lambda1-h$ has no two-sided
+inverse.  In a nonunital $C^*$-algebra we use the unitization just constructed;
+in particular, the spectrum for $A=\{0\}$ is computed in $A^+=\C$.
+In every one of these nonzero ambient algebras, $\lambda1$ is invertible
+exactly when $\lambda\ne0$: its inverse is $\lambda^{-1}1$, while zero
+cannot have an inverse because $1\ne0$.  Thus $\sigma(0)=\{0\}$.
+A self-adjoint element is called positive when its spectrum is contained in
+$[0,\infty)$.  The next two lemmas show that this is precisely the algebraic
+notion of a square $c^*c$.
+
+\Needspace{5\baselineskip}
+\begin{lemma}[The calculus of a self-adjoint element]
+\label{lem:cstar-calculus}
+For a self-adjoint $h$ in a $C^*$-algebra, the spectrum is real and contained
+in $[-\|h\|,\|h\|]$.  Every continuous complex function $f$ on this interval
+has a well-defined value $f(h)$ obtained by norm limits of polynomials.
+The construction preserves sums, products, constants, and conjugation, and
+\[
+ \|f(h)\|=\max_{t\in\sigma(h)}|f(t)|.
+\]
+If $A$ is nonunital, $h\in A$, and $f(0)=0$, then $f(h)\in A$.
+A continuous function specified on a smaller interval containing the spectrum
+may be extended constantly past its endpoints.  Its value is independent
+of that extension by the norm identity.
+Every positive element has a positive square root in the same algebra.
+Every self-adjoint element is a difference $h=h_+-h_-$ of positive elements
+with $h_+h_-=0$ and $\|h_\pm\|\leq\|h\|$.
+\end{lemma}
+
+\begin{proof}
+For $h=0$, take $f(h)=f(0)1$.  We may therefore assume $\|h\|>0$.
+We supply the spectral facts used in the polynomial construction.
+In a nonzero unital Banach algebra, the series
+$(\lambda1-x)^{-1}=\sum_{n\geq0}\lambda^{-n-1}x^n$ converges for
+$|\lambda|>\|x\|$; the same series about any inverse proves openness of the
+invertible set and holomorphy of the resolvent.
+Thus the spectrum is compact.  It is nonempty: an everywhere-defined
+resolvent would be an entire bounded Banach-valued function tending to zero
+at infinity.  The circle derivative estimate makes such a function constant,
+hence zero, contradicting its inverse identity.
+The circle formulas of Lemma~\ref{lem:cauchy} hold for Banach-valued
+functions by the same uniform Riemann sums and norm estimates; completeness
+supplies their limits.
+
+Polynomial factorization shows $\sigma(p(x))=p(\sigma(x))$.
+Indeed, the factors of $p(x)-\lambda1$ commute, and a product of commuting
+elements is invertible exactly when all its factors are invertible.
+Existence of complex roots for a nonconstant polynomial follows from the
+same circle estimate: otherwise its reciprocal would be bounded entire and
+constant.  Repeated division gives the factorization used here.
+If $r(x)=\max\{|\lambda|:\lambda\in\sigma(x)\}$ and $R>r(x)$, deformation
+of a circle from radius greater than $\|x\|$ to radius $R$ gives
+\[
+ x^n=\frac1{2\pi i}\int_{|\lambda|=R}
+           \lambda^n(\lambda1-x)^{-1}\,d\lambda.
+\]
+The norm estimate and the polynomial spectral identity imply
+$r(x)=\lim_n\|x^n\|^{1/n}$.
+For a normal element $x$, meaning $x^*x=xx^*$, the $C^*$-identity gives
+$\|x^2\|=\|x\|^2$.  Iteration at powers $2^n$ therefore gives
+$r(x)=\|x\|$.
+
+For self-adjoint $h$, the exponential series gives
+$(e^{ith})^*e^{ith}=1$, so $\|e^{ith}\|=1$ for real $t$.
+When $\operatorname{Im}\lambda>0$, the norm-convergent integral
+\[
+ i\int_0^\infty e^{-it(h-\lambda1)}\,dt
+\]
+is an inverse of $h-\lambda1$, by integration of its derivative.
+Conjugation gives an inverse in the lower half-plane.  Hence the spectrum
+of $h$ is real.  For any polynomial $p$, the element $p(h)$ is normal;
+thus $\|p(h)\|=\max_{\sigma(h)}|p|$.
+
+Continuous functions on a compact real interval admit uniform polynomial
+approximation.  An explicit proof on $[0,1]$ uses
+$B_nf(t)=\sum_{k=0}^n f(k/n)\binom nk t^k(1-t)^{n-k}$.
+The binomial coefficients with these weights have total mass one, mean
+$t$, and variance $t(1-t)/n$.  Splitting the sum into $|k/n-t|<\delta$
+and its complement bounds the approximation error by
+\[
+ \sup_{|u-v|<\delta}|f(u)-f(v)|+
+       \frac{2\|f\|_\infty}{4n\delta^2}.
+\]
+Uniform continuity, followed by $n\to\infty$, proves the assertion;
+an affine change of variable treats the stated interval.
+The polynomial norm identity now defines $f(h)$ by completion and proves
+all its displayed properties.  Subtracting the constant term from the
+approximating polynomials proves the assertion when $f(0)=0$.
+
+If $h$ is positive, take $f(t)=\sqrt{\max(t,0)}$ on the full interval.
+Then $f(h)^2=h$, since the difference vanishes on $\sigma(h)$.
+The element $f(h)$ is itself positive: write it as $q(h)^2$ with
+$q(t)=(\max(t,0))^{1/4}$, and use the real spectrum of the self-adjoint
+$q(h)$ and the polynomial spectral identity.
+Taking $f_\pm(t)=\max(\pm t,0)$ gives the final decomposition and norm
+bounds by the same argument.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{lemma}[Positive squares and order bounds]
+\label{lem:cstar-order}
+The positive elements form a norm-closed cone whose intersection with its
+negative is zero.  They are exactly the elements $c^*c$.
+Write $a\leq b$ when $b-a$ is positive.  Conjugation by any element preserves
+this order, and
+\[
+ 0\leq a\leq b\ \Longrightarrow\ \|a\|\leq\|b\|,
+ \qquad c^*c\leq\|c\|^2 1.
+\]
+\end{lemma}
+
+\begin{proof}
+For self-adjoint $h$ and $R>0$, the condition
+$\|h-R1\|\leq R$ says exactly $\sigma(h)\subset[0,2R]$.
+This criterion and the triangle inequality show that positive elements
+are closed under addition: use radii $\|a\|$ and $\|b\|$ for two nonzero
+positive elements.  Scalar multiplication by nonnegative reals preserves
+positivity.  A norm-convergent sequence of positive elements has a common
+bounding radius, so the cone is closed.  If both $h$ and $-h$ are positive,
+the spectrum is $\{0\}$ and the normal-element norm identity gives $h=0$.
+
+For every $x$, the nonzero spectra of $x^*x$ and $xx^*$ coincide.
+This follows by scaling the identity
+$(1-uv)^{-1}=1+u(1-vu)^{-1}v$ whenever the latter inverse exists.
+Suppose first that $-x^*x$ is positive.  Writing $x=u+iv$ with self-adjoint
+$u,v$ gives
+\[
+ xx^*=2u^2+2v^2-x^*x\geq0.
+\]
+The common nonzero spectrum must then be both positive and negative, hence
+empty.  Thus $\|x\|^2=\|x^*x\|=0$.
+For a general $x$, put $h=x^*x$, take its negative part $h_-$ from
+Lemma~\ref{lem:cstar-calculus}, and set $y=xh_-^{1/2}$.
+Commutation in the calculus gives $y^*y=hh_-=-h_-^2$.
+The preceding argument forces $y=0$, hence $h_-=0$ and $x^*x\geq0$.
+Conversely, a positive element is the square of its self-adjoint square
+root, proving the characterization.
+
+If $h=d^*d\geq0$, then $c^*hc=(dc)^*(dc)\geq0$.
+The spectral bound for $c^*c$ is $[0,\|c\|^2]$, which proves the second
+order estimate.  Finally $b\leq\|b\|1$ implies
+$a\leq\|b\|1$ when $0\leq a\leq b$.
+The spectra of $a$ and $\|b\|1-a$ are nonnegative, so
+$\sigma(a)\subset[0,\|b\|]$ and $\|a\|\leq\|b\|$.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{lemma}[A positive approximate identity]
+\label{lem:cstar-approximate}
+Every $C^*$-algebra $A$ has a net $(e_i)$ of positive elements with
+$\|e_i\|\leq1$ and $e_i a\to a$, $a e_i\to a$ for every $a\in A$.
+Such a net is called a positive contractive two-sided approximate identity.
+\end{lemma}
+
+\begin{proof}
+For a unital algebra take the constant net $1$; the zero algebra is
+immediate.  Suppose now that $A$ is nonunital.  For a finite set
+$F\subset A$ and $\epsilon>0$, define in the unitization
+\[
+ t_F=\sum_{a\in F}(a^*a+aa^*),\qquad
+ e_{F,\epsilon}=t_F(t_F+\epsilon1)^{-1}.
+\]
+The calculus shows $e_{F,\epsilon}\in A$ and
+$0\leq e_{F,\epsilon}\leq1$, since $t/(t+\epsilon)$ lies in $[0,1]$
+for $t\geq0$ and vanishes at zero.
+For $a\in F$, both $a^*a$ and $aa^*$ are bounded above by $t_F$.
+Writing $e=e_{F,\epsilon}$, Lemma~\ref{lem:cstar-order} gives
+\[
+ \|a(1-e)\|^2\leq\|(1-e)t_F(1-e)\|
+ \leq\sup_{t\geq0}\frac{\epsilon^2 t}{(t+\epsilon)^2}
+ =\frac\epsilon4.
+\]
+Apply the same bound to $a^*$ to obtain $\|(1-e)a\|^2\leq\epsilon/4$.
+Direct finite sets by inclusion and positive $\epsilon$ by decreasing size.
+Every fixed $a$ then satisfies both limits.
+\end{proof}
+
+
+\Needspace{7\baselineskip}
+\section{Dagger transfer and completion}
+
+\begin{theorem}[Dagger transfer]
+\label{thm:dagger}
+Let $T:\mathfrak A\to\mathfrak B$ be a $*$-homomorphism of complex
+$*$-algebras, let $\omega:\mathfrak B\to\C$ be positive, and put
+$W=\omega\circ T$.  Then
+\begin{equation}
+ \langle a,c\rangle_W
+ =\langle T(a),T(c)\rangle_\omega,
+ \qquad
+ \cN_W=T^{-1}(\cN_\omega).
+ \label{eq:pullback}
+\end{equation}
+Consequently
+\begin{equation}
+ U_0:D_W\longrightarrow D_\omega,
+ \qquad [a]\longmapsto[T(a)],
+ \label{eq:gns-map}
+\end{equation}
+is an isometric injection and extends uniquely to an isometry
+\begin{equation}
+ U:\mathcal H_W\longrightarrow\mathcal H_\omega
+ \label{eq:completion-map}
+\end{equation}
+with closed range.  On the algebraic common domain,
+\begin{equation}
+ U_0\pi_W(a)=\pi_\omega(T(a))U_0.
+ \label{eq:algebraic-intertwining}
+\end{equation}
+
+If $\mathfrak B$ is a $C^*$-algebra, both sides of
+\eqref{eq:algebraic-intertwining} extend boundedly and
+\begin{equation}
+ \|\pi_\omega(b)\|\leq\|b\|,
+ \qquad
+ \|\pi_W(a)\|\leq\|T(a)\|,
+ \label{eq:cstar-bounds}
+\end{equation}
+while
+\begin{equation}
+ U\pi_W(a)=\pi_\omega(T(a))U
+ \quad\text{on }\mathcal H_W.
+ \label{eq:bounded-intertwining}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For $a,c\in\mathfrak A$,
+\[
+ W(c^*a)=\omega(T(c)^*T(a)),
+\]
+which proves positivity, \eqref{eq:pullback}, and the isometry
+\eqref{eq:gns-map}.  Every isometry of pre-Hilbert spaces extends
+uniquely to their completions; its range is closed because its domain is
+complete.  Multiplicativity of $T$ gives
+\eqref{eq:algebraic-intertwining}.
+
+Suppose now that $\mathfrak B$ is a $C^*$-algebra.  Lemma~\ref{lem:cstar-order}, with conjugation by $d$, gives
+\[
+ \omega(d^*b^*bd)\leq\|b\|^2\omega(d^*d),
+\]
+which proves the first estimate in \eqref{eq:cstar-bounds}.  Taking
+$b=T(a)$ and $d=T(c)$ proves the second.  Continuity then extends
+\eqref{eq:algebraic-intertwining} to
+\eqref{eq:bounded-intertwining}.  No equality between arbitrary
+unbounded closure domains is used.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{proposition}[Transfer of closed graph domains]
+Use\label{prop:graph-transfer} the data of Theorem~\ref{thm:dagger}, and set
+$K=U\mathcal H_W\subset\mathcal H_\omega$ and $E=U_0D_W$.
+On the dense subspace $E\subset K$, define
+\[
+ \rho(a)=\pi_\omega(T(a))|_E.
+\]
+Then $\rho$ is a $*$-representation, and
+\begin{equation}
+ U D_W^{\mathrm{cl}}=D_\rho^{\mathrm{cl}},
+ \qquad
+ U\pi_W^{\mathrm{cl}}(a)\xi=\rho^{\mathrm{cl}}(a)U\xi.
+ \label{eq:graph-transfer}
+\end{equation}
+Here every closure defining $D_\rho^{\mathrm{cl}}$ is taken in $K$.
+For the ambient closures on $\mathcal H_\omega$ one has
+\begin{equation}
+ U\mathcal D(\overline{\pi_W(a)})
+ \subseteq\mathcal D(\overline{\pi_\omega(T(a))}),
+ \qquad
+ \overline{\pi_\omega(T(a))}U\xi
+ =U\overline{\pi_W(a)}\xi.
+ \label{eq:ambient-transfer}
+\end{equation}
+If $T$ is surjective, $U$ is unitary and
+$U D_W^{\mathrm{cl}}=D_\omega^{\mathrm{cl}}$.
+Without surjectivity this last domain equality need not hold,
+even when $U$ is unitary.
+\end{proposition}
+
+\begin{proof}
+The algebraic intertwining identifies $\rho(a)$ with
+$U\pi_W(a)U^{-1}$ on $E$.  As a map onto $K$, $U$ is unitary.
+It identifies the individual graph closures and all graph seminorms.
+Theorem~\ref{thm:graph-domain} therefore gives \eqref{eq:graph-transfer}.
+If $\xi_j\in D_W$ approaches $\xi$ in the graph norm of
+$\pi_W(a)$, its images approach $U\xi$ and have multiplier images
+approaching $U\overline{\pi_W(a)}\xi$.
+This proves \eqref{eq:ambient-transfer}.
+For surjective $T$, one has $U_0D_W=D_\omega$ and $T(\mathfrak A)=\mathfrak B$.
+Hence the Hilbert spaces and their full graph topologies agree.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{example}[A Hilbert isometry can miss the full target domain]
+Let\label{ex:transfer-domain} $\mathfrak A=c_{00}(\mathbb N)$ and
+$\mathfrak B=\C[n]+c_{00}(\mathbb N)$, with pointwise multiplication
+and conjugation.  Here $\C[n]$ denotes polynomial sequences on the
+positive integers.  Let $T$ be inclusion and set
+\[
+ \omega(b)=\sum_{n\geq1}e^{-n}b_n,
+ \qquad W=\omega|_{\mathfrak A}.
+\]
+All sums converge, and both functionals are positive and faithful: their
+square values are zero only on the zero element, since every weight is positive.
+Both GNS completions identify with
+$H=\ell^2(\mathbb N,e^{-n})$, because they contain the finite sequences.
+Thus $U$ is the identity on $H$.
+Every $\mathfrak A$-multiplier is bounded, so $D_W^{\mathrm{cl}}=H$.
+The element $n\in\mathfrak B$ acts by an unbounded multiplier.
+Finite truncations give cores for every polynomial multiplier.  Therefore
+\[
+ D_\omega^{\mathrm{cl}}
+ =\left\{v:\sum_{n\geq1}e^{-n}n^{2k}|v_n|^2<\infty
+               \text{ for all }k\geq0\right\}.
+\]
+The vector $v_n=e^{n/2}/n$ belongs to $H$, but fails the condition for
+$k=1$.  Thus $U D_W^{\mathrm{cl}}\nsubseteq D_\omega^{\mathrm{cl}}$.
+Only the restricted algebra $T(\mathfrak A)$ appears in
+\eqref{eq:graph-transfer}.
+\end{example}
+
+For a field interpretation, algebra products represent repeated operations
+on a common domain.  Theorem~\ref{thm:graph-domain} supplies this domain
+after positivity has supplied the Hilbert norm.
+Proposition~\ref{prop:graph-transfer} preserves it for the represented
+algebra.  A vacuum vector, self-adjoint generators, locality, and a positive
+energy condition require their own constructions.
+
+\section{Positive unitization for nonunital
+\texorpdfstring{$C^*$}{C-star}-algebras}
+
+The unit missing from a convolution algebra cannot be adjoined to an
+arbitrary positive functional without an additional bound.  Let $\omega$
+be a positive linear functional on a nonunital $*$-algebra $\mathfrak A$.
+Write
+$\mathfrak A^+=\mathfrak A\oplus\C1$ and
+\begin{equation}
+ \omega_m(a+\lambda1)=\omega(a)+m\lambda.
+ \label{eq:unit-extension}
+\end{equation}
+Expanding a square in this algebra gives
+\[
+ \omega_m((a+\lambda1)^*(a+\lambda1))
+ =\omega(a^*a)+\lambda\omega(a^*)+\bar\lambda\omega(a)+m|\lambda|^2.
+\]
+Requiring real nonnegative values first forces $m\geq0$ and Hermitian
+symmetry.  For $m>0$, minimization in $\lambda$ gives the inequality below.
+For $m=0$, varying $\lambda$ forces $\omega(a)=0$ for every $a$.
+Thus the exact algebraic criterion is
+\begin{equation}
+ \omega_m\text{ is positive}
+ \quad\Longleftrightarrow\quad
+ \begin{cases}
+ m\in\R,\quad m\geq0,\\
+ \omega(a^*)=\overline{\omega(a)},\\
+ |\omega(a)|^2\leq m\,\omega(a^*a)&(a\in\mathfrak A).
+ \end{cases}
+ \label{eq:unit-criterion}
+\end{equation}
+
+A bounded representation is nondegenerate when
+$\overline{\operatorname{span}\{\pi(a)x:a\in\mathfrak A,\ x\in H\}}=H$.
+It is cyclic with vector $\Omega$ when
+$\overline{\pi(\mathfrak A)\Omega}=H$.
+
+\Needspace{5\baselineskip}
+\begin{theorem}[The nonunital $C^*$ case]
+Let\label{thm:cstar-unitization} $\mathfrak A$ be a nonunital $C^*$-algebra and let
+$\omega:\mathfrak A\to\C$ be positive.  Then $\omega$ is Hermitian and
+bounded, and the functional \eqref{eq:unit-extension} on the unitization
+constructed in Lemma~\ref{lem:cstar-adjoin} is positive exactly when
+\begin{equation}
+ m\in\R,\qquad m\geq\|\omega\|.
+ \label{eq:minimal-mass}
+\end{equation}
+Let $(e_i)$ be any positive contractive two-sided approximate identity.
+For the minimal extension $m=\|\omega\|$, its GNS vector
+$\Omega=[1]$ satisfies
+\begin{equation}
+ [e_i]\longrightarrow\Omega,
+ \label{eq:approx-vector}
+\end{equation}
+and the restricted representation of $\mathfrak A$ is bounded,
+nondegenerate, and cyclic:
+\begin{equation}
+ \omega(a)=\langle\pi_\omega(a)\Omega,\Omega\rangle,
+ \qquad
+ \overline{\pi_\omega(\mathfrak A)\Omega}=\mathcal H_\omega.
+ \label{eq:cyclic-vector}
+\end{equation}
+For $m>\|\omega\|$, the vector $[1]$ of that larger extension is not the
+limit in \eqref{eq:approx-vector}.
+\end{theorem}
+
+\begin{proof}
+Every self-adjoint element is the difference of two positive elements,
+so positivity makes $\omega$ Hermitian.  If $\omega$ were unbounded, its
+values would be unbounded on the positive unit ball: otherwise the
+decomposition of an arbitrary element into four positive parts would
+bound it.  One could then choose $a_n\geq0$ with
+\[
+ \|a_n\|\leq2^{-n},\qquad \omega(a_n)=1.
+\]
+The norm-convergent positive sum $a=\sum_na_n$ would satisfy
+$\omega(a)\geq\sum_{n=1}^N\omega(a_n)=N$ for every $N$, a
+contradiction.  Hence $\omega$ is bounded.
+
+Lemma~\ref{lem:cstar-approximate} constructs a positive contractive
+approximate identity.  Cauchy--Schwarz and
+$e_i a\to a$ give
+\begin{equation}
+ |\omega(a)|^2
+ =\lim_i|\omega(e_i a)|^2
+ \leq\|\omega\|\,\omega(a^*a).
+ \label{eq:hilbert-bound}
+\end{equation}
+Equations \eqref{eq:unit-criterion} and \eqref{eq:hilbert-bound} prove
+positivity for $m=\|\omega\|$; adding $(m-\|\omega\|)$ times the
+positive quotient functional $a+\lambda1\mapsto\lambda$, whose value
+on a square is $|\lambda|^2$, proves
+sufficiency for every larger $m$.  For a positive functional $\eta$ on a
+unital $C^*$-algebra, Cauchy--Schwarz and Lemma~\ref{lem:cstar-order} give
+\[
+ |\eta(a)|^2\leq\eta(1)\eta(a^*a)
+             \leq\eta(1)^2\|a\|^2.
+\]
+Evaluation at $1$ therefore gives $\|\eta\|=\eta(1)$.
+Applying this to $\eta=\omega_m$ and restricting yields $\|\omega\|\leq m$.
+
+It remains to identify the vector $[1]$.  If $\|\omega\|>0$, choose
+$\|a\|\leq1$ with $|\omega(a)|$ arbitrarily close to $\|\omega\|$.
+Cauchy--Schwarz gives
+$|\omega(e_i a)|^2\leq\omega(e_i^2)\omega(a^*a)
+\leq\omega(e_i^2)\|\omega\|$.
+Since $e_i a\to a$, this forces the lower limit of $\omega(e_i^2)$ to be
+at least $\|\omega\|$.  The upper bound is $\|\omega\|\|e_i^2\|\leq\|\omega\|$.
+Therefore $\omega(e_i^2)\to\|\omega\|$.
+Since $0\leq e_i^2\leq e_i\leq1$ in the unitization, also
+$\omega(e_i)\to\|\omega\|$.  Therefore
+\[
+ \|[1]-[e_i]\|^2
+ =\|\omega\|-2\omega(e_i)+\omega(e_i^2)\longrightarrow0,
+\]
+which is \eqref{eq:approx-vector}; the zero functional is immediate.
+Moreover $\pi_\omega(a)\Omega=[a]$, proving cyclicity, and
+$\pi_\omega(e_i)[a]=[e_i a]\to[a]$, proving nondegeneracy.  The
+$C^*$-estimate in \eqref{eq:cstar-bounds} proves boundedness.  If
+$m>\|\omega\|$, the same computation instead gives
+\[
+ \lim_i\|[1]-[e_i]\|^2=m-\|\omega\|>0.\qedhere
+\]
+\end{proof}
+
+For $\mathfrak A=\{0\}$, the only functional is $\omega=0$, and
+$\mathfrak A^+=\C$.  The extension $\omega_m(\lambda)=m\lambda$
+is positive exactly when $m\geq0$.
+At minimal mass $m=0$, its GNS Hilbert space and $\Omega$ are both zero,
+and the constant approximate identity $e_i=0$ gives $[e_i]=\Omega$.
+For $m>0$, the extended GNS space is one-dimensional with
+$\|\Omega\|^2=m$; the original zero algebra acts as zero and
+$[e_i]=0$ cannot converge to $\Omega$.
+
+\Needspace{5\baselineskip}
+\begin{example}[Positive unitization can fail algebraically]
+Let $\mathfrak A=c_{00}(\mathbb N)$ with pointwise multiplication and
+conjugation, and define
+\[
+ \omega(a)=\sum_{n\geq1}n a_n.
+\]
+This is a Hermitian positive functional.  If a positive extension
+$\omega_m$ existed, Cauchy--Schwarz in the unitization, applied to the
+$n$th point mass $e_n$, would give
+\[
+ n^2=|\omega_m(e_n)|^2
+ \leq\omega_m(1)\omega_m(e_n^*e_n)=mn
+\]
+for every $n$, which is impossible for finite $m$.
+\end{example}
+
+
+\Needspace{5\baselineskip}
+\begin{lemma}[The logarithmic size of the gamma term]
+\label{lem:gamma-log-size}
+For each fixed $\sigma>0$,
+\[
+ \operatorname{Re}\psi(\sigma+it)=\log|t|+O_\sigma(1)
+ \qquad(|t|\geq1).
+\]
+Consequently $k_\infty(t)=\operatorname{Re}\psi(1/4+it/2)-\log\pi$
+differs from $\log|t|$ by a bounded function outside $[-1,1]$.
+\end{lemma}
+
+\begin{proof}
+For $|t|\geq1$, put
+$h_t(x)=(x+\sigma)/((x+\sigma)^2+t^2)$ on $x\geq0$.
+Its derivative changes sign at most once, and its maximum is at most
+$1/(2|t|)$.  Thus $\int_0^\infty|h_t'(x)|\,dx\leq1/|t|$.
+On each unit interval the fundamental theorem of calculus gives
+\[
+ \left|h_t(n)-\int_n^{n+1}h_t(x)\,dx\right|
+ \leq\int_n^{n+1}|h_t'(x)|\,dx.
+\]
+The real part of the series in \eqref{eq:digamma} therefore equals
+\[
+ -\gamma+\lim_{N\to\infty}
+ \left(\sum_{n=0}^N\frac1{n+1}
+ -\frac12\log\frac{(N+1+\sigma)^2+t^2}{\sigma^2+t^2}\right)
+ +O(|t|^{-1}).
+\]
+By the defining limit of $\gamma$, this is
+$\tfrac12\log(\sigma^2+t^2)+O(|t|^{-1})$.
+The stated bound follows, and replacing $t$ by $t/2$ changes the logarithm
+only by $-\log2$.
+\end{proof}
+
+\section{The Gaussian obstruction to finite mass}
+\label{sec:weil-mass}
+
+For the full Weil functional, failure of positive unitization follows
+from its arithmetic local terms.  It does not require a hypothesis about
+the zeros.  The relevant functions approach the convolution identity
+while remaining inside $\cA_\zeta$:
+\begin{equation}
+ g_a(u)=\frac{e^{-u^2/(4a)}}{\sqrt{4\pi a}},
+ \qquad \widehat g_a(t)=e^{-at^2},
+ \qquad g_a^*\star g_a=g_{2a},\quad a>0.
+ \label{eq:gaussian-semigroup}
+\end{equation}
+
+\Needspace{5\baselineskip}
+\begin{theorem}[No finite positive unitization of the Weil functional]
+\label{thm:weil-mass}
+As $a\downarrow0$, the functional in \eqref{eq:weil-functional} satisfies
+\begin{equation}
+ L_\zeta(g_a)
+ =\frac{a^{-1/2}\log(1/a)}{4\sqrt\pi}+O(a^{-1/2}).
+ \label{eq:weil-gaussian-asymptotic}
+\end{equation}
+In particular $L_\zeta(g_{2a})>0$ for all sufficiently small $a$, and
+\begin{equation}
+ \frac{|L_\zeta(g_a)|^2}{L_\zeta(g_a^*\star g_a)}
+ \sim\frac{\sqrt2}{4\sqrt\pi}\,a^{-1/2}\log(1/a)
+ \longrightarrow\infty.
+ \label{eq:weil-unitization-divergence}
+\end{equation}
+There is no positive extension of $L_\zeta$ to $\cA_\zeta^+$ with a
+finite value at the adjoined unit.
+\end{theorem}
+
+\begin{proof}
+Every derivative of $g_a$ is a polynomial times a Gaussian.
+Thus $g_a\in\cA_\zeta$.  Completing the square proves
+\eqref{eq:gaussian-semigroup}, with the Fourier normalization
+\eqref{eq:operations}.
+The polar contribution is $2e^{a/4}=O(1)$.
+
+For $0<a\leq1$, split the Gaussian exponent into two equal parts.
+Since $\Lambda_{\mathrm{vM}}(n)\leq\log n$, the absolute prime contribution
+is bounded by
+\begin{equation}
+ \frac{e^{-(\log2)^2/(8a)}}{\sqrt{\pi a}}
+ \sum_{n\geq2}\frac{\log n}{\sqrt n}
+                       e^{-(\log n)^2/8}.
+ \label{eq:prime-gaussian-bound}
+\end{equation}
+The series is finite: its terms are at most $n^{-2}$ for all sufficiently
+large $n$.  Hence this contribution is exponentially small relative to
+$a^{-1/2}$.
+
+Put $k_\infty(t)=\operatorname{Re}\psi(1/4+it/2)-\log\pi$.
+Lemma~\ref{lem:gamma-log-size} shows that
+$k_\infty(t)-\log|t|$ is bounded for $|t|\geq1$.
+It is integrable on $[-1,1]$, since $k_\infty$ is smooth there.
+Therefore
+\[
+ \int_{\R}e^{-at^2}\bigl(k_\infty(t)-\log|t|\bigr)\,dt
+ =O(a^{-1/2}).
+\]
+Substitution $s=\sqrt a\,t$ gives
+\[
+ \frac1{2\pi}\int_{\R}e^{-at^2}\log|t|\,dt
+ =\frac{a^{-1/2}}{2\pi}
+ \left(\frac{\sqrt\pi}{2}\log(1/a)
+          +\int_{\R}e^{-s^2}\log|s|\,ds\right).
+\]
+The remaining integral is finite.  Adding all three local terms proves
+\eqref{eq:weil-gaussian-asymptotic}.
+Applying that formula at $a$ and $2a$ proves
+\eqref{eq:weil-unitization-divergence}.
+A positive unitization of mass $m$ would require
+$|L_\zeta(g_a)|^2\leq mL_\zeta(g_{2a})$ by
+\eqref{eq:unit-criterion}, which contradicts the divergence.
+\end{proof}
+
+\Needspace{5\baselineskip}
+\begin{theorem}[Positive finite Gaussian subspaces]
+\label{thm:gaussian-subspaces}
+Fix distinct positive real numbers $\lambda_1,\ldots,\lambda_r$.
+There exists $a_0>0$ such that the Weil form is positive definite on
+\[
+ E_a=\operatorname{span}_{\C}\{g_{a\lambda_1},\ldots,g_{a\lambda_r}\}
+ \qquad(0<a<a_0).
+\]
+The dimension of $E_a$ is $r$.  This assertion is unconditional.
+The threshold $a_0$ may depend on the entire finite family.
+\end{theorem}
+
+\begin{proof}
+The Gram matrix of the displayed functions is the real symmetric matrix
+\[
+ G(a)_{jk}=L_\zeta(g_{a(\lambda_j+\lambda_k)}).
+\]
+Apply \eqref{eq:weil-gaussian-asymptotic} at each of the finitely many
+scales $a(\lambda_j+\lambda_k)$.  In matrix norm,
+\begin{equation}
+ \frac{4\sqrt\pi\,\sqrt a}{\log(1/a)}G(a)
+ \longrightarrow M,
+ \qquad M_{jk}=\frac1{\sqrt{\lambda_j+\lambda_k}}.
+ \label{eq:gaussian-gram-limit}
+\end{equation}
+For $c\in\C^r$,
+\begin{equation}
+ c^*Mc=\frac1{\sqrt\pi}\int_{\R}
+       \left|\sum_{j=1}^r c_j e^{-\lambda_j t^2}\right|^2dt.
+ \label{eq:limiting-gaussian-gram}
+\end{equation}
+If this integral vanishes, continuity makes its integrand zero everywhere.
+Order the $\lambda_j$ increasingly, divide the resulting identity by
+$e^{-\lambda_1t^2}$, and let $t\to+\infty$.
+This gives $c_1=0$.  Repeating proves $c=0$.
+Thus $M$ is positive definite.
+Let $\mu>0$ be its smallest eigenvalue.  Matrix convergence makes the
+left matrix in \eqref{eq:gaussian-gram-limit} differ from $M$ by less
+than $\mu/2$ for all sufficiently small $a$.
+Hence $G(a)$ is positive definite.
+The same linear-independence argument applied to the Fourier transforms
+$e^{-a\lambda_jt^2}$ proves $\dim E_a=r$.
+\end{proof}
+
+For $\lambda_1=1$ and $\lambda_2=4$, the limiting matrix is
+\[
+ M=\begin{pmatrix}1/\sqrt2&1/\sqrt5\\1/\sqrt5&1/\sqrt8\end{pmatrix},
+ \qquad\det M=\frac1{20}>0.
+\]
+This gives a positive two-dimensional family directly from the local terms.
+The quantifiers in Theorem~\ref{thm:gaussian-subspaces} fix the finite family
+before choosing its scale.  They do not imply positivity on all of
+$\cA_\zeta$ at once.
+
+\Needspace{5\baselineskip}
+\begin{corollary}[Excluded positive carriers]
+\label{cor:weil-carriers}
+There is no representation
+\[
+ L_\zeta(g)=\langle\pi(g)\Omega,\Omega\rangle
+\]
+on a positive Hilbert space with $\Omega$ of finite norm in a common
+invariant $*$-representation domain.
+There is also no $*$-homomorphism $T:\cA_\zeta\to\mathfrak B$ to a
+$C^*$-algebra with a positive linear functional
+$\omega:\mathfrak B\to\C$ such that $L_\zeta=\omega\circ T$.
+\end{corollary}
+
+\begin{proof}
+In the vector case, the adjoint identity on the invariant domain gives
+\[
+ |L_\zeta(g)|^2
+ \leq\|\Omega\|^2\|\pi(g)\Omega\|^2
+ =\|\Omega\|^2L_\zeta(g^*\star g).
+\]
+This contradicts \eqref{eq:weil-unitization-divergence}.
+In the $C^*$ case, positivity implies boundedness and
+$|\omega(b)|^2\leq\|\omega\|\omega(b^*b)$ by
+Theorem~\ref{thm:cstar-unitization}, or its unital Cauchy--Schwarz proof.
+Substitute $b=T(g)$ and use the same divergence.
+\end{proof}
+
+This obstruction concerns the functional's representing vector.
+It does not prevent bounded GNS multipliers.  Indeed, under RH,
+\eqref{eq:zero-norm} and $|\widehat f(t)|\leq\|f\|_{L^1}$ give
+\[
+ L_\zeta((f\star b)^*\star(f\star b))
+ \leq\|f\|_{L^1}^2 L_\zeta(b^*\star b).
+\]
+Thus every convolution multiplier is bounded under that hypothesis,
+and $D_{L_\zeta}^{\mathrm{cl}}=\mathcal H_{L_\zeta}$.
+The functional itself has no finite representing vector.
+A positive functional on a proper test algebra, or a positive weight
+finite on a specified test ideal, remains compatible with this restriction.
+A positive weight assigns values in $[0,\infty]$ to positive elements,
+additively and homogeneously for nonnegative scalars.  Its finite test
+ideal and all products must be specified before a GNS or field
+interpretation can be asserted.
+
+\section{Why an indefinite quotient does not give positivity}
+
+The Hermitian part of the construction exists without positivity.
+For a complex $*$-algebra $\mathfrak A$ and a Hermitian functional $W$,
+meaning $W(a^*)=\overline{W(a)}$, put
+\[
+ B_W(f,g)=W(g^*f),\qquad
+ R_W=\{f:B_W(f,g)=0\text{ for every }g\in\mathfrak A\}.
+\]
+Then $R_W$ is a left ideal, since
+\[
+ B_W(af,g)=W(g^*af)=B_W(f,a^*g)=0\quad(f\in R_W).
+\]
+The quotient $\mathfrak A/R_W$ consequently has a nondegenerate Hermitian
+pairing and an algebraic left action satisfying
+$B_W(af,g)=B_W(f,a^*g)$.
+This applies unconditionally to $(\cA_\zeta,L_\zeta)$ by
+\eqref{eq:hermitian}.  It supplies neither a positive norm nor a class of
+the missing unit.  Under positivity, Cauchy--Schwarz identifies $R_W$
+with $\cN_W$, and Theorem~\ref{thm:gns} applies.
+
+Let $V=\C^2$, $J=\operatorname{diag}(1,-1)$, and
+\[
+ [x,y]=y^*Jx.
+\]
+The vectors $e_1+e_2$ and $e_1-e_2$ are isotropic, while their sum is
+not.  Thus the isotropic cone $\{x:[x,x]=0\}$ is not a linear subspace
+and cannot be divided out.  The radical
+$\{x:[x,y]=0\ \forall y\}$ is zero here.  In general, quotienting by the
+radical produces only a nondegenerate Hermitian space; it supplies
+neither a fundamental symmetry nor a complete Hilbert majorant.
+A fundamental symmetry is a linear involution $J$ satisfying
+$[Jx,y]=[x,Jy]$ and $[Jx,x]>0$ for $x\ne0$.
+A complete Hilbert majorant is a complete Hilbert norm on the same space
+for which the original Hermitian pairing is continuous.
+In this finite-dimensional example the displayed $J$ gives both choices,
+but the radical quotient itself selects neither choice.
+
+Nor is a vector functional for an indefinite adjoint positive.  On
+$M_2(\C)$ put $A^\sharp=JA^*J$, let $\Omega=e_1$, and set
+$\omega(A)=[A\Omega,\Omega]$.  For
+\[
+ X=\begin{pmatrix}0&0\\1&0\end{pmatrix}
+\]
+one has
+\begin{equation}
+ \omega(X^\sharp X)=[X\Omega,X\Omega]=[e_2,e_2]=-1.
+ \label{eq:indefinite-negative}
+\end{equation}
+Hence an indefinite pairing does not provide the positivity required in
+\eqref{eq:weil-criterion}.
+
+\Needspace{7\baselineskip}
+\section{The independent arithmetic question}
+
+\begin{proposition}[Formal factorization]
+For a linear functional $W$ on a complex $*$-algebra $\mathfrak A$, the
+following are equivalent:
+\begin{enumerate}
+\item $W$ is positive;
+\item there are a complex $*$-algebra $\mathfrak B$ and maps
+\[
+ \omega:\mathfrak B\longrightarrow\C,
+ \qquad T:\mathfrak A\longrightarrow\mathfrak B,
+\]
+where $\omega$ is positive, $T$ is a $*$-homomorphism, and
+$W=\omega\circ T$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Dagger transfer proves $(\mathrm{ii})\Rightarrow(\mathrm{i})$.  For the converse take
+$\mathfrak B=\mathfrak A$, $\omega=W$, and $T$ equal to the identity.
+\end{proof}
+
+For $W=L_\zeta$, formal factorization is therefore equivalent to the
+positivity in \eqref{eq:weil-criterion}, and hence to RH.  The identity
+factorization, or a Hilbert space whose spectral data are prescribed from
+the zeta zeros, cannot establish that positivity independently.
+
+\Needspace{5\baselineskip}
+\begin{openproblem}[Independent dagger realization of $L_\zeta$]
+Construct a complex $*$-algebra $\mathfrak B$, a positive linear
+functional $\omega:\mathfrak B\to\C$, and a $*$-homomorphism
+$T:\cA_\zeta\to\mathfrak B$ such that
+\begin{equation}
+ L_\zeta=\omega\circ T.
+ \label{eq:factorization}
+\end{equation}
+Derive the carrier, the map, and the positivity of $\omega$ from the
+polar, archimedean, and prime-power structures in
+\eqref{eq:weil-functional}, without using RH, the multiset of zeta zeros,
+or an assertion equivalent to \eqref{eq:weil-criterion}.  Prove
+\eqref{eq:factorization} with all three local terms and the Fourier and
+measure conventions above.  Corollary~\ref{cor:weil-carriers} excludes
+a positive functional on a $C^*$-algebra as the target.
+Any admissible positive functional $\omega$ must fail the finite-mass
+unitization bound on the image of $T$.
+Theorem~\ref{thm:graph-domain} and
+Proposition~\ref{prop:graph-transfer} then specify the common invariant
+domain supplied by this factorization.
+\end{openproblem}
+
+The resulting representation would still need an additional comparison
+to a spectral determinant.  Equality of functionals does not preserve
+trace multiplicities.  For example, on $\C$ the positive functional
+$W(z)=mz$, with integer $m\geq2$, has a one-dimensional GNS space.
+A scalar $\lambda$ consequently has determinant $s-\lambda$ there.
+The trace realization $z\mapsto zI_m$ on $\C^m$ has the same functional
+and determinant $(s-\lambda)^m$.  Thus a determinant realization must
+identify the operator, its domain, and spectral multiplicities separately.
+
+
+\section{Finite matrix kernels and positive trace}
+\label{sec:weil-formal-kernels}
+
+A scalar obtained by closing an operator kernel need not define a
+positive pairing.  This distinction can already be seen on finite
+matrices inside the formal operator algebra.
+For this comparison, use the underlying field $\C$ with the discrete
+topology and put
+\[
+ H_{\mathrm{for}}=\C[[x,y]]/\C.
+\]
+Enumerate the nonconstant monomials as $e_0,e_1,\ldots$ in increasing
+total degree.  The formal topology makes $H_{\mathrm{for}}$ the product
+$\C^{\mathbb N}$ of discrete coefficient spaces.  Write
+$\epsilon^j(h)=h_j$ for its coefficient functionals.
+A continuous endomorphism has a matrix with finitely many nonzero entries
+in each row.  Indeed, every output coefficient must depend on finitely
+many input coefficients.  Conversely, this condition makes every finite
+output projection continuous.  Denote this algebra by $\mathscr E$.
+Its operator topology requires agreement of each entire row in a fixed
+finite set of output rows.
+
+Put $E_{ij}=e_i\otimes\epsilon^j$ and let $\mathscr F_0$ be their
+finite complex span.  These are the matrices with finitely many nonzero
+entries in total.  They satisfy
+\[
+ E_{ij}E_{k\ell}=\delta_{jk}E_{i\ell},\qquad
+ E_{ij}^*=E_{ji}.
+\]
+Conjugating coefficients defines the displayed involution on
+$\mathscr F_0$.  This algebra has no unit, since each of its elements
+annihilates all but finitely many basis vectors.
+It is dense in $\mathscr E$: retaining finitely many whole rows of a
+row-finite matrix gives a matrix in $\mathscr F_0$ with those rows unchanged.
+
+The same matrix units act on $D_0=\C^{(\mathbb N)}$, the finite sequences,
+inside the Hilbert space $\ell^2(\mathbb N)$ over the usual complex field.
+Its inner product is $\langle v,w\rangle=\sum_jv_j\overline{w_j}$.
+Every finite matrix preserves $D_0$, and conjugate transpose is its
+Hilbert adjoint restricted to $D_0$.  Thus this comparison preserves the
+algebra and involution on $\mathscr F_0$.  It does not identify the two
+topologies or their completions.
+
+\Needspace{5\baselineskip}
+\begin{proposition}[The positive finite-matrix trace]
+\label{prop:weil-matrix-trace}
+Define $\tau(B)=\sum_i B_{ii}$ on $\mathscr F_0$.
+It is a positive linear functional with zero GNS null space.
+Its GNS completion is $\ell^2(\mathbb N\times\mathbb N)$, with $[B]$
+identified with its coefficient array $(B_{ij})$.
+The GNS action is left matrix multiplication, and
+\[
+ \|\pi_\tau(A)\|=\|A\|_{\ell^2\to\ell^2}
+ \qquad(A\in\mathscr F_0).
+\]
+Nevertheless, $\tau$ has no positive extension of finite mass to
+$\mathscr F_0^+=\C I+\mathscr F_0$.
+\end{proposition}
+\begin{proof}
+All sums in the algebraic calculation are finite, and
+\[
+ \tau(C^*B)=\sum_{i,j}B_{ij}\overline{C_{ij}},\qquad
+ \tau(B^*B)=\sum_{i,j}|B_{ij}|^2.
+\]
+The second expression vanishes exactly when $B=0$.
+For a norm-Cauchy sequence of finite arrays, every coefficient has a
+limit $b_{ij}$.  A common norm bound bounds every finite sum of
+$|b_{ij}|^2$, so the limit array is square-summable.
+Pass to the coefficientwise limit in a finite sum of
+$|(B_n)_{ij}-(B_m)_{ij}|^2$, then take the supremum over the finite sums.
+The Cauchy estimate gives $\|B_n-b\|\to0$.
+Conversely, finite rectangular truncations of a square-summable array
+converge in this norm.  This identifies the quotient and completion.
+Multiplication by $A$ acts separately on each column, so
+\[
+ \|AB\|^2=\sum_j\|A B_{\bullet j}\|_{\ell^2}^2
+       \leq\|A\|_{\ell^2\to\ell^2}^2\sum_j\|B_{\bullet j}\|_{\ell^2}^2.
+\]
+The operator norm on the right is finite.  The entrywise
+Cauchy--Schwarz inequality bounds it by
+$(\sum_{i,j}|A_{ij}|^2)^{1/2}$.
+Conversely, take a matrix $B$ whose only nonzero column is a finite
+vector $v$.  The ratio $\|AB\|/\|B\|$ is $\|Av\|/\|v\|$.
+Since $A$ uses only finitely many input coordinates, such vectors
+compute its full operator norm.  This proves equality.
+
+For $n\geq1$, let $Q_n=\sum_{i=0}^{n-1}E_{ii}$.
+It is a self-adjoint projection with $\tau(Q_n)=n$.
+If a positive extension had value $c$ on $I$, then $c$ would be real
+and nonnegative, while
+\[
+ 0\leq\tau^+((I-Q_n)^*(I-Q_n))=c-n
+\]
+for every $n$.  No finite $c$ satisfies these inequalities.
+Equivalently,
+$|\tau(Q_n)|^2/\tau(Q_n^*Q_n)=n$ is unbounded.
+\end{proof}
+
+The map $(\lambda,B)\mapsto\lambda I+B$ identifies the algebraic
+unitization with the displayed subalgebra of $\mathscr E$.
+It is injective because a scalar multiple of the infinite identity is
+a finite matrix only when that scalar is zero.
+On this subalgebra, any linear extension of finite-matrix trace has the
+form
+\[
+ \tau_c(\lambda I+B)=c\lambda+\operatorname{tr}(B).
+\]
+For $A,B\in\mathscr F_0$, its value on a product is
+\[
+ \tau_c((\lambda I+A)(\mu I+B))
+ =c\lambda\mu+\lambda\operatorname{tr}(B)
+       +\mu\operatorname{tr}(A)+\sum_{i,j}A_{ij}B_{ji}.
+\]
+The sum is finite and is unchanged when the two factors are exchanged.
+Thus $\tau_c$ is cyclic, but the proposition excludes positivity for every $c$.  In particular, any cyclic trace on
+a larger formal differential-operator algebra that restricts to this
+formula cannot be positive for an involution restricting to the one above.
+This conclusion needs no choice of an involution on the larger algebra.
+
+The finite-dimensional corners $Q_n\mathscr F_0Q_n$ do have positive
+traces, and the traces agree under their inclusions.  Their units are
+$Q_n$, with masses $n$.  Compatibility of these finite traces supplies
+$\tau$ on their union, but supplies no uniform mass bound on a unitization.
+The common GNS domain and a vector representing the functional are
+therefore separate constructions even in this explicit matrix example.
+
+\Needspace{5\baselineskip}
+\begin{proposition}[Formal completion and Hilbert adjoints]
+\label{prop:weil-formal-adjoint}
+Conjugate transpose on $\mathscr F_0$ does not extend to a continuous
+involution on $\mathscr E$ with its operator topology.
+The finite-matrix action on $D_0$ also does not extend by the same
+coefficient formula to an action of all $\mathscr E$ on
+$\ell^2(\mathbb N)$.
+\end{proposition}
+\begin{proof}
+Let $T_n=\sum_{i=0}^nE_{i0}$.
+Every fixed row stabilizes, so $T_n$ converges in $\mathscr E$ to
+\[
+ T(h)=h_0(1,1,1,\ldots).
+\]
+The matrices $T_n^*=\sum_{i=0}^nE_{0i}$ do not converge in
+$\mathscr E$.  Their zeroth rows do not stabilize, and an entire output
+row is discrete in the operator topology.  Continuity of a proposed
+involution would send the convergent sequence $T_n$ to a convergent
+sequence, which is impossible.
+For the second assertion, $e_0\in\ell^2$ but
+$T(e_0)=(1,1,\ldots)\notin\ell^2$.
+\end{proof}
+
+There is also a direct norm obstruction.
+The projections $E_{nn}$ tend to zero in the formal operator topology,
+but each has Hilbert operator norm one and GNS vector norm one for
+$\tau$.  Thus the formal completion, operator-norm completion and
+GNS completion are different constructions on the same finite matrices.
+For the Weil algebra, Theorem~\ref{thm:graph-domain} specifies a fourth
+topology when its multipliers are unbounded: the common graph topology.
+None of these completions is selected by cyclicity alone.
+
+\section{Gaussian averages and formal coefficients}
+\label{sec:weil-gaussian-coefficients}
+
+The Gaussian in the explicit formula also permits an exact comparison
+between a numerical integral and formal polynomial elimination.
+It is necessary to specify both the observable algebra and the parameter.
+For a positive real number $h$, set
+\[
+ \mathbb E_h(p)=\frac1{\sqrt{2\pi h}}
+       \int_{\R}p(u)e^{-u^2/(2h)}\,du
+       =\int_{\R}p(u)g_{h/2}(u)\,du,
+ \qquad p\in\C[u].
+\]
+The polynomial algebra here uses pointwise multiplication and
+$p^*(u)=\overline{p(u)}$ for real $u$.
+Its involution fixes $u$.  Polynomial growth and Gaussian decay make
+every displayed integral absolutely convergent.
+
+\Needspace{5\baselineskip}
+\begin{proposition}[Numerical and formal Gaussian elimination]
+\label{prop:weil-gaussian-comparison}
+For every polynomial $p$ and real $h>0$,
+\begin{equation}
+ \mathbb E_h(p)
+ =\sum_{m\geq0}\frac{h^m}{2^m m!}\,p^{(2m)}(0).
+ \label{eq:weil-gaussian-moments}
+\end{equation}
+The sum is finite.  In particular, $\mathbb E_h$ is positive,
+$\mathbb E_h(u)=0$ and $\mathbb E_h(u^2)=h$.
+
+Let $\hbar$ instead be a formal central variable of degree zero.
+The same finite derivative formula on each polynomial gives a continuous
+$\C[[\hbar]]$-linear map
+\[
+ \mathsf G:\C[u][[\hbar]]\longrightarrow\C[[\hbar]],\qquad
+ \mathsf G\!\left(\sum_{j\geq0}p_j(u)\hbar^j\right)
+  =\sum_{j,m\geq0}\frac{p_j^{(2m)}(0)}{2^m m!}\hbar^{j+m}.
+\]
+Continuity refers to the $\hbar$-adic topologies.
+On $\C[u,\hbar]$, evaluating this result at $\hbar=h>0$ agrees
+with the numerical Gaussian average of the specialized polynomial.
+There is no unital $\C$-algebra homomorphism
+$\C[[\hbar]]\to\C$ that sends $\hbar$ to a nonzero number $h$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:gaussian} gives $\mathbb E_h(1)=1$.
+Reflection makes every odd moment zero.
+For $n\geq2$, integrate the derivative of
+$u^{n-1}e^{-u^2/(2h)}$ over $\R$.
+Its values at both ends are zero, and its derivative is integrable.
+It follows that
+\[
+ \mathbb E_h(u^n)=(n-1)h\,\mathbb E_h(u^{n-2}).
+\]
+Thus
+$\mathbb E_h(u^{2m})=(2m)!h^m/(2^m m!)$.
+Expansion of $p$ proves \eqref{eq:weil-gaussian-moments}.
+The positive integral of $|p|^2$ proves positivity, and the moments
+of $u$ and $u^2$ have the stated values.
+
+In the formal formula, the coefficient of $\hbar^N$ uses only
+$j,m\geq0$ with $j+m=N$.  There are finitely many such pairs.
+Each derivative is a derivative of a polynomial, so this defines every
+coefficient without a convergence assumption.
+The map preserves every power of $\hbar$, proving continuity.
+Reindexing these finite coefficient sums proves
+$\C[[\hbar]]$-linearity.  For a polynomial in $u,\hbar$, all sums are
+finite, so numerical specialization commutes with the proved moment formula.
+
+For $h\ne0$, the formal series
+\[
+ (1-\hbar/h)^{-1}=\sum_{n\geq0}(\hbar/h)^n
+\]
+is an inverse in $\C[[\hbar]]$.
+A unital homomorphism sending $\hbar$ to $h$ would send the unit
+$1-\hbar/h$ to zero, which is impossible.
+At $h=0$, the constant-coefficient homomorphism does exist.
+\end{proof}
+
+The comparison at positive $h$ therefore holds on the polynomial
+subalgebra.  Extension to a selected class of infinite series requires
+an additional summability rule and its compatibility with the operations.
+Formal coefficientwise existence alone gives no such rule.
+
+The Gaussian average is not multiplicative:
+$\mathbb E_h(u)^2=0$ while $\mathbb E_h(u^2)=h$.
+Nor does inserting a Gaussian turn pointwise polynomial multiplication
+into convolution.  For $A>0$, the linear map
+\[
+ J_A:\C[u]\longrightarrow\A_\zeta,\qquad J_A(p)(u)=p(u)g_A(u)
+\]
+is well-defined, since every derivative is a polynomial times a Gaussian.
+But
+\[
+ J_A(1)\star J_A(1)=g_{2A}\ne g_A=J_A(1),
+ \qquad J_A(u)^*=-J_A(u)\ne J_A(u^*).
+\]
+The first inequality follows already from the values at zero.
+The second uses the reflection in the convolution involution.
+Thus $J_A$ is neither an algebra homomorphism nor an involution-preserving
+map.  Positivity of the numerical Gaussian average cannot pass through
+it by Theorem~\ref{thm:dagger}.
+
+\section{The remaining comparison with quantum currents}
+\label{sec:weil-current-comparison}
+
+The formal Hamiltonian bracket on $H_{\mathrm{for}}$ is
+$[f,g]=f_xg_y-f_yg_x$ modulo constants.
+Put $a_f=-f_y\partial_x+f_x\partial_y$ on this quotient.
+Changing a representative by a constant changes neither the derivatives
+nor the induced operator.  An output through degree $N$ uses only
+monomials through degree $N+1$ in each input, because a bracket of
+monomials has degree equal to the sum of their degrees minus two.
+This proves continuity, including continuity of $f\mapsto a_f$ in the
+row topology.  Computing the two derivative coefficients gives
+\[
+ [a_f,a_g]=-\partial_y[f,g]\,\partial_x
+                 +\partial_x[f,g]\,\partial_y=a_{[f,g]}.
+\]
+Thus these operators give an actual symmetry action on $H_{\mathrm{for}}$.
+A numerical positive representation needs further data: a complex
+Hilbert space, a common invariant dense domain, and
+operators whose restricted adjoints realize the chosen involution.
+Proposition~\ref{prop:weil-formal-adjoint} prevents obtaining these data
+by completing all finite matrix kernels in the formal operator topology.
+Proposition~\ref{prop:weil-gaussian-comparison} also prevents specializing
+an arbitrary formal parameter at a positive numerical value.
+These are restrictions on the stated carriers and maps.
+
+An algebra generated by products includes the empty product as a unit.
+For a positive comparison, one might choose an ordinary degree-zero
+subalgebra containing this identity and closed under an involution.
+The finite-mass calculation excludes this choice if the positive scalar
+functional is to be defined on the entire subalgebra.
+
+\Needspace{5\baselineskip}
+\begin{proposition}[An obstruction for unital observable algebras]
+\label{prop:weil-unital-current}
+There is no unital complex $*$-algebra $\mathfrak B$, positive linear
+functional $\omega:\mathfrak B\to\C$, and $*$-homomorphism
+$T:\A_\zeta\to\mathfrak B$ such that $L_\zeta=\omega\circ T$.
+No continuity hypothesis on $T$ or $\omega$ is needed.
+\end{proposition}
+\begin{proof}
+Suppose these data exist.  Put $m=\omega(1)$, a finite nonnegative real
+number.  Extend $T$ to the algebraic unitization by
+\[
+ T^+(f+\lambda1)=T(f)+\lambda1_{\mathfrak B}.
+\]
+The unitization product and the multiplicativity of $T$ show that $T^+$
+is a unital $*$-homomorphism.
+Thus $\omega\circ T^+$ is a positive extension of $L_\zeta$ with mass $m$.
+By \eqref{eq:unit-criterion},
+\[
+ |L_\zeta(g_a)|^2\leq m L_\zeta(g_a^*\star g_a)
+                  =m L_\zeta(g_{2a})\qquad(a>0).
+\]
+Theorem~\ref{thm:weil-mass} makes the ratio on the left to
+$L_\zeta(g_{2a})$ unbounded as $a$ decreases to zero.
+The denominator is positive for all sufficiently small $a$, by the same
+asymptotic.  This contradicts the finite bound $m$.
+\end{proof}
+
+A remaining positive arithmetic comparison must therefore choose a
+proper nonunital algebra on which the functional is finite.
+Its first missing map is an involution-preserving algebra map
+\[
+ T:\A_\zeta\longrightarrow\mathfrak B
+\]
+into such a specified algebra of current observables, together with a positive
+linear functional $\omega$ on $\mathfrak B$ satisfying
+$L_\zeta=\omega\circ T$.
+The algebra, involution, domain and positivity of $\omega$ must be
+constructed independently of the zeta zero locations.
+Theorem~\ref{thm:dagger} would give the isometry
+$U:[f]\mapsto[T(f)]$ onto the closed subspace
+$K=\overline{[T(\A_\zeta)]}\subset\mathcal H_\omega$.
+Proposition~\ref{prop:graph-transfer} identifies the transported common
+graph domain with that of the restricted multipliers on
+$E=[T(\A_\zeta)]\subset K$, with every closure taken in $K$.
+Equality with the full ambient common domain requires a further
+hypothesis, such as surjectivity of $T$.
+The finite-mass obstruction in Theorem~\ref{thm:weil-mass} still applies:
+a finite-norm vector representing this functional, or a positive
+functional on a $C^*$-algebra as target, cannot supply this factorization.
+A positive functional on a proper nonunital algebra remains a possible
+kind of carrier, as the finite-matrix trace demonstrates.  This example
+does not supply the map $T$ or the equality with $L_\zeta$.
+
+Any current-field construction must also specify its operator products,
+contraction tensors and the scalar trace or weight on those products.
+Their convergence with the spatial propagators is an additional analytic
+condition.  Neither the strict zero strip nor the equality of the
+Gaussian moment formulas constructs this comparison or proves the
+positivity of the full Weil form.
+
+\clearpage
+\endgroup

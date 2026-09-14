@@ -1,0 +1,1049 @@
+\chapter{Compatible formal lifts}
+\label{chap:compatible-formal-lifts}
+
+A homology class can admit a first-order lift without admitting a
+second-order lift. Each later obstruction depends on the corrections
+already chosen. A formal cycle therefore requires compatible choices of
+primitives at every order. Four vectors exhibit a second-order failure.
+Longer finite complexes place the first nonzero obstruction arbitrarily late.
+
+A contraction chooses primitives linearly and defines successive
+obstruction maps on homology. If every obstruction map vanishes, the
+resulting formal series define a quasi-isomorphism. Homology concentrated
+in one parity guarantees this vanishing, without bounds on degrees or
+dimensions.
+
+\section{The equation for a lift}
+\label{sec:lift-equation}
+
+Let $k$ be a field of arbitrary characteristic. We use chain degrees in
+this chapter: the differential lowers degree. A graded vector space is a
+family $(C_n)_{n\in\mathbb Z}$, with underlying vector space
+$\bigoplus_n C_n$. The direct sum consists of finite sums of homogeneous
+elements. A chain complex has linear maps
+\[
+ b:C_n\longrightarrow C_{n-1},\qquad b^2=0.
+\]
+
+Its cycles, boundaries, and homology are
+\[
+ Z_n=\ker(b:C_n\to C_{n-1}),\qquad
+ \mathcal B_n=\operatorname{im}(b:C_{n+1}\to C_n),\qquad
+ H_n(C,b)=Z_n/\mathcal B_n.
+\]
+The equation $b^2=0$ implies $\mathcal B_n\subset Z_n$.
+For $c\in Z_n$, write $[c]$ for its homology class.
+A primitive of $v\in C_n$ is an element $a\in C_{n+1}$ satisfying $ba=v$.
+
+To perturb $b$ while retaining a differential, take a second map
+$B:C_n\to C_{n+1}$ satisfying
+\begin{equation}\label{eq:lift-mixed-identities}
+ b^2=B^2=0,\qquad bB+Bb=0.
+\end{equation}
+These data define a mixed complex. Both maps have odd degree.
+Our sign convention interchanges homogeneous factors of degrees $p,q$
+with sign $(-1)^{pq}$. In particular, the anticommutator in
+\eqref{eq:lift-mixed-identities} has a plus sign.
+
+The operator $B$ induces a map
+\[
+ B_*:H_n(C,b)\longrightarrow H_{n+1}(C,b),\qquad [c]\longmapsto[Bc].
+\]
+Indeed, $bc=0$ gives $bBc=-Bbc=0$, and $B(ba)=-b(Ba)$ is a boundary.
+Thus $B_*=0$ means that every $Bc$, for $c$ a cycle, has a primitive.
+The definition supplies no choice of that primitive.
+
+Introduce an even formal variable $u$ of degree $-2$.
+Then $D=b+uB$ has degree $-1$, and
+\[
+ D^2=b^2+u(bB+Bb)+u^2B^2=0.
+\]
+Moving the even variable past either map contributes no sign.
+
+To solve $Dc=0$ with arbitrarily many powers of $u$, define the space of formal series
+in each total degree by
+\begin{equation}\label{eq:lift-product-carrier}
+ (C[[u]])_n=\prod_{j\geq0}u^j C_{n+2j}.
+\end{equation}
+An element is a sequence $c_j\in C_{n+2j}$, written
+$\sum_{j\geq0}u^jc_j$. Equality means equality of every coefficient.
+The space of polynomials uses the direct sum
+$(C[u])_n=\bigoplus_{j\geq0}u^jC_{n+2j}$ and permits only finitely
+many nonzero coefficients. These spaces can differ even in a single
+total degree.
+
+For $N\geq0$, let $F^N(C[[u]])_n$ consist of the series whose
+coefficients with index less than $N$ vanish. These subspaces form the
+neighborhoods of zero. A sequence converges in this topology when each
+finite initial list of coefficients eventually becomes constant.
+
+Every compatible collection of finite truncations determines exactly one
+series by taking its coefficients. This proves completeness.
+The only series in every $F^N$ is zero, which proves separation.
+No analytic convergence condition is imposed.
+
+The differential on \eqref{eq:lift-product-carrier} is
+\begin{equation}\label{eq:lift-differential}
+ D\left(\sum_{j\geq0}u^jc_j\right)
+ =bc_0+\sum_{j\geq1}u^j(bc_j+Bc_{j-1}).
+\end{equation}
+The coefficient at index $j$ belongs to $C_{n+2j-1}$, as required
+for total degree $n-1$. Each output coefficient uses at most two inputs.
+The formula therefore defines a continuous map that preserves $F^N$.
+
+All graded complexes below mean the family of their homogeneous parts,
+or its direct sum over total degree. Multiplication by $u$ is the map
+\[
+ u:(C[[u]])_{n+2}\longrightarrow (C[[u]])_n,
+ \qquad (c_0,c_1,\ldots)\longmapsto(0,c_0,c_1,\ldots).
+\]
+It is injective, has image $F^1(C[[u]])_n$, and commutes with $D$.
+Thus the direct sum over total degrees is a graded $k[u]$-module.
+An arbitrary scalar series in $k[[u]]$ need not act on that direct sum,
+since its powers can create infinitely many total degrees.
+The notation $C[[u]]$ will always mean the degreewise product
+\eqref{eq:lift-product-carrier}, without a further product over degrees.
+
+The negative cyclic homology of this mixed complex is, by definition,
+\[
+ HC^-_n(C)=H_n(C[[u]],D).
+\]
+The definition concerns the specified mixed complex and requires no
+realization as the chains of an algebra. A class in $HC^-_n(C)$ lifts
+$\alpha\in H_n(C,b)$ if the constant coefficient of a representative
+has class $\alpha$. This defines the reduction map
+\[
+ \rho_n:HC^-_n(C)\longrightarrow H_n(C,b).
+\]
+It is well-defined: the constant coefficient of a $D$-cycle is a
+$b$-cycle, and that of a $D$-boundary is a $b$-boundary.
+
+By \eqref{eq:lift-differential}, the formal cycle equation is exactly
+\begin{equation}\label{eq:lift-recurrence}
+ bc_0=0,\qquad bc_j=-Bc_{j-1}\quad(j\geq1).
+\end{equation}
+For a prescribed cycle $c_0$, the first correction exists if and only if
+$B_*[c_0]=0$. Every later correction has its own obstruction.
+
+\begin{proposition}\label{prop:lift-successive-obstruction}
+Let $N\geq0$ and suppose $c_j\in C_{n+2j}$ satisfy
+\eqref{eq:lift-recurrence} through index $N$.
+Then $Bc_N$ is a $b$-cycle, and the partial series extends through index
+$N+1$ if and only if
+\[
+ [Bc_N]=0\quad\text{in }H_{n+2N+1}(C,b).
+\]
+\end{proposition}
+
+\begin{proof}
+If $N=0$, then $bBc_0=-Bbc_0=0$.
+If $N\geq1$, the preceding equation gives
+$bBc_N=-Bbc_N=B^2c_{N-1}=0$.
+An extension must satisfy $bc_{N+1}=-Bc_N$, so it makes $Bc_N$ a
+boundary. Conversely, if $Bc_N=ba$ with $a\in C_{n+2N+2}$,
+choose $c_{N+1}=-a$. This is the required extension.
+\end{proof}
+
+For the same partial series, cancellation gives the exact identity
+\[
+ D\left(\sum_{j=0}^N u^jc_j\right)=u^{N+1}Bc_N.
+\]
+The partial series is a cycle modulo $F^{N+1}$. Its obstruction decides
+whether it extends to a cycle modulo $F^{N+2}$.
+The obstruction belongs to the specified partial lift.
+If its last coefficient changes by a cycle $z$, its obstruction changes
+by $B_*[z]$. Changes to earlier coefficients must also respect all
+preceding equations. Independent finite truncations do not constitute
+one compatible infinite series.
+
+\section{A later obstruction and its torsion}
+\label{sec:lift-finite-obstructions}
+
+Let $C$ have one basis vector in each degree from zero to three:
+\[
+ |x|=0,\qquad |y|=1,\qquad |z|=2,\qquad |w|=3.
+\]
+All other components vanish. Set
+\[
+ bz=y,\qquad Bx=y,\qquad Bz=w,
+\]
+and set every unlisted value of both maps to zero.
+The images of $b$ and $B$ lie in the span of $y,w$, on which both maps
+vanish. Therefore $b^2=B^2=bB=Bb=0$ in every characteristic.
+
+The $b$-cycles are spanned by $x,y,w$, and its boundaries by $y$.
+Consequently $H_0(C,b)=k\cdot[x]$, $H_3(C,b)=k\cdot[w]$, and all other
+homology groups vanish. Since $Bx=bz$ and $Bw=0$, the induced map $B_*$
+is zero.
+
+The class $[x]$ has no formal lift. Its constant representative is $x$,
+and the equation $bc_1=-y$ forces $c_1=-z$.
+The next equation would require $bc_2=w$ with $c_2\in C_4=0$.
+Equivalently,
+\[
+ D(x-uz)=-u^2w.
+\]
+The first obstruction vanishes, while the second is the nonzero class
+$-[w]$.
+
+The whole completed homology records this failure. Put
+\[
+ x'=x-uz,\qquad y'=y+uw.
+\]
+Both substitutions preserve total degree. Their inverses are
+$x=x'+uz$ and $y=y'-uw$. Direct computation gives
+\[
+ Dx'=-u^2w,\qquad Dz=y',\qquad Dy'=Dw=0.
+\]
+
+The pair generated by $z,y'$ is contractible: the degree-one map sending
+$y'$ to $z$ and $z$ to zero satisfies $Dh+hD=1$ on this pair and all
+its $u$-multiples. For a cycle $v$, that equation reads $v=D(hv)$,
+so the pair contributes no homology.
+
+On the remaining generators, the differential is multiplication by
+$-u^2$ from the family generated by $x'$ to the family generated by
+$w$. Multiplication by $u^2$ is injective, since it shifts coefficients
+by two places. The homology has basis $[w],u[w]$, and $u^2[w]=0$.
+Thus, as a graded $k[u]$-module,
+\[
+ HC^-_*(C)=\bigl(k[u]/(u^2)\bigr)[w],\qquad |w|=3.
+\]
+
+Its nonzero homogeneous parts have degree $3$ and $1$.
+The quotient also equals $k[[u]]/(u^2)$, since every scalar series has a
+unique remainder of degree less than two. The nonzero class $[w]$ has
+torsion of exact exponent two: $u^2[w]=0$ and $u[w]\ne0$.
+
+The first nonzero obstruction can occur arbitrarily late.
+Fix $r\geq2$ and take basis vectors
+\[
+ x_0,\ldots,x_{r-1},\quad y_1,\ldots,y_{r-1},\quad w,
+ \qquad |x_i|=2i,\quad |y_i|=2i-1,\quad |w|=2r-1.
+\]
+Define
+\[
+ \begin{aligned}
+ bx_i&=y_i &&(1\leq i\leq r-1),\\
+ Bx_i&=y_{i+1} &&(0\leq i\leq r-2),\\
+ Bx_{r-1}&=w.
+ \end{aligned}
+\]
+Every unlisted value is zero. Again both maps vanish on all their
+images, so the mixed identities hold. Its homology is spanned by
+$[x_0]$ in degree zero and $[w]$ in degree $2r-1$, and $B_*=0$.
+
+For a degree-zero lift of $[x_0]$, each coefficient is a scalar multiple
+of the single available vector $x_i$. The recurrence forces that scalar
+to be $(-1)^i$. Hence
+\begin{equation}\label{eq:lift-delayed-series}
+ D\left(\sum_{i=0}^{r-1}(-u)^i x_i\right)
+ =(-1)^{r-1}u^r w.
+\end{equation}
+The corrections through $u^{r-1}$ exist. The correction at $u^r$ would
+require a primitive of $w$ in $C_{2r}=0$.
+
+\begin{proposition}\label{prop:lift-delayed-torsion}
+For this mixed complex,
+\[
+ HC^-_*(C)=\bigl(k[u]/(u^r)\bigr)[w],\qquad |w|=2r-1.
+\]
+Its nonzero homogeneous parts are one-dimensional in degrees
+$2r-1,2r-3,\ldots,1$. The class $[w]$ has torsion of exact exponent $r$.
+\end{proposition}
+
+\begin{proof}
+For $0\leq i\leq r-1$, set
+\[
+ x'_i=\sum_{j=i}^{r-1}(-u)^{j-i}x_j.
+\]
+This substitution is degree preserving, since $|u^{j-i}x_j|=2i$.
+Its inverse is $x_{r-1}=x'_{r-1}$ and
+$x_i=x'_i+u x'_{i+1}$ for $0\leq i<r-1$.
+Cancellation of the $y$ terms gives
+\[
+ Dx'_0=(-1)^{r-1}u^rw,\qquad
+ Dx'_i=y_i+(-1)^{r-1-i}u^{r-i}w\quad(1\leq i\leq r-1).
+\]
+
+Define $y'_i$ to be the latter right side.
+It has degree $2i-1$, is a cycle, and the inverse substitution is
+$y_i=y'_i-(-1)^{r-1-i}u^{r-i}w$.
+
+The completed complex is therefore the direct sum of the finitely many
+pairs $x'_i\mapsto y'_i$ for $i\geq1$ and the remaining pair
+$x'_0\mapsto(-1)^{r-1}u^rw$.
+Each of the first pairs is contractible by $h(y'_i)=x'_i$.
+On the last pair, coefficient shifting makes the map injective.
+Its image consists exactly of the multiples of $u^rw$.
+The quotient has basis $[w],u[w],\ldots,u^{r-1}[w]$ in the degrees
+stated. Its last basis vector is nonzero and its next multiple is zero,
+which proves the assertion about the torsion exponent.
+\end{proof}
+
+For $r=2$ this is the four-vector example, with $x_1=z$ and $y_1=y$.
+For $r=3$, the successive differentials are
+\[
+ Dx_0=uy_1,\qquad D(x_0-ux_1)=-u^2y_2,\qquad
+ D(x_0-ux_1+u^2x_2)=u^3w.
+\]
+Given any fixed number of successive lifting equations, a larger $r$
+makes all of them solvable before the nonzero obstruction appears.
+Thus no fixed finite number of these equations suffices uniformly over
+arbitrary mixed complexes.
+
+\section{A contraction chooses the corrections}
+\label{sec:lift-contraction}
+
+To construct one linear lifting map for all input classes, we need
+primitives that depend linearly on the input.
+Over a field, complements of cycles and boundaries supply such choices.
+Choose subspaces $H'_n,L_n$ with
+\[
+ Z_n=\mathcal B_n\oplus H'_n,\qquad
+ C_n=\mathcal B_n\oplus H'_n\oplus L_n.
+\]
+They exist by the basis-extension and complement construction in
+Lemma~\ref{lem:cc-basis-extension}.
+No dimension restriction is needed.
+
+The restriction $b:L_n\to\mathcal B_{n-1}$ is bijective.
+Its kernel is $L_n\cap Z_n=0$. For surjectivity, write any preimage of a
+boundary in the three summands. The first two summands have zero
+differential, so the $L_n$ component is still a preimage.
+
+Let $H_n=H_n(C,b)$ and give the graded vector space $H$ zero differential.
+Define degree-zero maps $i:H\to C$ and $p:C\to H$ by including the
+chosen representatives and projecting to their homology classes.
+Define $h:C_n\to C_{n+1}$ as the inverse of
+$b:L_{n+1}\to\mathcal B_n$ on $\mathcal B_n$, and set it to zero on
+$H'_n\oplus L_n$. These maps satisfy
+\begin{equation}\label{eq:lift-contraction}
+ pi=1_H,\qquad bi=0,\qquad pb=0,\qquad
+ bh+hb=1_C-ip,\qquad h^2=hi=ph=0.
+\end{equation}
+
+On $\mathcal B_n$ the term $bh$ is the identity and
+$hb=ip=0$. On $H'_n$, the map $ip$ is the identity and $b=h=0$.
+On $L_n$, the term $hb$ is the identity and $bh=ip=0$.
+These checks prove the homotopy identity.
+The remaining identities follow from $h(\mathcal B_n)\subset L_{n+1}$,
+$h(H'_n\oplus L_n)=0$, and the definitions of $i,p$.
+
+We call these data a contraction onto homology. More generally, over a
+commutative ring $R$, a contraction onto $H=H_*(C,b)$ will mean $R$-linear
+maps of these degrees satisfying \eqref{eq:lift-contraction}, normalized
+by
+\[
+ pz=[z]\quad(z\in Z_n).
+\]
+This normalization makes $i$ a choice of representatives for the given
+homology classes, since $pi=1$ and $bi=0$.
+
+Such contractions need not exist over a ring. For the complex
+$\mathbb Z\xrightarrow{2}\mathbb Z$ in degrees one and zero, a map
+$i:\mathbb Z/2\mathbb Z\to\mathbb Z$ with $pi=1$ cannot exist:
+every homomorphism into $\mathbb Z$ sends the element killed by two to
+zero. Over a field, the construction above supplies the normalization.
+
+For a cycle $z$, the contraction identity reduces to
+\begin{equation}\label{eq:lift-cycle-decomposition}
+ z=i(pz)+b(hz).
+\end{equation}
+In particular, $pz=0$ makes $hz$ a primitive of $z$.
+
+For $\alpha\in H_n$, this suggests the corrections
+\[
+ a_0=i\alpha,\qquad a_j=-hBa_{j-1}\quad(j\geq1).
+\]
+The composite $hB$ raises degree by two, so $a_j\in C_{n+2j}$.
+The resulting series is
+\begin{equation}\label{eq:lift-chosen-series}
+ I(\alpha)=\sum_{j\geq0}(-u)^j(hB)^ji\alpha.
+\end{equation}
+
+If the recurrence holds through $a_{j-1}$, then $Ba_{j-1}$ is a cycle.
+Applying \eqref{eq:lift-cycle-decomposition} to it gives
+\[
+ ba_j=-bhBa_{j-1}=-Ba_{j-1}+ipBa_{j-1}.
+\]
+The chosen next coefficient succeeds exactly when $pBa_{j-1}=0$,
+because $i$ is injective. The corresponding maps on homology are
+\begin{equation}\label{eq:lift-obstruction-maps}
+ pB(hB)^{j-1}i:H_n\longrightarrow H_{n+2j-1},\qquad j\geq1.
+\end{equation}
+The first is $B_*$, by the normalization of $p$.
+The later maps require the preceding choices and have odd degree.
+
+To allow a formal series of classes as input, put
+$(H[[u]])_n=\prod_{q\geq0}u^qH_{n+2q}$ and extend $I$ by
+\begin{equation}\label{eq:lift-coefficient-extension}
+ I\left(\sum_{q\geq0}u^q\alpha_q\right)
+ =\sum_{N\geq0}u^N
+   \sum_{q=0}^N(-1)^{N-q}(hB)^{N-q}i\alpha_q.
+\end{equation}
+Each inner sum is finite and lies in $C_{n+2N}$.
+The map is $R$-linear, preserves total degree and $F^N$, and commutes
+with multiplication by $u$. Preservation of $F^N$ proves continuity.
+
+\begin{theorem}\label{thm:lift-completed-quasi-isomorphism}
+Let $(C,b,B)$ be a mixed complex over a commutative ring $R$, with a
+contraction onto homology as above. The map $I$ in
+\eqref{eq:lift-coefficient-extension} is a chain map from $(H[[u]],0)$
+to $(C[[u]],b+uB)$ if and only if
+\begin{equation}\label{eq:lift-all-obstructions-vanish}
+ pB(hB)^{j-1}i=0\qquad\text{for all }j\geq1.
+\end{equation}
+When these conditions hold, $I$ is a continuous quasi-isomorphism:
+it induces, in every degree, an isomorphism
+\begin{equation}\label{eq:lift-homology-product}
+ (H[[u]])_n=\prod_{j\geq0}u^jH_{n+2j}
+ \xrightarrow{\ \cong\ } HC^-_n(C).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Suppose first that \eqref{eq:lift-all-obstructions-vanish} holds.
+For a single $\alpha\in H_n$, the initial coefficient $i\alpha$ is a
+$b$-cycle. At step $j\geq1$, the hypothesis gives
+\[
+ pBa_{j-1}=(-1)^{j-1}pB(hB)^{j-1}i\alpha=0.
+\]
+Inductively, the calculation preceding the theorem therefore gives
+$ba_j=-Ba_{j-1}$.
+Thus $DI(\alpha)=0$. For a general input series, each coefficient in
+$DI$ is a finite sum of these zero coefficients. Therefore $DI=0$.
+
+Conversely, suppose $DI=0$. Apply this to every constant input
+$\alpha\in H_n$. Its coefficient equation at index $j\geq1$ is
+$ba_j+Ba_{j-1}=0$. Applying $p$ and using $pb=0$ gives
+$(-1)^{j-1}pB(hB)^{j-1}i\alpha=0$.
+Since $n,\alpha,j$ were arbitrary, all maps in
+\eqref{eq:lift-all-obstructions-vanish} vanish.
+
+Assume these equivalent conditions. To prove surjectivity on homology,
+let $z\in(C[[u]])_n$ be a $D$-cycle and set $z^{(0)}=z$.
+Suppose a residual cycle $z^{(m)}$ of total degree $n+2m$ has been
+constructed. Its constant coefficient $z^{(m)}_0$ is a $b$-cycle.
+Set
+\[
+ \alpha_m=pz^{(m)}_0\in H_{n+2m},\qquad
+ q_m=hz^{(m)}_0\in C_{n+2m+1}.
+\]
+Equation \eqref{eq:lift-cycle-decomposition} shows that
+$z^{(m)}-I(\alpha_m)-Dq_m$ has zero constant coefficient.
+Here $q_m$ is regarded as a constant series. There is therefore a
+unique series $z^{(m+1)}$ of degree $n+2m+2$ satisfying
+\[
+ z^{(m)}-I(\alpha_m)-Dq_m=u z^{(m+1)}.
+\]
+
+Its left side is a cycle. Applying $D$ and using injectivity of
+multiplication by $u$ proves $Dz^{(m+1)}=0$.
+This completes the induction for every $m\geq0$.
+
+Iterating the equation gives, for each $N\geq0$,
+\[
+ z-I\left(\sum_{m=0}^{N-1}u^m\alpha_m\right)
+   -D\left(\sum_{m=0}^{N-1}u^mq_m\right)=u^Nz^{(N)}.
+\]
+For $N=0$, both sums are empty and this is $z=z^{(0)}$.
+
+The full series $\alpha=\sum_{m\geq0}u^m\alpha_m$ and
+$q=\sum_{m\geq0}u^mq_m$ belong to $(H[[u]])_n$ and
+$(C[[u]])_{n+1}$ respectively. For a fixed coefficient index, the right
+side is zero once $N$ exceeds that index. The finite coefficient formulas
+for $I$ and $D$ then give $z=I(\alpha)+Dq$.
+Thus every homology class lies in the image of $I$.
+
+For injectivity, let $\alpha=\sum_{j\geq0}u^j\alpha_j$ have total
+degree $n$ and suppose $I(\alpha)=Dq$, where
+$q\in(C[[u]])_{n+1}$. The constant equation is $i\alpha_0=bq_0$.
+Applying $p$ gives $\alpha_0=0$, hence $bq_0=0$.
+
+By \eqref{eq:lift-cycle-decomposition},
+$q_0=i(pq_0)+b(hq_0)$. Define
+\[
+ q'=q-I(pq_0)-D(hq_0)\in(C[[u]])_{n+1}.
+\]
+Its constant coefficient is zero, and $Dq'=Dq$ because $DI=0$ and
+$D^2=0$. Both $\alpha$ and $q'$ are divisible by $u$.
+
+Write $\alpha=u\alpha'$ and $q'=u q''$, with total degrees $n+2$
+and $n+3$ respectively. Since $I$ and $D$ commute with $u$, their
+equation and injectivity of $u$ give $I(\alpha')=Dq''$.
+The same argument applied to this equation shows $\alpha_1=0$.
+Induction gives $\alpha_j=0$ for every $j\geq0$, so $\alpha=0$.
+The source differential is zero, and this proves injectivity on homology.
+Continuity and degree preservation were proved in
+\eqref{eq:lift-coefficient-extension}.
+\end{proof}
+
+\begin{corollary}\label{cor:lift-pure-parity}
+Let $k$ be a field and suppose there is $\epsilon\in\{0,1\}$ such that
+$H_n(C,b)=0$ whenever $n\not\equiv\epsilon\pmod2$.
+Then the quasi-isomorphism of Theorem~\ref{thm:lift-completed-quasi-isomorphism}
+exists. No finite-dimensionality or boundedness hypothesis is required.
+\end{corollary}
+
+\begin{proof}
+Choose the contraction using the complements already constructed.
+Each map in \eqref{eq:lift-obstruction-maps} increases degree by the
+odd integer $2j-1$. If its source degree has parity $\epsilon$, its
+target group is zero. Otherwise its source group is zero.
+Thus every obstruction map vanishes, for both choices of $\epsilon$.
+The theorem applies.
+\end{proof}
+
+The coefficient construction proves this isomorphism without
+interchanging homology and an inverse limit.
+
+\section{A homotopy compatible with both differentials}
+\label{sec:lift-common-contraction}
+
+A contraction that also respects $B$ extends coefficientwise to the
+perturbed complexes. Let $C$ be a mixed complex over a commutative ring
+$R$, with a contraction onto $H=H_*(C,b)$.
+Suppose a degree-one map $\beta:H_n\to H_{n+1}$ satisfies $\beta^2=0$
+and
+\begin{equation}\label{eq:lift-common-contraction}
+ Bi=i\beta,\qquad pB=\beta p,\qquad Bh+hB=0.
+\end{equation}
+The first two equations say that inclusion and projection respect the
+second operator. The last equation requires the homotopy to
+anticommute with it. In particular, $\beta=B_*$: apply $p$ to $Bi\alpha$
+and use the normalization on cycles.
+
+\begin{proposition}\label{prop:lift-common-contraction}
+The coefficientwise extensions of $i,p,h$ satisfy
+\[
+ Di=i(u\beta),\qquad pD=(u\beta)p,\qquad
+ Dh+hD=1-ip.
+\]
+Together with $pi=1$ and $h^2=hi=ph=0$, these identities show that $i,p$
+induce inverse homology isomorphisms between $(C[[u]],D)$ and
+$(H[[u]],u\beta)$.
+If $\beta=0$, each $i\alpha$ is a formal cycle with constant coefficients,
+and $i$ induces $H[[u]]\cong HC^-_*(C)$ degree by degree.
+\end{proposition}
+
+\begin{proof}
+All coefficientwise extensions preserve the filtration. Their degrees
+remain zero, zero, and one. The identities $bi=0$ and $Bi=i\beta$ give
+$Di=ui\beta=i(u\beta)$. Similarly, $pb=0$ and $pB=\beta p$ give
+$pD=(u\beta)p$. Finally,
+\[
+ Dh+hD=bh+hb+u(Bh+hB)=1-ip.
+\]
+
+The identities $pi=1$ and $h^2=hi=ph=0$ hold coefficientwise as well.
+Also $(u\beta)^2=u^2\beta^2=0$, so the target is a chain complex.
+
+If $z$ is a $D$-cycle, then $pz$ is a cycle for $u\beta$, and the
+homotopy identity gives $z=i(pz)+D(hz)$. This proves surjectivity of
+the map induced by $i$. If $a$ is a $u\beta$-cycle and $i(a)=Dq$,
+applying $p$ gives $a=u\beta(pq)$, so $a$ is a boundary in the target.
+This proves injectivity. When $\beta=0$, $Di\alpha=0$ and the target
+differential is zero, which proves the final assertion.
+\end{proof}
+
+The compatibility equations can hold with homology in both parities.
+For example, start with any graded $R$-module $H$ and put $b=B=0$ on it.
+Adjoin free generators $a,s,c,t$ with
+$|a|=0$, $|s|=|c|=1$, and $|t|=2$. Set
+\[
+ bs=a,\qquad bt=c,\qquad Ba=c,\qquad Bs=-t,
+\]
+and let every other value vanish. The squares vanish.
+The anticommutator on $s$ is $b(-t)+B(a)=-c+c=0$.
+On $a,c,t$ its terms are both zero, proving all mixed identities.
+
+Let $i,p$ include and project $H$, and define $ha=s$, $hc=t$, with
+$h=0$ elsewhere. Then $bh+hb$ is the identity on $a,s,c,t$ and zero
+on $H$. The side conditions in \eqref{eq:lift-contraction} follow from
+the formulas.
+
+On $a$,
+$(Bh+hB)a=-t+t=0$. On $s,c,t,H$, both terms are zero.
+Moreover, $Bi=pB=0$. Thus \eqref{eq:lift-common-contraction} holds
+with $\beta=0$, although $B$ itself is nonzero.
+The four extra generators contribute no completed homology.
+
+\section{A lift that requires infinitely many coefficients}
+\label{sec:lift-infinite-series}
+
+Pure parity can remove every obstruction while forcing infinitely many
+nonzero corrections. Let $C$ have basis
+\[
+ x_i\quad(i\geq0),\qquad y_i\quad(i\geq1),
+ \qquad |x_i|=2i,\quad |y_i|=2i-1.
+\]
+Define $bx_0=0$, $bx_i=y_i$ for $i\geq1$, and $Bx_i=y_{i+1}$
+for $i\geq0$. Both maps vanish on every $y_i$, so all mixed identities
+hold. Its $b$-homology is $k\cdot[x_0]$ in degree zero and vanishes elsewhere.
+Indeed, each $x_i\mapsto y_i$ for $i\geq1$ is a two-term acyclic pair.
+
+Take $i([x_0])=x_0$, let $p$ project to $[x_0]$, and put
+$hy_i=x_i$, $hx_i=0$. These maps satisfy the contraction equations.
+
+The chosen lift is
+\[
+ I([x_0])=\sum_{i\geq0}(-u)^ix_i\in(C[[u]])_0.
+\]
+Its coefficient at $u^j$ in the differential is
+$((-1)^j+(-1)^{j-1})y_j=0$ for $j\geq1$. The constant coefficient
+also vanishes. Thus it is a cycle. It is not a boundary, since its
+constant coefficient $x_0$ is not a $b$-boundary.
+Theorem~\ref{thm:lift-completed-quasi-isomorphism} gives
+$HC^-_{-2j}(C)=k\,u^j[I([x_0])]$ for $j\geq0$, with every other
+homogeneous part zero.
+
+No polynomial cycle lifts $[x_0]$. A homogeneous degree-zero polynomial
+has the form $\sum_{i=0}^N\lambda_i u^ix_i$.
+Its constant coefficient must have $\lambda_0=1$.
+The equations for $y_1,\ldots,y_N$ force
+$\lambda_i=-\lambda_{i-1}=(-1)^i$. The remaining term in its
+differential is $(-1)^N u^{N+1}y_{N+1}\ne0$.
+This calculation includes $N=0$, when the remaining term is $uy_1$.
+
+There is a further difference from algebraic extension of scalars.
+Let $C_{\mathrm{tot}}=\bigoplus_n C_n$ be the underlying vector space,
+and regard $C_{\mathrm{tot}}[[u]]=\prod_{j\geq0}u^jC_{\mathrm{tot}}$
+temporarily as an ungraded space of series. The coefficient map
+\[
+ C_{\mathrm{tot}}\otimes_k k[[u]]\longrightarrow C_{\mathrm{tot}}[[u]],
+ \qquad v\otimes\sum_j a_ju^j\longmapsto\sum_j a_ju^jv,
+\]
+has image exactly those series whose coefficients lie in one
+finite-dimensional subspace of $C_{\mathrm{tot}}$.
+
+A finite sum of tensors has this property by taking the span of its
+first factors. Conversely, choose a basis $v_1,\ldots,v_m$ for such a
+subspace and write each coefficient uniquely as
+$\sum_{\ell=1}^m a_{\ell j}v_\ell$. The series is the image of
+$\sum_{\ell=1}^m v_\ell\otimes(\sum_j a_{\ell j}u^j)$.
+
+The coefficient map is also injective. Rewrite any finite tensor sum
+using a basis of the span of its first factors. If all output
+coefficients vanish, linear independence makes every scalar series
+in that expression zero.
+
+The coefficients $(-1)^ix_i$ of this lift are linearly independent.
+Hence the lift is outside the image of the coefficient map.
+The comparison takes place in $C_{\mathrm{tot}}[[u]]$, while the lift
+has total degree zero in \eqref{eq:lift-product-carrier}.
+
+In fact, no nonzero even cycle lies in the image of this tensor product
+for this example. Such an element can be written
+$\sum_{i=0}^N f_i(u)x_i$. The coefficient of $y_{N+1}$ in its
+differential is $u f_N(u)$. Injectivity of multiplication by $u$ gives
+$f_N=0$, and descending induction gives every $f_i=0$.
+Thus the choice of completion changes the existence of the required
+cycle.
+
+\section{Reduction, uniqueness, and choices}
+\label{sec:lift-choices}
+
+Reduction determines which constant class a formal class lifts.
+For every mixed complex, its kernel satisfies
+\begin{equation}\label{eq:lift-reduction-kernel}
+ \ker\rho_n=u\,HC^-_{n+2}(C).
+\end{equation}
+
+Indeed, multiplication by $u$ produces zero constant coefficient,
+so its image lies in the kernel. Conversely, take a cycle $z$ whose
+constant coefficient is a boundary, say $z_0=bq_0$ with
+$q_0\in C_{n+1}$. Then $z-Dq_0=u z'$ for a unique series $z'$ of
+total degree $n+2$. Applying $D$ and using injectivity of $u$ on series
+gives $Dz'=0$. Thus $[z]=u[z']$, proving the other inclusion.
+
+This argument alone does not make multiplication by $u$ injective
+on homology. The finite examples have $u$-torsion.
+
+Under Theorem~\ref{thm:lift-completed-quasi-isomorphism}, the reduction
+maps form short exact sequences
+\begin{equation}\label{eq:lift-short-exact}
+ 0\longrightarrow HC^-_{n+2}(C)\xrightarrow{\ u\ }HC^-_n(C)
+ \xrightarrow{\ \rho_n\ }H_n(C,b)\longrightarrow0.
+\end{equation}
+Surjectivity follows from $\rho_n[I(\alpha)]=\alpha$.
+
+For injectivity at the left, write a class as $[I(\gamma)]$ using the
+theorem. If its $u$-multiple is zero, then $[I(u\gamma)]=0$.
+Injectivity of the isomorphism induced by $I$ gives $u\gamma=0$,
+and coefficient shifting gives $\gamma=0$.
+Exactness in the middle is \eqref{eq:lift-reduction-kernel}.
+
+Let $\alpha\in\operatorname{im}\rho_n$ and choose a lift $\xi$ of $\alpha$.
+The map $\eta\mapsto\xi+\eta$ is a bijection from
+$u\,HC^-_{n+2}(C)$ to $\rho_n^{-1}(\alpha)$, with inverse
+$\zeta\mapsto\zeta-\xi$, by \eqref{eq:lift-reduction-kernel}.
+Thus the lift is unique exactly when this group is zero.
+
+Under Theorem~\ref{thm:lift-completed-quasi-isomorphism}, uniqueness is
+equivalent to $H_{n+2j}(C,b)=0$ for every $j\geq1$.
+If all these groups vanish, the product formula gives a zero kernel.
+Conversely, any nonzero element of one of them gives a nonzero series
+with that coefficient and zero constant term. Its image through $I$
+is a nonzero kernel class.
+
+For a concrete degree calculation, suppose
+\[
+ H_2=k e_+,\qquad H_0=\bigoplus_{a=1}^{22}k e_a,\qquad
+ H_{-2}=k e_-,
+\]
+and all other $H_n$ vanish. These hypotheses are realized by this
+graded vector space with $b=B=0$, and the parity theorem applies to
+any mixed complex with these homology groups.
+
+In the identification supplied by a contraction, the groups have bases
+\[
+ \begin{array}{c|l|c}
+ n&\text{basis}&\dim_k HC^-_n(C)\\\hline
+ 2&e_+&1\\
+ 0&e_1,\ldots,e_{22},\ u e_+&23\\
+ -2-2q&u^q e_-,\ u^{q+1}e_1,\ldots,u^{q+1}e_{22},\ u^{q+2}e_+
+       &24\quad(q\geq0)
+ \end{array}
+\]
+All odd-degree groups and all groups above degree two vanish.
+The notation for these basis vectors denotes their images under $I$.
+The degree equation $|u^j\alpha_j|=|\alpha_j|-2j=n$ gives every entry.
+
+In particular, $\rho_2$ is a canonical isomorphism, although chain
+representatives of its unique inverse class can differ by boundaries.
+The map $\rho_0$ has a one-dimensional kernel. Its lifts vary by a
+multiple of $u[I(e_+)]$.
+
+Even when every class lifts, changing the contraction can change the
+lifted homology class. Take basis vectors
+\[
+ |x|=0,\qquad |y|=1,\qquad |z|=|a|=2,
+ \qquad bz=y,\qquad Bx=y,
+\]
+with all other values zero. The mixed identities hold, and
+$H_0=k\cdot[x]$, $H_2=k\cdot[a]$ are its only homology groups.
+
+Keep $i([x])=x$ and $i([a])=a$ fixed. For $\lambda\in k$, define
+\[
+ \begin{gathered}
+ h_\lambda y=z+\lambda a,\qquad
+ h_\lambda x=h_\lambda z=h_\lambda a=0,\\
+ p_\lambda x=[x],\qquad p_\lambda a=[a],\qquad
+ p_\lambda z=-\lambda[a],\qquad p_\lambda y=0.
+ \end{gathered}
+\]
+
+These are normalized contractions. On $x,a$, both sides of
+$bh_\lambda+h_\lambda b=1-ip_\lambda$ vanish.
+On $y$, both sides equal $y$. On $z$, both sides equal $z+\lambda a$.
+The equations $bi=0$, $p_\lambda b=0$, and $p_\lambda i=1$ follow
+on the same basis. Finally,
+$p_\lambda h_\lambda y=-\lambda[a]+\lambda[a]=0$, and
+$h_\lambda^2=h_\lambda i=0$.
+
+The series from these contractions are finite:
+\[
+ I_\lambda([x])=x-u(z+\lambda a),\qquad I_\lambda([a])=a.
+\]
+Indeed, $D(x)=uy$, $D(z)=y$, $D(a)=0$, and $B(z+\lambda a)=0$.
+The difference of the first lifts is
+\[
+ [I_\lambda([x])-I_0([x])]=-\lambda u[a].
+\]
+Every $D$-boundary has all coefficients in the span of $y$.
+Thus $u[a]$ is nonzero, and these lifts differ whenever $\lambda\ne0$.
+
+The underlying projections are nevertheless chain-homotopic for $b$.
+Define $q:C_n\to H_{n+1}$ by $q(y)=-\lambda[a]$ and zero on the
+other basis vectors. Then $p_\lambda-p_0=qb$, verified on $z$ and
+zero on every other basis vector. Homotopy for the original differential
+therefore does not identify the completed lift classes.
+
+Suppose two degree-zero chain maps
+\[
+ I,I':(H[[u]],0)\longrightarrow(C[[u]],D)
+\]
+satisfy
+$I-I'=DK$ for a degree-one map
+$K:(H[[u]])_n\to(C[[u]])_{n+1}$. Then their values on every input differ
+by a $D$-boundary. Hence they induce the same homology map.
+
+A mixed-complex automorphism is an invertible degree-zero linear map
+that commutes with both $b$ and $B$.
+There is no universal choice of representatives invariant under all
+such automorphisms. For an elementary example, let
+\[
+ C_1=k v,\qquad C_0=k x\oplus k y,\qquad bv=x,
+\]
+with other degrees zero and $B=0$.
+Its degree-zero homology is $k\cdot[y]$.
+
+Every linear representative map has $i([y])=y+c x$ for some $c\in k$.
+For each $\lambda\in k$, define
+\[
+ T_\lambda(v)=v,\qquad T_\lambda(x)=x,\qquad
+ T_\lambda(y)=y+\lambda x.
+\]
+It commutes with $b$ and $B$, has inverse $T_{-\lambda}$, and induces
+the identity on homology.
+
+Invariance of $i$ would require
+$T_\lambda i([y])=i([y])$. But its left side is
+$y+(c+\lambda)x$, which differs from $y+cx$ when $\lambda=1$.
+Thus linear representative choices exist, while no such choice is
+invariant under every mixed-complex automorphism.
+
+\section{Multiplication and pairings impose further equations}
+\label{sec:lift-additional-structures}
+
+The constructed lift preserves linear combinations, degree, the
+differential, and multiplication by $u$. A product on $C$ is additional
+data. Suppose that $C$ is an associative graded algebra whose product
+has degree zero, and that, for homogeneous $v,w$,
+\[
+ b(vw)=(bv)w+(-1)^{|v|}v(bw),\qquad
+ B(vw)=(Bv)w+(-1)^{|v|}v(Bw).
+\]
+
+On homogeneous formal series, define multiplication by
+\[
+ \left(\sum_{i\geq0}u^iv_i\right)
+ \left(\sum_{j\geq0}u^jw_j\right)
+ =\sum_{N\geq0}u^N\sum_{i+j=N}v_iw_j.
+\]
+
+Every coefficient is a finite sum and has the required total degree.
+The even degree of $u$ and the two displayed Leibniz rules make $D$ a
+derivation of this product. Products of cycles are cycles.
+If $v$ is a cycle, $v(Dq)=(-1)^{|v|}D(vq)$, and if $w$ is a cycle,
+$(Dq)w=D(qw)$. Thus boundaries form a two-sided ideal among cycles,
+and completed homology inherits an associative product.
+
+Multiplicativity of a lift requires the separate equation
+$I(\alpha\gamma)=I(\alpha)I(\gamma)$.
+
+Even the contraction formula need not satisfy this equation on chains.
+Let $A_0$ have basis $1,e,y$, let $A_1=kz$, and let other degrees vanish.
+Make $1$ a unit and impose
+\[
+ e^2=e,\qquad ey=ye=y,\qquad ez=ze=z,
+ \qquad y^2=yz=zy=z^2=0.
+\]
+
+These products are associative. On the span of $e,y,z$, the vector $e$
+is a unit and the span of $y,z$ is a square-zero ideal.
+For three factors, two ideal factors make either bracketing zero.
+Otherwise removing the unit factors gives the same result.
+The external unit $1$ preserves this argument.
+
+Set $bz=y$ and let $b$ vanish elsewhere. The Leibniz rule on products
+with $1,e$ follows from their unit actions. Products of two elements of
+the square-zero ideal and their differentiated products are zero.
+Thus $b$ is a derivation, and $B=0$ makes $A$ a mixed complex of algebras.
+
+Its homology has basis $[1],[e]$ in degree zero, with $[e]^2=[e]$.
+Choose
+\[
+ \begin{gathered}
+ i([1])=1,\qquad i([e])=e+y,\qquad
+ p(1)=[1],\quad p(e)=[e],\quad p(y)=p(z)=0,\\
+ h(y)=z,\qquad h(e)=-z,\qquad h(1)=h(z)=0.
+ \end{gathered}
+\]
+
+The map $bh+hb$ takes the values $0,-y,y,z$ on $1,e,y,z$ respectively,
+which equal the values of $1-ip$.
+Also $pi=1$, $bi=pb=0$, and $h^2=hi=ph=0$.
+These maps therefore form a normalized contraction.
+
+Since $B=0$, the lift formula is $I=i$ coefficientwise. However,
+\[
+ I([e]^2)=e+y,\qquad I([e])^2=e+2y.
+\]
+Their difference is the nonzero chain $y$ over every field.
+It is a boundary, so this example concerns failure of multiplicativity
+on chains.
+
+A section of reduction can fail to preserve products even on homology.
+Let $A$ have basis $1,a,c$, degrees $|1|=|a|=0$, $|c|=2$, and products
+\[
+ a^2=a,\qquad ac=ca=c,\qquad c^2=0,
+\]
+with unit $1$. Associativity follows by the same unit and square-zero
+ideal argument on the span of $a,c$. Set $b=B=0$.
+
+Define a linear section $j:A\to A[[u]]$ of reduction by
+\[
+ j(1)=1,\qquad j(a)=a+uc,\qquad j(c)=c.
+\]
+Its continuous extension $J:A[[u]]\to A[[u]]$ is
+\[
+ J\left(\sum_{q\geq0}u^qv_q\right)
+   =\sum_{q\geq0}u^qj(v_q).
+\]
+Each output coefficient is a finite sum, and $J$ preserves total degree
+and every $F^N$.
+
+Its inverse sends $a$ to $a-uc$ and fixes $1,c$.
+It commutes with the zero differentials and reduces to the identity
+modulo $u$. Nevertheless,
+\[
+ J(a^2)=a+uc,\qquad J(a)^2=a+2uc.
+\]
+The difference $uc$ is nonzero over every field. Since the differential
+is zero, it is nonzero on homology as well.
+
+Pairing preservation is another independent equation.
+On this last algebra, assume $\operatorname{char}k\ne2$ and define a
+symmetric bilinear form by
+$\langle a,c\rangle=\langle c,a\rangle=1$, with all other basis
+pairings zero. This form vanishes unless the input degrees sum to two.
+
+Extend it to formal series by the finite coefficient rule
+\[
+ \left\langle\sum_i u^iv_i,\sum_j u^jw_j\right\rangle
+ =\sum_{N\geq0}u^N\sum_{i+j=N}\langle v_i,w_j\rangle
+ \quad\text{in }k[[u]].
+\]
+Then
+\[
+ \langle J(a),J(a)\rangle=2u\ne0=\langle a,a\rangle.
+\]
+
+Thus the lifting properties do not imply preservation of this specified
+form. The example asserts no compatibility between the form and the
+algebra product. A prescribed multiplication, pairing, or other
+operation requires its own compatibility equation on the lift.
+
+\section{Formal differentials with higher corrections}
+\label{sec:lift-higher-perturbations}
+
+For a formal differential with higher corrections, each coefficient of
+its square must vanish. Let $V=\bigoplus_n V^n$ be a graded $k$-vector
+space, and let $\hbar$ be a formal parameter of degree zero.
+Take linear maps
+\[
+ Q_r:V^n\longrightarrow V^{n+1}\quad(r\geq0).
+\]
+
+The space of formal series in degree $n$ is
+$(V[[\hbar]])^n=\prod_{j\geq0}\hbar^j V^n$, with the topology given
+by vanishing initial coefficients. Define
+\[
+ Q(\hbar)=\sum_{r\geq0}\hbar^rQ_r,\qquad
+ Q(\hbar)\left(\sum_{j\geq0}\hbar^jv_j\right)
+ =\sum_{N\geq0}\hbar^N\sum_{r=0}^N Q_r v_{N-r}.
+\]
+Each output coefficient is a finite sum, so this is a continuous
+degree-one map. All $v_j$ in a homogeneous input have the same
+cochain degree because $|\hbar|=0$.
+
+The equation $Q(\hbar)^2=0$ holds if and only if
+\begin{equation}\label{eq:lift-higher-square-zero}
+ \sum_{a+b=N}Q_aQ_b=0\quad(N\geq0),
+\end{equation}
+where $a,b$ are nonnegative integers. If the square vanishes, applying
+it to constant inputs and comparing coefficients proves these identities.
+Conversely, the coefficient at $\hbar^N$ in its action on any series is
+\[
+ \sum_{j=0}^N\left(\sum_{a+b=N-j}Q_aQ_b\right)v_j=0,
+\]
+so its square vanishes on every formal series.
+
+The first three identities are
+\[
+ Q_0^2=0,\qquad Q_0Q_1+Q_1Q_0=0,\qquad
+ Q_1^2+Q_0Q_2+Q_2Q_0=0.
+\]
+The second identity makes $Q_1$ act on $H^*(V,Q_0)$: it takes cycles
+to cycles and boundaries to boundaries with a minus sign.
+The third says that the induced operator squares to zero.
+For a $Q_0$-cycle $v$, it gives $Q_1^2v=-Q_0Q_2v$, a boundary.
+It permits $Q_1^2$ to be nonzero on $V$ itself.
+
+Four vectors realize this distinction. Let
+\[
+ V^0=k a,\qquad V^1=k s\oplus k c,\qquad V^2=k z,
+\]
+with all other degrees zero. Set
+\[
+ Q_0c=z,\qquad Q_1a=s,\qquad Q_1s=z,\qquad Q_2a=-c,
+\]
+with all other values zero, including $Q_r=0$ for $r\geq3$.
+
+Direct evaluation gives
+\[
+ Q(\hbar)a=\hbar s-\hbar^2c,\qquad
+ Q(\hbar)s=\hbar z,\qquad Q(\hbar)c=z,\qquad Q(\hbar)z=0.
+\]
+Thus $Q(\hbar)^2a=\hbar^2z-\hbar^2z=0$, and its square vanishes
+on the remaining basis vectors. However,
+\[
+ Q_1^2a=z\ne0,\qquad (Q_0Q_2+Q_2Q_0)a=-z.
+\]
+
+The whole cohomology can be computed by putting
+$v=s-\hbar c$, an invertible change of basis over $k[[\hbar]]$.
+Then
+\[
+ Q(\hbar)a=\hbar v,\qquad Q(\hbar)v=0,\qquad
+ Q(\hbar)c=z,\qquad Q(\hbar)z=0.
+\]
+
+The pair $c\mapsto z$ is contractible. On the other pair, multiplication
+by $\hbar$ is injective and has cokernel $k[[\hbar]]/(\hbar)$.
+Therefore
+\[
+ H^1(V[[\hbar]],Q(\hbar))
+ =\bigl(k[[\hbar]]/(\hbar)\bigr)[v],
+ \qquad H^n(V[[\hbar]],Q(\hbar))=0\quad(n\ne1).
+\]
+
+At $\hbar=0$, the cohomology has classes $[a]$ in degree zero and
+$[s]$ in degree one. The class $[a]$ fails its first lifting equation,
+because $Q_1a=s$ is not a $Q_0$-boundary.
+
+For general $Q(\hbar)$, compatible corrections again have successive
+obstructions, with all $Q_r$ contributing.
+\begin{proposition}\label{prop:lift-general-obstruction}
+Assume \eqref{eq:lift-higher-square-zero}. Let $N\geq1$ and suppose
+$c_0,\ldots,c_{N-1}\in V^n$ satisfy
+\[
+ \sum_{r=0}^m Q_r c_{m-r}=0\quad(0\leq m<N).
+\]
+Then
+\[
+ \omega_N=\sum_{r=1}^N Q_r c_{N-r}\in V^{n+1}
+\]
+is a $Q_0$-cycle. The partial series extends through $\hbar^N$ if and
+only if $[\omega_N]=0$ in $H^{n+1}(V,Q_0)$.
+\end{proposition}
+
+\begin{proof}
+Put $c^{<N}=\sum_{j=0}^{N-1}\hbar^j c_j$.
+The hypotheses make every coefficient below $\hbar^N$ in
+$Q(\hbar)c^{<N}$ zero, and its coefficient at $\hbar^N$ is
+$\omega_N$. The coefficient at that order in
+$Q(\hbar)^2c^{<N}$ is therefore $Q_0\omega_N$:
+all terms with a positive-index $Q_r$ act on a lower zero coefficient.
+Since the square is zero, $Q_0\omega_N=0$.
+
+Adding $\hbar^Nc_N$ leaves the earlier equations unchanged and changes
+the coefficient at order $N$ to $\omega_N+Q_0c_N$.
+If an extension exists, $\omega_N=-Q_0c_N$ is a boundary.
+Conversely, if $\omega_N=Q_0a$ for $a\in V^n$, choose $c_N=-a$.
+This proves both directions.
+\end{proof}
+
+The hypotheses on the preceding equations are essential even for
+defining the next obstruction class. In the four-vector example,
+start with $c_0=a$. Its first obstruction is $[s]\ne0$, so no $c_1$
+solves the equation. If one nevertheless selects $c_1=\lambda a$,
+the expression at the next order is $\lambda s-c$, whose
+$Q_0$-differential is $-z\ne0$. It does not define a cohomology class.
+
+For $Q(\hbar)=Q_0+\hbar Q_1$, the coefficient identities require
+$Q_0^2=0$, $Q_0Q_1+Q_1Q_0=0$, and $Q_1^2=0$.
+The same coefficient calculation applies to $b+uB$, with
+$|b|=-1$, $|B|=1$, and $|u|=-2$.

@@ -1,0 +1,1401 @@
+{
+  "native": [
+    {
+      "number": 1,
+      "old_start_line": 142,
+      "new_start_line": 209,
+      "old_sha256": "170d70e373db0b3126799242a96915d157563d12dccf11e76c51173783377280",
+      "new_sha256": "170d70e373db0b3126799242a96915d157563d12dccf11e76c51173783377280",
+      "byte_identical": true
+    },
+    {
+      "number": 2,
+      "old_start_line": 179,
+      "new_start_line": 247,
+      "old_sha256": "bb0b429a4cd03cdffaed77c592e77d10a27ef0e7cb72b9147ade698cbfdf942f",
+      "new_sha256": "bb0b429a4cd03cdffaed77c592e77d10a27ef0e7cb72b9147ade698cbfdf942f",
+      "byte_identical": true
+    },
+    {
+      "number": 3,
+      "old_start_line": 222,
+      "new_start_line": 291,
+      "old_sha256": "53f80b03de9be9fe9beda9d1160690a91ecf1442d6cee36562df2c7a15793de7",
+      "new_sha256": "53f80b03de9be9fe9beda9d1160690a91ecf1442d6cee36562df2c7a15793de7",
+      "byte_identical": true
+    },
+    {
+      "number": 4,
+      "old_start_line": 267,
+      "new_start_line": 337,
+      "old_sha256": "47267f72582df96507c0e7c6364d444e06d009e71b159cd21b53c17abb45b65b",
+      "new_sha256": "47267f72582df96507c0e7c6364d444e06d009e71b159cd21b53c17abb45b65b",
+      "byte_identical": true
+    },
+    {
+      "number": 5,
+      "old_start_line": 309,
+      "new_start_line": 380,
+      "old_sha256": "abdbfd37a690a51f9ac263d1e2437f4f440259714cfae58132c2783137dd4c26",
+      "new_sha256": "abdbfd37a690a51f9ac263d1e2437f4f440259714cfae58132c2783137dd4c26",
+      "byte_identical": true
+    },
+    {
+      "number": 6,
+      "old_start_line": 371,
+      "new_start_line": 444,
+      "old_sha256": "0d9129d02dc83ad0934a1bf8df218adc6c2896970f1ddd4a440ae8c51229aae7",
+      "new_sha256": "0d9129d02dc83ad0934a1bf8df218adc6c2896970f1ddd4a440ae8c51229aae7",
+      "byte_identical": true
+    },
+    {
+      "number": 7,
+      "old_start_line": 410,
+      "new_start_line": 484,
+      "old_sha256": "097b3dc4eaeceabd3c0369a153b8a5d79fc97e241bab68a421bf94848b308460",
+      "new_sha256": "097b3dc4eaeceabd3c0369a153b8a5d79fc97e241bab68a421bf94848b308460",
+      "byte_identical": true
+    },
+    {
+      "number": 8,
+      "old_start_line": 464,
+      "new_start_line": 539,
+      "old_sha256": "fb95051674d40c705f7338b99103b362aed3bf8b186a9e966de09864f4687b13",
+      "new_sha256": "fb95051674d40c705f7338b99103b362aed3bf8b186a9e966de09864f4687b13",
+      "byte_identical": true
+    },
+    {
+      "number": 9,
+      "old_start_line": 538,
+      "new_start_line": 614,
+      "old_sha256": "0b1d3cf55a023c529d1edbc38f04f5c20b92c6d14cf30f41d01cbcdb23d9e895",
+      "new_sha256": "0b1d3cf55a023c529d1edbc38f04f5c20b92c6d14cf30f41d01cbcdb23d9e895",
+      "byte_identical": true
+    },
+    {
+      "number": 10,
+      "old_start_line": 568,
+      "new_start_line": 645,
+      "old_sha256": "1aafbfab393adef242333c2add20d784e6b39d17694ea4a176ec55c3c7f36c3c",
+      "new_sha256": "1aafbfab393adef242333c2add20d784e6b39d17694ea4a176ec55c3c7f36c3c",
+      "byte_identical": true
+    },
+    {
+      "number": 11,
+      "old_start_line": 626,
+      "new_start_line": 704,
+      "old_sha256": "33052e68ad9a51b7d01f3fa712180f0c065c37f49fdb9c0f3a0f9faa97a11b8c",
+      "new_sha256": "33052e68ad9a51b7d01f3fa712180f0c065c37f49fdb9c0f3a0f9faa97a11b8c",
+      "byte_identical": true
+    },
+    {
+      "number": 12,
+      "old_start_line": 683,
+      "new_start_line": 762,
+      "old_sha256": "9cfe5683640ed60ce0bafc104a18c33f7fd6825a3798e2188f9150e99dc08b35",
+      "new_sha256": "9cfe5683640ed60ce0bafc104a18c33f7fd6825a3798e2188f9150e99dc08b35",
+      "byte_identical": true
+    },
+    {
+      "number": 13,
+      "old_start_line": 713,
+      "new_start_line": 793,
+      "old_sha256": "c5ddcf9235c6382a6a4816497b7bf7bbfb8d72ade7a7869a5f7d732b07e5413c",
+      "new_sha256": "c5ddcf9235c6382a6a4816497b7bf7bbfb8d72ade7a7869a5f7d732b07e5413c",
+      "byte_identical": true
+    },
+    {
+      "number": 14,
+      "old_start_line": 768,
+      "new_start_line": 849,
+      "old_sha256": "5505956008044108970e48a62ee61f4f67b09b700d3b727004d3c8609f1ba4bf",
+      "new_sha256": "5505956008044108970e48a62ee61f4f67b09b700d3b727004d3c8609f1ba4bf",
+      "byte_identical": true
+    },
+    {
+      "number": 15,
+      "old_start_line": 883,
+      "new_start_line": 965,
+      "old_sha256": "fc9a840377a6a6d45c361d07e2109e7ddcf8921bb495454595eca16952fcc3fa",
+      "new_sha256": "fc9a840377a6a6d45c361d07e2109e7ddcf8921bb495454595eca16952fcc3fa",
+      "byte_identical": true
+    },
+    {
+      "number": 16,
+      "old_start_line": 922,
+      "new_start_line": 1005,
+      "old_sha256": "2ee6b4124d1c8f96aa832528ffb7b0b9a02b239b4410d8d5f46774662fbcea00",
+      "new_sha256": "2ee6b4124d1c8f96aa832528ffb7b0b9a02b239b4410d8d5f46774662fbcea00",
+      "byte_identical": true
+    },
+    {
+      "number": 17,
+      "old_start_line": 985,
+      "new_start_line": 1069,
+      "old_sha256": "e1448fafbffe01660a09cca8c8183a2636279c6ab51e8ba341bc117f1abcc9d3",
+      "new_sha256": "e7627944d263a76f8015c7663f76e0cd6476bc234098f55fa17e48716d774807",
+      "byte_identical": false
+    },
+    {
+      "number": 18,
+      "old_start_line": 1112,
+      "new_start_line": 1197,
+      "old_sha256": "d7163f68d281e49e2b78454180f147331288cc9be71be00a4597735f847e46e8",
+      "new_sha256": "d7163f68d281e49e2b78454180f147331288cc9be71be00a4597735f847e46e8",
+      "byte_identical": true
+    },
+    {
+      "number": 19,
+      "old_start_line": 1172,
+      "new_start_line": 1259,
+      "old_sha256": "66898d951acc152aa61f150c19842487eddeaa34dd0c79165bb2f1628f21d668",
+      "new_sha256": "66898d951acc152aa61f150c19842487eddeaa34dd0c79165bb2f1628f21d668",
+      "byte_identical": true
+    },
+    {
+      "number": 20,
+      "old_start_line": 1429,
+      "new_start_line": 1517,
+      "old_sha256": "f73c55b12960c24581ee6d2a823f2611638905b30df1a0e571d899ac5e61945c",
+      "new_sha256": "f73c55b12960c24581ee6d2a823f2611638905b30df1a0e571d899ac5e61945c",
+      "byte_identical": true
+    },
+    {
+      "number": 21,
+      "old_start_line": 1632,
+      "new_start_line": 1723,
+      "old_sha256": "46679f1196af3f41ce74fa365f44570fb5338e3e5ebe56c8b3d2e5536b71ed3b",
+      "new_sha256": "46679f1196af3f41ce74fa365f44570fb5338e3e5ebe56c8b3d2e5536b71ed3b",
+      "byte_identical": true
+    },
+    {
+      "number": 22,
+      "old_start_line": 1712,
+      "new_start_line": 1804,
+      "old_sha256": "a8e482254e790ee29eb4ec0e6644b7eb37ec30bee973e027caa920ab81026c03",
+      "new_sha256": "a8e482254e790ee29eb4ec0e6644b7eb37ec30bee973e027caa920ab81026c03",
+      "byte_identical": true
+    },
+    {
+      "number": 23,
+      "old_start_line": 1776,
+      "new_start_line": 1869,
+      "old_sha256": "6b3034c3d508dd4ca2b6c730ccd50aeddcad3fed5a7fcb5cbe0aa151ae57a282",
+      "new_sha256": "6b3034c3d508dd4ca2b6c730ccd50aeddcad3fed5a7fcb5cbe0aa151ae57a282",
+      "byte_identical": true
+    },
+    {
+      "number": 24,
+      "old_start_line": 1857,
+      "new_start_line": 1951,
+      "old_sha256": "132186ba4339ba0abb40311dca57b7f7175a06dadf9a82fc14f19587620c2edc",
+      "new_sha256": "132186ba4339ba0abb40311dca57b7f7175a06dadf9a82fc14f19587620c2edc",
+      "byte_identical": true
+    },
+    {
+      "number": 25,
+      "old_start_line": 1899,
+      "new_start_line": 1994,
+      "old_sha256": "de200d78d7326e263540d4906e07aefae3122df9e4567db51688d152ea1aff09",
+      "new_sha256": "de200d78d7326e263540d4906e07aefae3122df9e4567db51688d152ea1aff09",
+      "byte_identical": true
+    },
+    {
+      "number": 26,
+      "old_start_line": 1970,
+      "new_start_line": 2066,
+      "old_sha256": "93c61303e567e14fc473249b56ad7a04b00dfa2f83301aa7acc891f3be926eda",
+      "new_sha256": "93c61303e567e14fc473249b56ad7a04b00dfa2f83301aa7acc891f3be926eda",
+      "byte_identical": true
+    },
+    {
+      "number": 27,
+      "old_start_line": 2022,
+      "new_start_line": 2119,
+      "old_sha256": "2ae586600d8ea0d8198b7f0cbac75fef5487c5293072ddc44f6fd884c7d37ecb",
+      "new_sha256": "2ae586600d8ea0d8198b7f0cbac75fef5487c5293072ddc44f6fd884c7d37ecb",
+      "byte_identical": true
+    },
+    {
+      "number": 28,
+      "old_start_line": 2135,
+      "new_start_line": 2234,
+      "old_sha256": "6b7eb93b81689b833dc56bb6734bb1a1e34d0232e8bf7dda38ed472f806146a3",
+      "new_sha256": "6b7eb93b81689b833dc56bb6734bb1a1e34d0232e8bf7dda38ed472f806146a3",
+      "byte_identical": true
+    },
+    {
+      "number": 29,
+      "old_start_line": 2231,
+      "new_start_line": 2332,
+      "old_sha256": "ed38040c24f3e969635567b6bbf1a760c9cf8efe1f2cda6695848cd66f778801",
+      "new_sha256": "ed38040c24f3e969635567b6bbf1a760c9cf8efe1f2cda6695848cd66f778801",
+      "byte_identical": true
+    },
+    {
+      "number": 30,
+      "old_start_line": 2287,
+      "new_start_line": 2389,
+      "old_sha256": "3ad3bd5c31e9d752dff2e5ba1967692fb171e548c480f660f6ce04037351a961",
+      "new_sha256": "3ad3bd5c31e9d752dff2e5ba1967692fb171e548c480f660f6ce04037351a961",
+      "byte_identical": true
+    },
+    {
+      "number": 31,
+      "old_start_line": 2344,
+      "new_start_line": 2447,
+      "old_sha256": "82ef635c1993671486caa827ef4bfc25f4e0688f5681f4c0a73f123b0ac69f2c",
+      "new_sha256": "82ef635c1993671486caa827ef4bfc25f4e0688f5681f4c0a73f123b0ac69f2c",
+      "byte_identical": true
+    },
+    {
+      "number": 32,
+      "old_start_line": 2399,
+      "new_start_line": 2503,
+      "old_sha256": "9aab3f90a990546b6c5865254d0843da07983abe6a33d7fdce28070ea8beb957",
+      "new_sha256": "9aab3f90a990546b6c5865254d0843da07983abe6a33d7fdce28070ea8beb957",
+      "byte_identical": true
+    },
+    {
+      "number": 33,
+      "old_start_line": 2499,
+      "new_start_line": 2604,
+      "old_sha256": "cf7fbcd14fdcc2490155b19654caa287e532b222292b1d139e03805990f785fc",
+      "new_sha256": "cf7fbcd14fdcc2490155b19654caa287e532b222292b1d139e03805990f785fc",
+      "byte_identical": true
+    }
+  ],
+  "core_files": [
+    {
+      "path": "manuscript/all-arity-current-actions.tex",
+      "baseline_sha256": "8e39887547c6420d3bd5bff9ef988e6ec86b7eab6aa19bee2070a759304f1701",
+      "new_sha256": "8e39887547c6420d3bd5bff9ef988e6ec86b7eab6aa19bee2070a759304f1701",
+      "exact": true
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "baseline_sha256": "896ea92682e4056d08773850396e5a6fba53d66c9df666519b6ba399c43b68b8",
+      "new_sha256": "896ea92682e4056d08773850396e5a6fba53d66c9df666519b6ba399c43b68b8",
+      "exact": true
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "baseline_sha256": "b245f5199101de1d8ece53ef9aa823432743aff99b17dd2e55b2589fe604f399",
+      "new_sha256": "b245f5199101de1d8ece53ef9aa823432743aff99b17dd2e55b2589fe604f399",
+      "exact": true
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "baseline_sha256": "ae96e7412e00dcc072313c614af0b43137fab6ad682d646639102607aee1a016",
+      "new_sha256": "ae96e7412e00dcc072313c614af0b43137fab6ad682d646639102607aee1a016",
+      "exact": true
+    },
+    {
+      "path": "manuscript/current-products-and-bv.tex",
+      "baseline_sha256": "aa4ce0d63aa328f9b03f2bc23344c3e4d2a6c3a36dd683106903566a286a51f6",
+      "new_sha256": "aa4ce0d63aa328f9b03f2bc23344c3e4d2a6c3a36dd683106903566a286a51f6",
+      "exact": true
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "baseline_sha256": "790633515ca6b075d05da10f27f1f088e691a771823ccaee2a4ddba6efdcf6a6",
+      "new_sha256": "790633515ca6b075d05da10f27f1f088e691a771823ccaee2a4ddba6efdcf6a6",
+      "exact": true
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "baseline_sha256": "6a237e381bf91acc7db1e65b4cffd142876f6edd6fdf577aa47e00b406b52754",
+      "new_sha256": "6a237e381bf91acc7db1e65b4cffd142876f6edd6fdf577aa47e00b406b52754",
+      "exact": true
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "baseline_sha256": "816822cac9678fa272c1da948f1d0c1fc246ead750667be679a912ce66f70b0e",
+      "new_sha256": "816822cac9678fa272c1da948f1d0c1fc246ead750667be679a912ce66f70b0e",
+      "exact": true
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "baseline_sha256": "9089174ac872f38354fb8115846ee4ac0651c6126e6165dff628c0882111b369",
+      "new_sha256": "9089174ac872f38354fb8115846ee4ac0651c6126e6165dff628c0882111b369",
+      "exact": true
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "baseline_sha256": "ef13514036f14ca6eca3390bb87903e5a5afdd4e03f310e18208f9718ce239e5",
+      "new_sha256": "ef13514036f14ca6eca3390bb87903e5a5afdd4e03f310e18208f9718ce239e5",
+      "exact": true
+    },
+    {
+      "path": "manuscript/merging-ordered-insertions.tex",
+      "baseline_sha256": "56f175689fe5faa04806707411c52c7e568ceec44d8908a64868c868b7c1cf6d",
+      "new_sha256": "56f175689fe5faa04806707411c52c7e568ceec44d8908a64868c868b7c1cf6d",
+      "exact": true
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "baseline_sha256": "815c3f0994a74028cd81fc4aba0b8d2d9a238ad2fc0ffdfddffb04660148ad3d",
+      "new_sha256": "fa6a407cafddd9a6d7a144bf9c6e50eb677642b1dffc7e39ec3b24824d96fc77",
+      "exact": false
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "baseline_sha256": "bd59cfa02aa5210f84cb042ece43e127bc98f3151f5f5b10445dfd82a1371bc0",
+      "new_sha256": "bd59cfa02aa5210f84cb042ece43e127bc98f3151f5f5b10445dfd82a1371bc0",
+      "exact": true
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "baseline_sha256": "d166dc5b88d349294490754c4f85b2d84854b7799ee8c90f7d464b793bb7bda2",
+      "new_sha256": "d166dc5b88d349294490754c4f85b2d84854b7799ee8c90f7d464b793bb7bda2",
+      "exact": true
+    },
+    {
+      "path": "manuscript/preface.tex",
+      "baseline_sha256": "9bba8f6515003a16f2921f80bb09132e78aa5030f53a14cbe8c469df44608c50",
+      "new_sha256": "9bba8f6515003a16f2921f80bb09132e78aa5030f53a14cbe8c469df44608c50",
+      "exact": true
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "baseline_sha256": "98eeafbd8baf932f8dec027b5e509f86df4523bf3da3f6425988fd46421fb5b3",
+      "new_sha256": "98eeafbd8baf932f8dec027b5e509f86df4523bf3da3f6425988fd46421fb5b3",
+      "exact": true
+    },
+    {
+      "path": "manuscript/programme.tex",
+      "baseline_sha256": "9e3f4b08e510c96fed7b2c9028b7d716d0256d642fa52de865db98eb4ff009b5",
+      "new_sha256": "0763644b6e9e7a122704f92617c5d609f0a6d9ee24b2ac2488e8932dcb794ab8",
+      "exact": false
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "baseline_sha256": "1688504de580b2934d0b9148f0e3961d0ee4e2267afb4aaf2df61b2954d0bdc8",
+      "new_sha256": "1688504de580b2934d0b9148f0e3961d0ee4e2267afb4aaf2df61b2954d0bdc8",
+      "exact": true
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "baseline_sha256": "6c335d080746254600ecd1b0c01ea7ddf68f353b13b18080d66eaf4c4c5875e6",
+      "new_sha256": "6c335d080746254600ecd1b0c01ea7ddf68f353b13b18080d66eaf4c4c5875e6",
+      "exact": true
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "baseline_sha256": "bf8566164dae6f169aba9acc1b447d6669d4660862c630d73fc042ee1a6889f4",
+      "new_sha256": "bf8566164dae6f169aba9acc1b447d6669d4660862c630d73fc042ee1a6889f4",
+      "exact": true
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "baseline_sha256": "88f38df2cd933bce98f4dd34230ba6789ce33834693f9ff519b9e9dedafbe498",
+      "new_sha256": "88f38df2cd933bce98f4dd34230ba6789ce33834693f9ff519b9e9dedafbe498",
+      "exact": true
+    },
+    {
+      "path": "manuscript/two-dimensional-free-fields.tex",
+      "baseline_sha256": "84600a19c1ed5b2ab234747dc48bf0ab82e4e8270524a40be70fcb4d4173ff98",
+      "new_sha256": "84600a19c1ed5b2ab234747dc48bf0ab82e4e8270524a40be70fcb4d4173ff98",
+      "exact": true
+    }
+  ],
+  "core_proofs": [
+    {
+      "path": "manuscript/all-arity-current-actions.tex",
+      "number": 1,
+      "baseline_line": 785,
+      "current_line": 785,
+      "sha256": "e687a7c9c9b09b946b8b6d1e4353917c3b4e3e5c05cac3ec15900c6bd3ded413"
+    },
+    {
+      "path": "manuscript/all-arity-current-actions.tex",
+      "number": 2,
+      "baseline_line": 919,
+      "current_line": 919,
+      "sha256": "21004b0f3a1aaf475237acf5fafd77f8ade6afb68072525718f3efa0f0e9d402"
+    },
+    {
+      "path": "manuscript/all-arity-current-actions.tex",
+      "number": 3,
+      "baseline_line": 1556,
+      "current_line": 1556,
+      "sha256": "9d8f1850f96631acdfb6d1acff88ed1f530b4c8d0485961096b35f1be4b55027"
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "number": 1,
+      "baseline_line": 138,
+      "current_line": 138,
+      "sha256": "fd8092a17e9cf507e917a39489930518da82f46484c931f1393fe96de18a9b0d"
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "number": 2,
+      "baseline_line": 255,
+      "current_line": 255,
+      "sha256": "6f185f1ec8ff12800962e9332bdc306224b50b8a88d4b827a53a30836c389820"
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "number": 3,
+      "baseline_line": 405,
+      "current_line": 405,
+      "sha256": "f4c07c48306cf89cb62ab4196828b84bcc88956b54ee7b0ad7e4e254d9fd8b9d"
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "number": 4,
+      "baseline_line": 489,
+      "current_line": 489,
+      "sha256": "a03748969793bf8eeeb78fa5dedc1df0823e3467c9ace8f789565a71249057b3"
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "number": 5,
+      "baseline_line": 530,
+      "current_line": 530,
+      "sha256": "75e243fce838624e795a9d3b91635d21a9e959a0c4ae55d5dff95601eb20b036"
+    },
+    {
+      "path": "manuscript/compatible-formal-lifts.tex",
+      "number": 6,
+      "baseline_line": 1023,
+      "current_line": 1023,
+      "sha256": "9e51b2b9644f7ab0c92dab4c9e482f5585b94e2d979e38e70f4025ec94364f7b"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 1,
+      "baseline_line": 203,
+      "current_line": 203,
+      "sha256": "231c7a68aa3ee5301c3c71c6ef0d49888a2f7eda553cb5b9253e1b156405c1d4"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 2,
+      "baseline_line": 329,
+      "current_line": 329,
+      "sha256": "5a3660c173a716bf2cc558836df32028eec65996cde206576538fbf7be511efd"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 3,
+      "baseline_line": 378,
+      "current_line": 378,
+      "sha256": "0fd980a169a7b5301e4495c2cacf9422a6a85b2fb87d32db0848db8ec4a22eb4"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 4,
+      "baseline_line": 440,
+      "current_line": 440,
+      "sha256": "af6edbb763386202c5939e478c3efbd60cc945df00597da3578c0b72b574ed93"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 5,
+      "baseline_line": 502,
+      "current_line": 502,
+      "sha256": "ae390a07e733fb3983a5c28909f41aedb0cfd77f85716bda2ccfe831e830b8db"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 6,
+      "baseline_line": 593,
+      "current_line": 593,
+      "sha256": "ff5ae5e2fe7e55f0254b021c039a77e12fb95c17d1519e5ad33eb7d9e28fe937"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 7,
+      "baseline_line": 674,
+      "current_line": 674,
+      "sha256": "9961f29292c6db218a4731c447d29b651c32e8311fbca521812d8e22adc8e98f"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 8,
+      "baseline_line": 752,
+      "current_line": 752,
+      "sha256": "c2a04cb8df562747a8ab12598f87a04de8a4b97f29e92e1c68b6fc93a69d5f75"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 9,
+      "baseline_line": 899,
+      "current_line": 899,
+      "sha256": "467a5e68eb6f2013a8b380920f19a45ec27521fe70c9445e6a6b22eb352cc8d7"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 10,
+      "baseline_line": 1079,
+      "current_line": 1079,
+      "sha256": "19fc6afea7c2d8770e498382856c2a7ae4dfc91e77acf72dd757245cd82b56df"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 11,
+      "baseline_line": 1125,
+      "current_line": 1125,
+      "sha256": "74401e506fa8bc3685de02b2117f6882df1dccf4c54d0c6e369fe475b5b8bd1f"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 12,
+      "baseline_line": 1228,
+      "current_line": 1228,
+      "sha256": "d61c6c687c22666260268544d11b46202fd8d8048946bd9f82134260ca2af57b"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 13,
+      "baseline_line": 1277,
+      "current_line": 1277,
+      "sha256": "a33e7b79e4657dda76f90fa8ac818e2b647db1e2feb57b05a46948e70d42d8ed"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 14,
+      "baseline_line": 1434,
+      "current_line": 1434,
+      "sha256": "b2423aa41d6f01534a956ef43296384bd61ca186f46bdad3436f1e8e925826b3"
+    },
+    {
+      "path": "manuscript/completion-and-coefficients.tex",
+      "number": 15,
+      "baseline_line": 1469,
+      "current_line": 1469,
+      "sha256": "78da1a80b4939f6f1b3e86a77ea514d363f9f597fd01de6954f73e73b27da231"
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "number": 1,
+      "baseline_line": 181,
+      "current_line": 181,
+      "sha256": "d962b2c1a2f281ee49ce0ebbdb0a29f6c0555013b3f25484097169ba3d40e736"
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "number": 2,
+      "baseline_line": 320,
+      "current_line": 320,
+      "sha256": "f60d2832877b1d84854524a28239e2f38f84793a005b12a8dd6536fa87d9e01a"
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "number": 3,
+      "baseline_line": 714,
+      "current_line": 714,
+      "sha256": "3a585fd7a1ed643ec1dc66a833f99684bed8a268f9a205a9053f255f9e946eb7"
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "number": 4,
+      "baseline_line": 807,
+      "current_line": 807,
+      "sha256": "ce1ede67263a05bcb4ac79b2c5bd084c37a1c0262a122b190c30b52f959b56d7"
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "number": 5,
+      "baseline_line": 951,
+      "current_line": 951,
+      "sha256": "9ce46efbf5e221a434cd8b38af1762119f09a075a30f0e81e7082f4c68bace9a"
+    },
+    {
+      "path": "manuscript/current-actions-and-local-observables.tex",
+      "number": 6,
+      "baseline_line": 1034,
+      "current_line": 1034,
+      "sha256": "bc86e37b8e7d58d57e7dcd2bae07452e6573b6d926fd252e42ec4a55058b3ed2"
+    },
+    {
+      "path": "manuscript/current-products-and-bv.tex",
+      "number": 1,
+      "baseline_line": 150,
+      "current_line": 150,
+      "sha256": "181c0631b66d5ca1a9cdd61d81f0e9e14fa5c4c4b73efa414533609d50b7266b"
+    },
+    {
+      "path": "manuscript/current-products-and-bv.tex",
+      "number": 2,
+      "baseline_line": 258,
+      "current_line": 258,
+      "sha256": "9063de04245286224d36ac1957807aef7fca9a3c9462f6756c306dcd52596c7d"
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "number": 1,
+      "baseline_line": 503,
+      "current_line": 503,
+      "sha256": "ce830f7b22a1fb42e429dbc3e600886c7b78736eb7a34e87773e866d8460c94c"
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "number": 2,
+      "baseline_line": 666,
+      "current_line": 666,
+      "sha256": "14143a39b0fe12a4dadc4c501e57397e84b6cc5d3d4ee7f80624f0f579e8aea6"
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "number": 3,
+      "baseline_line": 767,
+      "current_line": 767,
+      "sha256": "82313c9b94f0320b1dd553803cd092bf92079c3a5cc02601dc3b3cfe0284a0ad"
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "number": 4,
+      "baseline_line": 1003,
+      "current_line": 1003,
+      "sha256": "d847d6801983f227f42c920cead4df756d5f14f8dde3ccf0400dc96d37551f14"
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "number": 5,
+      "baseline_line": 1392,
+      "current_line": 1392,
+      "sha256": "afa2b29a61fc8bebb9ee7834366dcc898cb1228cc4df74fc9eedc03ebfba4ff3"
+    },
+    {
+      "path": "manuscript/gaussian-observables.tex",
+      "number": 6,
+      "baseline_line": 1512,
+      "current_line": 1512,
+      "sha256": "c8cd44b80c31ab301a659a8b7a523eabf5a884c091877edb2777027374950b5b"
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "number": 1,
+      "baseline_line": 62,
+      "current_line": 62,
+      "sha256": "dfac7c48cafd30a51a673816ac768a404e999fc081f446fbdb58ea1db20d1a8f"
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "number": 2,
+      "baseline_line": 307,
+      "current_line": 307,
+      "sha256": "452cc8979204f62e130415137674432af747b7a367c413fb6bef6485ddc417f6"
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "number": 3,
+      "baseline_line": 640,
+      "current_line": 640,
+      "sha256": "f1fdc28c4698d06e994f522a88a1800f0aac350366d11f893e5940b1584063f1"
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "number": 4,
+      "baseline_line": 755,
+      "current_line": 755,
+      "sha256": "89b9ef985dcbcfabaa237107fbd815e3c58a08e522f905374dbe2997cb91bf59"
+    },
+    {
+      "path": "manuscript/hamiltonian-jets.tex",
+      "number": 5,
+      "baseline_line": 1127,
+      "current_line": 1127,
+      "sha256": "286a421672668ba48a34da8b2e6f77c7837cae1dee05dfe81ce836607bbe302d"
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "number": 1,
+      "baseline_line": 143,
+      "current_line": 143,
+      "sha256": "8a80d58d848e29dbff6bd87daec457d4e8cd3eee575a37830f685fac84fc0067"
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "number": 2,
+      "baseline_line": 249,
+      "current_line": 249,
+      "sha256": "face5004f612a8d8d290a6c8d890fcc17da9619c362f569e8ba4af370145abe9"
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "number": 3,
+      "baseline_line": 346,
+      "current_line": 346,
+      "sha256": "92547e6411d5120c0f3cef7638c685f0be894f69d8a0c27f998dbeddff2d4192"
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "number": 4,
+      "baseline_line": 490,
+      "current_line": 490,
+      "sha256": "ec7fc871eb9b5b116396944c2a54f6036d8e896326af6a3eabdf08922ea0c9c0"
+    },
+    {
+      "path": "manuscript/hamiltonian-symmetry-and-cochains.tex",
+      "number": 5,
+      "baseline_line": 575,
+      "current_line": 575,
+      "sha256": "87de15b64d82a7e7518c2c55ae9734231b11a167dc7a12ecb0c97eec61d2b891"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 1,
+      "baseline_line": 393,
+      "current_line": 393,
+      "sha256": "1974cd89bc7b56c4ead4568d0f8a61fc0cf08e1cff5ee7a61335f575fe3a5003"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 2,
+      "baseline_line": 1039,
+      "current_line": 1039,
+      "sha256": "21b1f1878e43c874d02de0c7cdce440c0428c9890ba2b5ca86f6185c7c45552c"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 3,
+      "baseline_line": 1327,
+      "current_line": 1327,
+      "sha256": "296dc87e7c8b074fb7a8034e91b822d7a15d4aee0858c7ce59e5208c1feeaa98"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 4,
+      "baseline_line": 1350,
+      "current_line": 1350,
+      "sha256": "1be0d68e296ae96530586150aa3cf29b7df21dd12ac950365b61317722f31828"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 5,
+      "baseline_line": 1512,
+      "current_line": 1512,
+      "sha256": "be69c20bea839a6827f21eccc1ae2c3717e13175bb740819153045af66332526"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 6,
+      "baseline_line": 1647,
+      "current_line": 1647,
+      "sha256": "2aa0f21f8601c4c702bbb84e9b02a17d9d09c24de24de67d8dac5cd18eac5620"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 7,
+      "baseline_line": 2095,
+      "current_line": 2095,
+      "sha256": "49d223d411f9453d96fc78d1b9a1bc6367652e5f8773a2c751f7c0879da7f949"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 8,
+      "baseline_line": 2227,
+      "current_line": 2227,
+      "sha256": "f646f68d947a47edb7e5296af04ff0122f128063fa9b827c3477580d2fc8454f"
+    },
+    {
+      "path": "manuscript/higher-associativity.tex",
+      "number": 9,
+      "baseline_line": 2381,
+      "current_line": 2381,
+      "sha256": "2376af8fcb67d15f4d37afd4eb8900f099cde45e91170159ae0ab0df252f0f6a"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 1,
+      "baseline_line": 148,
+      "current_line": 148,
+      "sha256": "335375edf4433eb04f2eaf17902fd53529ceb9941a7d3d6b29863d0a1679f5c2"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 2,
+      "baseline_line": 185,
+      "current_line": 185,
+      "sha256": "80648f9853fb26531cf5e670fd28437c5dfbb374ebb9e3240716da27a4bc8926"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 3,
+      "baseline_line": 363,
+      "current_line": 363,
+      "sha256": "4e88ce5ce1c9996540d260bfc8205e502536bad5197e9717cef469be43c3f42f"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 4,
+      "baseline_line": 449,
+      "current_line": 449,
+      "sha256": "ee3d26ab17f9ede823980452f56595734710b22d1765d65a136d71a1851b1dfc"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 5,
+      "baseline_line": 568,
+      "current_line": 568,
+      "sha256": "04233f338a4abac6e61616051a6634adc46d178e839b43e4cc0a6362aae57eb8"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 6,
+      "baseline_line": 619,
+      "current_line": 619,
+      "sha256": "4f785188783c3f5e0940f2e6b97e24d46f5f4982f6538e03ea0cef64d8e33bbc"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 7,
+      "baseline_line": 771,
+      "current_line": 771,
+      "sha256": "060390e40a4b3ce4ec21bf6edc53a9bd1e7b95b7478d6aa38c4acb9237575264"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 8,
+      "baseline_line": 900,
+      "current_line": 900,
+      "sha256": "6718cd7dbdd06835ac80fa9d5a4a852bf80a180e27e996982bc72756cac376f1"
+    },
+    {
+      "path": "manuscript/local-anomaly-and-nonlocal-primitive.tex",
+      "number": 9,
+      "baseline_line": 999,
+      "current_line": 999,
+      "sha256": "a7528c8a1c20b280c8f7fbed4b59a5f6e245e50898240dc31069a3bf1e8068fc"
+    },
+    {
+      "path": "manuscript/merging-ordered-insertions.tex",
+      "number": 1,
+      "baseline_line": 76,
+      "current_line": 76,
+      "sha256": "4561854f22cda23f36a1feb2f1af3888f39db1f6370d5ecf81481c7d9ff28efb"
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "number": 1,
+      "baseline_line": 71,
+      "current_line": 71,
+      "sha256": "543d327d795f4bb68d7bf8a5af96c68b0a82c31b1a7a14be67b50d72ddca4183"
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "number": 2,
+      "baseline_line": 103,
+      "current_line": 103,
+      "sha256": "f26ddcb694581999449e7c4a3ae70178c8650a409b5ed2c601b236cfe185cb86"
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "number": 3,
+      "baseline_line": 167,
+      "current_line": 167,
+      "sha256": "601221f3de29752585e272bcc66a5c8483d9ff716323dbe7b7b02288d439da37"
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "number": 4,
+      "baseline_line": 409,
+      "current_line": 409,
+      "sha256": "6d3d0c820d74eefeaa219eb28c2348599607d1fc0239870c99e28b3c5ba7c9d4"
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "number": 5,
+      "baseline_line": 455,
+      "current_line": 455,
+      "sha256": "12a602f899634b8aa1a74097d60a9f7df6a54187fad2fa40f9c76977bbd310c7"
+    },
+    {
+      "path": "manuscript/operators-and-traces.tex",
+      "number": 6,
+      "baseline_line": 525,
+      "current_line": 525,
+      "sha256": "6ea70d620bfa5218d2f54a3ad35c29024db24e7c9b14cf041ba5ebe914b2f2fd"
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "number": 1,
+      "baseline_line": 120,
+      "current_line": 120,
+      "sha256": "a96542787b15839f85246a18edaf4d2492bc2a4c32ff7340d777f8693ab8c1de"
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "number": 2,
+      "baseline_line": 178,
+      "current_line": 178,
+      "sha256": "1cbcf3a17b86dddda52ad3a8c6cabfcf00e8ce9024cfdccd28e924705614d546"
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "number": 3,
+      "baseline_line": 235,
+      "current_line": 235,
+      "sha256": "b73db389aa6ac22275f8f7fa052ef50b11a00fd779e0bdead9395faace3e4ae3"
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "number": 4,
+      "baseline_line": 345,
+      "current_line": 345,
+      "sha256": "36f307d4b57372f82f757698642d691ce6dcc27398d9ba186fd527f7ccf10061"
+    },
+    {
+      "path": "manuscript/ordered-coefficient-bar.tex",
+      "number": 5,
+      "baseline_line": 508,
+      "current_line": 508,
+      "sha256": "5a79534f4d0c275e292f6c3a310bb4585274570ff42f364d090190e6961949de"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 1,
+      "baseline_line": 65,
+      "current_line": 65,
+      "sha256": "cb320bdbab59bce1f6bb8937ffbd54e67cd51164fbff8712fab8e007241fc055"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 2,
+      "baseline_line": 122,
+      "current_line": 122,
+      "sha256": "f9debb4b3da48c74ca30dd276f9e5e3a38498d92f45fb7545d99032332c0649f"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 3,
+      "baseline_line": 194,
+      "current_line": 194,
+      "sha256": "4e1c0fe3396b073412b987a4493566ff37d011e2db974d3c4507751e0c44ca32"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 4,
+      "baseline_line": 261,
+      "current_line": 261,
+      "sha256": "df9c2c1435ac3ebb80dfa9ecb9fbed61d61453067b9a45e778e80ee3d02257cb"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 5,
+      "baseline_line": 305,
+      "current_line": 305,
+      "sha256": "d269e4ef9e85b0db3c35d36f68171c69e0a282c13aefbcc8f7451ad234e4dea6"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 6,
+      "baseline_line": 430,
+      "current_line": 430,
+      "sha256": "b9aab77b5f554a74ba1631bf2bc20ef97539cb21807ed3fb65c4aadbb98e7f2c"
+    },
+    {
+      "path": "manuscript/ordered-collisions-and-residues.tex",
+      "number": 7,
+      "baseline_line": 573,
+      "current_line": 573,
+      "sha256": "bd75fcd45ebc13c5b9211c77938eef3e471b988315fbbfdb73ac0dec16c125bf"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 1,
+      "baseline_line": 150,
+      "current_line": 150,
+      "sha256": "56e42c5c036f2c111de5e3751509369550b9151df78a80e508d0de611e119f24"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 2,
+      "baseline_line": 195,
+      "current_line": 195,
+      "sha256": "8b367de27d0699f9bb18291656e7f2ca7a44512bad942d080134a62549e21b85"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 3,
+      "baseline_line": 257,
+      "current_line": 257,
+      "sha256": "5c0783751289bd50f91be9764ec90d4afe31c1d3f33f96b5fe0938419ea45a21"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 4,
+      "baseline_line": 344,
+      "current_line": 344,
+      "sha256": "6b95126a0ada9863a246439fbc70875bc4bc5c9a9eeaf951134f3f2bf91a2aed"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 5,
+      "baseline_line": 405,
+      "current_line": 405,
+      "sha256": "1ded9ffcd41e10e6220c1c81ed2986c4a7c5cf21e94299c2c67b4d0643d23e56"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 6,
+      "baseline_line": 547,
+      "current_line": 547,
+      "sha256": "0d65d1cf381d823f21ad0a8c4c9d8a6beceb628edcc3b80a0295acf4ee269881"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 7,
+      "baseline_line": 580,
+      "current_line": 580,
+      "sha256": "50a7061638f30497d59b6ef06529dddc8c42841b320366cf2240c007805c9e46"
+    },
+    {
+      "path": "manuscript/products-and-coefficients.tex",
+      "number": 8,
+      "baseline_line": 680,
+      "current_line": 680,
+      "sha256": "8f14fe9930d170f0f042de4c2b773f4f9e3fe3b7bc43b179dea8b0b3ea348e6f"
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "number": 1,
+      "baseline_line": 448,
+      "current_line": 448,
+      "sha256": "43d6cecb372b3ae6de0e095b2d88fa262ce2ad6ee6bf9292d572868ad09422da"
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "number": 2,
+      "baseline_line": 705,
+      "current_line": 705,
+      "sha256": "3f35d296822a6f1f8e6eb6f79e5b1a2a5b8080fc6584b02d0652cbfcf80af6a5"
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "number": 3,
+      "baseline_line": 910,
+      "current_line": 910,
+      "sha256": "db47cf0b0591835d46401ea58cc85932b2628533121b7d162abe75397a74e8bd"
+    },
+    {
+      "path": "manuscript/quantum-current-anomaly.tex",
+      "number": 4,
+      "baseline_line": 940,
+      "current_line": 940,
+      "sha256": "a6008cfd16ebfd8eedb76df07cb3355eff092a3b05d64ca2a27e5df6fd44aeac"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 1,
+      "baseline_line": 275,
+      "current_line": 275,
+      "sha256": "48def7fe41384b07133526d0e57051754322e19522a9622dfef2785d97586e46"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 2,
+      "baseline_line": 390,
+      "current_line": 390,
+      "sha256": "2801a2c6133c071a2664c058176a9713e3128832d3bd8624ed60f8ee1a901f89"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 3,
+      "baseline_line": 675,
+      "current_line": 675,
+      "sha256": "2f0638f066413895174cffb9e7d932eae9d9849de93cb3fe2b938b2bc844c81f"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 4,
+      "baseline_line": 769,
+      "current_line": 769,
+      "sha256": "26c8982196cc1eb177d1c2d2c65cace9909c8ab232c6d3b6a215c672259fd66d"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 5,
+      "baseline_line": 826,
+      "current_line": 826,
+      "sha256": "66ffd9c482200b86ca26f050b367f413a39468ed80c9e53eb50a1f60260f1e9a"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 6,
+      "baseline_line": 1046,
+      "current_line": 1046,
+      "sha256": "9534dda55840336795f98a1f8b866df26855617f498cab0597ffcf6ce9456a07"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 7,
+      "baseline_line": 1124,
+      "current_line": 1124,
+      "sha256": "19989140fbb7f4da4cbb7a7d3bfcf46ea4ad626fbbad41fd1cbc7aaeea73a74f"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 8,
+      "baseline_line": 1256,
+      "current_line": 1256,
+      "sha256": "ecb29d843440191d681672e5d1c29037508ce310949d4308f9bb5d383b0a11e3"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 9,
+      "baseline_line": 1453,
+      "current_line": 1453,
+      "sha256": "f9c6131d9d4efc767a18a153635e6aeb19d976b8a6e63c897176bb9703449d08"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 10,
+      "baseline_line": 1492,
+      "current_line": 1492,
+      "sha256": "44b609aa72e5314e4ecbe016322dc3925318daed67b1e4863922975bc35fe193"
+    },
+    {
+      "path": "manuscript/relations-and-homotopies.tex",
+      "number": 11,
+      "baseline_line": 1583,
+      "current_line": 1583,
+      "sha256": "40b679f1f94c06ccf4a05a81e2b519566ef584de47e3c6fb41486bb12b96c2af"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 1,
+      "baseline_line": 142,
+      "current_line": 142,
+      "sha256": "ef9b1056b574bcf3c5d7dbc39513af2280e1aa8f5f110215c8b75f497a092074"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 2,
+      "baseline_line": 224,
+      "current_line": 224,
+      "sha256": "2863c0765527ada9576d93c6429704ff2abf0e931f6919084386b16b9ae096c0"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 3,
+      "baseline_line": 278,
+      "current_line": 278,
+      "sha256": "ae9d003b900c1109983866249038029c9cc34b3a14faee8aac489b759119a946"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 4,
+      "baseline_line": 314,
+      "current_line": 314,
+      "sha256": "b37cd2487545eb8abaa95f9926df95d432ed9ba78ced2b905a7d6b896f81f246"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 5,
+      "baseline_line": 422,
+      "current_line": 422,
+      "sha256": "99a6d2fa63114b414ccd4141182fb82927282721fd6c751b0bcf184a61d56b76"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 6,
+      "baseline_line": 506,
+      "current_line": 506,
+      "sha256": "b643f50bd9297296fae1d97ee7d8af23488fabd39bc74355241bcf1bf1223d53"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 7,
+      "baseline_line": 570,
+      "current_line": 570,
+      "sha256": "6fd9cc070115a9f2d71b6a423abf1a8990d81f32d3fc0e2cbb2ec2e6bdedd7ff"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 8,
+      "baseline_line": 628,
+      "current_line": 628,
+      "sha256": "60427113f15a27d22e9b307de1f64635b66acc375d8b271881790f934d9556ab"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 9,
+      "baseline_line": 743,
+      "current_line": 743,
+      "sha256": "5161bb26cb61a7b2abf2aba16ca70bf0ea2fb005d2316e8db94db84acf94c723"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 10,
+      "baseline_line": 790,
+      "current_line": 790,
+      "sha256": "61fa52b4dadf6158ec07790f21ecf22106e17d11abdcdef6dd7e3e58a1fd9355"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 11,
+      "baseline_line": 832,
+      "current_line": 832,
+      "sha256": "232e4d2d5077d0f7e93e1056d76f5233d9e86c1923a4a9b6beae5b8028b775b5"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 12,
+      "baseline_line": 923,
+      "current_line": 923,
+      "sha256": "b194e5168bb674da78f509f3ed618a91df5175e8103bda09a6f43bda65282a4c"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 13,
+      "baseline_line": 975,
+      "current_line": 975,
+      "sha256": "f2c98b0d28f61056c84a9b6c3bcdacaae5e50a0d791a8999552b05f105eaadc4"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 14,
+      "baseline_line": 1014,
+      "current_line": 1014,
+      "sha256": "866a82ccaa02bdfa6fdcb721a8d90ac01f139e85c35dd96a8c8c476f52e7d048"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 15,
+      "baseline_line": 1161,
+      "current_line": 1161,
+      "sha256": "f63b6a8246ad76326bf8fd84310e3033dc39a0cdc0254286f300dd1fa99391d3"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 16,
+      "baseline_line": 1228,
+      "current_line": 1228,
+      "sha256": "6d3fb4ad8e2cc2b78a8099698ffbb04444c9061132d763e30ea15ddef98315d6"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 17,
+      "baseline_line": 1310,
+      "current_line": 1310,
+      "sha256": "e99802a30d55f70f14b18238bda86d5f80de46e4c8cff7ae32e68a5cbebe124f"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 18,
+      "baseline_line": 1358,
+      "current_line": 1358,
+      "sha256": "5dfe46d2f3abe0a0b548d9f601509673c15c413cdf0346d3ce3daf08ba944421"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 19,
+      "baseline_line": 1433,
+      "current_line": 1433,
+      "sha256": "b62116c1ede6e2297e295043bfa1813ece9570008f53112116d799b9ad974e4b"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 20,
+      "baseline_line": 1500,
+      "current_line": 1500,
+      "sha256": "56fd8657a232cfe9d8bce863e067cb7aa1b431472694153b1d7bd9f9afbf4420"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 21,
+      "baseline_line": 1583,
+      "current_line": 1583,
+      "sha256": "8d6d5ccf2cb528f14587fd2d60502d734abfacc14b65ade87a37a412f1e3fa76"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 22,
+      "baseline_line": 1685,
+      "current_line": 1685,
+      "sha256": "71cb6e533705f74570acfbd7558b1a1e1b59708cee3eb91c816e5d1c28758c5a"
+    },
+    {
+      "path": "manuscript/smooth-fields-and-formal-hamiltonians.tex",
+      "number": 23,
+      "baseline_line": 1740,
+      "current_line": 1740,
+      "sha256": "47274999bfbaf37c71535e11463241f82f33310fb9cbca735bb7afcb35bb9a9d"
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "number": 1,
+      "baseline_line": 244,
+      "current_line": 244,
+      "sha256": "297810faf94ee5359f0debdaae1b5265c820b0f3c1bb10659b61e07bbb9f3f92"
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "number": 2,
+      "baseline_line": 275,
+      "current_line": 275,
+      "sha256": "386eb7d6fa77fd575b1f06518e60b49732dd65f9f6fe336938848949f90f99dd"
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "number": 3,
+      "baseline_line": 642,
+      "current_line": 642,
+      "sha256": "71c157942201a263378de42911fb8c2c61d9246eaf0ec88479a90c57b75aa6f1"
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "number": 4,
+      "baseline_line": 943,
+      "current_line": 943,
+      "sha256": "e38de65bc4c9cc23f7715150ae139f34e459b863f570bdf75ea4e2ebf16fffb0"
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "number": 5,
+      "baseline_line": 1216,
+      "current_line": 1216,
+      "sha256": "8917a676b26400eaf2bf2567988ddc9a9db121e311b561261a7f5e206f2556a9"
+    },
+    {
+      "path": "manuscript/translation-and-braided-exchange.tex",
+      "number": 6,
+      "baseline_line": 1266,
+      "current_line": 1266,
+      "sha256": "d40a9e403e9e4257d3d81f4829d8bc12ffb5d1c8053263bc039baf026819ee39"
+    },
+    {
+      "path": "manuscript/two-dimensional-free-fields.tex",
+      "number": 1,
+      "baseline_line": 180,
+      "current_line": 180,
+      "sha256": "dce4566d0303319aae358c5d881cdfe3338a4c1b5c4540100d2f2f27734de7ac"
+    }
+  ],
+  "new_proofs": [
+    {
+      "start_line": 2705,
+      "end_line": 2743,
+      "sha256": "da1f31cd2704b33a6c943e115ae635f995160ff361e6685e8d50d3aab12b0de3"
+    },
+    {
+      "start_line": 2782,
+      "end_line": 2795,
+      "sha256": "8520e9db9dcbfb227023aa835cc3d26e8bd909b04411665d17dec11d3c1d683e"
+    },
+    {
+      "start_line": 2850,
+      "end_line": 2883,
+      "sha256": "3d64c8d372c89328b182c4d4647310cb95939744645cf0ed2ea28b5b3c81d1bb"
+    },
+    {
+      "start_line": 2949,
+      "end_line": 2967,
+      "sha256": "096c56ca9045d188a3789f70b70a65d859ef4dfe346df36bf9e8f04ac7ad9db7"
+    }
+  ],
+  "all_33_native_preserved": true,
+  "all_138_core_proofs_exact": true,
+  "entire_native_body_preserved_under_declared_transport": true,
+  "transport": [
+    "von Mangoldt math-font subscript",
+    "chapter-scoped nonzero unit convention",
+    "Needspace pagination declarations"
+  ],
+  "scope": "Complete proof-byte correspondence and semantic transport check. This is not a fresh acceptance of all inherited theorems."
+}

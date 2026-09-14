@@ -1,0 +1,1203 @@
+\chapter{Products and coefficients}
+\label{ch:products-coefficients}
+
+The square of a primitive distinguished a differential graded algebra
+from its cohomology algebra. Retaining only dimensions discards still
+more information. We ask what the dimensions in each degree determine.
+
+\section{Counting monomials}
+
+Fix a field $k$ of characteristic zero for the algebraic counting
+constructions. Write $\mathbb N=\{0,1,2,\ldots\}$.
+The counting degree is a nonnegative integer weight, independent of any
+cohomological degree.
+
+The polynomial algebra $k[x]$ consists of finite linear combinations
+of $x^a$, with $a\in\mathbb N$ and multiplication $x^ax^b=x^{a+b}$.
+Give $x$ degree one. Its degree-$n$ subspace has basis $x^n$
+and dimension one.
+In $k[x,y]$, give both variables degree one.
+The monomial $x^ay^b$ has degree $a+b$, so the degree-$n$ basis is
+\[
+ \{x^a y^{n-a}:a=0,1,\ldots,n\}.
+\]
+Its dimension is $n+1$.
+
+These counts turn the choice of generators into a sequence of integers.
+Recovering the generators from the sequence is a different question.
+Cancellation already makes that question ambiguous when some generators
+contribute with a minus sign.
+
+The symbol $p$ can record these sequences as
+\[
+ 1+p+p^2+p^3+\cdots,
+ \qquad
+ 1+2p+3p^2+4p^3+\cdots.
+\]
+At this point each expression records coefficients, with no numerical value
+assigned to $p$.
+
+To count generators with signs, a second grading is needed.
+A parity is an element of $\mathbb Z/2\mathbb Z=\{\bar0,\bar1\}$.
+A vector space with degree and parity has a decomposition
+\[
+ V=\bigoplus_{n\geq0}(V_{n,\bar0}\oplus V_{n,\bar1}).
+\]
+Write $V_n=V_{n,\bar0}\oplus V_{n,\bar1}$.
+
+The terms even and odd refer to parity. Counting degree and parity are
+independent. Products add degrees in $\mathbb N$ and parities in
+$\mathbb Z/2\mathbb Z$.
+Scalars have degree zero and even parity, and algebra identities are even.
+
+For a homogeneous element $a$, write $\epsilon(a)\in\{0,1\}$ for its
+parity. Tensor products of algebras in this chapter use the multiplication
+\[
+ (a\otimes b)(a'\otimes b')
+   =(-1)^{\epsilon(b)\epsilon(a')}aa'\otimes bb'.
+\]
+Thus parity determines the interchange sign. Counting degree contributes
+no sign. On homogeneous tensors $a\otimes b$, $a'\otimes b'$, and
+$a''\otimes b''$, both parenthesizations have exponent
+\[
+ \epsilon(b)\epsilon(a')+
+ \epsilon(b)\epsilon(a'')+\epsilon(b')\epsilon(a'')
+\pmod 2.
+\]
+Thus this multiplication is associative, with identity $1\otimes1$.
+
+The exterior algebra on one generator $\theta$ is the vector space
+$\Lambda(\theta)=k\,1\oplus k\theta$, with $1$ as identity and
+$\theta^2=0$. Give $\theta$ counting degree three and odd parity, and give
+$x,y$ counting degree one and even parity. Then
+\[
+ B=k[x,y]\otimes_k\Lambda(\theta),
+ \qquad \deg x=\deg y=1,\quad\deg\theta=3,
+\]
+identifies as a vector space with $k[x,y]\oplus k[x,y]$ by
+\[
+ f\otimes(a+b\theta)\longmapsto(af,bf),\qquad a,b\in k.
+\]
+Its inverse sends $(f,g)$ to $f\otimes1+g\otimes\theta$.
+Thus $B$ has basis $x^a y^b$ and $x^a y^b\theta$.
+The tensor rule makes the polynomial generators commute with $\theta$.
+
+When both spaces in degree $n$ are finite-dimensional, define
+\[
+ \dim V_n=\dim V_{n,\bar0}+\dim V_{n,\bar1},
+ \qquad
+ \operatorname{sdim}V_n=\dim V_{n,\bar0}-\dim V_{n,\bar1}.
+\]
+The second integer is the signed dimension, also called the superdimension.
+Define the dimension series and the signed dimension series by
+\[
+ H_V(p)=\sum_{n\geq0}\dim V_n\,p^n,
+ \qquad
+ S_V(p)=\sum_{n\geq0}\operatorname{sdim}V_n\,p^n.
+\]
+
+In $B$, the monomials without $\theta$ are even, and those with $\theta$ are
+odd. There are $n+1$ even monomials in degree $n$.
+For $n\geq3$, there are $n-2$ odd monomials, because $a+b=n-3$.
+For $n<3$, there are none. Thus
+\begin{equation}
+ S_B(p)=1+2p+3p^2+3p^3+3p^4+\cdots.
+ \label{eq:pc-count-example}
+\end{equation}
+
+The ordinary dimension in degree $n\geq3$ is $2n-1$.
+Consequently, even positive signed coefficients need not be ordinary
+dimensions of the space from which they were computed.
+
+\section{Formal multiplication and integer powers}
+
+The choices of powers of different generators are independent.
+Multiplying their counting series must therefore sum over all ways to split
+a degree. This gives a multiplication defined entirely by finite sums.
+
+Let $R$ be a commutative ring with identity. Its formal power-series ring
+$R[[p]]$ consists of sequences $(a_0,a_1,\ldots)$, written
+$\sum_{n\geq0}a_np^n$. Addition is coefficientwise, and multiplication is
+\[
+ \left(\sum_{n\geq0}a_np^n\right)
+ \left(\sum_{n\geq0}b_np^n\right)
+ =\sum_{n\geq0}\left(\sum_{j=0}^n a_jb_{n-j}\right)p^n.
+\]
+The notation $[p^n]F$ means the coefficient of $p^n$ in $F$.
+
+Each inner sum is finite. Associativity follows because either bracketing
+of three factors gives $\sum_{i+j+k=n}a_i b_j c_k$ in degree $n$.
+Commutativity and distributivity follow from the corresponding laws in $R$.
+The series with constant coefficient $1$ and all other coefficients zero
+is the multiplicative identity.
+
+For $N\geq0$, write $F\equiv G\pmod{p^{N+1}}$ when their coefficients
+through degree $N$ agree. Equivalently,
+$F-G\in p^{N+1}R[[p]]$. This congruence respects addition and multiplication.
+
+A sequence of series converges formally when, in each bounded range of
+degrees, its coefficients eventually stabilize. The limit is the sequence
+of those stable coefficients. This is the $p$-adic topology used here.
+It uses stabilization of coefficients, without a topology on $R$.
+
+\begin{lemma}[Formal units]
+\label{lem:pc-units}
+A series $U=\sum_{n\geq0}u_np^n$ has a multiplicative inverse in $R[[p]]$
+if and only if $u_0$ has a multiplicative inverse in $R$.
+In particular, every series in $1+pR[[p]]$ is a unit.
+\end{lemma}
+
+\begin{proof}
+If $UV=1$, the constant coefficients satisfy $u_0v_0=1$.
+Conversely, suppose $u_0$ is a unit. Define
+\[
+ v_0=u_0^{-1},\qquad
+ v_n=-u_0^{-1}\sum_{j=1}^n u_jv_{n-j}\quad(n\geq1).
+\]
+The coefficient formula for multiplication gives $[p^0]UV=1$ and
+$[p^n]UV=0$ for every $n\geq1$. Thus $UV=1$.
+The same recursion forces every coefficient of an inverse, so it is unique.
+\end{proof}
+
+For $j\geq1$, define the factorial $j!=1\cdot2\cdots j$, and set $0!=1$.
+For an integer $m$ and $k\geq0$, define
+\[
+ \binom{m}{0}=1,\qquad
+ \binom{m}{k}=\frac{m(m-1)\cdots(m-k+1)}{k!}\quad(k\geq1).
+\]
+
+For $0\leq k\leq m$, there are $m(m-1)\cdots(m-k+1)$ ordered choices
+of $k$ distinct elements from an $m$-element set.
+Each $k$-element subset has $k!$ orderings, so the quotient counts those
+subsets. It is therefore an integer.
+For $m\geq0$ and $k>m$, the numerator contains a zero factor.
+Thus these coefficients vanish, as does the subset count.
+
+For $m=-h<0$, the defining formula gives
+\[
+ (-1)^k\binom{-h}{k}=\binom{h+k-1}{k}.
+\]
+An integer coefficient in $R$ means its image under the map
+$\mathbb Z\to R$ that sends $1$ to the identity of $R$.
+
+\begin{lemma}[Binomial factors]
+\label{lem:pc-binomial}
+For $c\in R$, $\nu\geq1$, and $m\in\mathbb Z$, the factor
+$(1-cp^\nu)^m$ is a unit of $R[[p]]$, and
+\[
+ (1-cp^\nu)^m
+   =\sum_{k\geq0}(-1)^k\binom{m}{k}c^k p^{k\nu}.
+\]
+Here a negative power means the corresponding positive power of the
+inverse from Lemma~\ref{lem:pc-units}.
+\end{lemma}
+
+\begin{proof}
+First use a formal variable $t$. For $m\geq0$, expand the product of $m$
+copies of $1-t$. A term $(-t)^k$ occurs once for each choice of $k$ copies,
+which gives the formula.
+The coefficient rule also gives
+\[
+ (1-t)\sum_{k\geq0}t^k=1.
+\]
+
+For $h\geq1$, the coefficient of $t^k$ in
+$(\sum_{j\geq0}t^j)^h$ counts tuples
+$(a_1,\ldots,a_h)\in\mathbb N^h$ with sum $k$.
+Place $k$ identical marks in a row and insert $h-1$ separators.
+Empty groups are allowed. This identifies the tuples with choices of
+the separator positions among $k+h-1$ positions, giving
+$\binom{k+h-1}{h-1}=\binom{k+h-1}{k}$ tuples.
+This proves the formula for $m=-h$ in $\mathbb Z[[t]]$.
+
+Send integer coefficients to $R$ and substitute $t=cp^\nu$.
+The substitution is defined coefficientwise because $\nu\geq1$.
+All factors have constant coefficient one, so they are units.
+\end{proof}
+
+The one-generator counting sequence is therefore $(1-p)^{-1}$.
+Multiplying two copies counts the monomials in $k[x,y]$.
+The two signed contributions of $1$ and $\theta$ give $1-p^3$.
+Thus the count in \eqref{eq:pc-count-example} also gives
+\begin{equation}
+ S_B(p)=\frac{1-p^3}{(1-p)^2}.
+ \label{eq:pc-rational-example}
+\end{equation}
+The fraction means multiplication by a formal inverse, whose constant
+coefficient is one.
+
+\section{Locally finite products and weighted counts}
+
+Infinitely many generators are compatible with finite coefficients when
+only finitely many generators can contribute in each bounded degree.
+The same condition defines an infinite product without choosing analytic
+values of $p$.
+
+Let $I$ be an index set. For each $r\in I$, specify a positive integer
+$\nu_r$, an integer $m_r$, and an element $c_r\in R$.
+Assume that
+\begin{equation}
+ I_{\leq N}=\{r\in I:\nu_r\leq N\}\quad\text{is finite for every }N.
+ \label{eq:pc-local-finiteness}
+\end{equation}
+This is the local finiteness condition on the degrees.
+
+\begin{proposition}[Coefficientwise product]
+\label{prop:pc-product}
+Under \eqref{eq:pc-local-finiteness}, there is a unique series
+\begin{equation}
+ F(p)=\prod_{r\in I}(1-c_rp^{\nu_r})^{m_r}\in1+pR[[p]]
+ \label{eq:pc-product}
+\end{equation}
+whose coefficients through degree $N$ equal those of the finite product
+over $I_{\leq N}$, for every $N$.
+The result is independent of the order of the factors.
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{lem:pc-binomial} shows that the $r$th factor is congruent to
+$1$ modulo $p^{\nu_r}$. A factor with $\nu_r>N$ therefore leaves every
+coefficient through degree $N$ unchanged.
+The finite product over $I_{\leq N+1}$ consequently agrees with the product
+over $I_{\leq N}$ through degree $N$.
+These compatible coefficients define one series. They also force uniqueness.
+Any reordering gives the same finite products modulo each $p^{N+1}$,
+because multiplication in $R[[p]]$ is commutative.
+\end{proof}
+
+Positive degrees alone do not imply local finiteness. For example,
+the partial products $(1-p)^k$ have coefficient $-k$ in degree one
+over $\mathbb Z$. This coefficient never stabilizes, so the repeated
+infinite product of the factor $1-p$ has no formal limit.
+By contrast, $\prod_{n\geq1}(1-p^n)$ exists by
+Proposition~\ref{prop:pc-product}.
+Degree zero also requires separate treatment: $1-cp^0=1-c$ need not
+be a unit.
+
+The integer exponents in \eqref{eq:pc-product} have a direct counting
+interpretation. For each $r$ with $m_r<0$, introduce $-m_r$ even polynomial
+generators of degree $\nu_r$. For each $r$ with $m_r>0$, introduce $m_r$
+odd exterior generators of that degree. Indices with $m_r=0$ introduce none.
+Let $V_{\bar0}$ and $V_{\bar1}$ be the $k$-vector spaces on the respective
+sets of generators. Define
+\[
+ \mathcal A=\operatorname{Sym}(V_{\bar0})\otimes_k
+                 \Lambda(V_{\bar1}).
+\]
+
+Here $\operatorname{Sym}(V_{\bar0})$ is the polynomial algebra with finite
+monomials in the even generators. The exterior algebra
+$\Lambda(V_{\bar1})$ has basis the finite products of distinct odd
+generators in a fixed order.
+Interchanging two odd generators changes the sign, and the square of each
+odd generator is zero. Even generators commute with every generator.
+These rules define the multiplication on the displayed basis.
+
+Associativity follows by counting interchanges among three ordered factors.
+If an odd generator repeats, both parenthesizations are zero. Otherwise,
+both signs count the same pairs of odd generators whose order is reversed.
+For homogeneous elements $a,b$ with parities $\epsilon,\delta\in\{0,1\}$,
+these rules give $ab=(-1)^{\epsilon\delta}ba$.
+
+Weighted counting assigns a scalar to each monomial.
+For a linear operator $T:V\to V$, a nonzero vector $v$ satisfying
+$T(v)=\lambda v$ is an eigenvector, with eigenvalue $\lambda\in k$.
+In a basis of eigenvectors, the matrix has these eigenvalues on its
+diagonal and zero in every other entry.
+The trace calculation also requires comparison with an arbitrary basis.
+
+For a finite-dimensional vector space $V$, let
+$\mathcal B=(v_1,\ldots,v_d)$ and $\mathcal C=(w_1,\ldots,w_d)$ be ordered
+bases. Write $[v]_{\mathcal B}$ and $[v]_{\mathcal C}$ for coordinate
+columns. Let $S$ have $j$th column $[w_j]_{\mathcal B}$.
+Then $[v]_{\mathcal B}=S[v]_{\mathcal C}$.
+The reverse coordinate change is an inverse for $S$.
+
+If $T$ has matrices $M_{\mathcal B}$ and $M_{\mathcal C}$ in these bases,
+applying $T$ to the coordinate identity gives
+$M_{\mathcal B}S=SM_{\mathcal C}$.
+Hence $M_{\mathcal C}=S^{-1}M_{\mathcal B}S$.
+For a finite-dimensional space, the trace of an operator is the sum of
+the diagonal entries of any matrix representing it.
+This does not depend on the basis: finite sums give
+$\operatorname{tr}(AB)=\sum_{i,j}A_{ij}B_{ji}=\operatorname{tr}(BA)$,
+and hence $\operatorname{tr}(S^{-1}AS)=\operatorname{tr}(A)$.
+For an operator that preserves parity, its supertrace is the trace on the
+even subspace minus the trace on the odd subspace.
+When comparing traces with dimension counts, regard integers as their
+images under the injective scalar map $\mathbb Z\to k$.
+
+\begin{proposition}[Signed monomial realization]
+\label{prop:pc-realization}
+Assume \eqref{eq:pc-local-finiteness} and take $R=k$.
+Each degree of $\mathcal A$ is finite-dimensional.
+Define the linear operator $T$ by multiplying each generator of index $r$
+by $c_r$, and extend $T$ multiplicatively with $T(1)=1$.
+Then $T$ preserves degree and parity, and
+\[
+ \sum_{n\geq0}\operatorname{str}(T|_{\mathcal A_n})p^n
+   =\prod_{r\in I}(1-c_rp^{\nu_r})^{m_r}.
+\]
+In particular, if all $c_r=1$, the product is $S_{\mathcal A}(p)$.
+\end{proposition}
+
+\begin{proof}
+A degree-$n$ monomial uses only generators of degree at most $n$.
+There are finitely many such generators, and every polynomial exponent is
+at most $n$. This proves finite-dimensionality, including
+$\mathcal A_0=k$.
+Scaling generators respects every multiplication relation, so $T$ is
+well-defined. Each monomial is an eigenvector, with eigenvalue the product
+of its generator weights.
+
+For one even generator of degree $\nu$ and weight $c$, its contribution is
+$\sum_{a\geq0}c^a p^{a\nu}=(1-cp^\nu)^{-1}$.
+For one odd generator, the basis $1,\theta$ contributes $1-cp^\nu$.
+
+In a product monomial, eigenvalues multiply, degrees add, and parity signs
+multiply. The coefficient rule therefore multiplies these single-generator
+series. In each degree this argument uses finitely many generators.
+Proposition~\ref{prop:pc-product} then gives the stated identity.
+\end{proof}
+
+\section{Logarithmic coefficients and the recurrence}
+
+Differentiating a product and dividing by that product gives a sum of
+contributions from its individual factors. This identity yields a
+coefficient recurrence.
+For $F=\sum_{n\geq0}f_np^n\in R[[p]]$, define its formal derivative by
+\[
+ F'=\sum_{n\geq1}n f_np^{n-1}.
+\]
+The coefficient rule proves $(FG)'=F'G+FG'$:
+the coefficient with $i+j=n$ has multiplier $n=i+j$ on both sides.
+If $F$ is a unit, differentiation of $FF^{-1}=1$ gives
+$(F^{-1})'=-F^{-2}F'$.
+Thus the usual integer-power rule holds for positive, zero, and negative
+powers of units.
+
+For $F\in1+pR[[p]]$, define its logarithmic coefficients, or ghost
+coefficients, by
+\begin{equation}
+ \frac{pF'(p)}{F(p)}=\sum_{s\geq1}A_s p^s.
+ \label{eq:pc-ghost-definition}
+\end{equation}
+The quotient uses the formal inverse of $F$.
+This definition requires no logarithm and no division by integers in $R$.
+
+\begin{theorem}[Product recurrence]
+\label{thm:pc-recurrence}
+For the product in \eqref{eq:pc-product}, its logarithmic coefficients are
+\begin{equation}
+ A_s=-\sum_{\substack{r\in I\\\nu_r\mid s}}
+                  m_r\nu_r c_r^{s/\nu_r}\qquad(s\geq1).
+ \label{eq:pc-ghost-product}
+\end{equation}
+Writing $F=\sum_{j\geq0}f_jp^j$, one has $f_0=1$ and
+\begin{equation}
+ j f_j=\sum_{s=1}^j A_s f_{j-s}\qquad(j\geq1).
+ \label{eq:pc-recurrence}
+\end{equation}
+Here $\nu_r\mid s$ means that $s$ is an integer multiple of $\nu_r$.
+Each sum in \eqref{eq:pc-ghost-product} is finite.
+\end{theorem}
+
+\begin{proof}
+For a single factor, the derivative and geometric-series formulas give
+\[
+ \frac{p\bigl((1-cp^\nu)^m\bigr)'}{(1-cp^\nu)^m}
+   =-\frac{m\nu cp^\nu}{1-cp^\nu}
+   =-m\nu\sum_{k\geq1}c^k p^{k\nu}.
+\]
+
+For a finite product, the product rule adds these expressions.
+For degree at most $N$, the infinite product can be replaced by the
+finite product over $I_{\leq N}$.
+Indeed, $p$ times differentiation preserves congruence modulo $p^{N+1}$.
+Inversion also preserves that congruence for units, since
+$U^{-1}-V^{-1}=U^{-1}(V-U)V^{-1}$.
+Therefore the same additive formula holds in every degree for $F$.
+
+The coefficient of $p^s$ in the single-factor expression is nonzero only
+when $\nu\mid s$, which proves \eqref{eq:pc-ghost-product}.
+Only indices in the finite set $I_{\leq s}$ can occur.
+Multiplying \eqref{eq:pc-ghost-definition} by $F$ and comparing the
+coefficient of $p^j$ proves \eqref{eq:pc-recurrence}.
+\end{proof}
+
+For a commutative $\mathbb Q$-algebra $R$, every positive integer is
+invertible in $R$. Thus \eqref{eq:pc-recurrence} recovers $f_j$ uniquely
+from $A_1,\ldots,A_j$ and the preceding coefficients.
+The converse recursion is
+\[
+ A_j=jf_j-\sum_{s=1}^{j-1}A_s f_{j-s}.
+\]
+Hence the first $N$ logarithmic coefficients contain exactly the same
+information as $f_1,\ldots,f_N$ over such a ring.
+
+The exponential form of this correspondence can also be constructed
+coefficientwise. For $H\in pR[[p]]$, define
+\[
+ \exp(H)=\sum_{k\geq0}\frac{H^k}{k!}.
+\]
+Since $H^k\in p^kR[[p]]$, each coefficient is a finite sum.
+The power rule gives $(\exp H)'=H'\exp H$ by differentiating those finite
+sums degree by degree. Consequently, for any sequence $A_s\in R$,
+\begin{equation}
+ F(p)=\exp\left(\sum_{s\geq1}\frac{A_s}{s}p^s\right)
+ \label{eq:pc-exponential}
+\end{equation}
+has constant coefficient one and satisfies
+\eqref{eq:pc-ghost-definition}. The recurrence proves uniqueness.
+
+For example, integers $A_1=1$ and $A_s=0$ for $s>1$ give
+$F=\exp(p)=1+p+\tfrac12p^2+\cdots$. Integer logarithmic coefficients
+therefore do not by themselves give integer coefficients of $F$.
+
+If a family of local factors is specified by
+\[
+ E_r(X)=\exp\left(\sum_{k\geq1}\frac{a_{r,k}}{k}X^k\right)
+ \in1+X\mathbb Q[[X]],
+\]
+and positive integers $d_r$ satisfy the local finiteness condition, then
+$\prod_r E_r(p^{d_r})$ exists formally by the same truncation argument.
+Here local finiteness means that only finitely many $r$ have $d_r\leq N$,
+for each $N$. Applying the product rule gives its logarithmic coefficients
+\[
+ A_s=\sum_{d_r\mid s}d_r a_{r,s/d_r}.
+\]
+Thus this construction also has recurrence \eqref{eq:pc-recurrence}.
+
+\section{Integer coefficients and factors of weight one}
+
+An exact criterion distinguishes the rational sequences $(A_s)$ for
+which \eqref{eq:pc-exponential} has integer coefficients.
+Factors with weight one give this criterion and also a unique
+factorization of every series in $1+p\mathbb Z[[p]]$.
+The sign convention in this section is
+\[
+ F(p)=\prod_{n\geq1}(1-p^n)^{-b_n},
+\]
+so $b_n$ is the negative of the exponent $m_n$ used earlier.
+
+Divisors of an integer will relate its logarithmic coefficient to the
+factor exponents. The required divisor identity uses unique factorization
+into primes, which follows from integer division as follows.
+For positive integers $a,d$, the set of nonnegative integers $q$ with
+$qd\leq a$ is nonempty and finite. Its largest element satisfies
+\[
+ a=qd+r,\qquad 0\leq r<d.
+\]
+The upper bound on $r$ follows because $(q+1)d>a$.
+
+A prime is an integer $\ell>1$ whose positive divisors are $1$ and $\ell$.
+If a prime $\ell$ divides $ab$ for positive integers $a,b$, then it
+divides $a$ or $b$. To prove this, suppose that $\ell$ does not divide $a$.
+Let $d$ be the least positive integer of the form $u\ell+va$ with
+$u,v\in\mathbb Z$. Such a $d$ exists because $\ell$ is one such integer.
+
+Divide both $\ell$ and $a$ by $d$ using the preceding construction.
+Each remainder is an integer combination of $\ell$ and $a$.
+If positive, it contradicts the minimality of $d$.
+Thus $d$ divides both $\ell$ and $a$.
+
+Primality and $\ell\nmid a$ force $d=1$.
+For integers $u,v$ with $u\ell+va=1$, multiplication by $b$ gives
+\[
+ b=u\ell b+vab.
+\]
+Both terms on the right are divisible by $\ell$, so $\ell$ divides $b$.
+
+Every integer $n>1$ is a finite product of primes. Indeed, induction on
+$n$ proves this if $n$ is prime, and otherwise writes $n=ab$ with
+$1<a,b<n$ and applies the induction hypothesis to both factors.
+
+If two prime products are equal, the first prime in one divides a prime
+in the other, by repeated application of the preceding divisibility result.
+Those two primes are equal. Cancel them and repeat.
+This proves uniqueness up to reordering. The number $1$ has the empty
+prime factorization.
+
+For a positive integer $d$, define its M\"obius function $\mu(d)$ as follows.
+Set $\mu(1)=1$. Set $\mu(d)=0$ if a prime square divides $d$.
+Otherwise $d$ is a product of $t$ distinct primes, and set $\mu(d)=(-1)^t$.
+
+For any positive integer $q$,
+\begin{equation}
+ \sum_{d\mid q}\mu(d)=
+ \begin{cases}1,&q=1,\\0,&q>1.\end{cases}
+ \label{eq:pc-mobius-sum}
+\end{equation}
+To prove this, let $q>1$ have distinct prime divisors $\ell_1,\ldots,\ell_t$.
+Only products of subsets of these primes contribute.
+The sum is therefore $\sum_{J\subseteq\{1,\ldots,t\}}(-1)^{|J|}
+=(1-1)^t=0$. For $q=1$, its only divisor is $1$.
+
+\begin{lemma}[Divisor inversion]
+\label{lem:pc-inversion}
+For sequences $u_n,v_n$ in an abelian group, the identities
+$v_n=\sum_{d\mid n}u_d$ for all $n\geq1$ hold if and only if
+\[
+ u_n=\sum_{d\mid n}\mu(d)v_{n/d}\quad(n\geq1).
+\]
+Integer multiplication here means repeated addition, with negatives taken
+in the abelian group.
+\end{lemma}
+
+\begin{proof}
+If $v_n=\sum_{d\mid n}u_d$, substitute this expression and rearrange the
+finite divisor sums:
+\[
+ \sum_{d\mid n}\mu(d)v_{n/d}
+   =\sum_{e\mid n}u_e\sum_{d\mid n/e}\mu(d)=u_n.
+\]
+The last equality is \eqref{eq:pc-mobius-sum}.
+Conversely, substitute the claimed expression for $u_e$ to obtain
+\[
+ \sum_{e\mid n}u_e
+   =\sum_{e\mid n}\sum_{d\mid e}\mu(d)v_{e/d}
+   =\sum_{h\mid n}v_h\sum_{d\mid n/h}\mu(d)=v_n.
+\]
+All sums are finite, so both rearrangements are valid in an abelian group.
+\end{proof}
+
+\begin{theorem}[Integral factorization]
+\label{thm:pc-integrality}
+Every $F\in1+p\mathbb Z[[p]]$ has a unique expression
+\[
+ F=\prod_{n\geq1}(1-p^n)^{-b_n},\qquad b_n\in\mathbb Z.
+\]
+More generally, for a sequence $A_s\in\mathbb Q$, let $F$ be
+\eqref{eq:pc-exponential} in $\mathbb Q[[p]]$, and define
+\begin{equation}
+ b_n=\frac1n\sum_{d\mid n}\mu(d)A_{n/d}.
+ \label{eq:pc-integrality-criterion}
+\end{equation}
+Then $F\in1+p\mathbb Z[[p]]$ if and only if $b_n\in\mathbb Z$
+for every $n\geq1$.
+\end{theorem}
+
+\begin{proof}
+First suppose $F$ has integer coefficients. Construct finite products
+$P_n=\prod_{k=1}^n(1-p^k)^{-b_k}$ inductively, starting with $P_0=1$.
+Suppose $P_{n-1}\equiv F\pmod{p^n}$.
+Its inverse has integer coefficients by Lemma~\ref{lem:pc-units}, so
+\[
+ F P_{n-1}^{-1}\equiv1+b_n p^n\pmod{p^{n+1}}
+\]
+for a unique integer $b_n$.
+Lemma~\ref{lem:pc-binomial} gives
+$(1-p^n)^{-b_n}\equiv1+b_n p^n\pmod{p^{n+1}}$.
+Thus $P_n\equiv F\pmod{p^{n+1}}$, completing the induction.
+
+Proposition~\ref{prop:pc-product} defines the infinite product, and the
+congruences show that it equals $F$.
+Any factorization with integer exponents must choose this same $b_n$
+after $b_1,\ldots,b_{n-1}$ have been fixed. This proves uniqueness.
+
+The product formula \eqref{eq:pc-ghost-product}, with $m_n=-b_n$ and
+$c_n=1$, gives
+\[
+ A_s=\sum_{n\mid s}n b_n.
+\]
+Apply Lemma~\ref{lem:pc-inversion} to $u_n=n b_n$.
+It yields \eqref{eq:pc-integrality-criterion}. Thus integral $F$ forces
+every number in that formula to be integral.
+
+Conversely, suppose every number in \eqref{eq:pc-integrality-criterion}
+is integral. Construct $G=\prod_{n\geq1}(1-p^n)^{-b_n}$ over $\mathbb Z$.
+Divisor inversion gives $\sum_{n\mid s}n b_n=A_s$.
+Hence $G$ has the prescribed logarithmic coefficients.
+Viewed in $\mathbb Q[[p]]$, both $G$ and $F$ satisfy the same recurrence
+with constant coefficient one. Its uniqueness gives $F=G$.
+\end{proof}
+
+For the sequence with $A_1=1$ and all later terms zero,
+formula \eqref{eq:pc-integrality-criterion} gives $b_2=-\tfrac12$.
+This recovers the obstruction already visible in $[p^2]\exp(p)=\tfrac12$.
+The factorization uses coefficients in every degree.
+A finite list requires an additional condition to determine the series.
+
+\section{How many coefficients determine a series?}
+
+A finite list of coefficients is a finite jet.
+More precisely, the jet through degree $N$ of $F\in R[[p]]$ is its class
+in $R[[p]]/p^{N+1}R[[p]]$, or equivalently the list
+$([p^0]F,\ldots,[p^N]F)$.
+For a field $K$, this list never determines an unrestricted formal series.
+Indeed, $F$ and $F+p^{N+1}$ are distinct and have the same jet through
+degree $N$. If $F(0)=1$, both remain normalized units.
+
+The degree of a nonzero polynomial is its highest exponent with nonzero
+coefficient. The product of two nonzero polynomials over $K$ is nonzero:
+its highest coefficient is the product of their highest coefficients,
+which is nonzero in a field.
+
+A rational fraction regular at zero is a pair of polynomials $(N,D)$
+with $D(0)\ne0$, written $N/D$.
+Define equality of such fractions by
+\[
+ \frac ND=\frac{N'}{D'}
+ \quad\Longleftrightarrow\quad ND'=N'D.
+\]
+
+This relation is reflexive and symmetric.
+If $ND'=N'D$ and $N'D''=N''D'$, multiplication gives
+$D'(ND''-N''D)=0$.
+The product property just proved and $D'\ne0$ imply $ND''=N''D$.
+Thus the relation is transitive.
+A rational function regular at zero is an equivalence class for this
+relation.
+
+The formal expansion of $N/D$ is $ND^{-1}\in K[[p]]$.
+Equality of two fractions is equivalent to equality of their formal
+expansions: multiply by the formal unit $DD'$ in either direction.
+Thus the expansion is well-defined and distinguishes rational functions.
+Rescaling both polynomials by $D(0)^{-1}$ gives a representative with
+$D(0)=1$.
+Even knowledge that two series are rational is insufficient without a
+degree bound: $1$ and $1+p^{N+1}$ give a counterexample.
+In the next theorem, all four polynomials have constant coefficient one,
+so their degrees are defined.
+
+\begin{theorem}[Finite determination of rational functions]
+\label{thm:pc-rational-determination}
+Let
+\[
+ F=N_F D_F^{-1},\qquad G=N_G D_G^{-1},
+\]
+where $N_F,D_F,N_G,D_G\in K[p]$ all have constant coefficient one.
+Set
+\[
+ M=\max\{\deg N_F+\deg D_G,\ \deg N_G+\deg D_F\}.
+\]
+If $F\equiv G\pmod{p^{M+1}}$, then $F=G$ as formal series and as
+rational functions. In particular, normalized rational functions with
+numerator degree at most $a$ and denominator degree at most $b$ are
+determined by their coefficients through degree $a+b$.
+\end{theorem}
+
+\begin{proof}
+Multiplication by $D_FD_G$ preserves the congruence, so the polynomial
+\[
+ H=N_FD_G-N_GD_F
+\]
+has all coefficients through degree $M$ equal to zero.
+Both summands have degree at most $M$.
+Therefore $H=0$.
+Cross multiplication gives equality of rational functions.
+Multiplication by the formal inverse of $D_FD_G$ gives equality of series.
+If both numerator degrees are at most $a$ and both denominator degrees
+are at most $b$, then $M\leq a+b$, giving the stated uniform bound.
+\end{proof}
+
+Every finite product \eqref{eq:pc-product} over a field is rational.
+Explicitly,
+\[
+ N=\prod_{m_r>0}(1-c_rp^{\nu_r})^{m_r},\qquad
+ D=\prod_{m_r<0}(1-c_rp^{\nu_r})^{-m_r}.
+\]
+Both have constant coefficient one, and
+\[
+ \deg N\leq\sum_{m_r>0}m_r\nu_r,\qquad
+ \deg D\leq\sum_{m_r<0}(-m_r)\nu_r.
+\]
+
+Each polynomial $1-c_rp^{\nu_r}$ has degree at most $\nu_r$.
+Multiplying the required copies proves these bounds.
+They become equalities when all relevant $c_r$ are
+nonzero. Cancellation between $N$ and $D$ can give smaller bounds for the
+same rational function.
+
+Without a bound on the degrees of the factors, no finite jet determines
+a weight-one product. Given a normalized product $F$ and $N\geq0$,
+the product $F(1-p^{N+1})$ has the same jet through degree $N$.
+It is distinct from $F$, since $F$ is a unit and $1-p^{N+1}\ne1$.
+Thus local finiteness and integral exponents alone do not supply a
+finite bound for determination.
+
+\section{The three-generator example revisited}
+
+For $B=k[x,y]\otimes_k\Lambda(\theta)$, the two even degree-one generators
+contribute $(1-p)^{-2}$ to \eqref{eq:pc-rational-example}.
+The odd degree-three generator contributes $1-p^3$.
+Formula \eqref{eq:pc-ghost-product} gives
+\[
+ A_s=2-3\,\mathbf1_{3\mid s},
+\]
+where $\mathbf1_{3\mid s}$ equals $1$ when $3$ divides $s$, and equals $0$
+otherwise. Thus
+\[
+ A_1=2,\quad A_2=2,\quad A_3=-1,\quad A_4=2,\quad A_5=2,\quad A_6=-1.
+\]
+
+The recurrence starts with
+\begin{align*}
+ f_0&=1,& f_1&=2,\\
+ 2f_2&=2\cdot2+2\cdot1=6,&
+ 3f_3&=2\cdot3+2\cdot2-1\cdot1=9,\\
+ 4f_4&=2\cdot3+2\cdot3-1\cdot2+2\cdot1=12.
+\end{align*}
+
+For all degrees at once, use the polynomial identity
+$1-p^3=(1-p)(1+p+p^2)$ to obtain
+\[
+ F=\frac{1+p+p^2}{1-p}.
+\]
+Multiplication by the geometric series gives $f_0=1$, $f_1=2$, and
+$f_n=3$ for all $n\geq2$. The product recurrence applies to this same
+formal series, and its uniqueness proves that the recurrence gives these
+values in every degree.
+
+The reduced expression has numerator degree two and denominator degree
+one. By Theorem~\ref{thm:pc-rational-determination}, its coefficients
+through degree three determine it among normalized rational functions
+with those bounds. In the larger class with numerator degree at most
+three and denominator degree at most two, coefficients through degree
+five suffice. Neither statement identifies $F$ among arbitrary formal
+series from the same finite data.
+
+The same coefficients also count an ordinary graded algebra:
+\[
+ C=k[x,y]/(x^3),\qquad\deg x=\deg y=1.
+\]
+Here $(x^3)$ is the ideal of multiples of $x^3$.
+It is spanned by the monomials $x^a y^b$ with $a\geq3$.
+Consequently the residue classes with $0\leq a\leq2$ form a basis of $C$.
+There are $\min(n+1,3)$ such monomials in degree $n$.
+
+With every vector declared even, this gives $H_C=S_C=S_B$.
+Yet $B$ has odd vectors and has ordinary dimension $2n-1$ in degree
+$n\geq3$. Equality of the scalar series has forgotten that distinction.
+
+\section{Lattice labels at a fixed frame}
+
+Lattice data can index a product whose weights depend on a chosen frame.
+The following example gives the three-generator product at one frame and
+changes its degree-one coefficient under a quarter-turn.
+
+A free abelian group $L$ of rank $d$ has elements $v_1,\ldots,v_d$ such that
+each element has a unique expression $\sum_{j=1}^d a_jv_j$ with
+$a_j\in\mathbb Z$.
+An integer-valued symmetric bilinear form is a map
+$L\times L\to\mathbb Z$ additive in each argument and unchanged by
+interchanging its arguments.
+A lattice here means such a group together with such a form.
+Take
+\[
+ L=\mathbb Z^3,\qquad
+ (v,w)=v_1w_1+v_2w_2-2v_3w_3.
+\]
+
+The norm of $v$ means $(v,v)$, which can be negative.
+Use the field $\mathbb R$ of real numbers with its total order.
+The order satisfies $x\leq y\Rightarrow x+z\leq y+z$ and
+$0\leq x,\ 0\leq y\Rightarrow0\leq xy$.
+Extend the displayed formula to real coordinates in
+$L_{\mathbb R}=\mathbb R^3$.
+The standard basis vectors are $e_1=(1,0,0)$, $e_2=(0,1,0)$, and
+$e_3=(0,0,1)$. The form has matrix $\operatorname{diag}(1,1,-2)$ in
+this basis.
+
+The plane
+$P=\operatorname{span}_{\mathbb R}(e_1,e_2)=\{(x,y,0):x,y\in\mathbb R\}$
+is positive: the norm of a nonzero vector in $P$ is $x^2+y^2>0$.
+A frame of $P$ is an ordered basis $(f_1,f_2)$.
+It is orthonormal if $(f_j,f_j)=1$ for $j=1,2$ and $(f_1,f_2)=0$.
+
+For a real matrix $M=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$,
+define $\det M=ad-bc$.
+For $N=\left(\begin{smallmatrix}e&f\\g&h\end{smallmatrix}\right)$, expansion gives
+\[
+ \begin{aligned}
+ \det(MN)
+   &=(ae+bg)(cf+dh)-(af+bh)(ce+dg)\\
+   &=(ad-bc)(eh-fg)=\det(M)\det(N).
+ \end{aligned}
+\]
+For an invertible $M$, this implies $\det M\ne0$ and
+$\det(M^{-1})=1/\det M$.
+Two frames have the same orientation when the matrix changing one to the
+other has positive determinant.
+The product and inverse identities make this an equivalence relation.
+
+Fix the orientation containing $(e_1,e_2)$.
+The displayed bilinear form gives $(e_1,e_1)=(e_2,e_2)=1$ and
+$(e_1,e_2)=0$, so this frame is orthonormal.
+Write $Z=(P,e_1,e_2)$ for this fixed datum.
+
+\subsection{Numerical exponential weights}
+
+The period coordinate will take complex values, and its weight will be a
+numerical exponential. These values require convergence in the scalar
+field. The variable $p$ remains formal.
+
+A set $A\subseteq\mathbb R$ is bounded above if some $M\in\mathbb R$
+satisfies $a\leq M$ for every $a\in A$.
+Such an $M$ is an upper bound.
+Completeness of $\mathbb R$ means that every nonempty set bounded above
+has a least upper bound, called its supremum.
+For a nonempty set bounded below, define its infimum by
+$\inf A=-\sup(-A)$.
+
+The positive integers are unbounded.
+Indeed, if their supremum were $s$, an integer $n>s-1$ would give
+$n+1>s$. Since $2^n\geq n+1$, the number $2^{-n}$ can be made smaller
+than any positive real number.
+For a real number $x$, put $|x|=\max(x,-x)$.
+
+Every $r\geq0$ has a unique nonnegative square root.
+For $r>0$, take
+\[
+ s=\sup\{u\geq0:u^2\leq r\}.
+\]
+The set contains $\min(1,r)/2>0$ and has upper bound $r+1$.
+If $s^2<r$, choose
+$0<\delta<\min(1,(r-s^2)/(2s+1))$.
+Then $(s+\delta)^2<r$, contradicting the upper bound $s$.
+
+If $s^2>r$, choose
+$0<\delta<\min(s,(s^2-r)/(2s))$.
+Then $(s-\delta)^2>r$, so $s-\delta$ is already an upper bound for the
+same set. This contradicts the definition of $s$.
+Thus $s^2=r$.
+
+Uniqueness follows because squaring is strictly increasing on
+nonnegative numbers. The square root of zero is zero.
+
+Define $\mathbb C$ to consist of pairs of real numbers, written $x+iy$,
+with operations
+\[
+ \begin{aligned}
+ (x+iy)+(u+iv)&=(x+u)+i(y+v),\\
+ (x+iy)(u+iv)&=(xu-yv)+i(xv+yu).
+ \end{aligned}
+\]
+Real numbers identify with pairs $x+i0$, and $i=0+i1$ satisfies $i^2=-1$.
+Addition has identity $0+i0$ and inverse $-(x+iy)=-x-i y$.
+Multiplication is commutative, has identity $1+i0$, and distributes over
+addition by expansion.
+For a third factor $a+ib$, both parenthesizations of
+$(x+iy)(u+iv)(a+ib)$ give
+\[
+ (xua-yva-xvb-yub)+i(xub-yvb+xva+yua).
+\]
+This proves associativity.
+
+A nonzero $z=x+iy$ has inverse $(x-iy)/(x^2+y^2)$.
+Thus $\mathbb C$ is a field, and its real subfield makes its
+characteristic zero.
+Write
+\[
+ \operatorname{Re}z=x,\qquad \operatorname{Im}z=y,\qquad
+ \overline z=x-iy,\qquad |z|=\sqrt{x^2+y^2}.
+\]
+These are its real part, imaginary part, conjugate, and modulus,
+respectively.
+
+Expansion gives $|zw|=|z||w|$ and
+\[
+ (x^2+y^2)(u^2+v^2)-(xu+yv)^2=(xv-yu)^2\geq0.
+\]
+The latter identity gives $xu+yv\leq|z||w|$ and hence
+$|z+w|\leq|z|+|w|$ by squaring both nonnegative sides.
+Applying this triangle inequality to $z=(z-w)+w$ and then interchanging
+$z,w$ gives $\bigl||z|-|w|\bigr|\leq|z-w|$.
+
+A sequence $z_n$ converges to $z$ if, for every $\varepsilon>0$,
+there is $N$ such that $|z_n-z|<\varepsilon$ for all $n\geq N$.
+It is Cauchy if, for every $\varepsilon>0$, there is $N$ such that
+$|z_n-z_m|<\varepsilon$ for all $m,n\geq N$.
+Every real Cauchy sequence $a_n$ is bounded: its tail lies within one
+of a fixed term, and its initial segment is finite.
+Put
+\[
+ l_N=\inf_{n\geq N}a_n,\qquad u_N=\sup_{n\geq N}a_n,\qquad
+ a=\sup_N l_N.
+\]
+For every $M,N$, any $a_n$ with $n\geq\max(M,N)$ gives
+$l_M\leq a_n\leq u_N$. Thus $l_N\leq a\leq u_N$.
+
+Given $\varepsilon>0$, the Cauchy condition makes
+$a_m\leq a_n+\varepsilon$ for all $m,n\geq N$, once $N$ is large enough.
+Taking the supremum in $m$ and the infimum in $n$ gives
+$u_N-l_N\leq\varepsilon$.
+Since both $a_n$ and $a$ lie in $[l_N,u_N]$ for $n\geq N$, this proves
+$a_n\to a$.
+The inequalities
+\[
+ \max(|x|,|y|)\leq|x+iy|\leq|x|+|y|
+\]
+show that a complex sequence is Cauchy, or convergent, exactly when both
+coordinates have that property. Hence every complex Cauchy sequence
+converges.
+
+The triangle inequality makes limits unique and proves the limit rule
+for sums. Real limits preserve weak inequalities by the defining
+$\varepsilon$ bound.
+For products, boundedness of a convergent sequence and the estimate
+\[
+ |z_nw_n-zw|
+ \leq |z_n|\,|w_n-w|+|w|\,|z_n-z|
+\]
+give the product rule for limits.
+Conjugation and the two coordinate maps also preserve limits.
+The finite identity
+$(1-q)\sum_{j=0}^m q^j=1-q^{m+1}$ supplies the geometric bounds below.
+
+For $z\in\mathbb C$, define the finite sums
+\[
+ E_N(z)=\sum_{n=0}^N\frac{z^n}{n!}.
+\]
+For fixed $r\geq0$, the terms $a_n=r^n/n!$ satisfy
+$a_{n+1}=ra_n/(n+1)\leq a_n/2$ once $n+1\geq2r$.
+Thus $a_n\to0$, and for all sufficiently large $N$ and every $M>N$,
+\[
+ \sum_{n=N+1}^M\frac{r^n}{n!}
+ \leq\frac{2r^{N+1}}{(N+1)!}\longrightarrow0.
+\]
+With $r=|z|$, this estimate proves that $E_N(z)$ is Cauchy.
+It defines the numerical exponential on all of $\mathbb C$:
+\[
+ \exp z=\lim_{N\to\infty}E_N(z)
+       =\sum_{n\geq0}\frac{z^n}{n!}.
+\]
+The same estimate proves absolute convergence, meaning convergence of
+$\sum_{n\geq0}|z^n/n!|$.
+
+Expanding $n$ copies of $z+w$ and grouping the choices of $z$ gives
+$(z+w)^n=\sum_{j=0}^n\binom nj z^j w^{n-j}$.
+This identifies the terms of total degree at most $N$ in
+$E_N(z)E_N(w)$ with $E_N(z+w)$.
+Every remaining term has total degree between $N+1$ and $2N$, so
+\[
+ |E_N(z)E_N(w)-E_N(z+w)|
+ \leq\sum_{n=N+1}^{2N}\frac{(|z|+|w|)^n}{n!}\longrightarrow0.
+\]
+Taking limits gives
+\[
+ \exp(z+w)=\exp z\,\exp w,\qquad
+ \exp0=1,\qquad
+ \exp\overline z=\overline{\exp z}.
+\]
+In particular, $\exp z\,\exp(-z)=1$.
+
+For real $x$, $\exp x$ is real and
+$\exp x=(\exp(x/2))^2>0$.
+For $x>0$, the nonnegative terms of its series give
+$\exp x\geq1+x>1$.
+For $x<0$, the identity $\exp x=1/\exp(-x)$ gives $0<\exp x<1$.
+Consequently
+\[
+ \begin{aligned}
+ |\exp z|^2
+   &=\exp z\,\exp\overline z
+     =\exp(2\operatorname{Re}z)
+     =\bigl(\exp(\operatorname{Re}z)\bigr)^2,\\
+ |\exp z|&=\exp(\operatorname{Re}z).
+ \end{aligned}
+\]
+
+A function $f:\mathbb C\to\mathbb C$ is continuous at $z$ if, for every
+$\varepsilon>0$, there is $\delta>0$ such that
+$|f(z+h)-f(z)|<\varepsilon$ whenever $|h|<\delta$.
+For $|h|\leq1/2$, the geometric bound and the addition formula give
+\[
+ |\exp h-1|\leq\sum_{n\geq1}|h|^n\leq2|h|,\qquad
+ |\exp(z+h)-\exp z|\leq2|\exp z|\,|h|.
+\]
+Thus the exponential is continuous.
+The same definition, restricted to real inputs and outputs, defines
+continuity of a real function.
+
+For real $t$, define the cosine and sine by
+\[
+ \begin{aligned}
+ \cos t&=\operatorname{Re}\exp(it)
+       =\sum_{n\geq0}\frac{(-1)^nt^{2n}}{(2n)!},\\
+ \sin t&=\operatorname{Im}\exp(it)
+       =\sum_{n\geq0}\frac{(-1)^nt^{2n+1}}{(2n+1)!}.
+ \end{aligned}
+\]
+Both functions are continuous, and $(\cos t)^2+(\sin t)^2=1$.
+Conjugation gives $\exp(-it)=\cos t-i\sin t$.
+
+A first zero of the cosine determines the required period.
+At $t=2$, successive absolute terms of the cosine series decrease
+from index $n=1$ onward.
+Pairing the negative and positive terms after $1-2+2/3$ gives
+\[
+ \cos2\leq1-2+\frac23=-\frac13.
+\]
+For $0<t\leq2$, successive absolute terms of the sine series decrease,
+since their ratio is $t^2/((2n+2)(2n+3))\leq2/3$.
+Pairing the positive and negative terms after $t-t^3/6$ gives
+\[
+ \sin t\geq t-\frac{t^3}{6}\geq\frac t3>0.
+\]
+These inequalities hold first for the paired finite sums and then for
+their limits.
+
+Set
+\[
+ A=\{t\in[0,2]:\cos t\leq0\},\qquad \alpha_0=\inf A.
+\]
+Since $\cos0=1$ and $\cos2<0$, continuity gives $0<\alpha_0<2$.
+If $\cos\alpha_0>0$, continuity contradicts the existence of points of $A$
+arbitrarily close to $\alpha_0$ from above.
+If $\cos\alpha_0<0$, continuity puts a point smaller than $\alpha_0$ in $A$.
+Hence $\cos\alpha_0=0$, and $\cos t>0$ for $0\leq t<\alpha_0$.
+The identity $(\cos\alpha_0)^2+(\sin\alpha_0)^2=1$ and the positive sine bound
+give $\sin\alpha_0=1$.
+
+Define $\pi=2\alpha_0$.
+Then $\pi>0$, $\exp(i\pi/2)=i$, and the addition formula gives
+\[
+ \exp(2\pi i)=1,\qquad
+ \exp(z+2\pi i)=\exp z,\qquad
+ \exp(4\pi i)=1,\qquad \exp(4\pi)>1.
+\]
+
+\subsection{Period coordinates and the finite product}
+
+The period coordinate used here is the real-linear map
+\[
+ \zeta_Z:L_{\mathbb R}\longrightarrow\mathbb C,
+ \qquad \zeta_Z(v)=(v,e_1)+i(v,e_2)=v_1+iv_2.
+\]
+The lattice products are formal series in $\mathbb C[[p]]$.
+For an index vector $r\in L$, its associated complex weight is
+$c_r=\exp(2\pi i\zeta_Z(r))$.
+Its modulus is
+\[
+ |c_r|=\exp\bigl(-2\pi\operatorname{Im}\zeta_Z(r)\bigr).
+\]
+Thus a nonzero imaginary part gives a weight of modulus different from
+one. Its dependence on the chosen frame is part of its definition.
+
+Call a lattice vector of norm two a norm-two root in this example.
+The two vectors
+\[
+ r_1=(2,0,1),\qquad r_2=(2,0,-1)
+\]
+satisfy $(r_1,r_1)=(r_2,r_2)=4-2=2$.
+Take the finite set $W=\{r_1,-r_1,r_2,-r_2\}$ and select
+$W_+=\{r_1,r_2\}$ as one representative of each opposite pair.
+
+An integral linear functional on $L$ is an additive map $L\to\mathbb Z$.
+The functional
+\[
+ \nu:L\longrightarrow\mathbb Z,\qquad\nu(v)=v_1-v_3
+\]
+has positive values $\nu(r_1)=1$ and $\nu(r_2)=3$ on these representatives.
+Set $m_{r_1}=-2$ and $m_{r_2}=1$.
+Both period coordinates equal $2$, so $c_{r_1}=c_{r_2}=1$.
+
+The product indexed by $W_+$ is therefore
+\[
+ \prod_{r\in W_+}(1-c_rp^{\nu(r)})^{m_r}
+   =\frac{1-p^3}{(1-p)^2}.
+\]
+The positive exponent counts one odd generator of degree three, and the
+negative exponent counts two even generators of degree one, under
+Proposition~\ref{prop:pc-realization}.
+
+Frame dependence can be computed without varying the lattice.
+Use the frame
+\[
+ e'_1=e_2,\qquad e'_2=-e_1.
+\]
+
+Both vectors have norm one and their pairing is zero.
+Their change-of-basis matrix relative to $(e_1,e_2)$ is
+$\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$, whose
+determinant is one. Thus the new frame is orthonormal and has the fixed
+orientation. This change of frame is the quarter-turn used here.
+Write $Z'=(P,e'_1,e'_2)$.
+
+Substitution in the definition gives
+\[
+ \zeta_{Z'}(v)=(v,e_2)-i(v,e_1)=-i\zeta_Z(v).
+\]
+The two selected roots have period coordinate $-2i$ at $Z'$,
+so their weights both become $\exp(4\pi)$.
+The degree-one coefficient of the resulting product is
+$2\exp(4\pi)>2$, whereas it was $2$ at $Z$.
+Since both products have constant coefficient
+one, even multiplication by a constant scalar cannot identify them.
+Thus this construction uses the frame as actual input.
+
+A lattice isometry is an invertible additive map $g:L\to L$ such that
+$(g(v),g(w))=(v,w)$ for all $v,w\in L$.
+The norm, degree, and multiplicity assignments give the displayed finite
+product without supplying a transformation law under lattice isometries.
+
+\section{Information lost by a scalar series}
+
+Theorem~\ref{thm:pc-integrality} recovers total exponents at each degree
+when all weights equal one. Labelled factorizations can still differ.
+Splitting $m_r$ into two integers with the same degree and weight leaves
+the product unchanged. If weights may vary, even the degrees of the
+factors can change, as the polynomial identity
+\[
+ (1-p)(1+p)=1-p^2
+\]
+shows. The left side has two degree-one factors with weights $1$ and
+$-1$. The right side has one degree-two factor with weight $1$.
+
+Signed counting also forgets pairs of opposite parity.
+Let
+\[
+ D=k[u]\otimes_k\Lambda(\eta),\qquad
+ \deg u=\deg\eta=1,
+\]
+with $u$ even and $\eta$ odd. Then
+\[
+ S_D(p)=(1-p)^{-1}(1-p)=1.
+\]
+
+For each $n\geq1$, $D_n$ has even basis $u^n$ and odd basis $u^{n-1}\eta$.
+Thus its signed dimension is zero although its ordinary dimension is two.
+The algebra $k$ concentrated in degree zero has the same signed
+dimension series. These graded spaces have different dimensions.
+
+Even an ordinary dimension series does not determine multiplication.
+Consider the graded algebra $E=k[t]/(t^3)$ with $\deg t=1$.
+Compare it with the vector space
+$E'=k\,1\oplus k a\oplus k b$,
+where $\deg a=1$, $\deg b=2$, and every product of $a$ and $b$ is zero.
+Give $1$ the identity action. These rules define an associative algebra:
+a triple of positive-degree elements has product zero under either
+parenthesization, and the identity handles all other cases.
+Both algebras have dimension series $1+p+p^2$.
+
+A graded algebra isomorphism would send $t$ to $\lambda a$ for some
+$\lambda\ne0$. It would then send the nonzero element $t^2$ to
+$\lambda^2a^2=0$, contradicting injectivity. Hence the series does not
+determine the graded algebra.
+
+There is also no differential determined by a signed dimension series.
+On the already defined space $D$, a differential means a linear map
+preserving degree, reversing parity, and having square zero.
+The zero map $d_0$ is one such differential.
+Another is the map $d_1$ defined on the basis by
+\[
+ d_1(u^n)=0\quad(n\geq0),\qquad
+ d_1(u^{n-1}\eta)=u^n\quad(n\geq1).
+\]
+Every image is even and is killed by $d_1$, so $d_1^2=0$.
+
+For a differential $d$, its cohomology in degree $n$ and parity $\epsilon$
+is
+\[
+ H_{n,\epsilon}(D,d)=
+ \frac{\ker(d:D_{n,\epsilon}\to D_{n,\epsilon+\bar1})}
+      {\operatorname{im}(d:D_{n,\epsilon+\bar1}\to D_{n,\epsilon})}.
+\]
+The condition $d^2=0$ makes the denominator a subspace of the numerator.
+
+For $d_0$, this cohomology is $D$ itself.
+For $d_1$, the map from odd to even is an isomorphism in each degree
+$n\geq1$. Both cohomology spaces therefore vanish there, and only the
+even constant in degree zero remains.
+The underlying monomial count is identical for these two differentials.

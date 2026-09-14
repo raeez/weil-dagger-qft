@@ -1,0 +1,38 @@
+{
+  "pdflatex": {
+    "command": [
+      "pdflatex",
+      "--version"
+    ],
+    "returncode": 0,
+    "output": "pdfTeX 3.141592653-2.6-1.40.27 (TeX Live 2025)\nkpathsea version 6.4.1\nCopyright 2025 Han The Thanh (pdfTeX) et al.\nThere is NO warranty.  Redistribution of this software is\ncovered by the terms of both the pdfTeX copyright and\nthe Lesser GNU General Public License.\nFor more information about these matters, see the file\nnamed COPYING and the pdfTeX source.\nPrimary author of pdfTeX: Han The Thanh (pdfTeX) et al.\nCompiled with libpng 1.6.46; using libpng 1.6.46\nCompiled with zlib 1.3.1; using zlib 1.3.1\nCompiled with xpdf version 4.04\n",
+    "binary": "/usr/local/texlive/2025/bin/universal-darwin/pdftex",
+    "binary_sha256": "7f35357af5302475a9d1c8505beebc7cff6c6c575f4995729b1dc9eef782796f"
+  },
+  "latexmk": {
+    "command": [
+      "latexmk",
+      "--version"
+    ],
+    "returncode": 0,
+    "output": "Latexmk, John Collins, 27 Dec. 2024. Version 4.86a\n",
+    "binary": "/usr/local/texlive/2025/texmf-dist/scripts/latexmk/latexmk.pl",
+    "binary_sha256": "6f172e0c4f222b2b5407ab87e6d86616a7f0823b8307132b6aea4713e4a3c567"
+  },
+  "pdffonts": {
+    "command": [
+      "pdffonts",
+      "-v"
+    ],
+    "returncode": 0,
+    "output": "pdffonts version 26.02.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC\n",
+    "binary": "/opt/homebrew/Cellar/poppler/26.02.0_1/bin/pdffonts",
+    "binary_sha256": "3e59eeff1d19abea5ad121b72c6efdaa8789d8ed74b4bdb1d2911a328e6d0d39"
+  },
+  "python": {
+    "path": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "version": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pypdf": "6.14.2",
+    "pymupdf": "1.27.2"
+  }
+}

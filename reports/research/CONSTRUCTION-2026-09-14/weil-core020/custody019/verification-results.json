@@ -1,0 +1,40 @@
+{
+  "status": "diagnostic checks passed; independent mathematical integration review required",
+  "pdfs": [
+    {
+      "kind": "full",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/weil-core019/build-full/programme.pdf",
+      "sha256": "7dc4020c6b152ef56e71e4ba952cc90e6e12aa2d7226519c73cb92d7c76a1802",
+      "pages": 356,
+      "fls_sha256": "fc068462e477033634ad4f24c0e5990d11693560ddb3a725f1950b5ff56f2b95",
+      "log_sha256": "498e525aedff7eeb043b6ac2da055e0b195a488483409b119bdadc8865260798",
+      "build_inputs": 342,
+      "all_fonts_embedded_subset_unicode": true,
+      "warnings": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ]
+    },
+    {
+      "kind": "standalone",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/weil-core019/build-standalone/weil-standalone.pdf",
+      "sha256": "a59a3e8f488fcd38adc762636f27a61fe0919e4a5fff245757e06d181a87150b",
+      "pages": 37,
+      "fls_sha256": "08d5bbfc56c94197b83438b60f6f1af59bf3a09321c89d97b37323c61b085388",
+      "log_sha256": "6f4408edba12c7d247f49affca4a23a16fd84a779ef8b69dc1caab2e46a676f9",
+      "build_inputs": 301,
+      "all_fonts_embedded_subset_unicode": true,
+      "warnings": [
+        "Package epstopdf Warning: Shell escape feature is not enabled."
+      ]
+    }
+  ],
+  "all_source_labels": 799,
+  "missing_or_duplicate_labels": [],
+  "new_actual_label_count_each_pdf": 127,
+  "inline_equation_display_and_reference_counts_each_pdf": "all73 equation labels exact",
+  "native_proof_transport": "33 preserved;32exact bytes,one explicit-formula proof has sole math-font subscript migration",
+  "new_proofs": 4,
+  "prior_core_proofs_exact": 138,
+  "source_pdf_firewall_diagnostics": true,
+  "approved_style_exact": true
+}

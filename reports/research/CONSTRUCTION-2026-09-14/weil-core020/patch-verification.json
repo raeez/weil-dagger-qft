@@ -1,0 +1,15 @@
+{
+  "command": [
+    "git",
+    "apply",
+    "--reverse",
+    "--check",
+    "/Users/raeez/mathematics/worktrees/frontier-resume-weil-020-20260914/reports/research/CONSTRUCTION-2026-09-14/weil-core020/reader-source-additions.patch"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_files": 26,
+  "patch_sha256": "25c0bc9cdeebdf6b4dc4b3f906ffcdd14e3d20fc4f0fc7e77f7000570e217e1e",
+  "scope": "Read-only reverse applicability check against the exact current additions. No patch was applied."
+}

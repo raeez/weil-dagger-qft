@@ -1,0 +1,1854 @@
+\chapter{Smooth fields and formal Hamiltonians}
+\label{chap:smooth-formal-hamiltonians}
+
+\section{Holomorphic fields and Hamiltonian parameters}
+\label{sec:tb-fields}
+
+A local expression involving finitely many derivatives of a smooth field can
+be evaluated at a point without requiring an analytic expansion there.
+Formal Hamiltonian algebra uses exactly such derivative data, assembled into
+a power series.  The distinction becomes visible in one variable:
+\[
+ F(x,y)=\sum_{n\ge1}n!x^n.
+\]
+Every coefficient can occur as a holomorphic derivative of a smooth function.
+No holomorphic function near the origin has this Taylor series.  The
+comparison between smooth and formal fields must therefore preserve the
+differential that imposes holomorphicity.
+
+Throughout, \(\mathbb N=\{0,1,2,\ldots\}\), and all vector spaces and
+multilinear maps are over \(\mathbb C\), unless a real coordinate is
+specified.
+
+The Dolbeault differential supplies this differential.  In a holomorphic
+field description, degree-zero functions give Hamiltonian parameters and
+their antiholomorphic derivatives measure failure of holomorphicity.
+The Poisson bracket combines their infinitesimal transformations.
+Scalar cochains then encode alternating functions of these symmetry
+parameters.  The construction below concerns this symmetry algebra and its
+scalar cochains.  It assumes no action functional, integration cycle, or
+equivalence of physical theories.
+
+Fix an open polydisc
+\[
+ U=D(0,R_1)\times D(0,R_2)\subset\mathbb C^2,
+ \qquad 0<R_1,R_2<\infty.
+\]
+Here \(D(a,r)=\{z\in\mathbb C:|z-a|<r\}\).
+Write \(z_j=s_j+it_j\), and use
+\[
+ \partial_{z_j}=\tfrac12(\partial_{s_j}-i\partial_{t_j}),
+ \qquad
+ \partial_{\bar z_j}=\tfrac12(\partial_{s_j}+i\partial_{t_j}).
+\]
+The orientation is the complex orientation.  In one complex variable,
+\(dA=ds\,dt=\frac{i}{2}dz\wedge d\bar z\).
+There are no boundary conditions, boundary growth bounds, or support
+restrictions on the fields.
+
+The space \(C^\infty(U;\mathbb C)\) consists of complex-valued functions
+with continuous real partial derivatives of every order.  If
+\(\gamma\in\mathbb N^4\), then \(D^\gamma\) means the corresponding
+product of derivatives in \((s_1,t_1,s_2,t_2)\), and
+\(|\gamma|=\sum_j\gamma_j\).  For \(\alpha\in\mathbb N^2\), use
+\(\partial_z^\alpha=\partial_{z_1}^{\alpha_1}
+\partial_{z_2}^{\alpha_2}\),
+\(\partial_{\bar z}^\alpha=\partial_{\bar z_1}^{\alpha_1}
+\partial_{\bar z_2}^{\alpha_2}\),
+\(|\alpha|=\alpha_1+\alpha_2\), and
+\(\alpha!=\alpha_1!\alpha_2!\).
+
+\begin{definition}[The Dolbeault algebra]
+\label{def:tb-dolbeault}
+Put \(dz_j=ds_j+i\,dt_j\) and \(d\bar z_j=ds_j-i\,dt_j\).
+The generators \(d\bar z_1,d\bar z_2\) anticommute under exterior
+multiplication, and a repeated generator gives zero.  For an increasing
+set \(I=\{i_1<\cdots<i_q\}\subset\{1,2\}\), set
+\(d\bar z_I=d\bar z_{i_1}\wedge\cdots\wedge d\bar z_{i_q}\),
+with \(d\bar z_\varnothing=1\).  Define the Dolbeault carrier by
+\[
+ \mathcal A^q=\Omega^{0,q}(U)
+   =\bigoplus_{\substack{I\subset\{1,2\}\\|I|=q}}
+               C^\infty(U;\mathbb C)\,d\bar z_I
+                         \qquad(0\le q\le2),
+\]
+and set \(\mathcal A^q=0\) otherwise.  Thus degree one consists of
+\(a\,d\bar z_1+b\,d\bar z_2\), and degree two consists of
+\(c\,d\bar z_1\wedge d\bar z_2\), with smooth coefficients.
+The integer \(q\) is the cohomological degree.  An element in a single
+degree is called homogeneous.  The differential and product are
+\[
+ d=\bar\partial=\sum_{j=1}^2d\bar z_j\wedge\partial_{\bar z_j},
+ \qquad (a,b)\longmapsto a\wedge b.
+\]
+A differential graded algebra has a degree-one differential satisfying
+\(d^2=0\) and
+\(d(ab)=(da)b+(-1)^{|a|}a(db)\).
+Here the commutation of the coefficient derivatives and the antisymmetry
+of exterior multiplication give both identities.
+\end{definition}
+
+The holomorphic symplectic form is \(dz_1\wedge dz_2\).  Fix its bracket
+normalization by
+\[
+ \{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
+          -\partial_{z_2}f\,\partial_{z_1}g.
+\]
+Thus the Hamiltonian derivation is
+\(X_f=\{f,-\}=-(\partial_{z_2}f)\partial_{z_1}
+ +(\partial_{z_1}f)\partial_{z_2}\), and
+\(\iota_{X_f}(dz_1\wedge dz_2)=-\partial f\), where
+\(\partial f=\sum_j(\partial_{z_j}f)\,dz_j\).
+Here \(\iota_X\) inserts \(X\) into the first argument of a form:
+\(\iota_X(dz_1\wedge dz_2)=(Xz_1)dz_2-(Xz_2)dz_1\).
+The displayed sign follows directly from the two coefficients of \(X_f\).
+Set
+\begin{equation}
+ [f\,d\bar z_I,g\,d\bar z_J]
+       =\{f,g\}\,d\bar z_I\wedge d\bar z_J.
+ \label{eq:tb-form-bracket}
+\end{equation}
+
+\begin{definition}[Differential graded Lie and Poisson algebras]
+\label{def:tb-dglie}
+A differential graded Lie algebra is a graded vector space with a
+degree-one differential \(d\), \(d^2=0\), and a complex-bilinear bracket
+of degree zero.  For homogeneous elements it satisfies
+\[
+ [a,b]=-(-1)^{|a||b|}[b,a],\qquad
+ [a,[b,c]]=[[a,b],c]+(-1)^{|a||b|}[b,[a,c]],
+\]
+and
+\[
+ d[a,b]=[da,b]+(-1)^{|a|}[a,db].
+\]
+A differential graded Poisson algebra also has an associative product
+satisfying
+\[
+ ab=(-1)^{|a||b|}ba,\qquad
+ d(ab)=(da)b+(-1)^{|a|}a(db),\qquad
+ [a,bc]=[a,b]c+(-1)^{|a||b|}b[a,c].
+\]
+Thus both the differential and the bracket act by graded derivations.
+A morphism has degree zero, commutes with the differential,
+and preserves the bracket and any specified product.
+\end{definition}
+
+\begin{lemma}[The coefficient bracket]
+\label{lem:tb-poisson}
+The product, differential, and bracket above make \(\mathcal A\) a unital
+differential graded Poisson algebra.
+\end{lemma}
+\begin{proof}
+For coefficient functions, the product rule proves the biderivation
+identity.  In the cyclic Jacobi sum, expansion gives terms with one second
+derivative and two first derivatives.  Each second-derivative term cancels
+the term obtained by interchanging its two remaining factors.  For example,
+the terms containing \(f_{z_1z_1}\) are
+\(f_{z_1z_1}g_{z_2}h_{z_2}\) and its negative.  The mixed second
+derivatives cancel because \(f_{z_1z_2}=f_{z_2z_1}\).
+The same cancellations apply to the second derivatives of \(g\) and \(h\).
+This proves the ordinary Jacobi identity.
+
+Exterior multiplication of the constant forms supplies the Koszul signs in
+the graded antisymmetry, Jacobi, and biderivation identities.
+Since \(\partial_{\bar z_j}\) commutes with every \(\partial_{z_i}\),
+the product rule for \(\bar\partial\) gives the differential bracket
+identity.  The constant function one is a unit and is closed.
+\end{proof}
+
+Put
+\[
+ R=\mathbb C[[x,y]],\qquad \mathfrak m=(x,y),\qquad
+ \mathfrak h=R/\mathbb C.
+\]
+An element of \(R\) is a coefficient family
+\(F=\sum_{a,b\in\mathbb N}F_{ab}x^ay^b\).  Equality and addition are
+coefficientwise.  Multiplication is finite coefficient convolution:
+\[
+ [x^ay^b](FG)=\sum_{i=0}^a\sum_{j=0}^bF_{ij}G_{a-i,b-j}.
+\]
+The notation \([x^ay^b]F\) means \(F_{ab}\).  For \(N\ge0\),
+\[
+ \mathfrak m^N=\left\{\sum_{a,b}F_{ab}x^ay^b:
+                         F_{ab}=0\text{ when }a+b<N\right\},
+ \qquad\mathfrak m^0=R.
+\]
+This agrees with the ideal power of \(\mathfrak m=(x,y)\).  Products
+of \(N\) generators have degree at least \(N\).  Conversely, group
+each term of degree at least \(N\) by the factor
+\(x^{\min(a,N)}y^{N-\min(a,N)}\).  This writes every such series as
+a sum of \(N+1\) monomials of degree \(N\) times formal series.
+The symbols \(x,y\) are formal coordinates corresponding to \(z_1,z_2\).
+Formal differentiation means
+\(\partial_xF=\sum_{a\ge1,b\ge0}aF_{ab}x^{a-1}y^b\), and similarly
+for \(\partial_y\).  These operations give the same Poisson formula
+\(\{f,g\}=f_xg_y-f_yg_x\) on \(R\).
+Represent each class in \(\mathfrak h\) by its unique series in
+\(\mathfrak m\).  Its bracket is the formal bracket followed by removal
+of the constant term.  In particular,
+\begin{equation}
+ \{x,y\}=0\text{ in }\mathfrak h,
+ \qquad \{x,y^2\}=2y,
+ \qquad \operatorname{ad}_x=\partial_y\pmod{\mathbb C}.
+ \label{eq:tb-translations}
+\end{equation}
+Thus quotienting scalar Hamiltonians retains translations.
+
+\begin{definition}[Pure holomorphic Taylor extraction]
+\label{def:tb-taylor}
+For \(\alpha=(\alpha_1,\alpha_2)\in\mathbb N^2\), write
+\(\alpha!=\alpha_1!\alpha_2!\) and \(|\alpha|=\alpha_1+\alpha_2\).
+Define
+\begin{equation}
+ Jf=\sum_{\alpha\in\mathbb N^2}
+     \frac{\partial_z^\alpha f(0)}{\alpha!}
+              x^{\alpha_1}y^{\alpha_2}
+ \quad(f\in\mathcal A^0),
+ \qquad J|_{\mathcal A^{q>0}}=0.
+ \label{eq:tb-taylor}
+\end{equation}
+The target \(R\) has degree zero and zero differential.
+\end{definition}
+
+\begin{proposition}[Taylor extraction and scalar Hamiltonians]
+\label{prop:tb-one}
+The map \(J:\mathcal A\to R\) is a unital morphism of differential
+graded Poisson algebras.  It induces a differential graded Lie morphism
+\[
+ \bar J:\mathcal L:=\mathcal A/(\mathbb C\cdot1)
+                         \longrightarrow\mathfrak h.
+\]
+Neither quotient inherits the stated associative multiplication.
+\end{proposition}
+\begin{proof}
+For every \(\alpha\), the product rule gives
+\[
+ \frac{\partial_z^\alpha(fg)(0)}{\alpha!}
+ =\sum_{\beta+\gamma=\alpha}
+   \frac{\partial_z^\beta f(0)}{\beta!}
+   \frac{\partial_z^\gamma g(0)}{\gamma!}.
+\]
+Hence \(J(fg)=J(f)J(g)\).  Direct reindexing gives
+\[
+ J(\partial_{z_1}f)=\partial_xJf,
+ \qquad J(\partial_{z_2}f)=\partial_yJf.
+\]
+These identities prove bracket compatibility on degree-zero inputs.
+If either input has positive degree, both sides of product and bracket
+compatibility vanish.  Also \(J\bar\partial=0\) and \(J1=1\).
+
+The line \(\mathbb C\cdot1\) is a central Lie ideal and is preserved
+by the differential.  The quotient Lie map therefore exists.
+That line is not an associative ideal: a descended product would have
+\([1][f]=0\), whereas the class of \(1f\) is \([f]\ne0\) for
+nonconstant \(f\).  The same contradiction applies to \(R/\mathbb C\).
+\end{proof}
+
+The Lie quotients and the Poisson algebras fit into the commutative diagram
+\[
+\begin{tikzcd}[column sep=large]
+ \mathcal A \arrow[r,"J"] \arrow[d] & R \arrow[d]\\
+ \mathcal L \arrow[r,"\bar J"] & \mathfrak h .
+\end{tikzcd}
+\]
+The vertical maps preserve the differential and Lie bracket.  An
+associative quotient product on the bottom row is excluded by
+Proposition~\ref{prop:tb-one}.
+
+\section{Smooth realization and holomorphic convergence}
+\label{sec:tb-realization}
+
+The Taylor map records derivatives, without imposing bounds on their
+growth.  A direct cutoff construction separates this property from
+holomorphic convergence.
+
+For a continuous function, its support is the closure of the set where
+it is nonzero.  The notation \(C_c^\infty(U)\) denotes smooth functions
+whose support is a compact subset of \(U\).
+
+\begin{lemma}[Limits of smooth derivatives]
+\label{lem:tb-smooth-limits}
+Let \(W\subset\mathbb R^m\) be open.  Suppose \(f_N\in C^\infty(W)\)
+and every sequence \(D^\gamma f_N\) converges uniformly on compact
+subsets to a function \(g_\gamma\).  Then \(f=g_0\) is smooth and
+\(D^\gamma f=g_\gamma\) for every \(\gamma\).
+The same assertion holds for nets in place of sequences.
+\end{lemma}
+\begin{proof}
+Each \(g_\gamma\) is continuous, since it is a locally uniform limit
+of continuous functions.  Fix a closed coordinate box contained in
+\(W\) and a real coordinate direction \(e_j\).  For a segment in
+that box, the fundamental theorem of calculus gives
+\[
+ D^\gamma f_N(x+te_j)-D^\gamma f_N(x)
+   =\int_0^tD^{\gamma+e_j}f_N(x+se_j)\,ds.
+\]
+Uniform convergence on the segment permits passage to the limit.  The
+error of the integral is bounded by \(|t|\) times the uniform error of
+its integrand.  Hence
+\[
+ g_\gamma(x+te_j)-g_\gamma(x)
+                =\int_0^t g_{\gamma+e_j}(x+se_j)\,ds.
+\]
+Dividing by \(t\) and using continuity of the integrand proves
+\(\partial_jg_\gamma=g_{\gamma+e_j}\).  Starting with \(\gamma=0\)
+and iterating proves the assertion.  Every point lies in such a box.
+The proof uses eventual uniform bounds only, so it also applies to nets.
+\end{proof}
+
+\begin{proposition}[Realization of arbitrary formal jets]
+\label{prop:tb-two}
+For every \(F=\sum_\alpha a_\alpha x^{\alpha_1}y^{\alpha_2}\in R\),
+there is \(f\in C_c^\infty(U)\) such that
+\begin{equation}
+ \partial_z^\alpha\partial_{\bar z}^{\beta}f(0)
+ =\begin{cases}
+   \alpha!a_\alpha,&\beta=0,\\
+   0,&\beta\ne0.
+  \end{cases}
+ \label{eq:tb-exact-jets}
+\end{equation}
+In particular, \(J\) and \(\bar J\) are surjective.
+\end{proposition}
+\begin{proof}
+Choose \(0<\delta<1\) with \(\overline{B(0,\delta)}\subset U\).
+An explicit cutoff on \(\mathbb R^4\) is
+\[
+ \eta(t)=\begin{cases}e^{-1/t},&t>0,\\0,&t\le0,\end{cases}
+ \qquad
+ \chi(w)=\frac{\eta(1-|w|^2)}
+ {\eta(1-|w|^2)+\eta(|w|^2-\tfrac14)}.
+\]
+Every right derivative of \(\eta\) is a polynomial in \(1/t\) times
+\(e^{-1/t}\), and tends to zero at zero.  Thus \(\eta\) and \(\chi\)
+are smooth.  The denominator is positive everywhere.
+The function \(\chi\) equals one on \(|w|\le1/2\), and vanishes
+on \(|w|\ge1\).
+
+Group the coefficients by homogeneous degree:
+\[
+ P_n(z)=\sum_{|\alpha|=n}a_\alpha z^\alpha.
+\]
+For real multi-indices \(\gamma\), set
+\[
+ C_{n,k}=\max_{|\gamma|\le k}
+       \sup_{w\in\mathbb R^4}|D^\gamma(\chi P_n)(w)|.
+\]
+These numbers are finite.  For \(n\ge1\), choose
+\[
+ 0<\varepsilon_n\le
+ \min\left\{\delta,2^{-n},
+       \min_{0\le k<n}
+       \left(\frac{2^{-n}}{1+C_{n,k}}\right)^{1/(n-k)}\right\}.
+\]
+Define
+\[
+ f_0(z)=a_0\chi(z/\delta),\qquad
+ f_n(z)=\chi(z/\varepsilon_n)P_n(z)\quad(n\ge1).
+\]
+Real homogeneity gives
+\[
+ D^\gamma f_n(z)=\varepsilon_n^{n-|\gamma|}
+            D^\gamma(\chi P_n)(z/\varepsilon_n).
+\]
+Since \(\varepsilon_n<1\), for \(|\gamma|\le k<n\) one has
+\(\varepsilon_n^{n-|\gamma|}\le\varepsilon_n^{n-k}\).  Therefore
+\begin{equation}
+ \max_{|\gamma|\le k}\|D^\gamma f_n\|_\infty\le2^{-n}
+                  \qquad(k<n).
+ \label{eq:tb-cutoff-estimate}
+\end{equation}
+
+For every fixed \(k\), the tail \(n>k\) converges uniformly with all
+real derivatives of order at most \(k\).  The finitely many remaining
+terms are smooth.  Lemma~\ref{lem:tb-smooth-limits}, applied to the
+partial sums, shows that \(f=\sum_{n\ge0}f_n\) is smooth with the
+termwise real derivatives.  All supports
+lie in \(\overline{B(0,\delta)}\), so \(f\in C_c^\infty(U)\).
+
+Each individual \(f_n\) equals \(P_n\) on a neighborhood of zero.
+Uniform derivative convergence permits termwise evaluation there.
+A derivative of total order \(k\) receives a contribution only from
+\(P_k\).  All antiholomorphic derivatives of this polynomial vanish.
+The remaining holomorphic derivative is exactly \(\alpha!a_\alpha\).
+This proves~\eqref{eq:tb-exact-jets}.
+\end{proof}
+
+The constructed \(\bar\partial f\) is flat at the origin.  Flatness
+means that every real derivative of each coefficient vanishes there.
+It does not imply that \(\bar\partial f\) vanishes on a neighborhood.
+The choices of radii depend on the prescribed coefficients; no linear
+extension operator is asserted.
+
+\subsection{Cauchy integration and holomorphicity}
+\label{sec:tb-cauchy}
+
+\begin{definition}[Holomorphic functions]
+\label{def:tb-holomorphic}
+A function on an open subset of \(\mathbb C^m\), with \(m=1\) or
+\(2\), is holomorphic if near every point \(p\) it is an absolutely
+convergent complex power series \(\sum_\alpha a_\alpha(z-p)^\alpha\).
+Absolute convergence is required on some polydisc centered at \(p\).
+The space of such functions on \(U\) is denoted \(\mathcal O(U)\).
+The equivalence with smooth solutions of the Cauchy--Riemann equations
+is proved below.
+\end{definition}
+
+For a piecewise smooth oriented curve \(\gamma:[a,b]\to\mathbb C\),
+the contour integral means
+\(\int_\gamma f(\zeta)\,d\zeta
+ =\int_a^bf(\gamma(t))\gamma'(t)\,dt\).
+A positively oriented circle is traversed counterclockwise.
+
+\begin{lemma}[Cauchy--Pompeiu formula]
+\label{lem:tb-cauchy-pompeiu}
+Let \(f\) be smooth on a neighborhood of the closed disc
+\(\overline{D(0,r)}\), and let \(|w|<r\).  Then
+\begin{equation}
+ f(w)=\frac1{2\pi i}\int_{|\zeta|=r}
+             \frac{f(\zeta)}{\zeta-w}\,d\zeta
+       -\frac1\pi\int_{|\zeta|<r}
+             \frac{\partial_{\bar\zeta}f(\zeta)}{\zeta-w}\,dA(\zeta).
+ \label{eq:tb-cauchy-pompeiu}
+\end{equation}
+In particular, every \(\psi\in C_c^\infty(\mathbb C)\) satisfies
+\begin{equation}
+ -\int_{\mathbb C}\frac{\partial_{\bar\zeta}\psi(\zeta)}
+                             {\pi\zeta}\,dA(\zeta)=\psi(0).
+ \label{eq:tb-test-identity}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For a smooth function \(g\), direct calculation in \(\zeta=s+it\)
+gives
+\[
+ d(g\,d\zeta)=(i\partial_sg-\partial_tg)\,ds\wedge dt
+                         =2i\,\partial_{\bar\zeta}g\,dA.
+\]
+The planar integration identity associated to this equality follows
+from one-variable real calculus.  Integrate \(\partial_tP\) on each
+vertical interval of a region, and integrate \(\partial_sQ\) on each
+horizontal interval.  The fundamental theorem of calculus gives the
+endpoint values.  Integration in the remaining variable yields
+\[
+ \int_{\partial A}(P\,ds+Q\,dt)
+                 =\int_A(\partial_sQ-\partial_tP)\,ds\,dt.
+\]
+For a disc with an interior disc removed, these slices have at most
+two component intervals.  Their endpoint terms are exactly the positively
+oriented outer circle and the negatively oriented inner circle.  Splitting
+at the finitely many extrema of the circles justifies the graph
+parameterizations; taking endpoint limits gives the displayed formula.
+All derivatives are continuous on the compact punctured region, so the
+iterated integrations are valid.
+
+Apply this identity on
+\(A_\epsilon=D(0,r)\setminus\overline{D(w,\epsilon)}\) to
+\(g(\zeta)=f(\zeta)/(\zeta-w)\), where
+\(0<\epsilon<r-|w|\).  Away from \(w\), direct differentiation gives
+\(\partial_{\bar\zeta}(1/(\zeta-w))=0\).  Consequently
+\[
+ \begin{split}
+ \frac1{2\pi i}\int_{|\zeta|=r}\frac{f(\zeta)}{\zeta-w}\,d\zeta
+ &-\frac1{2\pi i}\int_{|\zeta-w|=\epsilon}
+                         \frac{f(\zeta)}{\zeta-w}\,d\zeta\\
+ &=\frac1\pi\int_{A_\epsilon}
+                \frac{\partial_{\bar\zeta}f(\zeta)}{\zeta-w}\,dA.
+ \end{split}
+\]
+Both written circles are counterclockwise; the minus sign accounts for
+the inner boundary orientation.  Parameterizing the small circle gives
+\[
+ \frac1{2\pi i}\int_{|\zeta-w|=\epsilon}
+            \frac{f(\zeta)}{\zeta-w}\,d\zeta
+       =\frac1{2\pi}\int_0^{2\pi}f(w+\epsilon e^{it})\,dt
+       \longrightarrow f(w).
+\]
+The omitted area integral tends to zero.  If
+\(|\partial_{\bar\zeta}f|\le M\) there, its absolute value is at
+most \(2M\epsilon\), since
+\(\int_{|v|<\epsilon}|v|^{-1}dA(v)=2\pi\epsilon\).
+Letting \(\epsilon\to0\) proves~\eqref{eq:tb-cauchy-pompeiu}.
+
+For compactly supported \(\psi\), choose \(r\) so large that its
+support lies inside the circle and put \(w=0\).  The boundary term
+vanishes, giving~\eqref{eq:tb-test-identity}.
+\end{proof}
+
+\begin{lemma}[Cauchy--Riemann equations and convergent expansions]
+\label{lem:tb-cr-expansion}
+A function on an open subset of \(\mathbb C\) or \(\mathbb C^2\)
+is holomorphic exactly when it is smooth and all its antiholomorphic
+partial derivatives vanish.  If \(f\) is smooth on a neighborhood of
+a closed bidisc and satisfies these equations, then
+\begin{equation}
+ f(w_1,w_2)=\frac1{(2\pi i)^2}
+  \int_{|\zeta_1|=r_1}\int_{|\zeta_2|=r_2}
+  \frac{f(\zeta_1,\zeta_2)}
+             {(\zeta_1-w_1)(\zeta_2-w_2)}\,d\zeta_2\,d\zeta_1
+ \label{eq:tb-bidisc-cauchy}
+\end{equation}
+for \(|w_i|<r_i\).  Its expansion at zero has coefficients
+\begin{equation}
+ \begin{aligned}
+ a_\alpha&=\frac1{(2\pi i)^2}
+ \int_{|\zeta_1|=r_1}\int_{|\zeta_2|=r_2}
+ \frac{f(\zeta_1,\zeta_2)}
+      {\zeta_1^{\alpha_1+1}\zeta_2^{\alpha_2+1}}\,d\zeta_2\,d\zeta_1,\\
+ |a_\alpha|&\le M r_1^{-\alpha_1}r_2^{-\alpha_2}.
+ \end{aligned}
+ \label{eq:tb-cauchy-coefficients}
+\end{equation}
+where \(M=\sup_{|\zeta_i|=r_i}|f|\).  These coefficients equal
+\(\partial_z^\alpha f(0)/\alpha!\).
+\end{lemma}
+\begin{proof}
+First consider one variable with \(\partial_{\bar z}f=0\).
+The area term in~\eqref{eq:tb-cauchy-pompeiu} is zero.  For
+\(0<s<r\) and \(|w|\le s\), the geometric expansion
+\[
+ \frac1{\zeta-w}=\sum_{k\ge0}\frac{w^k}{\zeta^{k+1}}
+                         \qquad(|\zeta|=r)
+\]
+converges uniformly.  Its remainder after degree \(N\) has absolute
+value at most \((s/r)^{N+1}/(r-s)\).  Termwise contour integration
+therefore gives
+\[
+ f(w)=\sum_{k\ge0}a_kw^k,\qquad
+ a_k=\frac1{2\pi i}\int_{|\zeta|=r}
+                    \frac{f(\zeta)}{\zeta^{k+1}}\,d\zeta,
+ \qquad |a_k|\le Mr^{-k}.
+\]
+Every fixed real derivative of order \(j\) introduces at most a constant
+times \(k^j\).  Its terms on \(|w|\le s\) are bounded by a constant
+times \(k^j(s/r)^k\).  This series converges: the ratio of consecutive
+terms tends to \(s/r<1\).  Lemma~\ref{lem:tb-smooth-limits} justifies
+termwise differentiation of all orders.  Evaluation at zero gives
+\(a_k=\partial_z^k f(0)/k!\).
+
+In two variables, apply the one-variable boundary formula first in
+\(z_1\).  Apply it again in \(z_2\) to the boundary coefficients.
+The two finite contour integrals yield~\eqref{eq:tb-bidisc-cauchy}.
+Expanding both kernels uniformly on smaller bidiscs gives
+\eqref{eq:tb-cauchy-coefficients}.  Products of the preceding geometric
+derivative estimates prove convergence with every real derivative and
+the stated Taylor coefficient identity.  Translating the center proves
+the local expansion at every point of an open set.
+
+Conversely, suppose a function is given locally by an absolutely
+convergent power series.  Choose positive radii \(s_i\) strictly inside
+its convergence polydisc.  Absolute convergence at these radii means
+\(\sum_\alpha|a_\alpha|s^\alpha<\infty\).
+For any smaller radii \(t_i<s_i\), each differentiated term is bounded
+by \(|a_\alpha|s^\alpha\) times a bounded polynomial-geometric factor
+in \(\alpha\).  The differentiated series therefore converge uniformly
+on the smaller closed polydisc.  Lemma~\ref{lem:tb-smooth-limits}
+shows that the sum is smooth.  Each monomial has zero antiholomorphic
+derivatives, so the sum satisfies the Cauchy--Riemann equations.
+\end{proof}
+
+\begin{definition}[Series converging on the specified polydisc]
+\label{def:tb-convergent}
+Let \(R_U\subset R\) consist of the series whose coefficients satisfy
+\begin{equation}
+ \sum_{\alpha\in\mathbb N^2}|a_\alpha|
+             r_1^{\alpha_1}r_2^{\alpha_2}<\infty
+ \quad\text{for every }0<r_i<R_i.
+ \label{eq:tb-convergence}
+\end{equation}
+The domain \(U\) remains fixed in this definition.
+\end{definition}
+
+\begin{proposition}[The holomorphic image]
+\label{prop:tb-three}
+The map \(J:\mathcal O(U)\to R_U\) is bijective.
+The subspace \(R_U\) is proper in \(R\).
+For holomorphic germs at zero, the corresponding image is
+\(\mathbb C\{x,y\}\), the series converging on some neighborhood of zero.
+\end{proposition}
+\begin{proof}
+Choose radii \(r_i<s_i<R_i\).  Applying
+Lemma~\ref{lem:tb-cr-expansion} on the closed bidisc of radii \(s_i\)
+gives
+\[
+ a_\alpha=\frac1{(2\pi i)^2}
+  \int_{|\zeta_1|=s_1}\int_{|\zeta_2|=s_2}
+  \frac{f(\zeta_1,\zeta_2)}
+       {\zeta_1^{\alpha_1+1}\zeta_2^{\alpha_2+1}}
+                         \,d\zeta_2\,d\zeta_1.
+\]
+If \(M_s\) is the maximum of \(|f|\) on this product of circles, then
+\[
+ |a_\alpha|\le M_s s_1^{-\alpha_1}s_2^{-\alpha_2}.
+\]
+Summing the geometric series proves~\eqref{eq:tb-convergence}.
+Expansion of both Cauchy kernels proves that the series equals \(f\)
+on the smaller polydisc.  These polydiscs exhaust \(U\), proving
+injectivity and the asserted image inclusion.  The circles have the
+positive orientations of~\eqref{eq:tb-bidisc-cauchy}.
+
+Conversely, condition~\eqref{eq:tb-convergence} gives absolute uniform
+convergence on each smaller closed polydisc.  Its derivatives also converge
+there.  Indeed, choose larger radii \(s_i<R_i\).  Every derivative
+introduces only polynomial factors in \(\alpha_i\), and these factors
+are bounded after multiplication by \((r_i/s_i)^{\alpha_i}\).
+Lemma~\ref{lem:tb-smooth-limits} justifies termwise differentiation.
+The antiholomorphic derivatives vanish, so
+Lemma~\ref{lem:tb-cr-expansion} gives a holomorphic function with the
+prescribed coefficients.
+
+For \(F=\sum_{n\ge1}n!x^n\) and every \(r>0\), the ratio of
+successive absolute terms is \((n+1)r\).  The terms do not tend to zero.
+Hence \(F\notin R_U\), and it is not the Taylor series of a holomorphic
+germ.  Applying the preceding argument on varying sufficiently small
+polydiscs proves the assertion about germs.
+\end{proof}
+
+The quantifier in~\eqref{eq:tb-convergence} retains the specified domain.
+Replacing \(\mathcal O(U)\) by germs changes the image and does not
+remove the factorial counterexample.  The differential must detect this
+failure of holomorphic realization.
+
+\section{The Dolbeault complex and its Taylor kernel}
+\label{sec:tb-cohomology}
+
+The local equation \(\partial_{\bar z}u=a\) admits an integral solution
+when \(a\) has compact support.  To solve it on an open disc with arbitrary
+boundary growth, the far-annulus contributions require holomorphic
+corrections.  This construction also controls smooth parameters.
+
+\begin{lemma}[A one-variable primitive with parameters]
+\label{lem:tb-parametric}
+Let \(W\) be an open disc and let \(a\in C^\infty(D(0,R)\times W)\).
+There is \(u\in C^\infty(D(0,R)\times W)\) with
+\(\partial_{\bar z}u=a\).  If \(a\) is holomorphic in the parameter
+\(w\), then \(u\) can be chosen holomorphic in \(w\).
+\end{lemma}
+\begin{proof}
+For \(\phi\in C_c^\infty(\mathbb C)\), define
+\begin{equation}
+ T\phi(z)=\frac1\pi\int_{\mathbb C}
+                 \frac{\phi(\zeta)}{z-\zeta}\,dA(\zeta).
+ \label{eq:tb-cauchy-transform}
+\end{equation}
+The kernel is locally integrable, as the polar-coordinate calculation
+in Lemma~\ref{lem:tb-cauchy-pompeiu} shows.  To prove smoothness, write
+\[
+ T\phi(z)=\int_{\mathbb C}\frac{\phi(z-v)}{\pi v}\,dA(v),
+\]
+and place every derivative on \(\phi\).  For \(z\) in a compact set,
+only a bounded set of \(v\) contributes.  The difference quotients of
+each derivative of \(\phi\) converge uniformly there, by its continuous
+next derivatives and the one-variable fundamental theorem of calculus.
+The error of their integrals is at most their uniform error times the
+integral of \(1/(\pi|v|)\) over that bounded set.  This proves
+differentiation under the integral, to every real order.
+It also proves smooth dependence on additional parameters when the
+support in the solved variable lies in one fixed compact set.
+
+Apply~\eqref{eq:tb-test-identity} to
+\(\psi(v)=\phi(z-v)\).  The chain rule gives the pointwise identity
+\[
+ \partial_{\bar z}T\phi(z)
+ =-\int_{\mathbb C}
+       \frac{\partial_{\bar v}[\phi(z-v)]}{\pi v}\,dA(v)
+ =\phi(z).
+\]
+If \(\phi\) depends holomorphically on a parameter \(w\),
+differentiation in \(\bar w\) under the integral gives zero.
+Lemma~\ref{lem:tb-cr-expansion} then
+proves preservation of holomorphic parameter dependence.
+
+Choose \(0<r_0<r_1<\cdots\uparrow R\) and smooth radial cutoffs
+\(\rho_n\) equal to one on \(|z|\le r_n\), with support in
+\(|z|<r_{n+1}\).  Put
+\[
+ \chi_0=\rho_0,\qquad \chi_n=\rho_n-\rho_{n-1}\quad(n\ge1).
+\]
+Then \(\sum_n\chi_n=1\) locally finitely.  Each \(\chi_na\) has
+compact support in the solved variable, so
+\(v_n=T_z(\chi_na)\) is defined.  For \(n\ge1\), \(v_n\) is
+holomorphic on \(|z|<r_{n-1}\), because \(\chi_n\) vanishes there
+and Lemma~\ref{lem:tb-cr-expansion} applies.
+
+Choose an increasing compact exhaustion \(K_n\) of \(W\).
+For \(n\ge3\), take a Taylor polynomial \(P_n(z,w)\) of \(v_n\)
+in \(z\) so that
+\begin{equation}
+ \sup_{\substack{|z|\le r_{n-2}\\w\in K_n}}
+     |D^\gamma(v_n-P_n)(z,w)|\le2^{-n}
+                          \qquad(|\gamma|\le n).
+ \label{eq:tb-annular-estimate}
+\end{equation}
+Here \(\gamma\) ranges over real derivatives in both variables.
+To justify the choice, select a circle of radius strictly between
+\(r_{n-2}\) and \(r_{n-1}\).  The coefficient estimates proved in
+Lemma~\ref{lem:tb-cr-expansion} on
+that circle are uniform over \(K_n\) for each of the finitely many
+parameter derivatives.  Their geometric tails tend to zero, also after
+the finitely many \(z\)-derivatives.  One polynomial degree therefore
+gives all estimates in~\eqref{eq:tb-annular-estimate}.
+Its coefficients are smooth in \(w\), and holomorphic when \(a\) is.
+For the finitely many initial terms, set \(P_n=0\).
+
+Every fixed compact subset of \(D(0,R)\times W\) eventually lies in
+the regions of~\eqref{eq:tb-annular-estimate}.  For every derivative
+order, the corresponding tail is bounded by \(\sum_n2^{-n}\).
+Consequently
+\[
+ u=\sum_{n\ge0}(v_n-P_n)
+\]
+converges with all real derivatives on compact subsets.  Its smoothness
+and differentiated sums follow from Lemma~\ref{lem:tb-smooth-limits}.
+Since each
+\(P_n\) is holomorphic in \(z\),
+\[
+ \partial_{\bar z}u=\sum_n\chi_na=a.
+\]
+The convergence preserves holomorphic parameter dependence.
+No estimate at the boundary of the open discs was used.
+\end{proof}
+
+\begin{definition}[Cohomology and comparison maps]
+\label{def:tb-cohomology}
+For a complex \((C^\bullet,d)\) with \(d:C^q\to C^{q+1}\) and
+\(d^2=0\), define
+\[
+ H^q(C)=\ker(d:C^q\to C^{q+1})/
+                       \operatorname{im}(d:C^{q-1}\to C^q).
+\]
+Elements in the kernel are cocycles.  Elements in the image are
+coboundaries.  A primitive of a degree-\(q\) cocycle \(\alpha\) is
+an element \(\beta\in C^{q-1}\) with \(d\beta=\alpha\).
+A chain map \(T:C\to C'\) is a degree-zero linear map satisfying
+\(Td=d'T\).  It induces maps on cohomology by sending the class of a
+cocycle to the class of its image.  It is a quasi-isomorphism when
+these maps are isomorphisms in every degree.  A section of \(T\) is
+a map \(S\) with \(TS=\mathrm{id}\); a chain-map section also
+preserves degrees, is linear, and commutes with the differentials.
+\end{definition}
+
+\begin{proposition}[Global polydisc exactness]
+\label{prop:tb-four}
+As cohomology groups of complexes of complex vector spaces,
+\[
+ H^q(\mathcal A)=
+ \begin{cases}\mathcal O(U),&q=0,\\0,&q>0,\end{cases}
+ \qquad
+ H^q(\mathcal L)=
+ \begin{cases}\mathcal O(U)/\mathbb C,&q=0,\\0,&q>0.\end{cases}
+\]
+\end{proposition}
+\begin{proof}
+For a closed \((0,1)\)-form
+\[
+ \alpha=a\,d\bar z_1+b\,d\bar z_2,
+ \qquad \partial_{\bar z_1}b=\partial_{\bar z_2}a,
+\]
+Lemma~\ref{lem:tb-parametric} gives \(u\) with
+\(\partial_{\bar z_1}u=a\).  The function
+\(b'=b-\partial_{\bar z_2}u\) satisfies
+\(\partial_{\bar z_1}b'=0\).  Apply the lemma in \(z_2\), preserving
+holomorphic dependence on \(z_1\), to obtain
+\(\partial_{\bar z_2}v=b'\) and \(\partial_{\bar z_1}v=0\).
+Then \(\bar\partial(u+v)=\alpha\).
+
+For \(\alpha=c\,d\bar z_1\wedge d\bar z_2\), solve
+\(\partial_{\bar z_1}u=c\).  The form \(u\,d\bar z_2\) satisfies
+\[
+ \bar\partial(u\,d\bar z_2)
+       =c\,d\bar z_1\wedge d\bar z_2.
+\]
+Higher form degrees vanish by dimension.
+Finally, a smooth function with \(\bar\partial f=0\) satisfies the
+Cauchy--Riemann equations in each variable.
+Lemma~\ref{lem:tb-cr-expansion} identifies these functions exactly with
+\(\mathcal O(U)\).  Thus this is the degree-zero kernel.
+
+Removing scalar constants quotients the degree-zero kernel by that line.
+It does not change the image of \(\bar\partial\) in degree one, so
+the positive-degree cohomology remains zero.
+\end{proof}
+
+\begin{corollary}[The Taylor defect]
+\label{prop:tb-five}
+The map on degree-zero cohomology is the proper injection
+\[
+ H^0(\bar J):\mathcal O(U)/\mathbb C\longrightarrow\mathfrak h,
+ \qquad \operatorname{im}H^0(\bar J)=R_U/\mathbb C.
+\]
+In particular, \(\bar J\) is not a quasi-isomorphism.
+For \(K=\ker(J:\mathcal A\to R)\),
+\begin{equation}
+ H^0(K)=0,\qquad H^1(K)\cong R/R_U,
+ \qquad H^{q\ge2}(K)=0.
+ \label{eq:tb-kernel-cohomology}
+\end{equation}
+The kernel of \(\bar J\) is canonically isomorphic to \(K\).
+\end{corollary}
+\begin{proof}
+A degree-zero cocycle in \(K\) is holomorphic and has zero Taylor
+series.  Proposition~\ref{prop:tb-three} makes it zero.
+For \(F\in R\), choose a smooth lift \(f\) from
+Proposition~\ref{prop:tb-two}, and define
+\begin{equation}
+ \delta(F)=[\bar\partial f]\in H^1(K).
+ \label{eq:tb-connecting}
+\end{equation}
+Two lifts differ by an element of \(K^0\), so the class is independent
+of the lift.  This also proves linearity, without a linear choice of lifts.
+The equality \(\bar\partial f=\bar\partial k\) for some \(k\in K^0\)
+holds exactly when \(f-k\) is holomorphic with Taylor series \(F\).
+Thus \(\ker\delta=R_U\).
+
+Every closed element of \(K^1=\mathcal A^1\) has a smooth primitive by
+Proposition~\ref{prop:tb-four}.  Hence \(\delta\) is surjective.
+In degree at least two, the same proposition gives a primitive of positive
+degree, which automatically lies in \(K\).  This proves
+\eqref{eq:tb-kernel-cohomology}.
+
+If \([f]\in\ker\bar J\), then \(Jf\) is constant.  Replacing \(f\)
+by \(f-f(0)\) identifies this degree-zero kernel with \(K^0\).
+Positive degrees are unchanged, and the identification commutes with
+the differential.
+\end{proof}
+
+All quotients in~\eqref{eq:tb-kernel-cohomology} are vector-space
+quotients.  No Hausdorff quotient topology or ordinary Lie bracket on
+\(R/R_U\) is asserted.  For the factorial series, any smooth lift
+gives a nonzero class \([\bar\partial f]\) in \(H^1(K)\).
+The relevant exact sequence is therefore
+\[
+ 0\longrightarrow\mathcal O(U)\xrightarrow{J}R
+       \xrightarrow{\delta}H^1(K)\longrightarrow0.
+\]
+
+\begin{corollary}[No section as a complex]
+\label{cor:tb-no-chain-section}
+Neither \(J\) nor \(\bar J\) has a chain-map section, even as a map
+of complexes without topology.
+\end{corollary}
+\begin{proof}
+Every formal series is a degree-zero cocycle.  A chain-map section would
+lift it to a degree-zero cocycle in the Dolbeault complex, hence to a
+holomorphic function.  The factorial series contradicts this conclusion.
+For the quotient complex, closed degree-zero representatives are still
+holomorphic, so the same contradiction applies.
+\end{proof}
+
+\section{Two formal topologies}
+\label{sec:tb-topologies}
+
+The algebraic map exists before any topology is chosen.  Continuity
+depends on whether a small coefficient may vary or must vanish exactly.
+
+\begin{definition}[Seminorm topologies]
+\label{def:tb-seminorms}
+A seminorm on a complex vector space \(E\) is a function
+\(p:E\to[0,\infty)\) satisfying
+\[
+ p(ax)=|a|p(x),\qquad p(x+y)\le p(x)+p(y).
+\]
+A family of seminorms gives a neighborhood base at zero by the sets
+\(\bigcap_{j=1}^k\{x:p_j(x)<\epsilon_j\}\), where \(k\) is finite
+and \(\epsilon_j>0\).  Their translates define the topology.
+A locally convex complex space is a vector space with such a topology.
+It is Hausdorff if the seminorms separate points.  A net \((x_a)\) is
+a family indexed by a directed set: every two indices have a common
+upper bound.  It is Cauchy if, for every finite family and every positive tolerance, its
+sufficiently late differences lie in the corresponding zero-neighborhood.
+The space is complete if every Cauchy net converges in it.
+A Fr\'echet space is a Hausdorff complete locally convex space whose
+topology is generated by a countable family of seminorms.
+\end{definition}
+
+For a countable separating family \((p_j)_{j\ge1}\), the formula
+\[
+ d_E(x,y)=\sum_{j\ge1}2^{-j}\min\{1,p_j(x-y)\}
+\]
+is a metric giving the same topology.  The triangle inequality follows
+from the seminorm inequalities and
+\(\min(1,a+b)\le\min(1,a)+\min(1,b)\).
+Controlling finitely many seminorms controls this sum up to its geometric
+tail; making the sum small controls each specified seminorm.  This proves
+the topology assertion and explains the metrizability of the spaces used
+below.
+
+\begin{definition}[Smooth, coefficient, and adic topologies]
+\label{def:tb-topologies}
+On smooth coefficient functions use seminorms
+\[
+ p_{K,r}(f)=\max_{|\gamma|\le r}\sup_{z\in K}|D^\gamma f(z)|,
+\]
+where \(K\Subset U\), \(r\ge0\), and \(\gamma\) is real.
+Use the finite product topology for the coefficients of a differential
+form.  A countable compact exhaustion makes each \(\mathcal A^q\)
+a metrizable Fr\'echet space.
+
+The usual coefficient topology on \(R\) is
+\(\prod_{\alpha\in\mathbb N^2}\mathbb C\), with usual complex factors.
+The adic topology has the subspaces \(\mathfrak m^N\) as a neighborhood
+base at zero and is taken over \(\mathbb C_{\mathrm{disc}}\).
+Give \(\mathfrak h\) the corresponding quotient topology, represented
+on \(\mathfrak m\).
+\end{definition}
+
+Smooth spaces are complete because a Cauchy net converges uniformly on
+compact sets in every derivative.  For each compact set, completeness
+of the scalar field gives the pointwise limit, and the uniform Cauchy
+bound passes to a uniform limit bound.  The limits are compatible under
+restriction.  Lemma~\ref{lem:tb-smooth-limits} makes them the derivatives
+of one smooth function.  The coefficient product is complete
+because its scalar factors are complete.  The adic space is complete
+because a compatible family of finite coefficient assignments gives one
+formal series.  These are different completeness assertions.
+
+The scalar constants form a closed smooth subspace.  The normalization
+\begin{equation}
+ [f]\longmapsto f-f(0)
+ \label{eq:tb-normalization}
+\end{equation}
+identifies \(\mathcal L^0\) continuously with the closed subspace of
+functions vanishing at zero.  Thus the finite graded sum underlying
+\(\mathcal L\) is also metrizable and complete.
+
+\begin{proposition}[Continuity of the Taylor map]
+\label{prop:tb-six}
+The maps \(J\) and \(\bar J\) are continuous for the usual coefficient
+topology.  They are discontinuous into the adic target when the source
+retains its smooth topology.  The brackets are jointly continuous on the
+smooth source and for both formal target topologies.
+\end{proposition}
+\begin{proof}
+Every Taylor coefficient is a derivative evaluation at zero, which is a
+continuous smooth linear functional.  A map to a product is continuous
+exactly when its coordinate maps are continuous.  Normalization
+\eqref{eq:tb-normalization} proves the quotient assertion.
+
+Take nonzero usual complex numbers \(t_n\to0\).  Then
+\(t_nz_1\to0\) in every smooth seminorm, whereas
+\(J(t_nz_1)=t_nx\notin\mathfrak m^2\).  The formal images do not
+converge to zero adically.  This example also applies modulo constants.
+
+An output coefficient of a formal bracket is a finite polynomial in input
+coefficients, proving usual joint continuity.  More precisely, its output
+through degree \(N\) depends only on inputs through degree \(N+1\).
+For the adic topology this follows from
+\begin{equation}
+ \{\mathfrak m^a,\mathfrak m^b\}
+       \subset\mathfrak m^{a+b-2},\qquad a,b\ge1,
+ \label{eq:tb-order-estimate}
+\end{equation}
+interpreted modulo constants when necessary.  Perturbing both inputs by
+series of order at least \(N+2\) leaves their bracket unchanged through
+degree \(N\), including the mixed perturbation terms.
+
+On the smooth source, the product rule gives
+\[
+ p_{K,r}(\{f,g\})\le C_r p_{K,r+1}(f)p_{K,r+1}(g).
+\]
+The same bound on finitely many form coefficients proves joint continuity
+of~\eqref{eq:tb-form-bracket}.  It also proves continuity of the exterior
+product; differentiation is continuous by the defining seminorms.
+\end{proof}
+
+The identity from the adic formal space to the usual coefficient space is
+continuous: the inverse image of a product neighborhood contains a tail.
+The reverse identity is discontinuous.  For example, the condition that
+the linear coefficient vanish is adically open but is not usually open.
+Scalar multiplication \(\mathbb C\times R_{\mathrm{adic}}\to
+R_{\mathrm{adic}}\) is not continuous for usual \(\mathbb C\), as
+the same sequence \(t_nx\) proves.  The discrete coefficient field in
+Definition~\ref{def:tb-topologies} is therefore part of the category.
+
+Polynomials realize every finite coefficient assignment, so they are
+dense in both formal topologies.  This proves that the proper subspace
+\(R_U\) is dense in both.  Density does not give a holomorphic realization
+of a divergent series.
+
+\begin{proposition}[No continuous linear section]
+\label{prop:tb-no-linear-section}
+For the usual coefficient topology, neither \(J\) nor \(\bar J\)
+has a continuous complex-linear section into its smooth source.
+\end{proposition}
+\begin{proof}
+Suppose \(S:R\to C^\infty(U)\) were such a section.
+Fix a compact ball \(K\) containing zero in its interior.  Continuity
+for \(p_{K,0}\) gives a coefficient neighborhood \(V\) on which
+\(p_{K,0}(SF)<1\).  The neighborhood \(V\) contains an entire tail
+subspace \(\mathfrak m^N\).  Scaling any vector in this tail shows
+that \(SF\) vanishes on \(K\).  Its Taylor series is then zero,
+contradicting \(JSF=F\) for a nonzero tail vector.
+For \(\bar J\), compose the proposed section with normalization
+\eqref{eq:tb-normalization} and repeat the argument on \(\mathfrak h\).
+\end{proof}
+
+The smooth surjection supplies individual lifts.  Its failure to split as
+a complex and its failure to split continuously as a linear map are
+distinct obstructions.  Neither obstructs precomposition of scalar forms
+that use only finitely many Taylor coefficients.
+
+\section{Continuous scalar cochains and their completion}
+\label{sec:tb-cochains}
+
+A scalar cochain evaluates a finite tuple of symmetry parameters.
+Joint continuity forces such an evaluation to depend on only finitely
+many coefficients, even though the algebra contains all translations.
+
+\begin{proposition}[Finite jet support]
+\label{prop:tb-seven}
+Let \(n\ge1\).  Every jointly continuous complex-multilinear scalar
+form \(\omega:\mathfrak h^n\to\mathbb C\) has an integer bound
+\(N\ge0\) such that
+\begin{equation}
+ \omega(f_1,\ldots,f_n)=0
+ \quad\text{if any }f_i\in\mathfrak m^{N+1}.
+ \label{eq:tb-finite-support}
+\end{equation}
+This holds for usual coefficients with usual scalar values, and for adic
+coefficients with either discrete or usual scalar values.  Conversely,
+every form satisfying~\eqref{eq:tb-finite-support} is continuous in these
+cases.  Arity zero consists of the scalar constants.
+\end{proposition}
+\begin{proof}
+The converse follows by factoring through finite coefficient spaces.
+For the forward direction, continuity at the origin gives neighborhoods
+\(U_i\) on whose product \(|\omega|<1\); use \(\{0\}\) instead for
+discrete scalar values.  Every \(U_i\) contains a tail subspace.
+Choose a common tail \(T=\mathfrak m^M\).
+Since every scalar multiple of an element of \(T\) is still in \(T\),
+multilinearity implies \(\omega|_{T^n}=0\).  Otherwise scaling one
+argument would produce arbitrarily large values in that product.
+
+Proceed by induction on \(n\).  The preceding argument proves the case
+\(n=1\).  Split \(\mathfrak h=H\oplus T\), with \(H\) the finite
+space of the preceding homogeneous degrees.  Expanding each argument
+into head and tail parts gives finitely many terms.  The all-tail term
+vanishes.  In every other term, expand the head arguments in a finite
+basis of \(H\).  Fixing these basis vectors leaves a continuous form
+of fewer arguments.  By induction it has finite jet support.
+Taking the maximum of the finitely many resulting bounds proves
+\eqref{eq:tb-finite-support}.
+\end{proof}
+
+Index the nonconstant monomials by
+\(\mathcal I=\{(a,b)\in\mathbb N^2:a+b\ge1\}\), and put
+\(e_I=x^ay^b\).  Define the coefficient functional by
+\(e_I^\vee(F)=[x^ay^b]F\).  These monomials are a coordinate family
+for the formal product, not a Hamel basis: a formal series can have
+infinitely many nonzero coordinates.  The continuous scalar dual is,
+as a vector space,
+\[
+ D=\bigoplus_{I\in\mathcal I}\mathbb C e_I^\vee.
+\]
+Fix the exterior-form normalization by
+\[
+ (\lambda_1\wedge\cdots\wedge\lambda_n)(f_1,\ldots,f_n)
+                  =\det\bigl(\lambda_i(f_j)\bigr).
+\]
+Consequently the continuous alternating \(n\)-forms are exactly
+\(\Lambda^nD\).  Indeed, after a finite jet bound is fixed, choose an
+order on its finite set of monomials.  An alternating form is the finite
+sum
+\[
+ \sum_{I_1<\cdots<I_n}\omega(e_{I_1},\ldots,e_{I_n})
+                  e_{I_1}^\vee\wedge\cdots\wedge e_{I_n}^\vee.
+\]
+Evaluation on ordered tuples of the finite monomial basis proves this
+identity.  The determinant convention then extends it to all inputs by
+multilinearity.  The ordinary scalar Chevalley--Eilenberg differential is
+\begin{equation}
+ \begin{split}
+ (d_{\mathrm{CE}}\omega)(f_1,\ldots,f_{n+1})
+  =\sum_{i<j}(-1)^{i+j}\omega\bigl(
+    \{f_i,f_j\},f_1,\ldots,\widehat f_i,
+                      \ldots,\widehat f_j,\ldots,f_{n+1}\bigr).
+ \end{split}
+ \label{eq:tb-ordinary-ce}
+\end{equation}
+The remaining arguments retain their order.  Scalars have trivial
+\(\mathfrak h\)-action, so there are no coefficient-action terms.
+
+If \(\omega\) uses coefficients through degree \(N\), its differential
+uses coefficients through degree \(N+1\), by
+\eqref{eq:tb-order-estimate}.  For every \(N\ge1\), define
+\(\lambda_N(f)=[x^N]f\).  Then
+\begin{equation}
+ (d_{\mathrm{CE}}\lambda_N)(x^{N+1},y)=-(N+1).
+ \label{eq:tb-sharp-loss}
+\end{equation}
+Equation~\eqref{eq:tb-sharp-loss} proves sharpness of the increase by one.
+At \(N=0\), the
+functional \([x^0]\) is zero on \(\mathfrak h\)'s zero-constant
+representatives and \(\{x,y\}=0\).  Both sides of the asserted
+nonzero phenomenon disappear.  No sharp loss is claimed for that case.
+In particular, the finite coefficient projections have not been used as
+Lie quotient maps.
+
+\subsection{Suspension and signs}
+\label{sec:tb-signs}
+
+The source \(\mathcal L\) has nonzero terms in several degrees.
+Suspension records the interaction of form degree and cochain degree.
+Let \(L\) be a cohomologically graded differential graded Lie algebra.
+Use
+\[
+ (L[1])^j=L^{j+1},\qquad s:L\longrightarrow L[1],\qquad |s|=-1.
+\]
+Put \(V=L[1]\).  The graded symmetric power \(S^n(V)\) is the
+quotient of \(V^{\otimes n}\) imposing
+\(vw=(-1)^{|v||w|}wv\) for homogeneous inputs.  In particular, the
+square of an odd homogeneous vector is zero over \(\mathbb C\).
+The empty word is \(1\in S^0(V)=\mathbb C\), and
+\(S^c(V)=\bigoplus_{n\ge0}S^n(V)\).  Every element of this direct
+sum has finitely many nonzero arities.  Concatenation of words gives
+the graded-commutative multiplication \(\mu\) on \(S^c(V)\).
+
+For a permutation of homogeneous inputs, its Koszul sign is the product
+of \((-1)^{|v_i||v_j|}\) over pairs whose relative order is reversed.
+Write \(v_S\) for the subword indexed by \(S\subset\{1,\ldots,n\}\)
+in increasing order, with \(v_\varnothing=1\).  Let
+\(\epsilon(S,T)\) be the Koszul sign for listing \(S\) first and
+then its complement \(T\).  The unshuffle coproduct is
+\begin{equation}
+ \Delta(v_1\cdots v_n)=
+   \sum_{S\sqcup T=\{1,\ldots,n\}}
+                      \epsilon(S,T)v_S\otimes v_T.
+ \label{eq:tb-coalgebra-coproduct}
+\end{equation}
+The coaugmentation is the inclusion \(\mathbb C\to S^0(V)\subset
+S^c(V)\), and the counit is projection onto \(S^0(V)\).
+For homogeneous linear maps, the tensor convention is
+\begin{equation}
+ (A\otimes B)(u\otimes v)=(-1)^{|B||u|}Au\otimes Bv.
+ \label{eq:tb-tensor-sign}
+\end{equation}
+
+Both iterated coproducts list all ordered partitions of the inputs into
+three subwords.  In either iteration, the sign is the product for the
+inversions that place those subwords in the same final order.
+This proves coassociativity.  Interchanging the two blocks in
+\eqref{eq:tb-coalgebra-coproduct}, with the sign of their total degrees,
+proves graded cocommutativity.  The empty-word terms verify the counit
+and coaugmentation identities.
+
+For an even vector \(v\), the normalization gives
+\(\Delta(v^n)=\sum_{a=0}^n\binom na v^a\otimes v^{n-a}\).
+For homogeneous scalar forms on the coalgebra, define their product by
+\(\alpha\beta=(\alpha\otimes\beta)\Delta\), with the tensor sign
+in~\eqref{eq:tb-tensor-sign}.  A homogeneous coordinate \(u\) that
+vanishes on arities other than one and satisfies \(u(v)=1\) therefore
+has \(u^n(v^n)=n!\).  Induction multiplies by \(n\) at the last step
+of the coproduct.  This fixes the multiplicities of repeated even inputs;
+the formulas do not use divided powers.
+
+A homogeneous linear map \(A:S^c(V)\to S^c(V)\) is a coderivation
+if it satisfies
+\[
+ \Delta A=(A\otimes\mathrm{id}+\mathrm{id}\otimes A)\Delta,
+\]
+where the second summand uses~\eqref{eq:tb-tensor-sign}.
+
+\begin{lemma}[Primitives and uniqueness of coderivations]
+\label{lem:tb-coderivation-uniqueness}
+The elements \(z\in S^c(V)\) satisfying
+\(\Delta z=1\otimes z+z\otimes1\) are precisely \(V=S^1(V)\).
+Such elements are called primitive.  A coderivation that vanishes on
+\(1\) is uniquely determined by its composition with the projection
+\(\pi:S^c(V)\to V\), called its corestriction.
+\end{lemma}
+\begin{proof}
+The coproduct preserves total arity, so the primitive condition can be
+checked separately in each arity.
+For arity \(m\ge2\), consider the component
+\(\Delta_{1,m-1}:S^m(V)\to V\otimes S^{m-1}(V)\).
+For each selected input, the coproduct first moves it to the front.
+Multiplication moves it back to the original position with the same
+Koszul sign.  Their product is one.  The \(m\) choices therefore give
+\[
+ \mu\Delta_{1,m-1}=m\,\mathrm{id}_{S^m(V)}.
+\]
+Since \(m\) is invertible in \(\mathbb C\), a primitive has no
+component in arity \(m\ge2\).  A scalar \(a1\) is primitive only
+if \(a1\otimes1=2a1\otimes1\), so \(a=0\).
+All vectors in \(V\) are primitive by the coproduct formula.
+
+Let \(A\) be the difference of two coderivations with the same
+corestriction and with \(A1=0\).  Induct on input arity.  Suppose
+\(A\) vanishes on all shorter words.  The coderivation identity,
+applied to a word \(w\) of the next arity, leaves only
+\[
+ \Delta(Aw)=Aw\otimes1+1\otimes Aw.
+\]
+All other terms contain \(A\) applied to a shorter word and vanish.
+Thus \(Aw\) is primitive.  Its projection to \(V\) is zero by the
+corestriction hypothesis.  The first part of the proof gives \(Aw=0\).
+This proves the induction and uniqueness.
+\end{proof}
+
+Define a degree-one coderivation \(Q\) by its components
+\begin{equation}
+ q_1(sx)=-s(dx),\qquad
+ q_2(sx\,sy)=(-1)^{|x|}s[x,y],\qquad q_n=0\ (n>2).
+ \label{eq:tb-q-conventions}
+\end{equation}
+Its arity-zero component is zero, so \(Q\) vanishes on the scalar
+coaugmentation.
+Here a coderivation means that applying the coproduct after \(Q\)
+equals applying \(Q\) to either tensor factor after the coproduct,
+with the degree-one tensor sign.  Its extension is explicit.  For
+\(v_i=sx_i\), sum
+\[
+ \sum_i\epsilon(i;\widehat i)\,q_1(v_i)v_{\widehat i}
+ \; +\sum_{i<j}\epsilon(i,j;\widehat{i,j})\,
+                q_2(v_i,v_j)v_{\widehat{i,j}},
+\]
+where each remaining list retains its order and \(\epsilon\) is the
+Koszul sign for moving the selected inputs to the front.
+Each fixed arity involves a finite sum.
+Write \(Q=Q_1+Q_2\) for the unary and binary extensions in this formula.
+
+These formulas do define a coderivation.  In a coproduct of a summand,
+the selected block of one or two inputs, after application of \(q_i\),
+lies entirely in one output factor.  Such choices correspond exactly
+to applying \(Q\) in that factor after splitting the original word.
+Both orders move the same original inputs into the same ordered blocks.
+Moving a degree-one map past the left output block contributes the
+additional sign in~\eqref{eq:tb-tensor-sign}.  Hence their terms and
+signs agree.  The formula for \(q_2\) respects graded symmetry because
+the bracket is graded antisymmetric.  The uniqueness in
+Lemma~\ref{lem:tb-coderivation-uniqueness} identifies this extension
+with the coderivation specified by~\eqref{eq:tb-q-conventions}.
+
+\begin{lemma}[The square-zero identity]
+\label{lem:tb-q-square}
+The coderivation~\eqref{eq:tb-q-conventions} satisfies \(Q^2=0\).
+\end{lemma}
+\begin{proof}
+The square of an odd coderivation is a coderivation: in the double
+coproduct calculation, the two terms applying \(Q\) in different
+tensor factors cancel.  Also \(Q^2(1)=0\).
+Lemma~\ref{lem:tb-coderivation-uniqueness} shows that it suffices to
+compute the projection to \(L[1]\).  Since each application lowers
+arity by at most one, the
+only possible input arities are one, two, and three.
+
+In arity one the expression is \(sd^2x=0\).
+For \(a=|x|\), the arity-two expression is
+\[
+ (-1)^{a+1}s\bigl(d[x,y]-[dx,y]-(-1)^a[x,dy]\bigr)=0.
+\]
+For \(a=|x|\), \(b=|y|\), and \(c=|z|\), the arity-three
+expression is
+\[
+ (-1)^b s\bigl([[x,y],z]-(-1)^{bc}[[x,z],y]
+                +(-1)^{a(b+c)}[[y,z],x]\bigr).
+\]
+Antisymmetry changes the last term inside parentheses to
+\(-[x,[y,z]]\).  The remaining equality is the graded Jacobi identity.
+Thus every corestriction component vanishes, and so does \(Q^2\).
+\end{proof}
+
+For \(L=\mathfrak h\) with its usual coefficient topology, or
+\(L=\mathcal L\) with its smooth topology, let
+\[
+ M_n^p(L)=\operatorname{Hom}_{\mathrm{cont}}^p
+                        (S^n(L[1]),\mathbb C).
+\]
+This notation means jointly continuous graded-symmetric multilinear
+forms, defined on the underlying locally convex spaces with usual scalar
+values.  A homogeneous form of degree \(p\) vanishes unless its input
+degrees sum to \(-p\).  No tensor completion is implicit in this notation.
+Define the arity-completed cochain spaces degree by degree:
+\begin{equation}
+ \widehat C^p_{\mathrm{CE,cont}}(L)=\prod_{n\ge0}M_n^p(L).
+ \label{eq:tb-arity-completion}
+\end{equation}
+Here \(M_0^0=\mathbb C\) and \(M_0^{p\ne0}=0\).
+
+For a homogeneous cochain \(\phi\) of degree \(p\), set
+\(\phi_{-1}=0\) and define
+\begin{equation}
+ D\phi=-(-1)^p\phi Q,\qquad
+ (D\phi)_n=-(-1)^p(\phi_nQ_1+\phi_{n-1}Q_2).
+ \label{eq:tb-ce-differential}
+\end{equation}
+The first part preserves arity, and the second raises it by one.
+Both raise cohomological degree by one.  Lemma~\ref{lem:tb-q-square}
+implies \(D^2=0\).
+
+Multiplication is the graded dual of the coproduct.  For forms of specified
+arities, its formula on homogeneous inputs is
+\begin{equation}
+ (\phi\psi)(v_1\cdots v_n)=
+ \sum_{S\sqcup T=\{1,\ldots,n\}}
+ \epsilon(S,T)(-1)^{|\psi|\sum_{i\in S}|v_i|}
+                       \phi(v_S)\psi(v_T).
+ \label{eq:tb-shuffle-product}
+\end{equation}
+Only sublists of the prescribed sizes contribute.  For arity products,
+sum also over the finitely many pairs of arities adding to \(n\).
+The tensor sign in~\eqref{eq:tb-shuffle-product} is part of the dual
+pairing.  The coproduct is coassociative and graded cocommutative, so this
+product is associative and graded commutative.  Applying the coderivation
+identity for \(Q\) and the sign in~\eqref{eq:tb-ce-differential} gives
+\(D(\phi\psi)=(D\phi)\psi+(-1)^{|\phi|}\phi(D\psi)\).
+
+\begin{lemma}[Ordinary alternating forms]
+\label{lem:tb-unsuspension}
+For \(L=\mathfrak h\) in degree zero, arity \(n\) has cohomological
+degree \(n\).  The identification with ordinary alternating forms is
+\begin{equation}
+ \omega(x_1,\ldots,x_n)
+   =(-1)^{n(n-1)/2}\phi(sx_1\cdots sx_n).
+ \label{eq:tb-unsuspension}
+\end{equation}
+It identifies the product with the ordinary exterior product and
+\(D\) with~\eqref{eq:tb-ordinary-ce}.
+\end{lemma}
+\begin{proof}
+Every suspended input has degree \(-1\), so graded symmetry is ordinary
+antisymmetry.  Put \(t_n=(-1)^{n(n-1)/2}\).
+Moving two selected inputs \(i<j\) to the front gives sign
+\((-1)^{i+j-3}\).  The ratio of unsuspension signs is
+\(t_{n+1}/t_n=(-1)^n\).  Multiplication by the differential sign
+\(-(-1)^n\) yields the coefficient \((-1)^{i+j}\) of
+\eqref{eq:tb-ordinary-ce}.
+
+For input arities \(a,b\), the extra tensor evaluation sign in
+\eqref{eq:tb-shuffle-product} is \((-1)^{ab}\).
+The equality \(t_{a+b}=(-1)^{ab}t_at_b\) cancels this extra sign
+under~\eqref{eq:tb-unsuspension}, leaving the exterior shuffle product.
+\end{proof}
+
+For coordinates \(c^I(se_J)=\delta^I_J\), write
+\(\{e_I,e_J\}=\sum_K C^K_{IJ}e_K\).  The preceding signs give
+\[
+ Dc^K=-\tfrac12\sum_{I,J}C^K_{IJ}c^Ic^J.
+\]
+For each fixed \(K\), the sum is finite: nonzero terms have
+\(|I|+|J|=|K|+2\), with both input degrees positive.
+The factor \(1/2\) counts the two orders of each pair.
+
+\subsection{Bounded products and degreewise completeness}
+\label{sec:tb-completeness}
+
+A subset \(B\) of a locally convex space is bounded if every continuous
+seminorm is bounded on \(B\).  On continuous \(n\)-linear forms use
+the topology with seminorms
+\begin{equation}
+ p_{B_1,\ldots,B_n}(\omega)
+    =\sup_{x_i\in B_i}|\omega(x_1,\ldots,x_n)|,
+ \label{eq:tb-bounded-topology}
+\end{equation}
+where all \(B_i\) are bounded.  These seminorms are finite.  A continuous
+multilinear form is bounded on a product of sufficiently small
+zero-neighborhoods, and bounded sets can be scaled into those
+neighborhoods.  Give~\eqref{eq:tb-arity-completion} the product topology
+of~\eqref{eq:tb-bounded-topology} in each fixed degree.
+
+\begin{lemma}[Completeness of continuous multilinear forms]
+\label{lem:tb-bounded-complete}
+If \(E\) is a metrizable locally convex complex space, the continuous
+scalar \(n\)-linear forms on \(E^n\) are complete for
+\eqref{eq:tb-bounded-topology}.  Closed symmetry and homogeneous-degree
+conditions preserve completeness.
+\end{lemma}
+\begin{proof}
+Arity zero is the complete space \(\mathbb C\).  Suppose \(n\ge1\),
+and let \((\omega_a)\) be a Cauchy net of continuous forms.
+Singletons are bounded, so the net has a pointwise limit \(\omega\).
+The defining multilinear identities pass to pointwise limits.
+
+Fix bounded sets \(B_i\) and \(\epsilon>0\).  There is an index
+\(a_0\) such that
+\[
+ p_{B_1,\ldots,B_n}(\omega_a-\omega_b)<\epsilon
+                         \qquad(a,b\ge a_0).
+\]
+Letting \(b\) tend pointwise to the limit gives
+\(p_{B_1,\ldots,B_n}(\omega_a-\omega)\le\epsilon\) for
+\(a\ge a_0\).  One continuous member \(\omega_a\) is bounded on
+this product, so \(\omega\) is bounded there as well.  Thus convergence
+is uniform on every product of bounded sets.
+
+Continuity follows if a multilinear form is bounded on a product
+\(V_1\times\cdots\times V_n\) of open balanced convex neighborhoods
+of zero.  Their continuous Minkowski seminorms are
+\[
+ p_i(x)=\inf\{t>0:x\in tV_i\}.
+\]
+Here balanced means that \(aV_i\subset V_i\) for \(|a|\le1\),
+and convex means that \(tx+(1-t)y\in V_i\) for \(x,y\in V_i\)
+and \(0\le t\le1\).  Finite intersections of seminorm balls give
+such neighborhoods.  They absorb each vector because sufficiently small
+scalar multiples approach zero, so \(p_i\) is finite.
+Balancedness gives absolute homogeneity of \(p_i\).  Convexity gives
+subadditivity: if \(x\in aV_i\) and \(y\in bV_i\), then
+\(x+y\in(a+b)V_i\), and taking infima gives the inequality.
+
+Openness gives \(\{p_i<\epsilon\}=\epsilon V_i\).
+For one inclusion, \(p_i(x)<\epsilon\) puts \(x\) in some
+\(tV_i\) with \(t<\epsilon\).  Balancedness then gives
+\(x\in\epsilon V_i\).  Conversely, if \(x/\epsilon\in V_i\),
+openness along the real ray gives \((1+\delta)x/\epsilon\in V_i\)
+for some \(\delta>0\), so \(p_i(x)<\epsilon\).
+These open balls prove continuity at zero.  The inequality
+\(|p_i(x)-p_i(y)|\le p_i(x-y)\) proves continuity everywhere.
+Scaling each input gives a bound
+\[
+ |\omega(x_1,\ldots,x_n)|\le C\prod_i p_i(x_i).
+\]
+The zero-seminorm cases follow by a limit.  This bound proves continuity
+at the origin and, after expanding increments, at arbitrary input tuples.
+
+If \(\omega\) were discontinuous, it would therefore be unbounded
+on every product of zero-neighborhoods.  Choose a decreasing countable
+neighborhood base \(U_k\) at zero.  There would be vectors
+\(x_{i,k}\in U_k\) with
+\[
+ |\omega(x_{1,k},\ldots,x_{n,k})|>k.
+\]
+Each sequence \(x_{i,k}\to0\) is bounded: every continuous seminorm
+has a bounded tail and finitely many remaining values.  Boundedness of
+\(\omega\) on the product of these sequences contradicts the displayed
+inequality.  Thus \(\omega\) is continuous, proving completeness.
+Symmetry and degree restrictions are pointwise equalities and hence
+define closed subspaces.
+\end{proof}
+
+\begin{proposition}[The two degreewise completions]
+\label{prop:tb-complete}
+For \(L=\mathfrak h\) with usual coefficients or \(L=\mathcal L\),
+every \(\widehat C^p_{\mathrm{CE,cont}}(L)\) is complete for the
+bounded-product topology.  It is also complete for the arity filtration
+\[
+ F^r\widehat C^p=\prod_{n\ge r}M_n^p(L),\qquad
+ \widehat C^p\cong\varprojlim_r\widehat C^p/F^r\widehat C^p.
+\]
+The differential and multiplication are continuous degreewise, and
+\(D F^r\subset F^r\), \(F^rF^s\subset F^{r+s}\).
+\end{proposition}
+\begin{proof}
+The finite graded sums underlying \(\mathfrak h[1]\) and
+\(\mathcal L[1]\) are metrizable locally convex spaces.
+Lemma~\ref{lem:tb-bounded-complete} proves completeness of each
+\(M_n^p(L)\).  A Cauchy net in their product converges in each
+coordinate, and these limits give its limit in the product.  This proves
+bounded-product completeness.
+
+The quotient by \(F^r\) retains precisely the arities below \(r\).
+A compatible family of these finite lists specifies one element of
+the full arity product, uniquely.  This proves the inverse-limit
+statement independently of the preceding topological completeness proof.
+The arity formulas for multiplication and differential give the stated
+filtration relations.
+
+For bounded sets, a continuous linear map sends a bounded set to a
+bounded set.  A continuous bilinear map sends a product of bounded sets
+to a bounded set: apply its seminorm estimates and boundedness of each
+input set.  Thus precomposition with \(d\) and with the bracket is
+continuous for~\eqref{eq:tb-bounded-topology}.  Each differential
+component is a finite sum of such precompositions.
+Every shuffle term is bounded by the product of the two corresponding
+seminorms of its factors.  This proves joint continuity of multiplication
+at specified arities.  A fixed output arity uses only finitely many
+input arities, proving degreewise continuity on the product.
+\end{proof}
+
+The word complete here always applies in a fixed cohomological degree.
+For \(\mathfrak h\), only arity \(p\) occurs in degree \(p\).
+For \(\mathcal L\), suspended degrees \(-1,0,1\) allow arbitrarily
+large arities in a fixed degree, so the arity product is substantive.
+No product over all cohomological degrees is taken.
+
+An ungraded direct sum of degrees with the arity-product subspace topology
+would not be complete.  Choose distinct coordinates \(c^1,c^2,\ldots\)
+of \(D\).  The sequence
+\[
+ \sum_{n=1}^N c^1c^2\cdots c^n
+\]
+converges in each arity as \(N\to\infty\), but its limit has nonzero
+components in infinitely many cohomological degrees.  That limit does
+not lie in the ungraded direct sum.  Adding it would require a separate
+total completion, outside~\eqref{eq:tb-arity-completion}.
+
+\section{Taylor pullback of scalar cochains}
+\label{sec:tb-pullback}
+
+Finite holomorphic derivative expressions pull back along Taylor
+extraction even though arbitrary formal cocycles have no holomorphic
+lifts.  The resulting map is contravariant, as a scalar functional is
+evaluated by precomposing its arguments.
+
+\begin{proposition}[The scalar cochain map]
+\label{prop:tb-eight}
+For usual complex coefficient topologies, Taylor pullback gives an
+injective continuous morphism of differential graded algebras with
+graded-commutative products, complete in every cohomological degree,
+\begin{equation}
+ \bar J^*:\widehat C^\bullet_{\mathrm{CE,cont}}(\mathfrak h)
+       \longrightarrow\widehat C^\bullet_{\mathrm{CE,cont}}(\mathcal L).
+ \label{eq:tb-ce-pullback}
+\end{equation}
+It preserves arity and cohomological degree.  Its image consists of
+cochains that vanish on every tuple with a positive Dolbeault-degree
+argument and, in each arity, depend on finitely many positive-order pure
+holomorphic derivatives at zero.
+\end{proposition}
+\begin{proof}
+For each arity, define
+\[
+ (\bar J^*\phi)_n=\phi_n\circ S^n(\bar J[1]).
+\]
+Proposition~\ref{prop:tb-one} gives the exact identity
+\[
+ S^c(\bar J[1])Q_{\mathcal L}
+        =Q_{\mathfrak h}S^c(\bar J[1]).
+\]
+Precomposition therefore commutes with
+\eqref{eq:tb-ce-differential}.  The map on symmetric coalgebras preserves
+the coproduct, so it also preserves~\eqref{eq:tb-shuffle-product}.
+The induced map \(\bar J[1]\) has degree zero, which proves the grading
+assertions.
+
+Continuity follows first at the level of multilinear forms from
+Proposition~\ref{prop:tb-six}.  For the bounded-product topology it is
+given exactly by
+\[
+ p_{B_1,\ldots,B_n}(\bar J^*\phi)
+   =p_{\bar J[1](B_1),\ldots,\bar J[1](B_n)}(\phi).
+\]
+The images are bounded because \(\bar J[1]\) is continuous linear.
+This proves continuity in each arity and then on the arity product.
+
+If a pulled-back cochain vanishes, choose smooth lifts of every member
+of an arbitrary finite tuple of formal inputs by
+Proposition~\ref{prop:tb-two}.  Evaluation on this tuple proves that
+the original cochain vanishes.  No linear or continuous choice of lifts
+is needed.  Thus the map is injective.
+
+Proposition~\ref{prop:tb-seven} gives finite jet support of formal scalar
+cochains.  Taylor extraction kills positive Dolbeault degrees and retains
+only pure holomorphic derivatives.  The zeroth derivative disappears
+because the source is already modulo constants.
+Conversely, any multilinear cochain with the stated properties factors
+through a finite positive-order holomorphic jet projection in each
+argument.  These projections are surjective by
+Proposition~\ref{prop:tb-two}, so the factor is a unique scalar form
+on the corresponding formal coefficient spaces.  It is continuous by
+Proposition~\ref{prop:tb-seven}.  This proves the image description.
+\end{proof}
+
+The internal differential of a pulled-back scalar cochain vanishes because
+it would insert a positive-degree Dolbeault argument.  Its remaining
+differential is precisely the Hamiltonian bracket differential
+\eqref{eq:tb-ordinary-ce}.  This is the compatibility needed to evaluate
+formal scalar symmetry cochains on smooth parameters at the origin.
+
+For the adic formal space, Proposition~\ref{prop:tb-seven} gives the same
+finite jet formulas as vector spaces.  Composing these formulas with
+smooth jets still gives continuous cochains with usual complex values.
+This construction is not the application of a continuous Lie map into
+the adic target: Proposition~\ref{prop:tb-six} excludes that continuity.
+It is an explicit algebraic identification of finite jet forms followed
+by the usual-valued pullback~\eqref{eq:tb-ce-pullback}.
+
+Discrete scalar values on the smooth side give a different answer.
+A positive-arity continuous multilinear map to \(\mathbb C_{\mathrm{disc}}\)
+vanishes.  Fix all but one argument.  The remaining continuous linear map
+has connected domain and discrete image, so its image is the singleton
+zero.  Thus the scalar topology cannot be omitted from the comparison.
+
+Injectivity in~\eqref{eq:tb-ce-pullback} is injectivity on cochains.
+It does not prove injectivity on Chevalley--Eilenberg cohomology: a
+primitive in the larger complex need not belong to the image.
+It also gives no coefficient-valued or cotangent comparison.
+The representation and dual calculations below locate two separate
+obstructions to such extensions.
+
+\section{Translations, representations, and dual contraction}
+\label{sec:tb-duality}
+
+\begin{proposition}[Finite-dimensional representations of the full algebra]
+\label{prop:tb-nine}
+Every continuous complex-linear Lie homomorphism
+\(\rho:\mathfrak h\to\operatorname{End}(V)\), with \(V\)
+finite-dimensional, is zero.  This holds for either formal source
+topology and for either usual or discrete finite-dimensional target
+topology.  The algebra \(\mathfrak h\) has no proper open Lie ideal
+and is perfect.
+\end{proposition}
+\begin{proof}
+For a discrete target, continuity gives a tail
+\(\mathfrak m^N\subset\ker\rho\).  For a usual finite-dimensional
+target, the inverse image of a bounded norm ball contains a tail subspace.
+Scaling that subspace forces its image to be zero, giving the same
+inclusion.  The kernel is a Lie ideal.
+
+For arbitrary \(f=\sum_{a+b\ge1}f_{ab}x^ay^b\), define
+\begin{equation}
+ I_y^Nf=\sum_{a+b\ge1}
+       \frac{b!}{(b+N)!}f_{ab}x^ay^{b+N}.
+ \label{eq:tb-antiderivative}
+\end{equation}
+It lies in \(\mathfrak m^{N+1}\subset\ker\rho\), and
+\((\operatorname{ad}_x)^NI_y^Nf=f\).  Every intermediate term has
+positive degree, so removal of constants causes no change.
+Ideal stability gives \(f\in\ker\rho\).
+
+Every open Lie ideal contains a tail, so the same argument makes it all
+of \(\mathfrak h\).  Taking one antiderivative gives
+\(f=\{x,I_yf\}\).  Thus \([\mathfrak h,\mathfrak h]=\mathfrak h\).
+\end{proof}
+
+For trivial scalar coefficients, a one-cocycle vanishes on all brackets.
+Perfectness therefore gives
+\(H^1_{\mathrm{CE}}(\mathfrak h,\mathbb C)=0\), even without
+continuity restrictions.
+
+\begin{example}[The origin-preserving algebra]
+\label{ex:tb-origin}
+The distinct subalgebra \(\mathfrak h_+=\mathfrak m^2\) preserves
+the origin.  Estimate~\eqref{eq:tb-order-estimate} makes
+\(\mathfrak m^{N+1}\) a Lie ideal in \(\mathfrak h_+\) for
+\(N\ge1\).  Its action on linear functions is
+\[
+ \rho_+:\mathfrak h_+\longrightarrow
+       \operatorname{End}(\mathfrak m/\mathfrak m^2),
+ \qquad \rho_+(f)[\ell]=[\{f,\ell\}].
+\]
+The bracket derivation preserves \(\mathfrak m\) and \(\mathfrak m^2\),
+so the action is defined.  Jacobi proves that it is a Lie representation.
+Its kernel is \(\mathfrak m^3\).  Indeed, higher terms act trivially,
+and both partial derivatives of a quadratic vanish only for the zero
+quadratic.
+
+With \(e=x^2/2\), \(f=-y^2/2\), and \(h=-xy\), the matrices in
+the ordered basis \((x,y)\) are
+\[
+ \rho_+(e)=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad
+ \rho_+(f)=\begin{pmatrix}0&0\\1&0\end{pmatrix},\quad
+ \rho_+(h)=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+Direct Poisson calculation gives
+\(\{h,e\}=2e\), \(\{h,f\}=-2f\), and \(\{e,f\}=h\).
+Thus \(\mathfrak m^2/\mathfrak m^3\cong\mathfrak{sl}_2\).
+\end{example}
+
+The nonzero representation in Example~\ref{ex:tb-origin} is continuous
+from usual coefficients to the usual matrix topology, since it depends
+on only three coefficients.  From the adic topology it is continuous
+to either usual or discrete matrices, since its kernel contains the open
+tail \(\mathfrak m^3\).  From usual coefficients to nonzero discrete
+matrices it is discontinuous: the source is connected, and a continuous
+map from it to a discrete space has constant image.  These topology
+choices are part of the representation statement.
+The translation identity \(\{x,y^2\}=2y\) proves that
+\(\mathfrak h_+\) is not an ideal of \(\mathfrak h\).
+
+\subsection{The continuous dual}
+\label{sec:tb-dual}
+
+The vector space \(D=\bigoplus_I\mathbb C e_I^\vee\) from
+Proposition~\ref{prop:tb-seven} admits two relevant topologies.
+For adic \(\mathfrak h\) over \(\mathbb C_{\mathrm{disc}}\), give
+\(D\) the discrete topology.  For the usual coefficient product,
+give \(D\) its usual locally convex direct-sum topology, denoted
+\(D_{\mathrm{lc}}\).  This topology is generated by
+\begin{equation}
+ p_a(\lambda)=\sum_Ia_I|\lambda_I|,
+                  \qquad a_I\ge0\text{ arbitrary}.
+ \label{eq:tb-dual-seminorms}
+\end{equation}
+Each sum is finite on a given dual vector.  Every seminorm \(p\) on
+the algebraic direct sum is bounded above by the one with
+\(a_I=p(e_I^\vee)\).  Thus this is the finest locally convex topology
+on that direct sum.
+
+\begin{proposition}[Evaluation in the two categories]
+\label{prop:tb-ten}
+The evaluation map
+\[
+ \mathfrak h_{\mathrm{adic}}\times D_{\mathrm{disc}}
+       \longrightarrow\mathbb C_{\mathrm{disc}},\qquad
+ (f,\lambda)\longmapsto\lambda(f)
+\]
+is jointly continuous.  The evaluation map
+\[
+ \mathfrak h_{\mathrm{prod}}\times D_{\mathrm{lc}}
+       \longrightarrow\mathbb C
+\]
+is separately continuous and is not jointly continuous.
+\end{proposition}
+\begin{proof}
+In the adic case, fix \((f_0,\lambda_0)\), and choose \(N\) containing
+the support of \(\lambda_0\).  Evaluation is constant on the open set
+\[
+ (f_0+\mathfrak m^{N+1})\times\{\lambda_0\}.
+\]
+This proves joint continuity at every point.
+
+In the usual category, a fixed \(\lambda\) uses finitely many
+coefficient evaluations, so evaluation is continuous in \(f\).
+For fixed \(f=(f_I)\), the estimate
+\(|\lambda(f)|\le p_{|f|}(\lambda)\) proves continuity in \(\lambda\).
+
+Suppose joint continuity held at zero.  There would be neighborhoods
+\(U_0\) and \(V_0\) whose pairing lies in \(|z|<1/2\).
+The neighborhood \(U_0\) contains a basic product neighborhood
+restricting finitely many coordinates.  Choose an unrestricted index
+\(I\).  Then \(te_I\in U_0\) for every \(t\in\mathbb C\).
+The coordinate-line inclusion \(\mathbb C e_I^\vee\to D_{\mathrm{lc}}\)
+is continuous.  Hence \(V_0\) contains \(se_I^\vee\) for some
+\(s\ne0\).  Taking \(t=1/s\) gives pairing one, a contradiction.
+\end{proof}
+
+The topology \(D_{\mathrm{lc}}\) is also the strong continuous-dual
+topology of \(\mathfrak h_{\mathrm{prod}}\).  A subset of the product
+is bounded exactly when every coordinate is bounded.  Indeed, the unit
+neighborhood of any continuous seminorm contains a full coefficient tail.
+Scaling shows that the seminorm vanishes on that tail.  It therefore
+factors through a finite coordinate space, where coordinatewise bounded
+sets are bounded.  The converse follows by taking individual coordinate
+seminorms.  For arbitrary finite-valued
+weights \(a_I\ge0\), the rectangle
+\[
+ B_a=\{f:|f_I|\le a_I\text{ for all }I\}
+\]
+is bounded, and
+\[
+ \sup_{f\in B_a}|\lambda(f)|=\sum_Ia_I|\lambda_I|.
+\]
+Conversely, any bounded set is contained in such a rectangle.
+Thus uniform convergence on bounded subsets gives exactly
+\eqref{eq:tb-dual-seminorms}.
+
+\begin{proposition}[The coadjoint continuity obstruction]
+\label{prop:tb-coadjoint}
+The coadjoint action
+\[
+ (f\cdot\lambda)(g)=-\lambda(\{f,g\})
+\]
+is jointly continuous from
+\(\mathfrak h_{\mathrm{adic}}\times D_{\mathrm{disc}}\) to
+\(D_{\mathrm{disc}}\).  It is separately continuous but not jointly
+continuous from \(\mathfrak h_{\mathrm{prod}}\times D_{\mathrm{lc}}\)
+to \(D_{\mathrm{lc}}\).
+\end{proposition}
+\begin{proof}
+If \(\lambda\) is supported through degree \(N\), its coadjoint
+image is supported through degree \(N+1\) and depends only on \(f\)
+through degree \(N+1\).  This follows from
+\eqref{eq:tb-order-estimate}.  At a fixed \(\lambda\), the map in
+\(f\) is therefore continuous in both stated categories.  In the
+adic category, holding \(\lambda\) fixed in an open singleton proves
+joint continuity.
+
+For fixed \(f\) in the usual category, the action is a linear map
+from a space with the finest locally convex topology.  The pullback
+of each target seminorm is a seminorm and hence continuous, so this
+linear map is continuous.  This proves separate continuity.
+
+The formal antiderivative \(I_x\), defined as in
+\eqref{eq:tb-antiderivative} with the variables exchanged, is continuous
+for usual coefficients.  If the usual coadjoint action were jointly
+continuous, composition with evaluation at the fixed vector \(y\)
+would make the following map jointly continuous:
+\[
+ (f,\lambda)\longmapsto(I_xf\cdot\lambda)(y)
+       =-\lambda(\{I_xf,y\})=-\lambda(f).
+\]
+This contradicts Proposition~\ref{prop:tb-ten}.
+\end{proof}
+
+The coadjoint formula is a Lie action because Jacobi gives
+\[
+ [f,g]\cdot\lambda=f\cdot(g\cdot\lambda)-g\cdot(f\cdot\lambda).
+\]
+Evaluation on any third Hamiltonian reduces this equation to its Jacobi
+identity.  The algebraic coadjoint semidirect product therefore has a continuous
+Lie bracket in the adic/discrete category.  With the usual product and
+locally convex direct-sum topologies, that bracket fails joint continuity.
+The two categories cannot be identified through their equal underlying
+dual vector spaces.
+
+\subsection{The cotangent boundary of the scalar comparison}
+\label{sec:tb-cotangent-boundary}
+
+In the discrete formal category, consider the graded Lie algebra
+\(\mathfrak h\ltimes D[1]\), where \(D[1]\) is abelian and
+\(\mathfrak h\) acts by the coadjoint action.
+Its underlying graded space has \(\mathfrak h\) in degree zero and
+\(D[1]\) in degree \(-1\), with zero differential.  Writing
+\(s\lambda\) for a vector of \(D[1]\), the brackets are
+\[
+ [f,g]=\{f,g\},\qquad
+ [f,s\lambda]=s(f\cdot\lambda),\qquad
+ [s\lambda,s\mu]=0.
+\]
+The reverse cross bracket is fixed by graded antisymmetry.
+The Jacobi identity with two Hamiltonians and one dual input is the
+coadjoint action identity proved above.  Identities with at least two
+dual inputs vanish because the dual summand is abelian.  This verifies
+the graded Lie structure on the stated carrier.
+Under the suspension convention~\eqref{eq:tb-q-conventions}, the
+Chevalley--Eilenberg coordinates dual to \(s\mathfrak h\) and
+\(s^2D\) have degrees
+\[
+ |c^I|=1,\qquad |u_I|=2.
+\]
+The coordinate contraction specified by
+\([c^I,u_J]=\delta^I_J\) has degree \(-3\).
+Giving \(u_I\) weight one and \(c^I\) weight zero, then subtracting
+twice this weight from the degree, gives \(|u_I|=0\), \(|c^I|=1\),
+and contraction degree \(-1\).  These are grading calculations on
+the indicated linear coordinates.
+
+Suppose a graded locally convex space \(\mathcal B\) has a
+distinguished scalar copy \(\mathbb C\cdot1\subset\mathcal B^0\)
+and continuous linear inclusions
+\[
+ i_D:D_{\mathrm{lc}}\longrightarrow\mathcal B^1,
+ \qquad i_h:\mathfrak h_{\mathrm{prod}}\longrightarrow\mathcal B^2,
+ \qquad i_D(e_I^\vee)=c^I,\quad i_h(e_J)=u_J,
+\]
+and a continuous linear projection \(p:\mathcal B^0\to\mathbb C\)
+with \(p(1)=1\).  Assume a jointly continuous bilinear contraction
+of degree \(-3\) has the displayed coordinate values.
+The resulting scalar pairing is
+\[
+ B(\lambda,F)=p\bigl([i_D(\lambda),i_h(F)]\bigr).
+\]
+For a finite polynomial \(P\) without constant term, the coordinate
+identities and finite multilinearity give \(B(\lambda,P)=\lambda(P)\),
+since \(\lambda\) also has finite support.
+For arbitrary \(F\in\mathfrak h\), let \(P_N\) be its polynomial
+truncation through degree \(N\).  Then \(P_N\to F\) in the usual
+coefficient topology.  Continuity at each fixed \(\lambda\) gives
+\[
+ B(\lambda,F)=\lim_N B(\lambda,P_N)
+            =\lim_N\lambda(P_N)=\lambda(F).
+\]
+Thus joint continuity of the contraction would make the full evaluation
+pairing jointly continuous, contradicting Proposition~\ref{prop:tb-ten}.
+This argument uses density of finite polynomials rather than an
+operation on an unspecified infinite sum of coordinates.
+After the stated regrading, the same proof has \(i_h\) in degree zero
+and the contraction in degree \(-1\).
+Proposition~\ref{prop:tb-coadjoint} already prevents the corresponding
+usual coadjoint semidirect product from being a jointly continuous
+topological Lie algebra.
+
+The scalar map~\eqref{eq:tb-ce-pullback} is unaffected by this obstruction.
+It evaluates finite holomorphic jets, preserves the full Hamiltonian
+bracket including translations, and respects the Dolbeault differential.
+The underlying Dolbeault-to-formal map \(\bar J\) still has the kernel
+cohomology \(R/R_U\) in~\eqref{eq:tb-kernel-cohomology}.
+An extension to coefficient-valued or cotangent cochains requires new
+carrier and continuity data.  The dual of \(\bar J:\mathcal L\to
+\mathfrak h\) goes from \(D\) into the smooth continuous dual, so a
+same-direction cotangent map also requires a separate construction.
+Neither an analytic equivalence nor a cotangent comparison follows from
+the proved scalar cochain map.
