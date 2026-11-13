@@ -1,0 +1,538 @@
+\subsection{Support operations in the logarithmic form topology}
+\label{sec:window-support-topology}
+
+The cofinal implication holds on the original form domain.  We now
+make its approximation maps explicit.  This also permits elementary
+vectors with nonzero endpoint values to detect changes in the form,
+and then transfers those differences to compact smooth tests.
+
+Write $\widehat g$ for the fixed Fourier transform, always taken
+after zero extension outside the specified support.  Put
+\[
+ w(\xi)=m(\xi)-m_0+1\ge1,\qquad
+ \|g\|_X^2=\frac1{2\pi}\int_{\mathbb R}
+                 w(\xi)|\widehat g(\xi)|^2\,d\xi.
+\]
+The symbol estimates give
+$w(\xi)\asymp\log(2+|\xi|)$.  For $I_T=(-T,T)$, denote by
+$X_T$ the closed support subspace with this norm.  It is exactly
+the original logarithmic form domain $\mathcal Q_T$ equipped
+with an equivalent Hilbert form norm.  No value or trace is
+prescribed at either endpoint.
+More explicitly, if $B_T$ is the bounded prime-plus-polar
+operator and $\beta_T\ge\|B_T\|$, then
+\[
+ \|g\|_X^2\le
+ Q_T(g)+(1-m_0+\beta_T)\|g\|_2^2
+ \le(1+2\beta_T)\|g\|_X^2.
+\]
+Thus the norm used below is precisely equivalent to a shifted
+closed-form norm of the complete operator.
+
+Reflection and conjugation preserve the even Fourier weight, so
+$g\mapsto g^*$ is an antilinear isometry of $X_T$.
+Write $\mathfrak q_T$ for the polarization of $Q_T$.  It is
+continuous on $X_T$.  In fact, if
+\[
+ C_T=1+|m_0-1|+2T+2\sinh T
+              +2\sum_{2\le n\le e^{2T}}\frac{\Lambda_{\mathrm{vM}}(n)}{\sqrt n},
+\]
+then
+\[
+ |\mathfrak q_T(f,g)|\le C_T\|f\|_X\|g\|_X,
+\]
+and consequently
+\begin{equation}
+ |Q_T(f)-Q_T(g)|
+ \le C_T(\|f\|_X+\|g\|_X)\|f-g\|_X.
+ \label{eq:window-support-1}
+\end{equation}
+Indeed the archimedean form is the $X$ inner product plus
+$(m_0-1)$ times the $L^2$ inner product.  The remaining terms
+are the actual finite prime-power operator and the actual
+rank-two polar operator, whose norms have the stated bounds.
+
+\subsubsection{Zero extension and inward dilation}
+
+For $U\ge T$, zero extension gives an isometry
+\[
+ X_T\longrightarrow X_U
+\]
+for the displayed norm.  The Fourier transform does not change.
+The complete forms agree on this inclusion:
+\begin{equation}
+ Q_U(g)=Q_T(g)\qquad(g\in X_T).
+ \label{eq:window-support-2}
+\end{equation}
+The polar integrals and archimedean integral are unchanged, and
+every new shift $b\ge2T$ has zero correlation with a function
+supported in $[-T,T]$.  The equality case concerns only a set
+of measure zero and also gives zero.
+
+For $0<\theta\le1$, define the unitary $L^2$ dilation
+\[
+ (U_\theta g)(x)=\theta^{-1/2}g(x/\theta),\qquad
+ \widehat{U_\theta g}(\xi)=\theta^{1/2}\widehat g(\theta\xi).
+\]
+It maps $X_T$ into $X_{\theta T}$.  For every fixed
+$\theta_0>0$ there is a finite constant $A_{\theta_0}$ such
+that
+\[
+ w(\xi/\theta)\le A_{\theta_0}w(\xi)
+       \qquad(\theta_0\le\theta\le1).
+\]
+This follows from equivalence with the logarithmic weight and
+\[
+ \log(2+|\xi|/\theta)
+ \le\log(2+|\xi|)+\log(1/\theta_0).
+\]
+Thus $U_\theta$ is uniformly bounded on the full weighted
+Fourier space when $\theta\in[\theta_0,1]$.
+Its strong continuity at one follows first for smooth Fourier
+functions of compact support, by change of variables and
+dominated convergence, and then for all weighted $L^2$
+functions by density and the uniform operator bound.  In
+particular
+\begin{equation}
+ \|U_\theta g-g\|_X\longrightarrow0\qquad(\theta\uparrow1).
+ \label{eq:window-support-3}
+\end{equation}
+This proof does not use a classical endpoint condition.
+
+\subsubsection{Convolution and smooth approximation}
+
+For $f\in X_T$ and $g\in X_U$, their compact supports imply
+$f,g\in L^1$, and
+\[
+ \operatorname{supp}(f\star g)\subset[-T-U,T+U],\qquad
+ \widehat{f\star g}=\widehat f\widehat g.
+\]
+Therefore
+\begin{equation}
+ \|f\star g\|_X
+ \le\min\{\|f\|_1\|g\|_X,\ \|g\|_1\|f\|_X\}.
+ \label{eq:window-support-4}
+\end{equation}
+Since $\|f\|_1\le\sqrt{2T}\|f\|_2\le\sqrt{2T}\|f\|_X$,
+this proves joint continuity
+$X_T\times X_U\to X_{T+U}$.  In particular convergence of
+both inputs in their original form norms passes through
+convolution and then through the complete form by \eqref{eq:window-support-1}.
+
+Choose a nonnegative $\rho\in C_c^\infty(-1,1)$ with
+$\int\rho=1$, and put $\rho_\eta(x)=\eta^{-1}\rho(x/\eta)$.
+The multiplier satisfies $|\widehat{\rho_\eta}(\xi)|\le1$ and
+converges pointwise to one.  Dominated convergence gives
+\[
+ \|\rho_\eta\star g-g\|_X\longrightarrow0.
+\]
+An explicit support-preserving form-core approximation is
+\begin{equation}
+ \theta_n=1-\frac1n,\qquad \eta_n=\frac{T}{2n},\qquad
+ g^{[n]}=\rho_{\eta_n}\star U_{\theta_n}g\quad(n\ge2).
+ \label{eq:window-support-5}
+\end{equation}
+Its support lies in
+$[-T+T/(2n),T-T/(2n)]$, so $g^{[n]}\in C_c^\infty(I_T)$.
+Moreover,
+\[
+ \|g^{[n]}-g\|_X
+ \le\|U_{\theta_n}g-g\|_X
+      +\|\rho_{\eta_n}\star g-g\|_X\longrightarrow0.
+\]
+Thus \eqref{eq:window-support-5} approximates endpoint-nonzero or discontinuous
+admissible vectors without changing the original domain.
+
+\subsubsection{Compact smooth tests and the exponential test algebra}
+
+Let $\mathcal D(I)=C_c^\infty(I)$ carry its usual locally
+convex inductive-limit topology.  On each fixed compact support
+$K\Subset I$, its seminorms are
+$\max_{j\le m}\|\partial^j f\|_\infty$.
+This topology also gives a continuous inclusion into each
+$\A_a$ of \eqref{eq:test-class}.  On a fixed compact set
+$K\subset[-T,T]$,
+\[
+ p_{a,k}(f)\le 2T e^{aT}\|f^{(k)}\|_\infty.
+\]
+Thus compact smooth tests retain the convolution and involution of
+the original exponential test algebra.  The embedding into the
+logarithmic completion is continuous as well.
+Indeed Fourier integration by parts twice gives, on each fixed
+support $K$,
+\[
+ \|f\|_X\le C_K(\|f\|_\infty+\|f''\|_\infty),
+\]
+since the resulting Fourier square is bounded by a constant
+times $(1+|\xi|)^{-4}$ and the weight grows logarithmically.
+Zero extension along an open inclusion is continuous in this
+topology.  For a fixed $g\in\mathcal D(I_T)$, the dilates
+$U_\theta g$ converge to $g$ in $\mathcal D(I_T)$ as
+$\theta\uparrow1$: their supports lie in one common compact
+subset, and
+\[
+ \partial^jU_\theta g(x)
+ =\theta^{-j-1/2}g^{(j)}(x/\theta)
+\]
+converges uniformly for every $j$.  Similarly, for small
+$\eta$, $\rho_\eta\star g$ has one common compact support and
+\begin{equation}
+ \|\partial^j(\rho_\eta\star g-g)\|_\infty
+ \le\sup_{|y|\le\eta}
+         \|g^{(j)}(\cdot-y)-g^{(j)}\|_\infty\longrightarrow0.
+ \label{eq:window-support-6}
+\end{equation}
+This is a direct approximation statement for the convolution;
+it does not assert that $\rho_\eta$ converges to a function in
+$\mathcal D$.
+
+Convolution is jointly continuous in this inductive-limit
+topology as well.  Here is a seminorm proof on $\mathbb R$.
+Choose a locally finite smooth partition of unity $\chi_j$
+with support in $[j-1,j+1]$.  Given a continuous seminorm $q$
+on $\mathcal D(\mathbb R)$, choose $A_h\ge1$ and integers
+$m_h$ so that
+\[
+ q(v)\le A_h\max_{r\le m_h}\|v^{(r)}\|_\infty
+       \quad\text{if }\operatorname{supp}v\subset[h-2,h+2].
+\]
+Set
+\[
+ A'_j=\max_{|h|\le2|j|+2}A_h,\qquad
+ m'_j=\max_{|h|\le2|j|+2}m_h,
+\]
+\[
+ p(f)=\sum_{j\in\mathbb Z}A'_j
+           \max_{r\le m'_j}\|\partial^r(\chi_jf)\|_\infty.
+\]
+This is a continuous seminorm: on each fixed compact-support
+step only finitely many summands occur.  For
+$f_j=\chi_jf$, $g_k=\chi_kg$, their convolution has support
+in $[j+k-2,j+k+2]$.  If $|j|\ge|k|$, put the required
+derivatives on $f_j$ and use $\|g_k\|_1\le2\|g_k\|_\infty$;
+if $|k|>|j|$, reverse the roles.  Summing gives
+\begin{equation}
+ q(f\star g)\le2p(f)p(g).
+ \label{eq:window-support-7}
+\end{equation}
+Thus convolution is continuous in the compact smooth test topology
+and in the stated logarithmic completions.
+For rough $g\in X_T$, the convergence in \eqref{eq:window-support-5} is a form-norm
+statement; it is not a claimed convergence in $\mathcal D$ to a
+nonsmooth limit.
+
+\subsection{Effects of changing the complete form}
+\label{sec:window-term-differences}
+
+The following examples measure the effect of deleting a prime square,
+replacing the polar term, or discarding the tail coupling.
+
+Fix $T=3/4$ and $L=2T=3/2$.  The functions
+\[
+ f_0(x)=\mathbf1_{[-T,T]}(x),\qquad
+ f_1(x)=x\mathbf1_{[-T,T]}(x)
+\]
+belong to $X_T$.  Their zero extensions are piecewise smooth with finitely many jumps.  Integration by parts
+on the smooth pieces gives Fourier transforms $O(|\xi|^{-1})$; the
+logarithmically weighted Fourier squares are integrable.
+They are admissible without assigning zero endpoint values.
+Formula \eqref{eq:window-support-5} supplies compact smooth versions in the same form
+topology.
+
+\subsubsection{The prime square with its von Mangoldt weight}
+
+For $b=\log4$, the prescribed prime-square contribution is
+\[
+ -\frac{\log2}{2}\langle g,(S_b+S_{-b})g\rangle
+ =-(\log2)\operatorname{Re} C_g(b),\qquad C_g(b)=\langle g,S_bg\rangle.
+\]
+Thus deleting $n=4$ changes the form by
+$(\log2)\operatorname{Re} C_g(b)$; the weight is $\Lambda_{\mathrm{vM}}(4)=\log2$.
+The two exact correlations are
+\[
+ C_{f_0}(b)=L-b,
+\qquad
+ C_{f_1}(b)=\frac{(L-b)((L-b)^2-3b^2)}{12}.
+\]
+Since $1<\log4<3/2$, the resulting changes have opposite,
+strictly nonzero signs:
+\begin{align*}
+ \Delta_4(f_0)&=(\log2)(3/2-\log4)>0,\\
+ \Delta_4(f_1)&=
+ \frac{(\log2)(3/2-\log4)
+       ((3/2-\log4)^2-3(\log4)^2)}{12}<0.
+\end{align*}
+In particular this deletion is not a positive perturbation on
+all vectors.  The same formulas have the rational enclosures
+\[
+ \Delta_4(f_0)\in[0.07881474300351511479,
+                         0.07881474300351511480],
+\]
+\[
+ \Delta_4(f_1)\in[-0.03778186468138071530,
+                         -0.03778186468138071529].
+\]
+These are differences between the specified terms, not negative
+values of the complete form.
+
+\subsubsection{The signed polar cross term}
+
+Replacing
+$2\operatorname{Re}(\overline{\ell_+}\ell_-)$ by
+$|\ell_+|^2+|\ell_-|^2$ changes the form by exactly
+\[
+ \Delta_{\mathrm{pol}}(g)=|\ell_+(g)-\ell_-(g)|^2.
+\]
+The even vector $f_0$ annihilates this difference.  For the odd
+vector $f_1$, $\ell_-(f_1)=-\ell_+(f_1)$ and
+\[
+ \ell_+(f_1)-\ell_-(f_1)
+ =4\int_0^T x\sinh(x/2)\,dx
+ =8\{T\cosh(T/2)-2\sinh(T/2)\}.
+\]
+Consequently
+\begin{equation}
+ \Delta_{\mathrm{pol}}(f_1)
+ =64\{T\cosh(T/2)-2\sinh(T/2)\}^2
+ >\frac{4T^6}{9}=\frac{81}{1024}>0.
+ \label{eq:window-support-8}
+\end{equation}
+The strict lower bound uses $\sinh(x/2)>x/2$ for $x>0$.
+The original polar value on $f_1$ is negative, whereas the
+replacement is positive.  The polar and prime-square
+differences persist for sufficiently large smooth
+approximants \eqref{eq:window-support-5}, because their difference operators are
+bounded on $L^2$.
+
+\subsubsection{The nonzero omitted Schur correction}
+
+Abbreviate $W_{3/4}$ to $W$.  Let $P=P_{64}^{3/4}$ be the Legendre projection onto degrees
+$0,\ldots,63$, let $Q=1-P$, and let
+$\mathcal K=QWQ$ denote the original complete tail operator.
+Exact scalar inequalities give a positive lower bound for this tail.
+The global kernel bound proved above gives
+$\|\mathcal R_{3/4}\|\le3/8$.  In
+\eqref{eq:window-arch-identity}, write
+$c=-\gamma-\log(2\pi T)$ for the scalar term.
+
+The elementary constants admit the following rational bounds.  The positive atanh series gives
+\[
+ \frac{69}{100}<\frac{56}{81}<\log2
+       <\frac{25}{36}<\frac7{10},\qquad
+ \log3<\frac{11}{10},\qquad \sqrt3>\frac{17}{10}.
+\]
+For the logarithm of three, four terms with a geometric
+remainder suffice:
+\[
+ \log3\le2\sum_{j=0}^{3}\frac{(1/2)^{2j+1}}{2j+1}
+       +\frac{2(1/2)^9}{9(1-1/4)}<\frac{11}{10}.
+\]
+The harmonic enclosure \eqref{eq:cofinal-gamma-trapezoid} applies.
+At $q=2$, it follows that
+$\gamma<41/32-69/100=473/800<3/5$.
+The seven-term alternating upper bound for $\arctan1$ gives
+\[
+ \frac\pi4<1-\frac13+\frac15-\frac17
+                    +\frac19-\frac1{11}+\frac1{13}<\frac56.
+\]
+The same alternating series with its next negative term gives
+$\pi>3$.
+Thus $3\pi/2<5$; and the first five positive exponential
+terms at $17/10$ exceed five, so
+$\log(3\pi/2)<\log5<17/10$.
+Finally,
+\[
+ \nu(3/4)=\frac32\log2+\frac{\log3}{\sqrt3}
+       <\frac{21}{20}+\frac{11}{17}<\frac74,
+\]
+is a norm bound for the complete prime operator.  Decomposition
+into arithmetic chains for the shifts $\log2,\log3,\log4$
+gives path-adjacency norms $\sqrt2,1,1$, respectively; multiplying
+by their actual weights gives the displayed bound.  The signed
+polar operator has eigenvalues $2T+2\sinh T$ and
+$2T-2\sinh T$ on the spans of its even and odd eigenvectors.  Thus its
+negative part is bounded using
+\[
+ 2(\sinh(3/4)-3/4)
+ \le\frac{(3/4)^3}{3(1-(3/4)^2/20)}
+ =\frac{45}{311}<\frac15.
+\]
+Since $V_T\ge0$, these inequalities prove
+\[
+ W\succeq
+ D_{3/4}-\left(\frac35+\frac{17}{10}+\frac38+\frac74+\frac15\right)I
+ =D_{3/4}-\frac{37}{8}I.
+\]
+Exact rational summation gives
+\[
+ H_{64}=
+ \frac{623171679694215690971693339}
+      {131362987122535807501262400}>\frac{47}{10};
+\]
+therefore
+\[
+ \mathcal K\succeq(H_{64}-37/8)Q>\frac3{40}Q.
+\]
+This complement is positive regardless of the sign of the finite low block.
+For $u\in P\mathcal H_{3/4}$,
+the omitted correction is
+\[
+ \mathcal B(u)=\langle QWu,\mathcal K^{-1}QWu\rangle,
+\]
+so the exact Schur form is $Q_{3/4}(u)-\mathcal B(u)$.
+
+This correction is nonzero already on $u=1$.  Indeed
+\[
+ W1=V_T+h_T,\qquad h_T\in L^\infty(I_T),\qquad
+ V_T=-\tfrac12\log(1-(x/T)^2).
+\]
+The regular convolution, polar term and every translated
+constant are bounded.  The essential endpoint logarithmic
+divergence prevents $W1$ from being any finite polynomial.
+Equivalently, on a sufficiently small one-sided neighborhood
+of $T$ that contains no translation cutoff,
+\[
+ (W1)'(x)=\frac{x}{T^2-x^2}+O(1)
+       =\frac1{2(T-x)}+O(1).
+\]
+Therefore $QW1\ne0$, and positivity and injectivity of
+$\mathcal K^{-1}$ imply $\mathcal B(1)>0$.
+
+A single Legendre coefficient gives a quantitative lower bound.  Write
+$p_n(x)=P_n(x/T)$ and $g_n=\|p_n\|_2^2=L/(2n+1)$, and
+take $h=p_{66}\in Q\mathcal Q_{3/4}$.  Define
+\[
+ \alpha_m=1-\frac{\log m}{T}\quad(m=2,3,4),
+\]
+\begin{equation}
+ c_{66}^{\mathrm{alg}}=
+ \frac{L}{66\cdot67}
+ -\frac{L}{133}\sum_{m=2,3,4}
+       \frac{\Lambda_{\mathrm{vM}}(m)}{\sqrt m}
+       \{P_{67}(\alpha_m)-P_{65}(\alpha_m)\}.
+ \label{eq:window-support-9}
+\end{equation}
+This retains all prime powers with their prescribed weights.
+The first term is the exact logarithmic-potential matrix
+entry.  The translated-constant integrals follow from
+$\int P_n=(P_{n+1}-P_{n-1})/(2n+1)$ and parity.
+
+The degree-$64$ polynomial regular kernel maps $1$ to a
+polynomial of degree at most $65$, and the degree-$32$ polar
+operator maps it to degree at most $32$.  Orthogonality
+annihilates both against $p_{66}$.  The requisite approximation
+bound is analytic: on $|z|=3$,
+\[
+ |\sinh z|\ge\sin3,\qquad
+ |R(z)|\le\frac{e^{3/2}}{2\sin3}+\frac16<17.
+\]
+For the first inequality, write $z=x+iy$ with $x^2+y^2=9$.
+The derivative of $\sinh^2x+\sin^2y$ with respect to $x^2$
+is $\sinh(2|x|)/(2|x|)-\sin(2|y|)/(2|y|)\ge0$, with the
+continuous values at zero.  Its minimum is therefore $\sin^23$.
+The last inequality follows already from the elementary Taylor
+bounds $e^{3/2}<9/2$ and $\sin3>7/50$.  Cauchy's estimate and
+the integral-kernel norm bound then give
+\[
+ \|\mathcal R_T-\mathcal R_{T,64}\|
+ \le\frac{51}{2}\,2^{-64}.
+\]
+For the degree-$32$ polar Taylor approximation, putting
+$\eta=(3/2)(3/8)^{33}/33!$ gives operator error at most
+$(13/2)\eta+(25/8)\eta^2$.  The sum of these two explicit
+rational bounds is less than $2\cdot10^{-18}$.  Together with
+$\|p_{66}\|_2\|1\|_2=L/\sqrt{133}<1$, this gives
+\begin{equation}
+ |\langle W1,p_{66}\rangle_2-c_{66}^{\mathrm{alg}}|<2\cdot10^{-18}.
+ \label{eq:window-support-10}
+\end{equation}
+No replacement of Euler's constant is needed in this off-diagonal
+entry, since its scalar contribution is exactly orthogonal.
+
+To enclose this coefficient by rational arithmetic, use
+\[
+ \log z=2\sum_{j=0}^{s-1}\frac{q^{2j+1}}{2j+1}+\epsilon_s,
+ \qquad q=\frac{z-1}{z+1},\quad
+ 0\le\epsilon_s\le\frac{2q^{2s+1}}{(2s+1)(1-q^2)}
+ \quad(z>1).
+\]
+At $z=2,3$ take $s=240$, and set $\log4=2\log2$.
+Enclose $\sqrt2,\sqrt3$ by rational numbers whose squares
+bracket $2,3$.  The recurrence
+\[
+ P_0(t)=1,\quad P_1(t)=t,\quad
+ P_{n+1}(t)=\frac{(2n+1)tP_n(t)-nP_{n-1}(t)}{n+1}
+\]
+then encloses every term in \eqref{eq:window-support-9}.  Combining it with \eqref{eq:window-support-10} gives
+\begin{equation}
+ \langle W1,p_{66}\rangle_2
+ \in[-0.0010128911888997950,
+       -0.0010128911888997909].
+ \label{eq:window-support-11}
+\end{equation}
+This calculation involves one coefficient of the original operator.
+Its error includes the regular and polar remainders.
+
+For the denominator, the diagonal logarithmic identity is
+\[
+ (V_T)_{nn}=2(H_{2n}-H_n)+\frac1{2n+1}-\log2
+ <\log2+\frac1{2n+1}\quad(n\ge1).
+\]
+It follows by differentiating the monic Jacobi squared norm
+with weight $(1-s^2)^\alpha$ at $\alpha=0$; the derivative
+of the monic polynomial is orthogonal to that polynomial.
+The inequality uses $H_{2n}-H_n<\log2$. Thus $H_{66}<5$,
+the normalized logarithmic diagonal entry is less than one, and
+$-\gamma-\log(2\pi T)<0$.  The kernel norm bound proved above
+is $\|\mathcal R_T\|\le3/8$, the polar norm is less
+than four, and the complete prime-operator norm satisfies
+\[
+ \nu(3/4)=\frac32\log2+\frac{\log3}{\sqrt3}<2.
+\]
+The last formula includes the $n=4$ term.  Hence
+\begin{equation}
+ 0<Q_{3/4}(p_{66})<13g_{66}=\frac{39}{266}.
+ \label{eq:window-support-12}
+\end{equation}
+The positive lower inequality follows from the original tail
+comparison.  The upper inequality includes every term of the
+same complete form.
+
+The variational identity for the exact inverse gives
+\[
+ \mathcal B(1)
+ =\sup_{v\in Q\mathcal Q_{3/4}}
+    \{2\operatorname{Re}\langle W1,v\rangle_2-Q_{3/4}(v)\}
+ \ge\frac{|\langle W1,p_{66}\rangle_2|^2}{Q_{3/4}(p_{66})}.
+\]
+In particular \eqref{eq:window-support-11}--\eqref{eq:window-support-12} imply the simple exact lower bound
+\[
+ \mathcal B(1)>\frac{266}{39\cdot10^6}>0.
+\]
+Keeping the interval endpoints gives the sharper bounds
+\begin{equation}
+ \mathcal B(1)>6.99749531042362\cdot10^{-6},\qquad
+ \mathcal B\bigl(1/\sqrt L\bigr)
+       >4.66499687361574\cdot10^{-6}.
+ \label{eq:window-support-13}
+\end{equation}
+Thus omitting the complete Schur correction changes an actual
+low-space value by a strictly positive amount.  This bound concerns the original inverse $\mathcal K^{-1}$.
+
+If the alteration is implemented by deleting the off-diagonal
+$P$--$Q$ block of the full operator, its effect can also be
+seen directly on $1+p_{66}$: the change in its full quadratic
+value is
+\[
+ \Delta_{\mathrm{block}}(1+p_{66})
+ =-2\langle W1,p_{66}\rangle_2>\frac1{500}.
+\]
+Since $\|1+p_{66}\|_2^2=L+g_{66}=201/133$, the change per
+unit physical norm is greater than $133/100500$.
+The cross block is bounded, because $QWP$ has finite-dimensional
+domain and polynomial columns in the operator domain.  Hence
+this changed-form difference also persists for compact smooth
+approximants \eqref{eq:window-support-5}.  This distinguishes block deletion from
+merely omitting a term in the finite Schur formula; neither
+calculation asserts that the original value $Q_{3/4}(1+p_{66})$ is negative.
+

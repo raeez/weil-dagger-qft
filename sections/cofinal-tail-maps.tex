@@ -1,0 +1,572 @@
+\subsection{Joint finite-tail matrices}
+\label{sec:window-joint-cofinal}
+
+The residual interval of Proposition~\ref{prop:window-inverse-residual}
+can be used on a prescribed sequence of growing windows.  We first
+write its complete matrix in the unnormalized Legendre coordinates.
+We then choose finite indices and rational tail maps for which every
+approximation error tends to zero.  The signed low matrix remains the
+arithmetic quantity to be estimated.
+
+Fix $T$ and abbreviate $P_n^T$ to $P_n$.  Put $L=2T$, with
+$p_n,e_n,g_n$ as in \eqref{eq:window-legendre}.
+
+The following construction applies to a self-adjoint
+$\mathcal W$ with the same form domain and with every polynomial
+in its operator domain, such that
+\[
+ \mathcal W\succeq D_T-aI,\qquad
+ \|(1-P_n)\mathcal WP_n\|\le b,
+ \qquad d_n:=H_n-a>0\quad(n\ge N).
+\]
+The operator-domain condition is automatic for the bounded
+self-adjoint perturbations of $W_T$ used below.
+Choose $N<M\le J$, and set $R_{N,M}=P_M-P_N$. Let
+$E_N:\mathbb C^N\to L^2$ and
+$E_R:\mathbb C^{M-N}\to L^2$ be the synthesis maps for the
+unnormalized polynomial bases of $P_N$ and $R_{N,M}$, respectively.
+Their Gram matrices are $G_N=\operatorname{diag}(g_n)_{n<N}$
+and $G_R=\operatorname{diag}(g_n)_{N\le n<M}$.
+Define
+\[
+ A=E_N^*\mathcal WE_N,\qquad
+ B=E_R^*\mathcal WE_N,\qquad
+ D=E_R^*\mathcal WE_R.
+\]
+For any finite matrix $V:\mathbb C^N\to\mathbb C^{M-N}$, put
+\begin{align}
+ T(V)&=B^*V+V^*B-V^*DV,\\
+ r(V)&=B-DV,\\
+ U_V&=E_N-E_RV,\\
+ Z_n(V)u&=\langle\mathcal W U_Vu,p_n\rangle_2\quad(u\in\C^N),\\
+ \Gamma_J(V)&=(\mathcal WU_V)^*(1-P_J)(\mathcal WU_V)\\
+ &= (\mathcal WU_V)^*(\mathcal WU_V)
+       -\sum_{n=0}^{J-1}\frac{Z_n(V)^*Z_n(V)}{g_n}.
+\end{align}
+The inner product is linear in its first argument, so $Z_n(V)$
+is a linear row.  The last line is a matrix identity on $\C^N$.
+It includes every mixed product in the complete operator. Define
+\begin{align}
+ \rho(V)&=r(V)^*
+ \operatorname{diag}\!\left(\frac1{g_nd_n}\right)_{N\le n<M}
+ r(V),\\
+ \Omega_J(V)&=
+ \sum_{n=M}^{J-1}\frac{Z_n(V)^*Z_n(V)}{g_nd_n}
+ +\frac{\Gamma_J(V)}{d_J},\\
+ F_{N,M,J}(V)&=A-T(V)-\rho(V)-\Omega_J(V).
+ \label{eq:cofinal-joint-matrix}
+\end{align}
+
+\begin{proposition}\label{prop:cofinal-joint}
+If $F_{N,M,J}(V)\succeq-\eta G_N$, with $\eta\ge0$, then
+$\mathcal W\succeq-\eta I$ on $\mathcal Q_T$.
+\end{proposition}
+
+\begin{proof}
+Let $\mathcal K$ be the operator of the restricted tail form
+$(1-P_N)\mathcal W(1-P_N)$.  It is strictly positive, and its inverse
+is bounded above by the inverse of the diagonal operator with
+eigenvalues $d_n$. For $u\in\mathbb C^N$, put
+$x=(1-P_N)\mathcal WE_Nu$ and $y=E_RVu$.
+The exact inverse identity gives
+\[
+ \langle x,\mathcal K^{-1}x\rangle
+ =2\operatorname{Re}\langle x,y\rangle-\langle y,\mathcal Ky\rangle
+ +\langle x-\mathcal Ky,\mathcal K^{-1}(x-\mathcal Ky)\rangle.
+\]
+The first two terms are $u^*T(V)u$. The retained part of the
+residual is $r(V)u$, in covariant polynomial coordinates.
+The remote part is
+\[
+ (1-P_M)\mathcal W(E_N-E_RV)u.
+\]
+Inverse order bounds the retained part by $u^*\rho(V)u$.
+For remote indices, $d_n$ is increasing; Parseval and
+$d_n\ge d_J$ for $n\ge J$ give the bound
+$u^*\Omega_J(V)u$.
+Thus the exact low Schur complement is at least
+$F_{N,M,J}(V)$. Completing the square on the closed form domain
+gives the assertion, since
+$-\eta\|P_Ng\|^2\ge-\eta\|g\|^2$.
+\end{proof}
+
+The allowance here is nonpositive.  A positive target still requires
+the shifted denominators of \eqref{eq:window-shifts}.
+
+The retained residual $r(V)=B-DV$ and the remote expression
+$Z_n(V)=\langle\mathcal WE_N,p_n\rangle_2-
+\langle\mathcal WE_R,p_n\rangle_2 V$ are combined before their
+Gram matrices are formed. In particular, the products between
+these two summands, and between every component of $\mathcal W$,
+remain in \eqref{eq:cofinal-joint-matrix}.
+
+For the exact finite solve
+\[
+ V_0=D^{-1}B,
+\]
+one has $r(V_0)=0$ and
+\begin{equation}\label{eq:cofinal-exact-solve}
+ S_M=A-B^*D^{-1}B,\qquad
+ F_{N,M,J}(V_0)=S_M-\Omega_J(V_0).
+\end{equation}
+Here $S_M$ is the exact finite Schur matrix.  The inverse exists
+because $D\succeq d_NG_R>0$.
+Define the physical norm of a finite map by
+\[
+ \|V\|_{\mathrm{ph}}
+ =\|G_R^{1/2}VG_N^{-1/2}\|.
+\]
+The joint residual has the uniform bound
+\begin{equation}\label{eq:cofinal-joint-residual-rate}
+ \|G_N^{-1/2}\Omega_J(V)G_N^{-1/2}\|
+ \le \frac{b^2(1+\|V\|_{\mathrm{ph}}^2)}{d_M}.
+\end{equation}
+Indeed, $(1-P_M)\mathcal WP_M$ has norm at most $b$, and the
+orthogonal synthesis $E_N-E_RV$, after normalization of its
+source, has squared norm $1+\|V\|_{\mathrm{ph}}^2$.
+Every denominator in $\Omega_J$ is at least $d_M$.
+This bound is a ceiling on the jointly computed residual; it
+does not replace that residual by separate component Grams.
+
+\subsection{Explicit cofinal indices}
+
+Let
+\[
+ m=j+1\ge2,\qquad T_j=\log m,\qquad B_j=16m^2.
+\]
+All admitted prime powers satisfy $n<m^2$; a term at $n=m^2$
+has zero correlation. Since $\Lambda_{\mathrm{vM}}(n)\le\log n$,
+\[
+ \nu(T_j)\le4T_j\sum_{n=2}^{m^2}n^{-1/2}
+ \le8T_j(m-1)<8m^2.
+\]
+Using $\pi<4$, $\gamma<1$, $T_j<m$, and
+$2\sinh T_j=m-m^{-1}<m$ in \eqref{eq:window-global-comparison} and
+\eqref{eq:window-uniform-cross} gives the following bound.
+For the scalar logarithm, $\log(2\pi\log m)<\log(8m)<2m$
+when $m\ge2$.  Thus each of $\mathcal A(T_j)$ and $b(T_j)$
+is less than $8m^2+7m/2+4<16m^2$, so
+\begin{equation}\label{eq:cofinal-ab-bound}
+ \mathcal A(T_j)<B_j,\qquad b(T_j)<B_j.
+\end{equation}
+These bounds follow from the local terms of the complete form.
+
+For the exact operator, one possible choice is
+\begin{align}
+ N_j^{(0)}&=2^{\,4B_j+2},\\
+ M_j^{(0)}&=2^{\,4B_j+8B_j^2m^2+2},\\
+ J_j^{(0)}&=2M_j^{(0)}.
+\end{align}
+Since $H_n\ge\log(n+1)$ and $\log2>1/2$,
+\[
+ H_{N_j^{(0)}}-\mathcal A(T_j)>B_j+1,\qquad
+ H_{M_j^{(0)}}-\mathcal A(T_j)>4B_j^2m^2.
+\]
+Consequently the exact solve satisfies
+$\|V_0\|_{\mathrm{ph}}<1$, and
+\[
+ \|G_N^{-1/2}\Omega_J(V_0)G_N^{-1/2}\|
+ <\frac1{2m^2}.
+\]
+Writing
+\[
+ \alpha_j^{(0)}=
+ \max\{0,-\lambda_{\min}(G_N^{-1/2}S_MG_N^{-1/2})\},
+\]
+Proposition~\ref{prop:cofinal-joint} gives
+\begin{equation}\label{eq:cofinal-exact-bound}
+ W_{T_j}\succeq-\left(\alpha_j^{(0)}+\frac1{2m^2}\right)I.
+\end{equation}
+The finite signed matrix in this statement is exactly
+$A-B^*D^{-1}B$, with the complete form in every block.
+
+\subsection{Bounded approximations and finite rational maps}
+
+The same construction accommodates prescribed operator and
+coefficient errors. Set
+\[
+ e_j=\frac1{64m^2}.
+\]
+Choose a real symmetric approximation $\widetilde W_j$ with
+bounded difference $\|W_{T_j}-\widetilde W_j\|\le e_j$.
+The construction below supplies this bound and computable polynomial
+moments.  Define
+\[
+ \mathcal W_j=\widetilde W_j-e_jI.
+\]
+Then
+\[
+ 0\preceq W_{T_j}-\mathcal W_j\preceq2e_jI,\qquad
+ \mathcal W_j\succeq D_{T_j}-(B_j+2e_j)I.
+\]
+Its finite cross blocks have norm at most $B_j+e_j$.
+Use the enlarged indices
+\begin{align}
+ N_j&=2^{\,8B_j+4},\\
+ M_j&=2^{\,8B_j+32B_j^2m^2+4},\\
+ J_j&=2M_j.
+ \label{eq:cofinal-robust-indices}
+\end{align}
+For $a=B_j+2e_j$ these give
+\[
+ d_{N_j}>3B_j+1,\qquad
+ d_{M_j}>16B_j^2m^2.
+\]
+The exact finite map for $\mathcal W_j$ therefore has
+$\|D^{-1}B\|_{\mathrm{ph}}<1/2$.
+
+A finite polynomial in the retained matrix gives an explicit
+approximate solve. In physical coordinates write
+\[
+ D^\#=G_R^{-1/2}DG_R^{-1/2},\qquad
+ B^\#=G_R^{-1/2}BG_N^{-1/2}.
+\]
+One has $\|D^\#\|\le4M_j$.  To prove this bound, the integral
+formula
+\[
+ P_n(s)=\frac1\pi\int_0^\pi
+       \bigl(s+i\sqrt{1-s^2}\cos\theta\bigr)^n\,d\theta
+       \qquad(-1\le s\le1)
+\]
+gives $|P_n(s)|\le1$.  Expanding the generating series of the
+integral gives $(1-2sz+z^2)^{-1/2}$ and hence identifies these
+polynomials.  Consequently
+$\sum_{n<M}|e_n(x)|^2\le M^2/L$, while
+\[
+ 0\le-\tfrac12\log(1-s^2)
+ \le-\tfrac12\log(1-|s|)
+ \quad\Longrightarrow\quad
+ \int_{-T}^TV_T^2\,dx\le L/2.
+\]
+Summing the squared images of the orthonormal basis gives
+\[
+ \|V_TP_M\|^2\le\sum_{n<M}\|V_Te_n\|_2^2
+       \le M^2/2.
+\]
+The diagonal part has norm at most $H_{M-1}\le M$.
+For $T=\log m$, $|-\gamma-\log(2\pi T)|<B_j$, and
+the norms of the other bounded terms sum to less than $B_j$.
+It follows that
+\[
+ \|\mathcal W_jP_M\|
+ \le2M+2B_j+2e_j<4M,
+\]
+using $M\ge2B_j+2$, which holds for the specified indices.
+Put
+\[
+ s_j=\frac1{4M_j},\qquad
+ k_j=32mM_j(B_j+1),
+\]
+and define
+\[
+ (V_j^{\mathrm{pol}})^\#
+ =s_j\sum_{\ell=0}^{k_j-1}(I-s_jD^\#)^\ell B^\#.
+\]
+The spectrum of $I-s_jD^\#$ lies in
+$[0,1-d_N/(4M_j)]$. Hence
+\[
+ \|B^\#-D^\#(V_j^{\mathrm{pol}})^\#\|
+ \le(B_j+1)e^{-k_j/(4M_j)}
+ \le\frac1{8m},
+ \qquad
+ \|(V_j^{\mathrm{pol}})^\#\|<\frac12.
+\]
+Choose rational coefficients $V_j$ with entrywise error at most
+\[
+ \frac1{32mM_j^2}
+\]
+from $V_j^{\mathrm{pol}}$ in the unnormalized polynomial coordinates.
+The ratio between the largest retained Gram weight and the
+smallest low Gram weight is less than one. Thus the physical
+map error is at most $1/(32mM_j)$, giving
+\begin{equation}\label{eq:cofinal-finite-forcing}
+ \|V_j\|_{\mathrm{ph}}\le1,\qquad
+ \|G_R^{-1/2}(B-DV_j)G_N^{-1/2}\|
+ \le\frac1{4m}.
+\end{equation}
+All entries of the finite polynomial map are computable real
+numbers. Rational approximants with the displayed error are
+obtained from finite enclosures; no choice of an exact rounding
+boundary is needed.
+
+Equations \eqref{eq:cofinal-joint-residual-rate} and
+\eqref{eq:cofinal-finite-forcing} imply
+\begin{equation}\label{eq:cofinal-two-residual-budgets}
+ \|G_N^{-1/2}\rho(V_j)G_N^{-1/2}\|
+ \le\frac1{16m^2},\qquad
+ \|G_N^{-1/2}\Omega_J(V_j)G_N^{-1/2}\|
+ <\frac1{4m^2}.
+\end{equation}
+
+Let $S_M^W$ and $S_M^{\mathcal W}$ be the exact finite
+zero-target Schur matrices for $W_{T_j}$ and $\mathcal W_j$
+on these same indices. Minimization over the retained tail gives
+\begin{equation}\label{eq:cofinal-schur-perturbation}
+ 0\preceq
+ G_N^{-1/2}(S_M^W-S_M^{\mathcal W})G_N^{-1/2}
+ \preceq4e_jI.
+\end{equation}
+The upper bound follows by inserting the minimizer for
+$\mathcal W_j$, whose physical norm is at most one, into the
+form for $W_{T_j}$. Moreover,
+$A-T(V_j)\succeq S_M^{\mathcal W}$; the difference is the
+positive finite inverse residual
+$(B-DV_j)^*D^{-1}(B-DV_j)$.
+Thus, if the gap between the exact finite matrix and its chosen
+lower arithmetic enclosure is at most $1/(16m^2)$ in physical
+norm, the construction has total allowance at most
+\begin{equation}\label{eq:cofinal-robust-bound}
+ \alpha_j+4e_j+\frac1{16m^2}+\frac1{4m^2}+\frac1{16m^2}
+ =\alpha_j+\frac7{16m^2},
+\end{equation}
+where, on the indices \eqref{eq:cofinal-robust-indices},
+\[
+ \alpha_j=\max\{0,-\lambda_{\min}
+       (G_N^{-1/2}S_M^WG_N^{-1/2})\}.
+\]
+
+\subsection{Explicit finite coefficient error bounds}
+
+The following error calculation is in physical, orthonormal
+coordinates; it translates to the original polynomial coordinates
+by the displayed Gram factors. The chosen matrix $V$ is treated as
+an exact finite map. Let $v=\|V\|_{\mathrm{ph}}$.
+Suppose the full $M$-dimensional compression, the $J$ by $M$
+coupling matrix, and the Gram matrix of $\mathcal WP_M$ have
+norm errors $\varepsilon_H,\varepsilon_C,\varepsilon_K$.
+Their centers determine $\widehat r$, $\widehat Z$, and
+$\widehat K_V$, where $Z$ is the jointly formed coupling matrix
+for $\mathcal W(E_N-E_RV)$ and $K_V$ its complete Gram matrix.
+Put
+\[
+ \varepsilon_r=(1+v)\varepsilon_H,\qquad
+ \varepsilon_Z=\sqrt{1+v^2}\,\varepsilon_C.
+\]
+The complete joint matrix has an explicit physical norm error
+\begin{align}
+ \omega\le{}&(1+v)^2\varepsilon_H
+ +\frac{2\|\widehat r\|\varepsilon_r+\varepsilon_r^2}{d_N}
+ +\frac{(1+v^2)\varepsilon_K}{d_J}\\
+ &+\frac{2\|\widehat Z\|\varepsilon_Z+\varepsilon_Z^2}{d_M}
+ +\tau_R\|\widehat r\|^2
+ +\tau_J\|\widehat K_V\|
+ +\tau_Q\|\widehat Z\|^2.
+ \label{eq:cofinal-coefficient-error}
+\end{align}
+Here $\tau_R$ bounds the retained inverse-weight error,
+$\tau_J$ the scalar error in $1/d_J$, and $\tau_Q$ the norm
+error of the diagonal weights
+\[
+ w_n=\begin{cases}
+ -1/d_J,&n<M,\\
+ 1/d_n-1/d_J,&M\le n<J.
+ \end{cases}
+\]
+The remote correction is exactly $K_V/d_J+Z^*\operatorname{diag}
+(w_n)Z$. Its weight norm is at most $1/d_M$, which proves the
+remote part of \eqref{eq:cofinal-coefficient-error}.
+The first two terms follow by expanding
+$T(V)$ and $r(V)^*\operatorname{diag}(d_n^{-1})r(V)$.
+The three input errors include the Gram normalization.  Any
+subsequent rounding, including evaluation of the normalized map $V$,
+is enclosed separately and added to $\omega$.
+
+An entry radius $r$ in the unnormalized $M$ by $M$ compression
+or image Gram gives a physical norm error at most
+\[
+ \frac{M(2M-1)}{L}r.
+\]
+For a $J$ by $M$ coupling matrix it gives at most
+\[
+ \frac{\sqrt{JM(2J-1)(2M-1)}}{L}r.
+\]
+In particular, for the maps in
+\eqref{eq:cofinal-finite-forcing}, at $J=2M$ and
+$L=2\log m>1$, the choices
+\[
+ r_j=\frac1{10^6m^2M_j^4},\qquad
+ \tau_R,\tau_J\le\frac1{10^8m^2M_j^4},\qquad
+ \tau_Q\le\frac2{10^8m^2M_j^4}
+\]
+make \eqref{eq:cofinal-coefficient-error} smaller than
+$1/(1000m^2)$, hence smaller than the budget in
+\eqref{eq:cofinal-robust-bound}.
+One may use the bounds
+$\|\mathcal WP_M\|\le4M$,
+$\|(\mathcal WP_M)^*(\mathcal WP_M)\|\le16M^2$,
+$\|\widehat r\|,\|\widehat Z\|\le10M$, and
+$\|\widehat K_V\|\le33M^2$ to verify this directly.
+These are deliberately coarse coefficient bounds; the actual
+joint residual matrices can be much smaller.  Choose subsequent
+rounding error below $1/(1000m^2)$ as well.  The total center
+error is then below $1/(500m^2)$.
+
+If $\widehat F_j$ is a finite center and
+$\|G_N^{-1/2}(F_j-\widehat F_j)G_N^{-1/2}\|\le\omega_j$,
+define the certified lower matrix and its signed endpoint by
+\[
+ \underline F_j=\widehat F_j-\omega_jG_N,\qquad
+ \sigma_j=\lambda_{\min}
+ (G_N^{-1/2}\underline F_jG_N^{-1/2}).
+\]
+Then
+\[
+ \underline F_j\preceq F_j\preceq
+ \underline F_j+2\omega_jG_N,\qquad
+ W_{T_j}\succeq-\max(0,-\sigma_j)I.
+\]
+The distinction between a center error and a one-sided enclosure
+gap accounts for the factor two. The displayed entry radii give
+$2\omega_j<1/(16m^2)$, as required in
+\eqref{eq:cofinal-robust-bound}. In particular,
+\[
+ \max(0,-\sigma_j)\le\alpha_j+\frac7{16m^2}.
+\]
+The endpoint $\sigma_j$ is computed from the single joint matrix
+\eqref{eq:cofinal-joint-matrix}, not from separate arithmetic,
+polar, or regular-kernel lower bounds.
+If an additional scalar eigenvalue enclosure is used, its error
+is included in the same one-sided arithmetic budget. Alternatively
+one verifies the desired Loewner lower bound directly.
+
+If a finite matrix is instead enclosed in ordinary coefficient
+norm by $E_FI$, its contribution to a physical allowance is
+\[
+ \frac{E_F}{g_{\min}}=\frac{(2N-1)E_F}{L}.
+\]
+This factor cannot be omitted on a growing sequence of indices.
+Dividing all moment matrices and all Gram matrices by the common
+factor $L$ gives the equivalent unitary-coordinate formulation
+with Gram weights $(2n+1)^{-1}$.
+
+\subsection{Existence of the prescribed bounded approximations}
+
+The error $e_j$ can be achieved without changing the form domain
+or any prime-power term. The function $R$ has a global Lipschitz
+bound $|R'|\le16$. On $[0,1]$, the coefficient estimate from
+\eqref{eq:window-r-error} gives
+\[
+ |R'(r)|\le17\sum_{n\ge1}n3^{-n}=51/4.
+\]
+On $[1,\infty)$, use
+$J(r)=e^{-r/2}/(1-e^{-2r})$ and $e^{-2}<1/7$.  Differentiation
+gives $|J'|\le7/12+7/18$.  Hence
+$|R'|\le7/12+7/18+1/2<2$ there.
+Use a constant approximation to $R$ on intervals of length
+\[
+ h_j=\frac{e_j}{96m},
+\]
+with its value at each midpoint enclosed to error at most
+$e_j/(12m)$. Since $L<2m$, its integral-operator error is at
+most $e_j/3$. There are at most $192m^2/e_j+1$ intervals.
+The resulting real symmetric kernel is bounded.
+
+For each polar exponential, take the Taylor polynomial through
+degree $k-1$, where
+\[
+ k=3m+\left\lceil\log_2(48m^2/e_j)\right\rceil.
+\]
+The factorial bound $k!\ge(k/e)^k$, $e<3$, and $T_j<m$ give
+uniform exponential error at most $\sqrt m\,2^{-k}$.
+The cross-polar operator error is at most
+$16m^2\,2^{-k}\le e_j/3$. The two cross rank-one pieces are
+retained.
+
+For Euler's constant, the trapezoid error for $x^{-1}$ gives
+\begin{equation}
+ H_q-\log q-\frac1{2q}\le\gamma\le
+ H_q-\log q-\frac1{2q}+\frac1{8q^2}.
+ \label{eq:cofinal-gamma-trapezoid}
+\end{equation}
+Indeed the error on $[k,k+1]$ is nonnegative and at most
+$\frac18\int_k^{k+1}2x^{-3}\,dx$.  Sum these inequalities and
+pass to infinity.  At $q=N_\gamma=16m$, the displayed interval
+has width $e_j/32$.
+Enclosing $\log N_\gamma$ to width at most $e_j/32$ and taking
+the rational midpoint gives a scalar gamma error less than
+$e_j/3$. The three errors sum to at most $e_j$.
+The logarithmic wall and every prime-power shift remain exact.
+
+For every fixed $j$, these approximations send a polynomial to
+a finite piecewise polynomial plus its logarithmic-wall product.
+The complete image Grams therefore reduce to polynomial moments,
+single-logarithm moments on finitely many intervals, and global
+squared-logarithm moments. All endpoints and coefficients are
+computable, and finite rational enclosures with the prescribed
+entry radii exist. This assertion supplies the error budgets;
+it supplies no sign for the resulting finite matrix.
+The precision thresholds are mathematical requirements on the
+finite enclosures. They do not bound the arithmetic complexity of
+forming them. The finite polynomial construction of $V_j$ may
+use finer intermediate enclosures before its final coefficient
+rounding; its stated forcing bound remains the verification
+condition for that map.
+
+\subsection{The remaining signed inequality}
+
+Let $\mu_M$ be the lowest variational eigenvalue of the complete
+compression $P_MW_TP_M$, and let $\alpha$ be the negative part
+of its finite Schur matrix as above. If the retained tail is
+positive, then
+\begin{equation}\label{eq:cofinal-alpha-variational}
+ (-\mu_M)_+\le\alpha
+ \le(1+\|D^{-1}B\|_{\mathrm{ph}}^2)(-\mu_M)_+.
+\end{equation}
+The first inequality follows by completing the square. For the
+second, insert the minimizing vector
+$E_Nu-E_RD^{-1}Bu$ in the finite variational inequality.
+On either explicit family of indices, the multiplicative factor
+is at most two.
+
+\begin{theorem}[Equivalent signed estimates on an explicit family]
+\label{thm:cofinal-equivalence}
+Use the windows, indices, rational maps and enclosures constructed
+above.  Let $\alpha_j$ be the negative part of the exact finite
+Schur matrix for $W_{T_j}$, measured in the physical norm.
+Let $\sigma_j$ be the lowest eigenvalue of the enclosed joint
+matrix.  The following conditions are equivalent:
+\begin{enumerate}
+\item $L_\zeta(f^*\star f)\ge0$ for every $f\in\cA_\zeta$.
+\item $\alpha_j\to0$.
+\item $(-\mu_{M_j}(T_j))_+\to0$.
+\item $\max(0,-\sigma_j)\to0$.
+\end{enumerate}
+For every $j$, without assuming any of these conditions,
+\begin{equation}
+ Q_{T_j}(g)\ge-\max(0,-\sigma_j)\|g\|_2^2,
+ \qquad
+ \max(0,-\sigma_j)\le\alpha_j+\frac7{16(j+1)^2}.
+ \label{eq:cofinal-final-allowance}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The two inequalities are the enclosed joint bound and
+\eqref{eq:cofinal-robust-bound}.  Inequality
+\eqref{eq:cofinal-alpha-variational} proves the equivalence
+of the second and third conditions.  The second implies the
+fourth by \eqref{eq:cofinal-final-allowance}.
+If the fourth holds, extend any fixed $g\in\mathcal Q_T$ by
+zero to the cofinal windows.  Its form value and norm remain
+unchanged by Proposition~\ref{prop:window-extension}.
+Taking the limit gives $Q_T(g)\ge0$.  The cutoff argument in
+Theorem~\ref{thm:window-cofinal} then proves the first condition.
+Conversely, positivity on $\cA_\zeta$ gives positivity on
+compact smooth tests and hence on $\mathcal Q_T$ by the form-core
+property.  Every exact finite Schur matrix is then nonnegative,
+so $\alpha_j=0$ for every $j$.
+\end{proof}
+
+All operator, finite-solve, tail and coefficient errors in this
+construction have explicit vanishing bounds.  The remaining
+signed condition is equivalent to full Weil positivity.
+Compactness and a positive tail do not establish it.
+
+For each fixed $T$, polynomial form-core density gives
+$\mu_M(T)\downarrow\inf\operatorname{spec}W_T$. This fixed-window
+convergence is distinct from a signed estimate as $T\to\infty$.
+The explicit indices above give uniform absolute control of the
+discarded corrections while leaving the exact signed low
+inequality visible. No positive margin in $T$ is asserted.
+In particular, the near-null families in Proposition~\ref{prop:window-near-null}
+exclude a positive power-law margin without contradicting these
+vanishing negative allowances.

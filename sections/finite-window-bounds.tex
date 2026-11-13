@@ -1,0 +1,306 @@
+\subsection{Evaluation of the finite inequalities}
+\label{sec:window-finite-evaluation}
+
+The finite inequalities in Corollary~\ref{cor:window-conditional}
+hold for both rows of its table.  We give the polynomial construction,
+the arithmetic error bounds and the exact positivity calculation.  The
+matrix to be tested retains the full residual
+$J-C^*G_K^{-1}C$ throughout.
+
+\subsubsection{Finite polynomial construction}
+
+Fix either $T=3/4$ or $T=81/100$, and put $L=2T$.  The
+shifted Legendre polynomial has the integer coefficients
+\begin{equation}
+ p_j(t)=\sum_{k=0}^j b_{kj}t^k,\qquad
+ b_{kj}=(-1)^{j-k}\binom jk\binom{j+k}k.
+ \label{eq:window-computation-legendre}
+\end{equation}
+The scalar in the approximating operator is
+$c_*=-\gamma_* -\log(2\pi T)$, where $\gamma_*$ is the finite
+decimal evaluation of $C_{1000,40}-\log1000$ specified below.
+It is an exact rational scalar once chosen.  Its distance to
+$\gamma$ is counted in the bounded operator error, separately
+from errors in evaluating the moments of the chosen operator.
+
+Let $\mathcal R_{T,64}$ be the integral operator with kernel
+$\sum_{k=0}^{64}r_k|x-y|^k$, using
+\eqref{eq:window-r-recurrence}.  For a monomial in the coordinate
+$t=(x+T)/L$, its image is the following polynomial:
+\begin{equation}
+ \mathcal R_{T,64}(t^m)=
+ \sum_{k=0}^{64}r_kL^{k+1}
+ \left\{
+ \sum_{\ell=0}^k
+  \frac{(-1)^{k-\ell}\binom k\ell}{m+\ell+1}
+       t^{k-\ell}
+ +\mathbf1_{\{k\text{ odd}\}}
+       \frac{2m!k!}{(m+k+1)!}t^{m+k+1}
+ \right\}.
+ \label{eq:window-computation-kernel}
+\end{equation}
+To check this formula, first integrate $(s-t)^ks^m$ over
+$0<s<1$.  When $k$ is odd, the correction on $s<t$ is
+$2(t-s)^ks^m$; its integral is the displayed beta integral.
+For even $k$, no correction is needed.
+
+Put
+\[
+ v_\pm(t)=\sum_{k=0}^{32}\frac{(\pm(Lt-T)/2)^k}{k!}.
+\]
+The polar approximation maps $p_j$ to
+\[
+ v_+(t)L\int_0^1v_-(s)p_j(s)\,ds
+ +v_-(t)L\int_0^1v_+(s)p_j(s)\,ds.
+\]
+These coefficients are rational.  For every retained prime power,
+write $a_n=\log n/L$.  Its two polynomial pieces are
+\[
+ -c_n\mathbf1_{\{t<1-a_n\}}p_j(t+a_n)
+ -c_n\mathbf1_{\{t>a_n\}}p_j(t-a_n).
+\]
+In particular $c_4=\log2/2$; the $n=5$ terms occur in the
+second window.  Adding these pieces to
+$(H_j+c_*)p_j-\mathcal R_{T,64}p_j$ and the polar image
+gives the polynomial $q_j$ in
+\eqref{eq:window-piecewise-column} on every interval.
+All translation endpoints and all mixed products are retained.
+
+The matrices are obtained by integrating
+\[
+ M_{ij}=L\int_0^1p_i(Vp_j+q_j)\,dt,\qquad
+ C_{nj}=L\int_0^1p_n(Vp_j+q_j)\,dt,
+\]
+\begin{equation}
+ J_{ij}=L\int_0^1
+ \bigl(V^2p_ip_j+Vp_iq_j+Vp_jq_i+q_iq_j\bigr)\,dt.
+ \label{eq:window-computation-gram}
+\end{equation}
+The $V^2$ integral has the full interval as its domain.
+The other terms are split at the translation endpoints.
+Ordinary monomial integrals and
+\eqref{eq:window-log-moments} therefore determine every entry.
+Here $M,J$ are real symmetric and $C$ is real; the resulting
+matrices represent the original Hermitian forms on complex
+coefficient vectors.
+No numerical quadrature is used.
+
+\subsubsection{Arithmetic enclosures}
+
+Use $p=520$ significant decimal digits for centers, with rounding
+to nearest and ties to an even final digit.  Products and sums
+of nonnegative error bounds are rounded upward at the same
+precision.  Polynomial indices are summed in increasing order,
+and intervals are added from left to right.  The exact rational
+coefficient formulas precede their conversion to decimals.
+
+Use the identity
+\[
+ \pi=16\arctan(1/5)-4\arctan(1/239),
+\]
+which follows by tangent addition with the angles in the first
+quadrant.  For each arctangent use
+\[
+ \arctan z=\sum_{k=0}^{499}\frac{(-1)^kz^{2k+1}}{2k+1}+\eta,
+ \qquad |\eta|\le\frac{z^{1001}}{1001}.
+\]
+The omitted contribution to $\pi$ is less than $10^{-699}$.
+After multiplying a positive logarithm argument
+by a power of two to put it in $[1,2)$, use
+\[
+ \log y=2\sum_{j=0}^{599}\frac{z^{2j+1}}{2j+1}+\rho,
+ \qquad z=\frac{y-1}{y+1},\qquad
+ |\rho|\le\frac{2(1/3)^{1201}}{1201(1-1/9)}<10^{-572}.
+\]
+For $\log2$, take $z=1/3$ directly.  Restore the integer
+multiple of this value after reducing any other argument.
+Each scalar evaluation has fewer than $10^4$ arithmetic operations;
+the reduced denominators are bounded away from zero.  The required
+logarithm arguments lie between $0.006$ and $1000$.
+Bounding their rounding errors by decimal units gives an error
+less than $10^{-500}$.  The enlarged common radius
+\[
+ r_c=10^{-490}
+\]
+covers their finite combinations.  Square-root centers are enclosed
+with radius $10^{-500}$ by squaring both rational endpoints.
+For $\gamma_*$, evaluate the exact rational $C_{1000,40}$ and
+the preceding logarithm formula at this precision.  Equation
+\eqref{eq:window-gamma-error} gives
+\[
+ |\gamma-\gamma_*|\le E_{1000,40}+10^{-490}
+                  <2.502\cdot10^{-187}.
+\]
+
+The proper breakpoints and their complements exceed $0.07$ in
+the first window and $0.006$ in the second.  Their errors are at
+most $2r_c$.  An ordinary primitive
+$t^{k+1}/(k+1)$ has derivative of absolute value at most one
+on $[0,1]$, so endpoint perturbations contribute at most $4r_c$.
+The radius $10^{-480}$ also covers center rounding for every
+ordinary moment used here.
+
+For a logarithmic primitive
+\[
+ F_k(t)=t^{k+1}\left(\frac{\log t}{k+1}
+                              -\frac1{(k+1)^2}\right),
+ \qquad F_k'(t)=t^k\log t,
+\]
+the value at zero is the exact limit.  At every proper endpoint,
+$|\log t|<6$ and $1/t<170$.  Its input and rounding errors
+are less than $10^{-487}$.  The substitution $t\mapsto1-t$
+has absolute binomial coefficient sum $2^k$.  The maximal
+degrees are $191$ and $319$, with
+\[
+ 2^{191}<10^{58},\qquad 2^{319}<10^{97}.
+\]
+Rounding the alternating sum is bounded by
+$2(k+1)10^{\lceil k\log_{10}2\rceil+4-520}$.
+Consequently radii $10^{-420}$ and $10^{-380}$ cover the two
+mixed-logarithm calculations, including cancellation.
+For the global squared-logarithm moments, $H_j<7$,
+$H_j^{(2)}<2$, and the remaining scalar factors are bounded by
+$100$; radius $10^{-480}$ suffices.
+
+The translation coefficient matrices use the power expansion of
+$p_j(t\pm a_n)$.  Since $|a_n|<1$ and
+$|(a_n^r)'|\le r$, the bounds
+\[
+ 64\,2^{63}<10^{21},\qquad
+ 128\,2^{127}<10^{41}
+\]
+justify their entry radii $10^{25}r_c$ and $10^{45}r_c$.
+The diagonal polynomial coefficients use radius
+$\max|b_{kj}|r_c+10^{-450}$ in the first window and
+$\max|b_{kj}|r_c+10^{-380}$ in the second.
+These bounds include center arithmetic as well as input errors.
+
+Here are the propagation rules.  If centers $\widehat A,
+\widehat B$ have uniform entry radii $r_A,r_B$, their product
+of inner dimension $k$ has radius
+\begin{equation}
+ r_A\|\widehat B\|_1+r_B\|\widehat A\|_\infty
+       +kr_Ar_B+r_{\mathrm{round}}.
+ \label{eq:window-computation-radius}
+\end{equation}
+The two matrix norms in this formula are the maximum absolute
+column and row sums.  If the center magnitudes are less than
+$10^{e_A}$ and $10^{e_B}$, a valid rounding term is
+\[
+ r_{\mathrm{round}}=
+ 2k\,10^{e_A+e_B+d(k)+3-p},\qquad
+ d(k)=1+\lfloor\log_{10}k\rfloor.
+\]
+It bounds every rounded product and partial sum.  Addition uses
+$r_A+r_B$ and a rounding allowance
+$10^{\max(e_A,e_B)+4-p}$.  Multiplication by a scalar center
+$\widehat c$ with radius $r_c'$ uses
+\[
+ |\widehat c|r_A+\max|\widehat A_{ij}|r_c'
+                  +r_Ar_c'+r_{\mathrm{round}}.
+\]
+Here one may take $r_{\mathrm{round}}=10^{e_A+e_c+3-p}$
+when $|\widehat c|<10^{e_c}$.  Conversion of a rational
+coefficient of magnitude less than $10^e$ uses radius $10^{e+3-p}$.
+For separate row weights, use the largest absolute weight in
+this bound.  These formulas do not require independence of the
+input errors.
+
+The matrix assembly in \eqref{eq:window-computation-gram}, with
+these upward error rules, gives the following strict rational
+upper bounds before shortening any centers:
+\[
+ \begin{array}{c|c|c|c}
+ T&\text{intervals}&r_M=r_C&r_J\\\hline
+ 3/4&7&10^{-223}&10^{-312}\\
+ 81/100&9&10^{-154}&2\cdot10^{-159}
+ \end{array}
+\]
+Symmetric entries are averaged and opposite-parity entries are
+set to their exact value zero.  For $T=81/100$, rounding the
+centers to $90$ significant digits adds less than $10^{-88}$
+per entry, since every center has magnitude less than $100$.
+Adding $10^{-85}$ to the preceding radii gives radii less than
+$2\cdot10^{-85}$.  In both windows the resulting enclosures
+therefore satisfy the $10^{-80}$ entry requirement used in
+\eqref{eq:window-rational-error}.
+
+The scalar estimates give, with the complete arithmetic lists,
+\[
+ a(3/4)<4.30094,\qquad a(81/100)<5.16201132.
+\]
+The kernel recurrence through degree $128$, the polar remainder
+and the preceding Euler-constant enclosure give total bounded
+operator errors less than $4\cdot10^{-22}$ and
+$7.3\cdot10^{-20}$, respectively.  The exact harmonic sums
+then give $d_{64}>0.44$ and $d_{128}>0.27$ at the targets in
+Corollary~\ref{cor:window-conditional}.
+
+\subsubsection{Exact rational positivity}
+
+Round the enclosed centers downward to the grid $10^{-80}$
+and the inverse weights downward to the grid $10^{-100}$ as
+in \eqref{eq:window-rational-error}.  For both windows its exact
+rational error bound satisfies
+\[
+ E_F<10^{-68}<\kappa:=10^{-60}.
+\]
+It remains to test the rational matrix $\widehat F-\kappa I$.
+The two parity blocks have orders $32$ and $32$, or $64$ and
+$64$, respectively.
+
+Here is a fraction-free form of the test.  For a parity block
+$A$, let $D$ be the least common multiple of its entry
+denominators and set $B^{(0)}=DA$.  Put $p_{-1}=1$.
+At step $k$, set $p_k=B^{(k)}_{kk}$ and, for $i,j>k$, put
+\begin{equation}
+ B^{(k+1)}_{ij}=
+ \frac{p_kB^{(k)}_{ij}-B^{(k)}_{ik}B^{(k)}_{kj}}{p_{k-1}}.
+ \label{eq:window-computation-bareiss}
+\end{equation}
+The determinant identity for adjacent minors proves that each
+division is exact and that $p_k$ is the leading principal
+minor of order $k+1$ of $DA$.  Thus $p_k/(Dp_{k-1})$ is
+the corresponding rational $LDL^*$ pivot of $A$.
+
+Applying \eqref{eq:window-computation-bareiss} to the rational
+matrices just specified gives strictly positive pivots throughout.
+Simple strict lower bounds for every pivot are
+\[
+ \begin{array}{c|c|c|c}
+ T&\lambda&\text{even block}&\text{odd block}\\\hline
+ 3/4&0&9\cdot10^{-5}&2\cdot10^{-4}\\
+ 81/100&10^{-18}&3\cdot10^{-5}&10^{-4}
+ \end{array}
+\]
+These are pivots in the unnormalized Legendre coefficient
+matrix, not spectral lower endpoints in the physical norm.
+The latter are the targets $\lambda$ already incorporated in
+$\widehat F$.  Positivity of all leading principal minors
+proves $\widehat F-\kappa I>0$ in both cases.
+
+\begin{theorem}[Two complete finite-window bounds]
+\label{thm:window-certified}
+On the original logarithmic form domains,
+\[
+ Q_{3/4}(g)\ge0\quad(g\in\mathcal Q_{3/4}),\qquad
+ Q_{81/100}(g)\ge10^{-18}\|g\|_2^2
+                \quad(g\in\mathcal Q_{81/100}).
+\]
+Every prime power, the signed polar cross term and the complete
+remote Gram matrix are included in these inequalities.
+\end{theorem}
+\begin{proof}
+The polynomial construction and propagated radii enclose the
+entries of the specified approximating operator.  The scalar
+estimates bound its distance from the original operator and
+give positive tail denominators.  The exact rational calculation
+proves the finite positivity hypotheses of
+Corollary~\ref{cor:window-conditional}, including its rounding
+cushion.  That corollary yields the two inequalities on the
+entire original form domains.
+\end{proof}
+
+This calculation treats two fixed support windows.  It supplies
+neither an estimate on arbitrarily large supports nor the cofinal
+signed-matrix inequality.
